@@ -42,7 +42,8 @@ def main():
     out.mkdir(parents=True, exist_ok=True)
     assets = []
     for rd in sorted((art / "runs").iterdir()):
-        if rd.is_dir() and (rd / "metrics.json").exists():
+        # every run directory: evaluated runs and non-selected tuning candidates (best + last ckpts)
+        if rd.is_dir() and ((rd / "metrics.json").exists() or (rd / "train_summary.json").exists()):
             dst = out / f"run_{rd.name}.tar.gz"
             tar_dir(rd, f"runs/{rd.name}", dst)
             assets.append(dst)

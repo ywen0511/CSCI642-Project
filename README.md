@@ -4,6 +4,61 @@
 
 This project builds on Kim's EEG-to-reward / SAC framework to compare EEGNet and CBraMod in a robot reaching task. The current assignment is the EEG stage: train and evaluate both decoders, freeze them, and export error probabilities for subsequent reinforcement learning.
 
+## Status of the EEG stage (2026-11-01)
+
+**Implemented and executed:** data audit and label mapping, frozen participant split, preprocessing, EEGNet (from scratch)
+and CBraMod (official weights, full fine-tuning) training with validation selection, temperature calibration,
+test evaluation, per-trial probability export, 5 decoder seeds per main model, 7 supplementary baselines,
+resumable checkpoints (resume verified bitwise), release packaging and a local delivery rehearsal.
+**Not yet done:** push and GitHub Release. Neither available account has write access to this repository
+(see `reports/eeg_results.md` §8). **Planned, out of scope here:** SAC / robot experiments.
+
+Main result (test participants s02, s08, s09; 1,429 trials; seed 42): EEGNet AUROC 0.637, balanced accuracy 0.590;
+CBraMod AUROC 0.573, balanced accuracy 0.559. Over 5 decoder seeds: 0.613 ± 0.016 vs 0.568 ± 0.007.
+
+| document | content |
+|---|---|
+| `reports/data_audit.md` | files, checksums, channels, events, label evidence, trial counts, split |
+| `reports/protocol_decisions.md` | every setting with its source (paper / dataset / model interface / project) |
+| `reports/eeg_results.md` | results, runtime, deviations, limitations, unfinished work |
+| `reports/generated/results_tables.md` | all measured tables (generated) |
+| `reports/artifact_index.md` | release assets, checksums, verification results, commands |
+| `reports/data/trial_manifest.csv` | one row per trial with stable `trial_id`, label, split, retention |
+
+### Entry points
+
+```bash
+# 0. environment (Python 3.11)
+conda create -p ./env python=3.11 && ./env/bin/pip install -r requirements.txt
+# 1. data: raw dataset (commit 4bc3e524...), official CBraMod weights (HF rev 500543c7...)
+git clone https://github.com/stefan-ehrlich/dataset-ErrP-HRI data/raw/dataset-ErrP-HRI
+git -C data/raw/dataset-ErrP-HRI checkout 4bc3e52469934aa0551a2261a6e4e899d156c28f
+hf download weighting666/CBraMod pretrained_weights.pth --revision 500543c7e30bda1b22bfd51a49301b238dee21fd --local-dir weights/CBraMod
+export ERRP_WEIGHTS_DIR=$PWD/weights
+# 2. audit + epoching (+ split; the committed configs/splits.json is reused, never redrawn)
+python scripts/prepare_data.py --raw-root data/raw/dataset-ErrP-HRI --out-dir data/derived/prep_v1
+python scripts/make_splits.py --prep-dir data/derived/prep_v1
+# 3. training (declared 2-candidate grid per model; resumes automatically from last.ckpt)
+python scripts/run_grid.py --config configs/models/eegnet.yaml  --prep-dir data/derived/prep_v1 --out-root artifacts/runs
+python scripts/run_grid.py --config configs/models/cbramod.yaml --prep-dir data/derived/prep_v1 --out-root artifacts/runs
+# 4. selection on validation AUROC, temperature calibration on validation, test evaluation
+python scripts/select_and_evaluate.py --config configs/models/eegnet.yaml  --runs-root artifacts/runs --prep-dir data/derived/prep_v1 --selection-dir artifacts/selection
+python scripts/select_and_evaluate.py --config configs/models/cbramod.yaml --runs-root artifacts/runs --prep-dir data/derived/prep_v1 --selection-dir artifacts/selection
+# 5. export the RL feedback library + manifest (acceptance checks run here)
+python scripts/export_artifacts.py --artifacts artifacts --prep-dir data/derived/prep_v1
+# 6. reports, packaging, verification
+python scripts/write_results_tables.py --artifacts artifacts
+python scripts/package_release.py --artifacts artifacts --repo . --prep-dir data/derived/prep_v1 --out release/<tag>
+python scripts/verify_release.py --download-dir <downloaded assets> --extract-dir <fresh dir> --prep-dir data/derived/prep_v1 --out verify.json
+python scripts/check_resume.py --mode continue --ckpt <run>/checkpoints/last.ckpt --prep-dir data/derived/prep_v1 --work-dir /tmp/resume --out resume.json
+```
+
+Extra seeds: `scripts/run_grid.py ... --seed 43 --overrides train.lr=0.001`. Supplementary baselines:
+`configs/models/supplementary/*.yaml` with `scripts/train.py` and `scripts/train_xdawn_riemann.py`.
+The exact cluster job scripts used are in `scripts/cluster/`.
+
+The original task specification follows unchanged.
+
 ## Entry Point and Definition of Completion
 
 1. Inspect existing work and applicable repository instructions; preserve user changes. Check GPU availability, network downloads, repository push access, and GitHub Release upload access. Record available hardware and permissions.
