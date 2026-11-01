@@ -1,0 +1,125 @@
+{
+  "preprocessing_id": "prep_v1-13fe09dfbe64",
+  "config": {
+    "version": "prep_v1",
+    "dataset": {
+      "source": "https://github.com/stefan-ehrlich/dataset-ErrP-HRI",
+      "commit": "4bc3e52469934aa0551a2261a6e4e899d156c28f",
+      "condition": "robot",
+      "condition_evidence_pattern": {
+        "robot": "_robot.vhdr",
+        "cursor": "_shooter.vhdr"
+      }
+    },
+    "events": {
+      "stimulus": {
+        "S  1": "left",
+        "S  2": "up",
+        "S  3": "right"
+      },
+      "response": {
+        "R  1": "left",
+        "R  2": "up",
+        "R  3": "right"
+      },
+      "feedback_direction": {
+        "FB1": "left",
+        "FB2": "up",
+        "FB3": "right"
+      },
+      "outcome": {
+        "S  4": "no_error",
+        "S  5": "human_error",
+        "S  6": "machine_error"
+      },
+      "label_map": {
+        "no_error": 0,
+        "machine_error": 1
+      },
+      "epoch_origin": "feedback_direction"
+    },
+    "epoch": {
+      "tmin_s": 0.0,
+      "tmax_s": 2.0
+    },
+    "channels": {
+      "drop": [
+        "EOG1",
+        "EOG2",
+        "EOG3"
+      ],
+      "order": [
+        "Fp1",
+        "Fp2",
+        "F7",
+        "F3",
+        "Fz",
+        "F4",
+        "F8",
+        "FC5",
+        "FC1",
+        "FC2",
+        "FC6",
+        "T7",
+        "C3",
+        "Cz",
+        "C4",
+        "T8",
+        "CP5",
+        "CP1",
+        "CP2",
+        "CP6",
+        "P7",
+        "P3",
+        "Pz",
+        "P4",
+        "P8",
+        "O1",
+        "O2"
+      ]
+    },
+    "reference": {
+      "action": "none"
+    },
+    "filter": {
+      "l_freq": 1.0,
+      "h_freq": 20.0,
+      "method": "fir",
+      "applied_to": "continuous_recording_before_epoching"
+    },
+    "resample": {
+      "eeg256": {
+        "sfreq": 256
+      },
+      "patch200": {
+        "sfreq": 200,
+        "method": "scipy.signal.resample_poly(up=25, down=32)",
+        "patch_len": 200
+      }
+    },
+    "units": "microvolt",
+    "quality": {
+      "exclude_incomplete_window": true,
+      "exclude_nonfinite": true,
+      "amplitude_rejection": "none"
+    },
+    "trial_id_format": "{subject_id}_{condition}_{source_file}_ev{fb_event_index:04d}"
+  },
+  "versions": {
+    "mne": "1.13.2",
+    "numpy": "2.2.6",
+    "scipy": "1.17.1"
+  },
+  "n_epochs": 5822,
+  "shapes": {
+    "eeg256": [
+      27,
+      512
+    ],
+    "patch200": [
+      27,
+      2,
+      200
+    ]
+  }
+}

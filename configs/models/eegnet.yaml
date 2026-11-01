@@ -1,0 +1,27 @@
+# EEGNet trained from scratch (main comparison). Search budget: 2 candidates (train.lr in tuning.grid).
+seed: 42
+input:
+  view: eeg256                 # (27 ch, 512 samples) = [0, 2) s at 256 Hz, 1-20 Hz
+  scaling: train_global_std    # divide by one scalar std (uV) estimated on the training split only
+model:
+  name: eegnet
+  kwargs: {F1: 8, D: 2, F2: 16, kern_length: 128, sep_kern_length: 16, dropout: 0.5, norm_rate: 0.25}
+train:
+  optimizer: adam
+  lr: 0.001
+  weight_decay: 0.0
+  batch_size: 64
+  max_epochs: 300
+  patience: 40                 # epochs without improvement of the monitored validation metric
+  min_delta: 0.0
+  monitor: auroc               # validation AUROC (threshold-free) selects best.ckpt
+  class_weighting: inverse_frequency
+  label_smoothing: 0.0
+  scheduler: none
+  grad_clip: null
+  deterministic: true
+  periodic_ckpt_every: 25
+  periodic_ckpt_keep: 4
+tuning:
+  grid: {train.lr: [0.001, 0.0003]}
+  selection: highest best validation AUROC; ties -> first listed

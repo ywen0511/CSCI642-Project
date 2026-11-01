@@ -1,0 +1,51 @@
+{
+  "test": [
+    "s02",
+    "s08",
+    "s09"
+  ],
+  "validation": [
+    "s11",
+    "s13"
+  ],
+  "train": [
+    "s03",
+    "s04",
+    "s05",
+    "s06",
+    "s07",
+    "s10",
+    "s12"
+  ],
+  "eligible_sorted": [
+    "s02",
+    "s03",
+    "s04",
+    "s05",
+    "s06",
+    "s07",
+    "s08",
+    "s09",
+    "s10",
+    "s11",
+    "s12",
+    "s13"
+  ],
+  "permutation": [
+    "s02",
+    "s09",
+    "s08",
+    "s11",
+    "s13",
+    "s05",
+    "s07",
+    "s04",
+    "s06",
+    "s12",
+    "s03",
+    "s10"
+  ],
+  "procedure": "numpy.random.default_rng(42).permutation(len(eligible_sorted)); first 3 -> test, next 2 -> validation, rest -> train",
+  "rng_library": "numpy 2.2.6 (PCG64 via default_rng)",
+  "seed": 42
+}

@@ -1,0 +1,35 @@
+# Supplementary baseline (EEGPT, braindecode 1.8.1, weights braindecode/eegpt-pretrained). Reported separately from the main comparison.
+# One run, seed 42, default hyperparameters from the braindecode implementation / original paper.
+seed: 42
+input:
+  view: eeg250
+  scaling: fixed_divide
+  scaling_params: {divisor: 1000.0}  # millivolts (project choice, see protocol_decisions.md)
+model:
+  name: bd_eegpt
+  bd_class: EEGPT
+  sfreq: 250
+  needs_chs_info: true
+  hf_repo: braindecode/eegpt-pretrained
+  hf_revision: e41cb3ae2ce4fd9eb736862292c91f8128d15618
+  head_prefix: [final_layer]
+  keep_model_keys: [chans_id]
+  kwargs: {chan_proj_type: none}
+train:
+  optimizer: adamw
+  backbone_lr: 0.0001
+  lr: 0.0005
+  max_epochs: 50
+  patience: 15
+  scheduler: cosine
+  eta_min: 1.0e-6
+  weight_decay: 0.05
+  batch_size: 64
+  min_delta: 0.0
+  monitor: auroc
+  class_weighting: inverse_frequency
+  label_smoothing: 0.0
+  grad_clip: 1.0
+  deterministic: true
+  periodic_ckpt_every: 5
+  periodic_ckpt_keep: 4

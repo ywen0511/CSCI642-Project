@@ -1,0 +1,18 @@
+# Direct dependencies of the EEG stage (Python 3.11). Exact versions used for all reported runs.
+# The full resolved environment is in requirements-lock.txt.
+# torch: CUDA 13.2 wheel from PyPI; it runs on NVIDIA driver 580 (A100). For other drivers install a
+# matching torch build first, e.g. --index-url https://download.pytorch.org/whl/cu124.
+torch==2.15.0
+braindecode==1.8.1
+mne==1.13.2
+numpy==2.2.6
+scipy==1.17.1
+pandas==3.1.0
+scikit-learn==1.9.1
+pyriemann==0.12
+einops==0.8.2
+PyYAML==6.0.3
+huggingface_hub==2.4.0
+safetensors==0.8.0
+joblib==1.6.0
+matplotlib==3.11.2
