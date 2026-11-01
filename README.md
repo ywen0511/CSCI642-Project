@@ -9,9 +9,10 @@ This project builds on Kim's EEG-to-reward / SAC framework to compare EEGNet and
 **Implemented and executed:** data audit and label mapping, frozen participant split, preprocessing, EEGNet (from scratch)
 and CBraMod (official weights, full fine-tuning) training with validation selection, temperature calibration,
 test evaluation, per-trial probability export, 5 decoder seeds per main model, 7 supplementary baselines,
-resumable checkpoints (resume verified bitwise), release packaging and a local delivery rehearsal.
-**Not yet done:** push and GitHub Release. Neither available account has write access to this repository
-(see `reports/eeg_results.md` §8). **Planned, out of scope here:** SAC / robot experiments.
+resumable checkpoints (resume verified bitwise), and GitHub Release delivery
+([`eeg-stage1-20261101-bccbb8a`](https://github.com/ywen0511/CSCI642-Project/releases/tag/eeg-stage1-20261101-bccbb8a)), verified by re-downloading all assets into a fresh directory
+(checksums, prediction reproduction, training resumption; `reports/artifact_index.md`).
+**Planned, out of scope here:** SAC / robot experiments.
 
 Main result (test participants s02, s08, s09; 1,429 trials; seed 42): EEGNet AUROC 0.637, balanced accuracy 0.590;
 CBraMod AUROC 0.573, balanced accuracy 0.559. Over 5 decoder seeds: 0.613 ± 0.016 vs 0.568 ± 0.007.

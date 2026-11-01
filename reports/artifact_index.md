@@ -1,11 +1,9 @@
 # Artifact Index
 
-**Status: NOT UPLOADED.** The GitHub Release could not be created because no available account has write access to the repository (both `zhengtaoyao` and `KZTRGG_gme` report `push: false`). All assets below are packaged and checksummed at `/data/rtxw01/nbak/robot_intel/kztrgg/projs/code/csci642-eeg/release/eeg-stage1-20261101-bccbb8a` on the project filer. The verification results in this file come from a local rehearsal: the assets were copied into a fresh directory, which stood in for a GitHub download. Repeat the checks after the real upload (see Commands).
-
-- Release: https://github.com/ywen0511/CSCI642-Project/releases/tag/eeg-stage1-20261101-bccbb8a (NOT CREATED)
-- Tag: `eeg-stage1-20261101-bccbb8a` -> source commit `bccbb8a`
+- Release: https://github.com/ywen0511/CSCI642-Project/releases/tag/eeg-stage1-20261101-bccbb8a
+- Tag: `eeg-stage1-20261101-bccbb8a` -> source commit `bccbb8a2918c0a08381852feb1c6b1eb81e19548`
 - Repository: https://github.com/ywen0511/CSCI642-Project
-- Published: None
+- Published: 2026-11-01T20:43:56Z
 - Raw EEG and the original pretrained weights are not redistributed; see `reports/data_audit.md` and `reports/protocol_decisions.md` for sources, revisions and SHA-256.
 
 ## Assets

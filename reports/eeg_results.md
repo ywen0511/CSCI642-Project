@@ -17,7 +17,7 @@ Data audit: [`reports/data_audit.md`](data_audit.md). Frozen protocol: [`reports
 | Temperature calibration on validation, test evaluation, export | done; all export checks passed |
 | Extra decoder seeds 43–46 (selected settings) | done (reported separately) |
 | Supplementary baselines (7) | done (reported separately) |
-| Commit and push to `ywen0511/CSCI642-Project`, GitHub Release, download verification | **blocked: no write access** (Section 8) |
+| Commit and push to `ywen0511/CSCI642-Project`, GitHub Release, download verification | done (Section 8) |
 
 Source commits: training code `3b95649` (recorded in every checkpoint); evaluation, export and packaging
 scripts `bccbb8a` (training code identical, `git diff 3b95649 bccbb8a -- src scripts/train.py` is empty).
@@ -149,11 +149,14 @@ Limitations:
 
 ## 8. Delivery status and unfinished work
 
-- **Push and Release are blocked.** Neither GitHub account available on this machine has write access to
-  `ywen0511/CSCI642-Project`: `zhengtaoyao` and `KZTRGG_gme` both report `push: false`, and there is no
-  pending invitation. The code is committed in a local clone. Every Release asset is packaged and
-  checksummed on the project filer. Delivery rehearsal results are in `reports/artifact_index.md`.
-- Still to do once write access exists: push the commits, create the tag and Release, download the
-  assets into a fresh directory, and repeat the verification (`scripts/verify_release.py`,
-  `scripts/check_resume.py --mode continue`). The commands are in `reports/artifact_index.md`.
+- Code pushed to branch `eeg-stage1` of `ywen0511/CSCI642-Project`.
+- GitHub Release [`eeg-stage1-20261101-bccbb8a`](https://github.com/ywen0511/CSCI642-Project/releases/tag/eeg-stage1-20261101-bccbb8a) (tag on source commit `bccbb8a`) holds all 25 assets
+  (5.5 GB): checkpoints (`best.ckpt`, `last.ckpt`, periodic) and logs for every run, calibration parameters,
+  both prediction tables, `manifest.json`, `metrics_summary.json`, shared metadata, `SHA256SUMS`.
+- Download verification: all assets were downloaded from GitHub into a fresh directory on the project filer
+  (LSF job 7988573). Every SHA-256 and every size reported by the GitHub API matched. A 1-GPU job on gc175
+  (LSF job 7988574, 87 s) then extracted the archives, reproduced validation and test predictions from the
+  downloaded `best.ckpt` files (max |Δp| 5e-11, tolerance 1e-6) and resumed training from the downloaded
+  `last.ckpt` files for 2 more epochs (EEGNet 154 → 156, CBraMod 39 → 41; finite losses, source files unchanged).
+  Details in `reports/artifact_index.md`.
 - Out of scope for this stage and not done: SAC/robot experiments, LOSO reproduction.
