@@ -1,0 +1,37 @@
+# Original papers and proposal
+/Kim_2.pdf
+/Kim_master.pdf
+/Proposal/
+
+# Data and training artifacts
+/data/
+/artifacts/
+/runs/
+/wandb/
+/mlruns/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.h5
+*.hdf5
+*.set
+*.fdt
+
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# Credentials and local files
+.env
+.env.*
+!.env.example
+.DS_Store
+*.log
+*.tmp
