@@ -1,0 +1,127 @@
+{
+  "scope": "CPU analysis of downloaded seed-42 CSVs; no checkpoint inference or training rerun",
+  "release_url": "https://github.com/ywen0511/CSCI642-Project/releases/tag/eeg-stage1-20261101-bccbb8a",
+  "release_tag": "eeg-stage1-20261101-bccbb8a",
+  "downloaded_assets": {
+    "manifest.json": {
+      "sha256": "b9803034673b5bec41c2ea7da2bf20c2bc4b07f348d2d8b0241d944f17d783b9",
+      "bytes": 103574
+    },
+    "metrics_summary.json": {
+      "sha256": "f158e571469feef4055023cd45100b2d32d20d11085fe6c4715c988ac47cacca",
+      "bytes": 102872
+    },
+    "validation_predictions.csv": {
+      "sha256": "db0f3a9aa35a06af16550ee8a65904e9708f8d38981450ea1fe4a3d269eda3eb",
+      "bytes": 302783
+    },
+    "test_predictions.csv": {
+      "sha256": "b199805ace8dd1e977f033e64f7bb9528a858bbd12c8e465a8d10dd9ba756169",
+      "bytes": 434000
+    }
+  },
+  "trial_manifest_sha256": "1051d039a1d51344394ea587521d7c56282a356bc8ae6ae95b6937bcea12bd16",
+  "train_n": 3434,
+  "train_n_error": 1208,
+  "constant_probability": 0.35177635410599883,
+  "checks": {
+    "download_checksums": true,
+    "disjoint_participants": true,
+    "trial_label_alignment": true,
+    "probability_ranges": true,
+    "checkpoint_and_calibration_ids": true,
+    "test_metrics_match_release": true
+  },
+  "metric_reproduction": [
+    {
+      "model": "eegnet",
+      "probability": "raw",
+      "metric": "auroc",
+      "abs_difference": 0.0,
+      "tolerance": 1e-07
+    },
+    {
+      "model": "eegnet",
+      "probability": "raw",
+      "metric": "brier",
+      "abs_difference": 1.1161072066556699e-12,
+      "tolerance": 1e-07
+    },
+    {
+      "model": "eegnet",
+      "probability": "raw",
+      "metric": "nll",
+      "abs_difference": 2.3003821070233244e-13,
+      "tolerance": 1e-05
+    },
+    {
+      "model": "eegnet",
+      "probability": "calibrated",
+      "metric": "auroc",
+      "abs_difference": 0.0,
+      "tolerance": 1e-07
+    },
+    {
+      "model": "eegnet",
+      "probability": "calibrated",
+      "metric": "brier",
+      "abs_difference": 1.0857981180834031e-13,
+      "tolerance": 1e-07
+    },
+    {
+      "model": "eegnet",
+      "probability": "calibrated",
+      "metric": "nll",
+      "abs_difference": 1.734501431371882e-12,
+      "tolerance": 1e-05
+    },
+    {
+      "model": "cbramod",
+      "probability": "raw",
+      "metric": "auroc",
+      "abs_difference": 1.1102230246251565e-16,
+      "tolerance": 1e-07
+    },
+    {
+      "model": "cbramod",
+      "probability": "raw",
+      "metric": "brier",
+      "abs_difference": 8.191225475684405e-13,
+      "tolerance": 1e-07
+    },
+    {
+      "model": "cbramod",
+      "probability": "raw",
+      "metric": "nll",
+      "abs_difference": 3.162493379171849e-06,
+      "tolerance": 1e-05
+    },
+    {
+      "model": "cbramod",
+      "probability": "calibrated",
+      "metric": "auroc",
+      "abs_difference": 1.1102230246251565e-16,
+      "tolerance": 1e-07
+    },
+    {
+      "model": "cbramod",
+      "probability": "calibrated",
+      "metric": "brier",
+      "abs_difference": 2.8152480346932407e-13,
+      "tolerance": 1e-07
+    },
+    {
+      "model": "cbramod",
+      "probability": "calibrated",
+      "metric": "nll",
+      "abs_difference": 1.4376277945871152e-12,
+      "tolerance": 1e-05
+    }
+  ],
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "matplotlib": "3.11.2"
+  }
+}

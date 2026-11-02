@@ -1,0 +1,42 @@
+{
+  "release_url": "https://github.com/ywen0511/CSCI642-Project/releases/tag/eeg-stage1-20261101-bccbb8a",
+  "scope": "feedback CSV and manifest checks; no checkpoint inference",
+  "assets": {
+    "validation_predictions.csv": {
+      "bytes": 302783,
+      "sha256": "db0f3a9aa35a06af16550ee8a65904e9708f8d38981450ea1fe4a3d269eda3eb",
+      "ok": true
+    },
+    "test_predictions.csv": {
+      "bytes": 434000,
+      "sha256": "b199805ace8dd1e977f033e64f7bb9528a858bbd12c8e465a8d10dd9ba756169",
+      "ok": true
+    },
+    "manifest.json": {
+      "bytes": 103574,
+      "sha256": "b9803034673b5bec41c2ea7da2bf20c2bc4b07f348d2d8b0241d944f17d783b9",
+      "ok": true
+    }
+  },
+  "tables": {
+    "validation": {
+      "rows": 1918,
+      "trials_per_model": 959,
+      "models": [
+        "eegnet",
+        "cbramod"
+      ],
+      "ok": true
+    },
+    "test": {
+      "rows": 2858,
+      "trials_per_model": 1429,
+      "models": [
+        "eegnet",
+        "cbramod"
+      ],
+      "ok": true
+    }
+  },
+  "ok": true
+}

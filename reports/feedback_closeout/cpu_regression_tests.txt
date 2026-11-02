@@ -1,0 +1,36 @@
+test_cross_model_label_mismatch_rejected (test_closeout.DownloadTableTests.test_cross_model_label_mismatch_rejected) ... ok
+test_duplicate_trial_rejected (test_closeout.DownloadTableTests.test_duplicate_trial_rejected) ... ok
+test_valid_aligned_tables (test_closeout.DownloadTableTests.test_valid_aligned_tables) ... ok
+test_wrong_checkpoint_rejected (test_closeout.DownloadTableTests.test_wrong_checkpoint_rejected) ... ok
+test_constant_known_scores_and_auc_ties (test_closeout.ProbabilityTests.test_constant_known_scores_and_auc_ties) ... ok
+test_invalid_probabilities_rejected (test_closeout.ProbabilityTests.test_invalid_probabilities_rejected) ... ok
+test_label_corruption_rejected (test_closeout.ProbabilityTests.test_label_corruption_rejected) ... ok
+test_perfect_ranking (test_closeout.ProbabilityTests.test_perfect_ranking) ... ok
+test_actual_cli_failure_exit_code (test_closeout.VerifyReleaseTests.test_actual_cli_failure_exit_code) ... ok
+test_assets_only_does_not_claim_inference (test_closeout.VerifyReleaseTests.test_assets_only_does_not_claim_inference) ... ok
+test_corrupt_asset_blocks_extraction_and_inference (test_closeout.VerifyReleaseTests.test_corrupt_asset_blocks_extraction_and_inference) ... ok
+test_empty_checksum_inventory_fails (test_closeout.VerifyReleaseTests.test_empty_checksum_inventory_fails) ... ok
+test_empty_reproduction_fails (test_closeout.VerifyReleaseTests.test_empty_reproduction_fails) ... ok
+test_inference_exception_saved_and_fails (test_closeout.VerifyReleaseTests.test_inference_exception_saved_and_fails) ... ok
+test_missing_api_inventory_entry_fails (test_closeout.VerifyReleaseTests.test_missing_api_inventory_entry_fails) ... ok
+test_missing_asset_fails (test_closeout.VerifyReleaseTests.test_missing_asset_fails) ... ok
+test_reproduction_failure_returns_nonzero (test_closeout.VerifyReleaseTests.test_reproduction_failure_returns_nonzero) ... ok
+test_size_mismatch_fails (test_closeout.VerifyReleaseTests.test_size_mismatch_fails) ... ok
+test_success_returns_zero (test_closeout.VerifyReleaseTests.test_success_returns_zero) ... ok
+test_unlisted_archive_fails (test_closeout.VerifyReleaseTests.test_unlisted_archive_fails) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.066s
+
+OK
+{"mode": "assets_only", "all_assets_ok": true, "all_reproduction_ok": null, "ok": true}
+{"mode": "assets_and_inference", "all_assets_ok": false, "all_reproduction_ok": null, "ok": false}
+{"mode": "assets_and_inference", "all_assets_ok": false, "all_reproduction_ok": null, "ok": false}
+{"mode": "assets_and_inference", "all_assets_ok": true, "all_reproduction_ok": false, "ok": false}
+{"mode": "assets_and_inference", "all_assets_ok": true, "all_reproduction_ok": null, "ok": false}
+{"mode": "assets_and_inference", "all_assets_ok": false, "all_reproduction_ok": null, "ok": false}
+{"mode": "assets_and_inference", "all_assets_ok": false, "all_reproduction_ok": null, "ok": false}
+{"mode": "assets_and_inference", "all_assets_ok": true, "all_reproduction_ok": false, "ok": false}
+{"mode": "assets_and_inference", "all_assets_ok": false, "all_reproduction_ok": null, "ok": false}
+{"mode": "assets_and_inference", "all_assets_ok": true, "all_reproduction_ok": true, "ok": true}
+{"mode": "assets_and_inference", "all_assets_ok": false, "all_reproduction_ok": null, "ok": false}
