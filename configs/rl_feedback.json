@@ -1,0 +1,96 @@
+{
+  "schema": "csci642-rl-feedback/v1",
+  "release_url": "https://github.com/ywen0511/CSCI642-Project/releases/tag/eeg-stage1-20261101-bccbb8a",
+  "release_tag": "eeg-stage1-20261101-bccbb8a",
+  "release_source_commit": "bccbb8a2918c0a08381852feb1c6b1eb81e19548",
+  "checkpoint_training_commit": "3b9564966ecdaf9555e1bbcf5b8cad2013e2700c",
+  "decoder_seed": 42,
+  "label_mapping": {
+    "0": "non-error",
+    "1": "machine error"
+  },
+  "probability_column": "p_error",
+  "splits": {
+    "train": [
+      "s03",
+      "s04",
+      "s05",
+      "s06",
+      "s07",
+      "s10",
+      "s12"
+    ],
+    "validation": [
+      "s11",
+      "s13"
+    ],
+    "test": [
+      "s02",
+      "s08",
+      "s09"
+    ]
+  },
+  "tables": {
+    "validation": {
+      "asset": "validation_predictions.csv",
+      "sha256": "db0f3a9aa35a06af16550ee8a65904e9708f8d38981450ea1fe4a3d269eda3eb",
+      "bytes": 302783,
+      "trials_per_model": 959
+    },
+    "test": {
+      "asset": "test_predictions.csv",
+      "sha256": "b199805ace8dd1e977f033e64f7bb9528a858bbd12c8e465a8d10dd9ba756169",
+      "bytes": 434000,
+      "trials_per_model": 1429
+    }
+  },
+  "manifest": {
+    "sha256": "b9803034673b5bec41c2ea7da2bf20c2bc4b07f348d2d8b0241d944f17d783b9",
+    "bytes": 103574
+  },
+  "models": {
+    "eegnet": {
+      "checkpoint_id": "eegnet_lr1e-3_s42:best",
+      "archive": "run_eegnet_lr1e-3_s42.tar.gz",
+      "archive_sha256": "8e795e2a43d9a8f2767775bd4e3717273e913f64f95844b50ac625b9f73a8dd5",
+      "best_ckpt": "runs/eegnet_lr1e-3_s42/checkpoints/best.ckpt",
+      "best_ckpt_sha256": "5e3e3da189257bfb720f4c7ebfaeba34b6994bd0329f6f4c34abb2229a6120ad",
+      "preprocessing_id": "prep_v1-13fe09dfbe64",
+      "calibration_id": "eegnet_lr1e-3_s42:temperature",
+      "calibration": {
+        "method": "temperature_scaling",
+        "temperature": 1.392144737298234,
+        "fit_split": "validation",
+        "val_nll_before": 0.6550329665550635,
+        "val_nll_after": 0.6494819167102998,
+        "n_val": 959,
+        "optimizer": "scipy.optimize.minimize_scalar(bounded, log T in [log 0.05, log 20])",
+        "success": true,
+        "calibration_id": "eegnet_lr1e-3_s42:temperature",
+        "val_selected_threshold_youden_on_calibrated": 0.4571891020381782
+      }
+    },
+    "cbramod": {
+      "checkpoint_id": "cbramod_bblr1e-4_s42:best",
+      "archive": "run_cbramod_bblr1e-4_s42.tar.gz",
+      "archive_sha256": "36fc2d196c89bea7c1ea0665275317aa955725288cae50c6f4df79df624cb6f4",
+      "best_ckpt": "runs/cbramod_bblr1e-4_s42/checkpoints/best.ckpt",
+      "best_ckpt_sha256": "c918395e751c15978d7cef3d32e8cd52d274ebd99c336c273dd4b9d942aecbee",
+      "preprocessing_id": "prep_v1-13fe09dfbe64",
+      "calibration_id": "cbramod_bblr1e-4_s42:temperature",
+      "calibration": {
+        "method": "temperature_scaling",
+        "temperature": 9.90420611301174,
+        "fit_split": "validation",
+        "val_nll_before": 1.7294814883123386,
+        "val_nll_after": 0.6458289281075853,
+        "n_val": 959,
+        "optimizer": "scipy.optimize.minimize_scalar(bounded, log T in [log 0.05, log 20])",
+        "success": true,
+        "calibration_id": "cbramod_bblr1e-4_s42:temperature",
+        "val_selected_threshold_youden_on_calibrated": 0.51360670296446
+      }
+    }
+  },
+  "constant_train_prevalence": 0.35177635410599883
+}
