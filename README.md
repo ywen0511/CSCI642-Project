@@ -26,11 +26,42 @@ CBraMod AUROC 0.573, balanced accuracy 0.559. Over 5 decoder seeds: 0.613 ± 0.0
 | `reports/artifact_index.md` | release assets, checksums, verification results, commands |
 | `reports/data/trial_manifest.csv` | one row per trial with stable `trial_id`, label, split, retention |
 
+### Frozen feedback handoff and CPU closeout
+
+For the RL stage, start with [docs/rl_handoff.md](docs/rl_handoff.md) and
+[configs/rl_feedback.json](configs/rl_feedback.json). The original training Release remains frozen.
+The [feedback diagnostic report](reports/feedback_closeout/README.md) adds a training-prevalence
+constant baseline, per-participant probability summaries and error/non-error distribution plots.
+No models or calibrators were retrained or selected using these diagnostics.
+
+```bash
+# Download and verify only the small frozen feedback files; no EEG data or GPU needed.
+python3 scripts/download_feedback.py --out-dir artifacts/rl_feedback
+# Reproduce the closeout analysis in a separate CPU environment (tested on Python 3.12).
+python3 -m venv venv/closeout
+. venv/closeout/bin/activate
+python -m pip install -r requirements-closeout.txt
+mkdir -p artifacts/release_inputs
+for asset in SHA256SUMS manifest.json metrics_summary.json validation_predictions.csv test_predictions.csv; do
+  curl -fL "https://github.com/ywen0511/CSCI642-Project/releases/download/eeg-stage1-20261101-bccbb8a/$asset" -o "artifacts/release_inputs/$asset"
+done
+python scripts/analyze_feedback.py --release-dir artifacts/release_inputs
+python -m unittest discover -s tests -v
+```
+
+`verify_release.py` and `check_resume.py` now exit nonzero when checks fail. A checksum failure
+stops before archive extraction or model loading. Use fresh extraction/resumption directories.
+`verify_release.py --assets-only --download-dir <all-assets> --out assets.json` checks the complete
+asset inventory without claiming inference verification. Full inference and continuation still
+need the training dependencies and reconstructed EEG data; see [docs/rl_handoff.md](docs/rl_handoff.md).
+
 ### Entry points
 
 ```bash
 # 0. environment (Python 3.11)
-conda create -p ./env python=3.11 && ./env/bin/pip install -r requirements.txt
+conda create -p ./.venv python=3.11 -y
+conda activate "$PWD/.venv"
+python -m pip install -r requirements.txt
 # 1. data: raw dataset (commit 4bc3e524...), official CBraMod weights (HF rev 500543c7...)
 git clone https://github.com/stefan-ehrlich/dataset-ErrP-HRI data/raw/dataset-ErrP-HRI
 git -C data/raw/dataset-ErrP-HRI checkout 4bc3e52469934aa0551a2261a6e4e899d156c28f
