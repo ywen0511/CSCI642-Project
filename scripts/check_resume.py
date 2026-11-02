@@ -45,10 +45,12 @@ def main():
     ap.add_argument("--epochs", type=int, default=3)
     ap.add_argument("--out", required=True)
     a = ap.parse_args()
+    if a.epochs < (2 if a.mode == "equivalence" else 1):
+        ap.error("equivalence needs at least 2 epochs; continue needs at least 1")
     splits = load_splits(a.splits)
     work = Path(a.work_dir)
     if work.exists():
-        shutil.rmtree(work)
+        ap.error("--work-dir must be a fresh directory; existing files are never deleted")
     if a.mode == "equivalence":
         cfg = load_yaml(a.config)
         K = a.epochs
@@ -69,6 +71,10 @@ def main():
                "history_full_last": t_full.history[-1], "history_resumed_last": t_b.history[-1],
                "global_step_full": t_full.global_step, "global_step_resumed": t_b.global_step}
         res["bitwise_identical_weights"] = maxdiff == 0.0
+        res["ok"] = bool(res["bitwise_identical_weights"]
+                         and res["max_abs_val_margin_diff"] == 0.0
+                         and t_full.epoch == K and t_b.epoch == K
+                         and t_full.global_step == t_b.global_step)
     else:
         src = Path(a.ckpt)
         sha_before = sha256_file(src)
@@ -95,7 +101,8 @@ def main():
                      and res["all_losses_finite"] and sha_before == res["source_sha256_after"])
     write_json(res, a.out)
     print(json.dumps({k: v for k, v in res.items() if "history" not in k and k != "new_epochs"}))
+    return 0 if res["ok"] else 1
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
