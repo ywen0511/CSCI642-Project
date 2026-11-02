@@ -160,3 +160,16 @@ Limitations:
   `last.ckpt` files for 2 more epochs (EEGNet 154 → 156, CBraMod 39 → 41; finite losses, source files unchanged).
   Details in `reports/artifact_index.md`.
 - Out of scope for this stage and not done: SAC/robot experiments, LOSO reproduction.
+
+## 9. CPU closeout diagnostics
+
+[Feedback quality and RL handoff diagnostics](feedback_closeout/README.md) were computed directly
+from the released seed-42 validation/test CSVs, with published checksums verified. They add a
+constant predictor fitted only to the training error prevalence, per-participant probability
+statistics and distribution plots. No retraining or recalibration was performed. This is a
+post-result diagnostic addition, not a new held-out model-selection experiment.
+
+On test data, the constant predictor has Brier 0.227679 and NLL 0.647817. Calibrated EEGNet has
+Brier 0.227047 and NLL 0.649499; calibrated CBraMod has Brier 0.244478 and NLL 0.684273. Thus the
+ranking advantage over chance should not be confused with reliable probability estimation.
+The [frozen RL handoff](../docs/rl_handoff.md) specifies the original Release, hashes and usage.
