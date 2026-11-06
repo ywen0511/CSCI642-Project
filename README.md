@@ -1,3 +1,15 @@
+# Stage 2 — FetchReach SAC with Frozen EEG Feedback
+
+**Current branch: `rl-stage2`. Start with [rl/README.md](rl/README.md).**
+
+This branch extends EEG stage 1 with the supplied FetchReach/SAC baseline and an offline feedback
+interface. The EEG decoder checkpoints, participant splits, calibration and prediction tables remain
+pinned to the original EEG Release. Do not rerun EEG training when executing the RL-stage instructions.
+The original EEG-stage specification below is retained as historical reference; the active RL scope,
+validation/test rules, current execution evidence and remaining experiments are in `rl/README.md`.
+
+---
+
 # CSCI 642 — Complete EEG Stage Execution Instructions
 
 **Instructions for the executing agent: When the user asks you to read this README and execute the task, treat this file as the complete specification. Carry out the EEG stage and remote delivery described below. Do not stop after summarizing the document or proposing a plan. No additional prompt or document from `docs/` is required.**
