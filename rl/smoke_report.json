@@ -1,0 +1,124 @@
+{
+  "ok": true,
+  "scope": "CPU integration only; not a trained-policy performance result",
+  "conditions": {
+    "sparse": {
+      "steps": 160,
+      "updates": 140,
+      "verification": {
+        "ok": true,
+        "max_action_difference": 0.0,
+        "tolerance": 1e-06,
+        "replay_size": 160,
+        "steps": 160,
+        "updates": 140,
+        "scope": "hashes, inference, model/replay loading; continuation is a separate run"
+      }
+    },
+    "dense": {
+      "steps": 160,
+      "updates": 140,
+      "verification": {
+        "ok": true,
+        "max_action_difference": 0.0,
+        "tolerance": 1e-06,
+        "replay_size": 160,
+        "steps": 160,
+        "updates": 140,
+        "scope": "hashes, inference, model/replay loading; continuation is a separate run"
+      }
+    },
+    "ideal": {
+      "steps": 160,
+      "updates": 140,
+      "verification": {
+        "ok": true,
+        "max_action_difference": 0.0,
+        "tolerance": 1e-06,
+        "replay_size": 160,
+        "steps": 160,
+        "updates": 140,
+        "scope": "hashes, inference, model/replay loading; continuation is a separate run"
+      }
+    },
+    "eegnet": {
+      "steps": 160,
+      "updates": 140,
+      "verification": {
+        "ok": true,
+        "max_action_difference": 0.0,
+        "tolerance": 1e-06,
+        "replay_size": 160,
+        "steps": 160,
+        "updates": 140,
+        "scope": "hashes, inference, model/replay loading; continuation is a separate run"
+      }
+    },
+    "cbramod": {
+      "steps": 160,
+      "updates": 140,
+      "verification": {
+        "ok": true,
+        "max_action_difference": 0.0,
+        "tolerance": 1e-06,
+        "replay_size": 160,
+        "steps": 160,
+        "updates": 140,
+        "scope": "hashes, inference, model/replay loading; continuation is a separate run"
+      }
+    },
+    "independent_eegnet": {
+      "steps": 160,
+      "updates": 140,
+      "verification": {
+        "ok": true,
+        "max_action_difference": 0.0,
+        "tolerance": 1e-06,
+        "replay_size": 160,
+        "steps": 160,
+        "updates": 140,
+        "scope": "hashes, inference, model/replay loading; continuation is a separate run"
+      }
+    },
+    "independent_cbramod": {
+      "steps": 160,
+      "updates": 140,
+      "verification": {
+        "ok": true,
+        "max_action_difference": 0.0,
+        "tolerance": 1e-06,
+        "replay_size": 160,
+        "steps": 160,
+        "updates": 140,
+        "scope": "hashes, inference, model/replay loading; continuation is a separate run"
+      }
+    }
+  },
+  "environment_checks": {
+    "steps": 50,
+    "ok": true
+  },
+  "periodic_checkpoint": {
+    "ok": true,
+    "max_action_difference": 0.0,
+    "tolerance": 1e-06,
+    "replay_size": 80,
+    "steps": 80,
+    "updates": 59,
+    "scope": "hashes, inference, model/replay loading; continuation is a separate run"
+  },
+  "continuation": {
+    "initial_steps": 80,
+    "final_steps": 120,
+    "verification": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "tolerance": 1e-06,
+      "replay_size": 120,
+      "steps": 120,
+      "updates": 99,
+      "scope": "hashes, inference, model/replay loading; continuation is a separate run"
+    },
+    "ok": true
+  }
+}

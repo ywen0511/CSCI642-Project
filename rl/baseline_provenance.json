@@ -1,0 +1,14 @@
+{
+  "source_archive": "CS642-EEG-Assisted-RL-main.zip",
+  "archive_sha256": "6ca0cc7867962918030a26dca5787212c0ec08d6915bed48a19c4fe1701535fe",
+  "files": {
+    ".gitignore": "0f8b49d8ccbe222c339c25e280345d51221d784b227813021f33ec5342732ff9",
+    "reaching_reward_wrapper.py": "9d7a068bfc6c50bdb7f69367f6896b6ea2962ed709836a09992cda265b5211ff",
+    "requirements-lock.txt": "92dfc7585ee791f0eca4f89310016d9af23baa5bd1572fe83f2daea5b778611f",
+    "requirements.txt": "a8cb7d4bd923f79b11c58e95b90e90a3e1e72617daa75916d093827a3715a4d6",
+    "scripts/smoke_test_env.py": "396748e8df120679162c3e0e7810d172d77f6a0816b985f4e66b21ed8bc9c9f7",
+    "scripts/view_policy.py": "a207945c7c6381b3e002c5d69a6ef30a60b09dae5b9fc91177a1e7c029c8673d",
+    "train_dense_sac.py": "7253e942d364deda98f6e0fa60e0d0c3536dd93f260241d3e099c78dbd02b301"
+  },
+  "adaptation": "FetchReach-v4, SAC MultiInputPolicy, distance-progress dense reward, and task-only evaluation adapted from the supplied archive. Added frozen EEG replay, controls, validation gates, periodic model/replay/RNG snapshots, independent evaluation seeds, and machine-readable checks. The original archive was read only."
+}

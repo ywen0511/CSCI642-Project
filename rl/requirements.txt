@@ -1,0 +1,8 @@
+# Separate RL environment; do not upgrade the frozen EEG training environment.
+gymnasium==1.4.0
+gymnasium-robotics==1.4.2
+mujoco==3.11.0
+stable-baselines3==2.9.2
+torch==2.15.0
+numpy==2.4.6
+imageio==2.38.1
