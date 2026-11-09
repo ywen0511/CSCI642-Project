@@ -1,4 +1,6 @@
-# Stage 2 execution report
+# Historical v1 integration execution report
+
+**Historical evidence only:** these runs used protocol v1 (`1-p`, with stalled segments treated as non-error). They do not validate the v2 reward or neutral-segment behavior. Rerun v2 smoke checks before new experiments; see [the active handoff](../GPU_AGENT_HANDOFF.md).
 
 ## Implemented and executed
 

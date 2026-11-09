@@ -1,7 +1,9 @@
-# RL stage 2: execution and handoff
+# RL protocol v2: mechanics and commands
+
+**Active assignment: [GPU_AGENT_HANDOFF.md](../GPU_AGENT_HANDOFF.md).** Read it before running commands below. It specifies the seed/budget preparation and end-to-end delivery still required.
 
 This branch integrates the supplied `CS642-EEG-Assisted-RL-main.zip` baseline with the frozen EEG
-stage. Start here for RL work. The root README's original EEG instructions are historical and do
+stage. Start here for RL work. The historical EEG instructions in `EEG_README.md` do
 not authorize retraining the frozen EEG decoders as part of this stage.
 
 ## Current scope
@@ -11,7 +13,7 @@ validation/test separation, unified evaluation, periodic model/optimizer/replay/
 checkpoint reload verification, continuation into a fresh episode, multi-seed suite planning,
 validation-based protocol freezing, summaries and Release packaging.
 
-Actual execution evidence is in [execution_report.md](execution_report.md). Small integration runs
+Historical **v1** execution evidence is in [execution_report.md](execution_report.md); it is not a v2 test result. New v2 preparation evidence is in [rl_protocol_v2.md](../reports/rl_protocol_v2.md). Small integration runs
 are not evidence that a robot policy has learned the task. Full validation and final comparisons
 remain to be run. The source archive's hashes and adaptation provenance are in
 [baseline_provenance.json](baseline_provenance.json); the original archive was not changed.
@@ -36,15 +38,18 @@ The simulator is Gymnasium-Robotics `FetchReach-v4`, not Kim's Kinova pick-and-p
 no added obstacle or route-preference objective. Keep the original sparse reward (typically -1
 outside the goal threshold, 0 inside), the 5 cm success threshold and 50-step time limit.
 
-Default feedback event: every 5 simulator steps, plus a final partial segment at episode end.
-For segment-start distance d_start and segment-end distance d_end:
+Check feedback eligibility every 5 simulator steps and at a final partial segment on episode end.
+Let `change = d_end - d_start` for the segment:
 
-`simulated_error = (d_end > 0.05 m) and (d_end - d_start > 0.001 m)`.
+- `change < -epsilon`: non-error label 0.
+- `change > epsilon`: error label 1.
+- `abs(change) <= epsilon`: no label, no EEG sampling, no EEG reward.
 
-Improvement, remaining within the goal, and changes inside the deadband are non-error. In
-particular a stalled segment is non-error; this is a limitation of the pilot rule, not a claim
-about human preferences. The mapping uses privileged simulator geometry to construct a noisy
-feedback channel. Report it explicitly when interpreting results.
+The default epsilon is 0.001 m; a 1e-12 m numerical tolerance handles subtraction at the exact boundary.
+The segment always resets at its boundary. Only labeled opportunities advance `event_count`.
+The rule also applies inside the goal region; goal success and task reward remain the simulator's
+responsibility. This is a privileged distance-based proxy, not measured human preferences.
+A stalled segment never becomes a non-error trial merely because no mistake was detected.
 
 FetchReach runs at 25 control steps/s. Five steps are 0.2 s, whereas each source EEG epoch spans
 2 s. This is an abstract offline feedback-frequency choice; it does not simulate real acquisition
@@ -55,19 +60,22 @@ project defaults in `protocol.json`, not settings attributed to Kim.
 |---|---|
 | sparse | r_task |
 | dense | r_task + w_dense * (d_t - d_next), every step |
-| ideal | r_task + w_eeg * (1 - simulated_error), at feedback events |
-| eegnet / cbramod | r_task + w_eeg * (1 - p_error), at feedback events |
+| ideal | r_task + w_eeg * (0.5 - simulated_error), at feedback events |
+| eegnet / cbramod | r_task + w_eeg * (0.5 - p_error), at feedback events |
 | independent_eegnet / independent_cbramod | same formula and schedule, but sample from the participant's full pool independently of the simulated label |
 
-Outside feedback events the EEG reward is zero. Weights are nonnegative. `1-p` follows Kim's
-reward direction; its positive offset and the segment frequency can themselves affect behavior,
-which motivates the label-independent controls. The dense progress term is inherited from the
-supplied baseline; with gamma=0.99 it is not claimed to be a policy-invariant potential shaping term.
+Outside eligible events the EEG reward is zero. Weights are nonnegative. Centering at 0.5
+follows the project proposal; Kim's original `1-p` transform is a documented methodological
+difference. A predicted p=0.5 gives zero additional reward. Calibration error and class prevalence
+mean that true error trials need not receive negative rewards. Keep the label-independent controls:
+they ignore the simulated binary label when sampling, but share the action-dependent eligibility gate.
+They are not controls for every possible effect of that gate. The dense progress term is inherited
+from the baseline; with gamma=0.99 it is not claimed to be policy-invariant potential shaping.
 
 EEGNet and CBraMod sampling uses the same deterministic key (feedback seed, split, participant,
 event index, simulated label) and sorted paired trial IDs. Given the same key they select the same
 trial; policies can diverge and produce different labels, so this does not promise identical
-on-policy feedback sequences. Full-pool controls ignore the simulated label in their sampling key.
+on-policy feedback sequences. Full-pool controls ignore the simulated label in their sampling key. Different policies may also produce different eligibility schedules; pairing is guaranteed only for the same sampling key, not entire on-policy trajectories.
 The policy observation remains the original robot observation/goal dictionary; true labels and
 EEG probabilities affect rewards and logs only.
 
@@ -112,7 +120,7 @@ final distance as a tie-breaker, then prefer the smaller weight. Do not select o
 The freeze command records a rationale but does not automate or certify this scientific choice.
 
 `suite` prints the run plan by default. `--execute` runs all jobs and stops on the first failure.
-Validation uses RL seeds 100/101/102: 33 runs per candidate, 1,650,000 environment steps at the
+Current planner defaults (to be updated as required in the handoff): validation uses RL seeds 100/101/102: 33 runs per candidate, 1,650,000 environment steps at the
 default budget. Sparse/dense/ideal controls are each trained once per seed and shared across
 participants, avoiding duplicate controls counted as independent evidence.
 
@@ -129,7 +137,7 @@ python -m rl.suite --phase final --config artifacts/rl_frozen/protocol.json \
   --out artifacts/rl_final --execute
 ```
 
-Final runs use RL seeds 0-4: 75 runs, 3,750,000 environment steps. Each feedback participant gets
+Before the handoff seed/budget update, final runs use RL seeds 0-4: 75 runs, 3,750,000 environment steps. Each feedback participant gets
 a policy trained using that participant's frozen feedback pool; generalization is across EEG
 participants and fresh robot goal episodes, not a held-out subset of that participant's EEG trials.
 Formal runs start from scratch and use the full frozen budget. Interrupted formal runs can be
@@ -151,7 +159,7 @@ as serialized by SB3), `replay_buffer.pkl`, `rng.pt`, fixed inference probes and
 Periodic snapshots are taken after transition storage and before the next gradient update;
 final snapshots are taken after training. All periodic and final snapshots are retained.
 
-Continuation restores model, optimizer, replay, RNG and feedback counters, then starts a new
+Protocol v1 configs and old snapshots cannot be resumed as v2 experiments. Continuation restores model, optimizer, replay, RNG and feedback counters, then starts a new
 simulator episode. It is not bitwise uninterrupted-trajectory continuation and may skip the
 pending gradient update at a periodic snapshot. Only load trusted checkpoint pickle/torch files.
 
@@ -165,9 +173,11 @@ python -m rl.summarize artifacts/rl_final
 python -m rl.package --runs artifacts/rl_final --out artifacts/rl_release
 ```
 
-Logs include per-step task/dense/EEG reward components, simulated labels, sampled trial IDs and
+Logs include `segment_end` (scheduled boundary), `feedback_eligible` (outside deadband),
+`feedback_event` (actual ideal/decoded feedback), per-step task/dense/EEG reward components,
+simulated labels, sampled trial IDs and
 probabilities, evaluations, resolved protocol, dependency versions, source hashes and exit status.
-SB3 optimization metrics are in `progress.csv`. Preserve stdout/stderr and commands as the suite does.
+Neutral rows have blank label/probability/trial/event-index fields. Sparse/dense conditions may log eligible opportunities but never actual EEG feedback. SB3 optimization metrics are in `progress.csv`. Preserve stdout/stderr and commands as the suite does.
 
 Upload every packaged run archive, shared evidence, manifest and `SHA256SUMS` to a NEW Release in
 `ywen0511/CSCI642-Project`. Point its tag at the actual source commit. Re-download all assets to a

@@ -12,7 +12,7 @@ import numpy as np
 CONDITIONS = ("sparse", "dense", "ideal", "eegnet", "cbramod",
               "independent_eegnet", "independent_cbramod")
 LOG_FIELDS = ["step", "episode", "episode_step", "distance", "segment_progress",
-              "simulated_label", "feedback_event", "event_index", "trial_id", "source_label",
+              "simulated_label", "segment_end", "feedback_eligible", "feedback_event", "event_index", "trial_id", "source_label",
               "p_error", "task_reward", "dense_reward", "eeg_reward", "reward",
               "terminated", "truncated"]
 
@@ -21,9 +21,17 @@ def distance(obs):
     return float(np.linalg.norm(obs["achieved_goal"] - obs["desired_goal"]))
 
 
-def error_label(start_distance, end_distance, epsilon_m, goal_tolerance_m):
-    # A stalled segment is non-error in this pilot definition; it still incurs task cost.
-    return int(end_distance > goal_tolerance_m and end_distance - start_distance > epsilon_m)
+def error_label(start_distance, end_distance, epsilon_m):
+    """Return 0 for progress, 1 for retreat, or None for the inclusive deadband.
+
+    This is a distance-change proxy, including inside the goal region. Task success
+    remains the environment's responsibility. The tolerance only absorbs floating
+    point subtraction noise at the deadband boundary (distances are in meters).
+    """
+    change = end_distance - start_distance
+    if abs(change) <= epsilon_m or math.isclose(abs(change), epsilon_m, rel_tol=0, abs_tol=1e-12):
+        return None
+    return int(change > 0)
 
 
 class FeedbackReward(gym.Wrapper):
@@ -66,31 +74,39 @@ class FeedbackReward(gym.Wrapper):
         self.episode_step += 1
         self.segment_steps += 1
         dense = self.cfg["dense_weight"] * (self.previous - d) if self.condition == "dense" else 0.0
-        emit = self.segment_steps >= self.cfg["feedback_interval_steps"] or terminated or truncated
+        segment_end = self.segment_steps >= self.cfg["feedback_interval_steps"] or terminated or truncated
+        eligible = False
         label = p = source_label = ""
         trial = ""
         event = self.event_count
         segment_progress = self.segment_start - d
         eeg = 0.0
-        if emit:
-            label = error_label(self.segment_start, d, self.cfg["error_epsilon_m"], self.cfg["goal_tolerance_m"])
-            if self.condition == "ideal":
-                p = float(label)
-            elif self.library is not None:
-                model = self.condition.removeprefix("independent_")
-                row = self.library.sample(model, self.subject, label, self.feedback_seed,
-                                          event, self.condition.startswith("independent_"))
-                p, trial, source_label = row["p_error"], row["trial_id"], row["label"]
-            if p != "":
-                eeg = self.cfg["eeg_weight"] * (1.0 - p)
-            self.event_count += 1
+        if segment_end:
+            candidate = error_label(self.segment_start, d, self.cfg["error_epsilon_m"])
+            eligible = candidate is not None
+            if eligible:
+                label = candidate
+                if self.condition == "ideal":
+                    p = float(label)
+                elif self.library is not None:
+                    model = self.condition.removeprefix("independent_")
+                    row = self.library.sample(model, self.subject, label, self.feedback_seed,
+                                              event, self.condition.startswith("independent_"))
+                    p, trial, source_label = row["p_error"], row["trial_id"], row["label"]
+                if p != "":
+                    eeg = self.cfg["eeg_weight"] * (0.5 - p)
+                # Count labeled opportunities, not skipped segments. Neutral
+                # segments never sample a trial or advance this sampling key.
+                self.event_count += 1
+            # Always close the segment, even when no feedback is eligible.
             self.segment_start, self.segment_steps = d, 0
         reward = float(task) + dense + eeg
         if not math.isfinite(reward):
             raise ValueError("Nonfinite reward")
         record = dict(step=self.step_count, episode=self.episode_count, episode_step=self.episode_step,
                       distance=d, segment_progress=segment_progress, simulated_label=label,
-                      feedback_event=int(emit), event_index=event if emit else "", trial_id=trial,
+                      segment_end=int(segment_end), feedback_eligible=int(eligible),
+                      feedback_event=int(p != ""), event_index=event if eligible else "", trial_id=trial,
                       source_label=source_label, p_error=p, task_reward=float(task),
                       dense_reward=dense, eeg_reward=eeg, reward=reward,
                       terminated=int(terminated), truncated=int(truncated))

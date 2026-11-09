@@ -126,10 +126,15 @@ class Stage2Tests(unittest.TestCase):
             self.library().sample("eegnet", "s02", 0, 1, 1)
 
     def test_label_boundaries(self):
-        self.assertEqual(error_label(0.3, 0.4, 0.001, 0.05), 1)
-        self.assertEqual(error_label(0.3, 0.2, 0.001, 0.05), 0)
-        self.assertEqual(error_label(0.3, 0.3, 0.001, 0.05), 0)
-        self.assertEqual(error_label(0.01, 0.04, 0.001, 0.05), 0)
+        self.assertEqual(error_label(0.3, 0.4, 0.001), 1)
+        self.assertEqual(error_label(0.3, 0.2, 0.001), 0)
+        for end in (0.3, 0.3005, 0.2995, 0.301, 0.299):
+            with self.subTest(end=end):
+                self.assertIsNone(error_label(0.3, end, 0.001))
+        self.assertEqual(error_label(0.3, 0.301001, 0.001), 1)
+        self.assertEqual(error_label(0.3, 0.298999, 0.001), 0)
+        self.assertEqual(error_label(0.01, 0.04, 0.001), 1)
+        self.assertIsNone(error_label(0.01, 0.01, 0.001))
 
     def test_feedback_interval_and_partial_terminal_segment(self):
         env = FeedbackReward(ToyReach(), self.cfg, "ideal", 0)
@@ -141,7 +146,7 @@ class Stage2Tests(unittest.TestCase):
                 events.append(step)
             rewards.append(reward)
         self.assertEqual(events, [5, 7])
-        self.assertAlmostEqual(sum(rewards), -7 + 2 * self.cfg["eeg_weight"])
+        self.assertAlmostEqual(sum(rewards), -7 + self.cfg["eeg_weight"])
         env.close()
 
     def test_dense_accounting_and_sparse_no_feedback(self):
@@ -160,8 +165,87 @@ class Stage2Tests(unittest.TestCase):
             _, reward, _, _, info = env.step([0.01])
         self.assertEqual(info["simulated_label"], 1)
         self.assertEqual(info["source_label"], 1)
-        self.assertAlmostEqual(reward, -1 + self.cfg["eeg_weight"] * (1 - info["p_error"]))
+        self.assertAlmostEqual(reward, -1 + self.cfg["eeg_weight"] * (0.5 - info["p_error"]))
         env.close()
+
+    def test_signed_rewards_for_every_feedback_condition(self):
+        for condition in ("ideal", "eegnet", "cbramod", "independent_eegnet", "independent_cbramod"):
+            for p in (0.0, 0.2, 0.5, 0.8, 1.0):
+                if condition == "ideal" and p not in (0.0, 1.0):
+                    continue
+                with self.subTest(condition=condition, p=p):
+                    lib = self.library() if condition != "ideal" else None
+                    env = FeedbackReward(ToyReach(), self.cfg, condition, 0, lib,
+                                         "s11" if lib else None)
+                    env.reset()
+                    direction = 0.01 if p >= 0.5 else -0.01
+                    with patch.object(FeedbackLibrary, "sample", return_value={
+                            "p_error": p, "trial_id": "fixed", "label": int(p >= 0.5)}):
+                        for _ in range(5):
+                            _, reward, _, _, info = env.step([direction])
+                    self.assertAlmostEqual(info["eeg_reward"], self.cfg["eeg_weight"] * (0.5 - p))
+                    self.assertAlmostEqual(reward, -1 + info["eeg_reward"])
+                    self.assertEqual(info["feedback_event"], 1)
+                    env.close()
+
+    def test_neutral_segments_never_sample_or_advance_events(self):
+        for condition in ("ideal", "eegnet", "cbramod", "independent_eegnet", "independent_cbramod"):
+            with self.subTest(condition=condition):
+                lib = self.library() if condition != "ideal" else None
+                env = FeedbackReward(ToyReach(), self.cfg, condition, 0, lib,
+                                     "s11" if lib else None, self.root / (condition + ".csv"))
+                env.reset()
+                with patch.object(FeedbackLibrary, "sample", side_effect=AssertionError("Neutral sampled")):
+                    for step in range(1, 8):
+                        _, reward, _, _, info = env.step([0.0])
+                        self.assertEqual(reward, -1)
+                        self.assertEqual(info["segment_end"], int(step in (5, 7)))
+                        self.assertEqual(info["feedback_eligible"], 0)
+                        self.assertEqual(info["feedback_event"], 0)
+                        for name in ("simulated_label", "p_error", "trial_id", "source_label", "event_index"):
+                            self.assertEqual(info[name], "")
+                self.assertEqual(env.counters()["event_count"], 0)
+                env.close()
+                with (self.root / (condition + ".csv")).open() as f:
+                    rows = list(csv.DictReader(f))
+                self.assertEqual(len(rows), 7)
+                self.assertTrue(all(r["simulated_label"] == "" for r in rows))
+
+    def test_skipped_segment_closes_and_next_partial_segment_uses_new_start(self):
+        env = FeedbackReward(ToyReach(), self.cfg, "ideal", 0)
+        env.reset()
+        for _ in range(5):
+            env.step([0.00018])  # Total 0.9 mm: skipped, but start resets.
+        self.assertEqual(env.segment_steps, 0)
+        self.assertEqual(env.event_count, 0)
+        for _ in range(2):
+            _, reward, _, _, info = env.step([-0.0006])  # Partial segment improves 1.2 mm.
+        self.assertEqual(info["simulated_label"], 0)
+        self.assertEqual(info["event_index"], 0)
+        self.assertEqual(info["feedback_event"], 1)
+        self.assertAlmostEqual(reward, -1 + self.cfg["eeg_weight"] * 0.5)
+        self.assertEqual(env.event_count, 1)
+        env.close()
+
+    def test_baselines_keep_original_rewards_at_segment_boundaries(self):
+        for condition in ("sparse", "dense"):
+            env = FeedbackReward(ToyReach(), self.cfg, condition, 0)
+            env.reset()
+            for _ in range(7):
+                _, reward, _, _, info = env.step([-0.01])
+                self.assertAlmostEqual(reward, -1 + (0.1 if condition == "dense" else 0))
+                self.assertEqual(info["feedback_event"], 0)
+                self.assertEqual(info["eeg_reward"], 0)
+            env.close()
+
+    def test_legacy_or_mismatched_protocol_rejected(self):
+        for key, value in (("schema", "csci642-rl-stage2/v1"), ("reward_center", 1.0),
+                           ("feedback_rule", "stalled_is_non_error")):
+            cfg = {**self.cfg, key: value}
+            path = self.root / "wrong_protocol.json"
+            path.write_text(json.dumps(cfg))
+            with self.assertRaises(ValueError):
+                read_config(path, "pilot")
 
     def test_final_requires_validation_evidence(self):
         with self.assertRaisesRegex(ValueError, "frozen"):

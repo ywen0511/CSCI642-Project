@@ -26,8 +26,10 @@ from .feedback import FeedbackLibrary, PROFILE, ROOT, sha256
 
 def read_config(path, phase):
     cfg = json.loads(Path(path).read_text())
-    if cfg.get("schema") != "csci642-rl-stage2/v1":
-        raise ValueError("Unknown protocol schema")
+    if cfg.get("schema") != "csci642-rl-stage2/v2":
+        raise ValueError("Expected protocol v2; legacy v1 runs use different reward/feedback semantics")
+    if cfg.get("feedback_rule") != "distance_change_deadband" or cfg.get("reward_center") != 0.5:
+        raise ValueError("Protocol v2 requires the distance-change deadband and reward_center=0.5")
     for name in ("feedback_interval_steps", "max_episode_steps", "eval_episodes", "eval_every_steps",
                  "checkpoint_every_steps", "total_timesteps", "torch_threads"):
         if not isinstance(cfg[name], int) or cfg[name] < 1:

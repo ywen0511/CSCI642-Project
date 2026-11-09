@@ -1,5 +1,7 @@
 {
-  "schema": "csci642-rl-stage2/v1",
+  "schema": "csci642-rl-stage2/v2",
+  "feedback_rule": "distance_change_deadband",
+  "reward_center": 0.5,
   "status": "pilot",
   "env_id": "FetchReach-v4",
   "max_episode_steps": 50,
