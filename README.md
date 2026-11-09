@@ -6,6 +6,8 @@ Repository: **ywen0511/CSCI642-Project**. Active branch: **rl-proposal-v2**.
 
 **Executing agent: read [GPU_AGENT_HANDOFF.md](GPU_AGENT_HANDOFF.md) in full, then complete its required implementation, validation, experiments, analysis, report and verified Release delivery.** That document is the complete current assignment; it takes precedence over historical stage instructions. Use this repository for source and new deliverables. No access to the private Savaw repository is needed. Do not retrain the frozen EEG decoders.
 
+The user only needs to provide the handoff MD link. No user-side cloning or setup is required, and the executing agent must not run `git clone`. Reuse an existing workspace or retrieve the exact source archive/API content yourself. The agent must execute the work and directly upload code, results, all checkpoints and Release assets, then verify fresh downloads; do not stop at an upload-ready folder.
+
 ## What is ready
 
 - EEGNet and CBraMod training, calibration, evaluation, feedback probabilities and EEG checkpoints were completed previously. Original assets remain in this repository's Releases.

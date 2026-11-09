@@ -4,6 +4,18 @@
 
 Work in **ywen0511/CSCI642-Project**, starting from branch **rl-proposal-v2**. This is the complete active assignment for the next execution agent. When the user asks you to execute this handoff, carry the work through implementation, runs, analysis, reporting, code push, Release upload and fresh-download verification. Do not stop after preparing scripts or a run plan. All written deliverables must be in English.
 
+**This document is the only handoff the user needs to provide.** Do not ask the user to clone a repository, download data, prepare scripts, run commands, upload checkpoints or publish Releases. Do not run `git clone`. Reuse the existing project workspace when available; otherwise obtain the required source yourself through GitHub's archive/API facilities and prepare the execution workspace and source provenance. Fetch required feedback assets yourself. Reading supporting source files, creating the environment, fixing missing implementation, running experiments and uploading the complete delivery are the executing agent's responsibilities.
+
+Direct entry points, including when this MD is read outside a repository:
+
+- Source branch: https://github.com/ywen0511/CSCI642-Project/tree/rl-proposal-v2
+- This assignment: https://github.com/ywen0511/CSCI642-Project/blob/rl-proposal-v2/GPU_AGENT_HANDOFF.md
+- Feedback profile: https://github.com/ywen0511/CSCI642-Project/blob/rl-proposal-v2/configs/rl_feedback.json
+- Existing EEG assets: https://github.com/ywen0511/CSCI642-Project/releases/tag/eeg-stage1-20261101-bccbb8a
+- New code and Release destination: **ywen0511/CSCI642-Project**.
+
+Resolve relative file references against that source branch. The user does not need to supply a second README or repeat the instructions below. At preflight, verify the available compute, durable storage, repository write access and ability to upload Release assets. Use existing authenticated tools without exposing credentials. A document cannot supply missing account permissions or hardware: if genuinely unavailable, report the exact blocker and preserve progress; do not claim a completed upload or merely hand routine work back to the user.
+
 The branch already contains the frozen EEG source and the FetchReach/SAC integration. Required feedback files are in this repository's original EEG Release; no private Savaw checkout is required. Publish new work here. Do not modify Savaw/CS642-EEG-Assisted-RL as part of this assignment. Preserve existing branches, tags, Releases and EEG checkpoints. Use a new working branch such as `rl-v2-experiments` for execution improvements and results. Push that branch and supply its URL; merging into main is not required for delivery.
 
 The preparing agent changed only the reward/feedback protocol, regression tests and documentation, and ran non-training checks. No v2 MuJoCo smoke run, SAC training, validation selection or final experiment has yet been performed. The historical v1 smoke artifacts are not evidence for this version.
@@ -59,12 +71,11 @@ Logs distinguish `segment_end`, `feedback_eligible`, and `feedback_event`. Neutr
 
 ## 1. Setup, preflight and new smoke run
 
-Start from a clean checkout, record its full commit SHA and preserve a clean baseline. Check that the branch contains the v2 fields before doing any training.
+Locate and inspect the existing workspace first. Preserve unrelated changes and use an isolated worktree if needed. Record the full source commit SHA and preserve a clean baseline. If no workspace exists, resolve the branch's current SHA through GitHub, download/extract that exact source archive into a new directory, and prepare the Git metadata required by the runner and eventual publication. Attaching the downloaded tree to its original commit via Git initialization and fetching is permitted; do not create a disconnected history or replace an existing repository. Do this yourself rather than requesting user setup. Check that the workspace contains the v2 fields before doing any training.
+
+Create a unique execution branch such as `rl-v2-experiments` based on the recorded source commit, then run the following from its repository root. These are agent execution steps, not instructions for the user to perform manually.
 
 ```bash
-git clone --branch rl-proposal-v2 https://github.com/ywen0511/CSCI642-Project.git
-cd CSCI642-Project
-git switch -c rl-v2-experiments
 python3.12 -m venv venv/rl
 . venv/rl/bin/activate
 python -m pip install -r rl/requirements.txt
@@ -187,7 +198,7 @@ Package every other validation candidate separately. Individual pilots and inter
 
 Before uploading, inspect total archive sizes. If any asset exceeds hosting limits, use lossless numbered parts plus checksums and exact reassembly instructions. Do not drop replay buffers or periodic checkpoints to shrink delivery.
 
-Push code and small reports to `ywen0511/CSCI642-Project`. Use new, unique tags pinned to actual source commits; never move the historical tags. Separate smoke, validation and final delivery scopes in tags/Release titles. The user has requested code and Release delivery here; complete it using the available authenticated account. If credentials lack access, preserve all prepared artifacts and report the exact access blocker without pretending upload succeeded.
+Upload code and small reports to `ywen0511/CSCI642-Project` yourself using Git or authenticated GitHub tools. Publish all large artifacts as Release assets yourself; a folder prepared for someone else to upload is not a completed delivery. Use new, unique tags pinned to actual source commits; never move the historical tags. Separate smoke, validation and final delivery scopes in tags/Release titles. The user has requested code and Release delivery here; complete it using the available authenticated account. If credentials lack access, preserve all prepared artifacts and report the exact access blocker without pretending upload succeeded.
 
 Example GitHub CLI flow (choose actual unique tags and an existing prepared notes file):
 
