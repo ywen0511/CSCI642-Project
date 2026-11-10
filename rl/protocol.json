@@ -11,11 +11,22 @@
   "eeg_weight": 0.5,
   "dense_weight": 10.0,
   "feedback_seed_offset": 1000000,
+  "training_episode_seed_stride": 1000000,
   "eval_seed_base": 20000,
   "eval_episodes": 20,
   "eval_every_steps": 10000,
   "checkpoint_every_steps": 10000,
   "total_timesteps": 50000,
+  "validation_seeds": [
+    100,
+    101,
+    102
+  ],
+  "final_seeds": [
+    0,
+    1,
+    2
+  ],
   "torch_threads": 1,
   "sac": {
     "learning_rate": 0.0003,
@@ -27,6 +38,11 @@
     "train_freq": 1,
     "gradient_steps": 1,
     "ent_coef": "auto",
-    "policy_kwargs": {"net_arch": [256, 256]}
+    "policy_kwargs": {
+      "net_arch": [
+        256,
+        256
+      ]
+    }
   }
 }

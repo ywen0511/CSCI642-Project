@@ -10,11 +10,13 @@ from unittest.mock import patch
 import gymnasium as gym
 import numpy as np
 
+from .analysis import METRICS, aggregate, auroc, paired_differences
 from .checkpoint import validate_snapshot
 from .environment import FeedbackReward, error_label
 from .feedback import FeedbackLibrary, ROOT, sha256
+from .metrics import dedupe, normalized_auc
 from .suite import jobs
-from .train import read_config
+from .train import check_episode_seed_range, read_config
 
 
 class ToyReach(gym.Env):
@@ -273,12 +275,127 @@ class Stage2Tests(unittest.TestCase):
 
     def test_suite_covers_conditions_and_keeps_shared_controls_single(self):
         profile = json.loads((ROOT / "configs/rl_feedback.json").read_text())
-        validation = list(jobs("validation", profile))
-        final = list(jobs("final", profile))
+        validation = list(jobs("validation", profile, self.cfg))
+        final = list(jobs("final", profile, self.cfg))
         self.assertEqual(len(validation), 33)
-        self.assertEqual(len(final), 75)
-        self.assertEqual(sum(j["condition"] == "sparse" for j in final), 5)
+        self.assertEqual(len(final), 45)
+        self.assertEqual(sum(j["condition"] == "sparse" for j in final), 3)
         self.assertEqual({j["seed"] for j in validation}, {100, 101, 102})
+        self.assertEqual({j["seed"] for j in final}, {0, 1, 2})
+        five = {**self.cfg, "final_seeds": [0, 1, 2, 3, 4]}
+        final5 = list(jobs("final", profile, five))
+        self.assertEqual(len(final5), 75)
+        self.assertEqual(sum(j["condition"] == "ideal" for j in final5), 5)
+        self.assertEqual(sum(j["condition"] == "eegnet" for j in final5), 15)
+        self.assertEqual({j["subject"] for j in final5 if j["condition"] == "cbramod"}, {"s02", "s08", "s09"})
+        self.assertEqual(len({j["name"] for j in final5}), 75)
+
+    def test_seed_lists_validated(self):
+        bad = [("validation_seeds", []), ("final_seeds", [0, 0]), ("final_seeds", [0, -1]),
+               ("final_seeds", [0, 1.0]), ("final_seeds", [True]), ("final_seeds", "012"),
+               ("validation_seeds", [100, 0]), ("training_episode_seed_stride", 0)]
+        for key, value in bad:
+            with self.subTest(key=key, value=value):
+                path = self.root / "seeds.json"
+                path.write_text(json.dumps({**self.cfg, key: value}))
+                with self.assertRaises(ValueError):
+                    read_config(path, "pilot")
+        missing = {k: v for k, v in self.cfg.items() if k != "final_seeds"}
+        path = self.root / "missing.json"
+        path.write_text(json.dumps(missing))
+        with self.assertRaises(ValueError):
+            read_config(path, "pilot")
+
+    def test_frozen_identity_includes_seed_lists(self):
+        evidence = self.root / "evidence.json"
+        evidence.write_text(json.dumps({"split": "validation", "complete": True, "config": self.cfg}))
+        cfg = {**self.cfg, "status": "frozen", "validation_evidence_file": evidence.name,
+               "validation_evidence_sha256": sha256(evidence), "final_seeds": [0, 1, 2, 3, 4]}
+        path = self.root / "frozen.json"
+        path.write_text(json.dumps(cfg))
+        with self.assertRaisesRegex(ValueError, "differs"):
+            read_config(path, "final")
+
+    def test_training_episode_seeds_are_disjoint_across_rl_seeds(self):
+        class Recorder(ToyReach):
+            def reset(self, *, seed=None, options=None):
+                self.seeds = getattr(self, "seeds", []) + [seed]
+                return super().reset(seed=seed, options=options)
+
+        used_all = []
+        for seed in (0, 1, 2, 100):
+            inner = Recorder()
+            env = FeedbackReward(inner, self.cfg, "sparse", seed)
+            for _ in range(4):
+                env.reset(seed=12345)  # an externally supplied seed (as SB3 passes) is ignored
+            stride = self.cfg["training_episode_seed_stride"]
+            self.assertEqual(inner.seeds, [seed * stride + k for k in range(4)])
+            used_all += inner.seeds
+            env.close()
+        self.assertEqual(len(used_all), len(set(used_all)))
+
+    def test_episode_seed_range_excludes_evaluation_goals(self):
+        check_episode_seed_range(self.cfg, 0, 150000)
+        check_episode_seed_range(self.cfg, 102, 150000)
+        with self.assertRaises(ValueError):
+            check_episode_seed_range({**self.cfg, "training_episode_seed_stride": 10}, 0, 150000)
+        with self.assertRaises(ValueError):
+            check_episode_seed_range({**self.cfg, "eval_seed_base": 500}, 0, 150000)
+
+    def test_normalized_auc_and_duplicate_final_record(self):
+        def rec(step, s):
+            return {"steps": step, "success_rate": s, "episodes": []}
+        curve = dedupe([rec(0, 0.0), rec(50, 1.0), rec(100, 1.0), rec(100, 1.0)])
+        self.assertEqual([r["steps"] for r in curve], [0, 50, 100])
+        self.assertAlmostEqual(normalized_auc(curve, 100), (25 + 50) / 100)
+        self.assertAlmostEqual(normalized_auc(dedupe([rec(0, 0.2), rec(100, 0.2)]), 100), 0.2)
+        with self.assertRaisesRegex(ValueError, "Inconsistent"):
+            dedupe([rec(100, 1.0), rec(100, 0.5)])
+        with self.assertRaises(ValueError):
+            normalized_auc([rec(10, 0.0), rec(100, 1.0)], 100)  # no step-0 record
+        with self.assertRaises(ValueError):
+            normalized_auc([rec(0, 0.0), rec(90, 1.0)], 100)  # does not reach the budget
+        faster = normalized_auc([rec(0, 0), rec(20, 1), rec(100, 1)], 100)
+        slower = normalized_auc([rec(0, 0), rec(80, 1), rec(100, 1)], 100)
+        self.assertGreater(faster, slower)
+
+    def test_auroc_ties_and_missing_class(self):
+        self.assertAlmostEqual(auroc([0.1, 0.2, 0.8, 0.9], [0, 0, 1, 1]), 1.0)
+        self.assertAlmostEqual(auroc([0.9, 0.8, 0.2, 0.1], [0, 0, 1, 1]), 0.0)
+        self.assertAlmostEqual(auroc([0.5, 0.5, 0.5, 0.5], [0, 1, 0, 1]), 0.5)
+        self.assertAlmostEqual(auroc([0.1, 0.4, 0.35, 0.8], [0, 0, 1, 1]), 0.75)
+        self.assertTrue(np.isnan(auroc([0.1, 0.2], [1, 1])))
+
+    def test_aggregate_macro_average_and_shared_controls(self):
+        rows = []
+        for seed, s in ((0, 0.2), (1, 0.4)):
+            rows.append({"condition": "sparse", "subject": None, "seed": seed, **dict.fromkeys(METRICS, s)})
+        for subject, vals in (("s02", (1.0, 1.0)), ("s08", (0.0, 0.0)), ("s09", (0.5, 0.5))):
+            for seed, v in zip((0, 1), vals):
+                rows.append({"condition": "eegnet", "subject": subject, "seed": seed, **dict.fromkeys(METRICS, v)})
+        within, overall = aggregate(rows)
+        eeg = next(o for o in overall if o["condition"] == "eegnet")
+        sparse = next(o for o in overall if o["condition"] == "sparse")
+        self.assertAlmostEqual(eeg["success_rate_mean"], 0.5)
+        self.assertEqual(eeg["n_participants"], 3)
+        self.assertAlmostEqual(eeg["success_rate_sd"], 0.5)
+        self.assertAlmostEqual(sparse["success_rate_mean"], 0.3)
+        self.assertEqual(sparse["n_participants"], 0)
+        self.assertEqual(sparse["n_runs"], 2)
+        diffs = paired_differences(rows, "eegnet", "sparse")
+        self.assertEqual(len(diffs), 6)
+        self.assertAlmostEqual(next(d for d in diffs if d["subject"] == "s02" and d["seed"] == 1)["difference"], 0.6)
+
+    def test_policy_observation_has_no_feedback_fields(self):
+        env = FeedbackReward(ToyReach(), self.cfg, "eegnet", 0, self.library(), "s11")
+        obs, _ = env.reset()
+        self.assertEqual(set(obs), {"achieved_goal", "desired_goal"})
+        for _ in range(5):
+            obs, _, _, _, info = env.step([0.01])
+        self.assertEqual(info["feedback_event"], 1)
+        self.assertEqual(set(obs), {"achieved_goal", "desired_goal"})
+        self.assertEqual(env.observation_space, ToyReach.observation_space)
+        env.close()
 
 
 if __name__ == "__main__":

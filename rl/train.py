@@ -37,6 +37,7 @@ def read_config(path, phase):
     for name in ("eeg_weight", "dense_weight", "error_epsilon_m", "goal_tolerance_m"):
         if not math.isfinite(cfg[name]) or cfg[name] < 0:
             raise ValueError(f"Invalid {name}")
+    validate_seed_lists(cfg)
     if phase == "final":
         evidence = Path(path).parent / cfg.get("validation_evidence_file", "MISSING")
         if cfg.get("status") != "frozen" or not evidence.is_file():
@@ -52,6 +53,46 @@ def read_config(path, phase):
         if candidate != ev.get("config"):
             raise ValueError("Frozen protocol differs from the validated configuration")
     return cfg
+
+
+def _is_int(value):
+    return isinstance(value, int) and not isinstance(value, bool)
+
+
+def validate_seed_lists(cfg):
+    """Validation/final RL seeds are part of the protocol identity (and of the frozen config)."""
+    lists = {}
+    for name in ("validation_seeds", "final_seeds"):
+        seeds = cfg.get(name)
+        if not isinstance(seeds, list) or not seeds:
+            raise ValueError(f"{name} must be a non-empty list")
+        if not all(_is_int(s) and s >= 0 for s in seeds):
+            raise ValueError(f"{name} must contain non-negative integers")
+        if len(set(seeds)) != len(seeds):
+            raise ValueError(f"{name} contains duplicates")
+        lists[name] = seeds
+    if set(lists["validation_seeds"]) & set(lists["final_seeds"]):
+        raise ValueError("validation_seeds and final_seeds overlap")
+    stride = cfg.get("training_episode_seed_stride")
+    if not _is_int(stride) or stride < 1:
+        raise ValueError("Invalid training_episode_seed_stride")
+    return lists
+
+
+RENDER_SEED_RANGE = (30000, 31000)  # rl.view_policy default goal seeds
+
+
+def check_episode_seed_range(cfg, seed, total_steps):
+    """Training episode seeds seed*stride + k must not reach held-out evaluation/render goals
+    or the range of another RL seed."""
+    stride = cfg["training_episode_seed_stride"]
+    episodes = total_steps // cfg["max_episode_steps"] + 2
+    lo, hi = seed * stride, seed * stride + episodes
+    if episodes > stride:
+        raise ValueError("Training episodes exceed the per-seed episode-seed stride")
+    for a, b in ((cfg["eval_seed_base"], cfg["eval_seed_base"] + cfg["eval_episodes"]), RENDER_SEED_RANGE):
+        if lo < b and a < hi:
+            raise ValueError("Training episode seed range overlaps held-out evaluation/render goal seeds")
 
 
 def evaluate(model, cfg):
@@ -125,8 +166,12 @@ def run(args):
     budget = args.steps if args.steps is not None else cfg["total_timesteps"]
     if budget <= 0:
         raise ValueError("Step budget must be positive")
-    if args.seed < 0 or args.seed + cfg["total_timesteps"] // cfg["max_episode_steps"] >= cfg["eval_seed_base"]:
-        raise ValueError("Training episode seed range must remain below held-out evaluation seeds")
+    if args.seed < 0:
+        raise ValueError("Seed must be non-negative")
+    if args.phase in ("validation", "final") and args.seed not in cfg[args.phase + "_seeds"]:
+        raise ValueError(f"Seed {args.seed} is not declared in {args.phase}_seeds")
+    check_episode_seed_range(cfg, args.seed, max(cfg["total_timesteps"], budget) + (
+        json.loads((Path(args.resume) / "metadata.json").read_text())["num_timesteps"] if args.resume else 0))
     spec = {"config": cfg, "condition": args.condition, "subject": args.subject,
             "phase": args.phase, "seed": args.seed, "feedback_split": split if library else None,
             "feedback_table_sha256": library.table_sha256 if library else None,

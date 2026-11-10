@@ -10,6 +10,58 @@ from .environment import CONDITIONS, distance, make_task
 from .train import read_config
 from .verify_checkpoint import verify
 
+FEEDBACK_FIELDS = {"simulated_label", "p_error", "trial_id", "source_label", "event_index"}
+
+
+def check_transitions(path, condition, cfg):
+    """Neutral segments skip feedback; ideal signs follow the label; baselines get no EEG reward."""
+    import csv
+    w = cfg["eeg_weight"]
+    counts = {"rows": 0, "segment_end": 0, "eligible": 0, "events": 0, "neutral": 0, "label0": 0, "label1": 0}
+    with open(path, newline="") as f:
+        for r in csv.DictReader(f):
+            counts["rows"] += 1
+            seg, elig, ev = int(r["segment_end"]), int(r["feedback_eligible"]), int(r["feedback_event"])
+            counts["segment_end"] += seg
+            counts["eligible"] += elig
+            counts["events"] += ev
+            assert not (elig and not seg) and not (ev and not elig)
+            if seg and not elig:
+                counts["neutral"] += 1
+                assert abs(float(r["segment_progress"])) <= cfg["error_epsilon_m"] + 1e-12
+            if not elig:
+                assert all(r[k] == "" for k in FEEDBACK_FIELDS) and float(r["eeg_reward"]) == 0.0
+                continue
+            label = int(r["simulated_label"])
+            counts[f"label{label}"] += 1
+            assert (float(r["segment_progress"]) < 0) == (label == 1)
+            if condition == "ideal":
+                assert float(r["p_error"]) == label
+                assert abs(float(r["eeg_reward"]) - (w / 2 if label == 0 else -w / 2)) < 1e-12
+            elif condition in ("sparse", "dense"):
+                assert r["p_error"] == "" and float(r["eeg_reward"]) == 0.0 and not ev
+            else:
+                p = float(r["p_error"])
+                assert abs(float(r["eeg_reward"]) - w * (0.5 - p)) < 1e-12
+                if not condition.startswith("independent_"):
+                    assert int(r["source_label"]) == label
+    if condition in ("sparse", "dense"):
+        assert counts["events"] == 0
+    else:
+        assert counts["events"] == counts["eligible"] > 0
+    return counts
+
+
+def check_observation_space(run_dir):
+    """The policy's observation space must be the plain FetchReach dict (no EEG/label fields)."""
+    from stable_baselines3 import SAC
+    final = sorted((Path(run_dir) / "checkpoints").glob("final_*"))[-1]
+    model = SAC.load(final / "model.zip", device="cpu")
+    keys = sorted(model.observation_space.spaces)
+    assert keys == ["achieved_goal", "desired_goal", "observation"], keys
+    return {"policy_observation_keys": keys,
+            "shapes": {k: list(model.observation_space.spaces[k].shape) for k in keys}}
+
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
@@ -48,7 +100,9 @@ def main():
                 subprocess.run(cmd, stdout=f, stderr=subprocess.STDOUT, check=True)
             status = json.loads((out / condition / "status.json").read_text())
             report["conditions"][condition] = {"steps": status["final_steps"], "updates": status["updates"],
-                                               "verification": verify(status["final_checkpoint"])}
+                                               "verification": verify(status["final_checkpoint"]),
+                                               "transitions": check_transitions(out / condition / "transitions.csv", condition, cfg),
+                                               "observation": check_observation_space(out / condition)}
             if condition == "eegnet":
                 # Resume a periodic snapshot, not just the easier final snapshot.
                 checkpoint = out / condition / "checkpoints" / "step_000000080"

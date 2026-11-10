@@ -42,6 +42,9 @@ class FeedbackReward(gym.Wrapper):
         self.cfg, self.condition = config, condition
         self.library, self.subject = library, subject
         self.seed_base = int(seed)
+        # Episode k of RL seed s uses goal seed s*stride + k, so different RL seeds see
+        # disjoint goal sequences (seed + k would make seeds 0/1/2 shifted copies).
+        self.episode_seed_base = int(seed) * int(config.get("training_episode_seed_stride", 1))
         self.feedback_seed = int(seed) + int(config["feedback_seed_offset"])
         self.step_count = self.episode_count = self.event_count = 0
         self.episode_step = 0
@@ -57,8 +60,10 @@ class FeedbackReward(gym.Wrapper):
             self.writer.writeheader()
 
     def reset(self, *, seed=None, options=None):
-        # Independent episode seeds make reset boundaries reproducible on continuation.
-        chosen = self.seed_base + self.episode_count if seed is None else seed
+        # The wrapper owns the training goal sequence: SB3 passes its own seed to the first
+        # reset (and after VecEnv.seed), which is ignored so every episode k of RL seed s uses
+        # s*stride + k. This also keeps reset boundaries reproducible on continuation.
+        chosen = self.next_episode_seed()
         obs, info = self.env.reset(seed=chosen, options=options)
         self.episode_count += 1
         self.episode_step = self.segment_steps = 0
@@ -114,6 +119,9 @@ class FeedbackReward(gym.Wrapper):
             self.writer.writerow(record)
         self.previous = d
         return obs, reward, terminated, truncated, {**info, **record}
+
+    def next_episode_seed(self):
+        return self.episode_seed_base + self.episode_count
 
     def counters(self):
         return {"step_count": self.step_count, "episode_count": self.episode_count,

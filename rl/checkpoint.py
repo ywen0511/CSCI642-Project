@@ -70,7 +70,7 @@ def restore_snapshot(path, env, wrapper, run_spec, device):
     if model.replay_buffer.size() != meta["replay_size"]:
         raise ValueError("Replay buffer size mismatch")
     wrapper.restore_counters(meta["wrapper_counters"])
-    model.get_env().seed(wrapper.seed_base + wrapper.episode_count)
+    model.get_env().seed(wrapper.next_episode_seed())
     # Load only snapshots produced by this project or another trusted source.
     rng = torch.load(path / "rng.pt", weights_only=False, map_location="cpu")
     random.setstate(rng["python"])
