@@ -37,13 +37,14 @@ def summarize(directory):
         metrics, _ = run_metrics(run, cfg["total_timesteps"])
         env_info = json.loads((run / "environment.json").read_text())
         git_shas.add(env_info["git_sha"])
-        sources.add(json.dumps(env_info["source_sha256"], sort_keys=True))
+        # training identity = train/environment/feedback/checkpoint sources recorded in run.json
+        sources.add(json.dumps(spec["training_source_sha256"], sort_keys=True))
         row = {**job, **metrics}
         rows.append(row)
         evidence[job["name"]] = {name: sha256(run / name) for name in
                                   ("run.json", "status.json", "evaluation.json", "environment.json")}
     if len(sources) != 1:
-        raise ValueError("Runs used different rl/*.py training sources")
+        raise ValueError("Runs used different training sources (train/environment/feedback/checkpoint)")
     groups = defaultdict(list)
     for row in rows:
         groups[(row["condition"], row["subject"] or "shared")].append(row)
