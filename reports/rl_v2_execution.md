@@ -38,7 +38,7 @@ decoder seed 42, checkpoint/preprocessing/calibration IDs and participant covera
 lists, suite sizes 33/45/75, disjoint episode seeds, evaluation-seed separation, AUC/duplicate handling, AUROC,
 macro aggregation, the SB3 `info` key and observation content).
 
-`python -m rl.smoke --out artifacts/rl_v2_smoke_r4` on training commit `8131761` (wall time 57 s, CPU), report
+`python -m rl.smoke --out artifacts/rl_v2_smoke_r4` on commit `cfe0305` (training sources identical to `8131761`; wall time 57 s, CPU), report
 [`reports/rl_v2_smoke/smoke_report.json`](rl_v2_smoke/smoke_report.json):
 
 - FetchReach contract: 50 random steps, sparse reward and success match the 5 cm threshold, truncation at 50.
@@ -77,11 +77,43 @@ Earlier smoke runs (`rl_v2_smoke`, `_r2`, `_r3`) passed on earlier commits and a
 ## 5. Pilots and throughput
 
 See plan Section 7 and [`reports/rl_v2_pilots/pilot_report.json`](rl_v2_pilots/pilot_report.json). Pilots ran on
-commit `3113b6b`-`5454ec0` code (before fix 2 above); for the five 150k pilots the report keeps the final
+commit `50888a9` (after fix 1, before fix 2 above); for the five 150k pilots the report keeps the final
 policy's evaluation and records the dropped pre-update value. Throughput 50-56 environment steps/s per core.
 
-GPU benchmark: GPU_BENCH_PLACEHOLDER
+GPU benchmark: an identical 20k-step dense run with `--device cuda` was submitted to gc175 (1 GPU) at the start
+of the pilots. It stayed pending for the whole execution because all gc175 GPUs were occupied by another user's
+jobs (LSF: "Host's available GPU resources cannot meet the job's requirements"); it never held a GPU and was cancelled at the end of the final suite. No GPU
+speedup is therefore claimed or measured, and every reported run used the CPU. All checkpoints are CPU-trained,
+so there is no GPU-to-CPU inference roundoff to measure: CPU reload reproduced the stored probe actions exactly.
 
 ## 6. Validation and final execution
 
-RUNS_PLACEHOLDER
+All formal runs were launched with `rl.suite --prepare` (writes `plan.json` from the protocol's seed lists) and
+one LSF job per planned run, `rl.suite --run-job NAME` (same `rl.train` command and output layout as
+`--execute`), one CPU core each, wall limit 4 h (actual 55-60 min). Clean checkout verified before each launch.
+
+| suite | config | commit | runs | env. steps | completed | core-hours | wall time |
+|---|---|---|---|---|---|---|---|
+| pilots (50k/150k/20k) | `rl/protocol.json` + `--steps` | `50888a9` | 15 | 1.22 M | 15 | 6.3 | ~50 min |
+| validation `candidate_w010` | `configs/rl_v2/candidate_w010.json` | `cfe0305` | 33 | 4.95 M | 33 | | |
+| validation `candidate_w050` | `configs/rl_v2/candidate_w050.json` | `cfe0305` | 33 | 4.95 M | 33 | 91.7 (all three) | ~1 h 5 min (all three in parallel) |
+| validation `candidate_w100` | `configs/rl_v2/candidate_w100.json` | `cfe0305` | 33 | 4.95 M | 33 | | |
+| final | `configs/rl_v2/frozen/protocol.json` | `25bb0f4` | 75 | 11.25 M | 75 | 68.8 | ~1 h |
+
+No formal run failed, was interrupted or resumed. `rl.summarize` passed for every suite: complete plan, protocol
+identity, run identity, no resumption, full budget, shared evaluation goals, identical training-source hashes
+(the training sources of `cfe0305` and `25bb0f4` are identical; later commits changed analysis, reports and
+release tooling only).
+
+Selection and freeze: `scripts/rl_select_candidate.py` (committed before the validation results existed) applied
+the declared rule and wrote the rationale; `rl.freeze` wrote `protocol.json` with the evidence hash; both were
+committed (`25bb0f4`) before the final suite was launched, and the final suite ran from that committed copy
+(byte-identical to the freeze output). Sparse and dense validation runs, which do not use the EEG weight, were
+bit-for-bit identical across the three candidate suites.
+
+Post-processing (CPU): `rl.analysis` for every suite; `rl.trajectories` for the representative runs and for all
+75 final policies; `rl.render_rollout` for GIFs. A first media job crashed (segmentation fault) when torch and the
+OSMesa library were loaded in the same process; GIF rendering was split into a torch-only rollout recording and a
+torch-free replay/render step that verifies the replayed positions (maximum deviation 0.0 m).
+
+Storage: raw run directories 4.2 GB (pilots), 49 GB (validation), 37 GB (final) on the project filer.

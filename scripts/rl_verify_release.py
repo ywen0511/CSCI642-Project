@@ -90,8 +90,11 @@ def main():
     dl, ex = Path(a.download_dir), Path(a.extract_dir)
     dl.mkdir(parents=True, exist_ok=False)
     ex.mkdir(parents=True, exist_ok=False)
-    rel, assets = list_assets(a.tag)
-    report = {"tag": a.tag, "release_url": rel["html_url"], "target_commitish": rel["target_commitish"],
+    rel, listed_assets = list_assets(a.tag)
+    # assets whose upload never completed (state != "uploaded") are not downloadable; record, do not verify
+    assets = [x for x in listed_assets if x.get("state") == "uploaded"]
+    report = {"not_uploaded_assets": [x["name"] for x in listed_assets if x.get("state") != "uploaded"],
+              "tag": a.tag, "release_url": rel["html_url"], "target_commitish": rel["target_commitish"],
               "n_assets_api": len(assets), "bytes_api": sum(x["size"] for x in assets), "ok": False}
     retries = 0
     for asset in sorted(assets, key=lambda x: x["name"]):
@@ -175,7 +178,7 @@ def main():
                   n_periodic_snapshots_verified=sum(1 for k in results if "/step_" in k),
                   inference_failures=[k for k, v in results.items() if not v["ok"]],
                   max_action_difference=max_diff, tolerance=1e-6, verification=results)
-    report["ok"] = bool(report["inventory_ok"] and report["sha256sums_cover_all_assets"] and not bad and not full_bad
+    report["ok"] = bool(not report["not_uploaded_assets"] and report["inventory_ok"] and report["sha256sums_cover_all_assets"] and not bad and not full_bad
                         and not snap_bad and not report["inference_failures"] and targets)
     Path(a.out).write_text(json.dumps(report, indent=2) + "\n")
     print(json.dumps({k: v for k, v in report.items() if k != "verification"}, indent=2))
