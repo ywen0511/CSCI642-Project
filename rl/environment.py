@@ -118,7 +118,10 @@ class FeedbackReward(gym.Wrapper):
         if self.writer:
             self.writer.writerow(record)
         self.previous = d
-        return obs, reward, terminated, truncated, {**info, **record}
+        # "episode" is reserved by SB3/Monitor for episode statistics (a dict); expose the
+        # counter as "episode_index" in info. The CSV log keeps the "episode" column.
+        info_record = {("episode_index" if k == "episode" else k): v for k, v in record.items()}
+        return obs, reward, terminated, truncated, {**info, **info_record}
 
     def next_episode_seed(self):
         return self.episode_seed_base + self.episode_count

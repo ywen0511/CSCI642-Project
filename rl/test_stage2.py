@@ -386,6 +386,15 @@ class Stage2Tests(unittest.TestCase):
         self.assertEqual(len(diffs), 6)
         self.assertAlmostEqual(next(d for d in diffs if d["subject"] == "s02" and d["seed"] == 1)["difference"], 0.6)
 
+    def test_info_does_not_shadow_sb3_episode_statistics(self):
+        env = FeedbackReward(ToyReach(), self.cfg, "ideal", 0)
+        env.reset()
+        for _ in range(7):
+            _, _, _, truncated, info = env.step([-0.01])
+            self.assertNotIn("episode", info)
+            self.assertEqual(info["episode_index"], 1)
+        env.close()
+
     def test_policy_observation_has_no_feedback_fields(self):
         env = FeedbackReward(ToyReach(), self.cfg, "eegnet", 0, self.library(), "s11")
         obs, _ = env.reset()
