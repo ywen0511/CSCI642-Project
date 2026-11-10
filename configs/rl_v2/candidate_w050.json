@@ -13,7 +13,7 @@
   "feedback_seed_offset": 1000000,
   "training_episode_seed_stride": 1000000,
   "eval_seed_base": 20000,
-  "eval_episodes": 20,
+  "eval_episodes": 100,
   "eval_every_steps": 10000,
   "checkpoint_every_steps": 10000,
   "total_timesteps": 150000,

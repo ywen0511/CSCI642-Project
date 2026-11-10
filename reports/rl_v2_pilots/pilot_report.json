@@ -1,0 +1,1202 @@
+{
+  "bench_dense_s902_20k_cpu": {
+    "condition": "dense",
+    "subject": null,
+    "seed": 902,
+    "eeg_weight": 0.5,
+    "completed": true,
+    "error": null,
+    "elapsed_seconds": 297.60202687606215,
+    "device": "cpu",
+    "dropped_preupdate_final_eval": 0.95,
+    "curve": [
+      [
+        0,
+        0.0,
+        0.2702
+      ],
+      [
+        10000,
+        0.75,
+        0.0479
+      ],
+      [
+        20000,
+        0.95,
+        0.0327
+      ]
+    ],
+    "final_success": 0.95,
+    "final_distance": 0.03271540928098179,
+    "normalized_auc_success": 0.6125,
+    "steps_per_second": 67.20384336740119,
+    "feedback": {
+      "steps": 20000,
+      "episodes": 400,
+      "segment_ends": 4000,
+      "eligible": 3893,
+      "feedback_events": 0,
+      "neutral_fraction": 0.02675000000000005,
+      "error_label_fraction": 0.49678910865656306,
+      "events_per_episode": 0.0,
+      "task_reward_sum": -15123.0,
+      "dense_reward_sum": 73.21129863206542,
+      "eeg_reward_sum": 0.0,
+      "eeg_reward_mean_per_event": 0.0
+    }
+  },
+  "cbramod_s11_s900_50k": {
+    "condition": "cbramod",
+    "subject": "s11",
+    "seed": 900,
+    "eeg_weight": 0.5,
+    "completed": true,
+    "error": null,
+    "elapsed_seconds": 923.4814225649461,
+    "device": "cpu",
+    "dropped_preupdate_final_eval": 0.55,
+    "curve": [
+      [
+        0,
+        0.0,
+        0.1706
+      ],
+      [
+        10000,
+        0.0,
+        0.2819
+      ],
+      [
+        20000,
+        0.15,
+        0.3037
+      ],
+      [
+        30000,
+        0.7,
+        0.0444
+      ],
+      [
+        40000,
+        0.7,
+        0.0427
+      ],
+      [
+        50000,
+        0.5,
+        0.1158
+      ]
+    ],
+    "final_success": 0.5,
+    "final_distance": 0.1157546707393795,
+    "normalized_auc_success": 0.36,
+    "steps_per_second": 54.142940808842994,
+    "feedback": {
+      "steps": 50000,
+      "episodes": 1000,
+      "segment_ends": 10000,
+      "eligible": 9530,
+      "feedback_events": 9530,
+      "neutral_fraction": 0.04700000000000004,
+      "error_label_fraction": 0.4947534102833158,
+      "events_per_episode": 9.53,
+      "task_reward_sum": -36761.0,
+      "dense_reward_sum": 0.0,
+      "eeg_reward_sum": 245.20010447764997,
+      "eeg_reward_mean_per_event": 0.025729286933646376,
+      "mean_p_error_label0": 0.4141773152309242,
+      "mean_p_error_label1": 0.48363436229221635,
+      "event_auroc": 0.6354893960967241,
+      "mean_eeg_reward_label0": 0.04291134238453791,
+      "mean_eeg_reward_label1": 0.008182818853891835
+    }
+  },
+  "cbramod_s13_s900_50k": {
+    "condition": "cbramod",
+    "subject": "s13",
+    "seed": 900,
+    "eeg_weight": 0.5,
+    "completed": true,
+    "error": null,
+    "elapsed_seconds": 882.2823115848005,
+    "device": "cpu",
+    "dropped_preupdate_final_eval": 0.95,
+    "curve": [
+      [
+        0,
+        0.0,
+        0.1706
+      ],
+      [
+        10000,
+        0.0,
+        0.2811
+      ],
+      [
+        20000,
+        0.15,
+        0.1273
+      ],
+      [
+        30000,
+        0.95,
+        0.0345
+      ],
+      [
+        40000,
+        0.95,
+        0.0295
+      ],
+      [
+        50000,
+        0.95,
+        0.0214
+      ]
+    ],
+    "final_success": 0.95,
+    "final_distance": 0.02143002954706797,
+    "normalized_auc_success": 0.505,
+    "steps_per_second": 56.67120301911919,
+    "feedback": {
+      "steps": 50000,
+      "episodes": 1000,
+      "segment_ends": 10000,
+      "eligible": 9476,
+      "feedback_events": 9476,
+      "neutral_fraction": 0.0524,
+      "error_label_fraction": 0.4761502743773744,
+      "events_per_episode": 9.476,
+      "task_reward_sum": -29579.0,
+      "dense_reward_sum": 0.0,
+      "eeg_reward_sum": 107.53506489005,
+      "eeg_reward_mean_per_event": 0.011348149524066061,
+      "mean_p_error_label0": 0.4433752468047542,
+      "mean_p_error_label1": 0.5146310161970523,
+      "event_auroc": 0.6374759080985936,
+      "mean_eeg_reward_label0": 0.028312376597622885,
+      "mean_eeg_reward_label1": -0.007315508098526153
+    }
+  },
+  "cbramod_s13_s901_150k": {
+    "condition": "cbramod",
+    "subject": "s13",
+    "seed": 901,
+    "eeg_weight": 0.5,
+    "completed": true,
+    "error": null,
+    "elapsed_seconds": 3006.631527866237,
+    "device": "cpu",
+    "dropped_preupdate_final_eval": 1.0,
+    "curve": [
+      [
+        0,
+        0.0,
+        0.231
+      ],
+      [
+        10000,
+        0.0,
+        0.2575
+      ],
+      [
+        20000,
+        0.95,
+        0.0327
+      ],
+      [
+        30000,
+        0.95,
+        0.0324
+      ],
+      [
+        40000,
+        1.0,
+        0.0209
+      ],
+      [
+        50000,
+        1.0,
+        0.0187
+      ],
+      [
+        60000,
+        1.0,
+        0.0177
+      ],
+      [
+        70000,
+        1.0,
+        0.0207
+      ],
+      [
+        80000,
+        1.0,
+        0.0204
+      ],
+      [
+        90000,
+        1.0,
+        0.0223
+      ],
+      [
+        100000,
+        1.0,
+        0.0255
+      ],
+      [
+        110000,
+        1.0,
+        0.0326
+      ],
+      [
+        120000,
+        0.45,
+        0.052
+      ],
+      [
+        130000,
+        0.85,
+        0.037
+      ],
+      [
+        140000,
+        1.0,
+        0.0158
+      ],
+      [
+        150000,
+        1.0,
+        0.0254
+      ]
+    ],
+    "final_success": 1.0,
+    "final_distance": 0.025352763816314804,
+    "normalized_auc_success": 0.8466666666666667,
+    "steps_per_second": 49.88971831425344,
+    "feedback": {
+      "steps": 150000,
+      "episodes": 3000,
+      "segment_ends": 30000,
+      "eligible": 27273,
+      "feedback_events": 27273,
+      "neutral_fraction": 0.09089999999999998,
+      "error_label_fraction": 0.45077549224507757,
+      "events_per_episode": 9.091,
+      "task_reward_sum": -24617.0,
+      "dense_reward_sum": 0.0,
+      "eeg_reward_sum": 294.10242677115,
+      "eeg_reward_mean_per_event": 0.010783647811797383,
+      "mean_p_error_label0": 0.4464390400583684,
+      "mean_p_error_label1": 0.5174137599986497,
+      "event_auroc": 0.6342523478425894,
+      "mean_eeg_reward_label0": 0.02678047997081581,
+      "mean_eeg_reward_label1": -0.008706879999324874
+    }
+  },
+  "dense_shared_s900_50k": {
+    "condition": "dense",
+    "subject": null,
+    "seed": 900,
+    "eeg_weight": 0.5,
+    "completed": true,
+    "error": null,
+    "elapsed_seconds": 893.1224423618987,
+    "device": "cpu",
+    "dropped_preupdate_final_eval": 1.0,
+    "curve": [
+      [
+        0,
+        0.0,
+        0.1706
+      ],
+      [
+        10000,
+        0.3,
+        0.0539
+      ],
+      [
+        20000,
+        0.65,
+        0.0458
+      ],
+      [
+        30000,
+        0.85,
+        0.0409
+      ],
+      [
+        40000,
+        1.0,
+        0.0227
+      ],
+      [
+        50000,
+        1.0,
+        0.015
+      ]
+    ],
+    "final_success": 1.0,
+    "final_distance": 0.015012298081819914,
+    "normalized_auc_success": 0.66,
+    "steps_per_second": 55.98336535780353,
+    "feedback": {
+      "steps": 50000,
+      "episodes": 1000,
+      "segment_ends": 10000,
+      "eligible": 9269,
+      "feedback_events": 0,
+      "neutral_fraction": 0.07310000000000005,
+      "error_label_fraction": 0.4232387528320207,
+      "events_per_episode": 0.0,
+      "task_reward_sum": -21575.0,
+      "dense_reward_sum": 762.4735190889593,
+      "eeg_reward_sum": 0.0,
+      "eeg_reward_mean_per_event": 0.0
+    }
+  },
+  "dense_shared_s901_150k": {
+    "condition": "dense",
+    "subject": null,
+    "seed": 901,
+    "eeg_weight": 0.5,
+    "completed": true,
+    "error": null,
+    "elapsed_seconds": 2796.123784702737,
+    "device": "cpu",
+    "dropped_preupdate_final_eval": 1.0,
+    "curve": [
+      [
+        0,
+        0.0,
+        0.231
+      ],
+      [
+        10000,
+        0.5,
+        0.0479
+      ],
+      [
+        20000,
+        1.0,
+        0.0255
+      ],
+      [
+        30000,
+        1.0,
+        0.023
+      ],
+      [
+        40000,
+        1.0,
+        0.0129
+      ],
+      [
+        50000,
+        1.0,
+        0.0166
+      ],
+      [
+        60000,
+        1.0,
+        0.0138
+      ],
+      [
+        70000,
+        1.0,
+        0.023
+      ],
+      [
+        80000,
+        1.0,
+        0.0169
+      ],
+      [
+        90000,
+        1.0,
+        0.0177
+      ],
+      [
+        100000,
+        1.0,
+        0.017
+      ],
+      [
+        110000,
+        1.0,
+        0.0124
+      ],
+      [
+        120000,
+        1.0,
+        0.0211
+      ],
+      [
+        130000,
+        1.0,
+        0.0154
+      ],
+      [
+        140000,
+        0.7,
+        0.0446
+      ],
+      [
+        150000,
+        1.0,
+        0.02
+      ]
+    ],
+    "final_success": 1.0,
+    "final_distance": 0.019986626299107378,
+    "normalized_auc_success": 0.9133333333333333,
+    "steps_per_second": 53.645693663718426,
+    "feedback": {
+      "steps": 150000,
+      "episodes": 3000,
+      "segment_ends": 30000,
+      "eligible": 27268,
+      "feedback_events": 0,
+      "neutral_fraction": 0.09106666666666663,
+      "error_label_fraction": 0.44524717617720405,
+      "events_per_episode": 0.0,
+      "task_reward_sum": -21114.0,
+      "dense_reward_sum": 3350.799615039876,
+      "eeg_reward_sum": 0.0,
+      "eeg_reward_mean_per_event": 0.0
+    }
+  },
+  "eegnet_s11_s900_50k": {
+    "condition": "eegnet",
+    "subject": "s11",
+    "seed": 900,
+    "eeg_weight": 0.5,
+    "completed": true,
+    "error": null,
+    "elapsed_seconds": 888.0361806820147,
+    "device": "cpu",
+    "dropped_preupdate_final_eval": 0.45,
+    "curve": [
+      [
+        0,
+        0.0,
+        0.1706
+      ],
+      [
+        10000,
+        0.0,
+        0.2886
+      ],
+      [
+        20000,
+        0.2,
+        0.3031
+      ],
+      [
+        30000,
+        0.55,
+        0.0614
+      ],
+      [
+        40000,
+        0.25,
+        0.3068
+      ],
+      [
+        50000,
+        0.5,
+        0.183
+      ]
+    ],
+    "final_success": 0.5,
+    "final_distance": 0.18303991435430805,
+    "normalized_auc_success": 0.25,
+    "steps_per_second": 56.304012254996,
+    "feedback": {
+      "steps": 50000,
+      "episodes": 1000,
+      "segment_ends": 10000,
+      "eligible": 9605,
+      "feedback_events": 9605,
+      "neutral_fraction": 0.03949999999999998,
+      "error_label_fraction": 0.5471108797501302,
+      "events_per_episode": 9.605,
+      "task_reward_sum": -39486.0,
+      "dense_reward_sum": 0.0,
+      "eeg_reward_sum": 192.00803081,
+      "eeg_reward_mean_per_event": 0.01999042486309214,
+      "mean_p_error_label0": 0.4210936445996092,
+      "mean_p_error_label1": 0.49224102461878205,
+      "event_auroc": 0.6545773811476755,
+      "mean_eeg_reward_label0": 0.0394531777001954,
+      "mean_eeg_reward_label1": 0.0038794876906089446
+    }
+  },
+  "eegnet_s11_s901_150k": {
+    "condition": "eegnet",
+    "subject": "s11",
+    "seed": 901,
+    "eeg_weight": 0.5,
+    "completed": true,
+    "error": null,
+    "elapsed_seconds": 2887.34155125916,
+    "device": "cpu",
+    "dropped_preupdate_final_eval": 1.0,
+    "curve": [
+      [
+        0,
+        0.0,
+        0.231
+      ],
+      [
+        10000,
+        0.0,
+        0.2423
+      ],
+      [
+        20000,
+        0.7,
+        0.0442
+      ],
+      [
+        30000,
+        1.0,
+        0.0205
+      ],
+      [
+        40000,
+        1.0,
+        0.0217
+      ],
+      [
+        50000,
+        1.0,
+        0.0176
+      ],
+      [
+        60000,
+        1.0,
+        0.0208
+      ],
+      [
+        70000,
+        1.0,
+        0.0192
+      ],
+      [
+        80000,
+        1.0,
+        0.0191
+      ],
+      [
+        90000,
+        1.0,
+        0.0291
+      ],
+      [
+        100000,
+        1.0,
+        0.0209
+      ],
+      [
+        110000,
+        1.0,
+        0.0182
+      ],
+      [
+        120000,
+        1.0,
+        0.0167
+      ],
+      [
+        130000,
+        1.0,
+        0.0315
+      ],
+      [
+        140000,
+        1.0,
+        0.0259
+      ],
+      [
+        150000,
+        1.0,
+        0.0306
+      ]
+    ],
+    "final_success": 1.0,
+    "final_distance": 0.03057442652705774,
+    "normalized_auc_success": 0.88,
+    "steps_per_second": 51.95090270307145,
+    "feedback": {
+      "steps": 150000,
+      "episodes": 3000,
+      "segment_ends": 30000,
+      "eligible": 27289,
+      "feedback_events": 27289,
+      "neutral_fraction": 0.0903666666666667,
+      "error_label_fraction": 0.45787680017589505,
+      "events_per_episode": 9.096333333333334,
+      "task_reward_sum": -25294.0,
+      "dense_reward_sum": 0.0,
+      "eeg_reward_sum": 581.1529125333,
+      "eeg_reward_mean_per_event": 0.021296233373641393,
+      "mean_p_error_label0": 0.42446192842453023,
+      "mean_p_error_label1": 0.4964149184330452,
+      "event_auroc": 0.6551969118051438,
+      "mean_eeg_reward_label0": 0.03776903578773489,
+      "mean_eeg_reward_label1": 0.0017925407834773917
+    }
+  },
+  "eegnet_s13_s900_50k": {
+    "condition": "eegnet",
+    "subject": "s13",
+    "seed": 900,
+    "eeg_weight": 0.5,
+    "completed": true,
+    "error": null,
+    "elapsed_seconds": 893.1975881741382,
+    "device": "cpu",
+    "dropped_preupdate_final_eval": 1.0,
+    "curve": [
+      [
+        0,
+        0.0,
+        0.1706
+      ],
+      [
+        10000,
+        0.0,
+        0.285
+      ],
+      [
+        20000,
+        0.35,
+        0.0963
+      ],
+      [
+        30000,
+        0.8,
+        0.0426
+      ],
+      [
+        40000,
+        1.0,
+        0.0199
+      ],
+      [
+        50000,
+        1.0,
+        0.0148
+      ]
+    ],
+    "final_success": 1.0,
+    "final_distance": 0.014751111678700954,
+    "normalized_auc_success": 0.53,
+    "steps_per_second": 55.97865540838426,
+    "feedback": {
+      "steps": 50000,
+      "episodes": 1000,
+      "segment_ends": 10000,
+      "eligible": 9354,
+      "feedback_events": 9354,
+      "neutral_fraction": 0.06459999999999999,
+      "error_label_fraction": 0.5075903356852683,
+      "events_per_episode": 9.354,
+      "task_reward_sum": -27642.0,
+      "dense_reward_sum": 0.0,
+      "eeg_reward_sum": 19.185516831599998,
+      "eeg_reward_mean_per_event": 0.0020510494795381654,
+      "mean_p_error_label0": 0.4561087492419236,
+      "mean_p_error_label1": 0.5344970655704506,
+      "event_auroc": 0.6487427025516331,
+      "mean_eeg_reward_label0": 0.02194562537903821,
+      "mean_eeg_reward_label1": -0.017248532785225357
+    }
+  },
+  "ideal_shared_s900_50k": {
+    "condition": "ideal",
+    "subject": null,
+    "seed": 900,
+    "eeg_weight": 0.5,
+    "completed": true,
+    "error": null,
+    "elapsed_seconds": 895.9176074252464,
+    "device": "cpu",
+    "dropped_preupdate_final_eval": 1.0,
+    "curve": [
+      [
+        0,
+        0.0,
+        0.1706
+      ],
+      [
+        10000,
+        0.0,
+        0.2335
+      ],
+      [
+        20000,
+        0.6,
+        0.044
+      ],
+      [
+        30000,
+        0.65,
+        0.0422
+      ],
+      [
+        40000,
+        1.0,
+        0.0229
+      ],
+      [
+        50000,
+        1.0,
+        0.0161
+      ]
+    ],
+    "final_success": 1.0,
+    "final_distance": 0.016053569020418525,
+    "normalized_auc_success": 0.55,
+    "steps_per_second": 55.80870337362122,
+    "feedback": {
+      "steps": 50000,
+      "episodes": 1000,
+      "segment_ends": 10000,
+      "eligible": 9231,
+      "feedback_events": 9231,
+      "neutral_fraction": 0.07689999999999997,
+      "error_label_fraction": 0.4813129671758206,
+      "events_per_episode": 9.231,
+      "task_reward_sum": -23487.0,
+      "dense_reward_sum": 0.0,
+      "eeg_reward_sum": 86.25,
+      "eeg_reward_mean_per_event": 0.009343516412089697,
+      "mean_p_error_label0": 0.0,
+      "mean_p_error_label1": 1.0,
+      "event_auroc": 1.0,
+      "mean_eeg_reward_label0": 0.25,
+      "mean_eeg_reward_label1": -0.25
+    }
+  },
+  "ideal_shared_s901_150k": {
+    "condition": "ideal",
+    "subject": null,
+    "seed": 901,
+    "eeg_weight": 0.5,
+    "completed": true,
+    "error": null,
+    "elapsed_seconds": 2803.265684033744,
+    "device": "cpu",
+    "dropped_preupdate_final_eval": 1.0,
+    "curve": [
+      [
+        0,
+        0.0,
+        0.231
+      ],
+      [
+        10000,
+        0.1,
+        0.1758
+      ],
+      [
+        20000,
+        0.95,
+        0.0298
+      ],
+      [
+        30000,
+        1.0,
+        0.0186
+      ],
+      [
+        40000,
+        1.0,
+        0.0154
+      ],
+      [
+        50000,
+        1.0,
+        0.0136
+      ],
+      [
+        60000,
+        1.0,
+        0.0191
+      ],
+      [
+        70000,
+        1.0,
+        0.0152
+      ],
+      [
+        80000,
+        1.0,
+        0.016
+      ],
+      [
+        90000,
+        1.0,
+        0.014
+      ],
+      [
+        100000,
+        1.0,
+        0.015
+      ],
+      [
+        110000,
+        1.0,
+        0.0182
+      ],
+      [
+        120000,
+        1.0,
+        0.0214
+      ],
+      [
+        130000,
+        1.0,
+        0.0229
+      ],
+      [
+        140000,
+        1.0,
+        0.0169
+      ],
+      [
+        150000,
+        1.0,
+        0.0156
+      ]
+    ],
+    "final_success": 1.0,
+    "final_distance": 0.015582818621657219,
+    "normalized_auc_success": 0.9033333333333333,
+    "steps_per_second": 53.509020159715405,
+    "feedback": {
+      "steps": 150000,
+      "episodes": 3000,
+      "segment_ends": 30000,
+      "eligible": 27292,
+      "feedback_events": 27292,
+      "neutral_fraction": 0.09026666666666672,
+      "error_label_fraction": 0.45200058625238165,
+      "events_per_episode": 9.097333333333333,
+      "task_reward_sum": -22981.0,
+      "dense_reward_sum": 0.0,
+      "eeg_reward_sum": 655.0,
+      "eeg_reward_mean_per_event": 0.023999706873809173,
+      "mean_p_error_label0": 0.0,
+      "mean_p_error_label1": 1.0,
+      "event_auroc": 1.0,
+      "mean_eeg_reward_label0": 0.25,
+      "mean_eeg_reward_label1": -0.25
+    }
+  },
+  "independent_cbramod_s13_s900_50k": {
+    "condition": "independent_cbramod",
+    "subject": "s13",
+    "seed": 900,
+    "eeg_weight": 0.5,
+    "completed": true,
+    "error": null,
+    "elapsed_seconds": 891.0543113090098,
+    "device": "cpu",
+    "dropped_preupdate_final_eval": 0.4,
+    "curve": [
+      [
+        0,
+        0.0,
+        0.1706
+      ],
+      [
+        10000,
+        0.0,
+        0.2859
+      ],
+      [
+        20000,
+        0.2,
+        0.4055
+      ],
+      [
+        30000,
+        0.6,
+        0.0522
+      ],
+      [
+        40000,
+        0.2,
+        0.105
+      ],
+      [
+        50000,
+        0.4,
+        0.1816
+      ]
+    ],
+    "final_success": 0.4,
+    "final_distance": 0.18162265056510435,
+    "normalized_auc_success": 0.24,
+    "steps_per_second": 56.1133023715997,
+    "feedback": {
+      "steps": 50000,
+      "episodes": 1000,
+      "segment_ends": 10000,
+      "eligible": 9593,
+      "feedback_events": 9593,
+      "neutral_fraction": 0.04069999999999996,
+      "error_label_fraction": 0.5424788908579172,
+      "events_per_episode": 9.593,
+      "task_reward_sum": -39455.0,
+      "dense_reward_sum": 0.0,
+      "eeg_reward_sum": 136.68569861295,
+      "eeg_reward_mean_per_event": 0.014248483124460545,
+      "mean_p_error_label0": 0.47386361129207116,
+      "mean_p_error_label1": 0.4695121469664104,
+      "event_auroc": 0.4921101054642055,
+      "mean_eeg_reward_label0": 0.013068194353964457,
+      "mean_eeg_reward_label1": 0.015243926516794773
+    }
+  },
+  "independent_eegnet_s11_s900_50k": {
+    "condition": "independent_eegnet",
+    "subject": "s11",
+    "seed": 900,
+    "eeg_weight": 0.5,
+    "completed": true,
+    "error": null,
+    "elapsed_seconds": 890.640391676221,
+    "device": "cpu",
+    "dropped_preupdate_final_eval": 0.95,
+    "curve": [
+      [
+        0,
+        0.0,
+        0.1706
+      ],
+      [
+        10000,
+        0.0,
+        0.2856
+      ],
+      [
+        20000,
+        0.0,
+        0.814
+      ],
+      [
+        30000,
+        0.0,
+        1.2769
+      ],
+      [
+        40000,
+        0.1,
+        0.0674
+      ],
+      [
+        50000,
+        0.95,
+        0.0306
+      ]
+    ],
+    "final_success": 0.95,
+    "final_distance": 0.03061209702645929,
+    "normalized_auc_success": 0.115,
+    "steps_per_second": 56.13938068303638,
+    "feedback": {
+      "steps": 50000,
+      "episodes": 1000,
+      "segment_ends": 10000,
+      "eligible": 9701,
+      "feedback_events": 9701,
+      "neutral_fraction": 0.029900000000000038,
+      "error_label_fraction": 0.6364292340995774,
+      "events_per_episode": 9.701,
+      "task_reward_sum": -38873.0,
+      "dense_reward_sum": 0.0,
+      "eeg_reward_sum": 250.5959648584,
+      "eeg_reward_mean_per_event": 0.025831972462467788,
+      "mean_p_error_label0": 0.44969974746833,
+      "mean_p_error_label1": 0.44755702315555557,
+      "event_auroc": 0.4951232102869906,
+      "mean_eeg_reward_label0": 0.025150126265834984,
+      "mean_eeg_reward_label1": 0.026221488422222227
+    }
+  },
+  "sparse_shared_s900_50k": {
+    "condition": "sparse",
+    "subject": null,
+    "seed": 900,
+    "eeg_weight": 0.5,
+    "completed": true,
+    "error": null,
+    "elapsed_seconds": 904.0201399913058,
+    "device": "cpu",
+    "dropped_preupdate_final_eval": 0.4,
+    "curve": [
+      [
+        0,
+        0.0,
+        0.1706
+      ],
+      [
+        10000,
+        0.0,
+        0.2818
+      ],
+      [
+        20000,
+        0.25,
+        0.3519
+      ],
+      [
+        30000,
+        0.8,
+        0.0422
+      ],
+      [
+        40000,
+        0.45,
+        0.0917
+      ],
+      [
+        50000,
+        0.4,
+        0.1412
+      ]
+    ],
+    "final_success": 0.4,
+    "final_distance": 0.1412156014781202,
+    "normalized_auc_success": 0.34,
+    "steps_per_second": 55.30850230889863,
+    "feedback": {
+      "steps": 50000,
+      "episodes": 1000,
+      "segment_ends": 10000,
+      "eligible": 9504,
+      "feedback_events": 0,
+      "neutral_fraction": 0.04959999999999998,
+      "error_label_fraction": 0.5077861952861953,
+      "events_per_episode": 0.0,
+      "task_reward_sum": -37476.0,
+      "dense_reward_sum": 0.0,
+      "eeg_reward_sum": 0.0,
+      "eeg_reward_mean_per_event": 0.0
+    }
+  },
+  "sparse_shared_s901_150k": {
+    "condition": "sparse",
+    "subject": null,
+    "seed": 901,
+    "eeg_weight": 0.5,
+    "completed": true,
+    "error": null,
+    "elapsed_seconds": 2917.3394281067885,
+    "device": "cpu",
+    "dropped_preupdate_final_eval": 0.85,
+    "curve": [
+      [
+        0,
+        0.0,
+        0.231
+      ],
+      [
+        10000,
+        0.0,
+        0.2551
+      ],
+      [
+        20000,
+        0.8,
+        0.0351
+      ],
+      [
+        30000,
+        0.95,
+        0.0344
+      ],
+      [
+        40000,
+        0.9,
+        0.0328
+      ],
+      [
+        50000,
+        1.0,
+        0.0264
+      ],
+      [
+        60000,
+        1.0,
+        0.0229
+      ],
+      [
+        70000,
+        1.0,
+        0.0207
+      ],
+      [
+        80000,
+        1.0,
+        0.0186
+      ],
+      [
+        90000,
+        1.0,
+        0.0188
+      ],
+      [
+        100000,
+        1.0,
+        0.0183
+      ],
+      [
+        110000,
+        1.0,
+        0.0175
+      ],
+      [
+        120000,
+        1.0,
+        0.0289
+      ],
+      [
+        130000,
+        1.0,
+        0.0224
+      ],
+      [
+        140000,
+        1.0,
+        0.0271
+      ],
+      [
+        150000,
+        0.95,
+        0.0374
+      ]
+    ],
+    "final_success": 0.95,
+    "final_distance": 0.03741674964470132,
+    "normalized_auc_success": 0.875,
+    "steps_per_second": 51.41671159510661,
+    "feedback": {
+      "steps": 150000,
+      "episodes": 3000,
+      "segment_ends": 30000,
+      "eligible": 27211,
+      "feedback_events": 0,
+      "neutral_fraction": 0.09296666666666664,
+      "error_label_fraction": 0.45305207452868324,
+      "events_per_episode": 0.0,
+      "task_reward_sum": -29177.0,
+      "dense_reward_sum": 0.0,
+      "eeg_reward_sum": 0.0,
+      "eeg_reward_mean_per_event": 0.0
+    }
+  }
+}
