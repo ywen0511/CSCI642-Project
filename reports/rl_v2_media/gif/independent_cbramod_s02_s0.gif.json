@@ -1,0 +1,6 @@
+{
+  "gif": "artifacts/rl_v2_media/gif/independent_cbramod_s02_s0.gif",
+  "frames": 153,
+  "max_replay_position_deviation_m": 0.0,
+  "replay_matches_recording": true
+}
