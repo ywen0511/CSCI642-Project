@@ -1,0 +1,27 @@
+{
+  "schema": "csci642-decoder-improvement-status/v1",
+  "phase": "prepared_not_executed",
+  "prepared_date": "2026-11-10",
+  "historical_source_sha": "f6decb7a99628638743a4c126d83668149d5c5c8",
+  "planning_branch": "decoder-improvement-v1",
+  "execution_branch": null,
+  "historical_delivery": {
+    "state": "requires_fresh_audit",
+    "notes": "Prior remote observation suggested incomplete RL uploads; this handoff has not performed recovery."
+  },
+  "new_study": {
+    "state": "not_started",
+    "formal_fit_cap": 215,
+    "planned_resolved": null,
+    "completed": 0,
+    "failed": 0,
+    "results": null
+  },
+  "publication": {
+    "planning_documents": "included_in_this_source_snapshot",
+    "experimental_releases": [],
+    "fresh_download_verified": false
+  },
+  "blockers": [],
+  "completion_claim": false
+}
