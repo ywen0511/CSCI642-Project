@@ -1,0 +1,50 @@
+{
+  "schema": "csci642-rl-stage2/v2",
+  "feedback_rule": "distance_change_deadband",
+  "reward_center": 0.5,
+  "status": "pilot",
+  "env_id": "FetchReach-v4",
+  "max_episode_steps": 50,
+  "goal_tolerance_m": 0.05,
+  "feedback_interval_steps": 5,
+  "error_epsilon_m": 0.001,
+  "eeg_weight": 0.1,
+  "dense_weight": 10.0,
+  "feedback_seed_offset": 1000000,
+  "training_episode_seed_stride": 1000000,
+  "eval_seed_base": 20000,
+  "eval_episodes": 20,
+  "eval_every_steps": 10000,
+  "checkpoint_every_steps": 10000,
+  "total_timesteps": 150000,
+  "validation_seeds": [
+    100,
+    101,
+    102
+  ],
+  "final_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "torch_threads": 1,
+  "sac": {
+    "learning_rate": 0.0003,
+    "batch_size": 256,
+    "learning_starts": 5000,
+    "buffer_size": 100000,
+    "gamma": 0.99,
+    "tau": 0.005,
+    "train_freq": 1,
+    "gradient_steps": 1,
+    "ent_coef": "auto",
+    "policy_kwargs": {
+      "net_arch": [
+        256,
+        256
+      ]
+    }
+  }
+}
