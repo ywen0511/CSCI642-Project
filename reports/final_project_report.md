@@ -122,4 +122,45 @@ instead; no claim about route preference is made.
 
 ## 8. Artifacts
 
-ARTIFACTS_PLACEHOLDER
+Code and reports: branch [`rl-v2-experiments`](https://github.com/ywen0511/CSCI642-Project/tree/rl-v2-experiments).
+Frozen EEG inputs: Release [`eeg-stage1-20261101-bccbb8a`](https://github.com/ywen0511/CSCI642-Project/releases/tag/eeg-stage1-20261101-bccbb8a) (unchanged).
+
+| Release | scope | training commit |
+|---|---|---|
+| [`rl-v2-smoke-20261110-cfe0305`](https://github.com/ywen0511/CSCI642-Project/releases/tag/rl-v2-smoke-20261110-cfe0305) | v2 integration smoke (+ superseded smoke runs), all snapshots | `cfe0305` |
+| [`rl-v2-pilots-20261110-50888a9`](https://github.com/ywen0511/CSCI642-Project/releases/tag/rl-v2-pilots-20261110-50888a9) | 15 pilot runs + failed first attempt, all snapshots | `50888a9` |
+| [`rl-v2-validation-w010-20261110-cfe0305`](https://github.com/ywen0511/CSCI642-Project/releases/tag/rl-v2-validation-w010-20261110-cfe0305) | validation candidate w = 0.1 (33 runs), final snapshots + all logs | `cfe0305` |
+| [`rl-v2-validation-w050-20261110-cfe0305`](https://github.com/ywen0511/CSCI642-Project/releases/tag/rl-v2-validation-w050-20261110-cfe0305) | validation candidate w = 0.5 (33 runs), all snapshots | `cfe0305` |
+| [`rl-v2-validation-w100-20261110-cfe0305`](https://github.com/ywen0511/CSCI642-Project/releases/tag/rl-v2-validation-w100-20261110-cfe0305) | validation candidate w = 1.0, selected (33 runs), all snapshots | `cfe0305` |
+| [`rl-v2-final-20261110-25bb0f4`](https://github.com/ywen0511/CSCI642-Project/releases/tag/rl-v2-final-20261110-25bb0f4) | final comparison (75 runs), final snapshots + all logs; analysis data, trajectories and GIFs | `25bb0f4` |
+
+**Checkpoint scope.** At the user's instruction to upload only the important checkpoints, the final-suite and
+w = 0.1 Releases contain each run's final snapshot (model with optimizer and entropy state, replay buffer, RNG
+state, inference probe, metadata) plus every log, evaluation record, transition log and config; their periodic
+10k-step snapshots are listed with SHA-256 in each manifest and retained on the project filer, not uploaded. The
+smoke, pilot and w = 0.5 / w = 1.0 validation Releases (uploaded before that instruction) contain every snapshot.
+
+**Fresh-download verification** (`scripts/rl_verify_release.py`, run on a cluster CPU node: list assets through
+the GitHub API, download everything into a new directory, check names/sizes against the API and every SHA-256,
+reassemble split archives and check full-archive hashes against the package manifest, extract into a new
+directory, validate the hash of every file of every snapshot, reload checkpoints on CPU and reproduce their
+stored inference probes; reports in [`reports/rl_v2_release_verification/`](rl_v2_release_verification/)):
+
+| Release | assets | GB | inventory + every SHA-256 | split archives / full-archive hashes checked | snapshots hash-validated | inference verified (final / periodic) | max action diff | ok |
+|---|---|---|---|---|---|---|---|---|
+| [`rl-v2-final-20261110-25bb0f4`](https://github.com/ywen0511/CSCI642-Project/releases/tag/rl-v2-final-20261110-25bb0f4) | 89 | 1.90 | True | 0 / 76 | 75 | 75 / 0 | 0.0e+00 | **True** |
+| [`rl-v2-pilots-20261110-50888a9`](https://github.com/ywen0511/CSCI642-Project/releases/tag/rl-v2-pilots-20261110-50888a9) | 40 | 1.74 | True | 1 / 32 | 137 | 15 / 7 | 0.0e+00 | **True** |
+| [`rl-v2-smoke-20261110-cfe0305`](https://github.com/ywen0511/CSCI642-Project/releases/tag/rl-v2-smoke-20261110-cfe0305) | 45 | 0.01 | True | 0 / 36 | 102 | 32 / 7 | 0.0e+00 | **True** |
+| [`rl-v2-validation-w010-20261110-cfe0305`](https://github.com/ywen0511/CSCI642-Project/releases/tag/rl-v2-validation-w010-20261110-cfe0305) | 37 | 0.82 | True | 0 / 34 | 33 | 33 / 0 | 0.0e+00 | **True** |
+| [`rl-v2-validation-w050-20261110-cfe0305`](https://github.com/ywen0511/CSCI642-Project/releases/tag/rl-v2-validation-w050-20261110-cfe0305) | 103 | 8.24 | True | 33 / 34 | 528 | 33 / 7 | 0.0e+00 | **True** |
+| [`rl-v2-validation-w100-20261110-cfe0305`](https://github.com/ywen0511/CSCI642-Project/releases/tag/rl-v2-validation-w100-20261110-cfe0305) | 103 | 8.24 | True | 33 / 34 | 528 | 33 / 7 | 0.0e+00 | **True** |
+
+All checkpoints were trained on CPU, so there is no GPU-to-CPU difference to measure; CPU reload reproduced every
+stored probe exactly (tolerance 1e-6).
+
+**Continuation from downloaded checkpoints** (`scripts/rl_continuation_check.py`, new output directories, not part
+of any performance summary): the smoke EEGNet snapshot at step 80 continued to step 120 (updates 59 -> 99, replay
+80 -> 120) on the current code; the pilot EEGNet s11 snapshot at step 40,000 continued for 2,000 steps (updates
+34,999 -> 36,999, replay 40,000 -> 42,000) in a clean checkout of its training commit `50888a9`, as the
+source-hash gate requires. In both cases the restored replay transitions were unchanged, steps, updates and
+replay size increased, and the new final snapshot verified.

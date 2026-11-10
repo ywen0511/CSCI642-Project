@@ -1,0 +1,299 @@
+{
+  "tag": "rl-v2-smoke-20261110-cfe0305",
+  "release_url": "https://github.com/ywen0511/CSCI642-Project/releases/tag/rl-v2-smoke-20261110-cfe0305",
+  "target_commitish": "cfe03056a3fc847e749e72edbb0f839c0244f3cb",
+  "n_assets_api": 45,
+  "bytes_api": 11284063,
+  "ok": true,
+  "download_retries": 0,
+  "inventory_ok": true,
+  "sha256sums_cover_all_assets": true,
+  "sha256_mismatches": [],
+  "n_split_archives": 0,
+  "n_archives": 36,
+  "full_archive_hash_checked": 36,
+  "full_archive_mismatches": [],
+  "n_snapshots_hash_validated": 102,
+  "snapshot_hash_failures": [],
+  "n_checkpoints_inference_verified": 39,
+  "n_final_snapshots_verified": 32,
+  "n_periodic_snapshots_verified": 7,
+  "inference_failures": [],
+  "max_action_difference": 0.0,
+  "tolerance": 1e-06,
+  "verification": {
+    "smoke_r4__cbramod/cbramod/checkpoints/final_000000250": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 250,
+      "updates": 230,
+      "replay_size": 250
+    },
+    "smoke_r4__dense/dense/checkpoints/final_000000250": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 250,
+      "updates": 230,
+      "replay_size": 250
+    },
+    "smoke_r4__eegnet/eegnet/checkpoints/final_000000250": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 250,
+      "updates": 230,
+      "replay_size": 250
+    },
+    "smoke_r4__eegnet_resumed/eegnet_resumed/checkpoints/final_000000120": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 120,
+      "updates": 99,
+      "replay_size": 120
+    },
+    "smoke_r4__ideal/ideal/checkpoints/final_000000250": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 250,
+      "updates": 230,
+      "replay_size": 250
+    },
+    "smoke_r4__independent_cbramod/independent_cbramod/checkpoints/final_000000250": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 250,
+      "updates": 230,
+      "replay_size": 250
+    },
+    "smoke_r4__independent_eegnet/independent_eegnet/checkpoints/final_000000250": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 250,
+      "updates": 230,
+      "replay_size": 250
+    },
+    "smoke_r4__sparse/sparse/checkpoints/final_000000250": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 250,
+      "updates": 230,
+      "replay_size": 250
+    },
+    "superseded_rl_v2_smoke__cbramod/cbramod/checkpoints/final_000000160": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 160,
+      "updates": 140,
+      "replay_size": 160
+    },
+    "superseded_rl_v2_smoke__dense/dense/checkpoints/final_000000160": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 160,
+      "updates": 140,
+      "replay_size": 160
+    },
+    "superseded_rl_v2_smoke__eegnet/eegnet/checkpoints/final_000000160": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 160,
+      "updates": 140,
+      "replay_size": 160
+    },
+    "superseded_rl_v2_smoke__eegnet_resumed/eegnet_resumed/checkpoints/final_000000120": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 120,
+      "updates": 99,
+      "replay_size": 120
+    },
+    "superseded_rl_v2_smoke__ideal/ideal/checkpoints/final_000000160": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 160,
+      "updates": 140,
+      "replay_size": 160
+    },
+    "superseded_rl_v2_smoke__independent_cbramod/independent_cbramod/checkpoints/final_000000160": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 160,
+      "updates": 140,
+      "replay_size": 160
+    },
+    "superseded_rl_v2_smoke__independent_eegnet/independent_eegnet/checkpoints/final_000000160": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 160,
+      "updates": 140,
+      "replay_size": 160
+    },
+    "superseded_rl_v2_smoke__sparse/sparse/checkpoints/final_000000160": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 160,
+      "updates": 140,
+      "replay_size": 160
+    },
+    "superseded_rl_v2_smoke_r2__cbramod/cbramod/checkpoints/final_000000160": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 160,
+      "updates": 140,
+      "replay_size": 160
+    },
+    "superseded_rl_v2_smoke_r2__dense/dense/checkpoints/final_000000160": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 160,
+      "updates": 140,
+      "replay_size": 160
+    },
+    "superseded_rl_v2_smoke_r2__eegnet/eegnet/checkpoints/final_000000160": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 160,
+      "updates": 140,
+      "replay_size": 160
+    },
+    "superseded_rl_v2_smoke_r2__eegnet_resumed/eegnet_resumed/checkpoints/final_000000120": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 120,
+      "updates": 99,
+      "replay_size": 120
+    },
+    "superseded_rl_v2_smoke_r2__ideal/ideal/checkpoints/final_000000160": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 160,
+      "updates": 140,
+      "replay_size": 160
+    },
+    "superseded_rl_v2_smoke_r2__independent_cbramod/independent_cbramod/checkpoints/final_000000160": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 160,
+      "updates": 140,
+      "replay_size": 160
+    },
+    "superseded_rl_v2_smoke_r2__independent_eegnet/independent_eegnet/checkpoints/final_000000160": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 160,
+      "updates": 140,
+      "replay_size": 160
+    },
+    "superseded_rl_v2_smoke_r2__sparse/sparse/checkpoints/final_000000160": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 160,
+      "updates": 140,
+      "replay_size": 160
+    },
+    "superseded_rl_v2_smoke_r3__cbramod/cbramod/checkpoints/final_000000250": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 250,
+      "updates": 230,
+      "replay_size": 250
+    },
+    "superseded_rl_v2_smoke_r3__dense/dense/checkpoints/final_000000250": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 250,
+      "updates": 230,
+      "replay_size": 250
+    },
+    "superseded_rl_v2_smoke_r3__eegnet/eegnet/checkpoints/final_000000250": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 250,
+      "updates": 230,
+      "replay_size": 250
+    },
+    "superseded_rl_v2_smoke_r3__eegnet_resumed/eegnet_resumed/checkpoints/final_000000120": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 120,
+      "updates": 99,
+      "replay_size": 120
+    },
+    "superseded_rl_v2_smoke_r3__ideal/ideal/checkpoints/final_000000250": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 250,
+      "updates": 230,
+      "replay_size": 250
+    },
+    "superseded_rl_v2_smoke_r3__independent_cbramod/independent_cbramod/checkpoints/final_000000250": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 250,
+      "updates": 230,
+      "replay_size": 250
+    },
+    "superseded_rl_v2_smoke_r3__independent_eegnet/independent_eegnet/checkpoints/final_000000250": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 250,
+      "updates": 230,
+      "replay_size": 250
+    },
+    "superseded_rl_v2_smoke_r3__sparse/sparse/checkpoints/final_000000250": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 250,
+      "updates": 230,
+      "replay_size": 250
+    },
+    "superseded_rl_v2_smoke_r2__cbramod/cbramod/checkpoints/step_000000080": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 80,
+      "updates": 59,
+      "replay_size": 80
+    },
+    "superseded_rl_v2_smoke_r2__dense/dense/checkpoints/step_000000080": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 80,
+      "updates": 59,
+      "replay_size": 80
+    },
+    "superseded_rl_v2_smoke_r2__eegnet/eegnet/checkpoints/step_000000080": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 80,
+      "updates": 59,
+      "replay_size": 80
+    },
+    "superseded_rl_v2_smoke_r2__ideal/ideal/checkpoints/step_000000080": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 80,
+      "updates": 59,
+      "replay_size": 80
+    },
+    "superseded_rl_v2_smoke_r2__independent_cbramod/independent_cbramod/checkpoints/step_000000080": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 80,
+      "updates": 59,
+      "replay_size": 80
+    },
+    "superseded_rl_v2_smoke_r2__independent_eegnet/independent_eegnet/checkpoints/step_000000080": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 80,
+      "updates": 59,
+      "replay_size": 80
+    },
+    "superseded_rl_v2_smoke_r2__sparse/sparse/checkpoints/step_000000080": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 80,
+      "updates": 59,
+      "replay_size": 80
+    }
+  }
+}

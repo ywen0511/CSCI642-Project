@@ -1,6 +1,25 @@
 # EEG-Assisted Robot Learning: proposal-aligned RL follow-up
 
-Repository: **ywen0511/CSCI642-Project**. Active branch: **rl-proposal-v2**.
+Repository: **ywen0511/CSCI642-Project**. This is branch **rl-v2-experiments**, the executed version of the
+`rl-proposal-v2` handoff.
+
+## Status on this branch (executed 2026-11-09/10)
+
+The handoff in [GPU_AGENT_HANDOFF.md](GPU_AGENT_HANDOFF.md) was carried out end to end: v2 smoke, pilots, three
+complete validation candidates, a validation-only freeze, the 75-run final comparison, analysis, trajectories,
+reports and Release delivery with fresh-download verification.
+
+- **Result:** on FetchReach with SAC (150k steps), every condition reaches high final success (0.94-1.00).
+  Learning speed (normalized AUC): dense 0.915 > ideal 0.764 > sparse 0.659 ≈ EEGNet 0.641 > CBraMod 0.571.
+  Replayed EEG error probabilities did not speed up learning over sparse reward; EEGNet feedback was slightly
+  better than CBraMod and than its label-independent control. See [reports/rl_v2_results.md](reports/rl_v2_results.md).
+- **Reports:** [final project report](reports/final_project_report.md), [results](reports/rl_v2_results.md),
+  [experiment plan (declared before validation)](reports/rl_v2_experiment_plan.md),
+  [execution record](reports/rl_v2_execution.md), [generated tables](reports/rl_v2_final/results_tables.md).
+- **Frozen protocol and evidence:** [configs/rl_v2/frozen/](configs/rl_v2/frozen/).
+- **Releases:** final comparison [rl-v2-final-20261110-25bb0f4](https://github.com/ywen0511/CSCI642-Project/releases/tag/rl-v2-final-20261110-25bb0f4); validation, pilot and smoke Releases and their fresh-download verification are listed in the [final project report, Section 8](reports/final_project_report.md#8-artifacts).
+
+The sections below are the original handoff text from `rl-proposal-v2`, kept for reference.
 
 ## Start here
 
@@ -22,10 +41,10 @@ The v2 preparation performed unit/static checks only. It did **not** run SAC tra
 
 | Proposal stage | Status |
 |---|---|
-| 1: reaching/SAC and sparse/dense baselines | Code and historical short checks exist; formal v2 baselines must be run with the common protocol |
-| 2: EEG audit, training, calibration and evaluation | Completed; keep weights, splits and predictions frozen |
-| 3: EEG integration and main comparison | v2 interface implemented; new smoke, pilot, validation and final comparisons remain |
-| 4: analysis, curves, trajectories and report | EEG analysis exists; integrated RL analysis/report/delivery remain |
+| 1: reaching/SAC and sparse/dense baselines | **Done** on this branch: formal sparse/dense baselines in every validation and final suite (150k steps) |
+| 2: EEG audit, training, calibration and evaluation | Completed earlier; weights, splits and predictions kept frozen |
+| 3: EEG integration and main comparison | **Done**: smoke, pilots, 3 validation candidates, freeze, 75-run final comparison; optional route preference not performed |
+| 4: analysis, curves, trajectories and report | **Done**: curves, AUC, diagnostics, trajectories/GIFs, reports, verified Releases |
 
 Historical names `eeg-stage1` and `rl-stage2` are delivery names, not the proposal's numbered stages.
 

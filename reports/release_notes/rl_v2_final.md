@@ -22,7 +22,7 @@ learning. Full results: `reports/rl_v2_results.md`; report: `reports/final_proje
 `rl-v2-experiments`).
 
 Assets:
-- `final__<run>.tar.gz[.part-NN]`: one archive per run with every periodic (10k-step) and final snapshot
+- `final__<run>.tar.gz[.part-NN]`: one archive per run with the final snapshot
   (`model.zip` incl. optimizer/entropy state, `replay_buffer.pkl`, `rng.pt`, `probe.npz`, `metadata.json`),
   `transitions.csv`, `evaluations.jsonl`, SB3 logs, `run.json`, `environment.json`, `status.json`, job log.
 - `final__shared_evidence.tar.gz`: `plan.json`, `summary.json/csv`, job logs; `final__manifest.json`: every file
@@ -33,3 +33,5 @@ Assets:
 
 Archives above 100 MB are split losslessly: `cat <archive>.part-* > <archive>` and check the full-archive SHA-256
 in `final__manifest.json`. `SHA256SUMS` covers every asset of this Release.
+
+**Checkpoint scope (user instruction: upload only the important checkpoints):** each run archive contains the run's **final snapshot** (`model.zip` with optimizer and entropy state, `replay_buffer.pkl`, `rng.pt`, `probe.npz`, `metadata.json`) and every log, evaluation record, transition log and config. The periodic 10k-step snapshots are not uploaded; each is listed with its SHA-256 in the manifest (`in_archive: false`) and retained on the project filer (`artifacts/rl_v2_final`, `artifacts/rl_v2_validation`). Periodic-snapshot reload and continuation were verified on the pilot and smoke Releases, which include all snapshots.

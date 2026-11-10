@@ -1,0 +1,181 @@
+{
+  "not_uploaded_assets": [],
+  "tag": "rl-v2-pilots-20261110-50888a9",
+  "release_url": "https://github.com/ywen0511/CSCI642-Project/releases/tag/rl-v2-pilots-20261110-50888a9",
+  "target_commitish": "50888a9fe7b6ea515aa7ce55e537ef656609466a",
+  "n_assets_api": 40,
+  "bytes_api": 1741603432,
+  "ok": true,
+  "download_retries": 0,
+  "inventory_ok": true,
+  "sha256sums_cover_all_assets": true,
+  "sha256_mismatches": [],
+  "n_split_archives": 1,
+  "n_archives": 32,
+  "full_archive_hash_checked": 32,
+  "full_archive_mismatches": [],
+  "n_snapshots_hash_validated": 137,
+  "snapshot_hash_failures": [],
+  "n_checkpoints_inference_verified": 22,
+  "n_final_snapshots_verified": 15,
+  "n_periodic_snapshots_verified": 7,
+  "inference_failures": [],
+  "max_action_difference": 0.0,
+  "tolerance": 1e-06,
+  "verification": {
+    "pilots__bench_dense_s902_20k_cpu/bench_dense_s902_20k_cpu/checkpoints/final_000020000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 20000,
+      "updates": 15000,
+      "replay_size": 20000
+    },
+    "pilots__cbramod_s11_s900_50k/cbramod_s11_s900_50k/checkpoints/final_000050000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 50000,
+      "updates": 45000,
+      "replay_size": 50000
+    },
+    "pilots__cbramod_s13_s900_50k/cbramod_s13_s900_50k/checkpoints/final_000050000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 50000,
+      "updates": 45000,
+      "replay_size": 50000
+    },
+    "pilots__cbramod_s13_s901_150k/cbramod_s13_s901_150k/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "pilots__dense_shared_s900_50k/dense_shared_s900_50k/checkpoints/final_000050000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 50000,
+      "updates": 45000,
+      "replay_size": 50000
+    },
+    "pilots__dense_shared_s901_150k/dense_shared_s901_150k/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "pilots__eegnet_s11_s900_50k/eegnet_s11_s900_50k/checkpoints/final_000050000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 50000,
+      "updates": 45000,
+      "replay_size": 50000
+    },
+    "pilots__eegnet_s11_s901_150k/eegnet_s11_s901_150k/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "pilots__eegnet_s13_s900_50k/eegnet_s13_s900_50k/checkpoints/final_000050000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 50000,
+      "updates": 45000,
+      "replay_size": 50000
+    },
+    "pilots__ideal_shared_s900_50k/ideal_shared_s900_50k/checkpoints/final_000050000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 50000,
+      "updates": 45000,
+      "replay_size": 50000
+    },
+    "pilots__ideal_shared_s901_150k/ideal_shared_s901_150k/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "pilots__independent_cbramod_s13_s900_50k/independent_cbramod_s13_s900_50k/checkpoints/final_000050000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 50000,
+      "updates": 45000,
+      "replay_size": 50000
+    },
+    "pilots__independent_eegnet_s11_s900_50k/independent_eegnet_s11_s900_50k/checkpoints/final_000050000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 50000,
+      "updates": 45000,
+      "replay_size": 50000
+    },
+    "pilots__sparse_shared_s900_50k/sparse_shared_s900_50k/checkpoints/final_000050000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 50000,
+      "updates": 45000,
+      "replay_size": 50000
+    },
+    "pilots__sparse_shared_s901_150k/sparse_shared_s901_150k/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "pilots__cbramod_s13_s901_150k/cbramod_s13_s901_150k/checkpoints/step_000030000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 30000,
+      "updates": 24999,
+      "replay_size": 30000
+    },
+    "pilots__dense_shared_s901_150k/dense_shared_s901_150k/checkpoints/step_000050000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 50000,
+      "updates": 44999,
+      "replay_size": 50000
+    },
+    "pilots__eegnet_s11_s901_150k/eegnet_s11_s901_150k/checkpoints/step_000080000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 80000,
+      "updates": 74999,
+      "replay_size": 80000
+    },
+    "pilots__ideal_shared_s901_150k/ideal_shared_s901_150k/checkpoints/step_000060000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 60000,
+      "updates": 54999,
+      "replay_size": 60000
+    },
+    "pilots__independent_cbramod_s13_s900_50k/independent_cbramod_s13_s900_50k/checkpoints/step_000030000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 30000,
+      "updates": 24999,
+      "replay_size": 30000
+    },
+    "pilots__independent_eegnet_s11_s900_50k/independent_eegnet_s11_s900_50k/checkpoints/step_000030000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 30000,
+      "updates": 24999,
+      "replay_size": 30000
+    },
+    "pilots__sparse_shared_s901_150k/sparse_shared_s901_150k/checkpoints/step_000060000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 60000,
+      "updates": 54999,
+      "replay_size": 60000
+    }
+  }
+}

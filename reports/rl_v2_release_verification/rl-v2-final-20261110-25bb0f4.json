@@ -1,0 +1,552 @@
+{
+  "not_uploaded_assets": [],
+  "tag": "rl-v2-final-20261110-25bb0f4",
+  "release_url": "https://github.com/ywen0511/CSCI642-Project/releases/tag/rl-v2-final-20261110-25bb0f4",
+  "target_commitish": "25bb0f489bd79c4224d2d4853a5fa5eebb14a7c5",
+  "n_assets_api": 89,
+  "bytes_api": 1904402765,
+  "ok": true,
+  "download_retries": 0,
+  "inventory_ok": true,
+  "sha256sums_cover_all_assets": true,
+  "sha256_mismatches": [],
+  "n_split_archives": 0,
+  "n_archives": 77,
+  "full_archive_hash_checked": 76,
+  "full_archive_mismatches": [],
+  "n_snapshots_hash_validated": 75,
+  "snapshot_hash_failures": [],
+  "n_checkpoints_inference_verified": 75,
+  "n_final_snapshots_verified": 75,
+  "n_periodic_snapshots_verified": 0,
+  "inference_failures": [],
+  "max_action_difference": 0.0,
+  "tolerance": 1e-06,
+  "verification": {
+    "final__cbramod_s02_s0/cbramod_s02_s0/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__cbramod_s02_s1/cbramod_s02_s1/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__cbramod_s02_s2/cbramod_s02_s2/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__cbramod_s02_s3/cbramod_s02_s3/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__cbramod_s02_s4/cbramod_s02_s4/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__cbramod_s08_s0/cbramod_s08_s0/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__cbramod_s08_s1/cbramod_s08_s1/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__cbramod_s08_s2/cbramod_s08_s2/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__cbramod_s08_s3/cbramod_s08_s3/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__cbramod_s08_s4/cbramod_s08_s4/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__cbramod_s09_s0/cbramod_s09_s0/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__cbramod_s09_s1/cbramod_s09_s1/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__cbramod_s09_s2/cbramod_s09_s2/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__cbramod_s09_s3/cbramod_s09_s3/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__cbramod_s09_s4/cbramod_s09_s4/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__dense_shared_s0/dense_shared_s0/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__dense_shared_s1/dense_shared_s1/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__dense_shared_s2/dense_shared_s2/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__dense_shared_s3/dense_shared_s3/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__dense_shared_s4/dense_shared_s4/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__eegnet_s02_s0/eegnet_s02_s0/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__eegnet_s02_s1/eegnet_s02_s1/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__eegnet_s02_s2/eegnet_s02_s2/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__eegnet_s02_s3/eegnet_s02_s3/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__eegnet_s02_s4/eegnet_s02_s4/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__eegnet_s08_s0/eegnet_s08_s0/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__eegnet_s08_s1/eegnet_s08_s1/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__eegnet_s08_s2/eegnet_s08_s2/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__eegnet_s08_s3/eegnet_s08_s3/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__eegnet_s08_s4/eegnet_s08_s4/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__eegnet_s09_s0/eegnet_s09_s0/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__eegnet_s09_s1/eegnet_s09_s1/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__eegnet_s09_s2/eegnet_s09_s2/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__eegnet_s09_s3/eegnet_s09_s3/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__eegnet_s09_s4/eegnet_s09_s4/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__ideal_shared_s0/ideal_shared_s0/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__ideal_shared_s1/ideal_shared_s1/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__ideal_shared_s2/ideal_shared_s2/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__ideal_shared_s3/ideal_shared_s3/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__ideal_shared_s4/ideal_shared_s4/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__independent_cbramod_s02_s0/independent_cbramod_s02_s0/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__independent_cbramod_s02_s1/independent_cbramod_s02_s1/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__independent_cbramod_s02_s2/independent_cbramod_s02_s2/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__independent_cbramod_s02_s3/independent_cbramod_s02_s3/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__independent_cbramod_s02_s4/independent_cbramod_s02_s4/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__independent_cbramod_s08_s0/independent_cbramod_s08_s0/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__independent_cbramod_s08_s1/independent_cbramod_s08_s1/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__independent_cbramod_s08_s2/independent_cbramod_s08_s2/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__independent_cbramod_s08_s3/independent_cbramod_s08_s3/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__independent_cbramod_s08_s4/independent_cbramod_s08_s4/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__independent_cbramod_s09_s0/independent_cbramod_s09_s0/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__independent_cbramod_s09_s1/independent_cbramod_s09_s1/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__independent_cbramod_s09_s2/independent_cbramod_s09_s2/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__independent_cbramod_s09_s3/independent_cbramod_s09_s3/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__independent_cbramod_s09_s4/independent_cbramod_s09_s4/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__independent_eegnet_s02_s0/independent_eegnet_s02_s0/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__independent_eegnet_s02_s1/independent_eegnet_s02_s1/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__independent_eegnet_s02_s2/independent_eegnet_s02_s2/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__independent_eegnet_s02_s3/independent_eegnet_s02_s3/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__independent_eegnet_s02_s4/independent_eegnet_s02_s4/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__independent_eegnet_s08_s0/independent_eegnet_s08_s0/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__independent_eegnet_s08_s1/independent_eegnet_s08_s1/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__independent_eegnet_s08_s2/independent_eegnet_s08_s2/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__independent_eegnet_s08_s3/independent_eegnet_s08_s3/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__independent_eegnet_s08_s4/independent_eegnet_s08_s4/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__independent_eegnet_s09_s0/independent_eegnet_s09_s0/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__independent_eegnet_s09_s1/independent_eegnet_s09_s1/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__independent_eegnet_s09_s2/independent_eegnet_s09_s2/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__independent_eegnet_s09_s3/independent_eegnet_s09_s3/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__independent_eegnet_s09_s4/independent_eegnet_s09_s4/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__sparse_shared_s0/sparse_shared_s0/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__sparse_shared_s1/sparse_shared_s1/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__sparse_shared_s2/sparse_shared_s2/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__sparse_shared_s3/sparse_shared_s3/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "final__sparse_shared_s4/sparse_shared_s4/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    }
+  }
+}

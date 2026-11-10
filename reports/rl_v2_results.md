@@ -157,7 +157,7 @@ Selection rule (declared in the plan before any final run): RL seed 0 for every 
 EEG conditions, goal seeds 30000-30002 (outside the training and evaluation goal ranges).
 [`rl_v2_media/trajectories_representative/trajectories.png`](rl_v2_media/trajectories_representative/trajectories.png)
 shows the gripper paths (x-y and x-z projections, 5 cm goal region dotted); all seven representative policies
-reach all three goals. GIFs of the same rollouts (3 episodes each) are Release assets (`media__gif/*.gif`); they
+reach all three goals. GIFs of the same rollouts (3 episodes each) are Release assets (`gif__*.gif` in the final Release); they
 were rendered by replaying the recorded actions in a separate process, and every replay matched the recorded
 gripper positions exactly (maximum deviation 0.0 m).
 

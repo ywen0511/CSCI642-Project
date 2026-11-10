@@ -117,3 +117,28 @@ OSMesa library were loaded in the same process; GIF rendering was split into a t
 torch-free replay/render step that verifies the replayed positions (maximum deviation 0.0 m).
 
 Storage: raw run directories 4.2 GB (pilots), 49 GB (validation), 37 GB (final) on the project filer.
+
+## 7. Delivery and fresh-download verification
+
+Six new Releases were created in `ywen0511/CSCI642-Project`, each tag pinned to the training commit of its runs;
+existing EEG tags and Releases were not changed. Assets were packaged on the cluster (`rl.package`; archives above
+100 MB split losslessly into `.part-NN`), copied to the laptop and uploaded with `gh` (`scripts/rl_stage_release.sh`,
+`scripts/rl_upload_missing.sh`). Upload problems and how they were handled:
+
+- Intermittent TLS errors (`bad record MAC`) on the laptop's connection made large single files fail repeatedly;
+  later packages use 100 MB parts and the upload loop re-uploads only missing or size-mismatched assets.
+- A failed upload left an incomplete ("starter") asset in the pilot Release, which made the first pilot
+  verification fail; it was removed (its content is published as verified parts), and the upload script now
+  removes such leftovers. The first verification report is kept as
+  `rl-v2-pilots-20261110-50888a9.attempt_with_starter_asset.json`.
+- The laptop-cluster link dropped to about 1.4 MB/s. At the user's instruction ("upload only important ckpt,
+  upload through this computer"), the final-suite and w = 0.1 Releases were re-packaged with final snapshots only
+  (`rl.package --final-snapshots-only`); their partial full-scope uploads were deleted first so that no Release
+  mixes scopes. The w = 0.5 and w = 1.0 validation Releases had already completed with every snapshot.
+
+Verification results are in the final project report, Section 8, and in `reports/rl_v2_release_verification/`.
+All six Releases pass; two continuation checks from downloaded snapshots pass.
+
+Durable copies: every run directory (including all periodic snapshots and replay buffers) remains on the project
+filer under `repo/artifacts/` (pilots 4.2 GB, validation 49 GB, final 37 GB), together with the full-scope
+packages in `repo/artifacts/rl_v2_release/`.

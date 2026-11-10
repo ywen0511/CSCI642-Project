@@ -21,10 +21,12 @@ Selection metric (12 EEGNet + CBraMod runs): mean final success 0.9800, mean fin
 | independent_eegnet | 6 | 0.987 | 0.0271 | 0.721 |
 | independent_cbramod | 6 | 0.905 | 0.0291 | 0.756 |
 
-Assets: one archive per run with every periodic (10k-step) and final snapshot (`model.zip` incl. optimizer and
+Assets: one archive per run with the final snapshot (`model.zip` incl. optimizer and
 entropy state, `replay_buffer.pkl`, `rng.pt`, `probe.npz`, `metadata.json`), `transitions.csv`,
 `evaluations.jsonl`, SB3 logs, `run.json`, `environment.json`, `status.json` and the job log;
 `shared_evidence.tar.gz` holds `plan.json`, `summary.json/csv` and job logs. Archives larger than 100 MB are split
 losslessly into `<archive>.part-NN`; reassemble with `cat <archive>.part-* > <archive>` and check the full-archive
 SHA-256 in `manifest.json`. `SHA256SUMS` covers every asset of this Release.
 Selection evidence: `configs/rl_v2/frozen/`, analysis: `reports/rl_v2_validation/` on branch `rl-v2-experiments`.
+
+**Checkpoint scope (user instruction: upload only the important checkpoints):** each run archive contains the run's **final snapshot** (`model.zip` with optimizer and entropy state, `replay_buffer.pkl`, `rng.pt`, `probe.npz`, `metadata.json`) and every log, evaluation record, transition log and config. The periodic 10k-step snapshots are not uploaded; each is listed with its SHA-256 in the manifest (`in_archive: false`) and retained on the project filer (`artifacts/rl_v2_final`, `artifacts/rl_v2_validation`). Periodic-snapshot reload and continuation were verified on the pilot and smoke Releases, which include all snapshots.
