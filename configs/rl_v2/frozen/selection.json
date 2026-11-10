@@ -1,0 +1,198 @@
+{
+  "rule": "Apply the declared validation-only selection rule to complete candidate suites.\n\nRule (reports/rl_v2_experiment_plan.md, Section 4): highest mean final-step success over the 12 main-decoder\nruns (EEGNet + CBraMod, participants s11/s13, validation seeds); ties (1e-9): lower mean final distance over\nthe same runs, then the smaller EEG weight. Every candidate must be a complete suite (rl.summarize).",
+  "candidates": [
+    {
+      "suite": "artifacts/rl_v2_validation/candidate_w010",
+      "eeg_weight": 0.1,
+      "dense_weight": 10.0,
+      "n_runs": 33,
+      "selection_success": 0.98,
+      "selection_final_distance": 0.027781810656109494,
+      "selection_auc": 0.7622222222222222,
+      "n_selection_runs": 12,
+      "per_condition": {
+        "sparse": {
+          "success_rate": 1.0,
+          "mean_final_distance": 0.02590858326587466,
+          "normalized_auc_success": 0.748,
+          "n_runs": 3
+        },
+        "dense": {
+          "success_rate": 1.0,
+          "mean_final_distance": 0.021715822723382443,
+          "normalized_auc_success": 0.9042222222222223,
+          "n_runs": 3
+        },
+        "ideal": {
+          "success_rate": 1.0,
+          "mean_final_distance": 0.01830976991710344,
+          "normalized_auc_success": 0.8113333333333334,
+          "n_runs": 3
+        },
+        "eegnet": {
+          "success_rate": 0.9883333333333333,
+          "mean_final_distance": 0.027580834863378492,
+          "normalized_auc_success": 0.7598333333333334,
+          "n_runs": 6
+        },
+        "cbramod": {
+          "success_rate": 0.9716666666666667,
+          "mean_final_distance": 0.02798278644884049,
+          "normalized_auc_success": 0.7646111111111111,
+          "n_runs": 6
+        },
+        "independent_eegnet": {
+          "success_rate": 0.9866666666666667,
+          "mean_final_distance": 0.02707952276923796,
+          "normalized_auc_success": 0.7213333333333334,
+          "n_runs": 6
+        },
+        "independent_cbramod": {
+          "success_rate": 0.905,
+          "mean_final_distance": 0.029064082555565418,
+          "normalized_auc_success": 0.7558333333333334,
+          "n_runs": 6
+        }
+      },
+      "training_source_sha256": {
+        "checkpoint.py": "070ac1a0c48322b20650d06bb9024b2d85fa477f6d16aff23bd8c69e4262e304",
+        "environment.py": "a84a63088a98658fdd68ef785079c1bb657fcb27614849450e76f72005f44ff4",
+        "feedback.py": "43db672b7fe411efffbe613b313bee770a90d3d6bf5b16324f130d9cde724b3a",
+        "train.py": "699e22eea7a3cae7cfd2becb2899e67f999cdc1ea5d291ddb0dff9d5272ea6f0"
+      },
+      "training_git_shas": [
+        "cfe03056a3fc847e749e72edbb0f839c0244f3cb"
+      ]
+    },
+    {
+      "suite": "artifacts/rl_v2_validation/candidate_w050",
+      "eeg_weight": 0.5,
+      "dense_weight": 10.0,
+      "n_runs": 33,
+      "selection_success": 0.9858333333333333,
+      "selection_final_distance": 0.025355190874297082,
+      "selection_auc": 0.7475833333333333,
+      "n_selection_runs": 12,
+      "per_condition": {
+        "sparse": {
+          "success_rate": 1.0,
+          "mean_final_distance": 0.02590858326587466,
+          "normalized_auc_success": 0.748,
+          "n_runs": 3
+        },
+        "dense": {
+          "success_rate": 1.0,
+          "mean_final_distance": 0.021715822723382443,
+          "normalized_auc_success": 0.9042222222222223,
+          "n_runs": 3
+        },
+        "ideal": {
+          "success_rate": 1.0,
+          "mean_final_distance": 0.019276974714682194,
+          "normalized_auc_success": 0.8477777777777777,
+          "n_runs": 3
+        },
+        "eegnet": {
+          "success_rate": 0.9716666666666667,
+          "mean_final_distance": 0.026396241504263018,
+          "normalized_auc_success": 0.7357222222222222,
+          "n_runs": 6
+        },
+        "cbramod": {
+          "success_rate": 1.0,
+          "mean_final_distance": 0.024314140244331144,
+          "normalized_auc_success": 0.7594444444444445,
+          "n_runs": 6
+        },
+        "independent_eegnet": {
+          "success_rate": 0.9133333333333333,
+          "mean_final_distance": 0.028640466282701376,
+          "normalized_auc_success": 0.723111111111111,
+          "n_runs": 6
+        },
+        "independent_cbramod": {
+          "success_rate": 0.995,
+          "mean_final_distance": 0.02416618701633174,
+          "normalized_auc_success": 0.7313888888888889,
+          "n_runs": 6
+        }
+      },
+      "training_source_sha256": {
+        "checkpoint.py": "070ac1a0c48322b20650d06bb9024b2d85fa477f6d16aff23bd8c69e4262e304",
+        "environment.py": "a84a63088a98658fdd68ef785079c1bb657fcb27614849450e76f72005f44ff4",
+        "feedback.py": "43db672b7fe411efffbe613b313bee770a90d3d6bf5b16324f130d9cde724b3a",
+        "train.py": "699e22eea7a3cae7cfd2becb2899e67f999cdc1ea5d291ddb0dff9d5272ea6f0"
+      },
+      "training_git_shas": [
+        "cfe03056a3fc847e749e72edbb0f839c0244f3cb"
+      ]
+    },
+    {
+      "suite": "artifacts/rl_v2_validation/candidate_w100",
+      "eeg_weight": 1.0,
+      "dense_weight": 10.0,
+      "n_runs": 33,
+      "selection_success": 0.9966666666666667,
+      "selection_final_distance": 0.023005347107993217,
+      "selection_auc": 0.7313333333333333,
+      "n_selection_runs": 12,
+      "per_condition": {
+        "sparse": {
+          "success_rate": 1.0,
+          "mean_final_distance": 0.02590858326587466,
+          "normalized_auc_success": 0.748,
+          "n_runs": 3
+        },
+        "dense": {
+          "success_rate": 1.0,
+          "mean_final_distance": 0.021715822723382443,
+          "normalized_auc_success": 0.9042222222222223,
+          "n_runs": 3
+        },
+        "ideal": {
+          "success_rate": 1.0,
+          "mean_final_distance": 0.018545763365020364,
+          "normalized_auc_success": 0.8624444444444445,
+          "n_runs": 3
+        },
+        "eegnet": {
+          "success_rate": 1.0,
+          "mean_final_distance": 0.020071326037748114,
+          "normalized_auc_success": 0.6997777777777778,
+          "n_runs": 6
+        },
+        "cbramod": {
+          "success_rate": 0.9933333333333333,
+          "mean_final_distance": 0.025939368178238324,
+          "normalized_auc_success": 0.7628888888888888,
+          "n_runs": 6
+        },
+        "independent_eegnet": {
+          "success_rate": 0.99,
+          "mean_final_distance": 0.027015521064494796,
+          "normalized_auc_success": 0.6377777777777778,
+          "n_runs": 6
+        },
+        "independent_cbramod": {
+          "success_rate": 0.99,
+          "mean_final_distance": 0.024428709763635578,
+          "normalized_auc_success": 0.6598888888888889,
+          "n_runs": 6
+        }
+      },
+      "training_source_sha256": {
+        "checkpoint.py": "070ac1a0c48322b20650d06bb9024b2d85fa477f6d16aff23bd8c69e4262e304",
+        "environment.py": "a84a63088a98658fdd68ef785079c1bb657fcb27614849450e76f72005f44ff4",
+        "feedback.py": "43db672b7fe411efffbe613b313bee770a90d3d6bf5b16324f130d9cde724b3a",
+        "train.py": "699e22eea7a3cae7cfd2becb2899e67f999cdc1ea5d291ddb0dff9d5272ea6f0"
+      },
+      "training_git_shas": [
+        "cfe03056a3fc847e749e72edbb0f839c0244f3cb"
+      ]
+    }
+  ],
+  "selected": "artifacts/rl_v2_validation/candidate_w100",
+  "selected_eeg_weight": 1.0,
+  "reason": "highest mean final success",
+  "rationale": "Validation-only selection by the rule declared in reports/rl_v2_experiment_plan.md before any validation run: highest mean final success. Candidates (EEG weight: mean final success / final distance m / AUC over the 12 EEGNet+CBraMod validation runs): candidate_w010 (w=0.1): 0.9800 / 0.0278 / 0.7622; candidate_w050 (w=0.5): 0.9858 / 0.0254 / 0.7476; candidate_w100 (w=1.0): 0.9967 / 0.0230 / 0.7313. Selected candidate_w100 (EEG weight 1.0). All three 33-run suites are complete and preserved; no test-participant feedback was used."
+}

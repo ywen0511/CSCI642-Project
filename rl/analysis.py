@@ -221,7 +221,8 @@ def plot_all(out, curves, rows, within, overall, timelines, budget):
                 steps, m, s = res
                 ax.plot(steps, m, color=COLORS[condition], label=condition,
                         ls="--" if condition.startswith("independent") else "-")
-                ax.fill_between(steps, m - s, m + s, color=COLORS[condition], alpha=0.15)
+                lo, hi = (np.clip(m - s, 0, 1), np.clip(m + s, 0, 1)) if metric == "success_rate" else (m - s, m + s)
+                ax.fill_between(steps, lo, hi, color=COLORS[condition], alpha=0.15)
             ax.set_title(title)
             ax.set_xlabel("environment steps")
             ax.grid(alpha=0.3)
@@ -246,7 +247,7 @@ def plot_all(out, curves, rows, within, overall, timelines, budget):
                 steps, m, s = res
                 ax.plot(steps, m, color=COLORS[condition], label=condition,
                         ls="--" if condition.startswith("independent") else "-")
-                ax.fill_between(steps, m - s, m + s, color=COLORS[condition], alpha=0.1)
+                ax.fill_between(steps, np.clip(m - s, 0, 1), np.clip(m + s, 0, 1), color=COLORS[condition], alpha=0.1)
             ax.set_title(f"feedback participant {subject}")
             ax.set_xlabel("environment steps")
             ax.grid(alpha=0.3)

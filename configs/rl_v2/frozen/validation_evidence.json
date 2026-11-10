@@ -1,0 +1,797 @@
+{
+  "complete": true,
+  "split": "validation",
+  "config": {
+    "schema": "csci642-rl-stage2/v2",
+    "feedback_rule": "distance_change_deadband",
+    "reward_center": 0.5,
+    "status": "pilot",
+    "env_id": "FetchReach-v4",
+    "max_episode_steps": 50,
+    "goal_tolerance_m": 0.05,
+    "feedback_interval_steps": 5,
+    "error_epsilon_m": 0.001,
+    "eeg_weight": 1.0,
+    "dense_weight": 10.0,
+    "feedback_seed_offset": 1000000,
+    "training_episode_seed_stride": 1000000,
+    "eval_seed_base": 20000,
+    "eval_episodes": 100,
+    "eval_every_steps": 10000,
+    "checkpoint_every_steps": 10000,
+    "total_timesteps": 150000,
+    "validation_seeds": [
+      100,
+      101,
+      102
+    ],
+    "final_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "torch_threads": 1,
+    "sac": {
+      "learning_rate": 0.0003,
+      "batch_size": 256,
+      "learning_starts": 5000,
+      "buffer_size": 100000,
+      "gamma": 0.99,
+      "tau": 0.005,
+      "train_freq": 1,
+      "gradient_steps": 1,
+      "ent_coef": "auto",
+      "policy_kwargs": {
+        "net_arch": [
+          256,
+          256
+        ]
+      }
+    }
+  },
+  "training_git_shas": [
+    "cfe03056a3fc847e749e72edbb0f839c0244f3cb"
+  ],
+  "training_source_sha256": {
+    "checkpoint.py": "070ac1a0c48322b20650d06bb9024b2d85fa477f6d16aff23bd8c69e4262e304",
+    "environment.py": "a84a63088a98658fdd68ef785079c1bb657fcb27614849450e76f72005f44ff4",
+    "feedback.py": "43db672b7fe411efffbe613b313bee770a90d3d6bf5b16324f130d9cde724b3a",
+    "train.py": "699e22eea7a3cae7cfd2becb2899e67f999cdc1ea5d291ddb0dff9d5272ea6f0"
+  },
+  "runs": [
+    {
+      "condition": "sparse",
+      "subject": null,
+      "seed": 100,
+      "name": "sparse_shared_s100",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.024079427854586766,
+      "mean_task_return": -1.77,
+      "normalized_auc_success": 0.7253333333333334
+    },
+    {
+      "condition": "sparse",
+      "subject": null,
+      "seed": 101,
+      "name": "sparse_shared_s101",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.025753673010917064,
+      "mean_task_return": -1.74,
+      "normalized_auc_success": 0.7926666666666666
+    },
+    {
+      "condition": "sparse",
+      "subject": null,
+      "seed": 102,
+      "name": "sparse_shared_s102",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.02789264893212015,
+      "mean_task_return": -1.79,
+      "normalized_auc_success": 0.726
+    },
+    {
+      "condition": "dense",
+      "subject": null,
+      "seed": 100,
+      "name": "dense_shared_s100",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.023022749475383904,
+      "mean_task_return": -1.82,
+      "normalized_auc_success": 0.8946666666666667
+    },
+    {
+      "condition": "dense",
+      "subject": null,
+      "seed": 101,
+      "name": "dense_shared_s101",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.022453927437466315,
+      "mean_task_return": -1.76,
+      "normalized_auc_success": 0.888
+    },
+    {
+      "condition": "dense",
+      "subject": null,
+      "seed": 102,
+      "name": "dense_shared_s102",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.019670791257297107,
+      "mean_task_return": -1.78,
+      "normalized_auc_success": 0.93
+    },
+    {
+      "condition": "ideal",
+      "subject": null,
+      "seed": 100,
+      "name": "ideal_shared_s100",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.022042403365158916,
+      "mean_task_return": -1.89,
+      "normalized_auc_success": 0.8933333333333333
+    },
+    {
+      "condition": "ideal",
+      "subject": null,
+      "seed": 101,
+      "name": "ideal_shared_s101",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.013812271094792912,
+      "mean_task_return": -1.83,
+      "normalized_auc_success": 0.8613333333333333
+    },
+    {
+      "condition": "ideal",
+      "subject": null,
+      "seed": 102,
+      "name": "ideal_shared_s102",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.019782615635109267,
+      "mean_task_return": -1.84,
+      "normalized_auc_success": 0.8326666666666667
+    },
+    {
+      "condition": "eegnet",
+      "subject": "s11",
+      "seed": 100,
+      "name": "eegnet_s11_s100",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.018803859077338128,
+      "mean_task_return": -1.81,
+      "normalized_auc_success": 0.732
+    },
+    {
+      "condition": "eegnet",
+      "subject": "s11",
+      "seed": 101,
+      "name": "eegnet_s11_s101",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.01615252050651957,
+      "mean_task_return": -1.92,
+      "normalized_auc_success": 0.736
+    },
+    {
+      "condition": "eegnet",
+      "subject": "s11",
+      "seed": 102,
+      "name": "eegnet_s11_s102",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.018480972083875967,
+      "mean_task_return": -1.76,
+      "normalized_auc_success": 0.66
+    },
+    {
+      "condition": "eegnet",
+      "subject": "s13",
+      "seed": 100,
+      "name": "eegnet_s13_s100",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.026090410433648622,
+      "mean_task_return": -1.78,
+      "normalized_auc_success": 0.7453333333333333
+    },
+    {
+      "condition": "eegnet",
+      "subject": "s13",
+      "seed": 101,
+      "name": "eegnet_s13_s101",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.01994282503095435,
+      "mean_task_return": -1.73,
+      "normalized_auc_success": 0.752
+    },
+    {
+      "condition": "eegnet",
+      "subject": "s13",
+      "seed": 102,
+      "name": "eegnet_s13_s102",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.02095736909415204,
+      "mean_task_return": -2.12,
+      "normalized_auc_success": 0.5733333333333334
+    },
+    {
+      "condition": "cbramod",
+      "subject": "s11",
+      "seed": 100,
+      "name": "cbramod_s11_s100",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.0276090381782018,
+      "mean_task_return": -1.81,
+      "normalized_auc_success": 0.712
+    },
+    {
+      "condition": "cbramod",
+      "subject": "s11",
+      "seed": 101,
+      "name": "cbramod_s11_s101",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.025745238871839677,
+      "mean_task_return": -1.73,
+      "normalized_auc_success": 0.8326666666666667
+    },
+    {
+      "condition": "cbramod",
+      "subject": "s11",
+      "seed": 102,
+      "name": "cbramod_s11_s102",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.030744582887401752,
+      "mean_task_return": -1.83,
+      "normalized_auc_success": 0.7646666666666667
+    },
+    {
+      "condition": "cbramod",
+      "subject": "s13",
+      "seed": 100,
+      "name": "cbramod_s13_s100",
+      "success_rate": 0.96,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.03494897834364897,
+      "mean_task_return": -3.37,
+      "normalized_auc_success": 0.704
+    },
+    {
+      "condition": "cbramod",
+      "subject": "s13",
+      "seed": 101,
+      "name": "cbramod_s13_s101",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.016792502862038827,
+      "mean_task_return": -1.81,
+      "normalized_auc_success": 0.7966666666666666
+    },
+    {
+      "condition": "cbramod",
+      "subject": "s13",
+      "seed": 102,
+      "name": "cbramod_s13_s102",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.01979586792629892,
+      "mean_task_return": -1.75,
+      "normalized_auc_success": 0.7673333333333333
+    },
+    {
+      "condition": "independent_eegnet",
+      "subject": "s11",
+      "seed": 100,
+      "name": "independent_eegnet_s11_s100",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.017681017887645093,
+      "mean_task_return": -1.71,
+      "normalized_auc_success": 0.6586666666666666
+    },
+    {
+      "condition": "independent_eegnet",
+      "subject": "s11",
+      "seed": 101,
+      "name": "independent_eegnet_s11_s101",
+      "success_rate": 0.99,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.02971761331118902,
+      "mean_task_return": -2.25,
+      "normalized_auc_success": 0.7263333333333334
+    },
+    {
+      "condition": "independent_eegnet",
+      "subject": "s11",
+      "seed": 102,
+      "name": "independent_eegnet_s11_s102",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.02490846017852868,
+      "mean_task_return": -1.8,
+      "normalized_auc_success": 0.552
+    },
+    {
+      "condition": "independent_eegnet",
+      "subject": "s13",
+      "seed": 100,
+      "name": "independent_eegnet_s13_s100",
+      "success_rate": 0.97,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.028206428629067942,
+      "mean_task_return": -2.94,
+      "normalized_auc_success": 0.5163333333333333
+    },
+    {
+      "condition": "independent_eegnet",
+      "subject": "s13",
+      "seed": 101,
+      "name": "independent_eegnet_s13_s101",
+      "success_rate": 0.99,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.03240809354179734,
+      "mean_task_return": -2.35,
+      "normalized_auc_success": 0.7676666666666667
+    },
+    {
+      "condition": "independent_eegnet",
+      "subject": "s13",
+      "seed": 102,
+      "name": "independent_eegnet_s13_s102",
+      "success_rate": 0.99,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.02917151283874069,
+      "mean_task_return": -2.16,
+      "normalized_auc_success": 0.6056666666666667
+    },
+    {
+      "condition": "independent_cbramod",
+      "subject": "s11",
+      "seed": 100,
+      "name": "independent_cbramod_s11_s100",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.01763555897858941,
+      "mean_task_return": -1.75,
+      "normalized_auc_success": 0.6633333333333333
+    },
+    {
+      "condition": "independent_cbramod",
+      "subject": "s11",
+      "seed": 101,
+      "name": "independent_cbramod_s11_s101",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.021198103136674334,
+      "mean_task_return": -1.74,
+      "normalized_auc_success": 0.6313333333333333
+    },
+    {
+      "condition": "independent_cbramod",
+      "subject": "s11",
+      "seed": 102,
+      "name": "independent_cbramod_s11_s102",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.0248913185199381,
+      "mean_task_return": -1.72,
+      "normalized_auc_success": 0.654
+    },
+    {
+      "condition": "independent_cbramod",
+      "subject": "s13",
+      "seed": 100,
+      "name": "independent_cbramod_s13_s100",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.025735853377502428,
+      "mean_task_return": -1.87,
+      "normalized_auc_success": 0.694
+    },
+    {
+      "condition": "independent_cbramod",
+      "subject": "s13",
+      "seed": 101,
+      "name": "independent_cbramod_s13_s101",
+      "success_rate": 0.94,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.038086044303936736,
+      "mean_task_return": -3.91,
+      "normalized_auc_success": 0.6486666666666666
+    },
+    {
+      "condition": "independent_cbramod",
+      "subject": "s13",
+      "seed": 102,
+      "name": "independent_cbramod_s13_s102",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.019025380265172455,
+      "mean_task_return": -1.72,
+      "normalized_auc_success": 0.668
+    }
+  ],
+  "summary": [
+    {
+      "condition": "sparse",
+      "subject": "shared",
+      "n_seeds": 3,
+      "success_rate_mean": 1.0,
+      "success_rate_sd": 0.0,
+      "ever_success_rate_mean": 1.0,
+      "ever_success_rate_sd": 0.0,
+      "mean_final_distance_mean": 0.02590858326587466,
+      "mean_final_distance_sd": 0.0019113245765318059,
+      "mean_task_return_mean": -1.7666666666666666,
+      "mean_task_return_sd": 0.025166114784235853,
+      "normalized_auc_success_mean": 0.748,
+      "normalized_auc_success_sd": 0.03868390420374399
+    },
+    {
+      "condition": "dense",
+      "subject": "shared",
+      "n_seeds": 3,
+      "success_rate_mean": 1.0,
+      "success_rate_sd": 0.0,
+      "ever_success_rate_mean": 1.0,
+      "ever_success_rate_sd": 0.0,
+      "mean_final_distance_mean": 0.021715822723382443,
+      "mean_final_distance_sd": 0.0017937404775118756,
+      "mean_task_return_mean": -1.7866666666666666,
+      "mean_task_return_sd": 0.03055050463303896,
+      "normalized_auc_success_mean": 0.9042222222222223,
+      "normalized_auc_success_sd": 0.02257169646884084
+    },
+    {
+      "condition": "ideal",
+      "subject": "shared",
+      "n_seeds": 3,
+      "success_rate_mean": 1.0,
+      "success_rate_sd": 0.0,
+      "ever_success_rate_mean": 1.0,
+      "ever_success_rate_sd": 0.0,
+      "mean_final_distance_mean": 0.018545763365020364,
+      "mean_final_distance_sd": 0.004252190253322165,
+      "mean_task_return_mean": -1.8533333333333333,
+      "mean_task_return_sd": 0.032145502536643084,
+      "normalized_auc_success_mean": 0.8624444444444445,
+      "normalized_auc_success_sd": 0.030348592010784232
+    },
+    {
+      "condition": "eegnet",
+      "subject": "s11",
+      "n_seeds": 3,
+      "success_rate_mean": 1.0,
+      "success_rate_sd": 0.0,
+      "ever_success_rate_mean": 1.0,
+      "ever_success_rate_sd": 0.0,
+      "mean_final_distance_mean": 0.01781245055591122,
+      "mean_final_distance_sd": 0.0014465786633611696,
+      "mean_task_return_mean": -1.83,
+      "mean_task_return_sd": 0.08185352771872445,
+      "normalized_auc_success_mean": 0.7093333333333334,
+      "normalized_auc_success_sd": 0.04277070648625448
+    },
+    {
+      "condition": "eegnet",
+      "subject": "s13",
+      "n_seeds": 3,
+      "success_rate_mean": 1.0,
+      "success_rate_sd": 0.0,
+      "ever_success_rate_mean": 1.0,
+      "ever_success_rate_sd": 0.0,
+      "mean_final_distance_mean": 0.022330201519585004,
+      "mean_final_distance_sd": 0.0032957098206752118,
+      "mean_task_return_mean": -1.8766666666666667,
+      "mean_task_return_sd": 0.21221058723196012,
+      "normalized_auc_success_mean": 0.6902222222222222,
+      "normalized_auc_success_sd": 0.101283613533337
+    },
+    {
+      "condition": "cbramod",
+      "subject": "s11",
+      "n_seeds": 3,
+      "success_rate_mean": 1.0,
+      "success_rate_sd": 0.0,
+      "ever_success_rate_mean": 1.0,
+      "ever_success_rate_sd": 0.0,
+      "mean_final_distance_mean": 0.028032953312481075,
+      "mean_final_distance_sd": 0.0025264873198350603,
+      "mean_task_return_mean": -1.79,
+      "mean_task_return_sd": 0.05291502622129186,
+      "normalized_auc_success_mean": 0.7697777777777778,
+      "normalized_auc_success_sd": 0.060495484986102105
+    },
+    {
+      "condition": "cbramod",
+      "subject": "s13",
+      "n_seeds": 3,
+      "success_rate_mean": 0.9866666666666667,
+      "success_rate_sd": 0.023094010767585053,
+      "ever_success_rate_mean": 1.0,
+      "ever_success_rate_sd": 0.0,
+      "mean_final_distance_mean": 0.023845783043995573,
+      "mean_final_distance_sd": 0.009732202208338484,
+      "mean_task_return_mean": -2.31,
+      "mean_task_return_sd": 0.9184770002564028,
+      "normalized_auc_success_mean": 0.756,
+      "normalized_auc_success_sd": 0.047361493970430366
+    },
+    {
+      "condition": "independent_eegnet",
+      "subject": "s11",
+      "n_seeds": 3,
+      "success_rate_mean": 0.9966666666666667,
+      "success_rate_sd": 0.005773502691896263,
+      "ever_success_rate_mean": 1.0,
+      "ever_success_rate_sd": 0.0,
+      "mean_final_distance_mean": 0.024102363792454264,
+      "mean_final_distance_sd": 0.0060586509129715764,
+      "mean_task_return_mean": -1.92,
+      "mean_task_return_sd": 0.28930952282978867,
+      "normalized_auc_success_mean": 0.6456666666666667,
+      "normalized_auc_success_sd": 0.08789071496908975
+    },
+    {
+      "condition": "independent_eegnet",
+      "subject": "s13",
+      "n_seeds": 3,
+      "success_rate_mean": 0.9833333333333333,
+      "success_rate_sd": 0.011547005383792526,
+      "ever_success_rate_mean": 1.0,
+      "ever_success_rate_sd": 0.0,
+      "mean_final_distance_mean": 0.029928678336535324,
+      "mean_final_distance_sd": 0.002200788881970119,
+      "mean_task_return_mean": -2.4833333333333334,
+      "mean_task_return_sd": 0.40673496694202876,
+      "normalized_auc_success_mean": 0.6298888888888889,
+      "normalized_auc_success_sd": 0.1274054478746814
+    },
+    {
+      "condition": "independent_cbramod",
+      "subject": "s11",
+      "n_seeds": 3,
+      "success_rate_mean": 1.0,
+      "success_rate_sd": 0.0,
+      "ever_success_rate_mean": 1.0,
+      "ever_success_rate_sd": 0.0,
+      "mean_final_distance_mean": 0.02124166021173395,
+      "mean_final_distance_sd": 0.003628075873594562,
+      "mean_task_return_mean": -1.7366666666666666,
+      "mean_task_return_sd": 0.01527525231651948,
+      "normalized_auc_success_mean": 0.6495555555555556,
+      "normalized_auc_success_sd": 0.0164564520725099
+    },
+    {
+      "condition": "independent_cbramod",
+      "subject": "s13",
+      "n_seeds": 3,
+      "success_rate_mean": 0.98,
+      "success_rate_sd": 0.034641016151377574,
+      "ever_success_rate_mean": 1.0,
+      "ever_success_rate_sd": 0.0,
+      "mean_final_distance_mean": 0.027615759315537208,
+      "mean_final_distance_sd": 0.009668389894473344,
+      "mean_task_return_mean": -2.5,
+      "mean_task_return_sd": 1.223396910246221,
+      "normalized_auc_success_mean": 0.6702222222222222,
+      "normalized_auc_success_sd": 0.0227482193035297
+    }
+  ],
+  "evidence_sha256": {
+    "sparse_shared_s100": {
+      "run.json": "b534137e535565bf40268c96a07251ce271a8dc4a45807f20da669b59536c942",
+      "status.json": "e8cceddb95d1b596244d7f64611f9a9fa1dc263f369a938b1ce9998fc234deb8",
+      "evaluation.json": "7790754f6c446358857557dde6ca437ae694de967d22c733dd04af4cffdb9fd8",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "sparse_shared_s101": {
+      "run.json": "f7bd86599d7590f6291594e0d6ba5a9fd48c92b83564aabb1c773f9c28880c53",
+      "status.json": "43d14876356c9480c99c63c2cb34d9b256c909b4f36adc5e9e9facc17e16146b",
+      "evaluation.json": "bcdcd8cde33337539fa97ae5445ba34e883edbd1222278fd17ed66ec9608381b",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "sparse_shared_s102": {
+      "run.json": "32ef69c2be7b06238d5348cb4ea48e8cf50238853153d3594bd6bd45031ff520",
+      "status.json": "eb1d9bd8cae524cbb2b0bec06504e25322285b90246df951d6abb8fb9382ff37",
+      "evaluation.json": "dd5a7a1f6d758688ec6aaabe6d95b6c455124a6e93bccfe816e7463d5461e33e",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "dense_shared_s100": {
+      "run.json": "be23443ecdecffb53f46fc0b25d8bda0a62a2109e42eae09894b2f15fd962c94",
+      "status.json": "b6a742bc9d34721bdf23dc7fc7622f97969b3627bbd35b1666578a6d6ef67451",
+      "evaluation.json": "b6307ba706f8de61140df70172e7bad53eebae26994d29675e153ecec5f9e14a",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "dense_shared_s101": {
+      "run.json": "7867c1421927ff7aa9539fc721bfea997b53f19bd96a0d162cdedb314f7165f9",
+      "status.json": "666da817c0b46509336c5e5ba5765914dd00ed3df04b47506d06913771a39d75",
+      "evaluation.json": "1a1ef31ec8b2457d3ffb77c91e0b9e9baf5dcb850553cc9e3ff657111a3bd1e7",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "dense_shared_s102": {
+      "run.json": "5d93cdbf8b5f0ef58452d9e2b124cbb1fb0ed10b7ac2f92567d0b61c8d92d39b",
+      "status.json": "cc98adb0aaf197aaa8a4264afa8f35ba7a38a47a3f1234b130476f0173b4120c",
+      "evaluation.json": "b46a9e01dc4f7c6880c31890d36f9c2e8f2eabf8ccf7e442d7b65889aa1661af",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "ideal_shared_s100": {
+      "run.json": "a3bde8ed3841506b84f2d7fe25569a1c3e288954cd1cfbbb97193db643a68cee",
+      "status.json": "a9132c70b8d7fb41e8a2a36ef6a551ebe23114b7f00809359c3a83b34267a6c8",
+      "evaluation.json": "a8e18577e5623d0568fdc6e37d6fc31e084de91f097be0b5420623d5479eb008",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "ideal_shared_s101": {
+      "run.json": "97ebb93ce269a2d710a3385bf87be9b777301568d2d46afc02fb4004d82e78fe",
+      "status.json": "eeef27bf89c3495de06dfdc468f62f671ae8ca5ebb626a13b1d0e3b2c290115a",
+      "evaluation.json": "f087bff571a4cf69efcb1e052121a3545981b472be1867e63867ff2a98859ea1",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "ideal_shared_s102": {
+      "run.json": "882187fbea4520ca3b31614f5c71a1e5ed076fcf0cea0f0e900bafb7e660ee4b",
+      "status.json": "d455da986254ef87b7c320a6b3111a6ed70a9e79878c699b4d48188d9c2a95c4",
+      "evaluation.json": "82ae8368c3dd508078b26d1ce7754534f3adebf6aa676840a4cbe15598c7bbcf",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "eegnet_s11_s100": {
+      "run.json": "1b2f025c88752497fafd15e4c73315ca249fae6b1c43aab87d03b912bd325cdc",
+      "status.json": "faa25af1b515ed0322a72a603424ccb72d7c2f00fa8cbdcaaf6f0cf0106a5f96",
+      "evaluation.json": "c91684b6318d70603f1f354088a040ac0fdea4177b116ef9fb7b36c2e4f5ebd2",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "eegnet_s11_s101": {
+      "run.json": "7789f5f41128fc7554d2eb0b0ab77182149b7cc34c352b5c7c8d4cc280652861",
+      "status.json": "085f8a8aeccbe57ec7bd83ad6109831ef77b10b5313520760a9af2de5842ba74",
+      "evaluation.json": "84a8363b0bde152b0bda453a8db07c000ad342aa38582e67e466dedb42a1b0e0",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "eegnet_s11_s102": {
+      "run.json": "f0ffacd55b476964f7e1ceb5bcc9a00171eecc147625c38431c2dc22c3836743",
+      "status.json": "2e832a8067f79fe91e7e50892bae9e1ccb702fc6a7e64daed7d54f94a30d7b38",
+      "evaluation.json": "272112347a6f6c2f7838db6f8a12b61da12afbe35dfb6fce8f93aaf84a58230f",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "eegnet_s13_s100": {
+      "run.json": "5e24c876ce16b53b084824258cbbe5df7aadd7db3f7de816b2cf996993c36ac9",
+      "status.json": "0ab5b1dc5579b8f3badc02058197c0fe1518009842b9019d76f33f52427fc505",
+      "evaluation.json": "181173b861b174746a571c6268d70d8a1a241782986d729f824672dc859dde53",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "eegnet_s13_s101": {
+      "run.json": "f8cc439ec1ccae778a097b5cbf44018b7b72ce090a36d3f7ffa252749e4ee8d2",
+      "status.json": "ab4a7431ebb5680a0072886f590e69d7defdedb39329c662e6235385a0e1df1f",
+      "evaluation.json": "1c113b7d7c9cd4c94a442614ad58646ade7610860363526726ceb1ba33ec599a",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "eegnet_s13_s102": {
+      "run.json": "b0a15ebf38a21ae59b12f12215ae6bfb143ae7a4772e740f0cb080cc698e57d6",
+      "status.json": "ab33cd4ad744ce8aa1aafcca635861dbb1a274a3dcfcab1ca7b727d5e003fec5",
+      "evaluation.json": "c35ec685ab811aed4c327f61cdc88154487dbeaf06fe22ef807b289aa9d60036",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "cbramod_s11_s100": {
+      "run.json": "cdece4db6ab64e7fd655237bfb09366d31cf91053d2a6bc174cb3ecfb64ffae8",
+      "status.json": "7dd8d41bb877cc5bd657e161c358131e3a921689fdb9c930aefb539c5336685b",
+      "evaluation.json": "888bc8af13a902ee4dd9acc5e0738144b2f9754b08da299842cdfb5f749e0d41",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "cbramod_s11_s101": {
+      "run.json": "0e6a1db13b035b38ab41ff1ccc9ae70b316e336c4553bbd7662c91156260ef1b",
+      "status.json": "90f68efc6ecfe91debbb49be623e4c55f7e861d4afdcd4b4879a2fac104d0e63",
+      "evaluation.json": "491cd2d3c215ab098515e12e4290c1ddc58e2db09e0efbfbcf3614d02149e442",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "cbramod_s11_s102": {
+      "run.json": "2b90f994e707a68ca8604d3bca673a57062b773226cbe9ad6220b6b799bdcd4a",
+      "status.json": "5513f85c054b1c95f7787267ace0e8c2f2c739abd439408631e92b0e114c81d0",
+      "evaluation.json": "932c2ec283f01944f72797428231f7987ed942ce15a6beafc97bb75176298b7e",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "cbramod_s13_s100": {
+      "run.json": "169b00a40c1fdfdb6b01e92e11437c38c2558834803d293091bacb82b75c3c85",
+      "status.json": "6fd2acfd6dc86045d6d4d08f2beaf9aaa6de0cf6fb87c881812fc0bc0d42a99c",
+      "evaluation.json": "d52830940c2af256b9305f477564b8080e57481595abf91722a091344e9c4198",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "cbramod_s13_s101": {
+      "run.json": "003b8a7e601669c532cbd681b13bc0f439edb6af4b653c2f3571384abfac8753",
+      "status.json": "922931ebc113229e5efe3465115a5b59b0be5206222e3b6ec4e574fa6a00fb76",
+      "evaluation.json": "9d865d1122af97099c00a5d90dd63c39b23336f5130f29e99f570f303278e8a6",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "cbramod_s13_s102": {
+      "run.json": "a58ee73d04971edd368b7c4b3c069a414062a179198c3f2adf88cbb8f0969cd3",
+      "status.json": "576938acb9faf9d85f3e6fadce70eea02ae6846b9ea5074df8d2faa03cf48682",
+      "evaluation.json": "fb3c1bfe02045fea722d921edbef9c196c180ce45dad4ff386ae6afbc74f66e1",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "independent_eegnet_s11_s100": {
+      "run.json": "7d975c1e2f851f7bc41d865e59c340a5907f383ca8ffe865f31fe39f701acbf8",
+      "status.json": "7a138bd6e41f10d390e0d07251070163f9746df9e8cd803e7e9f0843c9579b61",
+      "evaluation.json": "e1914fc0a35d12ce5253e394e463d84a5feba360a581a712b80e07f013a976a4",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "independent_eegnet_s11_s101": {
+      "run.json": "064f1f28c1a3df07ac899303c012515df8f557dea1d788aa793c4bf708ead08c",
+      "status.json": "85409b3e0166f9e49e37e2f207f3abd181a32272ea3c96cd36bcff38d913ab34",
+      "evaluation.json": "2e22b3e7cbd8a29b0b54025b3b8b9f9e0bb2fbaff3a4bce4aa73859208a9ef1a",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "independent_eegnet_s11_s102": {
+      "run.json": "360a9ca1fdd746a7cce8fcae43f9be4a2a4e977dee9c09c4f819064199dfd13b",
+      "status.json": "7352bec15da5c4eb277ef51c3b3a216e4c8d068c3dbc7ddfaa3a0532d0ea2a84",
+      "evaluation.json": "8eedfcec74811828fa95f0ef00485f41f6a607d3959dc6c06346463969d818cc",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "independent_eegnet_s13_s100": {
+      "run.json": "9ba45ce87a3fe6d82017ca4950e53ed0a48aafcad322e7a15982b79db8677168",
+      "status.json": "2327943651a9df933edfa410b29f43f6ff405122f92b389f66b3fdfde04dff6d",
+      "evaluation.json": "4a613c9478728e4f8a5cd09b7a6763b5caceaa555282021df03fad954c15ecd7",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "independent_eegnet_s13_s101": {
+      "run.json": "83ed2cf419f19b32a97eae24b13c3260b4bba228884a36de6f870ebc5ad926ba",
+      "status.json": "6dc177b9277c647c6487ecffd0223beb6b2440cfd74b98293949e2004de3cf0a",
+      "evaluation.json": "dd5c28ac7c9379bd658a6c7ee0f4e2e772c5217b77e07ab0f95c0fca88244bd9",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "independent_eegnet_s13_s102": {
+      "run.json": "263dd286db37d653a8374d37d0b4770df36439da63d53eee37dafd926c26920b",
+      "status.json": "5cf4f113ede6d3851bf309994b3d8a13b0519b9fc8521b506082915172b3083d",
+      "evaluation.json": "2f02bdcbc1bb24f575cdb822faa1cf32f48a3a8ee1e61f53aa9a1a99dd1b3d44",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "independent_cbramod_s11_s100": {
+      "run.json": "284c3ede376acee0e7493b7f86bf658b7387da30e27570114440b0322d88fcba",
+      "status.json": "f4e64e45ebeea8facf1887219e4188633e05324b9716d0fb70c159783ac729c9",
+      "evaluation.json": "b47647c089a6c97bc48c9e64d1829b4d4b5fb789689f24ec1831d230713116de",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "independent_cbramod_s11_s101": {
+      "run.json": "602a6ffa89a694c21aef08d4cf99a1c10dd4171f561991d3af0541690cfb5607",
+      "status.json": "5e14b6ad3a8152bde43bbaa1c869bada000b9bc215cee5e1644ccc92666ff276",
+      "evaluation.json": "33e3e7028580f3afa20c845ac1ae2d70bf7da85f0ac51875bf148ce80f991782",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "independent_cbramod_s11_s102": {
+      "run.json": "c52e0f769454eb6c14251cbb2356814660d98929e2b4d192d1127b9f4d6a5986",
+      "status.json": "9c3995252c7618e32bc0f5e1e3ea56b0ab50ddd41382814941fee3c42f4c6097",
+      "evaluation.json": "156bb2dcdb1b7e4c004c1667382f8934108b3ccbb41f6dcae9e27bc04b997e55",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "independent_cbramod_s13_s100": {
+      "run.json": "eacdb38365e8bbeee38aab8ba2809ab27bf01aa1c17dbf4208762452a166d4e9",
+      "status.json": "3e633f98947e981f4bfd0793ae4e6272d402d188570acca2be68685d5d0c531c",
+      "evaluation.json": "b9839f7286a86364a4ae8f5a3364ac63fbcd399c3da20550c1f714b1cd36f28a",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "independent_cbramod_s13_s101": {
+      "run.json": "28cd7f32a2c0ece05a08f50b36afaf7c763fe5cad7d33a8f69f4c62042acb31a",
+      "status.json": "63c560e5c60c89212e721294383449b99bac15765c1d0d22d30b424dedd5b093",
+      "evaluation.json": "1d7f55f432e8583aa668f8caa6d1e401e6a356b2200aae65b5f639373b6717b8",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "independent_cbramod_s13_s102": {
+      "run.json": "9bcb7fa21367dde8438a3ede55265f9052ccc74b7028c11f99426d9e8c5becc0",
+      "status.json": "a5f453eb4142d56d722c8582b5f5fd9d2908153873fdc41ce42133a430a4e98d",
+      "evaluation.json": "94ea3f115cef8feb5448700e4c309b373d52be45fe33c778d4a12d37e7844f2d",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    }
+  },
+  "interpretation": "SD over RL seeds within participant; shared controls counted once, not as independent participant runs",
+  "selection_rationale": "Validation-only selection by the rule declared in reports/rl_v2_experiment_plan.md before any validation run: highest mean final success. Candidates (EEG weight: mean final success / final distance m / AUC over the 12 EEGNet+CBraMod validation runs): candidate_w010 (w=0.1): 0.9800 / 0.0278 / 0.7622; candidate_w050 (w=0.5): 0.9858 / 0.0254 / 0.7476; candidate_w100 (w=1.0): 0.9967 / 0.0230 / 0.7313. Selected candidate_w100 (EEG weight 1.0). All three 33-run suites are complete and preserved; no test-participant feedback was used."
+}
