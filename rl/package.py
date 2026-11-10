@@ -21,12 +21,19 @@ from .feedback import sha256
 from .summarize import summarize
 
 
-def file_inventory(run):
-    return [{"path": str(p.relative_to(run.parent)), "bytes": p.stat().st_size, "sha256": sha256(p)}
+def is_periodic_snapshot_file(path, run):
+    rel = path.relative_to(run)
+    return len(rel.parts) >= 3 and rel.parts[0] == "checkpoints" and rel.parts[1].startswith("step_")
+
+
+def file_inventory(run, final_only=False):
+    return [{"path": str(p.relative_to(run.parent)), "bytes": p.stat().st_size, "sha256": sha256(p),
+             "in_archive": not (final_only and is_periodic_snapshot_file(p, run))}
             for p in sorted(run.rglob("*")) if p.is_file()]
 
 
-def package(root, destination, smoke=False, pilot=False, scope_note=None, max_part_bytes=1_900_000_000):
+def package(root, destination, smoke=False, pilot=False, scope_note=None, max_part_bytes=1_900_000_000,
+            final_snapshots_only=False):
     root, destination = Path(root), Path(destination)
     if smoke and pilot:
         raise ValueError("Choose one scope")
@@ -40,6 +47,9 @@ def package(root, destination, smoke=False, pilot=False, scope_note=None, max_pa
     else:
         report = summarize(root)
         scope = report["split"] + " suite"
+    if final_snapshots_only:
+        scope += ("; FINAL SNAPSHOTS ONLY: periodic snapshots (checkpoints/step_*) are not in the archives but are "
+                  "listed with SHA-256 in this manifest and retained on the project filer")
     if scope_note:
         scope += f" ({scope_note})"
     runs = sorted(p.parent for p in root.glob("*/run.json"))
@@ -60,13 +70,16 @@ def package(root, destination, smoke=False, pilot=False, scope_note=None, max_pa
             validate_snapshot(metadata.parent)
         archive = destination / (run.name + ".tar.gz")
         with tarfile.open(archive, "w:gz") as tar:
-            tar.add(run, arcname=run.name)
+            tar.add(run, arcname=run.name,
+                    filter=(lambda info: None if final_snapshots_only and info.name.split("/")[1:2] == ["checkpoints"]
+                            and len(info.name.split("/")) >= 3 and info.name.split("/")[2].startswith("step_")
+                            else info))
             log = root / (run.name + ".log")
             if log.is_file():
                 tar.add(log, arcname=run.name + ".log")
         run_records.append({"run": run.name, "completed": completed, "error": status.get("error"),
                             "final_steps": status.get("final_steps"), "snapshots": [m.parent.name for m in checkpoints],
-                            "archive": archive.name, "files": file_inventory(run)})
+                            "archive": archive.name, "files": file_inventory(run, final_snapshots_only)})
         inventory.append({"name": archive.name, "bytes": archive.stat().st_size, "sha256": sha256(archive)})
     metadata_archive = destination / "shared_evidence.tar.gz"
     with tarfile.open(metadata_archive, "w:gz") as tar:
@@ -104,5 +117,8 @@ if __name__ == "__main__":
     scope.add_argument("--pilot", action="store_true")
     p.add_argument("--scope-note")
     p.add_argument("--max-part-bytes", type=int, default=1_900_000_000)
+    p.add_argument("--final-snapshots-only", action="store_true",
+                   help="archive only the final snapshot of each run (all logs/configs kept); periodic snapshots stay local")
     a = p.parse_args()
-    print(json.dumps(package(a.runs, a.out, a.smoke, a.pilot, a.scope_note, a.max_part_bytes), indent=2))
+    print(json.dumps(package(a.runs, a.out, a.smoke, a.pilot, a.scope_note, a.max_part_bytes,
+                             a.final_snapshots_only), indent=2))
