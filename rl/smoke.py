@@ -117,7 +117,8 @@ def main():
         finally:
             env.close()
         report["scripted_feedback_check"] = scripted_feedback_check(cfg)
-        cfg.update(total_timesteps=160, checkpoint_every_steps=80, eval_every_steps=80, eval_episodes=2)
+        # 250 steps = 5 episodes, so SB3 episode logging (every 4 episodes) is exercised
+        cfg.update(total_timesteps=250, checkpoint_every_steps=80, eval_every_steps=80, eval_episodes=2)
         cfg["sac"].update(learning_starts=20, batch_size=16, buffer_size=500, policy_kwargs={"net_arch": [32, 32]})
         config = out / "smoke_protocol.json"
         config.write_text(json.dumps(cfg, indent=2) + "\n")
