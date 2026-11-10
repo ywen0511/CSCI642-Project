@@ -52,6 +52,35 @@ def check_transitions(path, condition, cfg):
     return counts
 
 
+def scripted_feedback_check(cfg):
+    """Real-simulator check: hold still (neutral), move toward the goal (progress, label 0)
+    and away from it (retreat, label 1) under ideal feedback."""
+    import numpy as np
+    from .environment import FeedbackReward
+    env = FeedbackReward(make_task(cfg), cfg, "ideal", 0)
+    obs, _ = env.reset()
+    w, n = cfg["eeg_weight"], cfg["feedback_interval_steps"]
+    results = {}
+    try:
+        for phase in ("hold", "toward", "away"):
+            for _ in range(n):
+                direction = obs["desired_goal"] - obs["achieved_goal"]
+                unit = direction / max(np.linalg.norm(direction), 1e-9)
+                move = {"hold": np.zeros(3), "toward": 0.3 * unit, "away": -0.3 * unit}[phase]
+                obs, reward, _, _, info = env.step(np.append(move, 0.0).astype(np.float32))
+            assert info["segment_end"] == 1, phase
+            results[phase] = {"segment_progress_m": info["segment_progress"], "label": info["simulated_label"],
+                              "eeg_reward": info["eeg_reward"], "feedback_event": info["feedback_event"]}
+        assert results["hold"]["feedback_event"] == 0 and results["hold"]["label"] == "" and results["hold"]["eeg_reward"] == 0
+        assert abs(results["hold"]["segment_progress_m"]) <= cfg["error_epsilon_m"]
+        assert results["toward"]["label"] == 0 and abs(results["toward"]["eeg_reward"] - w / 2) < 1e-12
+        assert results["away"]["label"] == 1 and abs(results["away"]["eeg_reward"] + w / 2) < 1e-12
+        assert env.counters()["event_count"] == 2
+    finally:
+        env.close()
+    return {**results, "ok": True}
+
+
 def check_observation_space(run_dir):
     """The policy's observation space must be the plain FetchReach dict (no EEG/label fields)."""
     from stable_baselines3 import SAC
@@ -87,6 +116,7 @@ def main():
             report["environment_checks"] = {"steps": 50, "ok": True}
         finally:
             env.close()
+        report["scripted_feedback_check"] = scripted_feedback_check(cfg)
         cfg.update(total_timesteps=160, checkpoint_every_steps=80, eval_every_steps=80, eval_episodes=2)
         cfg["sac"].update(learning_starts=20, batch_size=16, buffer_size=500, policy_kwargs={"net_arch": [32, 32]})
         config = out / "smoke_protocol.json"
