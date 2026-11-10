@@ -115,7 +115,7 @@ def evaluate(model, cfg):
                              "ever_success": any_success, "length": length})
     finally:
         env.close()
-    return {"steps": model.num_timesteps, "episodes": episodes,
+    return {"steps": model.num_timesteps, "n_updates": model._n_updates, "episodes": episodes,
             "success_rate": float(np.mean([e["final_success"] for e in episodes])),
             "ever_success_rate": float(np.mean([e["ever_success"] for e in episodes])),
             "mean_final_distance": float(np.mean([e["final_distance"] for e in episodes])),
@@ -148,7 +148,11 @@ class RunCallback(BaseCallback):
         if step - self.last_save >= self.cfg["checkpoint_every_steps"]:
             save_snapshot(self.model, self.wrapper, self.out / "checkpoints" / f"step_{step:09d}", self.spec)
             self.last_save = step
-        if step - self.last_eval >= self.cfg["eval_every_steps"]:
+        # SB3 performs one more gradient update after the last rollout, and the runner then
+        # evaluates the final policy; a periodic evaluation at the final boundary would be a
+        # different (pre-update) policy recorded at the same step, so it is skipped.
+        final_boundary = step >= self.model._total_timesteps
+        if step - self.last_eval >= self.cfg["eval_every_steps"] and not final_boundary:
             self.record_eval()
 
 

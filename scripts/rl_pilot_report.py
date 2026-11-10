@@ -11,7 +11,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from rl.analysis import feedback_diagnostics  # noqa: E402
-from rl.metrics import load_curve, normalized_auc  # noqa: E402
+from rl.metrics import dedupe, normalized_auc  # noqa: E402
 
 
 def main():
@@ -29,7 +29,14 @@ def main():
                 "device": json.loads((run / "environment.json").read_text()).get("device")
                 if (run / "environment.json").exists() else None}
         if item["completed"]:
-            curve = load_curve(run / "evaluations.jsonl")
+            records = [json.loads(x) for x in (run / "evaluations.jsonl").read_text().splitlines() if x.strip()]
+            if len(records) > 1 and records[-1]["steps"] == records[-2]["steps"] and records[-1] != records[-2] \
+                    and "n_updates" not in records[-1]:
+                # runs from before 'skip periodic eval at the final boundary': the earlier record
+                # is the pre-final-update policy; keep the final policy's evaluation
+                item["dropped_preupdate_final_eval"] = records[-2]["success_rate"]
+                records.pop(-2)
+            curve = dedupe(records)
             budget = status["final_steps"]
             item["curve"] = [(r["steps"], r["success_rate"], round(r["mean_final_distance"], 4)) for r in curve]
             item["final_success"] = curve[-1]["success_rate"]
