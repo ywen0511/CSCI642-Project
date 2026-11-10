@@ -11,7 +11,14 @@ for round in 1 2 3 4 5 6; do
     grep -qx "$f $sz" <<<"$have" || missing+=("$f")
   done
   echo "round $round: ${#missing[@]} missing"
-  [ ${#missing[@]} -eq 0 ] && { echo ALL_UPLOADED; exit 0; }
+  if [ ${#missing[@]} -eq 0 ]; then
+    # failed partial uploads ("starter" assets) of this new Release are leftovers of our own retries: remove them
+    rid=$(gh api "repos/$REPO/releases/tags/$TAG" -q .id)
+    for id in $(gh api "repos/$REPO/releases/$rid/assets?per_page=100" --paginate -q '.[] | select(.state!="uploaded") | .id'); do
+      gh api -X DELETE "repos/$REPO/releases/assets/$id" && echo "removed incomplete asset $id"
+    done
+    echo ALL_UPLOADED; exit 0
+  fi
   for f in "${missing[@]}"; do
     out=$(timeout 3600 gh release upload "$TAG" "$STAGE/$f" --repo $REPO --clobber 2>&1) && echo "OK $f" || { echo "FAIL $f: $(echo "$out" | tail -1)"; sleep $((30*round)); }
   done
