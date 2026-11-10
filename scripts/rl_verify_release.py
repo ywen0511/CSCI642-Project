@@ -139,6 +139,10 @@ def main():
         dest.mkdir(parents=True, exist_ok=False)
         with tarfile.open(path) as tar:
             tar.extractall(dest, filter="data")
+    # reassembled copies are reconstructible from the verified parts; remove them to bound disk use
+    for path in assembled.iterdir():
+        path.unlink()
+    assembled.rmdir()
     snapshots = sorted(m.parent for m in ex.glob("*/*/checkpoints/*/metadata.json"))
     snap_bad = []
     for s in snapshots:
