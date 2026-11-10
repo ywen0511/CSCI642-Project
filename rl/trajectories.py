@@ -81,6 +81,7 @@ if __name__ == "__main__":
     p.add_argument("--run", action="append", required=True, help="LABEL=CHECKPOINT_DIR")
     p.add_argument("--seeds", type=int, nargs="+", default=[30000, 30001, 30002])
     p.add_argument("--out", required=True)
+    p.add_argument("--no-plot", action="store_true")
     a = p.parse_args()
     out = Path(a.out)
     out.mkdir(parents=True, exist_ok=False)
@@ -89,6 +90,7 @@ if __name__ == "__main__":
         label, path = item.split("=", 1)
         result[label] = rollout(path, a.seeds)
     (out / "trajectories.json").write_text(json.dumps(result, indent=2) + "\n")
-    plot(result, out)
+    if not a.no_plot:
+        plot(result, out)
     print(json.dumps({k: [(e["seed"], e["final_success"], round(e["final_distance"], 4)) for e in v["episodes"]]
                       for k, v in result.items()}, indent=2))
