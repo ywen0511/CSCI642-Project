@@ -1,35 +1,65 @@
 {
  "schema": "csci642-decoder-improvement-status/v1",
- "phase": "stage_A_C_running",
+ "phase": "experiments_complete_delivery_in_progress",
  "prepared_date": "2026-11-10",
  "historical_source_sha": "f6decb7a99628638743a4c126d83668149d5c5c8",
  "planning_branch": "decoder-improvement-v1",
  "execution_branch": "decoder-improvement-v1-experiments",
  "historical_delivery": {
-  "state": "recovery_in_progress",
-  "audit": "reports/decoder_improvement/historical_delivery_audit.json",
+  "state": "recovery_uploads_in_progress",
+  "audit": "reports/decoder_improvement/historical_delivery_audit.md",
   "recoverable_runs": 108,
-  "missing_runs": 0
+  "missing_runs": 0,
+  "recovery_releases": [
+   "rl-v2-recovery-final-20261111-25bb0f4",
+   "rl-v2-recovery-w010-20261111-cfe0305"
+  ]
  },
  "new_study": {
-  "state": "running",
+  "state": "experiments_complete",
   "formal_fit_cap": 215,
-  "stages_planned": {
+  "distinct_formal_fits": 186,
+  "by_stage": {
    "A": 63,
-   "C": 36
+   "B": 0,
+   "C": 36,
+   "D": 36,
+   "E": 18,
+   "F": 18,
+   "G": 15
   },
-  "completed": 0,
+  "reused_exact_duplicates": 63,
+  "completed": 186,
   "failed": 0,
-  "results": null
+  "resumed": 0,
+  "selected": {
+   "cbramod": "historical flatten head, frozen backbone, 1-20 Hz, unweighted CE (final epochs 5)",
+   "eegnet": "historical recipe (identical to reference; final epochs 47)"
+  },
+  "test_pooled_auroc_mean_sd": {
+   "cbramod_selected": "0.564 +/- 0.005",
+   "cbramod_reference": "0.563 +/- 0.006",
+   "eegnet": "0.599 +/- 0.014"
+  },
+  "conclusion": "no tested change established an improvement; affine calibration improved Brier only",
+  "compute_gpu_hours": 2.66
  },
  "publication": {
-  "planning_documents": "included_in_this_source_snapshot",
-  "experimental_releases": [],
+  "planning_documents": "included",
+  "experimental_releases": {
+   "decoder-v1-smoke-20261111-0869c01": "published_and_fresh_download_verified",
+   "decoder-v1-cv-a-20261111-6baf061": "upload_in_progress",
+   "decoder-v1-cv-cde-20261111-fb51285": "upload_in_progress",
+   "decoder-v1-cv-f-20261111-026103a": "upload_in_progress",
+   "decoder-v1-final-20261111-f8031ec": "upload_in_progress"
+  },
   "fresh_download_verified": false
  },
- "blockers": [],
+ "blockers": [
+  "slow laptop-to-cluster link (~1.5-5 MB/s): uploads through the laptop as instructed take hours"
+ ],
  "completion_claim": false,
- "updated_utc": "2026-11-11T06:28:00+00:00",
+ "updated_utc": "2026-11-11T08:00:47+00:00",
  "preflight": {
   "diagnostics": "passed",
   "environment": "new env, exact historical lock (NCCL file fixed)",
