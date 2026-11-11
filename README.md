@@ -2,14 +2,15 @@
 
 > **Decoder-improvement study (branch `decoder-improvement-v1-experiments`).** Executed from
 > [`DECODER_IMPROVEMENT_HANDOFF.md`](DECODER_IMPROVEMENT_HANDOFF.md). Result: no tested change (smaller head,
-> frozen / last-two-block / full fine-tuning, backbone learning rate, 0.3-40 / 0.3-75 Hz input, unweighted loss)
+> frozen / last-two-block / full fine-tuning, 0.3-40 / 0.3-75 Hz input, unweighted loss; the backbone learning-rate
+> stage was skipped because the selected backbone was frozen)
 > improved held-out decoding; the selected CBraMod and a controlled refit of the historical recipe both reached test
 > AUROC ~0.56, EEGNet 0.60. Reports: [`reports/decoder_improvement/final_report.md`](reports/decoder_improvement/final_report.md),
 > [`results.md`](reports/decoder_improvement/results.md), status
 > [`status.json`](reports/decoder_improvement/status.json), Releases and verification:
 > [`artifact_index.md`](reports/decoder_improvement/artifact_index.md). The new seed-42 probabilities are an
 > experimental feedback profile (`configs/decoder_improvement/rl_feedback_vnext.json`); the historical feedback and
-> RL results are unchanged and did not use them.
+> RL results are unchanged and did not use them. The text below is the original planning README.
 
 
 This branch prepares a new EEG decoder study. **No new training or improvement result is claimed by this handoff.**
