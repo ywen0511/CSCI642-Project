@@ -1,0 +1,9 @@
+{"utc": "2026-11-11T07:44:07.069708+00:00", "tag": "decoder-v1-smoke-20261111-0869c01", "event": "draft_created", "release_id": 441367600}
+{"utc": "2026-11-11T07:44:10.928409+00:00", "tag": "decoder-v1-smoke-20261111-0869c01", "event": "upload", "asset": "stage_index.json", "rc": 0, "round": 1, "err": ""}
+{"utc": "2026-11-11T07:44:13.979919+00:00", "tag": "decoder-v1-smoke-20261111-0869c01", "event": "upload", "asset": "SHA256SUMS", "rc": 0, "round": 1, "err": ""}
+{"utc": "2026-11-11T07:44:16.886633+00:00", "tag": "decoder-v1-smoke-20261111-0869c01", "event": "upload", "asset": "payload_manifest.json", "rc": 0, "round": 1, "err": ""}
+{"utc": "2026-11-11T07:44:31.660816+00:00", "tag": "decoder-v1-smoke-20261111-0869c01", "event": "upload", "asset": "evidence.tar.part-02", "rc": 0, "round": 1, "err": ""}
+{"utc": "2026-11-11T07:45:01.454113+00:00", "tag": "decoder-v1-smoke-20261111-0869c01", "event": "upload", "asset": "evidence.tar.part-00", "rc": 0, "round": 1, "err": ""}
+{"utc": "2026-11-11T07:45:22.005220+00:00", "tag": "decoder-v1-smoke-20261111-0869c01", "event": "upload", "asset": "evidence.tar.part-01", "rc": 0, "round": 1, "err": ""}
+{"utc": "2026-11-11T07:45:23.595844+00:00", "event": "roundtrip", "tag": "decoder-v1-smoke-20261111-0869c01", "release_id": 441367600, "n_assets": 6, "digest_checked": 6, "problems": []}
+{"utc": "2026-11-11T07:45:26.108248+00:00", "tag": "decoder-v1-smoke-20261111-0869c01", "event": "published"}

@@ -1,0 +1,1283 @@
+{
+ "n": 213,
+ "items": [
+  {
+   "printed": "0.5787",
+   "value": 0.5787078412832252,
+   "source": "reports/decoder_improvement/decisions/stage_A.json",
+   "selector": "candidates[0].score"
+  },
+  {
+   "printed": "0.5626",
+   "value": 0.5626399524781381,
+   "source": "reports/decoder_improvement/decisions/stage_A.json",
+   "selector": "candidates[0].cv_pooled_auroc"
+  },
+  {
+   "printed": "0.2781",
+   "value": 0.278077035247333,
+   "source": "reports/decoder_improvement/decisions/stage_A.json",
+   "selector": "candidates[0].cv_brier"
+  },
+  {
+   "printed": "0.9782",
+   "value": 0.9781517692204268,
+   "source": "reports/decoder_improvement/decisions/stage_A.json",
+   "selector": "candidates[0].cv_nll"
+  },
+  {
+   "printed": "0.0445",
+   "value": 0.04452262449746591,
+   "source": "reports/decoder_improvement/decisions/stage_A.json",
+   "selector": "candidates[0].cv_mean_p_label1-cv_mean_p_label0"
+  },
+  {
+   "printed": "0.5750",
+   "value": 0.5749793012427074,
+   "source": "reports/decoder_improvement/decisions/stage_A.json",
+   "selector": "candidates[1].score"
+  },
+  {
+   "printed": "0.5726",
+   "value": 0.572598519602768,
+   "source": "reports/decoder_improvement/decisions/stage_A.json",
+   "selector": "candidates[1].cv_pooled_auroc"
+  },
+  {
+   "printed": "0.2573",
+   "value": 0.2573160172087702,
+   "source": "reports/decoder_improvement/decisions/stage_A.json",
+   "selector": "candidates[1].cv_brier"
+  },
+  {
+   "printed": "0.7378",
+   "value": 0.7377932134533943,
+   "source": "reports/decoder_improvement/decisions/stage_A.json",
+   "selector": "candidates[1].cv_nll"
+  },
+  {
+   "printed": "0.0422",
+   "value": 0.042219152141169836,
+   "source": "reports/decoder_improvement/decisions/stage_A.json",
+   "selector": "candidates[1].cv_mean_p_label1-cv_mean_p_label0"
+  },
+  {
+   "printed": "0.5675",
+   "value": 0.5674780079258426,
+   "source": "reports/decoder_improvement/decisions/stage_A.json",
+   "selector": "candidates[6].score"
+  },
+  {
+   "printed": "0.5626",
+   "value": 0.5626366055189621,
+   "source": "reports/decoder_improvement/decisions/stage_A.json",
+   "selector": "candidates[6].cv_pooled_auroc"
+  },
+  {
+   "printed": "0.3154",
+   "value": 0.3153719415393392,
+   "source": "reports/decoder_improvement/decisions/stage_A.json",
+   "selector": "candidates[6].cv_brier"
+  },
+  {
+   "printed": "1.4557",
+   "value": 1.4557020439409831,
+   "source": "reports/decoder_improvement/decisions/stage_A.json",
+   "selector": "candidates[6].cv_nll"
+  },
+  {
+   "printed": "0.0715",
+   "value": 0.07154009757738167,
+   "source": "reports/decoder_improvement/decisions/stage_A.json",
+   "selector": "candidates[6].cv_mean_p_label1-cv_mean_p_label0"
+  },
+  {
+   "printed": "0.5666",
+   "value": 0.5665547979119813,
+   "source": "reports/decoder_improvement/decisions/stage_A.json",
+   "selector": "candidates[5].score"
+  },
+  {
+   "printed": "0.5580",
+   "value": 0.5579874313005639,
+   "source": "reports/decoder_improvement/decisions/stage_A.json",
+   "selector": "candidates[5].cv_pooled_auroc"
+  },
+  {
+   "printed": "0.2953",
+   "value": 0.29532838129709166,
+   "source": "reports/decoder_improvement/decisions/stage_A.json",
+   "selector": "candidates[5].cv_brier"
+  },
+  {
+   "printed": "0.8956",
+   "value": 0.8956263827530918,
+   "source": "reports/decoder_improvement/decisions/stage_A.json",
+   "selector": "candidates[5].cv_nll"
+  },
+  {
+   "printed": "0.0548",
+   "value": 0.05477593074896803,
+   "source": "reports/decoder_improvement/decisions/stage_A.json",
+   "selector": "candidates[5].cv_mean_p_label1-cv_mean_p_label0"
+  },
+  {
+   "printed": "0.5588",
+   "value": 0.5588143090272779,
+   "source": "reports/decoder_improvement/decisions/stage_A.json",
+   "selector": "candidates[2].score"
+  },
+  {
+   "printed": "0.5503",
+   "value": 0.5502856443714559,
+   "source": "reports/decoder_improvement/decisions/stage_A.json",
+   "selector": "candidates[2].cv_pooled_auroc"
+  },
+  {
+   "printed": "0.2981",
+   "value": 0.29811141091617893,
+   "source": "reports/decoder_improvement/decisions/stage_A.json",
+   "selector": "candidates[2].cv_brier"
+  },
+  {
+   "printed": "1.1064",
+   "value": 1.1064136715963595,
+   "source": "reports/decoder_improvement/decisions/stage_A.json",
+   "selector": "candidates[2].cv_nll"
+  },
+  {
+   "printed": "0.0516",
+   "value": 0.051559760468014026,
+   "source": "reports/decoder_improvement/decisions/stage_A.json",
+   "selector": "candidates[2].cv_mean_p_label1-cv_mean_p_label0"
+  },
+  {
+   "printed": "0.5575",
+   "value": 0.557484239369454,
+   "source": "reports/decoder_improvement/decisions/stage_A.json",
+   "selector": "candidates[3].score"
+  },
+  {
+   "printed": "0.5498",
+   "value": 0.5498228342942825,
+   "source": "reports/decoder_improvement/decisions/stage_A.json",
+   "selector": "candidates[3].cv_pooled_auroc"
+  },
+  {
+   "printed": "0.2442",
+   "value": 0.24422420757558025,
+   "source": "reports/decoder_improvement/decisions/stage_A.json",
+   "selector": "candidates[3].cv_brier"
+  },
+  {
+   "printed": "0.6816",
+   "value": 0.6815649440253391,
+   "source": "reports/decoder_improvement/decisions/stage_A.json",
+   "selector": "candidates[3].cv_nll"
+  },
+  {
+   "printed": "0.0176",
+   "value": 0.017647122092806444,
+   "source": "reports/decoder_improvement/decisions/stage_A.json",
+   "selector": "candidates[3].cv_mean_p_label1-cv_mean_p_label0"
+  },
+  {
+   "printed": "0.5546",
+   "value": 0.5546003788629074,
+   "source": "reports/decoder_improvement/decisions/stage_A.json",
+   "selector": "candidates[4].score"
+  },
+  {
+   "printed": "0.5496",
+   "value": 0.5496387515396012,
+   "source": "reports/decoder_improvement/decisions/stage_A.json",
+   "selector": "candidates[4].cv_pooled_auroc"
+  },
+  {
+   "printed": "0.2529",
+   "value": 0.25292969535462917,
+   "source": "reports/decoder_improvement/decisions/stage_A.json",
+   "selector": "candidates[4].cv_brier"
+  },
+  {
+   "printed": "0.7128",
+   "value": 0.712824020289586,
+   "source": "reports/decoder_improvement/decisions/stage_A.json",
+   "selector": "candidates[4].cv_nll"
+  },
+  {
+   "printed": "0.0270",
+   "value": 0.027020409303876225,
+   "source": "reports/decoder_improvement/decisions/stage_A.json",
+   "selector": "candidates[4].cv_mean_p_label1-cv_mean_p_label0"
+  },
+  {
+   "printed": "0.6118",
+   "value": 0.6117677354035893,
+   "source": "reports/decoder_improvement/decisions/stage_C.json",
+   "selector": "candidates[0].score"
+  },
+  {
+   "printed": "0.5985",
+   "value": 0.5984545230062536,
+   "source": "reports/decoder_improvement/decisions/stage_C.json",
+   "selector": "candidates[0].cv_pooled_auroc"
+  },
+  {
+   "printed": "0.2490",
+   "value": 0.24900163554592208,
+   "source": "reports/decoder_improvement/decisions/stage_C.json",
+   "selector": "candidates[0].cv_brier"
+  },
+  {
+   "printed": "0.7068",
+   "value": 0.7068491539195564,
+   "source": "reports/decoder_improvement/decisions/stage_C.json",
+   "selector": "candidates[0].cv_nll"
+  },
+  {
+   "printed": "0.0645",
+   "value": 0.06445666199016342,
+   "source": "reports/decoder_improvement/decisions/stage_C.json",
+   "selector": "candidates[0].cv_mean_p_label1-cv_mean_p_label0"
+  },
+  {
+   "printed": "0.6085",
+   "value": 0.6084645532778546,
+   "source": "reports/decoder_improvement/decisions/stage_C.json",
+   "selector": "candidates[1].score"
+  },
+  {
+   "printed": "0.6016",
+   "value": 0.6016227297699871,
+   "source": "reports/decoder_improvement/decisions/stage_C.json",
+   "selector": "candidates[1].cv_pooled_auroc"
+  },
+  {
+   "printed": "0.2560",
+   "value": 0.25596977242698216,
+   "source": "reports/decoder_improvement/decisions/stage_C.json",
+   "selector": "candidates[1].cv_brier"
+  },
+  {
+   "printed": "0.7388",
+   "value": 0.7388137199534841,
+   "source": "reports/decoder_improvement/decisions/stage_C.json",
+   "selector": "candidates[1].cv_nll"
+  },
+  {
+   "printed": "0.0841",
+   "value": 0.08411268678520423,
+   "source": "reports/decoder_improvement/decisions/stage_C.json",
+   "selector": "candidates[1].cv_mean_p_label1-cv_mean_p_label0"
+  },
+  {
+   "printed": "0.5962",
+   "value": 0.5961782501156668,
+   "source": "reports/decoder_improvement/decisions/stage_C.json",
+   "selector": "candidates[2].score"
+  },
+  {
+   "printed": "0.5815",
+   "value": 0.5815341568340444,
+   "source": "reports/decoder_improvement/decisions/stage_C.json",
+   "selector": "candidates[2].cv_pooled_auroc"
+  },
+  {
+   "printed": "0.2567",
+   "value": 0.256733424851224,
+   "source": "reports/decoder_improvement/decisions/stage_C.json",
+   "selector": "candidates[2].cv_brier"
+  },
+  {
+   "printed": "0.7310",
+   "value": 0.7310199938695806,
+   "source": "reports/decoder_improvement/decisions/stage_C.json",
+   "selector": "candidates[2].cv_nll"
+  },
+  {
+   "printed": "0.0521",
+   "value": 0.05211807986235567,
+   "source": "reports/decoder_improvement/decisions/stage_C.json",
+   "selector": "candidates[2].cv_mean_p_label1-cv_mean_p_label0"
+  },
+  {
+   "printed": "0.5935",
+   "value": 0.5935495422592044,
+   "source": "reports/decoder_improvement/decisions/stage_C.json",
+   "selector": "candidates[3].score"
+  },
+  {
+   "printed": "0.5841",
+   "value": 0.5841078444789553,
+   "source": "reports/decoder_improvement/decisions/stage_C.json",
+   "selector": "candidates[3].cv_pooled_auroc"
+  },
+  {
+   "printed": "0.2592",
+   "value": 0.25919617043811827,
+   "source": "reports/decoder_improvement/decisions/stage_C.json",
+   "selector": "candidates[3].cv_brier"
+  },
+  {
+   "printed": "0.7369",
+   "value": 0.7369253329626738,
+   "source": "reports/decoder_improvement/decisions/stage_C.json",
+   "selector": "candidates[3].cv_nll"
+  },
+  {
+   "printed": "0.0662",
+   "value": 0.06616883230374504,
+   "source": "reports/decoder_improvement/decisions/stage_C.json",
+   "selector": "candidates[3].cv_mean_p_label1-cv_mean_p_label0"
+  },
+  {
+   "printed": "0.6118",
+   "value": 0.6117677354035893,
+   "source": "reports/decoder_improvement/decisions/stage_D.json",
+   "selector": "candidates[1].score"
+  },
+  {
+   "printed": "0.5985",
+   "value": 0.5984545230062536,
+   "source": "reports/decoder_improvement/decisions/stage_D.json",
+   "selector": "candidates[1].cv_pooled_auroc"
+  },
+  {
+   "printed": "0.2490",
+   "value": 0.24900163554592208,
+   "source": "reports/decoder_improvement/decisions/stage_D.json",
+   "selector": "candidates[1].cv_brier"
+  },
+  {
+   "printed": "0.7068",
+   "value": 0.7068491539195564,
+   "source": "reports/decoder_improvement/decisions/stage_D.json",
+   "selector": "candidates[1].cv_nll"
+  },
+  {
+   "printed": "0.0645",
+   "value": 0.06445666199016342,
+   "source": "reports/decoder_improvement/decisions/stage_D.json",
+   "selector": "candidates[1].cv_mean_p_label1-cv_mean_p_label0"
+  },
+  {
+   "printed": "0.6030",
+   "value": 0.6030087975455748,
+   "source": "reports/decoder_improvement/decisions/stage_D.json",
+   "selector": "candidates[3].score"
+  },
+  {
+   "printed": "0.5917",
+   "value": 0.5916910622802164,
+   "source": "reports/decoder_improvement/decisions/stage_D.json",
+   "selector": "candidates[3].cv_pooled_auroc"
+  },
+  {
+   "printed": "0.2530",
+   "value": 0.25298407744114915,
+   "source": "reports/decoder_improvement/decisions/stage_D.json",
+   "selector": "candidates[3].cv_brier"
+  },
+  {
+   "printed": "0.7201",
+   "value": 0.720057514004357,
+   "source": "reports/decoder_improvement/decisions/stage_D.json",
+   "selector": "candidates[3].cv_nll"
+  },
+  {
+   "printed": "0.0622",
+   "value": 0.06220105778970769,
+   "source": "reports/decoder_improvement/decisions/stage_D.json",
+   "selector": "candidates[3].cv_mean_p_label1-cv_mean_p_label0"
+  },
+  {
+   "printed": "0.5974",
+   "value": 0.5974319352519737,
+   "source": "reports/decoder_improvement/decisions/stage_D.json",
+   "selector": "candidates[5].score"
+  },
+  {
+   "printed": "0.5835",
+   "value": 0.5835101023624079,
+   "source": "reports/decoder_improvement/decisions/stage_D.json",
+   "selector": "candidates[5].cv_pooled_auroc"
+  },
+  {
+   "printed": "0.2591",
+   "value": 0.2590635533566875,
+   "source": "reports/decoder_improvement/decisions/stage_D.json",
+   "selector": "candidates[5].cv_brier"
+  },
+  {
+   "printed": "0.7416",
+   "value": 0.7416253357066797,
+   "source": "reports/decoder_improvement/decisions/stage_D.json",
+   "selector": "candidates[5].cv_nll"
+  },
+  {
+   "printed": "0.0544",
+   "value": 0.05441314784737922,
+   "source": "reports/decoder_improvement/decisions/stage_D.json",
+   "selector": "candidates[5].cv_mean_p_label1-cv_mean_p_label0"
+  },
+  {
+   "printed": "0.5787",
+   "value": 0.5787078412832252,
+   "source": "reports/decoder_improvement/decisions/stage_D.json",
+   "selector": "candidates[0].score"
+  },
+  {
+   "printed": "0.5626",
+   "value": 0.5626399524781381,
+   "source": "reports/decoder_improvement/decisions/stage_D.json",
+   "selector": "candidates[0].cv_pooled_auroc"
+  },
+  {
+   "printed": "0.2781",
+   "value": 0.278077035247333,
+   "source": "reports/decoder_improvement/decisions/stage_D.json",
+   "selector": "candidates[0].cv_brier"
+  },
+  {
+   "printed": "0.9782",
+   "value": 0.9781517692204268,
+   "source": "reports/decoder_improvement/decisions/stage_D.json",
+   "selector": "candidates[0].cv_nll"
+  },
+  {
+   "printed": "0.0445",
+   "value": 0.04452262449746591,
+   "source": "reports/decoder_improvement/decisions/stage_D.json",
+   "selector": "candidates[0].cv_mean_p_label1-cv_mean_p_label0"
+  },
+  {
+   "printed": "0.5667",
+   "value": 0.5667473773459882,
+   "source": "reports/decoder_improvement/decisions/stage_D.json",
+   "selector": "candidates[2].score"
+  },
+  {
+   "printed": "0.5550",
+   "value": 0.5549688460081438,
+   "source": "reports/decoder_improvement/decisions/stage_D.json",
+   "selector": "candidates[2].cv_pooled_auroc"
+  },
+  {
+   "printed": "0.3007",
+   "value": 0.3007393106281578,
+   "source": "reports/decoder_improvement/decisions/stage_D.json",
+   "selector": "candidates[2].cv_brier"
+  },
+  {
+   "printed": "1.5074",
+   "value": 1.507411636604452,
+   "source": "reports/decoder_improvement/decisions/stage_D.json",
+   "selector": "candidates[2].cv_nll"
+  },
+  {
+   "printed": "0.0561",
+   "value": 0.05607294531146301,
+   "source": "reports/decoder_improvement/decisions/stage_D.json",
+   "selector": "candidates[2].cv_mean_p_label1-cv_mean_p_label0"
+  },
+  {
+   "printed": "0.5666",
+   "value": 0.5665513094911016,
+   "source": "reports/decoder_improvement/decisions/stage_D.json",
+   "selector": "candidates[4].score"
+  },
+  {
+   "printed": "0.5521",
+   "value": 0.5520860604852545,
+   "source": "reports/decoder_improvement/decisions/stage_D.json",
+   "selector": "candidates[4].cv_pooled_auroc"
+  },
+  {
+   "printed": "0.3041",
+   "value": 0.30407946692054044,
+   "source": "reports/decoder_improvement/decisions/stage_D.json",
+   "selector": "candidates[4].cv_brier"
+  },
+  {
+   "printed": "1.5104",
+   "value": 1.5103538965526788,
+   "source": "reports/decoder_improvement/decisions/stage_D.json",
+   "selector": "candidates[4].cv_nll"
+  },
+  {
+   "printed": "0.0504",
+   "value": 0.050393174859835244,
+   "source": "reports/decoder_improvement/decisions/stage_D.json",
+   "selector": "candidates[4].cv_mean_p_label1-cv_mean_p_label0"
+  },
+  {
+   "printed": "0.6118",
+   "value": 0.6117677354035893,
+   "source": "reports/decoder_improvement/decisions/stage_E.json",
+   "selector": "candidates[2].score"
+  },
+  {
+   "printed": "0.5985",
+   "value": 0.5984545230062536,
+   "source": "reports/decoder_improvement/decisions/stage_E.json",
+   "selector": "candidates[2].cv_pooled_auroc"
+  },
+  {
+   "printed": "0.2490",
+   "value": 0.24900163554592208,
+   "source": "reports/decoder_improvement/decisions/stage_E.json",
+   "selector": "candidates[2].cv_brier"
+  },
+  {
+   "printed": "0.7068",
+   "value": 0.7068491539195564,
+   "source": "reports/decoder_improvement/decisions/stage_E.json",
+   "selector": "candidates[2].cv_nll"
+  },
+  {
+   "printed": "0.0645",
+   "value": 0.06445666199016342,
+   "source": "reports/decoder_improvement/decisions/stage_E.json",
+   "selector": "candidates[2].cv_mean_p_label1-cv_mean_p_label0"
+  },
+  {
+   "printed": "0.6106",
+   "value": 0.6106066587067736,
+   "source": "reports/decoder_improvement/decisions/stage_E.json",
+   "selector": "candidates[3].score"
+  },
+  {
+   "printed": "0.5990",
+   "value": 0.5989552033066965,
+   "source": "reports/decoder_improvement/decisions/stage_E.json",
+   "selector": "candidates[3].cv_pooled_auroc"
+  },
+  {
+   "printed": "0.2337",
+   "value": 0.2337125719198338,
+   "source": "reports/decoder_improvement/decisions/stage_E.json",
+   "selector": "candidates[3].cv_brier"
+  },
+  {
+   "printed": "0.6691",
+   "value": 0.6690944798642298,
+   "source": "reports/decoder_improvement/decisions/stage_E.json",
+   "selector": "candidates[3].cv_nll"
+  },
+  {
+   "printed": "0.0632",
+   "value": 0.06323234195015293,
+   "source": "reports/decoder_improvement/decisions/stage_E.json",
+   "selector": "candidates[3].cv_mean_p_label1-cv_mean_p_label0"
+  },
+  {
+   "printed": "0.5794",
+   "value": 0.5794353746772484,
+   "source": "reports/decoder_improvement/decisions/stage_E.json",
+   "selector": "candidates[1].score"
+  },
+  {
+   "printed": "0.5695",
+   "value": 0.5695325810360797,
+   "source": "reports/decoder_improvement/decisions/stage_E.json",
+   "selector": "candidates[1].cv_pooled_auroc"
+  },
+  {
+   "printed": "0.2539",
+   "value": 0.25390009462027824,
+   "source": "reports/decoder_improvement/decisions/stage_E.json",
+   "selector": "candidates[1].cv_brier"
+  },
+  {
+   "printed": "0.8085",
+   "value": 0.8085416205395538,
+   "source": "reports/decoder_improvement/decisions/stage_E.json",
+   "selector": "candidates[1].cv_nll"
+  },
+  {
+   "printed": "0.0486",
+   "value": 0.048603326137608205,
+   "source": "reports/decoder_improvement/decisions/stage_E.json",
+   "selector": "candidates[1].cv_mean_p_label1-cv_mean_p_label0"
+  },
+  {
+   "printed": "0.5787",
+   "value": 0.5787078412832252,
+   "source": "reports/decoder_improvement/decisions/stage_E.json",
+   "selector": "candidates[0].score"
+  },
+  {
+   "printed": "0.5626",
+   "value": 0.5626399524781381,
+   "source": "reports/decoder_improvement/decisions/stage_E.json",
+   "selector": "candidates[0].cv_pooled_auroc"
+  },
+  {
+   "printed": "0.2781",
+   "value": 0.278077035247333,
+   "source": "reports/decoder_improvement/decisions/stage_E.json",
+   "selector": "candidates[0].cv_brier"
+  },
+  {
+   "printed": "0.9782",
+   "value": 0.9781517692204268,
+   "source": "reports/decoder_improvement/decisions/stage_E.json",
+   "selector": "candidates[0].cv_nll"
+  },
+  {
+   "printed": "0.0445",
+   "value": 0.04452262449746591,
+   "source": "reports/decoder_improvement/decisions/stage_E.json",
+   "selector": "candidates[0].cv_mean_p_label1-cv_mean_p_label0"
+  },
+  {
+   "printed": "0.5783",
+   "value": 0.5782956172406147,
+   "source": "reports/decoder_improvement/decisions/freeze.json",
+   "selector": "recipes[0].cv_score_5seed"
+  },
+  {
+   "printed": "0.5794",
+   "value": 0.5794353746772484,
+   "source": "reports/decoder_improvement/decisions/freeze.json",
+   "selector": "recipes[0].cv_score_screening_seeds"
+  },
+  {
+   "printed": "0.5766",
+   "value": 0.5765859810856642,
+   "source": "reports/decoder_improvement/decisions/freeze.json",
+   "selector": "recipes[0].cv_score_new_seeds_45_46"
+  },
+  {
+   "printed": "0.5667",
+   "value": 0.566669490788627,
+   "source": "reports/decoder_improvement/decisions/freeze.json",
+   "selector": "recipes[1].cv_score_5seed"
+  },
+  {
+   "printed": "0.5675",
+   "value": 0.5674780079258426,
+   "source": "reports/decoder_improvement/decisions/freeze.json",
+   "selector": "recipes[1].cv_score_screening_seeds"
+  },
+  {
+   "printed": "0.5655",
+   "value": 0.5654567150828037,
+   "source": "reports/decoder_improvement/decisions/freeze.json",
+   "selector": "recipes[1].cv_score_new_seeds_45_46"
+  },
+  {
+   "printed": "0.6103",
+   "value": 0.6102670187549192,
+   "source": "reports/decoder_improvement/decisions/freeze.json",
+   "selector": "recipes[2].cv_score_5seed"
+  },
+  {
+   "printed": "0.6118",
+   "value": 0.6117677354035893,
+   "source": "reports/decoder_improvement/decisions/freeze.json",
+   "selector": "recipes[2].cv_score_screening_seeds"
+  },
+  {
+   "printed": "0.6080",
+   "value": 0.6080159437819138,
+   "source": "reports/decoder_improvement/decisions/freeze.json",
+   "selector": "recipes[2].cv_score_new_seeds_45_46"
+  },
+  {
+   "printed": "+0.0116",
+   "value": 0.011626126451987625,
+   "source": "reports/decoder_improvement/decisions/freeze.json",
+   "selector": "confirmation_paired_differences.cbramod.mean"
+  },
+  {
+   "printed": "+0.0028",
+   "value": 0.002849393591584204,
+   "source": "reports/decoder_improvement/decisions/freeze.json",
+   "selector": "confirmation_paired_differences.cbramod.selection_optimism_selected"
+  },
+  {
+   "printed": "0.7440",
+   "value": 0.7440114559778475,
+   "source": "reports/decoder_improvement/decisions/calibration.json",
+   "selector": "deployment.cbramod.selection.mean_heldout_participant_nll.identity"
+  },
+  {
+   "printed": "0.6601",
+   "value": 0.6601264638998291,
+   "source": "reports/decoder_improvement/decisions/calibration.json",
+   "selector": "deployment.cbramod.selection.mean_heldout_participant_nll.temperature"
+  },
+  {
+   "printed": "0.6392",
+   "value": 0.6391586322742919,
+   "source": "reports/decoder_improvement/decisions/calibration.json",
+   "selector": "deployment.cbramod.selection.mean_heldout_participant_nll.affine"
+  },
+  {
+   "printed": "0.6844",
+   "value": 0.68440066169318,
+   "source": "reports/decoder_improvement/decisions/calibration.json",
+   "selector": "deployment.eegnet.selection.mean_heldout_participant_nll.identity"
+  },
+  {
+   "printed": "0.6785",
+   "value": 0.6785409263339184,
+   "source": "reports/decoder_improvement/decisions/calibration.json",
+   "selector": "deployment.eegnet.selection.mean_heldout_participant_nll.temperature"
+  },
+  {
+   "printed": "0.6415",
+   "value": 0.6414696867776488,
+   "source": "reports/decoder_improvement/decisions/calibration.json",
+   "selector": "deployment.eegnet.selection.mean_heldout_participant_nll.affine"
+  },
+  {
+   "printed": "0.564",
+   "value": 0.5642792002202491,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "mean(auroc) where arch=cbramod,role=selected,probability=raw"
+  },
+  {
+   "printed": "0.005",
+   "value": 0.004965983430387901,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "sd(auroc) where arch=cbramod,role=selected,probability=raw"
+  },
+  {
+   "printed": "0.562",
+   "value": 0.5624284526432083,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "mean(participant_macro_auroc) where arch=cbramod,role=selected,probability=raw"
+  },
+  {
+   "printed": "0.006",
+   "value": 0.00649671764778956,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "sd(participant_macro_auroc) where arch=cbramod,role=selected,probability=raw"
+  },
+  {
+   "printed": "0.529",
+   "value": 0.5294501514212954,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "mean(balanced_accuracy) where arch=cbramod,role=selected,probability=raw"
+  },
+  {
+   "printed": "0.016",
+   "value": 0.015860394086776558,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "sd(balanced_accuracy) where arch=cbramod,role=selected,probability=raw"
+  },
+  {
+   "printed": "0.529",
+   "value": 0.5294501514212954,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "mean(balanced_accuracy) where arch=cbramod,role=selected,probability=temperature"
+  },
+  {
+   "printed": "0.016",
+   "value": 0.015860394086776558,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "sd(balanced_accuracy) where arch=cbramod,role=selected,probability=temperature"
+  },
+  {
+   "printed": "0.513",
+   "value": 0.5125888309587721,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "mean(balanced_accuracy) where arch=cbramod,role=selected,probability=deployment"
+  },
+  {
+   "printed": "0.004",
+   "value": 0.004155861154393725,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "sd(balanced_accuracy) where arch=cbramod,role=selected,probability=deployment"
+  },
+  {
+   "printed": "0.280",
+   "value": 0.27982881041615165,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "mean(brier) where arch=cbramod,role=selected,probability=raw"
+  },
+  {
+   "printed": "0.035",
+   "value": 0.034565705832489226,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "sd(brier) where arch=cbramod,role=selected,probability=raw"
+  },
+  {
+   "printed": "0.240",
+   "value": 0.2403991530190844,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "mean(brier) where arch=cbramod,role=selected,probability=temperature"
+  },
+  {
+   "printed": "0.012",
+   "value": 0.011875436044743051,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "sd(brier) where arch=cbramod,role=selected,probability=temperature"
+  },
+  {
+   "printed": "0.227",
+   "value": 0.22717695536688956,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "mean(brier) where arch=cbramod,role=selected,probability=deployment"
+  },
+  {
+   "printed": "0.001",
+   "value": 0.0005891041621581475,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "sd(brier) where arch=cbramod,role=selected,probability=deployment"
+  },
+  {
+   "printed": "0.673",
+   "value": 0.6732246509442595,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "mean(nll) where arch=cbramod,role=selected,probability=temperature"
+  },
+  {
+   "printed": "0.025",
+   "value": 0.024665670363790353,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "sd(nll) where arch=cbramod,role=selected,probability=temperature"
+  },
+  {
+   "printed": "0.646",
+   "value": 0.6458406484987288,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "mean(nll) where arch=cbramod,role=selected,probability=deployment"
+  },
+  {
+   "printed": "0.001",
+   "value": 0.0013864891967747697,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "sd(nll) where arch=cbramod,role=selected,probability=deployment"
+  },
+  {
+   "printed": "0.101",
+   "value": 0.10149540625578005,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "mean(ece_10bin) where arch=cbramod,role=selected,probability=temperature"
+  },
+  {
+   "printed": "0.058",
+   "value": 0.057904344546454496,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "sd(ece_10bin) where arch=cbramod,role=selected,probability=temperature"
+  },
+  {
+   "printed": "0.039",
+   "value": 0.03874769179225716,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "mean(ece_10bin) where arch=cbramod,role=selected,probability=deployment"
+  },
+  {
+   "printed": "0.006",
+   "value": 0.006075029381402569,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "sd(ece_10bin) where arch=cbramod,role=selected,probability=deployment"
+  },
+  {
+   "printed": "0.563",
+   "value": 0.5630910592607886,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "mean(auroc) where arch=cbramod,role=reference,probability=raw"
+  },
+  {
+   "printed": "0.006",
+   "value": 0.005511133285018461,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "sd(auroc) where arch=cbramod,role=reference,probability=raw"
+  },
+  {
+   "printed": "0.566",
+   "value": 0.5657063245667993,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "mean(participant_macro_auroc) where arch=cbramod,role=reference,probability=raw"
+  },
+  {
+   "printed": "0.006",
+   "value": 0.006246670870184196,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "sd(participant_macro_auroc) where arch=cbramod,role=reference,probability=raw"
+  },
+  {
+   "printed": "0.544",
+   "value": 0.5442915892353224,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "mean(balanced_accuracy) where arch=cbramod,role=reference,probability=raw"
+  },
+  {
+   "printed": "0.006",
+   "value": 0.006006234258737086,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "sd(balanced_accuracy) where arch=cbramod,role=reference,probability=raw"
+  },
+  {
+   "printed": "0.544",
+   "value": 0.5442915892353224,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "mean(balanced_accuracy) where arch=cbramod,role=reference,probability=temperature"
+  },
+  {
+   "printed": "0.006",
+   "value": 0.006006234258737086,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "sd(balanced_accuracy) where arch=cbramod,role=reference,probability=temperature"
+  },
+  {
+   "printed": "0.544",
+   "value": 0.5442915892353224,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "mean(balanced_accuracy) where arch=cbramod,role=reference,probability=deployment"
+  },
+  {
+   "printed": "0.006",
+   "value": 0.006006234258737086,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "sd(balanced_accuracy) where arch=cbramod,role=reference,probability=deployment"
+  },
+  {
+   "printed": "0.334",
+   "value": 0.33419089807591684,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "mean(brier) where arch=cbramod,role=reference,probability=raw"
+  },
+  {
+   "printed": "0.004",
+   "value": 0.003717645312133017,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "sd(brier) where arch=cbramod,role=reference,probability=raw"
+  },
+  {
+   "printed": "0.244",
+   "value": 0.24429598207642447,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "mean(brier) where arch=cbramod,role=reference,probability=temperature"
+  },
+  {
+   "printed": "0.002",
+   "value": 0.001724603139416166,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "sd(brier) where arch=cbramod,role=reference,probability=temperature"
+  },
+  {
+   "printed": "0.244",
+   "value": 0.24429598207642447,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "mean(brier) where arch=cbramod,role=reference,probability=deployment"
+  },
+  {
+   "printed": "0.002",
+   "value": 0.001724603139416166,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "sd(brier) where arch=cbramod,role=reference,probability=deployment"
+  },
+  {
+   "printed": "0.682",
+   "value": 0.6823366168798901,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "mean(nll) where arch=cbramod,role=reference,probability=temperature"
+  },
+  {
+   "printed": "0.003",
+   "value": 0.0034144240153565868,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "sd(nll) where arch=cbramod,role=reference,probability=temperature"
+  },
+  {
+   "printed": "0.682",
+   "value": 0.6823366168798901,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "mean(nll) where arch=cbramod,role=reference,probability=deployment"
+  },
+  {
+   "printed": "0.003",
+   "value": 0.0034144240153565868,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "sd(nll) where arch=cbramod,role=reference,probability=deployment"
+  },
+  {
+   "printed": "0.126",
+   "value": 0.12641475862340013,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "mean(ece_10bin) where arch=cbramod,role=reference,probability=temperature"
+  },
+  {
+   "printed": "0.011",
+   "value": 0.010716309821201881,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "sd(ece_10bin) where arch=cbramod,role=reference,probability=temperature"
+  },
+  {
+   "printed": "0.126",
+   "value": 0.12641475862340013,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "mean(ece_10bin) where arch=cbramod,role=reference,probability=deployment"
+  },
+  {
+   "printed": "0.011",
+   "value": 0.010716309821201881,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "sd(ece_10bin) where arch=cbramod,role=reference,probability=deployment"
+  },
+  {
+   "printed": "0.599",
+   "value": 0.5994231364856495,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "mean(auroc) where arch=eegnet,role=selected,probability=raw"
+  },
+  {
+   "printed": "0.014",
+   "value": 0.01401600516610991,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "sd(auroc) where arch=eegnet,role=selected,probability=raw"
+  },
+  {
+   "printed": "0.601",
+   "value": 0.6007151696107005,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "mean(participant_macro_auroc) where arch=eegnet,role=selected,probability=raw"
+  },
+  {
+   "printed": "0.015",
+   "value": 0.015446841180281739,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "sd(participant_macro_auroc) where arch=eegnet,role=selected,probability=raw"
+  },
+  {
+   "printed": "0.571",
+   "value": 0.5705567313648565,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "mean(balanced_accuracy) where arch=eegnet,role=selected,probability=raw"
+  },
+  {
+   "printed": "0.010",
+   "value": 0.00974438263198656,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "sd(balanced_accuracy) where arch=eegnet,role=selected,probability=raw"
+  },
+  {
+   "printed": "0.571",
+   "value": 0.5705567313648565,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "mean(balanced_accuracy) where arch=eegnet,role=selected,probability=temperature"
+  },
+  {
+   "printed": "0.010",
+   "value": 0.00974438263198656,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "sd(balanced_accuracy) where arch=eegnet,role=selected,probability=temperature"
+  },
+  {
+   "printed": "0.522",
+   "value": 0.5217726185559914,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "mean(balanced_accuracy) where arch=eegnet,role=selected,probability=deployment"
+  },
+  {
+   "printed": "0.010",
+   "value": 0.009927673943735272,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "sd(balanced_accuracy) where arch=eegnet,role=selected,probability=deployment"
+  },
+  {
+   "printed": "0.242",
+   "value": 0.2417440023202277,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "mean(brier) where arch=eegnet,role=selected,probability=raw"
+  },
+  {
+   "printed": "0.006",
+   "value": 0.005683038405910361,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "sd(brier) where arch=eegnet,role=selected,probability=raw"
+  },
+  {
+   "printed": "0.240",
+   "value": 0.2404338259811573,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "mean(brier) where arch=eegnet,role=selected,probability=temperature"
+  },
+  {
+   "printed": "0.004",
+   "value": 0.003553638940189938,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "sd(brier) where arch=eegnet,role=selected,probability=temperature"
+  },
+  {
+   "printed": "0.223",
+   "value": 0.22270890532429935,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "mean(brier) where arch=eegnet,role=selected,probability=deployment"
+  },
+  {
+   "printed": "0.002",
+   "value": 0.0024899439319759978,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "sd(brier) where arch=eegnet,role=selected,probability=deployment"
+  },
+  {
+   "printed": "0.676",
+   "value": 0.6761616386397458,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "mean(nll) where arch=eegnet,role=selected,probability=temperature"
+  },
+  {
+   "printed": "0.008",
+   "value": 0.007951176802872321,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "sd(nll) where arch=eegnet,role=selected,probability=temperature"
+  },
+  {
+   "printed": "0.638",
+   "value": 0.6379766725739718,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "mean(nll) where arch=eegnet,role=selected,probability=deployment"
+  },
+  {
+   "printed": "0.006",
+   "value": 0.005775104010559972,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "sd(nll) where arch=eegnet,role=selected,probability=deployment"
+  },
+  {
+   "printed": "0.135",
+   "value": 0.1353561322183292,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "mean(ece_10bin) where arch=eegnet,role=selected,probability=temperature"
+  },
+  {
+   "printed": "0.007",
+   "value": 0.006887987034547381,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "sd(ece_10bin) where arch=eegnet,role=selected,probability=temperature"
+  },
+  {
+   "printed": "0.022",
+   "value": 0.02187448948927207,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "mean(ece_10bin) where arch=eegnet,role=selected,probability=deployment"
+  },
+  {
+   "printed": "0.004",
+   "value": 0.004337021081656703,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_model.csv",
+   "selector": "sd(ece_10bin) where arch=eegnet,role=selected,probability=deployment"
+  },
+  {
+   "printed": "0.547",
+   "value": 0.5472555831265508,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_participant.csv",
+   "selector": "mean(auroc) where probability=raw,arch=cbramod,role=reference,participant=s02"
+  },
+  {
+   "printed": "0.537",
+   "value": 0.5366749379652606,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_participant.csv",
+   "selector": "mean(balanced_accuracy) where probability=raw,arch=cbramod,role=reference,participant=s02"
+  },
+  {
+   "printed": "0.531",
+   "value": 0.5306007326007325,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_participant.csv",
+   "selector": "mean(auroc) where probability=raw,arch=cbramod,role=reference,participant=s08"
+  },
+  {
+   "printed": "0.511",
+   "value": 0.5108424908424909,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_participant.csv",
+   "selector": "mean(balanced_accuracy) where probability=raw,arch=cbramod,role=reference,participant=s08"
+  },
+  {
+   "printed": "0.619",
+   "value": 0.6192626579731144,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_participant.csv",
+   "selector": "mean(auroc) where probability=raw,arch=cbramod,role=reference,participant=s09"
+  },
+  {
+   "printed": "0.589",
+   "value": 0.5886118489897771,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_participant.csv",
+   "selector": "mean(balanced_accuracy) where probability=raw,arch=cbramod,role=reference,participant=s09"
+  },
+  {
+   "printed": "0.602",
+   "value": 0.6024377171215881,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_participant.csv",
+   "selector": "mean(auroc) where probability=raw,arch=cbramod,role=selected,participant=s02"
+  },
+  {
+   "printed": "0.536",
+   "value": 0.5363870967741936,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_participant.csv",
+   "selector": "mean(balanced_accuracy) where probability=raw,arch=cbramod,role=selected,participant=s02"
+  },
+  {
+   "printed": "0.520",
+   "value": 0.5201611721611721,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_participant.csv",
+   "selector": "mean(auroc) where probability=raw,arch=cbramod,role=selected,participant=s08"
+  },
+  {
+   "printed": "0.501",
+   "value": 0.5012124542124543,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_participant.csv",
+   "selector": "mean(balanced_accuracy) where probability=raw,arch=cbramod,role=selected,participant=s08"
+  },
+  {
+   "printed": "0.565",
+   "value": 0.5646864686468647,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_participant.csv",
+   "selector": "mean(auroc) where probability=raw,arch=cbramod,role=selected,participant=s09"
+  },
+  {
+   "printed": "0.541",
+   "value": 0.5407550511148675,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_participant.csv",
+   "selector": "mean(balanced_accuracy) where probability=raw,arch=cbramod,role=selected,participant=s09"
+  },
+  {
+   "printed": "0.598",
+   "value": 0.5975861042183622,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_participant.csv",
+   "selector": "mean(auroc) where probability=raw,arch=eegnet,role=selected,participant=s02"
+  },
+  {
+   "printed": "0.563",
+   "value": 0.5634044665012408,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_participant.csv",
+   "selector": "mean(balanced_accuracy) where probability=raw,arch=eegnet,role=selected,participant=s02"
+  },
+  {
+   "printed": "0.569",
+   "value": 0.5693223443223443,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_participant.csv",
+   "selector": "mean(auroc) where probability=raw,arch=eegnet,role=selected,participant=s08"
+  },
+  {
+   "printed": "0.544",
+   "value": 0.5437875457875457,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_participant.csv",
+   "selector": "mean(balanced_accuracy) where probability=raw,arch=eegnet,role=selected,participant=s08"
+  },
+  {
+   "printed": "0.635",
+   "value": 0.6352370602913949,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_participant.csv",
+   "selector": "mean(auroc) where probability=raw,arch=eegnet,role=selected,participant=s09"
+  },
+  {
+   "printed": "0.597",
+   "value": 0.5967016823633584,
+   "source": "reports/decoder_improvement/results/test/test_metrics_per_participant.csv",
+   "selector": "mean(balanced_accuracy) where probability=raw,arch=eegnet,role=selected,participant=s09"
+  },
+  {
+   "printed": "-0.0033",
+   "value": -0.0032778719235909692,
+   "source": "reports/decoder_improvement/results/test/test_paired_differences.csv",
+   "selector": "mean(selected_minus_reference_auroc) where arch=cbramod"
+  }
+ ]
+}

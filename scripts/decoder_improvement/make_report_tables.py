@@ -29,7 +29,7 @@ class Audit:
 
     def v(self, value, source, selector, fmt="{:.3f}"):
         s = fmt.format(value)
-        self.items.append({"printed": s, "value": float(value), "source": source, "selector": selector})
+        self.items.append({"printed": s, "fmt": fmt, "value": float(value), "source": source, "selector": selector})
         return s
 
 
