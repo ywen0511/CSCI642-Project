@@ -93,7 +93,13 @@ def main():
     if rel is None:
         sh("gh", "release", "create", a.tag, "--repo", REPO, "--draft", "--target", a.target, "--title", a.title,
            "--notes-file", a.notes)
-        rel = find_release(a.tag)
+        for _ in range(20):  # the release list is eventually consistent right after creation
+            rel = find_release(a.tag)
+            if rel:
+                break
+            time.sleep(15)
+        if rel is None:
+            raise SystemExit(f"draft {a.tag} created but not listed")
         log(a.ledger, tag=a.tag, event="draft_created", release_id=rel["id"])
     elif not rel["draft"]:
         remote = {x["name"]: x for x in assets(rel["id"])}
