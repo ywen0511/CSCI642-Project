@@ -1,0 +1,324 @@
+{
+ "schema": "csci642-external-inputs/v1",
+ "dataset": {
+  "name": "ErrP-HRI",
+  "repository": "https://github.com/stefan-ehrlich/dataset-ErrP-HRI",
+  "revision": "4bc3e52469934aa0551a2261a6e4e899d156c28f",
+  "archive_url": "https://codeload.github.com/stefan-ehrlich/dataset-ErrP-HRI/tar.gz/4bc3e52469934aa0551a2261a6e4e899d156c28f",
+  "target_dir": "data/raw/dataset-ErrP-HRI",
+  "license": "none declared in the repository (GitHub API license: null); not redistributed by this project",
+  "files": [
+   {
+    "path": "cursor/s02_cursor.set",
+    "bytes": 5324816,
+    "sha256": "8dbac7e2510611ebbc3eecc9487288348ab7d9bf0350c6675ae03965380153e7",
+    "used": false
+   },
+   {
+    "path": "cursor/s02_cursor.fdt",
+    "bytes": 51098160,
+    "sha256": "301b396459c1ccdb8f370bc96adebf1c914bbf501f7559491beb66625c32d60a",
+    "used": false
+   },
+   {
+    "path": "cursor/s03_cursor.set",
+    "bytes": 6003120,
+    "sha256": "59a934fabaee867eb3c3a4b2f5f90ba33a792415d8b4780c6f8ecbd6f4421977",
+    "used": false
+   },
+   {
+    "path": "cursor/s03_cursor.fdt",
+    "bytes": 61272600,
+    "sha256": "f8090be36d136493f1fbde6d030ca3c3db10ac45c6bd83e3a945419b0e0725ae",
+    "used": false
+   },
+   {
+    "path": "cursor/s04_cursor.set",
+    "bytes": 5522704,
+    "sha256": "05571d2f1fc4dd7649d1ee0c1e1a840176e2ac69155eb90e92d031d108919fc3",
+    "used": false
+   },
+   {
+    "path": "cursor/s04_cursor.fdt",
+    "bytes": 54067200,
+    "sha256": "81c8ac0468a346613a22420ce61844632906a0f57354dff75200ba9a5950a29e",
+    "used": false
+   },
+   {
+    "path": "cursor/s05_cursor.set",
+    "bytes": 5523712,
+    "sha256": "669273a2e286b83abfeff96c0a4b1ed825492ecef17a6b73efb2f340e1f10798",
+    "used": false
+   },
+   {
+    "path": "cursor/s05_cursor.fdt",
+    "bytes": 54082560,
+    "sha256": "cb1a73b4e7a76ef01ba7848a0ff9379eb9d74a843d49abc6499ef5f84c7a5bc5",
+    "used": false
+   },
+   {
+    "path": "cursor/s06_cursor.set",
+    "bytes": 5211112,
+    "sha256": "5a5291e11b92b2e8ef7db0ee5b3525f0dd495881eabd24fcd81b9f63532c61b2",
+    "used": false
+   },
+   {
+    "path": "cursor/s06_cursor.fdt",
+    "bytes": 49393200,
+    "sha256": "a9476dc2f501af0eea434b16d02657ab6ff8ce2cffb6868e255c4b15d9edf8c3",
+    "used": false
+   },
+   {
+    "path": "cursor/s07_cursor.set",
+    "bytes": 5681440,
+    "sha256": "04ba218598fb423f3134db9494cf6f74396c191d8d9c69a2298a611c2236d406",
+    "used": false
+   },
+   {
+    "path": "cursor/s07_cursor.fdt",
+    "bytes": 56448000,
+    "sha256": "dab4568922f82e80004780966fe7aae8a26fdf822172be552d7ab4fd94b4289a",
+    "used": false
+   },
+   {
+    "path": "cursor/s08_cursor.set",
+    "bytes": 5449408,
+    "sha256": "e9a19c992979f0c08540cd3ec4377cff0f202bea408c592efb3ec217034ea509",
+    "used": false
+   },
+   {
+    "path": "cursor/s08_cursor.fdt",
+    "bytes": 52965960,
+    "sha256": "da6b433ce672ebc7859728a13abe101450b4df8f78100d80ba2309c0302c3c8f",
+    "used": false
+   },
+   {
+    "path": "cursor/s09_cursor.set",
+    "bytes": 5520624,
+    "sha256": "a1f8364292e1b99e2eaab08d83f88aad8e7e6493c67b16eb727287043a8dc68b",
+    "used": false
+   },
+   {
+    "path": "cursor/s09_cursor.fdt",
+    "bytes": 54035040,
+    "sha256": "78667bd9dfd530f89ef1b7d64a74baec8d7ee8ce55cd087078427dceaf3eed57",
+    "used": false
+   },
+   {
+    "path": "cursor/s10_cursor.set",
+    "bytes": 5285848,
+    "sha256": "d399b0d3f9aeb844c004ac6623e133dcafc591451fbe2c5d8e76a18b39518b0e",
+    "used": false
+   },
+   {
+    "path": "cursor/s10_cursor.fdt",
+    "bytes": 50516040,
+    "sha256": "3c7ee28ae38cd7cc4f08a8f0a4f949ad98cb22b28bd29cb2cbbf387fe46bd82f",
+    "used": false
+   },
+   {
+    "path": "cursor/s11_cursor.set",
+    "bytes": 5518360,
+    "sha256": "4c5e665362fc253610ed50bd3ca3bd16f5e35978c6ce58290fd3c78c63dcd85f",
+    "used": false
+   },
+   {
+    "path": "cursor/s11_cursor.fdt",
+    "bytes": 54002760,
+    "sha256": "434555ca798d494943ec8eceaa091075743411bb341299839b5b9e1fc322f6f7",
+    "used": false
+   },
+   {
+    "path": "cursor/s13_cursor.set",
+    "bytes": 5228888,
+    "sha256": "2112bd66d3fe36da0ff22e0c6255feea67911f473b994a44d48fddf32ea3f53a",
+    "used": false
+   },
+   {
+    "path": "cursor/s13_cursor.fdt",
+    "bytes": 49658880,
+    "sha256": "85b8a300c2c94db5156b4bbbc1d7a6ada7a78d4a12bc34a2ca593bba55a682a2",
+    "used": false
+   },
+   {
+    "path": "robot/s02_robot.set",
+    "bytes": 5514600,
+    "sha256": "e1c25663191a902cd909c9f35dbe1d7dbd4f5365c1bfb21d71d74757499beaef",
+    "used": true
+   },
+   {
+    "path": "robot/s02_robot.fdt",
+    "bytes": 53944320,
+    "sha256": "76670a6af9434f0822655df6f727c0bc7f99dc35852bb7a61b5403b5af237075",
+    "used": true
+   },
+   {
+    "path": "robot/s03_robot.set",
+    "bytes": 5516936,
+    "sha256": "f0f9ee40c934853c68639de5654a70ffcf97988e1847a661f2df163fea5b7ccb",
+    "used": true
+   },
+   {
+    "path": "robot/s03_robot.fdt",
+    "bytes": 53981280,
+    "sha256": "d6d93630fef6e2043193626205d58c5f2dbdbfd1e8d67dc9cadc0355b2ac02ab",
+    "used": true
+   },
+   {
+    "path": "robot/s04_robot.set",
+    "bytes": 5341752,
+    "sha256": "c18e74c3b13d70505610939daf17c64ef156d5d284a27daabc91ce82c6336393",
+    "used": true
+   },
+   {
+    "path": "robot/s04_robot.fdt",
+    "bytes": 51351600,
+    "sha256": "53d254aaf478f1ba220a7d0ce15ad7c31077b0c1c27eda478c94a3656d97af9a",
+    "used": true
+   },
+   {
+    "path": "robot/s05_robot.set",
+    "bytes": 5475240,
+    "sha256": "67acec1ba69ecf62c7bfc0fe85e608a1a8575efb47765a3696fa48e57c896ca7",
+    "used": true
+   },
+   {
+    "path": "robot/s05_robot.fdt",
+    "bytes": 53356080,
+    "sha256": "d80a0b934faf6bf4881014e0369acfa495ad5f28097316225406ee0590077399",
+    "used": true
+   },
+   {
+    "path": "robot/s06_robot.set",
+    "bytes": 5275632,
+    "sha256": "b06fda03eba7ffbb435f46cec403a79c83147df26d7553eaf708a814f2a1199c",
+    "used": true
+   },
+   {
+    "path": "robot/s06_robot.fdt",
+    "bytes": 50362440,
+    "sha256": "b268075ef6903ff9b41dc41321d3298aee0657216915ba0024b899dfffeaf1e0",
+    "used": true
+   },
+   {
+    "path": "robot/s07_robot.set",
+    "bytes": 5229288,
+    "sha256": "a24c9d2fc89349917bc620550acbd6f7c0b0793fc110b113d2c3b4248f55011e",
+    "used": true
+   },
+   {
+    "path": "robot/s07_robot.fdt",
+    "bytes": 49665120,
+    "sha256": "0d300e67320693b47cd6624bf490a68eff34ec576e84394ccb2433d037ea2de2",
+    "used": true
+   },
+   {
+    "path": "robot/s08_robot.set",
+    "bytes": 5308176,
+    "sha256": "e72dc6e78e6817ea22d0412f800213385650513b4f1f13e7f66aeada3205094d",
+    "used": true
+   },
+   {
+    "path": "robot/s08_robot.fdt",
+    "bytes": 50849280,
+    "sha256": "f70eaf1665922fcc80f4040d7038b6d354a77e6b2b9236bcdf3f5565accdd0aa",
+    "used": true
+   },
+   {
+    "path": "robot/s09_robot.set",
+    "bytes": 6075480,
+    "sha256": "c27b49f7a9dfb0ebe77e8a0b2fcb0a565e613cb90e3a6a06d587afc8434e8022",
+    "used": true
+   },
+   {
+    "path": "robot/s09_robot.fdt",
+    "bytes": 62360160,
+    "sha256": "6e6e3f1faad735d3fd319509a3314d5b4b3343746144470f932c64a07c2604d7",
+    "used": true
+   },
+   {
+    "path": "robot/s10_robot.set",
+    "bytes": 5745928,
+    "sha256": "35e2a376784eba872fac7c046b3210cf88b0439d96cdd75d615ff7d8a3a43857",
+    "used": true
+   },
+   {
+    "path": "robot/s10_robot.fdt",
+    "bytes": 57417240,
+    "sha256": "227aa67a0d07b63fc43935dc59550908e71cb253212fa0fd781d5c4d9eed0250",
+    "used": true
+   },
+   {
+    "path": "robot/s11_robot.set",
+    "bytes": 5595040,
+    "sha256": "de183e7bc31cffbccec95245bb1bcaf19837ebcfc7fea093cab3fc6bef1b6092",
+    "used": true
+   },
+   {
+    "path": "robot/s11_robot.fdt",
+    "bytes": 55153200,
+    "sha256": "e03b2be19676fb5fdf05d2b536695a5dac7cdbbf5236b0ec313edb3407c7d8b2",
+    "used": true
+   },
+   {
+    "path": "robot/s12_cursor.set",
+    "bytes": 5095928,
+    "sha256": "700f07e5cb3fd63db660445118d6aeda55c903cf62f4c800244257767f358876",
+    "used": false
+   },
+   {
+    "path": "robot/s12_cursor.fdt",
+    "bytes": 47663640,
+    "sha256": "43a7485d181a3e22138dc8c045c51e0a98c1a88519bc869b50012731b46efc96",
+    "used": false
+   },
+   {
+    "path": "robot/s12_robot.set",
+    "bytes": 5391392,
+    "sha256": "823424b192fe8ebb81268d90e74802dc677a3466febae46ac5aa2ef49bfc3b5f",
+    "used": true
+   },
+   {
+    "path": "robot/s12_robot.fdt",
+    "bytes": 52098120,
+    "sha256": "78b3670108c15804f4c80e5de7459eee9d03f731d01f1523adc9582e333284d1",
+    "used": true
+   },
+   {
+    "path": "robot/s13_robot.set",
+    "bytes": 5177656,
+    "sha256": "ecf21040d528c691328231b0bc5a6ac102dfcf403bff54dfe016752983fa4446",
+    "used": true
+   },
+   {
+    "path": "robot/s13_robot.fdt",
+    "bytes": 48890880,
+    "sha256": "8ef2f54580058ec007ddf0e78c8fcff2384a500082481c0d0ca2a2f96da38d9c",
+    "used": true
+   },
+   {
+    "path": "documentation_dataset-ErrP-HRI.pdf",
+    "bytes": 666049,
+    "sha256": "d76858f559d959e13f4fb617fbbf6d76fe3640bba1db123e388572dd7b893a93",
+    "used": false
+   }
+  ],
+  "used_by_study": "robot/*.set + .fdt (s12_cursor.set in robot/ is a cursor session and is excluded by content)",
+  "checksum_source": "reports/data/raw_files.csv (original acquisition, 2026-11-01)"
+ },
+ "weights": {
+  "name": "CBraMod pretrained backbone",
+  "repository": "https://huggingface.co/weighting666/CBraMod",
+  "revision": "500543c7e30bda1b22bfd51a49301b238dee21fd",
+  "file": "pretrained_weights.pth",
+  "url": "https://huggingface.co/weighting666/CBraMod/resolve/500543c7e30bda1b22bfd51a49301b238dee21fd/pretrained_weights.pth",
+  "bytes": 19775842,
+  "sha256": "0792cb808c14e6b7a2bb2ce1dff379bc47bc54c49a779825bdfeb33bf8157178",
+  "target": "weights/CBraMod/pretrained_weights.pth",
+  "env": "ERRP_WEIGHTS_DIR=<DIR>/weights",
+  "license": "see the CBraMod repository (MIT for code); weights are obtained from the official source, not redistributed"
+ },
+ "derived": {
+  "note": "prepared epochs are regenerated deterministically with scripts/prepare_data.py and configs/decoder_improvement/preprocessing_<band>.yaml; expected SHA-256 of each prepared array is listed in the decoder study's data lineage file"
+ }
+}
