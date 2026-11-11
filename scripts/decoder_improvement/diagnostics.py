@@ -72,7 +72,7 @@ def main():
           identical_trials_labels_order_across_bands=bool(same), inner_folds_disjoint=inner_ok,
           each_training_participant_held_out_once=covered == sorted(osplit["train"]))
     # historical prep_v1 equality for the 1-20 band (if available next to the prep root)
-    hist = Path(a.prep_root).parents[1] / "prep_v1"
+    hist = Path(a.prep_root).parent / "prep_v1"
     if (hist / "epochs_256hz_uV.npy").exists():
         eq = {v: sha256_file(hist / f) == sha256_file(ref.dir / f) for v, f in
               (("eeg256", "epochs_256hz_uV.npy"), ("patch200", "epochs_200hz_patches_uV.npy"), ("ids", "epoch_trial_ids.npy"))}
