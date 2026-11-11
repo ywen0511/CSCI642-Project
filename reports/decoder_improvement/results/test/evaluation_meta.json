@@ -1,0 +1,5 @@
+{
+ "calibration_sha256": "e4ccce2fde4c8626d0e437bd1d7af37b93241e5651023856e09aed00444b49f3",
+ "n_models": 15,
+ "note": "single batch evaluation of all predeclared final models"
+}

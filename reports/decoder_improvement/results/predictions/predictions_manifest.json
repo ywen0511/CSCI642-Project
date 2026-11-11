@@ -1,0 +1,28 @@
+{
+ "schema": "csci642-dimp-predictions/v1",
+ "files": {
+  "dimp_validation_predictions.csv": {
+   "sha256": "d7160118ee5dc143417926ad4ba0f557009af1826b9e1b4e7d54e216330314c3",
+   "bytes": 7162497,
+   "rows": 14385
+  },
+  "dimp_test_predictions.csv": {
+   "sha256": "c391aa3a79d6d9170467309e75e8005320e26238300f30a6c2b674cb23da0b7d",
+   "bytes": 10544304,
+   "rows": 21435
+  },
+  "vnext_validation_predictions.csv": {
+   "sha256": "9daca82e4264e491ee7b8e7575d310dcc36cc76e9fd9dcf147524c2b50821eab",
+   "bytes": 598480,
+   "rows": 1918
+  },
+  "vnext_test_predictions.csv": {
+   "sha256": "32e9da11c6e3064c0840cd56b66130e2e6f2f579ea9dfff8237d671ef1d87003",
+   "bytes": 874442,
+   "rows": 2858
+  }
+ },
+ "calibration_sha256": "e4ccce2fde4c8626d0e437bd1d7af37b93241e5651023856e09aed00444b49f3",
+ "p_error": "selected candidates: selected deployment calibration; references: temperature",
+ "validation_note": "validation rows are calibration-development outputs (s11/s13 were used to fit calibrators)"
+}
