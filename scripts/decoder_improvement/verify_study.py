@@ -257,7 +257,10 @@ def cmd_tables(a):
                 worst = max(worst, abs(mb["pooled"][k] - row[k]))
             worst = max(worst, abs(mb["participant_macro_auroc"] - row["participant_macro_auroc"]))
     rep["test_metrics_max_abs_diff"] = worst
-    if worst > 1e-9:
+    # exported probabilities carry 10 significant digits (float_format %.10g), so metrics recomputed from the
+    # exported tables can differ from the full-precision originals by ~1e-10
+    rep["test_metrics_tolerance"] = 1e-8
+    if worst > 1e-8:
         rep["problems"].append(f"test metrics differ by {worst}")
     # (2) CV selection scores from downloaded inner-validation predictions
     fits = find_fits(a.extract)
