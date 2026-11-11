@@ -1,0 +1,7 @@
+{
+ "stage": "B",
+ "skipped": true,
+ "reason": "Stage A winner cb_flat_frozen has a frozen backbone (handoff 7.3: skip with recorded reason); no backbone learning rate to refine",
+ "parent": "cb_flat_frozen",
+ "new_fits": 0
+}
