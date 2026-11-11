@@ -7,3 +7,11 @@
 {"utc": "2026-11-11T07:45:22.005220+00:00", "tag": "decoder-v1-smoke-20261111-0869c01", "event": "upload", "asset": "evidence.tar.part-01", "rc": 0, "round": 1, "err": ""}
 {"utc": "2026-11-11T07:45:23.595844+00:00", "event": "roundtrip", "tag": "decoder-v1-smoke-20261111-0869c01", "release_id": 441367600, "n_assets": 6, "digest_checked": 6, "problems": []}
 {"utc": "2026-11-11T07:45:26.108248+00:00", "tag": "decoder-v1-smoke-20261111-0869c01", "event": "published"}
+{"utc": "2026-11-11T07:52:52.558641+00:00", "tag": "rl-v2-recovery-final-20261111-25bb0f4", "event": "upload", "asset": "shared_evidence.tar.gz", "rc": 0, "round": 1, "err": ""}
+{"utc": "2026-11-11T07:52:56.160809+00:00", "tag": "rl-v2-recovery-final-20261111-25bb0f4", "event": "upload", "asset": "SHA256SUMS", "rc": 0, "round": 1, "err": ""}
+{"utc": "2026-11-11T07:53:02.473764+00:00", "tag": "rl-v2-recovery-final-20261111-25bb0f4", "event": "upload", "asset": "payload_manifest.json", "rc": 0, "round": 1, "err": ""}
+{"utc": "2026-11-11T07:53:08.326663+00:00", "tag": "rl-v2-recovery-final-20261111-25bb0f4", "event": "upload", "asset": "original_package_manifest.json", "rc": 0, "round": 1, "err": ""}
+{"utc": "2026-11-11T07:53:20.675794+00:00", "tag": "rl-v2-recovery-final-20261111-25bb0f4", "event": "upload", "asset": "ideal_shared_s3.tar.gz.part-04", "rc": 0, "round": 1, "err": ""}
+{"utc": "2026-11-11T07:53:33.117208+00:00", "tag": "rl-v2-recovery-final-20261111-25bb0f4", "event": "upload", "asset": "sparse_shared_s1.tar.gz.part-04", "rc": 0, "round": 1, "err": ""}
+{"utc": "2026-11-11T07:53:51.822846+00:00", "tag": "rl-v2-recovery-final-20261111-25bb0f4", "event": "upload", "asset": "cbramod_s08_s1.tar.gz.part-04", "rc": 0, "round": 1, "err": ""}
+{"utc": "2026-11-11T07:54:03.822486+00:00", "tag": "rl-v2-recovery-final-20261111-25bb0f4", "event": "upload", "asset": "ideal_shared_s2.tar.gz.part-04", "rc": 0, "round": 1, "err": ""}

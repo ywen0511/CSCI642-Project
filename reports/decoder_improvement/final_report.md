@@ -143,4 +143,23 @@ unchanged.
 
 ## 12. Artifacts, reproduction and verification
 
-ARTIFACTS_PLACEHOLDER
+| Release | content |
+|---|---|
+| [`decoder-v1-smoke-20261111-0869c01`](https://github.com/ywen0511/CSCI642-Project/releases/tag/decoder-v1-smoke-20261111-0869c01) | smoke/preflight: diagnostic gate and its small fits, acquisition test, environment lock |
+| [`decoder-v1-cv-a-20261111-6baf061`](https://github.com/ywen0511/CSCI642-Project/releases/tag/decoder-v1-cv-a-20261111-6baf061) | CV fits, Stage A (63 fits, all checkpoints) |
+| [`decoder-v1-cv-cde-20261111-fb51285`](https://github.com/ywen0511/CSCI642-Project/releases/tag/decoder-v1-cv-cde-20261111-fb51285) | CV fits, Stages C/D/E new fits (90, all checkpoints) |
+| [`decoder-v1-cv-f-20261111-026103a`](https://github.com/ywen0511/CSCI642-Project/releases/tag/decoder-v1-cv-f-20261111-026103a) | CV fits, Stage F new fits (18, all checkpoints) |
+| [`decoder-v1-final-20261111-f8031ec`](https://github.com/ywen0511/CSCI642-Project/releases/tag/decoder-v1-final-20261111-f8031ec) | 15 final refits (all checkpoints), calibration, all predictions, vnext feedback tables, test evaluation, reports, reproduction bundle |
+| [`decoder-v1-verification-20261111`](https://github.com/ywen0511/CSCI642-Project/releases/tag/decoder-v1-verification-20261111) | fresh-download verification reports for all study and recovery Releases (published after the payloads were verified) |
+| [`rl-v2-recovery-final-20261111-25bb0f4`](https://github.com/ywen0511/CSCI642-Project/releases/tag/rl-v2-recovery-final-20261111-25bb0f4) | historical recovery: RL v2 final suite, complete archives with every periodic snapshot |
+| [`rl-v2-recovery-w010-20261111-cfe0305`](https://github.com/ywen0511/CSCI642-Project/releases/tag/rl-v2-recovery-w010-20261111-cfe0305) | historical recovery: RL v2 validation w010, complete archives with every periodic snapshot |
+
+Index with every asset, size and SHA-256: [`artifact_index.md`](artifact_index.md) (machine-readable
+`artifact_index.json`). Reproduction: [`REPRODUCE.md`](REPRODUCE.md). Data availability (raw EEG and pretrained
+weights are external, pinned and fetched by `scripts/decoder_improvement/acquire_inputs.py`):
+[`DATA_AVAILABILITY.md`](DATA_AVAILABILITY.md). Verification coverage and results: [`verification.md`](verification.md).
+
+Source identities: every fit records the commit it ran on and the SHA-256 of its training files (identical for
+all 186 fits); the final Release tag points to `f8031ec`, the commit holding the frozen recipes and the calibration
+decision committed before test evaluation. Delivery tools (packaging, upload, verification) were committed later on
+the same branch; their commits are recorded separately in the verification reports.
