@@ -1,27 +1,38 @@
 {
-  "schema": "csci642-decoder-improvement-status/v1",
-  "phase": "prepared_not_executed",
-  "prepared_date": "2026-11-10",
-  "historical_source_sha": "f6decb7a99628638743a4c126d83668149d5c5c8",
-  "planning_branch": "decoder-improvement-v1",
-  "execution_branch": null,
-  "historical_delivery": {
-    "state": "requires_fresh_audit",
-    "notes": "Prior remote observation suggested incomplete RL uploads; this handoff has not performed recovery."
+ "schema": "csci642-decoder-improvement-status/v1",
+ "phase": "stage_A_C_running",
+ "prepared_date": "2026-11-10",
+ "historical_source_sha": "f6decb7a99628638743a4c126d83668149d5c5c8",
+ "planning_branch": "decoder-improvement-v1",
+ "execution_branch": "decoder-improvement-v1-experiments",
+ "historical_delivery": {
+  "state": "recovery_in_progress",
+  "audit": "reports/decoder_improvement/historical_delivery_audit.json",
+  "recoverable_runs": 108,
+  "missing_runs": 0
+ },
+ "new_study": {
+  "state": "running",
+  "formal_fit_cap": 215,
+  "stages_planned": {
+   "A": 63,
+   "C": 36
   },
-  "new_study": {
-    "state": "not_started",
-    "formal_fit_cap": 215,
-    "planned_resolved": null,
-    "completed": 0,
-    "failed": 0,
-    "results": null
-  },
-  "publication": {
-    "planning_documents": "included_in_this_source_snapshot",
-    "experimental_releases": [],
-    "fresh_download_verified": false
-  },
-  "blockers": [],
-  "completion_claim": false
+  "completed": 0,
+  "failed": 0,
+  "results": null
+ },
+ "publication": {
+  "planning_documents": "included_in_this_source_snapshot",
+  "experimental_releases": [],
+  "fresh_download_verified": false
+ },
+ "blockers": [],
+ "completion_claim": false,
+ "updated_utc": "2026-11-11T06:28:00+00:00",
+ "preflight": {
+  "diagnostics": "passed",
+  "environment": "new env, exact historical lock (NCCL file fixed)",
+  "gpus": "gc175/gc176 A100 40GB"
+ }
 }

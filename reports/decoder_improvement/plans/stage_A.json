@@ -1,0 +1,4841 @@
+{
+ "stage": "A",
+ "study_sha": "76b1e53924ab7647",
+ "candidates": [
+  {
+   "candidate_id": "cb_flat_frozen",
+   "recipe_id": "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "frozen",
+    "backbone_lr": null,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fit_ids": [
+    "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv0__s42",
+    "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv0__s43",
+    "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv0__s44",
+    "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv1__s42",
+    "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv1__s43",
+    "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv1__s44",
+    "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv2__s42",
+    "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv2__s43",
+    "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv2__s44"
+   ]
+  },
+  {
+   "candidate_id": "cb_flat_last2",
+   "recipe_id": "cb-flat-last2-bb3e-5-hl5e-4-b1_20-wce-f3d625d9",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "last2",
+    "backbone_lr": 3e-05,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fit_ids": [
+    "cb-flat-last2-bb3e-5-hl5e-4-b1_20-wce-f3d625d9__cv0__s42",
+    "cb-flat-last2-bb3e-5-hl5e-4-b1_20-wce-f3d625d9__cv0__s43",
+    "cb-flat-last2-bb3e-5-hl5e-4-b1_20-wce-f3d625d9__cv0__s44",
+    "cb-flat-last2-bb3e-5-hl5e-4-b1_20-wce-f3d625d9__cv1__s42",
+    "cb-flat-last2-bb3e-5-hl5e-4-b1_20-wce-f3d625d9__cv1__s43",
+    "cb-flat-last2-bb3e-5-hl5e-4-b1_20-wce-f3d625d9__cv1__s44",
+    "cb-flat-last2-bb3e-5-hl5e-4-b1_20-wce-f3d625d9__cv2__s42",
+    "cb-flat-last2-bb3e-5-hl5e-4-b1_20-wce-f3d625d9__cv2__s43",
+    "cb-flat-last2-bb3e-5-hl5e-4-b1_20-wce-f3d625d9__cv2__s44"
+   ]
+  },
+  {
+   "candidate_id": "cb_flat_full",
+   "recipe_id": "cb-flat-full-bb3e-5-hl5e-4-b1_20-wce-7d86c93e",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "full",
+    "backbone_lr": 3e-05,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fit_ids": [
+    "cb-flat-full-bb3e-5-hl5e-4-b1_20-wce-7d86c93e__cv0__s42",
+    "cb-flat-full-bb3e-5-hl5e-4-b1_20-wce-7d86c93e__cv0__s43",
+    "cb-flat-full-bb3e-5-hl5e-4-b1_20-wce-7d86c93e__cv0__s44",
+    "cb-flat-full-bb3e-5-hl5e-4-b1_20-wce-7d86c93e__cv1__s42",
+    "cb-flat-full-bb3e-5-hl5e-4-b1_20-wce-7d86c93e__cv1__s43",
+    "cb-flat-full-bb3e-5-hl5e-4-b1_20-wce-7d86c93e__cv1__s44",
+    "cb-flat-full-bb3e-5-hl5e-4-b1_20-wce-7d86c93e__cv2__s42",
+    "cb-flat-full-bb3e-5-hl5e-4-b1_20-wce-7d86c93e__cv2__s43",
+    "cb-flat-full-bb3e-5-hl5e-4-b1_20-wce-7d86c93e__cv2__s44"
+   ]
+  },
+  {
+   "candidate_id": "cb_timepool_frozen",
+   "recipe_id": "cb-timepool-frozen-bbnone-hl5e-4-b1_20-wce-169ae37c",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "temporal_mean_linear",
+    "adaptation": "frozen",
+    "backbone_lr": null,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fit_ids": [
+    "cb-timepool-frozen-bbnone-hl5e-4-b1_20-wce-169ae37c__cv0__s42",
+    "cb-timepool-frozen-bbnone-hl5e-4-b1_20-wce-169ae37c__cv0__s43",
+    "cb-timepool-frozen-bbnone-hl5e-4-b1_20-wce-169ae37c__cv0__s44",
+    "cb-timepool-frozen-bbnone-hl5e-4-b1_20-wce-169ae37c__cv1__s42",
+    "cb-timepool-frozen-bbnone-hl5e-4-b1_20-wce-169ae37c__cv1__s43",
+    "cb-timepool-frozen-bbnone-hl5e-4-b1_20-wce-169ae37c__cv1__s44",
+    "cb-timepool-frozen-bbnone-hl5e-4-b1_20-wce-169ae37c__cv2__s42",
+    "cb-timepool-frozen-bbnone-hl5e-4-b1_20-wce-169ae37c__cv2__s43",
+    "cb-timepool-frozen-bbnone-hl5e-4-b1_20-wce-169ae37c__cv2__s44"
+   ]
+  },
+  {
+   "candidate_id": "cb_timepool_last2",
+   "recipe_id": "cb-timepool-last2-bb3e-5-hl5e-4-b1_20-wce-c152d7b3",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "temporal_mean_linear",
+    "adaptation": "last2",
+    "backbone_lr": 3e-05,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fit_ids": [
+    "cb-timepool-last2-bb3e-5-hl5e-4-b1_20-wce-c152d7b3__cv0__s42",
+    "cb-timepool-last2-bb3e-5-hl5e-4-b1_20-wce-c152d7b3__cv0__s43",
+    "cb-timepool-last2-bb3e-5-hl5e-4-b1_20-wce-c152d7b3__cv0__s44",
+    "cb-timepool-last2-bb3e-5-hl5e-4-b1_20-wce-c152d7b3__cv1__s42",
+    "cb-timepool-last2-bb3e-5-hl5e-4-b1_20-wce-c152d7b3__cv1__s43",
+    "cb-timepool-last2-bb3e-5-hl5e-4-b1_20-wce-c152d7b3__cv1__s44",
+    "cb-timepool-last2-bb3e-5-hl5e-4-b1_20-wce-c152d7b3__cv2__s42",
+    "cb-timepool-last2-bb3e-5-hl5e-4-b1_20-wce-c152d7b3__cv2__s43",
+    "cb-timepool-last2-bb3e-5-hl5e-4-b1_20-wce-c152d7b3__cv2__s44"
+   ]
+  },
+  {
+   "candidate_id": "cb_timepool_full",
+   "recipe_id": "cb-timepool-full-bb3e-5-hl5e-4-b1_20-wce-c2a5c99a",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "temporal_mean_linear",
+    "adaptation": "full",
+    "backbone_lr": 3e-05,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fit_ids": [
+    "cb-timepool-full-bb3e-5-hl5e-4-b1_20-wce-c2a5c99a__cv0__s42",
+    "cb-timepool-full-bb3e-5-hl5e-4-b1_20-wce-c2a5c99a__cv0__s43",
+    "cb-timepool-full-bb3e-5-hl5e-4-b1_20-wce-c2a5c99a__cv0__s44",
+    "cb-timepool-full-bb3e-5-hl5e-4-b1_20-wce-c2a5c99a__cv1__s42",
+    "cb-timepool-full-bb3e-5-hl5e-4-b1_20-wce-c2a5c99a__cv1__s43",
+    "cb-timepool-full-bb3e-5-hl5e-4-b1_20-wce-c2a5c99a__cv1__s44",
+    "cb-timepool-full-bb3e-5-hl5e-4-b1_20-wce-c2a5c99a__cv2__s42",
+    "cb-timepool-full-bb3e-5-hl5e-4-b1_20-wce-c2a5c99a__cv2__s43",
+    "cb-timepool-full-bb3e-5-hl5e-4-b1_20-wce-c2a5c99a__cv2__s44"
+   ]
+  },
+  {
+   "candidate_id": "cb_reference",
+   "recipe_id": "cb-flat-full-bb1e-4-hl5e-4-b1_20-wce-dd3052ca",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "full",
+    "backbone_lr": 0.0001,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fit_ids": [
+    "cb-flat-full-bb1e-4-hl5e-4-b1_20-wce-dd3052ca__cv0__s42",
+    "cb-flat-full-bb1e-4-hl5e-4-b1_20-wce-dd3052ca__cv0__s43",
+    "cb-flat-full-bb1e-4-hl5e-4-b1_20-wce-dd3052ca__cv0__s44",
+    "cb-flat-full-bb1e-4-hl5e-4-b1_20-wce-dd3052ca__cv1__s42",
+    "cb-flat-full-bb1e-4-hl5e-4-b1_20-wce-dd3052ca__cv1__s43",
+    "cb-flat-full-bb1e-4-hl5e-4-b1_20-wce-dd3052ca__cv1__s44",
+    "cb-flat-full-bb1e-4-hl5e-4-b1_20-wce-dd3052ca__cv2__s42",
+    "cb-flat-full-bb1e-4-hl5e-4-b1_20-wce-dd3052ca__cv2__s43",
+    "cb-flat-full-bb1e-4-hl5e-4-b1_20-wce-dd3052ca__cv2__s44"
+   ]
+  }
+ ],
+ "fits": [
+  {
+   "fit_id": "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv0__s42",
+   "identity_hash": "4beec40029aa8af7",
+   "identity": {
+    "recipe_hash": "4704a7e757b42056",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv0",
+    "fold_def": {
+     "train": [
+      "s04",
+      "s05",
+      "s07",
+      "s10",
+      "s12"
+     ],
+     "validation": [
+      "s03",
+      "s06"
+     ]
+    },
+    "seed": 42,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "frozen",
+    "backbone_lr": null,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv0",
+   "fold_def": {
+    "train": [
+     "s04",
+     "s05",
+     "s07",
+     "s10",
+     "s12"
+    ],
+    "validation": [
+     "s03",
+     "s06"
+    ]
+   },
+   "seed": 42,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv0__s43",
+   "identity_hash": "b683a6c84bda5b15",
+   "identity": {
+    "recipe_hash": "4704a7e757b42056",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv0",
+    "fold_def": {
+     "train": [
+      "s04",
+      "s05",
+      "s07",
+      "s10",
+      "s12"
+     ],
+     "validation": [
+      "s03",
+      "s06"
+     ]
+    },
+    "seed": 43,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "frozen",
+    "backbone_lr": null,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv0",
+   "fold_def": {
+    "train": [
+     "s04",
+     "s05",
+     "s07",
+     "s10",
+     "s12"
+    ],
+    "validation": [
+     "s03",
+     "s06"
+    ]
+   },
+   "seed": 43,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv0__s44",
+   "identity_hash": "bda86e7d7f9c3e9f",
+   "identity": {
+    "recipe_hash": "4704a7e757b42056",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv0",
+    "fold_def": {
+     "train": [
+      "s04",
+      "s05",
+      "s07",
+      "s10",
+      "s12"
+     ],
+     "validation": [
+      "s03",
+      "s06"
+     ]
+    },
+    "seed": 44,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "frozen",
+    "backbone_lr": null,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv0",
+   "fold_def": {
+    "train": [
+     "s04",
+     "s05",
+     "s07",
+     "s10",
+     "s12"
+    ],
+    "validation": [
+     "s03",
+     "s06"
+    ]
+   },
+   "seed": 44,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv1__s42",
+   "identity_hash": "8b00b902c6f76e1f",
+   "identity": {
+    "recipe_hash": "4704a7e757b42056",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv1",
+    "fold_def": {
+     "train": [
+      "s03",
+      "s05",
+      "s06",
+      "s07",
+      "s12"
+     ],
+     "validation": [
+      "s04",
+      "s10"
+     ]
+    },
+    "seed": 42,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "frozen",
+    "backbone_lr": null,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv1",
+   "fold_def": {
+    "train": [
+     "s03",
+     "s05",
+     "s06",
+     "s07",
+     "s12"
+    ],
+    "validation": [
+     "s04",
+     "s10"
+    ]
+   },
+   "seed": 42,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv1__s43",
+   "identity_hash": "56dff57846762a67",
+   "identity": {
+    "recipe_hash": "4704a7e757b42056",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv1",
+    "fold_def": {
+     "train": [
+      "s03",
+      "s05",
+      "s06",
+      "s07",
+      "s12"
+     ],
+     "validation": [
+      "s04",
+      "s10"
+     ]
+    },
+    "seed": 43,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "frozen",
+    "backbone_lr": null,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv1",
+   "fold_def": {
+    "train": [
+     "s03",
+     "s05",
+     "s06",
+     "s07",
+     "s12"
+    ],
+    "validation": [
+     "s04",
+     "s10"
+    ]
+   },
+   "seed": 43,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv1__s44",
+   "identity_hash": "cbd5ec52fac90996",
+   "identity": {
+    "recipe_hash": "4704a7e757b42056",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv1",
+    "fold_def": {
+     "train": [
+      "s03",
+      "s05",
+      "s06",
+      "s07",
+      "s12"
+     ],
+     "validation": [
+      "s04",
+      "s10"
+     ]
+    },
+    "seed": 44,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "frozen",
+    "backbone_lr": null,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv1",
+   "fold_def": {
+    "train": [
+     "s03",
+     "s05",
+     "s06",
+     "s07",
+     "s12"
+    ],
+    "validation": [
+     "s04",
+     "s10"
+    ]
+   },
+   "seed": 44,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv2__s42",
+   "identity_hash": "14e9c4b4f729ab69",
+   "identity": {
+    "recipe_hash": "4704a7e757b42056",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv2",
+    "fold_def": {
+     "train": [
+      "s03",
+      "s04",
+      "s06",
+      "s10"
+     ],
+     "validation": [
+      "s05",
+      "s07",
+      "s12"
+     ]
+    },
+    "seed": 42,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "frozen",
+    "backbone_lr": null,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv2",
+   "fold_def": {
+    "train": [
+     "s03",
+     "s04",
+     "s06",
+     "s10"
+    ],
+    "validation": [
+     "s05",
+     "s07",
+     "s12"
+    ]
+   },
+   "seed": 42,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv2__s43",
+   "identity_hash": "32e5e23766874902",
+   "identity": {
+    "recipe_hash": "4704a7e757b42056",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv2",
+    "fold_def": {
+     "train": [
+      "s03",
+      "s04",
+      "s06",
+      "s10"
+     ],
+     "validation": [
+      "s05",
+      "s07",
+      "s12"
+     ]
+    },
+    "seed": 43,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "frozen",
+    "backbone_lr": null,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv2",
+   "fold_def": {
+    "train": [
+     "s03",
+     "s04",
+     "s06",
+     "s10"
+    ],
+    "validation": [
+     "s05",
+     "s07",
+     "s12"
+    ]
+   },
+   "seed": 43,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv2__s44",
+   "identity_hash": "def93e02305d0d17",
+   "identity": {
+    "recipe_hash": "4704a7e757b42056",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv2",
+    "fold_def": {
+     "train": [
+      "s03",
+      "s04",
+      "s06",
+      "s10"
+     ],
+     "validation": [
+      "s05",
+      "s07",
+      "s12"
+     ]
+    },
+    "seed": 44,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "frozen",
+    "backbone_lr": null,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv2",
+   "fold_def": {
+    "train": [
+     "s03",
+     "s04",
+     "s06",
+     "s10"
+    ],
+    "validation": [
+     "s05",
+     "s07",
+     "s12"
+    ]
+   },
+   "seed": 44,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-flat-last2-bb3e-5-hl5e-4-b1_20-wce-f3d625d9__cv0__s42",
+   "identity_hash": "f2705eb99e72c318",
+   "identity": {
+    "recipe_hash": "f3d625d99730d544",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv0",
+    "fold_def": {
+     "train": [
+      "s04",
+      "s05",
+      "s07",
+      "s10",
+      "s12"
+     ],
+     "validation": [
+      "s03",
+      "s06"
+     ]
+    },
+    "seed": 42,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-flat-last2-bb3e-5-hl5e-4-b1_20-wce-f3d625d9",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "last2",
+    "backbone_lr": 3e-05,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv0",
+   "fold_def": {
+    "train": [
+     "s04",
+     "s05",
+     "s07",
+     "s10",
+     "s12"
+    ],
+    "validation": [
+     "s03",
+     "s06"
+    ]
+   },
+   "seed": 42,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-flat-last2-bb3e-5-hl5e-4-b1_20-wce-f3d625d9__cv0__s43",
+   "identity_hash": "cabba415b7b378e5",
+   "identity": {
+    "recipe_hash": "f3d625d99730d544",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv0",
+    "fold_def": {
+     "train": [
+      "s04",
+      "s05",
+      "s07",
+      "s10",
+      "s12"
+     ],
+     "validation": [
+      "s03",
+      "s06"
+     ]
+    },
+    "seed": 43,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-flat-last2-bb3e-5-hl5e-4-b1_20-wce-f3d625d9",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "last2",
+    "backbone_lr": 3e-05,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv0",
+   "fold_def": {
+    "train": [
+     "s04",
+     "s05",
+     "s07",
+     "s10",
+     "s12"
+    ],
+    "validation": [
+     "s03",
+     "s06"
+    ]
+   },
+   "seed": 43,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-flat-last2-bb3e-5-hl5e-4-b1_20-wce-f3d625d9__cv0__s44",
+   "identity_hash": "d20c51472fc0dd57",
+   "identity": {
+    "recipe_hash": "f3d625d99730d544",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv0",
+    "fold_def": {
+     "train": [
+      "s04",
+      "s05",
+      "s07",
+      "s10",
+      "s12"
+     ],
+     "validation": [
+      "s03",
+      "s06"
+     ]
+    },
+    "seed": 44,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-flat-last2-bb3e-5-hl5e-4-b1_20-wce-f3d625d9",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "last2",
+    "backbone_lr": 3e-05,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv0",
+   "fold_def": {
+    "train": [
+     "s04",
+     "s05",
+     "s07",
+     "s10",
+     "s12"
+    ],
+    "validation": [
+     "s03",
+     "s06"
+    ]
+   },
+   "seed": 44,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-flat-last2-bb3e-5-hl5e-4-b1_20-wce-f3d625d9__cv1__s42",
+   "identity_hash": "aa85ecde2466612f",
+   "identity": {
+    "recipe_hash": "f3d625d99730d544",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv1",
+    "fold_def": {
+     "train": [
+      "s03",
+      "s05",
+      "s06",
+      "s07",
+      "s12"
+     ],
+     "validation": [
+      "s04",
+      "s10"
+     ]
+    },
+    "seed": 42,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-flat-last2-bb3e-5-hl5e-4-b1_20-wce-f3d625d9",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "last2",
+    "backbone_lr": 3e-05,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv1",
+   "fold_def": {
+    "train": [
+     "s03",
+     "s05",
+     "s06",
+     "s07",
+     "s12"
+    ],
+    "validation": [
+     "s04",
+     "s10"
+    ]
+   },
+   "seed": 42,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-flat-last2-bb3e-5-hl5e-4-b1_20-wce-f3d625d9__cv1__s43",
+   "identity_hash": "ddbdf044f335663d",
+   "identity": {
+    "recipe_hash": "f3d625d99730d544",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv1",
+    "fold_def": {
+     "train": [
+      "s03",
+      "s05",
+      "s06",
+      "s07",
+      "s12"
+     ],
+     "validation": [
+      "s04",
+      "s10"
+     ]
+    },
+    "seed": 43,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-flat-last2-bb3e-5-hl5e-4-b1_20-wce-f3d625d9",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "last2",
+    "backbone_lr": 3e-05,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv1",
+   "fold_def": {
+    "train": [
+     "s03",
+     "s05",
+     "s06",
+     "s07",
+     "s12"
+    ],
+    "validation": [
+     "s04",
+     "s10"
+    ]
+   },
+   "seed": 43,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-flat-last2-bb3e-5-hl5e-4-b1_20-wce-f3d625d9__cv1__s44",
+   "identity_hash": "b7c1fcbd8efff242",
+   "identity": {
+    "recipe_hash": "f3d625d99730d544",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv1",
+    "fold_def": {
+     "train": [
+      "s03",
+      "s05",
+      "s06",
+      "s07",
+      "s12"
+     ],
+     "validation": [
+      "s04",
+      "s10"
+     ]
+    },
+    "seed": 44,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-flat-last2-bb3e-5-hl5e-4-b1_20-wce-f3d625d9",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "last2",
+    "backbone_lr": 3e-05,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv1",
+   "fold_def": {
+    "train": [
+     "s03",
+     "s05",
+     "s06",
+     "s07",
+     "s12"
+    ],
+    "validation": [
+     "s04",
+     "s10"
+    ]
+   },
+   "seed": 44,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-flat-last2-bb3e-5-hl5e-4-b1_20-wce-f3d625d9__cv2__s42",
+   "identity_hash": "b0ac2b7a362be663",
+   "identity": {
+    "recipe_hash": "f3d625d99730d544",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv2",
+    "fold_def": {
+     "train": [
+      "s03",
+      "s04",
+      "s06",
+      "s10"
+     ],
+     "validation": [
+      "s05",
+      "s07",
+      "s12"
+     ]
+    },
+    "seed": 42,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-flat-last2-bb3e-5-hl5e-4-b1_20-wce-f3d625d9",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "last2",
+    "backbone_lr": 3e-05,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv2",
+   "fold_def": {
+    "train": [
+     "s03",
+     "s04",
+     "s06",
+     "s10"
+    ],
+    "validation": [
+     "s05",
+     "s07",
+     "s12"
+    ]
+   },
+   "seed": 42,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-flat-last2-bb3e-5-hl5e-4-b1_20-wce-f3d625d9__cv2__s43",
+   "identity_hash": "5bd44acbd6f66182",
+   "identity": {
+    "recipe_hash": "f3d625d99730d544",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv2",
+    "fold_def": {
+     "train": [
+      "s03",
+      "s04",
+      "s06",
+      "s10"
+     ],
+     "validation": [
+      "s05",
+      "s07",
+      "s12"
+     ]
+    },
+    "seed": 43,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-flat-last2-bb3e-5-hl5e-4-b1_20-wce-f3d625d9",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "last2",
+    "backbone_lr": 3e-05,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv2",
+   "fold_def": {
+    "train": [
+     "s03",
+     "s04",
+     "s06",
+     "s10"
+    ],
+    "validation": [
+     "s05",
+     "s07",
+     "s12"
+    ]
+   },
+   "seed": 43,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-flat-last2-bb3e-5-hl5e-4-b1_20-wce-f3d625d9__cv2__s44",
+   "identity_hash": "cb8f41c968b180aa",
+   "identity": {
+    "recipe_hash": "f3d625d99730d544",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv2",
+    "fold_def": {
+     "train": [
+      "s03",
+      "s04",
+      "s06",
+      "s10"
+     ],
+     "validation": [
+      "s05",
+      "s07",
+      "s12"
+     ]
+    },
+    "seed": 44,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-flat-last2-bb3e-5-hl5e-4-b1_20-wce-f3d625d9",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "last2",
+    "backbone_lr": 3e-05,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv2",
+   "fold_def": {
+    "train": [
+     "s03",
+     "s04",
+     "s06",
+     "s10"
+    ],
+    "validation": [
+     "s05",
+     "s07",
+     "s12"
+    ]
+   },
+   "seed": 44,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-flat-full-bb3e-5-hl5e-4-b1_20-wce-7d86c93e__cv0__s42",
+   "identity_hash": "7e32398e709e10a5",
+   "identity": {
+    "recipe_hash": "7d86c93eae220edd",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv0",
+    "fold_def": {
+     "train": [
+      "s04",
+      "s05",
+      "s07",
+      "s10",
+      "s12"
+     ],
+     "validation": [
+      "s03",
+      "s06"
+     ]
+    },
+    "seed": 42,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-flat-full-bb3e-5-hl5e-4-b1_20-wce-7d86c93e",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "full",
+    "backbone_lr": 3e-05,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv0",
+   "fold_def": {
+    "train": [
+     "s04",
+     "s05",
+     "s07",
+     "s10",
+     "s12"
+    ],
+    "validation": [
+     "s03",
+     "s06"
+    ]
+   },
+   "seed": 42,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-flat-full-bb3e-5-hl5e-4-b1_20-wce-7d86c93e__cv0__s43",
+   "identity_hash": "6d8f29534a78cd54",
+   "identity": {
+    "recipe_hash": "7d86c93eae220edd",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv0",
+    "fold_def": {
+     "train": [
+      "s04",
+      "s05",
+      "s07",
+      "s10",
+      "s12"
+     ],
+     "validation": [
+      "s03",
+      "s06"
+     ]
+    },
+    "seed": 43,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-flat-full-bb3e-5-hl5e-4-b1_20-wce-7d86c93e",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "full",
+    "backbone_lr": 3e-05,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv0",
+   "fold_def": {
+    "train": [
+     "s04",
+     "s05",
+     "s07",
+     "s10",
+     "s12"
+    ],
+    "validation": [
+     "s03",
+     "s06"
+    ]
+   },
+   "seed": 43,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-flat-full-bb3e-5-hl5e-4-b1_20-wce-7d86c93e__cv0__s44",
+   "identity_hash": "873a52f268fb7917",
+   "identity": {
+    "recipe_hash": "7d86c93eae220edd",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv0",
+    "fold_def": {
+     "train": [
+      "s04",
+      "s05",
+      "s07",
+      "s10",
+      "s12"
+     ],
+     "validation": [
+      "s03",
+      "s06"
+     ]
+    },
+    "seed": 44,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-flat-full-bb3e-5-hl5e-4-b1_20-wce-7d86c93e",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "full",
+    "backbone_lr": 3e-05,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv0",
+   "fold_def": {
+    "train": [
+     "s04",
+     "s05",
+     "s07",
+     "s10",
+     "s12"
+    ],
+    "validation": [
+     "s03",
+     "s06"
+    ]
+   },
+   "seed": 44,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-flat-full-bb3e-5-hl5e-4-b1_20-wce-7d86c93e__cv1__s42",
+   "identity_hash": "a48109d5c7141e51",
+   "identity": {
+    "recipe_hash": "7d86c93eae220edd",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv1",
+    "fold_def": {
+     "train": [
+      "s03",
+      "s05",
+      "s06",
+      "s07",
+      "s12"
+     ],
+     "validation": [
+      "s04",
+      "s10"
+     ]
+    },
+    "seed": 42,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-flat-full-bb3e-5-hl5e-4-b1_20-wce-7d86c93e",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "full",
+    "backbone_lr": 3e-05,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv1",
+   "fold_def": {
+    "train": [
+     "s03",
+     "s05",
+     "s06",
+     "s07",
+     "s12"
+    ],
+    "validation": [
+     "s04",
+     "s10"
+    ]
+   },
+   "seed": 42,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-flat-full-bb3e-5-hl5e-4-b1_20-wce-7d86c93e__cv1__s43",
+   "identity_hash": "a5a9e1c8fa8bc027",
+   "identity": {
+    "recipe_hash": "7d86c93eae220edd",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv1",
+    "fold_def": {
+     "train": [
+      "s03",
+      "s05",
+      "s06",
+      "s07",
+      "s12"
+     ],
+     "validation": [
+      "s04",
+      "s10"
+     ]
+    },
+    "seed": 43,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-flat-full-bb3e-5-hl5e-4-b1_20-wce-7d86c93e",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "full",
+    "backbone_lr": 3e-05,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv1",
+   "fold_def": {
+    "train": [
+     "s03",
+     "s05",
+     "s06",
+     "s07",
+     "s12"
+    ],
+    "validation": [
+     "s04",
+     "s10"
+    ]
+   },
+   "seed": 43,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-flat-full-bb3e-5-hl5e-4-b1_20-wce-7d86c93e__cv1__s44",
+   "identity_hash": "4f0b4c9dfc32867e",
+   "identity": {
+    "recipe_hash": "7d86c93eae220edd",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv1",
+    "fold_def": {
+     "train": [
+      "s03",
+      "s05",
+      "s06",
+      "s07",
+      "s12"
+     ],
+     "validation": [
+      "s04",
+      "s10"
+     ]
+    },
+    "seed": 44,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-flat-full-bb3e-5-hl5e-4-b1_20-wce-7d86c93e",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "full",
+    "backbone_lr": 3e-05,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv1",
+   "fold_def": {
+    "train": [
+     "s03",
+     "s05",
+     "s06",
+     "s07",
+     "s12"
+    ],
+    "validation": [
+     "s04",
+     "s10"
+    ]
+   },
+   "seed": 44,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-flat-full-bb3e-5-hl5e-4-b1_20-wce-7d86c93e__cv2__s42",
+   "identity_hash": "774456efe4fdd61e",
+   "identity": {
+    "recipe_hash": "7d86c93eae220edd",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv2",
+    "fold_def": {
+     "train": [
+      "s03",
+      "s04",
+      "s06",
+      "s10"
+     ],
+     "validation": [
+      "s05",
+      "s07",
+      "s12"
+     ]
+    },
+    "seed": 42,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-flat-full-bb3e-5-hl5e-4-b1_20-wce-7d86c93e",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "full",
+    "backbone_lr": 3e-05,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv2",
+   "fold_def": {
+    "train": [
+     "s03",
+     "s04",
+     "s06",
+     "s10"
+    ],
+    "validation": [
+     "s05",
+     "s07",
+     "s12"
+    ]
+   },
+   "seed": 42,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-flat-full-bb3e-5-hl5e-4-b1_20-wce-7d86c93e__cv2__s43",
+   "identity_hash": "3d4c5a0210aec854",
+   "identity": {
+    "recipe_hash": "7d86c93eae220edd",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv2",
+    "fold_def": {
+     "train": [
+      "s03",
+      "s04",
+      "s06",
+      "s10"
+     ],
+     "validation": [
+      "s05",
+      "s07",
+      "s12"
+     ]
+    },
+    "seed": 43,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-flat-full-bb3e-5-hl5e-4-b1_20-wce-7d86c93e",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "full",
+    "backbone_lr": 3e-05,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv2",
+   "fold_def": {
+    "train": [
+     "s03",
+     "s04",
+     "s06",
+     "s10"
+    ],
+    "validation": [
+     "s05",
+     "s07",
+     "s12"
+    ]
+   },
+   "seed": 43,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-flat-full-bb3e-5-hl5e-4-b1_20-wce-7d86c93e__cv2__s44",
+   "identity_hash": "0f6923896be3c533",
+   "identity": {
+    "recipe_hash": "7d86c93eae220edd",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv2",
+    "fold_def": {
+     "train": [
+      "s03",
+      "s04",
+      "s06",
+      "s10"
+     ],
+     "validation": [
+      "s05",
+      "s07",
+      "s12"
+     ]
+    },
+    "seed": 44,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-flat-full-bb3e-5-hl5e-4-b1_20-wce-7d86c93e",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "full",
+    "backbone_lr": 3e-05,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv2",
+   "fold_def": {
+    "train": [
+     "s03",
+     "s04",
+     "s06",
+     "s10"
+    ],
+    "validation": [
+     "s05",
+     "s07",
+     "s12"
+    ]
+   },
+   "seed": 44,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-timepool-frozen-bbnone-hl5e-4-b1_20-wce-169ae37c__cv0__s42",
+   "identity_hash": "7eb4401b7396eb18",
+   "identity": {
+    "recipe_hash": "169ae37cff7b2f76",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv0",
+    "fold_def": {
+     "train": [
+      "s04",
+      "s05",
+      "s07",
+      "s10",
+      "s12"
+     ],
+     "validation": [
+      "s03",
+      "s06"
+     ]
+    },
+    "seed": 42,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-timepool-frozen-bbnone-hl5e-4-b1_20-wce-169ae37c",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "temporal_mean_linear",
+    "adaptation": "frozen",
+    "backbone_lr": null,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv0",
+   "fold_def": {
+    "train": [
+     "s04",
+     "s05",
+     "s07",
+     "s10",
+     "s12"
+    ],
+    "validation": [
+     "s03",
+     "s06"
+    ]
+   },
+   "seed": 42,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-timepool-frozen-bbnone-hl5e-4-b1_20-wce-169ae37c__cv0__s43",
+   "identity_hash": "d03cae46f75a5c22",
+   "identity": {
+    "recipe_hash": "169ae37cff7b2f76",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv0",
+    "fold_def": {
+     "train": [
+      "s04",
+      "s05",
+      "s07",
+      "s10",
+      "s12"
+     ],
+     "validation": [
+      "s03",
+      "s06"
+     ]
+    },
+    "seed": 43,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-timepool-frozen-bbnone-hl5e-4-b1_20-wce-169ae37c",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "temporal_mean_linear",
+    "adaptation": "frozen",
+    "backbone_lr": null,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv0",
+   "fold_def": {
+    "train": [
+     "s04",
+     "s05",
+     "s07",
+     "s10",
+     "s12"
+    ],
+    "validation": [
+     "s03",
+     "s06"
+    ]
+   },
+   "seed": 43,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-timepool-frozen-bbnone-hl5e-4-b1_20-wce-169ae37c__cv0__s44",
+   "identity_hash": "6c3da5a281400b0f",
+   "identity": {
+    "recipe_hash": "169ae37cff7b2f76",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv0",
+    "fold_def": {
+     "train": [
+      "s04",
+      "s05",
+      "s07",
+      "s10",
+      "s12"
+     ],
+     "validation": [
+      "s03",
+      "s06"
+     ]
+    },
+    "seed": 44,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-timepool-frozen-bbnone-hl5e-4-b1_20-wce-169ae37c",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "temporal_mean_linear",
+    "adaptation": "frozen",
+    "backbone_lr": null,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv0",
+   "fold_def": {
+    "train": [
+     "s04",
+     "s05",
+     "s07",
+     "s10",
+     "s12"
+    ],
+    "validation": [
+     "s03",
+     "s06"
+    ]
+   },
+   "seed": 44,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-timepool-frozen-bbnone-hl5e-4-b1_20-wce-169ae37c__cv1__s42",
+   "identity_hash": "205c28a8009852c2",
+   "identity": {
+    "recipe_hash": "169ae37cff7b2f76",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv1",
+    "fold_def": {
+     "train": [
+      "s03",
+      "s05",
+      "s06",
+      "s07",
+      "s12"
+     ],
+     "validation": [
+      "s04",
+      "s10"
+     ]
+    },
+    "seed": 42,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-timepool-frozen-bbnone-hl5e-4-b1_20-wce-169ae37c",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "temporal_mean_linear",
+    "adaptation": "frozen",
+    "backbone_lr": null,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv1",
+   "fold_def": {
+    "train": [
+     "s03",
+     "s05",
+     "s06",
+     "s07",
+     "s12"
+    ],
+    "validation": [
+     "s04",
+     "s10"
+    ]
+   },
+   "seed": 42,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-timepool-frozen-bbnone-hl5e-4-b1_20-wce-169ae37c__cv1__s43",
+   "identity_hash": "05d3666e2f1a004a",
+   "identity": {
+    "recipe_hash": "169ae37cff7b2f76",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv1",
+    "fold_def": {
+     "train": [
+      "s03",
+      "s05",
+      "s06",
+      "s07",
+      "s12"
+     ],
+     "validation": [
+      "s04",
+      "s10"
+     ]
+    },
+    "seed": 43,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-timepool-frozen-bbnone-hl5e-4-b1_20-wce-169ae37c",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "temporal_mean_linear",
+    "adaptation": "frozen",
+    "backbone_lr": null,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv1",
+   "fold_def": {
+    "train": [
+     "s03",
+     "s05",
+     "s06",
+     "s07",
+     "s12"
+    ],
+    "validation": [
+     "s04",
+     "s10"
+    ]
+   },
+   "seed": 43,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-timepool-frozen-bbnone-hl5e-4-b1_20-wce-169ae37c__cv1__s44",
+   "identity_hash": "ec10fbf1ec9e8f3a",
+   "identity": {
+    "recipe_hash": "169ae37cff7b2f76",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv1",
+    "fold_def": {
+     "train": [
+      "s03",
+      "s05",
+      "s06",
+      "s07",
+      "s12"
+     ],
+     "validation": [
+      "s04",
+      "s10"
+     ]
+    },
+    "seed": 44,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-timepool-frozen-bbnone-hl5e-4-b1_20-wce-169ae37c",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "temporal_mean_linear",
+    "adaptation": "frozen",
+    "backbone_lr": null,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv1",
+   "fold_def": {
+    "train": [
+     "s03",
+     "s05",
+     "s06",
+     "s07",
+     "s12"
+    ],
+    "validation": [
+     "s04",
+     "s10"
+    ]
+   },
+   "seed": 44,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-timepool-frozen-bbnone-hl5e-4-b1_20-wce-169ae37c__cv2__s42",
+   "identity_hash": "7946c6dad61d9259",
+   "identity": {
+    "recipe_hash": "169ae37cff7b2f76",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv2",
+    "fold_def": {
+     "train": [
+      "s03",
+      "s04",
+      "s06",
+      "s10"
+     ],
+     "validation": [
+      "s05",
+      "s07",
+      "s12"
+     ]
+    },
+    "seed": 42,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-timepool-frozen-bbnone-hl5e-4-b1_20-wce-169ae37c",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "temporal_mean_linear",
+    "adaptation": "frozen",
+    "backbone_lr": null,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv2",
+   "fold_def": {
+    "train": [
+     "s03",
+     "s04",
+     "s06",
+     "s10"
+    ],
+    "validation": [
+     "s05",
+     "s07",
+     "s12"
+    ]
+   },
+   "seed": 42,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-timepool-frozen-bbnone-hl5e-4-b1_20-wce-169ae37c__cv2__s43",
+   "identity_hash": "c9c6b6aebacff4e5",
+   "identity": {
+    "recipe_hash": "169ae37cff7b2f76",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv2",
+    "fold_def": {
+     "train": [
+      "s03",
+      "s04",
+      "s06",
+      "s10"
+     ],
+     "validation": [
+      "s05",
+      "s07",
+      "s12"
+     ]
+    },
+    "seed": 43,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-timepool-frozen-bbnone-hl5e-4-b1_20-wce-169ae37c",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "temporal_mean_linear",
+    "adaptation": "frozen",
+    "backbone_lr": null,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv2",
+   "fold_def": {
+    "train": [
+     "s03",
+     "s04",
+     "s06",
+     "s10"
+    ],
+    "validation": [
+     "s05",
+     "s07",
+     "s12"
+    ]
+   },
+   "seed": 43,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-timepool-frozen-bbnone-hl5e-4-b1_20-wce-169ae37c__cv2__s44",
+   "identity_hash": "b881faba2f27bb99",
+   "identity": {
+    "recipe_hash": "169ae37cff7b2f76",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv2",
+    "fold_def": {
+     "train": [
+      "s03",
+      "s04",
+      "s06",
+      "s10"
+     ],
+     "validation": [
+      "s05",
+      "s07",
+      "s12"
+     ]
+    },
+    "seed": 44,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-timepool-frozen-bbnone-hl5e-4-b1_20-wce-169ae37c",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "temporal_mean_linear",
+    "adaptation": "frozen",
+    "backbone_lr": null,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv2",
+   "fold_def": {
+    "train": [
+     "s03",
+     "s04",
+     "s06",
+     "s10"
+    ],
+    "validation": [
+     "s05",
+     "s07",
+     "s12"
+    ]
+   },
+   "seed": 44,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-timepool-last2-bb3e-5-hl5e-4-b1_20-wce-c152d7b3__cv0__s42",
+   "identity_hash": "caa299ace397f877",
+   "identity": {
+    "recipe_hash": "c152d7b3a2747d4b",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv0",
+    "fold_def": {
+     "train": [
+      "s04",
+      "s05",
+      "s07",
+      "s10",
+      "s12"
+     ],
+     "validation": [
+      "s03",
+      "s06"
+     ]
+    },
+    "seed": 42,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-timepool-last2-bb3e-5-hl5e-4-b1_20-wce-c152d7b3",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "temporal_mean_linear",
+    "adaptation": "last2",
+    "backbone_lr": 3e-05,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv0",
+   "fold_def": {
+    "train": [
+     "s04",
+     "s05",
+     "s07",
+     "s10",
+     "s12"
+    ],
+    "validation": [
+     "s03",
+     "s06"
+    ]
+   },
+   "seed": 42,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-timepool-last2-bb3e-5-hl5e-4-b1_20-wce-c152d7b3__cv0__s43",
+   "identity_hash": "c1b4cdec0719eed6",
+   "identity": {
+    "recipe_hash": "c152d7b3a2747d4b",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv0",
+    "fold_def": {
+     "train": [
+      "s04",
+      "s05",
+      "s07",
+      "s10",
+      "s12"
+     ],
+     "validation": [
+      "s03",
+      "s06"
+     ]
+    },
+    "seed": 43,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-timepool-last2-bb3e-5-hl5e-4-b1_20-wce-c152d7b3",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "temporal_mean_linear",
+    "adaptation": "last2",
+    "backbone_lr": 3e-05,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv0",
+   "fold_def": {
+    "train": [
+     "s04",
+     "s05",
+     "s07",
+     "s10",
+     "s12"
+    ],
+    "validation": [
+     "s03",
+     "s06"
+    ]
+   },
+   "seed": 43,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-timepool-last2-bb3e-5-hl5e-4-b1_20-wce-c152d7b3__cv0__s44",
+   "identity_hash": "7dc5340b6d442143",
+   "identity": {
+    "recipe_hash": "c152d7b3a2747d4b",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv0",
+    "fold_def": {
+     "train": [
+      "s04",
+      "s05",
+      "s07",
+      "s10",
+      "s12"
+     ],
+     "validation": [
+      "s03",
+      "s06"
+     ]
+    },
+    "seed": 44,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-timepool-last2-bb3e-5-hl5e-4-b1_20-wce-c152d7b3",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "temporal_mean_linear",
+    "adaptation": "last2",
+    "backbone_lr": 3e-05,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv0",
+   "fold_def": {
+    "train": [
+     "s04",
+     "s05",
+     "s07",
+     "s10",
+     "s12"
+    ],
+    "validation": [
+     "s03",
+     "s06"
+    ]
+   },
+   "seed": 44,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-timepool-last2-bb3e-5-hl5e-4-b1_20-wce-c152d7b3__cv1__s42",
+   "identity_hash": "80c8d280dfa6b2a8",
+   "identity": {
+    "recipe_hash": "c152d7b3a2747d4b",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv1",
+    "fold_def": {
+     "train": [
+      "s03",
+      "s05",
+      "s06",
+      "s07",
+      "s12"
+     ],
+     "validation": [
+      "s04",
+      "s10"
+     ]
+    },
+    "seed": 42,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-timepool-last2-bb3e-5-hl5e-4-b1_20-wce-c152d7b3",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "temporal_mean_linear",
+    "adaptation": "last2",
+    "backbone_lr": 3e-05,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv1",
+   "fold_def": {
+    "train": [
+     "s03",
+     "s05",
+     "s06",
+     "s07",
+     "s12"
+    ],
+    "validation": [
+     "s04",
+     "s10"
+    ]
+   },
+   "seed": 42,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-timepool-last2-bb3e-5-hl5e-4-b1_20-wce-c152d7b3__cv1__s43",
+   "identity_hash": "78ae450106b0ce27",
+   "identity": {
+    "recipe_hash": "c152d7b3a2747d4b",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv1",
+    "fold_def": {
+     "train": [
+      "s03",
+      "s05",
+      "s06",
+      "s07",
+      "s12"
+     ],
+     "validation": [
+      "s04",
+      "s10"
+     ]
+    },
+    "seed": 43,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-timepool-last2-bb3e-5-hl5e-4-b1_20-wce-c152d7b3",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "temporal_mean_linear",
+    "adaptation": "last2",
+    "backbone_lr": 3e-05,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv1",
+   "fold_def": {
+    "train": [
+     "s03",
+     "s05",
+     "s06",
+     "s07",
+     "s12"
+    ],
+    "validation": [
+     "s04",
+     "s10"
+    ]
+   },
+   "seed": 43,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-timepool-last2-bb3e-5-hl5e-4-b1_20-wce-c152d7b3__cv1__s44",
+   "identity_hash": "822d77024df3d843",
+   "identity": {
+    "recipe_hash": "c152d7b3a2747d4b",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv1",
+    "fold_def": {
+     "train": [
+      "s03",
+      "s05",
+      "s06",
+      "s07",
+      "s12"
+     ],
+     "validation": [
+      "s04",
+      "s10"
+     ]
+    },
+    "seed": 44,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-timepool-last2-bb3e-5-hl5e-4-b1_20-wce-c152d7b3",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "temporal_mean_linear",
+    "adaptation": "last2",
+    "backbone_lr": 3e-05,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv1",
+   "fold_def": {
+    "train": [
+     "s03",
+     "s05",
+     "s06",
+     "s07",
+     "s12"
+    ],
+    "validation": [
+     "s04",
+     "s10"
+    ]
+   },
+   "seed": 44,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-timepool-last2-bb3e-5-hl5e-4-b1_20-wce-c152d7b3__cv2__s42",
+   "identity_hash": "20518263a5557539",
+   "identity": {
+    "recipe_hash": "c152d7b3a2747d4b",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv2",
+    "fold_def": {
+     "train": [
+      "s03",
+      "s04",
+      "s06",
+      "s10"
+     ],
+     "validation": [
+      "s05",
+      "s07",
+      "s12"
+     ]
+    },
+    "seed": 42,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-timepool-last2-bb3e-5-hl5e-4-b1_20-wce-c152d7b3",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "temporal_mean_linear",
+    "adaptation": "last2",
+    "backbone_lr": 3e-05,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv2",
+   "fold_def": {
+    "train": [
+     "s03",
+     "s04",
+     "s06",
+     "s10"
+    ],
+    "validation": [
+     "s05",
+     "s07",
+     "s12"
+    ]
+   },
+   "seed": 42,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-timepool-last2-bb3e-5-hl5e-4-b1_20-wce-c152d7b3__cv2__s43",
+   "identity_hash": "8e2b7ead9e3937b8",
+   "identity": {
+    "recipe_hash": "c152d7b3a2747d4b",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv2",
+    "fold_def": {
+     "train": [
+      "s03",
+      "s04",
+      "s06",
+      "s10"
+     ],
+     "validation": [
+      "s05",
+      "s07",
+      "s12"
+     ]
+    },
+    "seed": 43,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-timepool-last2-bb3e-5-hl5e-4-b1_20-wce-c152d7b3",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "temporal_mean_linear",
+    "adaptation": "last2",
+    "backbone_lr": 3e-05,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv2",
+   "fold_def": {
+    "train": [
+     "s03",
+     "s04",
+     "s06",
+     "s10"
+    ],
+    "validation": [
+     "s05",
+     "s07",
+     "s12"
+    ]
+   },
+   "seed": 43,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-timepool-last2-bb3e-5-hl5e-4-b1_20-wce-c152d7b3__cv2__s44",
+   "identity_hash": "98f1b87cb965ee2e",
+   "identity": {
+    "recipe_hash": "c152d7b3a2747d4b",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv2",
+    "fold_def": {
+     "train": [
+      "s03",
+      "s04",
+      "s06",
+      "s10"
+     ],
+     "validation": [
+      "s05",
+      "s07",
+      "s12"
+     ]
+    },
+    "seed": 44,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-timepool-last2-bb3e-5-hl5e-4-b1_20-wce-c152d7b3",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "temporal_mean_linear",
+    "adaptation": "last2",
+    "backbone_lr": 3e-05,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv2",
+   "fold_def": {
+    "train": [
+     "s03",
+     "s04",
+     "s06",
+     "s10"
+    ],
+    "validation": [
+     "s05",
+     "s07",
+     "s12"
+    ]
+   },
+   "seed": 44,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-timepool-full-bb3e-5-hl5e-4-b1_20-wce-c2a5c99a__cv0__s42",
+   "identity_hash": "5d04a43fa5fe2bd7",
+   "identity": {
+    "recipe_hash": "c2a5c99a428c9202",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv0",
+    "fold_def": {
+     "train": [
+      "s04",
+      "s05",
+      "s07",
+      "s10",
+      "s12"
+     ],
+     "validation": [
+      "s03",
+      "s06"
+     ]
+    },
+    "seed": 42,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-timepool-full-bb3e-5-hl5e-4-b1_20-wce-c2a5c99a",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "temporal_mean_linear",
+    "adaptation": "full",
+    "backbone_lr": 3e-05,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv0",
+   "fold_def": {
+    "train": [
+     "s04",
+     "s05",
+     "s07",
+     "s10",
+     "s12"
+    ],
+    "validation": [
+     "s03",
+     "s06"
+    ]
+   },
+   "seed": 42,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-timepool-full-bb3e-5-hl5e-4-b1_20-wce-c2a5c99a__cv0__s43",
+   "identity_hash": "e4b7dd01db96f91e",
+   "identity": {
+    "recipe_hash": "c2a5c99a428c9202",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv0",
+    "fold_def": {
+     "train": [
+      "s04",
+      "s05",
+      "s07",
+      "s10",
+      "s12"
+     ],
+     "validation": [
+      "s03",
+      "s06"
+     ]
+    },
+    "seed": 43,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-timepool-full-bb3e-5-hl5e-4-b1_20-wce-c2a5c99a",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "temporal_mean_linear",
+    "adaptation": "full",
+    "backbone_lr": 3e-05,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv0",
+   "fold_def": {
+    "train": [
+     "s04",
+     "s05",
+     "s07",
+     "s10",
+     "s12"
+    ],
+    "validation": [
+     "s03",
+     "s06"
+    ]
+   },
+   "seed": 43,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-timepool-full-bb3e-5-hl5e-4-b1_20-wce-c2a5c99a__cv0__s44",
+   "identity_hash": "393b225728bee6dd",
+   "identity": {
+    "recipe_hash": "c2a5c99a428c9202",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv0",
+    "fold_def": {
+     "train": [
+      "s04",
+      "s05",
+      "s07",
+      "s10",
+      "s12"
+     ],
+     "validation": [
+      "s03",
+      "s06"
+     ]
+    },
+    "seed": 44,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-timepool-full-bb3e-5-hl5e-4-b1_20-wce-c2a5c99a",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "temporal_mean_linear",
+    "adaptation": "full",
+    "backbone_lr": 3e-05,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv0",
+   "fold_def": {
+    "train": [
+     "s04",
+     "s05",
+     "s07",
+     "s10",
+     "s12"
+    ],
+    "validation": [
+     "s03",
+     "s06"
+    ]
+   },
+   "seed": 44,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-timepool-full-bb3e-5-hl5e-4-b1_20-wce-c2a5c99a__cv1__s42",
+   "identity_hash": "3159eed1b5c42da2",
+   "identity": {
+    "recipe_hash": "c2a5c99a428c9202",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv1",
+    "fold_def": {
+     "train": [
+      "s03",
+      "s05",
+      "s06",
+      "s07",
+      "s12"
+     ],
+     "validation": [
+      "s04",
+      "s10"
+     ]
+    },
+    "seed": 42,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-timepool-full-bb3e-5-hl5e-4-b1_20-wce-c2a5c99a",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "temporal_mean_linear",
+    "adaptation": "full",
+    "backbone_lr": 3e-05,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv1",
+   "fold_def": {
+    "train": [
+     "s03",
+     "s05",
+     "s06",
+     "s07",
+     "s12"
+    ],
+    "validation": [
+     "s04",
+     "s10"
+    ]
+   },
+   "seed": 42,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-timepool-full-bb3e-5-hl5e-4-b1_20-wce-c2a5c99a__cv1__s43",
+   "identity_hash": "a84d19a506e7e1ca",
+   "identity": {
+    "recipe_hash": "c2a5c99a428c9202",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv1",
+    "fold_def": {
+     "train": [
+      "s03",
+      "s05",
+      "s06",
+      "s07",
+      "s12"
+     ],
+     "validation": [
+      "s04",
+      "s10"
+     ]
+    },
+    "seed": 43,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-timepool-full-bb3e-5-hl5e-4-b1_20-wce-c2a5c99a",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "temporal_mean_linear",
+    "adaptation": "full",
+    "backbone_lr": 3e-05,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv1",
+   "fold_def": {
+    "train": [
+     "s03",
+     "s05",
+     "s06",
+     "s07",
+     "s12"
+    ],
+    "validation": [
+     "s04",
+     "s10"
+    ]
+   },
+   "seed": 43,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-timepool-full-bb3e-5-hl5e-4-b1_20-wce-c2a5c99a__cv1__s44",
+   "identity_hash": "9df31b180f5c903e",
+   "identity": {
+    "recipe_hash": "c2a5c99a428c9202",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv1",
+    "fold_def": {
+     "train": [
+      "s03",
+      "s05",
+      "s06",
+      "s07",
+      "s12"
+     ],
+     "validation": [
+      "s04",
+      "s10"
+     ]
+    },
+    "seed": 44,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-timepool-full-bb3e-5-hl5e-4-b1_20-wce-c2a5c99a",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "temporal_mean_linear",
+    "adaptation": "full",
+    "backbone_lr": 3e-05,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv1",
+   "fold_def": {
+    "train": [
+     "s03",
+     "s05",
+     "s06",
+     "s07",
+     "s12"
+    ],
+    "validation": [
+     "s04",
+     "s10"
+    ]
+   },
+   "seed": 44,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-timepool-full-bb3e-5-hl5e-4-b1_20-wce-c2a5c99a__cv2__s42",
+   "identity_hash": "2a1dd990a106d54a",
+   "identity": {
+    "recipe_hash": "c2a5c99a428c9202",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv2",
+    "fold_def": {
+     "train": [
+      "s03",
+      "s04",
+      "s06",
+      "s10"
+     ],
+     "validation": [
+      "s05",
+      "s07",
+      "s12"
+     ]
+    },
+    "seed": 42,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-timepool-full-bb3e-5-hl5e-4-b1_20-wce-c2a5c99a",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "temporal_mean_linear",
+    "adaptation": "full",
+    "backbone_lr": 3e-05,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv2",
+   "fold_def": {
+    "train": [
+     "s03",
+     "s04",
+     "s06",
+     "s10"
+    ],
+    "validation": [
+     "s05",
+     "s07",
+     "s12"
+    ]
+   },
+   "seed": 42,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-timepool-full-bb3e-5-hl5e-4-b1_20-wce-c2a5c99a__cv2__s43",
+   "identity_hash": "5705d917bbfa4cd9",
+   "identity": {
+    "recipe_hash": "c2a5c99a428c9202",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv2",
+    "fold_def": {
+     "train": [
+      "s03",
+      "s04",
+      "s06",
+      "s10"
+     ],
+     "validation": [
+      "s05",
+      "s07",
+      "s12"
+     ]
+    },
+    "seed": 43,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-timepool-full-bb3e-5-hl5e-4-b1_20-wce-c2a5c99a",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "temporal_mean_linear",
+    "adaptation": "full",
+    "backbone_lr": 3e-05,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv2",
+   "fold_def": {
+    "train": [
+     "s03",
+     "s04",
+     "s06",
+     "s10"
+    ],
+    "validation": [
+     "s05",
+     "s07",
+     "s12"
+    ]
+   },
+   "seed": 43,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-timepool-full-bb3e-5-hl5e-4-b1_20-wce-c2a5c99a__cv2__s44",
+   "identity_hash": "68b382359d314678",
+   "identity": {
+    "recipe_hash": "c2a5c99a428c9202",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv2",
+    "fold_def": {
+     "train": [
+      "s03",
+      "s04",
+      "s06",
+      "s10"
+     ],
+     "validation": [
+      "s05",
+      "s07",
+      "s12"
+     ]
+    },
+    "seed": 44,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-timepool-full-bb3e-5-hl5e-4-b1_20-wce-c2a5c99a",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "temporal_mean_linear",
+    "adaptation": "full",
+    "backbone_lr": 3e-05,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv2",
+   "fold_def": {
+    "train": [
+     "s03",
+     "s04",
+     "s06",
+     "s10"
+    ],
+    "validation": [
+     "s05",
+     "s07",
+     "s12"
+    ]
+   },
+   "seed": 44,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-flat-full-bb1e-4-hl5e-4-b1_20-wce-dd3052ca__cv0__s42",
+   "identity_hash": "1b3f82b4da21917d",
+   "identity": {
+    "recipe_hash": "dd3052cafeebb98d",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv0",
+    "fold_def": {
+     "train": [
+      "s04",
+      "s05",
+      "s07",
+      "s10",
+      "s12"
+     ],
+     "validation": [
+      "s03",
+      "s06"
+     ]
+    },
+    "seed": 42,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-flat-full-bb1e-4-hl5e-4-b1_20-wce-dd3052ca",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "full",
+    "backbone_lr": 0.0001,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv0",
+   "fold_def": {
+    "train": [
+     "s04",
+     "s05",
+     "s07",
+     "s10",
+     "s12"
+    ],
+    "validation": [
+     "s03",
+     "s06"
+    ]
+   },
+   "seed": 42,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-flat-full-bb1e-4-hl5e-4-b1_20-wce-dd3052ca__cv0__s43",
+   "identity_hash": "5dfcd622b00bcd64",
+   "identity": {
+    "recipe_hash": "dd3052cafeebb98d",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv0",
+    "fold_def": {
+     "train": [
+      "s04",
+      "s05",
+      "s07",
+      "s10",
+      "s12"
+     ],
+     "validation": [
+      "s03",
+      "s06"
+     ]
+    },
+    "seed": 43,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-flat-full-bb1e-4-hl5e-4-b1_20-wce-dd3052ca",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "full",
+    "backbone_lr": 0.0001,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv0",
+   "fold_def": {
+    "train": [
+     "s04",
+     "s05",
+     "s07",
+     "s10",
+     "s12"
+    ],
+    "validation": [
+     "s03",
+     "s06"
+    ]
+   },
+   "seed": 43,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-flat-full-bb1e-4-hl5e-4-b1_20-wce-dd3052ca__cv0__s44",
+   "identity_hash": "1d9ee271a39e2a15",
+   "identity": {
+    "recipe_hash": "dd3052cafeebb98d",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv0",
+    "fold_def": {
+     "train": [
+      "s04",
+      "s05",
+      "s07",
+      "s10",
+      "s12"
+     ],
+     "validation": [
+      "s03",
+      "s06"
+     ]
+    },
+    "seed": 44,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-flat-full-bb1e-4-hl5e-4-b1_20-wce-dd3052ca",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "full",
+    "backbone_lr": 0.0001,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv0",
+   "fold_def": {
+    "train": [
+     "s04",
+     "s05",
+     "s07",
+     "s10",
+     "s12"
+    ],
+    "validation": [
+     "s03",
+     "s06"
+    ]
+   },
+   "seed": 44,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-flat-full-bb1e-4-hl5e-4-b1_20-wce-dd3052ca__cv1__s42",
+   "identity_hash": "21708e5b92445469",
+   "identity": {
+    "recipe_hash": "dd3052cafeebb98d",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv1",
+    "fold_def": {
+     "train": [
+      "s03",
+      "s05",
+      "s06",
+      "s07",
+      "s12"
+     ],
+     "validation": [
+      "s04",
+      "s10"
+     ]
+    },
+    "seed": 42,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-flat-full-bb1e-4-hl5e-4-b1_20-wce-dd3052ca",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "full",
+    "backbone_lr": 0.0001,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv1",
+   "fold_def": {
+    "train": [
+     "s03",
+     "s05",
+     "s06",
+     "s07",
+     "s12"
+    ],
+    "validation": [
+     "s04",
+     "s10"
+    ]
+   },
+   "seed": 42,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-flat-full-bb1e-4-hl5e-4-b1_20-wce-dd3052ca__cv1__s43",
+   "identity_hash": "240c076bb68f1262",
+   "identity": {
+    "recipe_hash": "dd3052cafeebb98d",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv1",
+    "fold_def": {
+     "train": [
+      "s03",
+      "s05",
+      "s06",
+      "s07",
+      "s12"
+     ],
+     "validation": [
+      "s04",
+      "s10"
+     ]
+    },
+    "seed": 43,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-flat-full-bb1e-4-hl5e-4-b1_20-wce-dd3052ca",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "full",
+    "backbone_lr": 0.0001,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv1",
+   "fold_def": {
+    "train": [
+     "s03",
+     "s05",
+     "s06",
+     "s07",
+     "s12"
+    ],
+    "validation": [
+     "s04",
+     "s10"
+    ]
+   },
+   "seed": 43,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-flat-full-bb1e-4-hl5e-4-b1_20-wce-dd3052ca__cv1__s44",
+   "identity_hash": "41d1d20fb1c1d8ac",
+   "identity": {
+    "recipe_hash": "dd3052cafeebb98d",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv1",
+    "fold_def": {
+     "train": [
+      "s03",
+      "s05",
+      "s06",
+      "s07",
+      "s12"
+     ],
+     "validation": [
+      "s04",
+      "s10"
+     ]
+    },
+    "seed": 44,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-flat-full-bb1e-4-hl5e-4-b1_20-wce-dd3052ca",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "full",
+    "backbone_lr": 0.0001,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv1",
+   "fold_def": {
+    "train": [
+     "s03",
+     "s05",
+     "s06",
+     "s07",
+     "s12"
+    ],
+    "validation": [
+     "s04",
+     "s10"
+    ]
+   },
+   "seed": 44,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-flat-full-bb1e-4-hl5e-4-b1_20-wce-dd3052ca__cv2__s42",
+   "identity_hash": "83b75ddcce406502",
+   "identity": {
+    "recipe_hash": "dd3052cafeebb98d",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv2",
+    "fold_def": {
+     "train": [
+      "s03",
+      "s04",
+      "s06",
+      "s10"
+     ],
+     "validation": [
+      "s05",
+      "s07",
+      "s12"
+     ]
+    },
+    "seed": 42,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-flat-full-bb1e-4-hl5e-4-b1_20-wce-dd3052ca",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "full",
+    "backbone_lr": 0.0001,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv2",
+   "fold_def": {
+    "train": [
+     "s03",
+     "s04",
+     "s06",
+     "s10"
+    ],
+    "validation": [
+     "s05",
+     "s07",
+     "s12"
+    ]
+   },
+   "seed": 42,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-flat-full-bb1e-4-hl5e-4-b1_20-wce-dd3052ca__cv2__s43",
+   "identity_hash": "653475bd55ddae61",
+   "identity": {
+    "recipe_hash": "dd3052cafeebb98d",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv2",
+    "fold_def": {
+     "train": [
+      "s03",
+      "s04",
+      "s06",
+      "s10"
+     ],
+     "validation": [
+      "s05",
+      "s07",
+      "s12"
+     ]
+    },
+    "seed": 43,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-flat-full-bb1e-4-hl5e-4-b1_20-wce-dd3052ca",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "full",
+    "backbone_lr": 0.0001,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv2",
+   "fold_def": {
+    "train": [
+     "s03",
+     "s04",
+     "s06",
+     "s10"
+    ],
+    "validation": [
+     "s05",
+     "s07",
+     "s12"
+    ]
+   },
+   "seed": 43,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  },
+  {
+   "fit_id": "cb-flat-full-bb1e-4-hl5e-4-b1_20-wce-dd3052ca__cv2__s44",
+   "identity_hash": "506ead008a02c62e",
+   "identity": {
+    "recipe_hash": "dd3052cafeebb98d",
+    "prep_id": "dimp_band_1_20-9bb0159f0ffd",
+    "fold": "cv2",
+    "fold_def": {
+     "train": [
+      "s03",
+      "s04",
+      "s06",
+      "s10"
+     ],
+     "validation": [
+      "s05",
+      "s07",
+      "s12"
+     ]
+    },
+    "seed": 44,
+    "mode": "cv",
+    "epochs": null
+   },
+   "recipe_id": "cb-flat-full-bb1e-4-hl5e-4-b1_20-wce-dd3052ca",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "full",
+    "backbone_lr": 0.0001,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "fold": "cv2",
+   "fold_def": {
+    "train": [
+     "s03",
+     "s04",
+     "s06",
+     "s10"
+    ],
+    "validation": [
+     "s05",
+     "s07",
+     "s12"
+    ]
+   },
+   "seed": 44,
+   "mode": "cv",
+   "epochs": null,
+   "prep_id": "dimp_band_1_20-9bb0159f0ffd"
+  }
+ ],
+ "new_fit_ids": [
+  "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv0__s42",
+  "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv0__s43",
+  "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv0__s44",
+  "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv1__s42",
+  "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv1__s43",
+  "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv1__s44",
+  "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv2__s42",
+  "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv2__s43",
+  "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv2__s44",
+  "cb-flat-last2-bb3e-5-hl5e-4-b1_20-wce-f3d625d9__cv0__s42",
+  "cb-flat-last2-bb3e-5-hl5e-4-b1_20-wce-f3d625d9__cv0__s43",
+  "cb-flat-last2-bb3e-5-hl5e-4-b1_20-wce-f3d625d9__cv0__s44",
+  "cb-flat-last2-bb3e-5-hl5e-4-b1_20-wce-f3d625d9__cv1__s42",
+  "cb-flat-last2-bb3e-5-hl5e-4-b1_20-wce-f3d625d9__cv1__s43",
+  "cb-flat-last2-bb3e-5-hl5e-4-b1_20-wce-f3d625d9__cv1__s44",
+  "cb-flat-last2-bb3e-5-hl5e-4-b1_20-wce-f3d625d9__cv2__s42",
+  "cb-flat-last2-bb3e-5-hl5e-4-b1_20-wce-f3d625d9__cv2__s43",
+  "cb-flat-last2-bb3e-5-hl5e-4-b1_20-wce-f3d625d9__cv2__s44",
+  "cb-flat-full-bb3e-5-hl5e-4-b1_20-wce-7d86c93e__cv0__s42",
+  "cb-flat-full-bb3e-5-hl5e-4-b1_20-wce-7d86c93e__cv0__s43",
+  "cb-flat-full-bb3e-5-hl5e-4-b1_20-wce-7d86c93e__cv0__s44",
+  "cb-flat-full-bb3e-5-hl5e-4-b1_20-wce-7d86c93e__cv1__s42",
+  "cb-flat-full-bb3e-5-hl5e-4-b1_20-wce-7d86c93e__cv1__s43",
+  "cb-flat-full-bb3e-5-hl5e-4-b1_20-wce-7d86c93e__cv1__s44",
+  "cb-flat-full-bb3e-5-hl5e-4-b1_20-wce-7d86c93e__cv2__s42",
+  "cb-flat-full-bb3e-5-hl5e-4-b1_20-wce-7d86c93e__cv2__s43",
+  "cb-flat-full-bb3e-5-hl5e-4-b1_20-wce-7d86c93e__cv2__s44",
+  "cb-timepool-frozen-bbnone-hl5e-4-b1_20-wce-169ae37c__cv0__s42",
+  "cb-timepool-frozen-bbnone-hl5e-4-b1_20-wce-169ae37c__cv0__s43",
+  "cb-timepool-frozen-bbnone-hl5e-4-b1_20-wce-169ae37c__cv0__s44",
+  "cb-timepool-frozen-bbnone-hl5e-4-b1_20-wce-169ae37c__cv1__s42",
+  "cb-timepool-frozen-bbnone-hl5e-4-b1_20-wce-169ae37c__cv1__s43",
+  "cb-timepool-frozen-bbnone-hl5e-4-b1_20-wce-169ae37c__cv1__s44",
+  "cb-timepool-frozen-bbnone-hl5e-4-b1_20-wce-169ae37c__cv2__s42",
+  "cb-timepool-frozen-bbnone-hl5e-4-b1_20-wce-169ae37c__cv2__s43",
+  "cb-timepool-frozen-bbnone-hl5e-4-b1_20-wce-169ae37c__cv2__s44",
+  "cb-timepool-last2-bb3e-5-hl5e-4-b1_20-wce-c152d7b3__cv0__s42",
+  "cb-timepool-last2-bb3e-5-hl5e-4-b1_20-wce-c152d7b3__cv0__s43",
+  "cb-timepool-last2-bb3e-5-hl5e-4-b1_20-wce-c152d7b3__cv0__s44",
+  "cb-timepool-last2-bb3e-5-hl5e-4-b1_20-wce-c152d7b3__cv1__s42",
+  "cb-timepool-last2-bb3e-5-hl5e-4-b1_20-wce-c152d7b3__cv1__s43",
+  "cb-timepool-last2-bb3e-5-hl5e-4-b1_20-wce-c152d7b3__cv1__s44",
+  "cb-timepool-last2-bb3e-5-hl5e-4-b1_20-wce-c152d7b3__cv2__s42",
+  "cb-timepool-last2-bb3e-5-hl5e-4-b1_20-wce-c152d7b3__cv2__s43",
+  "cb-timepool-last2-bb3e-5-hl5e-4-b1_20-wce-c152d7b3__cv2__s44",
+  "cb-timepool-full-bb3e-5-hl5e-4-b1_20-wce-c2a5c99a__cv0__s42",
+  "cb-timepool-full-bb3e-5-hl5e-4-b1_20-wce-c2a5c99a__cv0__s43",
+  "cb-timepool-full-bb3e-5-hl5e-4-b1_20-wce-c2a5c99a__cv0__s44",
+  "cb-timepool-full-bb3e-5-hl5e-4-b1_20-wce-c2a5c99a__cv1__s42",
+  "cb-timepool-full-bb3e-5-hl5e-4-b1_20-wce-c2a5c99a__cv1__s43",
+  "cb-timepool-full-bb3e-5-hl5e-4-b1_20-wce-c2a5c99a__cv1__s44",
+  "cb-timepool-full-bb3e-5-hl5e-4-b1_20-wce-c2a5c99a__cv2__s42",
+  "cb-timepool-full-bb3e-5-hl5e-4-b1_20-wce-c2a5c99a__cv2__s43",
+  "cb-timepool-full-bb3e-5-hl5e-4-b1_20-wce-c2a5c99a__cv2__s44",
+  "cb-flat-full-bb1e-4-hl5e-4-b1_20-wce-dd3052ca__cv0__s42",
+  "cb-flat-full-bb1e-4-hl5e-4-b1_20-wce-dd3052ca__cv0__s43",
+  "cb-flat-full-bb1e-4-hl5e-4-b1_20-wce-dd3052ca__cv0__s44",
+  "cb-flat-full-bb1e-4-hl5e-4-b1_20-wce-dd3052ca__cv1__s42",
+  "cb-flat-full-bb1e-4-hl5e-4-b1_20-wce-dd3052ca__cv1__s43",
+  "cb-flat-full-bb1e-4-hl5e-4-b1_20-wce-dd3052ca__cv1__s44",
+  "cb-flat-full-bb1e-4-hl5e-4-b1_20-wce-dd3052ca__cv2__s42",
+  "cb-flat-full-bb1e-4-hl5e-4-b1_20-wce-dd3052ca__cv2__s43",
+  "cb-flat-full-bb1e-4-hl5e-4-b1_20-wce-dd3052ca__cv2__s44"
+ ],
+ "reused_fit_ids": []
+}
