@@ -1,0 +1,521 @@
+{
+ "stage": "D",
+ "plan_sha": "1679d0128161d1f6",
+ "rule": "participant-macro of seed-mean AUROC; ties<=1e-6 -> fewer trainable params -> lexicographic candidate id",
+ "candidates": [
+  {
+   "candidate_id": "cbramod:cb_flat_frozen@1-20",
+   "recipe_id": "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "frozen",
+    "backbone_lr": null,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "score": 0.5787078412832252,
+   "per_participant_seed_mean": {
+    "s03": 0.5826126619230068,
+    "s04": 0.6843856498111817,
+    "s05": 0.5465810374782825,
+    "s06": 0.5890610724576569,
+    "s07": 0.5751054852320676,
+    "s10": 0.5173458566883805,
+    "s12": 0.5558631253920008
+   },
+   "n_fits": 9,
+   "params_trainable": 4401002,
+   "best_epochs_one_based": [
+    2,
+    17,
+    3,
+    9,
+    8,
+    9,
+    1,
+    1,
+    1
+   ],
+   "median_best_epoch": 3,
+   "fit_ids": [
+    "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv0__s42",
+    "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv0__s43",
+    "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv0__s44",
+    "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv1__s42",
+    "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv1__s43",
+    "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv1__s44",
+    "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv2__s42",
+    "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv2__s43",
+    "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv2__s44"
+   ],
+   "cv_pooled_auroc": 0.5626399524781381,
+   "cv_brier": 0.278077035247333,
+   "cv_nll": 0.9781517692204268,
+   "cv_mean_p_label0": 0.4077561649122758,
+   "cv_mean_p_label1": 0.4522787894097417
+  },
+  {
+   "candidate_id": "eegnet:eeg_lr0.001_do0.5@1-20",
+   "recipe_id": "eeg-lr1e-3-do0.5-b1_20-wce-ad833d47",
+   "recipe": {
+    "arch": "eegnet",
+    "lr": 0.001,
+    "dropout": 0.5,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "optimizer": "adam",
+    "weight_decay": 0.0,
+    "batch_size": 64,
+    "max_epochs": 300,
+    "patience": 40,
+    "scheduler": "none",
+    "grad_clip": null,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 25,
+    "model": {
+     "F1": 8,
+     "D": 2,
+     "F2": 16,
+     "kern_length": 128,
+     "sep_kern_length": 16,
+     "pool1": 4,
+     "pool2": 8,
+     "norm_rate": 0.25
+    },
+    "input_view": "eeg256",
+    "scaling": {
+     "kind": "train_global_std"
+    },
+    "initialization": "seeded_random"
+   },
+   "score": 0.6117677354035893,
+   "per_participant_seed_mean": {
+    "s03": 0.6254333150884875,
+    "s04": 0.7914248871695682,
+    "s05": 0.5445209729461405,
+    "s06": 0.678414974113899,
+    "s07": 0.5816136043984145,
+    "s10": 0.5086855526940363,
+    "s12": 0.55228084141458
+   },
+   "n_fits": 9,
+   "params_trainable": 2562,
+   "best_epochs_one_based": [
+    141,
+    47,
+    62,
+    23,
+    151,
+    17,
+    38,
+    28,
+    72
+   ],
+   "median_best_epoch": 47,
+   "fit_ids": [
+    "eeg-lr1e-3-do0.5-b1_20-wce-ad833d47__cv0__s42",
+    "eeg-lr1e-3-do0.5-b1_20-wce-ad833d47__cv0__s43",
+    "eeg-lr1e-3-do0.5-b1_20-wce-ad833d47__cv0__s44",
+    "eeg-lr1e-3-do0.5-b1_20-wce-ad833d47__cv1__s42",
+    "eeg-lr1e-3-do0.5-b1_20-wce-ad833d47__cv1__s43",
+    "eeg-lr1e-3-do0.5-b1_20-wce-ad833d47__cv1__s44",
+    "eeg-lr1e-3-do0.5-b1_20-wce-ad833d47__cv2__s42",
+    "eeg-lr1e-3-do0.5-b1_20-wce-ad833d47__cv2__s43",
+    "eeg-lr1e-3-do0.5-b1_20-wce-ad833d47__cv2__s44"
+   ],
+   "cv_pooled_auroc": 0.5984545230062536,
+   "cv_brier": 0.24900163554592208,
+   "cv_nll": 0.7068491539195564,
+   "cv_mean_p_label0": 0.4524999435327913,
+   "cv_mean_p_label1": 0.5169566055229547
+  },
+  {
+   "candidate_id": "cbramod:cb_flat_frozen@0.3-40",
+   "recipe_id": "cb-flat-frozen-bbnone-hl5e-4-b0p3_40-wce-d041b1b2",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "frozen",
+    "backbone_lr": null,
+    "head_lr": 0.0005,
+    "band": "0.3-40",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "score": 0.5667473773459882,
+   "per_participant_seed_mean": {
+    "s03": 0.5797786292039165,
+    "s04": 0.6531385281385281,
+    "s05": 0.5538284934226856,
+    "s06": 0.5636962072762199,
+    "s07": 0.5708732898606317,
+    "s10": 0.49765818310357024,
+    "s12": 0.5482583104163651
+   },
+   "n_fits": 9,
+   "params_trainable": 4401002,
+   "best_epochs_one_based": [
+    4,
+    16,
+    13,
+    17,
+    17,
+    17,
+    2,
+    2,
+    1
+   ],
+   "median_best_epoch": 13,
+   "fit_ids": [
+    "cb-flat-frozen-bbnone-hl5e-4-b0p3_40-wce-d041b1b2__cv0__s42",
+    "cb-flat-frozen-bbnone-hl5e-4-b0p3_40-wce-d041b1b2__cv0__s43",
+    "cb-flat-frozen-bbnone-hl5e-4-b0p3_40-wce-d041b1b2__cv0__s44",
+    "cb-flat-frozen-bbnone-hl5e-4-b0p3_40-wce-d041b1b2__cv1__s42",
+    "cb-flat-frozen-bbnone-hl5e-4-b0p3_40-wce-d041b1b2__cv1__s43",
+    "cb-flat-frozen-bbnone-hl5e-4-b0p3_40-wce-d041b1b2__cv1__s44",
+    "cb-flat-frozen-bbnone-hl5e-4-b0p3_40-wce-d041b1b2__cv2__s42",
+    "cb-flat-frozen-bbnone-hl5e-4-b0p3_40-wce-d041b1b2__cv2__s43",
+    "cb-flat-frozen-bbnone-hl5e-4-b0p3_40-wce-d041b1b2__cv2__s44"
+   ],
+   "cv_pooled_auroc": 0.5549688460081438,
+   "cv_brier": 0.3007393106281578,
+   "cv_nll": 1.507411636604452,
+   "cv_mean_p_label0": 0.3668602685594592,
+   "cv_mean_p_label1": 0.4229332138709222
+  },
+  {
+   "candidate_id": "eegnet:eeg_lr0.001_do0.5@0.3-40",
+   "recipe_id": "eeg-lr1e-3-do0.5-b0p3_40-wce-5575260a",
+   "recipe": {
+    "arch": "eegnet",
+    "lr": 0.001,
+    "dropout": 0.5,
+    "band": "0.3-40",
+    "loss": "weighted_ce",
+    "optimizer": "adam",
+    "weight_decay": 0.0,
+    "batch_size": 64,
+    "max_epochs": 300,
+    "patience": 40,
+    "scheduler": "none",
+    "grad_clip": null,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 25,
+    "model": {
+     "F1": 8,
+     "D": 2,
+     "F2": 16,
+     "kern_length": 128,
+     "sep_kern_length": 16,
+     "pool1": 4,
+     "pool2": 8,
+     "norm_rate": 0.25
+    },
+    "input_view": "eeg256",
+    "scaling": {
+     "kind": "train_global_std"
+    },
+    "initialization": "seeded_random"
+   },
+   "score": 0.6030087975455748,
+   "per_participant_seed_mean": {
+    "s03": 0.609365687526607,
+    "s04": 0.7832043842682141,
+    "s05": 0.5398175725986597,
+    "s06": 0.7008281209735986,
+    "s07": 0.5701061245365042,
+    "s10": 0.47774958339645507,
+    "s12": 0.539990109518985
+   },
+   "n_fits": 9,
+   "params_trainable": 2562,
+   "best_epochs_one_based": [
+    190,
+    36,
+    138,
+    215,
+    55,
+    94,
+    56,
+    61,
+    21
+   ],
+   "median_best_epoch": 61,
+   "fit_ids": [
+    "eeg-lr1e-3-do0.5-b0p3_40-wce-5575260a__cv0__s42",
+    "eeg-lr1e-3-do0.5-b0p3_40-wce-5575260a__cv0__s43",
+    "eeg-lr1e-3-do0.5-b0p3_40-wce-5575260a__cv0__s44",
+    "eeg-lr1e-3-do0.5-b0p3_40-wce-5575260a__cv1__s42",
+    "eeg-lr1e-3-do0.5-b0p3_40-wce-5575260a__cv1__s43",
+    "eeg-lr1e-3-do0.5-b0p3_40-wce-5575260a__cv1__s44",
+    "eeg-lr1e-3-do0.5-b0p3_40-wce-5575260a__cv2__s42",
+    "eeg-lr1e-3-do0.5-b0p3_40-wce-5575260a__cv2__s43",
+    "eeg-lr1e-3-do0.5-b0p3_40-wce-5575260a__cv2__s44"
+   ],
+   "cv_pooled_auroc": 0.5916910622802164,
+   "cv_brier": 0.25298407744114915,
+   "cv_nll": 0.720057514004357,
+   "cv_mean_p_label0": 0.4480598483912425,
+   "cv_mean_p_label1": 0.5102609061809502
+  },
+  {
+   "candidate_id": "cbramod:cb_flat_frozen@0.3-75",
+   "recipe_id": "cb-flat-frozen-bbnone-hl5e-4-b0p3_75-wce-b13941df",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "frozen",
+    "backbone_lr": null,
+    "head_lr": 0.0005,
+    "band": "0.3-75",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "score": 0.5665513094911016,
+   "per_participant_seed_mean": {
+    "s03": 0.5887672565833485,
+    "s04": 0.6593960117896288,
+    "s05": 0.5551439563167039,
+    "s06": 0.5534413287417715,
+    "s07": 0.5504730852832118,
+    "s10": 0.5116396505579962,
+    "s12": 0.5469978771650504
+   },
+   "n_fits": 9,
+   "params_trainable": 4401002,
+   "best_epochs_one_based": [
+    6,
+    13,
+    12,
+    14,
+    20,
+    18,
+    1,
+    2,
+    1
+   ],
+   "median_best_epoch": 12,
+   "fit_ids": [
+    "cb-flat-frozen-bbnone-hl5e-4-b0p3_75-wce-b13941df__cv0__s42",
+    "cb-flat-frozen-bbnone-hl5e-4-b0p3_75-wce-b13941df__cv0__s43",
+    "cb-flat-frozen-bbnone-hl5e-4-b0p3_75-wce-b13941df__cv0__s44",
+    "cb-flat-frozen-bbnone-hl5e-4-b0p3_75-wce-b13941df__cv1__s42",
+    "cb-flat-frozen-bbnone-hl5e-4-b0p3_75-wce-b13941df__cv1__s43",
+    "cb-flat-frozen-bbnone-hl5e-4-b0p3_75-wce-b13941df__cv1__s44",
+    "cb-flat-frozen-bbnone-hl5e-4-b0p3_75-wce-b13941df__cv2__s42",
+    "cb-flat-frozen-bbnone-hl5e-4-b0p3_75-wce-b13941df__cv2__s43",
+    "cb-flat-frozen-bbnone-hl5e-4-b0p3_75-wce-b13941df__cv2__s44"
+   ],
+   "cv_pooled_auroc": 0.5520860604852545,
+   "cv_brier": 0.30407946692054044,
+   "cv_nll": 1.5103538965526788,
+   "cv_mean_p_label0": 0.3714593777178003,
+   "cv_mean_p_label1": 0.42185255257763554
+  },
+  {
+   "candidate_id": "eegnet:eeg_lr0.001_do0.5@0.3-75",
+   "recipe_id": "eeg-lr1e-3-do0.5-b0p3_75-wce-00bb32e7",
+   "recipe": {
+    "arch": "eegnet",
+    "lr": 0.001,
+    "dropout": 0.5,
+    "band": "0.3-75",
+    "loss": "weighted_ce",
+    "optimizer": "adam",
+    "weight_decay": 0.0,
+    "batch_size": 64,
+    "max_epochs": 300,
+    "patience": 40,
+    "scheduler": "none",
+    "grad_clip": null,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 25,
+    "model": {
+     "F1": 8,
+     "D": 2,
+     "F2": 16,
+     "kern_length": 128,
+     "sep_kern_length": 16,
+     "pool1": 4,
+     "pool2": 8,
+     "norm_rate": 0.25
+    },
+    "input_view": "eeg256",
+    "scaling": {
+     "kind": "train_global_std"
+    },
+    "initialization": "seeded_random"
+   },
+   "score": 0.5974319352519737,
+   "per_participant_seed_mean": {
+    "s03": 0.6014413428206532,
+    "s04": 0.7667288385373491,
+    "s05": 0.5443162074956565,
+    "s06": 0.6757502284067748,
+    "s07": 0.5650811916634702,
+    "s10": 0.48456042013836287,
+    "s12": 0.5441453177015486
+   },
+   "n_fits": 9,
+   "params_trainable": 2562,
+   "best_epochs_one_based": [
+    102,
+    36,
+    21,
+    37,
+    85,
+    94,
+    91,
+    61,
+    21
+   ],
+   "median_best_epoch": 61,
+   "fit_ids": [
+    "eeg-lr1e-3-do0.5-b0p3_75-wce-00bb32e7__cv0__s42",
+    "eeg-lr1e-3-do0.5-b0p3_75-wce-00bb32e7__cv0__s43",
+    "eeg-lr1e-3-do0.5-b0p3_75-wce-00bb32e7__cv0__s44",
+    "eeg-lr1e-3-do0.5-b0p3_75-wce-00bb32e7__cv1__s42",
+    "eeg-lr1e-3-do0.5-b0p3_75-wce-00bb32e7__cv1__s43",
+    "eeg-lr1e-3-do0.5-b0p3_75-wce-00bb32e7__cv1__s44",
+    "eeg-lr1e-3-do0.5-b0p3_75-wce-00bb32e7__cv2__s42",
+    "eeg-lr1e-3-do0.5-b0p3_75-wce-00bb32e7__cv2__s43",
+    "eeg-lr1e-3-do0.5-b0p3_75-wce-00bb32e7__cv2__s44"
+   ],
+   "cv_pooled_auroc": 0.5835101023624079,
+   "cv_brier": 0.2590635533566875,
+   "cv_nll": 0.7416253357066797,
+   "cv_mean_p_label0": 0.46251721595938516,
+   "cv_mean_p_label1": 0.5169303638067644
+  }
+ ],
+ "winners": {
+  "cbramod": {
+   "candidate_id": "cbramod:cb_flat_frozen@1-20",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "frozen",
+    "backbone_lr": null,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "recipe_id": "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7",
+   "score": 0.5787078412832252,
+   "tied_within_tolerance": [
+    "cbramod:cb_flat_frozen@1-20"
+   ]
+  },
+  "eegnet": {
+   "candidate_id": "eegnet:eeg_lr0.001_do0.5@1-20",
+   "recipe": {
+    "arch": "eegnet",
+    "lr": 0.001,
+    "dropout": 0.5,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "optimizer": "adam",
+    "weight_decay": 0.0,
+    "batch_size": 64,
+    "max_epochs": 300,
+    "patience": 40,
+    "scheduler": "none",
+    "grad_clip": null,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 25,
+    "model": {
+     "F1": 8,
+     "D": 2,
+     "F2": 16,
+     "kern_length": 128,
+     "sep_kern_length": 16,
+     "pool1": 4,
+     "pool2": 8,
+     "norm_rate": 0.25
+    },
+    "input_view": "eeg256",
+    "scaling": {
+     "kind": "train_global_std"
+    },
+    "initialization": "seeded_random"
+   },
+   "recipe_id": "eeg-lr1e-3-do0.5-b1_20-wce-ad833d47",
+   "score": 0.6117677354035893,
+   "tied_within_tolerance": [
+    "eegnet:eeg_lr0.001_do0.5@1-20"
+   ]
+  }
+ }
+}
