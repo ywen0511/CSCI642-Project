@@ -175,6 +175,14 @@ def main():
     def fp(p):
         return "n/a" if not np.isfinite(p) else (f"{p:.3f}" if p >= 0.001 else f"{p:.0e}")
 
+    def fpl(p):  # LaTeX (math mode) version
+        if not np.isfinite(p):
+            return "\\text{n/a}"
+        if p >= 0.001:
+            return f"{p:.3f}"
+        m, e = f"{p:.0e}".split("e")
+        return f"{m}\\times10^{{{int(e)}}}"
+
     # robot vs cursor, same participants: best variant of each condition, and per model family
     if "errphri_robot" in dss and "errphri_cursor" in dss:
         kr, kc = best_key("errphri_robot"), best_key("errphri_cursor")
@@ -183,7 +191,7 @@ def main():
         x, y = np.array([a1[i] for i in u]), np.array([a2[i] for i in u])
         p = float(wilcoxon(x, y).pvalue)
         nums += [macro("CursorMinusRobot", f3(np.mean(x - y))), macro("CursorGtRobot", f"{int((x > y).sum())}/{len(u)}"),
-                 macro("CursorRobotP", fp(p))]
+                 macro("CursorRobotP", fpl(p))]
         txt.append(f"robot vs cursor (same {len(u)} participants, best variant each): cursor-robot = {np.mean(x-y):+.3f}, "
                    f"cursor>robot in {int((x>y).sum())}/{len(u)}, Wilcoxon p={fp(p)}")
     # foundation vs compact: best foundation minus best compact per dataset
@@ -294,7 +302,7 @@ def main():
                 be = next((lv[i - 1] + (lv[i] - lv[i - 1]) * (0 - mg[i - 1]) / (mg[i] - mg[i - 1])
                            for i in range(1, len(lv)) if mg[i - 1] < 0 <= mg[i]), None)
                 tg = {"reach": "Reach", "push": "Push", "push_staged": "PushStaged"}[t]
-                nums += [macro(f"RLRho{tg}", f"{rho:.2f}"), macro(f"RLRhoP{tg}", fp(p)),
+                nums += [macro(f"RLRho{tg}", f"{rho:.2f}"), macro(f"RLRhoP{tg}", fpl(p)),
                          macro(f"RLBreakEven{tg}", f"{be:.2f}" if be is not None else
                                ("$<$0.55" if mg[0] >= 0 else "$>$1.0"))]
                 txt.append(f"RL {t}: Spearman(AUROC, paired AUC gain vs sparse) rho={rho:.2f} p={fp(p)} (n={len(xs)} runs); "
