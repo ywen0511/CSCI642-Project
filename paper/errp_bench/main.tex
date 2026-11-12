@@ -16,6 +16,44 @@
 % numbers that are not measured yet are rendered visibly; the final PDF must contain none
 \newcommand{\tbd}[1]{\textcolor{red}{[tbd: #1]}}
 \input{generated/numbers.tex}
+% fallback for every measured macro: renders a visible [tbd] if the generator did not define it
+\providecommand{\BestErrpHriCursor}{\tbd{BestErrpHriCursor}}
+\providecommand{\BestErrpHriRobot}{\tbd{BestErrpHriRobot}}
+\providecommand{\BestInterHri}{\tbd{BestInterHri}}
+\providecommand{\BestModelErrpHriCursor}{\tbd{BestModelErrpHriCursor}}
+\providecommand{\BestModelErrpHriRobot}{\tbd{BestModelErrpHriRobot}}
+\providecommand{\CursorGtRobot}{\tbd{CursorGtRobot}}
+\providecommand{\CursorMinusRobot}{\tbd{CursorMinusRobot}}
+\providecommand{\CursorRobotP}{\tbd{CursorRobotP}}
+\providecommand{\EADeltaErrpHriCursor}{\tbd{EADeltaErrpHriCursor}}
+\providecommand{\EADeltaInterHri}{\tbd{EADeltaInterHri}}
+\providecommand{\EAFMDelta}{\tbd{EAFMDelta}}
+\providecommand{\EAMeanDelta}{\tbd{EAMeanDelta}}
+\providecommand{\EANModelsErrpHriCursor}{\tbd{EANModelsErrpHriCursor}}
+\providecommand{\EAPosFrac}{\tbd{EAPosFrac}}
+\providecommand{\EarlyEEGNetNone}{\tbd{EarlyEEGNetNone}}
+\providecommand{\EarlyXdawnNone}{\tbd{EarlyXdawnNone}}
+\providecommand{\EAScratchDelta}{\tbd{EAScratchDelta}}
+\providecommand{\EASigNegInterHri}{\tbd{EASigNegInterHri}}
+\providecommand{\EASigPosErrpHriCursor}{\tbd{EASigPosErrpHriCursor}}
+\providecommand{\EnsAllBeatsBest}{\tbd{EnsAllBeatsBest}}
+\providecommand{\EnsAllMeanRank}{\tbd{EnsAllMeanRank}}
+\providecommand{\EnsAllSigBetter}{\tbd{EnsAllSigBetter}}
+\providecommand{\EnsAllSigWorse}{\tbd{EnsAllSigWorse}}
+\providecommand{\EnsAllVsBestMean}{\tbd{EnsAllVsBestMean}}
+\providecommand{\EnsTopMeanRank}{\tbd{EnsTopMeanRank}}
+\providecommand{\FMMinusCompactMean}{\tbd{FMMinusCompactMean}}
+\providecommand{\FMWinsDatasets}{\tbd{FMWinsDatasets}}
+\providecommand{\GPUHours}{\tbd{GPUHours}}
+\providecommand{\NEpochsTotal}{\tbd{NEpochsTotal}}
+\providecommand{\NFitsTotal}{\tbd{NFitsTotal}}
+\providecommand{\NSeedsMain}{\tbd{NSeedsMain}}
+\providecommand{\NSubjectsTotal}{\tbd{NSubjectsTotal}}
+\providecommand{\NVariantsMax}{\tbd{NVariantsMax}}
+\providecommand{\RLBreakEvenReach}{\tbd{RLBreakEvenReach}}
+\providecommand{\RLRhoPReach}{\tbd{RLRhoPReach}}
+\providecommand{\RLRhoReach}{\tbd{RLRhoReach}}
+\providecommand{\RLSeedsText}{\tbd{RLSeedsText}}
 
 \title{ErrP-Bench: Do EEG Foundation Models Detect Errors?\\
 Benchmarking Error-Related Potential Decoding Across Paradigms\\ and Its Value as Implicit Feedback for Robot Learning}

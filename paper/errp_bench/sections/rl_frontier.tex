@@ -1,0 +1,47 @@
+\section{How good must an error decoder be? A decoder-quality frontier for learning}
+\label{sec:rl}
+
+Decoding accuracy is a proxy. The quantity that matters for implicit feedback is whether a learner improves
+when its reward includes the decoded error probability. We measure this directly, as a function of decoder
+quality, with real reinforcement learning.
+
+\paragraph{Setup.} Soft actor-critic~\citep{haarnoja2018sac} (Stable-Baselines3~\citep{raffin2021sb3}) learns
+FetchReach and FetchPush (Gymnasium-Robotics~\citep{delazcano2024gymnasiumrobotics,plappert2018multigoal},
+MuJoCo~\citep{todorov2012mujoco}) from the sparse task reward plus ErrP feedback. Every five simulator steps,
+the change in the task distance (gripper--goal for Reach, object--goal for Push) labels the segment: an increase
+beyond 1\,mm is an error, a decrease beyond 1\,mm a correct step, anything else yields no feedback. For a labelled
+segment with label $y$, a decoder reports $p_{\text{err}}$ and the reward receives $w\,(0.5-p_{\text{err}})$ with
+$w=1$, the value frozen in our earlier validation study. Budgets are 150k environment steps (Reach) and 500k
+(Push); evaluation uses 100 fixed goals, a deterministic policy and the sparse success criterion every 10k steps.
+Learning speed is the normalized area under the success curve (AUC), the primary metric because final success
+saturates on Reach.
+
+\paragraph{Decoders of controlled quality.} To trace the frontier we replace the EEG decoder with a decoder of
+exactly known AUROC. Under the equal-variance binormal model~\citep{green1966signal,hanley1982meaning}, a margin
+$z \sim \mathcal{N}(\pm d'/2, 1)$ with $d'=\sqrt{2}\,\Phi^{-1}(\text{AUROC})$ has the target AUROC; it is turned
+into a Bayes-calibrated probability with base rate $\pi=0.35$, the error prevalence on which the real decoders are
+calibrated. AUROC levels are 0.55, 0.60, 0.65, 0.70, 0.80, 0.90 and 1.0 (exact labels), with sparse and dense
+($10\times$ distance decrease) reward as references. Seeds per condition: \RLSeedsText{}. Because the
+object rarely moves early in FetchPush, the object--goal rule yields little feedback there; a supplementary
+\emph{staged} variant labels segments by the change in gripper--object plus object--goal distance (its sparse
+reference is the same sparse run, since the rule does not affect sparse training).
+
+\paragraph{Results.} \input{sections/rl_results_text}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/frontier.pdf}
+\caption{Decoder-quality frontier. Normalized success AUC (mean $\pm$ SD over five seeds) of SAC with ErrP
+feedback of controlled AUROC; horizontal lines: sparse and dense reward. Vertical lines: the cross-subject AUROC
+of the best ErrP-Bench decoder on each dataset.}
+\label{fig:frontier}
+\end{figure}
+
+\begin{table}[t]
+\centering
+\caption{Normalized success AUC (mean $\pm$ SD over seeds) and its paired difference to the sparse-reward run of
+the same seed ($k/n$: seeds with a positive difference).}
+\label{tab:rl}
+\scriptsize
+\resizebox{\linewidth}{!}{\input{generated/table_rl.tex}}
+\end{table}

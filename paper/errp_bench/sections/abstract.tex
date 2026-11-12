@@ -1,0 +1,15 @@
+Error-related potentials (ErrPs), the brain's response to observed or committed errors, are a long-standing
+candidate for implicit human feedback to robots. Two open questions decide whether this is practical: can
+current decoders, including EEG foundation models, detect ErrPs in a new person without calibration, and how
+good must such a decoder be before its feedback improves learning? We introduce \textbf{ErrP-Bench}, a
+cross-subject benchmark of five public ErrP datasets spanning four error paradigms (\NSubjectsTotal{}
+participants, \NEpochsTotal{} epochs), on which we evaluate nine decoders (a Riemannian pipeline, five compact
+networks and three pretrained foundation models), each with and without unsupervised per-participant Euclidean
+alignment, in \NFitsTotal{} fits. Pretrained models do not outperform compact decoders (best foundation minus
+best compact model: \FMMinusCompactMean{} AUROC on average). The observed agent matters more than the decoder:
+the same participants yield \BestErrpHriCursor{} AUROC when watching a cursor err and \BestErrpHriRobot{} when
+watching a robot err. We then measure a decoder-quality frontier with soft actor-critic on simulated robot
+reaching, using feedback of controlled AUROC: the benefit of ErrP reward grows with decoder quality
+(Spearman $\rho=\RLRhoReach{}$, $p=\RLRhoPReach{}$) and turns positive only near AUROC \RLBreakEvenReach{}, a
+level reached cross-subject by decoders of observed cursor errors but not of observed robot errors. Below it,
+ErrP feedback slows learning. Code, prepared-data recipes and per-trial predictions are released.

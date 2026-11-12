@@ -19,7 +19,8 @@ import numpy as np
 from scipy.stats import wilcoxon
 
 NICE = {"xdawn_rg": "xDAWN+RG", "eegnet": "EEGNet", "eeginception_erp": "EEG-Inception", "eegnex": "EEGNeX",
-        "eegconformer": "EEG-Conformer", "ctnet": "CTNet", "labram": "LaBraM", "eegpt": "EEGPT", "cbramod": "CBraMod"}
+        "eegconformer": "EEG-Conformer", "ctnet": "CTNet", "labram": "LaBraM", "eegpt": "EEGPT", "cbramod": "CBraMod",
+        "ens_all": "ErrP-Ens (all)", "ens_top3": "ErrP-Ens (val-top3)"}
 PRETRAINED = {"labram", "eegpt", "cbramod"}
 DS_NICE = {"errphri_robot": "ErrP-HRI robot", "errphri_cursor": "ErrP-HRI cursor", "bnci2015_013": "BNCI 2015-013",
            "erpcore_ern": "ERP CORE ERN", "interhri": "IntEr-HRI"}
@@ -60,12 +61,17 @@ def main():
     for key, seeds in sorted(data.items()):
         ds = key[0]
         nf = a.expect_folds.get(ds)
-        ok = all(len(folds_seen[key][s]) == nf for s in seeds) if nf else True
+        # a seed counts only if all its folds finished; partial seeds are dropped (listed in variants.json)
+        partial = sorted(s for s in seeds if nf and len(folds_seen[key][s]) != nf)
+        seeds = {s: v for s, v in seeds.items() if s not in partial}
+        ok = bool(seeds)
+        if not seeds:
+            seeds = data[key]
         subs = sorted(set.intersection(*[set(v) for v in seeds.values()]))
         per_seed = [np.mean([seeds[s][u] for u in subs]) for s in sorted(seeds)]
         per_subject = {u: float(np.mean([seeds[s][u] for s in seeds])) for u in subs}
         row = {"dataset": ds, "model": key[1], "align": key[2], "n_seeds": len(seeds), "n_subjects": len(subs),
-               "complete": ok, "macro_auroc_mean": float(np.mean(per_seed)),
+               "complete": ok, "seeds": sorted(seeds), "partial_seeds_dropped": partial, "macro_auroc_mean": float(np.mean(per_seed)),
                "macro_auroc_sd": float(np.std(per_seed, ddof=1)) if len(per_seed) > 1 else 0.0,
                "per_seed": per_seed, "per_subject": per_subject,
                "mean_wall_s": float(np.mean(walls[key])), "total_wall_s": float(np.sum(walls[key]))}

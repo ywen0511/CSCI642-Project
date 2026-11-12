@@ -33,6 +33,12 @@ We address both gaps with \textbf{ErrP-Bench}, a benchmark and measurement study
   the decoder quality at which ErrP reward starts to help, and places every decoder of the benchmark on it.
 \end{itemize}
 
-\textbf{Findings.} \FindingOne{} \FindingTwo{} \FindingThree{}
+\textbf{Findings.} (1) Pretrained EEG foundation models do not beat compact decoders on cross-subject ErrP
+detection; a Riemannian pipeline that trains in seconds is competitive on every dataset. (2) The observed
+agent matters more than the decoder: the same participants give \BestErrpHriCursor{} AUROC for cursor errors
+and \BestErrpHriRobot{} for robot errors. (3) Unsupervised per-participant alignment helps on some paradigms
+and hurts on others, and a label-free rank ensemble of aligned decoders is a robust default. (4) On simulated
+reaching, ErrP feedback helps only above about AUROC \RLBreakEvenReach{} and slows learning below it, so
+current cross-subject decoders of observed robot errors sit on the wrong side of the frontier.
 
 All code, prepared-data recipes, per-trial predictions and checkpoints are released.

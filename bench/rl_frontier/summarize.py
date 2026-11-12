@@ -35,13 +35,15 @@ SPARSE_FROM = {"push_staged": "push"}
 LEVELS = (0.55, 0.60, 0.65, 0.70, 0.80, 0.90, 1.0)
 CONDS = ("sparse", "dense") + tuple(f"auroc{a:.2f}" for a in LEVELS)
 SEEDS = range(5)
+# per-task seed lists (override with --seeds '{"reach": 10}'); Reach was extended to 10 seeds
+SEEDS_BY_TASK = {}
 
 
 def load_runs(root, allow_smoke=False):
     rows, missing = [], []
     for task in TASKS:
         for cond in CONDS:
-            for seed in SEEDS:
+            for seed in SEEDS_BY_TASK.get(task, SEEDS):
                 d = Path(root) / task / cond / f"seed{seed}"
                 if cond == "sparse" and task in SPARSE_FROM:
                     continue
@@ -150,7 +152,7 @@ def write_outputs(rows, missing, table, out):
                                 ref.get("sparse", {}).get("normalized_auc_mean"),
                                 ref.get("dense", {}).get("normalized_auc_mean")])
     lines = ["# Decoder-quality -> RL-benefit frontier", "",
-             "Mean ± SD over RL seeds (0-4). Δ = paired (same seed) difference vs sparse; "
+             "Mean ± SD over RL seeds (" + ", ".join(f"{t}: 0-{max(SEEDS_BY_TASK.get(t, SEEDS))}" for t in TASKS) + "). Δ = paired (same seed) difference vs sparse; "
              "`+k/n` = seeds with a positive difference; p = exact two-sided sign test. "
              "AUROC 1.00 = ideal feedback (p = label). Realised AUROC = AUROC of delivered p_error "
              "vs simulated label over all feedback events of the run.", ""]
@@ -228,7 +230,9 @@ def main():
     p.add_argument("--runs", default="/data/rtxw01/nbak/robot_intel/kztrgg/projs/code/errp-bench/rl_runs/sweep")
     p.add_argument("--out", default="/data/rtxw01/nbak/robot_intel/kztrgg/projs/code/errp-bench/results/rl_frontier")
     p.add_argument("--allow-smoke", action="store_true", help="TESTING ONLY: accept shortened smoke runs")
+    p.add_argument("--seeds", type=json.loads, default="{}", help='seeds per task, e.g. {"reach": 10}')
     a = p.parse_args()
+    SEEDS_BY_TASK.update({t: range(n) for t, n in a.seeds.items()})
     rows, missing = load_runs(a.runs, a.allow_smoke)
     if not rows:
         raise SystemExit(f"No completed runs under {a.runs}")

@@ -1,0 +1,43 @@
+\section{Statistical comparisons}
+\label{app:stats}
+
+For each dataset, the best variant of Table~\ref{tab:main} is compared with every other complete variant by a
+two-sided Wilcoxon signed-rank test over participants (seed-averaged per-participant AUROC), Holm-corrected
+within the dataset. With 6 (BNCI 2015-013) or 8 (IntEr-HRI) participants the smallest attainable two-sided
+$p$ is 0.031 and 0.008; after Holm correction over about twenty comparisons no difference on these two datasets
+can reach $p<0.05$, so non-significance there is not evidence of equivalence.
+
+\begin{table}[h]
+\centering
+\caption{Best variant per dataset versus all others.}
+\scriptsize
+\input{generated/table_bvo.tex}
+\end{table}
+
+\section{Data preparation details}
+\label{app:data}
+
+\textbf{ErrP-HRI}~\citep{ehrlich2019feasibility}: robot and cursor sessions of the same 12 participants;
+epochs $[0,2)$\,s after the machine action; mastoid reference as recorded. \textbf{BNCI 2015-013}: 6
+participants, 64 channels, common average reference; event codes 5/10 (correct) and 6/9 (error), epochs
+$[0,1)$\,s. \textbf{ERP CORE ERN}: 40 participants, P9/P10 reference as in the ERP CORE pipeline, response-locked
+epochs $[-0.2,0.8)$\,s; one participant has only two error trials and is kept. \textbf{IntEr-HRI}: 8
+participants, 65 channels, common average reference with FCz restored; error marker S96, correct marker S48,
+epochs $[0,1)$\,s; the early-window control uses $[0,0.5)$\,s at 256\,Hz. All filtering is applied to the
+continuous recording before epoching. Prepared arrays are validated (shapes, labels, per-participant counts,
+absence of NaNs) and a within-dataset LDA sanity check is run before any model is trained.
+
+\section{Compute and coverage}
+\label{app:compute}
+
+All decoders were trained on NVIDIA A100 GPUs (xDAWN on CPU); the RL frontier used one CPU core per run.
+The benchmark comprises \NFitsTotal{} cross-subject fits (about \GPUHours{} GPU-hours). EEGPT is about an order
+of magnitude slower per epoch than the other foundation models; within the compute window of this study it was
+run with fewer seeds, and some of its alignment conditions are missing (marked in Table~\ref{tab:main}).
+ERP CORE ERN networks were run with one seed. A complete per-variant listing (seeds, participants, completeness)
+is in the released \texttt{results\_summary.txt}. Partially finished seeds are excluded, never imputed.
+
+\section{Reproducibility}
+Every number in this paper is written by \texttt{bench/make\_paper.py} from the released result files;
+no number is typed by hand. Fold assignments, configurations and per-trial test predictions of every fit are
+released, so that every table can be recomputed without retraining.

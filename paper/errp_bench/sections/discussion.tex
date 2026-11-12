@@ -1,0 +1,29 @@
+\section{Discussion and limitations}
+\label{sec:discussion}
+
+\paragraph{What the benchmark says about implicit feedback.} Two numbers have to meet for ErrP feedback to help
+a learner: the AUROC a decoder reaches for a new person, and the AUROC the learner needs. ErrP-Bench measures
+the first across paradigms; the frontier measures the second. For observed robot errors, the paradigm that
+motivates the field, they do not meet in our study: the best cross-subject decoder (\BestErrpHriRobot{}) is far
+below the break-even level on reaching (\RLBreakEvenReach{}), and feedback at that quality slowed learning
+relative to the sparse task reward. This agrees with a preliminary experiment of ours in which feedback from a
+real cross-subject decoder of robot errors gave no gain over the sparse reward on the same task. It suggests that progress will come from paradigms and interfaces that make
+errors more salient to the observer, or from per-user calibration, rather than from larger pretrained decoders.
+
+\paragraph{Limitations.}
+(i) The frontier uses synthetic feedback of controlled AUROC under an equal-variance binormal model with
+independent noise per segment; real decoder errors are correlated across trials and participants, which could
+move the break-even point. (ii) Two simulated tasks and one RL algorithm with a fixed feedback weight
+($w=1$, frozen beforehand) are studied; a learner that discounts unreliable feedback could lower the
+break-even AUROC. (iii) We did not tune hyperparameters for any decoder; tuning could favour the larger
+models, although it would also break the equal-budget comparison. (iv) The foundation-model results depend on
+our fine-tuning recipe (full fine-tuning, a new linear head, a short schedule). (v) EEGPT, the slowest model,
+was run with fewer seeds and conditions than the others (Table~\ref{tab:main}). (vi) In IntEr-HRI, a motor
+response falls inside most error windows; the early-window control shows that much, but not necessarily all,
+of the signal precedes it. (vii) Cross-subject evaluation is our primary protocol; within-subject
+calibration would reach higher AUROC and is not covered by the frontier placement.
+
+\paragraph{Ethics and data.} All datasets are public recordings collected by their authors under their own
+ethics approvals; we redistribute no EEG data, only preparation code. The ErrP-HRI dataset declares no
+license; the others are released under Creative Commons licenses (BNCI 2015-013: CC BY-NC-ND 4.0; ERP CORE:
+CC BY-SA 4.0; IntEr-HRI: CC BY 4.0).
