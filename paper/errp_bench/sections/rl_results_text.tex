@@ -1,0 +1,23 @@
+On FetchReach (Figure~\ref{fig:frontier}, Table~\ref{tab:rl}), the benefit of ErrP feedback rises
+monotonically with decoder quality: across all runs, the paired gain in normalized success AUC over the sparse
+run of the same seed is rank-correlated with feedback AUROC (Spearman $\rho=\RLRhoReach{}$, $p=\RLRhoPReach{}$).
+Exact feedback raises the AUC from \RLAUCReachSparse{} to \RLAUCReachExact{} (\RLPosReachExact{} seeds better,
+sign test $p=\RLSignPReachExact{}$), about half of the gain of the dense reward (\RLAUCReachDense{}). The mean gain
+crosses zero at AUROC \RLBreakEvenReach{} (linear interpolation between the measured levels). Below this point the
+feedback is harmful: at AUROC 0.55 the AUC drops to \RLAUCReachLow{} (\RLGainReachLow{}, \RLPosReachLow{} seeds
+better, $p=\RLSignPReachLow{}$). Final success saturates for every condition (at least \RLSuccReachLow{}), so the
+effect is on learning speed. Noisy feedback is therefore not merely uninformative; a likely reason is that, with a
+fixed weight, it adds a reward term that is only weakly correlated with progress and that the critic must
+fit nonetheless.
+
+On FetchPush, SAC without hindsight relabelling does not learn the task within 500k steps in any condition
+(final success \RLSuccPushSparse{} with sparse reward, \RLSuccPushDense{} with dense reward,
+\RLSuccPushExact{} with exact ErrP feedback), and no condition differs reliably from sparse. Push therefore shows
+that ErrP feedback of any quality does not substitute for exploration when the learner rarely moves the object;
+it does not locate a frontier. The staged label rule, which provides several times more feedback events, gives
+the same picture (Table~\ref{tab:rl}, right).
+
+Placing the benchmark on the Reach frontier (vertical lines in Figure~\ref{fig:frontier}): the best
+cross-subject decoders of cursor errors, cursor-monitoring errors, response errors and orthosis errors lie above
+the break-even point, whereas the best decoder of observed robot errors (\BestErrpHriRobot{}) lies well below
+it, in the range where feedback slowed learning.

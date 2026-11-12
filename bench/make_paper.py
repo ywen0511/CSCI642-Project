@@ -308,6 +308,15 @@ def main():
                 txt.append(f"RL {t}: Spearman(AUROC, paired AUC gain vs sparse) rho={rho:.2f} p={fp(p)} (n={len(xs)} runs); "
                            f"mean gain per level " + ", ".join(f"{l:.2f}:{m:+.3f}" for l, m in zip(lv, mg)) +
                            f"; break-even AUROC {be if be is None else round(be, 3)}")
+                CM = {"sparse": "Sparse", "dense": "Dense", "auroc1.00": "Exact", "auroc0.55": "Low", "auroc0.90": "Ninety"}
+                for e in T:
+                    if e["task"] == t and e["condition"] in CM:
+                        nums += [macro(f"RLAUC{tg}{CM[e['condition']]}", f"{e['normalized_auc_mean']:.3f}"),
+                                 macro(f"RLSucc{tg}{CM[e['condition']]}", f"{e['final_success_mean']:.2f}")]
+                        if e["condition"] != "sparse":
+                            nums += [macro(f"RLGain{tg}{CM[e['condition']]}", f"{e['d_normalized_auc_mean']:+.3f}"),
+                                     macro(f"RLPos{tg}{CM[e['condition']]}", f"{e['d_normalized_auc_npos']}/{e['d_normalized_auc_npaired']}"),
+                                     macro(f"RLSignP{tg}{CM[e['condition']]}", f"{e['d_normalized_auc_sign_p']:.3f}")]
                 for e in T:
                     if e["task"] == t:
                         txt.append(f"   {t} {e['condition']:10s} n={e['n']} normAUC={e['normalized_auc_mean']:.3f}±{e['normalized_auc_sd']:.3f} "
