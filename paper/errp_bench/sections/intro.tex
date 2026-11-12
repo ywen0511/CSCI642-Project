@@ -1,0 +1,38 @@
+\section{Introduction}
+\label{sec:intro}
+
+When a person watches a machine make a mistake, or makes one themselves, the brain produces an
+error-related potential (ErrP): a fronto-central negativity followed by a positivity within a few hundred
+milliseconds of the error~\citep{chavarriaga2014errare}. Because ErrPs arise without any explicit action,
+they have long been proposed as an \emph{implicit} reward signal for teaching robots and
+interfaces~\citep{iturrate2015teaching,kim2017intrinsic,salazargomez2017correcting,xu2021accelerating}.
+Two developments make this question timely. First, EEG \emph{foundation models} pretrained on thousands of
+hours of recordings~\citep{jiang2024labram,wang2024eegpt,wang2025cbramod} promise decoders that transfer
+to new people without calibration. Second, learning from human feedback has become a central tool in
+machine learning~\citep{christiano2017deep}, and a brain signal would make such feedback free.
+
+Whether either promise holds for ErrPs is unclear. Existing EEG foundation-model benchmarks cover many
+paradigms but at most one ErrP dataset~\citep{lu2026omnieegbench,liu2026eegfmcompass}, and ErrP studies typically
+evaluate a single dataset with its own protocol. On the RL side, studies of ErrP-based reward report
+gains from simulated or near-ideal feedback, but rarely ask how good a \emph{real} cross-subject decoder must
+be before its feedback helps.
+
+We address both gaps with \textbf{ErrP-Bench}, a benchmark and measurement study:
+\begin{itemize}
+\item \textbf{Five ErrP datasets across four error paradigms}: observed robot errors and observed cursor
+  errors~\citep{ehrlich2019feasibility}, cursor-monitoring errors~\citep{chavarriaga2010learning},
+  self-generated response errors (ERN, flanker task)~\citep{kappenman2021erpcore}, and errors introduced by an
+  arm orthosis~\citep{kueper2024eegemg}; \NSubjectsTotal{} participants and \NEpochsTotal{} epochs in total, all
+  used in full under one preprocessing and evaluation protocol.
+\item \textbf{Nine decoders} from three families: a Riemannian pipeline~\citep{rivet2009xdawn,barachant2012multiclass},
+  five compact networks trained from scratch~\citep{lawhern2018eegnet,santamariavazquez2020eeginception,chen2024eegnex,song2023eegconformer,zhao2024ctnet},
+  and three pretrained foundation models (LaBraM, EEGPT, CBraMod), each with and without unsupervised
+  per-subject Euclidean alignment~\citep{he2020transfer}; \NFitsTotal{} cross-subject fits.
+\item \textbf{A decoder-quality frontier for learning from ErrP feedback}: soft actor-critic~\citep{haarnoja2018sac}
+  on FetchReach and FetchPush~\citep{plappert2018multigoal} with feedback of controlled AUROC, which locates
+  the decoder quality at which ErrP reward starts to help, and places every decoder of the benchmark on it.
+\end{itemize}
+
+\textbf{Findings.} \FindingOne{} \FindingTwo{} \FindingThree{}
+
+All code, prepared-data recipes, per-trial predictions and checkpoints are released.

@@ -1,0 +1,64 @@
+\section{ErrP-Bench}
+\label{sec:bench}
+
+\subsection{Datasets}
+Table~\ref{tab:datasets} lists the five dataset conditions. All are public and used in full: every
+participant and every recording of the paradigm. Labels come from each dataset's own event documentation.
+
+\begin{table}[t]
+\centering
+\caption{ErrP-Bench datasets. ``Error'' is the label-1 class; epochs are time-locked to the error-eliciting
+event (feedback, machine action, response or orthosis perturbation).}
+\label{tab:datasets}
+\small
+\input{generated/table_datasets.tex}
+\end{table}
+
+\textbf{ErrP-HRI}~\citep{ehrlich2019feasibility}: participants watch a robot (\emph{robot}) or a cursor
+(\emph{cursor}) execute a direction they selected; in machine-error trials the executed movement differs from the
+selected one. 12 participants per condition, 27 channels, mastoid reference. We use both conditions as separate
+datasets, so that the effect of the observed agent is measured with the participants held fixed.
+\textbf{BNCI 2015-013}~\citep{chavarriaga2010learning}: participants monitor a cursor that moves toward a target
+and errs in about 20\% of steps. \textbf{ERP CORE ERN}~\citep{kappenman2021erpcore}: 40 participants perform a
+flanker task; epochs are locked to the participant's own response, incorrect responses are errors.
+\textbf{IntEr-HRI}~\citep{kueper2024eegemg,chari2024interhri}: an active orthosis moves the participant's arm
+and in some trials briefly reverses (error); correct events are the authors' matched mid-movement markers.
+Participants squeezed a ball when they noticed an error; in about 90\% of error epochs the squeeze falls inside
+the window (median 0.72\,s after the error), so this dataset measures an error-plus-response signal; we report a
+control restricted to the first 0.5\,s.
+
+\textbf{Preprocessing} is identical in kind across datasets: scalp channels only, zero-phase FIR band-pass
+1--20\,Hz~\citep{gramfort2013mne} on the continuous recording, epochs of whole seconds after the event (2\,s for
+ErrP-HRI, the window used in its original analysis; 1\,s otherwise), resampling to 256\,Hz (compact models) and
+200\,Hz (foundation models), no amplitude-based rejection. Channel names follow the 10--20 system so that
+channel-aware foundation models receive their own position embeddings.
+
+\subsection{Protocol}
+\textbf{Cross-subject} evaluation is the primary protocol, since an implicit feedback signal is useful only if it
+works for a new person without a calibration session. Participants of a dataset are split into five disjoint
+test groups; in each fold, about 15\% of the remaining participants form a validation set that is used only for
+early stopping, and the rest are training participants. Every participant is tested exactly once. The unit of
+analysis is the held-out participant: we report the macro average over participants of the per-participant
+AUROC, averaged over training seeds (\NSeedsMain{} seeds per configuration). AUROC is threshold-free and robust to
+the class imbalance of ErrP data. Differences between decoders are tested with two-sided Wilcoxon signed-rank
+tests over participants, Holm-corrected within each dataset~\citep{demsar2006statistical}.
+
+\subsection{Decoders}
+\textbf{Riemannian:} xDAWN spatial filtering (4 filters) of the class-conditional covariances, tangent-space
+projection and logistic regression~\citep{rivet2009xdawn,barachant2012multiclass}.
+\textbf{Compact networks trained from scratch:} EEGNet~\citep{lawhern2018eegnet},
+EEG-Inception~\citep{santamariavazquez2020eeginception}, EEGNeX~\citep{chen2024eegnex},
+EEG-Conformer~\citep{song2023eegconformer} and CTNet~\citep{zhao2024ctnet}, in their braindecode
+implementations~\citep{schirrmeister2017deep}. \textbf{Foundation models:} LaBraM~\citep{jiang2024labram},
+EEGPT~\citep{wang2024eegpt} and CBraMod~\citep{wang2025cbramod}, initialised from their released pretrained
+weights and fully fine-tuned with a new classification head (backbone learning rate $10^{-4}$, head
+$5\times10^{-4}$, AdamW, cosine schedule). All networks use class-weighted cross-entropy and early stopping on
+validation AUROC (patience 20 epochs and at most 150 epochs for networks trained from scratch; 10 and 30 for
+foundation models, whose fine-tuning converges in few epochs). Hyperparameters are the published defaults; no
+model receives dataset-specific tuning, so every decoder gets the same tuning budget (none).
+
+\textbf{Euclidean alignment (EA).} For each participant, EA whitens the trials with the inverse square root of
+the participant's mean spatial covariance~\citep{he2020transfer}. It uses only that participant's unlabeled
+trials, so it applies to a new user without labels or calibration (transductively). We rescale the aligned data
+to preserve the participant's mean channel power, so that the amplitude conventions expected by pretrained
+models are unchanged. Every decoder is evaluated with and without EA.

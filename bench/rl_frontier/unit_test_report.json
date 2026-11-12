@@ -1,0 +1,38 @@
+{
+  "0.55": {
+    "empirical_auroc": 0.5512,
+    "mean_p": 0.35,
+    "error_rate": 0.3503,
+    "worst_decile_gap": 0.0086
+  },
+  "0.6": {
+    "empirical_auroc": 0.5986,
+    "mean_p": 0.3498,
+    "error_rate": 0.3494,
+    "worst_decile_gap": 0.0052
+  },
+  "0.65": {
+    "empirical_auroc": 0.6523,
+    "mean_p": 0.3501,
+    "error_rate": 0.3508,
+    "worst_decile_gap": 0.0146
+  },
+  "0.7": {
+    "empirical_auroc": 0.6988,
+    "mean_p": 0.3498,
+    "error_rate": 0.3511,
+    "worst_decile_gap": 0.0039
+  },
+  "0.8": {
+    "empirical_auroc": 0.8008,
+    "mean_p": 0.3499,
+    "error_rate": 0.3484,
+    "worst_decile_gap": 0.006
+  },
+  "0.9": {
+    "empirical_auroc": 0.8985,
+    "mean_p": 0.3499,
+    "error_rate": 0.3513,
+    "worst_decile_gap": 0.0079
+  }
+}

@@ -1,0 +1,27 @@
+\section{Related work}
+\label{sec:related}
+
+\paragraph{Error-related potentials.} The error-related negativity was first described for self-generated
+response errors~\citep{falkenstein1991effects,gehring1993neural}; observation and interaction ErrPs follow
+erroneous feedback or machine actions~\citep{chavarriaga2010learning,chavarriaga2014errare}. ErrPs have been
+decoded to correct robot actions online~\citep{salazargomez2017correcting}, to teach interfaces
+\citep{iturrate2015teaching}, and to shape the reward of robot learners~\citep{kim2017intrinsic,akinola2020accelerated,xu2021accelerating}.
+Most of these works decode within subjects after a calibration session. Public datasets now span visual
+observation~\citep{ehrlich2019feasibility,chavarriaga2010learning}, self-generated
+errors~\citep{kappenman2021erpcore} and physically introduced errors~\citep{kueper2024eegemg,chari2024interhri},
+but no common cross-subject protocol compares them.
+
+\paragraph{EEG decoders and foundation models.} Compact convolutional networks such as
+EEGNet~\citep{lawhern2018eegnet} and EEG-Inception~\citep{santamariavazquez2020eeginception}, convolution-transformer
+hybrids~\citep{song2023eegconformer,zhao2024ctnet,chen2024eegnex}, and Riemannian pipelines built on xDAWN
+spatial filtering~\citep{rivet2009xdawn,barachant2012multiclass} are standard for event-related potentials.
+Foundation models pretrain transformers on large unlabeled corpora and fine-tune on the target task:
+LaBraM~\citep{jiang2024labram}, EEGPT~\citep{wang2024eegpt} and CBraMod~\citep{wang2025cbramod} are the
+open models we evaluate. Cross-subject shift is also addressed without labels by aligning each subject's
+data, e.g.\ Euclidean alignment~\citep{he2020transfer} or Riemannian re-centering~\citep{zanini2018transfer}.
+
+\paragraph{Benchmarks.} MOABB~\citep{jayaram2018moabb,chevallier2024moabbbenchmark} standardised classical BCI paradigms;
+recent foundation-model benchmarks evaluate many tasks and report mixed gains over specialist
+models~\citep{kastrati2025eegbench,lu2026omnieegbench,liu2026eegfmcompass,kokate2026channel}. ErrPs appear there as one task
+among dozens. ErrP-Bench is complementary: it covers the error paradigms in depth, tests whether
+alignment or pretraining matters more, and measures the downstream value of the decoded signal for learning.
