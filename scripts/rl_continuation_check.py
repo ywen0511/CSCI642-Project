@@ -30,7 +30,8 @@ def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("--snapshot", required=True)
     p.add_argument("--feedback-dir", required=True)
-    p.add_argument("--steps", type=int, default=2000)
+    p.add_argument("--steps", type=int, default=2000,
+                   help="additional steps; 0 = the frozen protocol budget (required for final-phase snapshots)")
     p.add_argument("--work", required=True)
     p.add_argument("--out", required=True)
     p.add_argument("--checkout", default=str(Path(__file__).resolve().parents[1]),
@@ -59,7 +60,10 @@ def main():
         raise ValueError("Checkout is not clean")
     cmd = [sys.executable, "-m", "rl.train", "--config", str(config), "--phase", spec["phase"],
            "--condition", spec["condition"], "--seed", str(spec["seed"]), "--feedback-dir", a.feedback_dir,
-           "--resume", str(snap), "--steps", str(a.steps), "--out", str(work / "continued")]
+           "--resume", str(snap), "--out", str(work / "continued")]
+    if a.steps:
+        cmd += ["--steps", str(a.steps)]
+    added = a.steps or spec["config"]["total_timesteps"]
     if spec["subject"]:
         cmd += ["--subject", spec["subject"]]
     with (work / "continue.log").open("w") as log:
@@ -79,7 +83,7 @@ def main():
         kept = all(np.array_equal(old_buf.observations[k][:n_old], new_buf.observations[k][:n_old])
                    for k in old_buf.observations) and np.array_equal(old_buf.actions[:n_old], new_buf.actions[:n_old])
         report.update(status=status, verification=v, restored_transitions_unchanged=bool(kept),
-                      steps_increased=status["final_steps"] == meta["num_timesteps"] + a.steps,
+                      steps_increased=status["final_steps"] == meta["num_timesteps"] + added,
                       updates_increased=status["updates"] > meta["n_updates"],
                       replay_grew=status["replay_size"] > meta["replay_size"])
         report["ok"] = bool(v["ok"] and kept and report["steps_increased"] and report["updates_increased"]
