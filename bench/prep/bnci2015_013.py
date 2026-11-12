@@ -71,12 +71,13 @@ def main():
             assert int(h.Subject) == int(subj[1:]) and int(h.Session) == int(sess), (f, h.Subject, h.Session)
             labels = [str(x) for x in np.atleast_1d(h.Label)]
             eeg_names = [c for c in labels if c != "Status"]
-            assert len(eeg_names) == 64 and len(labels) == run.eeg.shape[1], (labels, run.eeg.shape)
+            # header.Label lists 65 names (64 EEG + 'Status') but run.eeg holds only the 64 EEG columns
+            assert len(eeg_names) == 64 and labels[:64] == eeg_names and run.eeg.shape[1] == 64, (labels, run.eeg.shape)
             if ch_out is None:
                 ch_out = eeg_names
                 check_montage(ch_out)
             assert eeg_names == ch_out, (f, ri)
-            X = np.asarray(run.eeg[:, [labels.index(c) for c in ch_out]], dtype=np.float64).T  # (64, T) uV
+            X = np.asarray(run.eeg[:, [eeg_names.index(c) for c in ch_out]], dtype=np.float64).T  # (64, T) uV
             X = X - X.mean(0, keepdims=True)  # common average reference
             X = X - X.mean(1, keepdims=True)  # remove DC before filtering (no effect on the band-passed output)
             Xf, finfo = filter_continuous(X, sf)
@@ -128,7 +129,7 @@ def main():
                                                        "cursor movement left/right with no target bit (not documented "
                                                        "as correct/erroneous) -> not labelled"},
         "channels": ch_out, "channel_rename": {},
-        "dropped_channels": ["Status (trigger)"],
+        "dropped_channels": ["Status (listed in header.Label only; not present in run.eeg, which has 64 EEG columns)"],
         "band_hz": [filt_info["l_freq"], filt_info["h_freq"]],
         "filter": {**filt_info, "applied": "per run, on the continuous 512 Hz CAR signal before epoching"},
         "resampling": "continuous 512 -> 256 Hz scipy.signal.resample_poly(up=1, down=2) after filtering; "
