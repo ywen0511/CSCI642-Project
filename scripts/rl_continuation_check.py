@@ -10,8 +10,10 @@ inference probes). Not part of any performance summary.
 Usage: python scripts/rl_continuation_check.py --snapshot DIR --feedback-dir DIR --steps 2000 --work NEW --out report.json
 """
 import argparse
+import hashlib
 import json
 import pickle
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -41,6 +43,16 @@ def main():
     spec = meta["run_spec"]
     config = work / "snapshot_config.json"
     config.write_text(json.dumps(spec["config"], indent=2) + "\n")
+    ev_name = spec["config"].get("validation_evidence_file")
+    if spec["phase"] == "final" and ev_name:
+        # a final-phase config is only accepted next to its validation evidence: copy the committed file whose
+        # SHA-256 equals the one recorded in the snapshot's config (rl.train re-checks it)
+        want = spec["config"]["validation_evidence_sha256"]
+        hits = [p for p in sorted(checkout.glob(f"configs/**/{ev_name}"))
+                if hashlib.sha256(p.read_bytes()).hexdigest() == want]
+        if not hits:
+            raise ValueError(f"no committed {ev_name} with sha256 {want} in {checkout}")
+        shutil.copyfile(hits[0], work / ev_name)
     git = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=checkout, text=True).strip()
     dirty = subprocess.check_output(["git", "status", "--porcelain", "--untracked-files=no"], cwd=checkout, text=True).strip()
     if dirty:
