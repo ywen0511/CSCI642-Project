@@ -17,8 +17,8 @@ train:
   lr: 0.0005                   # classification head
   weight_decay: 0.05
   batch_size: 64
-  max_epochs: 50
-  patience: 15
+  max_epochs: 30
+  patience: 10
   min_delta: 0.0
   monitor: auroc
   class_weighting: inverse_frequency

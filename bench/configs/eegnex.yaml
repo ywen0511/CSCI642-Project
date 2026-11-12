@@ -13,8 +13,8 @@ model:
 train:
   optimizer: adam
   lr: 0.001
-  max_epochs: 300
-  patience: 40
+  max_epochs: 150
+  patience: 20
   scheduler: none
   weight_decay: 0.0
   batch_size: 64

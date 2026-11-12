@@ -11,8 +11,8 @@ train:
   lr: 0.001
   weight_decay: 0.0
   batch_size: 64
-  max_epochs: 300
-  patience: 40                 # epochs without improvement of the monitored validation metric
+  max_epochs: 150
+  patience: 20
   min_delta: 0.0
   monitor: auroc               # validation AUROC (threshold-free) selects best.ckpt
   class_weighting: inverse_frequency
