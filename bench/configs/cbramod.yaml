@@ -1,0 +1,34 @@
+# CBraMod: official pretrained backbone + official 'all_patch_reps' head, full fine-tuning (main comparison).
+# Search budget: 2 candidates (train.backbone_lr in tuning.grid). Other values follow the official
+# finetune_main.py defaults (AdamW, wd 5e-2, cosine schedule, grad clip 1, dropout 0.1, batch 64,
+# head lr = 1e-3 * sqrt(batch/256)); label smoothing set to 0 to match the EEGNet loss.
+seed: 42
+input:
+  view: patch200               # (27 ch, 2 patches, 200 samples) = same [0, 2) s window at 200 Hz
+  scaling: fixed_divide
+  scaling_params: {divisor: 100.0}   # official convention: microvolts / 100
+model:
+  name: cbramod
+  pretrained_path: ${ERRP_WEIGHTS_DIR}/CBraMod/pretrained_weights.pth
+  kwargs: {dropout: 0.1, head: all_patch_reps}
+train:
+  optimizer: adamw
+  backbone_lr: 0.0001
+  lr: 0.0005                   # classification head
+  weight_decay: 0.05
+  batch_size: 64
+  max_epochs: 50
+  patience: 15
+  min_delta: 0.0
+  monitor: auroc
+  class_weighting: inverse_frequency
+  label_smoothing: 0.0
+  scheduler: cosine
+  eta_min: 1.0e-6
+  grad_clip: 1.0
+  deterministic: true
+  periodic_ckpt_every: 5
+  periodic_ckpt_keep: 4
+tuning:
+  grid: {train.backbone_lr: [0.0001, 0.00003]}
+  selection: highest best validation AUROC; ties -> first listed

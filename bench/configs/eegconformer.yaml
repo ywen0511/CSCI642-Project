@@ -1,0 +1,28 @@
+# Supplementary baseline (EEGConformer, braindecode 1.8.1). Reported separately from the main comparison.
+# One run, seed 42, default hyperparameters from the braindecode implementation / original paper.
+seed: 42
+input:
+  view: eeg256
+  scaling: train_global_std
+
+model:
+  name: bd_eegconformer
+  bd_class: EEGConformer
+  sfreq: 256
+  kwargs: {}
+train:
+  optimizer: adam
+  lr: 0.0002
+  max_epochs: 300
+  patience: 40
+  scheduler: none
+  weight_decay: 0.0
+  batch_size: 64
+  min_delta: 0.0
+  monitor: auroc
+  class_weighting: inverse_frequency
+  label_smoothing: 0.0
+  grad_clip: null
+  deterministic: true
+  periodic_ckpt_every: 25
+  periodic_ckpt_keep: 4

@@ -1,0 +1,45 @@
+\documentclass{article}
+\usepackage[preprint]{neurips_2025}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{amsfonts,amsmath,amssymb}
+\usepackage{nicefrac}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{subcaption}
+
+% numbers that are not measured yet are rendered visibly; the final PDF must contain none
+\newcommand{\tbd}[1]{\textcolor{red}{[tbd: #1]}}
+\input{generated/numbers.tex}
+
+\title{ErrP-Bench: Do EEG Foundation Models Detect Errors?\\
+Benchmarking Error-Related Potential Decoding Across Paradigms\\ and Its Value as Implicit Feedback for Robot Learning}
+
+\author{Anonymous Authors}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\input{sections/abstract}
+\end{abstract}
+
+\input{sections/intro}
+\input{sections/related}
+\input{sections/benchmark}
+\input{sections/results_decoding}
+\input{sections/rl_frontier}
+\input{sections/discussion}
+
+\bibliographystyle{plainnat}
+\bibliography{refs}
+
+\appendix
+\input{sections/appendix}
+
+\end{document}

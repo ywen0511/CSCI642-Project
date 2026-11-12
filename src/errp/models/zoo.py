@@ -55,15 +55,16 @@ def build_braindecode(mcfg: dict, input_shape: tuple, load_pretrained: bool = Tr
     cls = getattr(M, mcfg["bd_class"])
     n_chans, n_times = input_shape
     kw = dict(n_chans=n_chans, n_outputs=2, n_times=n_times, sfreq=mcfg["sfreq"], **mcfg.get("kwargs", {}))
+    names = list(mcfg.get("channels") or CHANNELS)  # ErrP-Bench: channel list of the prepared dataset
     if mcfg.get("needs_chs_info", False):
-        assert n_chans == len(CHANNELS)
-        kw["chs_info"] = chs_info(CHANNELS, mcfg["sfreq"])
+        assert n_chans == len(names)
+        kw["chs_info"] = chs_info(names, mcfg["sfreq"])
     net = cls(**kw)
     report = None
     if mcfg.get("hf_repo") and load_pretrained:
         report = load_pretrained_partial(net, mcfg["hf_repo"], mcfg.get("hf_revision"),
                                          keep_model_keys=mcfg.get("keep_model_keys", []))
-    fkw = {"ch_names": list(CHANNELS)} if mcfg.get("forward_ch_names", False) else {}
+    fkw = {"ch_names": names} if mcfg.get("forward_ch_names", False) else {}
     w = BDWrapper(net, mcfg.get("head_prefix", ["final_layer"]), fkw)
     w.pretrained_load_report = report
     return w
