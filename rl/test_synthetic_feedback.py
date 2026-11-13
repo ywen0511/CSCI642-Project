@@ -5,6 +5,7 @@ Run: python -m unittest rl.test_synthetic_feedback -v
 from __future__ import annotations
 
 import json
+import os
 import unittest
 from pathlib import Path
 
@@ -76,7 +77,7 @@ class SyntheticFeedbackTest(unittest.TestCase):
                               "error_rate": round(float(labels.mean()), 4),
                               "worst_decile_gap": round(worst, 4)}
         out = Path(__file__).resolve().parents[1] / "bench/rl_frontier/unit_test_report.json"
-        if out.parent.is_dir():
+        if out.parent.is_dir() and os.environ.get("ERRP_WRITE_TEST_REPORT") == "1":
             out.write_text(json.dumps(report, indent=2) + "\n")
         print(json.dumps(report, indent=2))
 

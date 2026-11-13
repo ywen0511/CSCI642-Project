@@ -62,10 +62,12 @@ def main():
     ap.add_argument("--b", required=True)
     ap.add_argument("--results", required=True)
     ap.add_argument("--out", required=True)
+    ap.add_argument("--runs", default=None, help="runs root (default: B/runs)")
+    ap.add_argument("--rl-curves", default=None, help="compact rl_curves.csv (used if B/rl_runs/sweep is absent)")
     a = ap.parse_args()
     B, R, O = Path(a.b), Path(a.results), Path(a.out)
     O.mkdir(parents=True, exist_ok=True)
-    runs = B / "runs"
+    runs = Path(a.runs) if a.runs else B / "runs"
     V = [v for v in json.loads((R / "decoding/variants.json").read_text()) if v["complete"]]
     comp = {(v["dataset"], v["model"], v["align"]): v for v in V}
 
@@ -73,9 +75,10 @@ def main():
         ks = [k for k in comp if k[0] == d and pred(k)]
         return max(ks, key=lambda k: comp[k]["macro_auroc_mean"]) if ks else None
 
-    # 1. grand-average waveforms
+    # 1. grand-average waveforms (needs the prepared EEG; skipped if absent)
+    have_prep = all((B / "data/prep" / d / "epochs_256hz_uV.npy").exists() for d in DS)
     fig, axs = plt.subplots(1, 5, figsize=(10, 1.9), sharey=False)
-    for ax, d in zip(axs, DS):
+    for ax, d in (zip(axs, DS) if have_prep else []):
         P = B / "data/prep" / d
         cfg = json.loads((P / "preprocessing_config.json").read_text())
         ch = cfg["channels"] if "channels" in cfg else cfg["config"]["channels"]["order"]
@@ -101,8 +104,12 @@ def main():
         ax.fill_between(t, dif.mean(0) - se, dif.mean(0) + se, color="k", alpha=0.15, lw=0)
         ax.axvline(0, color="0.7", lw=0.6); ax.axhline(0, color="0.7", lw=0.6)
         ax.set_title(f"{DSN[d]} ({ch[ci]}, n={len(dif)})"); ax.set_xlabel("time (s)")
-    axs[0].set_ylabel("amplitude ($\\mu$V)"); axs[0].legend(loc="lower left", frameon=False)
-    fig.tight_layout(); fig.savefig(O / "waveforms.pdf"); plt.close(fig)
+    if have_prep:
+        axs[0].set_ylabel("amplitude ($\\mu$V)"); axs[0].legend(loc="lower left", frameon=False)
+        fig.tight_layout(); fig.savefig(O / "waveforms.pdf")
+    else:
+        print("prepared EEG not found: waveforms.pdf skipped")
+    plt.close(fig)
 
     # 2. per-participant scatter ErrP-Ens (mixed-alignment rank ensemble) vs best single decoder (hindsight best on the test participants)
     fig, ax = plt.subplots(figsize=(3.3, 3.1))
@@ -168,9 +175,18 @@ def main():
     fig, ax = plt.subplots(figsize=(4.2, 2.6))
     sty = [("sparse", "sparse", "0.3", "--"), ("dense", "dense", "0.3", ":"), ("auroc0.55", "AUROC 0.55", "C3", "-"),
            ("auroc0.70", "AUROC 0.70", "C1", "-"), ("auroc0.90", "AUROC 0.90", "C2", "-"), ("auroc1.00", "AUROC 1.00", "C0", "-")]
+    rows_csv = None
+    if not sweep.exists() and a.rl_curves:
+        rows_csv = list(csv.DictReader(open(a.rl_curves)))
     for c, lab, col, ls in sty:
         curves = []
-        for sd in sorted(sweep.glob(f"{c}/seed*")):
+        if rows_csv is not None:
+            by = {}
+            for r in rows_csv:
+                if r["task"] == "reach" and r["condition"] == c:
+                    by.setdefault(r["seed"], []).append((int(r["steps"]), float(r["success_rate"])))
+            curves = [sorted(v) for _, v in sorted(by.items())]
+        for sd in (sorted(sweep.glob(f"{c}/seed*")) if rows_csv is None else []):
             if not (sd / "status.json").exists():
                 continue
             rows = [json.loads(line) for line in open(sd / "evaluations.jsonl")]

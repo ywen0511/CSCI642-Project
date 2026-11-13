@@ -104,9 +104,8 @@ ErrP-HRI cursor (\EASigPosErrpHriCursor{} of \EANModelsErrpHriCursor{} models si
 \EADeltaErrpHriRobot{} on ErrP-HRI robot, but \EADeltaBnci{} on BNCI 2015-013 and \EADeltaInterHri{} on IntEr-HRI
 (\EASigNegInterHri{} models significantly worse). Our hypothesis for the negative cases is that when the
 spatial covariance is shaped by the task itself (in IntEr-HRI, the arm movement and the ball squeeze),
-whitening it also removes signal. Because the sign cannot be known for a new paradigm without labels,
-ErrP-Ens includes both aligned and unaligned members, and it is the only configuration that is best or
-near-best on every dataset.
+whitening it also removes signal. This dataset dependence is the reason ErrP-Ens includes both aligned and
+unaligned members (\S\ref{sec:ens}).
 
 \begin{table}[t]
 \centering
@@ -124,8 +123,8 @@ $^{\ast}$: paired Wilcoxon $p<0.05$ over participants (uncorrected).}
 \label{fig:ea}
 \end{figure}
 
-\paragraph{IntEr-HRI measures more than an ErrP.} Decoders reach AUROC near \BestInterHri{} on IntEr-HRI. In
-about 90\% of its error epochs, the participant's ball squeeze (a motor response to the error) falls inside
-the window. Restricted to the first 0.5\,s, before almost all squeezes (0.8\% occur earlier), EEGNet still
-reaches \EarlyEEGNetNone{} and xDAWN \EarlyXdawnNone{}. Most of the discriminative signal therefore precedes
+\paragraph{IntEr-HRI measures more than an ErrP.} Decoders reach AUROC near \BestInterHri{} on IntEr-HRI, where the
+participant's ball squeeze falls inside most error windows (\S\ref{sec:bench}). Restricted to the first 0.5\,s,
+before almost all squeezes (0.8\% occur earlier), EEGNet still reaches \EarlyEEGNetNone{} and xDAWN
+\EarlyXdawnNone{}. Most of the discriminative signal therefore precedes
 the squeeze, but the full-window scores should be read as an upper bound for an error-plus-response signal.

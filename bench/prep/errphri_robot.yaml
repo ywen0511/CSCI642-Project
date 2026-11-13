@@ -1,0 +1,23 @@
+# ErrP-Bench config for ErrP-HRI (robot condition), derived from configs/preprocessing.yaml (prep_v1).
+# Same settings as prep_v1 (the arrays used for every ErrP-HRI robot result in the paper): condition = robot,
+# window [0, 2) s (W = 2); only the output format is ErrP-Bench's.
+dataset_id: errphri_robot
+dataset:
+  source: https://github.com/stefan-ehrlich/dataset-ErrP-HRI
+  commit: 4bc3e52469934aa0551a2261a6e4e899d156c28f
+  condition: robot
+  # condition verified from the EEGLAB 'comments' field (original BrainVision file name)
+  condition_evidence_pattern: {robot: "_robot.vhdr", cursor: "_shooter.vhdr"}
+events:
+  # documentation_dataset-ErrP-HRI.pdf p. 3
+  stimulus: {"S  1": left, "S  2": up, "S  3": right}
+  response: {"R  1": left, "R  2": up, "R  3": right}
+  feedback_direction: {FB1: left, FB2: up, FB3: right}
+  outcome: {"S  4": no_error, "S  5": human_error, "S  6": machine_error}
+  label_map: {no_error: 0, machine_error: 1}   # human_error (S5) excluded
+  epoch_origin: feedback_direction             # FB1/FB2/FB3 = onset of the feedback movement
+epoch: {tmin_s: 0.0, tmax_s: 2.0}
+channels:
+  drop: [EOG1, EOG2, EOG3]
+  order: [Fp1, Fp2, F7, F3, Fz, F4, F8, FC5, FC1, FC2, FC6, T7, C3, Cz, C4, T8, CP5, CP1, CP2, CP6, P7, P3, Pz, P4, P8, O1, O2]
+filter: {l_freq: 1.0, h_freq: 20.0}

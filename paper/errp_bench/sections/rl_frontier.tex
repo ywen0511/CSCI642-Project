@@ -5,26 +5,18 @@ Decoding accuracy is a proxy. The quantity that matters for implicit feedback is
 when its reward includes the decoded error probability. We measure this directly, as a function of decoder
 quality, with real reinforcement learning.
 
-\paragraph{Setup.} Soft actor-critic~\citep{haarnoja2018sac} (Stable-Baselines3~\citep{raffin2021sb3}) learns
-FetchReach and FetchPush (Gymnasium-Robotics~\citep{delazcano2024gymnasiumrobotics,plappert2018multigoal},
-MuJoCo~\citep{todorov2012mujoco}) from the sparse task reward plus ErrP feedback. Every five simulator steps,
-the change in the task distance (gripper--goal for Reach, object--goal for Push) labels the segment: an increase
-beyond 1\,mm is an error, a decrease beyond 1\,mm a correct step, anything else yields no feedback. For a labelled
-segment with label $y$, a decoder reports $p_{\text{err}}$ and the reward receives $w\,(0.5-p_{\text{err}})$ with
-$w=1$, the value frozen in our earlier validation study. Budgets are 150k environment steps (Reach) and 500k
-(Push); evaluation uses 100 fixed goals, a deterministic policy and the sparse success criterion every 10k steps.
-Learning speed is the normalized area under the success curve (AUC), the primary metric because final success
-saturates on Reach.
-
-\paragraph{Decoders of controlled quality.} To trace the frontier we replace the EEG decoder with a decoder of
-exactly known AUROC. Under the equal-variance binormal model~\citep{green1966signal,hanley1982meaning}, a margin
-$z \sim \mathcal{N}(\pm d'/2, 1)$ with $d'=\sqrt{2}\,\Phi^{-1}(\text{AUROC})$ has the target AUROC; it is turned
-into a Bayes-calibrated probability with base rate $\pi=0.35$, the error prevalence on which the real decoders are
-calibrated. AUROC levels are 0.55, 0.60, 0.65, 0.70, 0.80, 0.90 and 1.0 (exact labels), with sparse and dense
-($10\times$ distance decrease) reward as references. Seeds per condition: \RLSeedsText{}. Because the
-object rarely moves early in FetchPush, the object--goal rule yields little feedback there; a supplementary
-\emph{staged} variant labels segments by the change in gripper--object plus object--goal distance (its sparse
-reference is the same sparse run, since the rule does not affect sparse training).
+\paragraph{Setup.} Soft actor-critic (Stable-Baselines3~\citep{raffin2021sb3}) learns FetchReach and FetchPush
+(Gymnasium-Robotics~\citep{delazcano2024gymnasiumrobotics}, MuJoCo~\citep{todorov2012mujoco}) with the reward of
+Eq.~\ref{eq:reward}; the distance that labels segments is gripper--goal for Reach and object--goal for Push.
+The ErrP decoder is replaced by feedback of controlled AUROC (Eq.~\ref{eq:binormal}; see also
+\citet{hanley1982meaning}) at levels 0.55, 0.60, 0.65, 0.70, 0.80, 0.90 and 1.0 (exact labels), with sparse and
+dense ($10\times$ distance decrease) reward as references. Budgets are 150k environment steps (Reach) and 500k
+(Push); every 10k steps the deterministic policy is evaluated on 100 fixed held-out goals with the sparse success
+criterion. Learning speed, the normalised area under this success curve, is the primary metric, because final
+success saturates on Reach. Seeds per condition: \RLSeedsText{}. Because the object rarely moves early in
+FetchPush, the object--goal rule yields little feedback there; a supplementary \emph{staged} variant labels
+segments by the change in gripper--object plus object--goal distance (its sparse reference is the same sparse
+run, since the rule does not affect sparse training).
 
 \paragraph{Results.} \input{sections/rl_results_text}
 

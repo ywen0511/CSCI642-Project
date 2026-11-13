@@ -40,9 +40,7 @@ absence of NaNs) and a within-dataset LDA sanity check is run before any model i
 \label{app:compute}
 
 All decoders were trained on NVIDIA A100 GPUs (xDAWN on CPU); the RL frontier used one CPU core per run.
-The benchmark comprises \NFitsTotal{} cross-subject fits (about \GPUHours{} GPU-hours). EEGPT is about an order
-of magnitude slower per epoch than the other foundation models; within the compute window of this study it was
-run with fewer seeds, and some of its alignment conditions are missing (marked in Table~\ref{tab:main}).
+The benchmark comprises \NFitsTotal{} cross-subject fits (about \GPUHours{} GPU-hours). EEGPT is about an order of magnitude slower per epoch than the other foundation models (coverage in \S\ref{sec:bench}).
 xDAWN is deterministic and was run once per configuration; it uses Ledoit--Wolf shrinkage both for its spatial
 filters and for the covariances, because the unregularised filter estimate is singular on the
 common-average-referenced datasets. A complete per-variant listing (seeds, participants, completeness)
