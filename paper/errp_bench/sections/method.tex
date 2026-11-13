@@ -1,0 +1,198 @@
+\section{Method}
+\label{sec:method}
+
+Figure~\ref{fig:overview} summarises the pipeline. A decoder maps one EEG epoch, time-locked to an event that
+may be an error, to an error score (\S\ref{sec:problem}). Each participant's data are first aligned without
+labels (\S\ref{sec:ea}); a set of decoders is trained on other participants (\S\ref{sec:decoders}); and their
+scores are combined by ErrP-Ens, a label-free rank ensemble (\S\ref{sec:ens}). The calibrated score becomes a
+reward term for a reinforcement learner (\S\ref{sec:reward}), and a controlled-quality feedback model
+(\S\ref{sec:binormal}) lets us measure how good the decoder must be for that reward to help.
+
+\begin{figure}[t]
+\centering
+\fbox{\begin{minipage}{0.96\linewidth}\small
+\textbf{(a) Decoding a new participant $u$ without labels.}
+EEG epochs $X^{u}_{1:n_u}$ $\rightarrow$ per-participant Euclidean alignment $\tilde X^u_i=\bar R_u^{-1/2}X^u_i$
+(Eq.~\ref{eq:ea}) $\rightarrow$ $M$ decoders $f_1,\dots,f_M$ trained on other participants (with and without
+alignment) $\rightarrow$ within-participant rank normalisation $r^u_{m,i}$ (Eq.~\ref{eq:rank}) $\rightarrow$
+average $s^u_i$ (Eq.~\ref{eq:ens}) $\rightarrow$ error probability $\hat p^u_i$ (Eq.~\ref{eq:calib}).\\[3pt]
+\textbf{(b) Learning from the decoded signal.} Robot segment $\rightarrow$ participant observes $\rightarrow$
+$\hat p_{\text{err}}$ $\rightarrow$ reward $r_t=r^{\text{task}}_t+w\,(\tfrac12-\hat p_{\text{err}})$
+(Eq.~\ref{eq:reward}) $\rightarrow$ soft actor-critic update.\\[3pt]
+\textbf{(c) Frontier.} Replace $\hat p_{\text{err}}$ by feedback of exactly known AUROC (Eq.~\ref{eq:binormal})
+$\rightarrow$ learning speed as a function of AUROC $\rightarrow$ break-even AUROC $A^\star$ (Eq.~\ref{eq:breakeven}).
+\end{minipage}}
+\caption{Overview of ErrP-Ens and of the decoder-quality frontier.}
+\label{fig:overview}
+\end{figure}
+
+\subsection{Problem: cross-subject error detection}
+\label{sec:problem}
+A dataset consists of participants $u\in\mathcal U$, each with epochs $X^u_i\in\mathbb R^{C\times T}$ ($C$
+channels, $T$ samples) and labels $y^u_i\in\{0,1\}$ (1 = error). A decoder $f_\theta:\mathbb R^{C\times T}\to\mathbb R$
+outputs an error score. In the cross-subject setting the decoder is trained on a set of participants
+$\mathcal U_{\text{train}}$ and applied to a participant $u\notin\mathcal U_{\text{train}}$ for whom no labels
+exist. Its quality for $u$ is the probability that a random error epoch scores higher than a random correct
+one,
+\begin{equation}
+\mathrm{AUROC}_u(f)=\frac{1}{n^u_1 n^u_0}\sum_{i:y^u_i=1}\ \sum_{j:y^u_j=0}\Big(\mathbb 1[f(X^u_i)>f(X^u_j)]+\tfrac12\mathbb 1[f(X^u_i)=f(X^u_j)]\Big),
+\label{eq:auroc}
+\end{equation}
+and the benchmark score is the macro average $\overline{\mathrm{AUROC}}=|\mathcal U|^{-1}\sum_u\mathrm{AUROC}_u$
+over held-out participants. Because Eq.~\ref{eq:auroc} compares epochs \emph{within} a participant, it is
+invariant to any strictly increasing per-participant transformation of the scores, a fact ErrP-Ens exploits.
+
+\subsection{Unsupervised per-participant alignment}
+\label{sec:ea}
+Spatial covariance differs between people (head size, electrode impedance, cortical folding), which shifts
+the input distribution across participants. Euclidean alignment~\citep{he2020transfer} removes the
+first-order part of this shift using only unlabeled epochs. With band-pass filtered (hence approximately zero-mean) epochs $X^u_i$,
+\begin{equation}
+\bar R_u=\frac1{n_u}\sum_{i=1}^{n_u}\frac{X^u_i X^{u\top}_i}{T},\qquad
+\tilde X^u_i=\gamma_u\,\bar R_u^{-1/2}X^u_i,\qquad
+\gamma_u=\sqrt{\operatorname{tr}(\bar R_u)/C},
+\label{eq:ea}
+\end{equation}
+so that the aligned mean covariance of every participant is $\gamma_u^2 I_C$. The scale $\gamma_u$ is our
+modification: plain EA maps every participant to unit power, which changes the amplitude range that
+pretrained foundation models were trained on; Eq.~\ref{eq:ea} preserves each participant's mean channel power
+while still whitening the spatial structure. Alignment is transductive: it uses all of a test participant's
+epochs, but never their labels.
+
+\subsection{Decoders}
+\label{sec:decoders}
+We use three decoder families, summarised in Table~\ref{tab:decoders}. (i) \emph{Riemannian:} xDAWN spatial
+filters~\citep{rivet2009xdawn} maximise the signal-to-signal-plus-noise ratio of the class-average responses;
+the covariance of the filtered epoch augmented with the filtered class templates is projected onto the tangent
+space of the symmetric positive-definite manifold at the Riemannian mean $\bar P$~\citep{barachant2012multiclass},
+\begin{equation}
+z_i=\operatorname{upper}\!\left(\log\!\left(\bar P^{-1/2}P_i\bar P^{-1/2}\right)\right),\qquad f(X_i)=\beta^\top z_i+b,
+\label{eq:tangent}
+\end{equation}
+followed by logistic regression. (ii) \emph{Compact networks} trained from scratch: temporal convolution,
+depthwise spatial convolution and pooling (EEGNet, EEG-Inception, EEGNeX), optionally followed by
+self-attention over temporal tokens (EEG-Conformer, CTNet). (iii) \emph{Foundation models} pretrained on
+thousands of hours of EEG with masked reconstruction or masked-token prediction (LaBraM, EEGPT, CBraMod),
+fine-tuned end to end with a new linear head on the pooled token embeddings. All networks output two logits $(\ell_0,\ell_1)$, use the margin $f_\theta(X)=\ell_1-\ell_0$ as the error
+score, and minimise class-weighted cross-entropy,
+\begin{equation}
+\mathcal L(\theta)=-\sum_{u\in\mathcal U_{\text{train}}}\sum_i \alpha_{y^u_i}\log\operatorname{softmax}\big(\ell_\theta(X^u_i)\big)_{y^u_i},\qquad
+\alpha_c=\frac{N}{2N_c},
+\label{eq:loss}
+\end{equation}
+with early stopping on the macro AUROC of held-out validation participants.
+
+\begin{table}[t]
+\centering
+\caption{Decoders evaluated. Params: parameters of the instantiated model for a 27-channel, 2\,s input. Pretraining: hours of unlabeled EEG used by the released checkpoint.}
+\label{tab:decoders}
+\scriptsize
+\begin{tabular}{lllll}
+\toprule
+Decoder & Family & Core operation & Params & Pretraining \\
+\midrule
+xDAWN+RG~\citep{rivet2009xdawn,barachant2012multiclass} & Riemannian & spatial filters + tangent space & $<$1k$^{b}$ & none \\
+EEGNet~\citep{lawhern2018eegnet} & compact CNN & temporal + depthwise spatial conv. & 2.6k & none \\
+EEG-Inception~\citep{santamariavazquez2020eeginception} & compact CNN & multi-scale inception blocks & 27.6k & none \\
+EEGNeX~\citep{chen2024eegnex} & compact CNN & dilated depthwise conv. & 56.0k & none \\
+EEG-Conformer~\citep{song2023eegconformer} & CNN+Transformer & conv. tokens + self-attention & 0.46M & none \\
+CTNet~\citep{zhao2024ctnet} & CNN+Transformer & EEGNet tokens + self-attention & 0.15M & none \\
+LaBraM-Base~\citep{jiang2024labram} & foundation & masked neural-token prediction & 5.8M & $\sim$2{,}500\,h \\
+EEGPT~\citep{wang2024eegpt} & foundation & dual masked self-supervision & 25.3M & multi-corpus$^{a}$ \\
+CBraMod~\citep{wang2025cbramod} & foundation & criss-cross attention, masked patches & 9.3M & $\sim$27{,}000\,h (TUEG) \\
+\midrule
+ErrP-Ens (ours) & ensemble & rank average of all members, both alignments & 0 (no training) & -- \\
+\bottomrule
+\end{tabular}\\[2pt]
+{\scriptsize $^{a}$ several public EEG corpora, see~\citep{wang2024eegpt}. $^{b}$ logistic-regression weights on the tangent-space features. Parameter counts are measured on the instantiated models (ErrP-HRI input, 27 channels, 2\,s; EEGPT at 250\,Hz) and include the new classification head.}
+\end{table}
+
+\subsection{ErrP-Ens: label-free rank ensembling}
+\label{sec:ens}
+Decoders from different families make partly independent errors, but their raw scores live on different
+scales, and for a new participant there are no labels with which to weight or calibrate them. ErrP-Ens solves
+both problems with ranks. For member $m$ and participant $u$, let
+\begin{equation}
+r^u_{m,i}=\frac{\operatorname{rank}\big(f_m(X^u_i)\ \big|\ \{f_m(X^u_j)\}_{j=1}^{n_u}\big)-1}{n_u-1}\in[0,1],
+\label{eq:rank}
+\end{equation}
+the within-participant rank of epoch $i$ (ties receive average ranks). The ensemble score is the mean rank,
+\begin{equation}
+s^u_i=\frac1{|\mathcal M|}\sum_{m\in\mathcal M} r^u_{m,i}.
+\label{eq:ens}
+\end{equation}
+Three properties make Eq.~\ref{eq:ens} suitable for calibration-free use. (1) \emph{No labels:} the ranks use
+only the participant's unlabeled epochs. (2) \emph{Scale invariance:} $r^u_{m,i}$ is unchanged by any strictly
+increasing transformation of $f_m$, so members with heavy-tailed or miscalibrated margins cannot dominate,
+unlike averaging logits or probabilities. (3) \emph{Per-participant normalisation:} a member whose scores
+are shifted for a particular participant (for example, by an amplitude difference) still contributes a
+well-ordered ranking; since $\mathrm{AUROC}_u$ depends only on the within-participant order, this
+normalisation never hurts a single member and removes between-participant offsets from the average.
+
+\paragraph{Members.} $\mathcal M$ contains every decoder of Table~\ref{tab:decoders} trained \emph{with and
+without} alignment (one member per decoder--alignment pair, up to 18). Including both is deliberate:
+alignment helps on some paradigms and hurts on others (\S\ref{sec:results}), and which case applies to a new
+dataset is unknown without labels; the ensemble hedges between them. We also report two restricted variants:
+ErrP-Ens-EA (aligned members only) and ErrP-Ens-EA (top-3), which keeps the three members with the highest
+macro AUROC on the fold's validation participants. A member is included for a training seed only if it
+finished on every fold, so all test participants of a seed are scored by the same ensemble.
+
+\paragraph{Why averaging ranks helps.} If member scores for an error and a correct epoch differ by
+$\Delta_m=r_{m,i}-r_{m,j}$ with mean $\mu_m>0$ and covariance $\Sigma$ across members, the averaged difference
+has signal-to-noise ratio
+\begin{equation}
+\mathrm{SNR}(\bar\Delta)=\frac{\tfrac1M\sum_m\mu_m}{\sqrt{\tfrac1{M^2}\mathbf 1^\top\Sigma\mathbf 1}},
+\label{eq:snr}
+\end{equation}
+which exceeds the best member's $\mu_m/\sqrt{\Sigma_{mm}}$ when members are comparably accurate and their
+errors are not perfectly correlated. ErrP decoders satisfy both conditions: their AUROCs are within a few
+points of each other (Table~\ref{tab:main}) while architectures and alignment settings differ.
+
+\paragraph{From rank to probability.} A reward needs a probability rather than a rank. For deployment, the
+ensemble score can be mapped to an error probability by an isotonic regression $g$ fitted on the validation
+participants,
+\begin{equation}
+\hat p^u_i=g(s^u_i),\qquad g=\arg\min_{g\ \text{non-decreasing}}\sum_{v\in\mathcal U_{\text{val}}}\sum_i \big(y^v_i-g(s^v_i)\big)^2,
+\label{eq:calib}
+\end{equation}
+which preserves the ranking, hence the AUROC, and needs no labels from the new participant. All decoding results
+in this paper are rank-based and do not depend on $g$; the RL frontier uses the calibrated feedback model of
+\S\ref{sec:binormal}.
+
+\subsection{ErrP feedback as reward}
+\label{sec:reward}
+A soft actor-critic agent~\citep{haarnoja2018sac} acts in a goal-conditioned task with sparse reward
+$r^{\text{task}}_t=-\mathbb 1[\lVert g-a_t\rVert>\epsilon]$. Every $k=5$ steps a segment $\tau$ is labelled by
+the change in task distance $d$: $y_\tau=1$ (error) if $d$ increased by more than $\delta=1$\,mm, $y_\tau=0$ if
+it decreased by more than $\delta$, and no feedback otherwise. A decoder returns $\hat p_\tau$ for the observed
+segment, and every step of the segment receives
+\begin{equation}
+r_t=r^{\text{task}}_t+w\,\big(\tfrac12-\hat p_\tau\big),
+\label{eq:reward}
+\end{equation}
+with $w=1$ fixed in advance. With an exact decoder ($\hat p_\tau=y_\tau$) the extra term is a $\pm\tfrac w2$
+progress signal, similar to a coarse potential-based shaping~\citep{ng1999policy}; with an uninformative
+decoder it is noise with a non-zero mean that the critic must fit.
+
+\subsection{Feedback of controlled quality and the break-even AUROC}
+\label{sec:binormal}
+To measure benefit as a function of decoder quality, we replace the EEG decoder by a simulated decoder of
+exactly known AUROC $A$. Under the equal-variance binormal model~\citep{green1966signal}, a latent score
+\begin{equation}
+z_\tau\mid y_\tau\sim\mathcal N\!\big((2y_\tau-1)\tfrac{d'}{2},\,1\big),\qquad d'=\sqrt2\,\Phi^{-1}(A),
+\label{eq:binormal}
+\end{equation}
+has $\Pr(z_{\tau}>z_{\tau'}\mid y_\tau=1,y_{\tau'}=0)=\Phi(d'/\sqrt2)=A$. It is converted to the Bayes posterior
+under the base rate $\pi=0.35$ on which real decoders are calibrated,
+$\hat p_\tau=\sigma\!\big(d' z_\tau+\log\tfrac{\pi}{1-\pi}\big)$, so the simulated decoder is calibrated in the
+same sense as a real one. For each AUROC level we compute the normalised area under the success curve
+$\mathrm{AUC}=\frac1{K}\sum_{k=1}^{K}\mathrm{succ}(t_k)$ and its paired gain over the sparse-reward run of the
+same seed, $G(A)=\mathbb E_{\text{seed}}[\mathrm{AUC}_A-\mathrm{AUC}_{\text{sparse}}]$. The \emph{break-even
+AUROC} is the quality at which feedback starts to help,
+\begin{equation}
+A^\star=\inf\{A:\ G(A)\ge 0\},
+\label{eq:breakeven}
+\end{equation}
+estimated by linear interpolation between measured levels. A decoder helps a learner only if its
+cross-subject AUROC exceeds $A^\star$; comparing the benchmark scores with $A^\star$ tells which paradigms can
+already provide useful implicit feedback.

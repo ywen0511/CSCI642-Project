@@ -96,7 +96,7 @@ def main():
         from pyriemann.tangentspace import TangentSpace
         from sklearn.linear_model import LogisticRegression
         from sklearn.pipeline import make_pipeline
-        pipe = make_pipeline(XdawnCovariances(nfilter=cfg["model"].get("nfilter", 4), estimator="lwf"),
+        pipe = make_pipeline(XdawnCovariances(nfilter=cfg["model"].get("nfilter", 4), estimator="lwf", xdawn_estimator="lwf"),
                              TangentSpace(metric="riemann"),
                              LogisticRegression(C=1.0, class_weight="balanced", max_iter=2000, random_state=a.seed))
         tr = data["train"]

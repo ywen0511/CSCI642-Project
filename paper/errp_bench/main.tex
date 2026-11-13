@@ -15,33 +15,45 @@
 
 % numbers that are not measured yet are rendered visibly; the final PDF must contain none
 \newcommand{\tbd}[1]{\textcolor{red}{[tbd: #1]}}
+% projected (not yet measured) value: always printed with a visible (tbd) marker
+\newcommand{\tbdv}[1]{#1\,{\tiny(tbd)}}
+% 1 = include the planned-experiments section with projected (tbd) numbers; main_measured.tex sets 0
+\providecommand{\showtbdflag}{1}
 \input{generated/numbers.tex}
 % fallback for every measured macro: renders a visible [tbd] if the generator did not define it
 \providecommand{\BestErrpHriCursor}{\tbd{BestErrpHriCursor}}
 \providecommand{\BestErrpHriRobot}{\tbd{BestErrpHriRobot}}
 \providecommand{\BestInterHri}{\tbd{BestInterHri}}
-\providecommand{\BestModelErrpHriCursor}{\tbd{BestModelErrpHriCursor}}
-\providecommand{\BestModelErrpHriRobot}{\tbd{BestModelErrpHriRobot}}
+\providecommand{\BestSingleBnci}{\tbd{BestSingleBnci}}
+\providecommand{\BestSingleErpCoreErn}{\tbd{BestSingleErpCoreErn}}
+\providecommand{\BestSingleErrpHriCursor}{\tbd{BestSingleErrpHriCursor}}
+\providecommand{\BestSingleErrpHriRobot}{\tbd{BestSingleErrpHriRobot}}
+\providecommand{\BestSingleInterHri}{\tbd{BestSingleInterHri}}
+\providecommand{\BestSingleModelErrpHriRobot}{\tbd{BestSingleModelErrpHriRobot}}
 \providecommand{\CursorGtRobot}{\tbd{CursorGtRobot}}
 \providecommand{\CursorMinusRobot}{\tbd{CursorMinusRobot}}
 \providecommand{\CursorRobotP}{\tbd{CursorRobotP}}
+\providecommand{\EADeltaBnci}{\tbd{EADeltaBnci}}
 \providecommand{\EADeltaErrpHriCursor}{\tbd{EADeltaErrpHriCursor}}
+\providecommand{\EADeltaErrpHriRobot}{\tbd{EADeltaErrpHriRobot}}
 \providecommand{\EADeltaInterHri}{\tbd{EADeltaInterHri}}
-\providecommand{\EAFMDelta}{\tbd{EAFMDelta}}
 \providecommand{\EAMeanDelta}{\tbd{EAMeanDelta}}
 \providecommand{\EANModelsErrpHriCursor}{\tbd{EANModelsErrpHriCursor}}
 \providecommand{\EAPosFrac}{\tbd{EAPosFrac}}
-\providecommand{\EarlyEEGNetNone}{\tbd{EarlyEEGNetNone}}
-\providecommand{\EarlyXdawnNone}{\tbd{EarlyXdawnNone}}
-\providecommand{\EAScratchDelta}{\tbd{EAScratchDelta}}
 \providecommand{\EASigNegInterHri}{\tbd{EASigNegInterHri}}
 \providecommand{\EASigPosErrpHriCursor}{\tbd{EASigPosErrpHriCursor}}
-\providecommand{\EnsAllBeatsBest}{\tbd{EnsAllBeatsBest}}
-\providecommand{\EnsAllMeanRank}{\tbd{EnsAllMeanRank}}
-\providecommand{\EnsAllSigBetter}{\tbd{EnsAllSigBetter}}
-\providecommand{\EnsAllSigWorse}{\tbd{EnsAllSigWorse}}
-\providecommand{\EnsAllVsBestMean}{\tbd{EnsAllVsBestMean}}
-\providecommand{\EnsTopMeanRank}{\tbd{EnsTopMeanRank}}
+\providecommand{\EarlyEEGNetNone}{\tbd{EarlyEEGNetNone}}
+\providecommand{\EarlyXdawnNone}{\tbd{EarlyXdawnNone}}
+\providecommand{\EnsAllErpCoreErn}{\tbd{EnsAllErpCoreErn}}
+\providecommand{\EnsAllErrpHriCursor}{\tbd{EnsAllErrpHriCursor}}
+\providecommand{\EnsAllErrpHriRobot}{\tbd{EnsAllErrpHriRobot}}
+\providecommand{\EnsMixBeatsBest}{\tbd{EnsMixBeatsBest}}
+\providecommand{\EnsMixBnci}{\tbd{EnsMixBnci}}
+\providecommand{\EnsMixErpCoreErn}{\tbd{EnsMixErpCoreErn}}
+\providecommand{\EnsMixErrpHriCursor}{\tbd{EnsMixErrpHriCursor}}
+\providecommand{\EnsMixErrpHriRobot}{\tbd{EnsMixErrpHriRobot}}
+\providecommand{\EnsMixInterHri}{\tbd{EnsMixInterHri}}
+\providecommand{\EnsMixVsBestMean}{\tbd{EnsMixVsBestMean}}
 \providecommand{\FMMinusCompactMean}{\tbd{FMMinusCompactMean}}
 \providecommand{\FMWinsDatasets}{\tbd{FMWinsDatasets}}
 \providecommand{\GPUHours}{\tbd{GPUHours}}
@@ -50,13 +62,26 @@
 \providecommand{\NSeedsMain}{\tbd{NSeedsMain}}
 \providecommand{\NSubjectsTotal}{\tbd{NSubjectsTotal}}
 \providecommand{\NVariantsMax}{\tbd{NVariantsMax}}
+\providecommand{\RLAUCReachDense}{\tbd{RLAUCReachDense}}
+\providecommand{\RLAUCReachExact}{\tbd{RLAUCReachExact}}
+\providecommand{\RLAUCReachLow}{\tbd{RLAUCReachLow}}
+\providecommand{\RLAUCReachSparse}{\tbd{RLAUCReachSparse}}
 \providecommand{\RLBreakEvenReach}{\tbd{RLBreakEvenReach}}
+\providecommand{\RLGainReachLow}{\tbd{RLGainReachLow}}
+\providecommand{\RLPosReachExact}{\tbd{RLPosReachExact}}
+\providecommand{\RLPosReachLow}{\tbd{RLPosReachLow}}
 \providecommand{\RLRhoPReach}{\tbd{RLRhoPReach}}
 \providecommand{\RLRhoReach}{\tbd{RLRhoReach}}
 \providecommand{\RLSeedsText}{\tbd{RLSeedsText}}
+\providecommand{\RLSignPReachExact}{\tbd{RLSignPReachExact}}
+\providecommand{\RLSignPReachLow}{\tbd{RLSignPReachLow}}
+\providecommand{\RLSuccPushDense}{\tbd{RLSuccPushDense}}
+\providecommand{\RLSuccPushExact}{\tbd{RLSuccPushExact}}
+\providecommand{\RLSuccPushSparse}{\tbd{RLSuccPushSparse}}
+\providecommand{\RLSuccReachLow}{\tbd{RLSuccReachLow}}
 
-\title{ErrP-Bench: Do EEG Foundation Models Detect Errors?\\
-Benchmarking Error-Related Potential Decoding Across Paradigms\\ and Its Value as Implicit Feedback for Robot Learning}
+\title{Calibration-Free Error-Potential Decoding Across Paradigms,\\
+and How Good It Must Be to Teach a Robot}
 
 \author{Anonymous Authors}
 
@@ -69,9 +94,11 @@ Benchmarking Error-Related Potential Decoding Across Paradigms\\ and Its Value a
 
 \input{sections/intro}
 \input{sections/related}
+\input{sections/method}
 \input{sections/benchmark}
 \input{sections/results_decoding}
 \input{sections/rl_frontier}
+\input{sections/extended}
 \input{sections/discussion}
 
 \bibliographystyle{plainnat}

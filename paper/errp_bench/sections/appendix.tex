@@ -14,6 +14,15 @@ can reach $p<0.05$, so non-significance there is not evidence of equivalence.
 \input{generated/table_bvo.tex}
 \end{table}
 
+\begin{table}[h]
+\centering
+\caption{Best foundation model versus best compact network per dataset (paired Wilcoxon over participants,
+uncorrected).}
+\label{tab:fm}
+\scriptsize
+\resizebox{\linewidth}{!}{\input{generated/table_fm.tex}}
+\end{table}
+
 \section{Data preparation details}
 \label{app:data}
 
@@ -34,7 +43,9 @@ All decoders were trained on NVIDIA A100 GPUs (xDAWN on CPU); the RL frontier us
 The benchmark comprises \NFitsTotal{} cross-subject fits (about \GPUHours{} GPU-hours). EEGPT is about an order
 of magnitude slower per epoch than the other foundation models; within the compute window of this study it was
 run with fewer seeds, and some of its alignment conditions are missing (marked in Table~\ref{tab:main}).
-ERP CORE ERN networks were run with one seed. A complete per-variant listing (seeds, participants, completeness)
+xDAWN is deterministic and was run once per configuration; it uses Ledoit--Wolf shrinkage both for its spatial
+filters and for the covariances, because the unregularised filter estimate is singular on the
+common-average-referenced datasets. A complete per-variant listing (seeds, participants, completeness)
 is in the released \texttt{results\_summary.txt}. Partially finished seeds are excluded, never imputed.
 
 \section{Reproducibility}

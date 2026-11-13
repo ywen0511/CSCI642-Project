@@ -3,25 +3,50 @@
 
 \paragraph{Error-related potentials.} The error-related negativity was first described for self-generated
 response errors~\citep{falkenstein1991effects,gehring1993neural}; observation and interaction ErrPs follow
-erroneous feedback or machine actions~\citep{chavarriaga2010learning,chavarriaga2014errare}. ErrPs have been
-decoded to correct robot actions online~\citep{salazargomez2017correcting}, to teach interfaces
-\citep{iturrate2015teaching}, and to shape the reward of robot learners~\citep{kim2017intrinsic,akinola2020accelerated,xu2021accelerating}.
-Most of these works decode within subjects after a calibration session. Public datasets now span visual
-observation~\citep{ehrlich2019feasibility,chavarriaga2010learning}, self-generated
-errors~\citep{kappenman2021erpcore} and physically introduced errors~\citep{kueper2024eegemg,chari2024interhri},
-but no common cross-subject protocol compares them.
+erroneous feedback or machine actions~\citep{chavarriaga2010learning,chavarriaga2014errare}. Public datasets now
+span visual observation~\citep{ehrlich2019feasibility,chavarriaga2010learning}, self-generated
+errors~\citep{kappenman2021erpcore}, physically introduced errors~\citep{kueper2024eegemg,chari2024interhri} and
+mixed sensory feedback~\citep{liu2026decoding}. Most decoders are trained within subjects after a calibration
+session; subject-independent decoders have been built from pooled or simulated
+participants~\citep{fidencio2024generic}, but no common cross-subject protocol compares paradigms, which is the
+gap ErrP-Bench fills.
+
+\paragraph{ErrPs as implicit feedback for learning.} ErrPs have been decoded to correct robot actions
+online~\citep{salazargomez2017correcting}, to teach interfaces~\citep{iturrate2015teaching}, and to shape the
+reward of reinforcement learners~\citep{kim2017intrinsic,akinola2020accelerated,xu2021accelerating}; see
+\citet{fidencio2022errorrelated} for a review. Recent work aligns robot policies with ErrP-derived
+reward~\citep{kim2025aligning}, accelerates manipulation learning with ErrP shaping from leave-one-subject-out
+decoders~\citep{kim2026accelerating}, combines ErrPs with adaptive RL interfaces~\citep{fidencio2025hybrid}, and
+uses EEG-derived reward for driving~\citep{zhuang2026neurocognitive}. These studies place brain signals in the line of learning from human
+feedback~\citep{knox2009tamer,christiano2017deep} and report gains for specific decoders, tasks and feedback
+weights~\citep{kim2026accelerating}. We complement them by measuring the benefit as a continuous function of
+decoder quality, and by asking which error paradigms reach the required quality without calibration.
 
 \paragraph{EEG decoders and foundation models.} Compact convolutional networks such as
-EEGNet~\citep{lawhern2018eegnet} and EEG-Inception~\citep{santamariavazquez2020eeginception}, convolution-transformer
-hybrids~\citep{song2023eegconformer,zhao2024ctnet,chen2024eegnex}, and Riemannian pipelines built on xDAWN
-spatial filtering~\citep{rivet2009xdawn,barachant2012multiclass} are standard for event-related potentials.
-Foundation models pretrain transformers on large unlabeled corpora and fine-tune on the target task:
-LaBraM~\citep{jiang2024labram}, EEGPT~\citep{wang2024eegpt} and CBraMod~\citep{wang2025cbramod} are the
-open models we evaluate. Cross-subject shift is also addressed without labels by aligning each subject's
-data, e.g.\ Euclidean alignment~\citep{he2020transfer} or Riemannian re-centering~\citep{zanini2018transfer}.
+EEGNet~\citep{lawhern2018eegnet}, ShallowConvNet and Deep4Net~\citep{schirrmeister2017deep},
+EEG-Inception~\citep{santamariavazquez2020eeginception}, EEGNeX~\citep{chen2024eegnex} and
+ATCNet~\citep{altaheri2023physics}, convolution--transformer hybrids~\citep{song2023eegconformer,zhao2024ctnet},
+and Riemannian pipelines built on xDAWN spatial filtering~\citep{rivet2009xdawn,barachant2012multiclass,barachant2014plug}
+are standard for event-related potentials. Foundation models pretrain on large unlabeled corpora and fine-tune
+on the target task: BENDR~\citep{kostas2021bendr}, BIOT~\citep{yang2023biot}, LaBraM~\citep{jiang2024labram},
+EEGPT~\citep{wang2024eegpt}, CBraMod~\citep{wang2025cbramod}, NeuroLM~\citep{jiang2025neurolm},
+EEGFormer~\citep{chen2024eegformer}, BrainWave~\citep{yuan2024brainwave}, CSBrain~\citep{zhou2025csbrain},
+REVE~\citep{elouahidi2025reve}, LUNA~\citep{doner2025luna}, CodeBrain~\citep{ma2026codebrain} and
+LaBraM++~\citep{barmpas2025advancing}, with state-space alternatives such as FEMBA~\citep{tegon2025femba} and
+EEGMamba~\citep{wang2025eegmamba}. Independent evaluations increasingly find that fine-tuned foundation models
+gain little over compact networks~\citep{lee2025large} and often fail to beat them when labelled data are
+scarce~\citep{yang2026are}; our ErrP results agree.
 
-\paragraph{Benchmarks.} MOABB~\citep{jayaram2018moabb,chevallier2024moabbbenchmark} standardised classical BCI paradigms;
-recent foundation-model benchmarks evaluate many tasks and report mixed gains over specialist
-models~\citep{kastrati2025eegbench,lu2026omnieegbench,liu2026eegfmcompass,kokate2026channel}. ErrPs appear there as one task
-among dozens. ErrP-Bench is complementary: it covers the error paradigms in depth, tests whether
-alignment or pretraining matters more, and measures the downstream value of the decoded signal for learning.
+\paragraph{Cross-subject transfer and ensembling.} Between-subject shift is reduced without labels by aligning
+each subject's data, by Euclidean alignment~\citep{he2020transfer} or Riemannian
+re-centering~\citep{zanini2018transfer}. Ensembles of decoders are common in BCI competitions, but averaging raw
+scores across heterogeneous models requires calibration~\citep{guo2017calibration}, which is unavailable for a
+new user. ErrP-Ens uses within-participant ranks, which make members commensurable without labels, and includes
+aligned and unaligned members because the benefit of alignment is paradigm-dependent.
+
+\paragraph{Benchmarks.} MOABB~\citep{jayaram2018moabb,chevallier2024moabbbenchmark} standardised classical BCI
+paradigms; recent foundation-model benchmarks evaluate many tasks and report mixed gains over specialist
+models~\citep{kastrati2025eegbench,xiong2025eegfmbench,wu2025adabrainbench,lu2026omnieegbench,liu2026eegfmcompass,kokate2026channel}.
+ErrPs appear there as one task among dozens. ErrP-Bench covers the error paradigms in depth, tests whether
+alignment, pretraining or ensembling matters most, and measures the downstream value of the decoded signal
+for learning.

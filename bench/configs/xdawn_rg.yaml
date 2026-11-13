@@ -1,4 +1,4 @@
-# xDAWN (4 filters, Ledoit-Wolf) covariances -> Riemannian tangent space -> logistic regression (C=1, balanced)
+# xDAWN (4 filters; Ledoit-Wolf for both the xDAWN filters and the covariances) -> Riemannian tangent space -> logistic regression (C=1, balanced)
 seed: 42
 input: {view: eeg256, scaling: none}
 model: {name: xdawn_rg, nfilter: 4}

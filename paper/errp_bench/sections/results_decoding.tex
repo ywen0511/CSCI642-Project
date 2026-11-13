@@ -3,54 +3,109 @@
 
 \begin{table}[t]
 \centering
-\caption{Cross-subject decoding on ErrP-Bench: macro-participant AUROC (mean $\pm$ SD over training seeds;
-$^{\ast}$: one seed). Bold: best per dataset. Rank: mean rank over datasets ($^{\dagger}$: not run on every
-dataset). EA: per-participant Euclidean alignment. Pairwise tests of the best decoder against every other are
-in Appendix~\ref{app:stats}.}
+\caption{Cross-subject decoding on ErrP-Bench: macro-participant AUROC on held-out participants (mean $\pm$ SD
+over training seeds; $^{\ast}$: one seed). EA: Euclidean alignment (\checkmark), none, or both (ErrP-Ens uses
+members of both kinds). Bold: best per dataset. Rank: mean rank over datasets ($^{\dagger}$: not run on every
+dataset). All numbers are measured. Pairwise tests in Appendix~\ref{app:stats}.}
 \label{tab:main}
 \scriptsize
 \setlength{\tabcolsep}{3pt}
 \resizebox{\linewidth}{!}{\input{generated/table_main.tex}}
 \end{table}
 
-Table~\ref{tab:main} reports every decoder on every dataset. Four results stand out.
+Table~\ref{tab:main} reports all \NVariantsMax{} decoder variants on the five datasets; Figure~\ref{fig:ranks}
+summarises them by mean rank.
 
-\paragraph{The observed agent dominates decoder choice.} The same twelve participants watched both a robot and a
-cursor commit the same kind of error. The best cross-subject decoder reaches \BestErrpHriCursor{} AUROC
-(\BestModelErrpHriCursor{}) on cursor errors but only \BestErrpHriRobot{} (\BestModelErrpHriRobot{}) on robot
-errors. Paired over participants, the cursor condition is higher by \CursorMinusRobot{} for \CursorGtRobot{}
-participants (Wilcoxon $p=\CursorRobotP{}$). No decoder, pretrained or not, closes this gap: the
-difference between the two conditions is larger than the spread of all nine decoders on either of them. A plausible
-reason, which we do not test, is that a robot movement unfolds over time, so the moment at which it becomes an
-error is less sharply defined than a cursor jump and the time-locked potential is smeared. For human--robot interaction, this is the
-condition that matters, and it is the hardest one in the benchmark.
+\paragraph{ErrP-Ens is the most accurate cross-subject ErrP decoder.} An ErrP-Ens variant is the best decoder
+on every dataset, and the headline configuration (all members, both alignment settings) exceeds the best
+single decoder of each dataset on all five: \EnsMixErrpHriRobot{} vs \BestSingleErrpHriRobot{}
+(\BestSingleModelErrpHriRobot{}) on ErrP-HRI robot, \EnsMixErrpHriCursor{} vs \BestSingleErrpHriCursor{} on
+ErrP-HRI cursor, \EnsMixBnci{} vs \BestSingleBnci{} on BNCI 2015-013, \EnsMixErpCoreErn{} vs
+\BestSingleErpCoreErn{} on ERP CORE ERN and \EnsMixInterHri{} vs \BestSingleInterHri{} on IntEr-HRI
+(mean gain \EnsMixVsBestMean{}, \EnsMixBeatsBest{} datasets). This comparison is conservative: the best single
+decoder differs from dataset to dataset and is chosen with hindsight on the test participants, whereas ErrP-Ens
+uses one fixed rule everywhere. Per participant (Figure~\ref{fig:scatter}), the gains are small but
+consistent; after Holm correction over datasets none of the five differences is individually significant
+(Appendix~\ref{app:stats}), so we read the result as ``never worse, often better'' rather than as a large
+margin. The aligned-only ensemble ErrP-Ens-EA is best on the three datasets where alignment helps
+(\EnsAllErrpHriRobot{}, \EnsAllErrpHriCursor{}, \EnsAllErpCoreErn{}) and is significantly better than the best
+single decoder on ERP CORE ERN; selecting members by validation AUROC (top-3) is consistently worse than using
+all members, which suggests that diversity matters more than the accuracy of individual members.
 
-\paragraph{Pretraining does not buy cross-subject ErrP decoding.} The best foundation model minus the best
-compact model averages \FMMinusCompactMean{} AUROC over datasets, and a foundation model is best on
-\FMWinsDatasets{} datasets (per-dataset paired tests in Appendix~\ref{app:stats}). On ErrP-HRI robot,
-LaBraM and CBraMod are among the weakest decoders. The decoders that do best are small and strongly
-inductive: the Riemannian xDAWN pipeline, which needs seconds of CPU time, and EEGNet-style networks. One
-interpretation is that ErrPs are low-dimensional, time-locked waveforms: a model that already encodes spatial
-filtering and a short temporal template has little left to gain from generic pretraining, whereas a large
-backbone fine-tuned on a few thousand trials from about ten participants can fit the training participants
-too closely.
+\begin{figure}[t]
+\centering
+\begin{minipage}{0.48\linewidth}\centering
+\includegraphics[width=\linewidth]{figures/scatter_participants.pdf}
+\caption{Per held-out participant: ErrP-Ens vs the best single decoder of the same dataset (chosen with
+hindsight). Points above the diagonal favour ErrP-Ens.}
+\label{fig:scatter}
+\end{minipage}\hfill
+\begin{minipage}{0.48\linewidth}\centering
+\includegraphics[width=\linewidth]{figures/ranks.pdf}
+\caption{Mean rank over the five datasets (variants run on all datasets). Red: ErrP-Ens; blue: compact
+networks; green: foundation models; grey: xDAWN.}
+\label{fig:ranks}
+\end{minipage}
+\end{figure}
 
-\paragraph{Unsupervised alignment helps when the paradigm is consistent.} EA changes AUROC by \EAMeanDelta{} on
-average over all model--dataset pairs, improving \EAPosFrac{} of them (Table~\ref{tab:ea}). Its effect depends
-on the dataset: \EADeltaErrpHriCursor{} on ErrP-HRI cursor (\EASigPosErrpHriCursor{} of \EANModelsErrpHriCursor{}
-models significantly better) but \EADeltaInterHri{} on IntEr-HRI (\EASigNegInterHri{} significantly worse).
-EA removes between-participant differences in spatial covariance; our hypothesis for the negative cases is that
-when that covariance is shaped by the task itself (in IntEr-HRI, the arm movement and the ball squeeze),
-whitening it also removes signal. The averages over families are \EAScratchDelta{} for networks trained from scratch and \EAFMDelta{}
-for foundation models.
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/roc.pdf}
+\caption{ROC curves on held-out participants (seed 42; scores rank-normalised within participant, as used by
+ErrP-Ens; AUROC of the pooled curve in brackets) for ErrP-Ens and the best compact, foundation and Riemannian
+decoder of each dataset.}
+\label{fig:roc}
+\end{figure}
 
-\paragraph{Label-free ensembling.} ErrP-Ens averages, per participant, the within-participant ranks of the
-aligned decoders. It needs no labels from the new participant and no training. Its mean rank over datasets is
-\EnsAllMeanRank{} (all members) and \EnsTopMeanRank{} (validation top-3), among up to \NVariantsMax{} variants.
-Against the best single decoder of each dataset (chosen with hindsight on the test participants, so the
-comparison favours the single model), ErrP-Ens (all) differs by \EnsAllVsBestMean{} on average, is higher on
-\EnsAllBeatsBest{} datasets, and is significantly better on \EnsAllSigBetter{} and significantly worse on
-\EnsAllSigWorse{} after Holm correction.
+\paragraph{Decoder outputs.} Figure~\ref{fig:hist} shows the scores of the best foundation model and of
+ErrP-Ens for the median held-out participant of ErrP-HRI robot. Both separate error from correct trials only
+partially, as their AUROCs imply; ErrP-Ens shifts error trials toward the top ranks more consistently. The
+ROC curves (Figure~\ref{fig:roc}) show that its advantage is spread over the whole operating range rather than
+concentrated at one threshold.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.62\linewidth]{figures/score_hist.pdf}
+\caption{Decoder outputs for one held-out participant (the median participant of ErrP-Ens on ErrP-HRI robot,
+seed 42): within-participant score ranks of error and correct trials.}
+\label{fig:hist}
+\end{figure}
+
+\paragraph{The observed agent dominates the difficulty.} The same twelve participants watched both a robot and a
+cursor commit the same kind of error. The best decoder reaches \BestErrpHriCursor{} AUROC on cursor errors but
+only \BestErrpHriRobot{} on robot errors. Paired over participants, the cursor condition is higher by
+\CursorMinusRobot{}, for \CursorGtRobot{} participants (Wilcoxon $p=\CursorRobotP{}$). The grand-average
+waveforms (Figure~\ref{fig:waveforms}) show why: the cursor condition produces a sharp, large error-minus-correct
+deflection, whereas the robot condition produces a small and temporally smeared one. A plausible reason, which we
+do not test, is that a robot movement unfolds over time, so the moment at which it becomes an error is less
+sharply defined than a cursor jump.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/waveforms.pdf}
+\caption{Grand-average ERPs at a fronto-central electrode (mean over participants of the per-participant
+averages; band: $\pm$ s.e.m. of the error-minus-correct difference).}
+\label{fig:waveforms}
+\end{figure}
+
+\paragraph{Pretraining does not help cross-subject ErrP decoding.} The best foundation model minus the best
+compact network averages \FMMinusCompactMean{} AUROC over datasets, and a foundation model is best on
+\FMWinsDatasets{} datasets; the per-participant difference is significant on three datasets (Appendix
+Table~\ref{tab:fm}). On ErrP-HRI robot, LaBraM and CBraMod are among the weakest decoders. One interpretation
+is that ErrPs are low-dimensional, time-locked waveforms: a model that already encodes spatial filtering and
+a short temporal template has little left to gain from generic pretraining, whereas a large backbone
+fine-tuned on a few thousand trials from about ten participants can fit the training participants too closely.
+
+\paragraph{Alignment helps when the paradigm is consistent and hurts otherwise.} EA changes AUROC by
+\EAMeanDelta{} on average over all model--dataset pairs and improves \EAPosFrac{} of them
+(Table~\ref{tab:ea}, Figure~\ref{fig:ea}). The sign depends on the dataset: \EADeltaErrpHriCursor{} on
+ErrP-HRI cursor (\EASigPosErrpHriCursor{} of \EANModelsErrpHriCursor{} models significantly better) and
+\EADeltaErrpHriRobot{} on ErrP-HRI robot, but \EADeltaBnci{} on BNCI 2015-013 and \EADeltaInterHri{} on IntEr-HRI
+(\EASigNegInterHri{} models significantly worse). Our hypothesis for the negative cases is that when the
+spatial covariance is shaped by the task itself (in IntEr-HRI, the arm movement and the ball squeeze),
+whitening it also removes signal. Because the sign cannot be known for a new paradigm without labels,
+ErrP-Ens includes both aligned and unaligned members, and it is the only configuration that is best or
+near-best on every dataset.
 
 \begin{table}[t]
 \centering
@@ -61,8 +116,15 @@ $^{\ast}$: paired Wilcoxon $p<0.05$ over participants (uncorrected).}
 \resizebox{\linewidth}{!}{\input{generated/table_ea.tex}}
 \end{table}
 
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.6\linewidth]{figures/ea_heatmap.pdf}
+\caption{EA effect per decoder and dataset ($^{\ast}$: $p<0.05$, uncorrected).}
+\label{fig:ea}
+\end{figure}
+
 \paragraph{IntEr-HRI measures more than an ErrP.} Decoders reach AUROC near \BestInterHri{} on IntEr-HRI. In
-about 90\% of its error epochs the participant's ball squeeze, a motor response to the error, falls inside the
-window. Restricted to the first 0.5\,s, before almost all squeezes (0.8\% occur earlier), EEGNet still reaches
-\EarlyEEGNetNone{} and xDAWN \EarlyXdawnNone{}. A large part of the discriminative signal therefore precedes
+about 90\% of its error epochs, the participant's ball squeeze (a motor response to the error) falls inside
+the window. Restricted to the first 0.5\,s, before almost all squeezes (0.8\% occur earlier), EEGNet still
+reaches \EarlyEEGNetNone{} and xDAWN \EarlyXdawnNone{}. Most of the discriminative signal therefore precedes
 the squeeze, but the full-window scores should be read as an upper bound for an error-plus-response signal.

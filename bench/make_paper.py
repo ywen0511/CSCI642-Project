@@ -27,13 +27,13 @@ PARADIGM = {"errphri_robot": "observed robot error", "errphri_cursor": "observed
 LOCK = {"errphri_robot": "machine action", "errphri_cursor": "machine action", "bnci2015_013": "cursor step",
         "erpcore_ern": "response", "interhri": "perturbation"}
 MODELS = ["xdawn_rg", "eegnet", "eeginception_erp", "eegnex", "eegconformer", "ctnet", "labram", "eegpt", "cbramod",
-          "ens_all", "ens_top3"]
+          "ens_mix", "ens_all", "ens_top3"]
 NICE = {"xdawn_rg": "xDAWN+RG", "eegnet": "EEGNet", "eeginception_erp": "EEG-Inception", "eegnex": "EEGNeX",
         "eegconformer": "EEG-Conformer", "ctnet": "CTNet", "labram": "LaBraM", "eegpt": "EEGPT", "cbramod": "CBraMod",
-        "ens_all": "ErrP-Ens (all)", "ens_top3": "ErrP-Ens (top-3)"}
+        "ens_mix": "ErrP-Ens", "ens_all": "ErrP-Ens-EA", "ens_top3": "ErrP-Ens-EA (top-3)"}
 FAMILY = {"xdawn_rg": "Riemannian", "eegnet": "compact", "eeginception_erp": "compact", "eegnex": "compact",
           "eegconformer": "compact", "ctnet": "compact", "labram": "foundation", "eegpt": "foundation",
-          "cbramod": "foundation", "ens_all": "ours", "ens_top3": "ours"}
+          "cbramod": "foundation", "ens_mix": "ours", "ens_all": "ours", "ens_top3": "ours"}
 
 
 def macro(name, value):
@@ -83,7 +83,7 @@ def main():
              "Family & Model & EA & " + " & ".join(DS_NICE[d] for d in dss) + " & Rank \\\\", "\\midrule"]
     prev_family = None
     for m in MODELS:
-        for al in ("none", "ea"):
+        for al in ("none", "ea", "both"):
             if not any((d, m, al) in comp for d in dss):
                 continue
             if FAMILY[m] != prev_family and prev_family is not None:
@@ -98,7 +98,7 @@ def main():
                 s = f"{v['macro_auroc_mean']:.3f}" + (f"\\scriptsize{{$\\pm${v['macro_auroc_sd']:.3f}}}" if v["n_seeds"] > 1 else "\\scriptsize{$^{\\ast}$}")
                 cells.append(f"\\textbf{{{s}}}" if abs(v["macro_auroc_mean"] - best[d]) < 1e-12 else s)
             rk = ranks[(m, al)]
-            mark = "\\checkmark" if al == "ea" else ""
+            mark = {"ea": "\\checkmark", "both": "both"}.get(al, "")
             lines.append(f"{FAMILY[m]} & {NICE[m]} & {mark} & " + " & ".join(cells)
                          + f" & {np.mean(rk):.1f}" + ("" if len(rk) == len(dss) else "$^{\\dagger}$") + " \\\\")
     lines += ["\\bottomrule", "\\end{tabular}"]
@@ -196,26 +196,35 @@ def main():
                    f"cursor>robot in {int((x>y).sum())}/{len(u)}, Wilcoxon p={fp(p)}")
     # foundation vs compact: best foundation minus best compact per dataset
     gaps = []
+    fm_lines = ["\\begin{tabular}{llcllcccc}", "\\toprule",
+                "Dataset & Best foundation & AUROC & Best compact & & AUROC & $\\Delta$ & FM higher & $p$ \\\\", "\\midrule"]
     for d in dss:
         kf, kc_ = best_key(d, "foundation"), best_key(d, "compact")
         if kf and kc_:
             dl, npos, n, p = paired(kf, kc_)
             gaps.append(dl)
+            ea_ = lambda k: " + EA" if k[2] == "ea" else ""
+            fm_lines.append(f"{DS_NICE[d]} & {NICE[kf[1]]}{ea_(kf)} & {comp[kf]['macro_auroc_mean']:.3f} & "
+                            f"{NICE[kc_[1]]}{ea_(kc_)} & & {comp[kc_]['macro_auroc_mean']:.3f} & {dl:+.3f} & {npos}/{n} & ${fpl(p)}$ \\\\")
             txt.append(f"{d}: best foundation {NICE[kf[1]]}/{kf[2]} {comp[kf]['macro_auroc_mean']:.3f} vs best compact "
                        f"{NICE[kc_[1]]}/{kc_[2]} {comp[kc_]['macro_auroc_mean']:.3f}: delta {dl:+.3f} ({npos}/{n} participants higher, p={fp(p)})")
+    fm_lines += ["\\bottomrule", "\\end{tabular}"]
+    (O / "table_fm.tex").write_text("\n".join(fm_lines) + "\n")
     if gaps:
         nums += [macro("FMMinusCompactMean", f"{np.mean(gaps):+.3f}"), macro("FMWinsDatasets", f"{sum(g > 0 for g in gaps)}/{len(gaps)}")]
     # ensemble vs best single (paired, Holm over datasets)
-    for ens in ("ens_all", "ens_top3"):
+    ENSAL = {"ens_mix": "both", "ens_all": "ea", "ens_top3": "ea"}
+    ENSTAG = {"ens_mix": "EnsMix", "ens_all": "EnsAll", "ens_top3": "EnsTop"}
+    for ens in ("ens_mix", "ens_all", "ens_top3"):
         rows_e, ps = [], []
         for d in dss:
-            ke = (d, ens, "ea")
+            ke = (d, ens, ENSAL[ens])
             ks = best_key(d) if False else max((k for k in comp if k[0] == d and not k[1].startswith("ens")),
                                                key=lambda k: comp[k]["macro_auroc_mean"], default=None)
             if ke in comp and ks:
                 dl, npos, n, p = paired(ke, ks)
                 rows_e.append((d, dl, npos, n, p, ks)); ps.append(p if np.isfinite(p) else 1.0)
-        tag = "EnsAll" if ens == "ens_all" else "EnsTop"
+        tag = ENSTAG[ens]
         if rows_e:
             from aggregate import holm
             adj = holm(np.array(ps))
@@ -227,11 +236,20 @@ def main():
                 txt.append(f"{ens} vs best single on {r[0]} ({NICE[r[5][1]]}/{r[5][2]}): {r[1]:+.3f} ({r[2]}/{r[3]} participants), "
                            f"p={fp(r[4])}, Holm p={fp(q)}")
     # rank of each ensemble among all variants
-    for ens in ("ens_all", "ens_top3"):
-        rk = ranks.get((ens, "ea"))
+    for ens in ("ens_mix", "ens_all", "ens_top3"):
+        rk = ranks.get((ens, ENSAL[ens]))
         if rk:
-            nvar = {d: sum(1 for k in comp if k[0] == d) for d in dss}
-            nums.append(macro(("EnsAll" if ens == "ens_all" else "EnsTop") + "MeanRank", f"{np.mean(rk):.1f}"))
+            nums.append(macro(ENSTAG[ens] + "MeanRank", f"{np.mean(rk):.1f}"))
+        vals = {d: comp[(d, ens, ENSAL[ens])]["macro_auroc_mean"] for d in dss if (d, ens, ENSAL[ens]) in comp}
+        for d, v in vals.items():
+            tg = "".join(ch for ch in DS_NICE[d].title() if ch.isalpha())
+            nums.append(macro(f"{ENSTAG[ens]}{tg}", f3(v)))
+    # best single (non-ensemble) decoder per dataset
+    for d in dss:
+        tg = "".join(ch for ch in DS_NICE[d].title() if ch.isalpha())
+        ks = max((k for k in comp if k[0] == d and not k[1].startswith("ens")), key=lambda k: comp[k]["macro_auroc_mean"])
+        nums += [macro(f"BestSingle{tg}", f3(comp[ks]["macro_auroc_mean"])),
+                 macro(f"BestSingleModel{tg}", NICE[ks[1]] + (" + EA" if ks[2] == "ea" else ""))]
     nums.append(macro("NVariantsMax", str(max(sum(1 for k in comp if k[0] == d) for d in dss))))
     # EA: per dataset mean delta and n significant
     for d in dss:

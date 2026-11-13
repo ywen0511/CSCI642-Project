@@ -37,6 +37,15 @@ of the best ErrP-Bench decoder on each dataset.}
 \label{fig:frontier}
 \end{figure}
 
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.62\linewidth]{figures/rl_curves.pdf}
+\caption{FetchReach learning curves (success on 100 held-out goals; mean $\pm$ s.e.m. over 10 seeds) for sparse
+and dense reward and for ErrP feedback of four quality levels. Low-quality feedback delays learning relative to
+the sparse reward; high-quality feedback accelerates it.}
+\label{fig:rlcurves}
+\end{figure}
+
 \begin{table}[t]
 \centering
 \caption{Normalized success AUC (mean $\pm$ SD over seeds) and its paired difference to the sparse-reward run of

@@ -1,0 +1,16 @@
+\begin{tabular}{lcccccc}
+\toprule
+Feedback & \multicolumn{2}{c}{FetchReach} & \multicolumn{2}{c}{FetchPush} & \multicolumn{2}{c}{FetchPush (staged)} \\
+ & norm.\ AUC & $\Delta$ vs sparse & norm.\ AUC & $\Delta$ vs sparse & norm.\ AUC & $\Delta$ vs sparse \\
+\midrule
+sparse only & 0.671\scriptsize{$\pm$0.106} & ref & 0.045\scriptsize{$\pm$0.011} & ref & 0.045\scriptsize{$\pm$0.011} & ref \\
+dense (reference) & 0.915\scriptsize{$\pm$0.029} & +0.245 (10/10) & 0.055\scriptsize{$\pm$0.007} & +0.009 (5/5) & 0.053\scriptsize{$\pm$0.015} & +0.008 (4/5) \\
+AUROC 0.55 & 0.499\scriptsize{$\pm$0.148} & -0.172 (1/10) & 0.068\scriptsize{$\pm$0.019} & +0.022 (4/5) & 0.045\scriptsize{$\pm$0.022} & -0.001 (2/5) \\
+AUROC 0.60 & 0.533\scriptsize{$\pm$0.125} & -0.138 (2/10) & 0.053\scriptsize{$\pm$0.015} & +0.007 (4/5) & 0.076\scriptsize{$\pm$0.077} & +0.031 (3/5) \\
+AUROC 0.65 & 0.592\scriptsize{$\pm$0.084} & -0.078 (1/10) & 0.050\scriptsize{$\pm$0.014} & +0.005 (4/5) & 0.049\scriptsize{$\pm$0.015} & +0.003 (3/5) \\
+AUROC 0.70 & 0.634\scriptsize{$\pm$0.120} & -0.036 (5/10) & 0.031\scriptsize{$\pm$0.005} & -0.014 (0/5) & 0.063\scriptsize{$\pm$0.014} & +0.017 (5/5) \\
+AUROC 0.80 & 0.689\scriptsize{$\pm$0.092} & +0.019 (5/10) & 0.059\scriptsize{$\pm$0.024} & +0.014 (4/5) & 0.065\scriptsize{$\pm$0.029} & +0.020 (4/5) \\
+AUROC 0.90 & 0.757\scriptsize{$\pm$0.068} & +0.087 (6/10) & 0.046\scriptsize{$\pm$0.014} & +0.001 (2/5) & 0.056\scriptsize{$\pm$0.031} & +0.011 (3/5) \\
+AUROC 1.00 (exact) & 0.800\scriptsize{$\pm$0.087} & +0.130 (9/10) & 0.060\scriptsize{$\pm$0.019} & +0.015 (4/5) & 0.061\scriptsize{$\pm$0.003} & +0.015 (4/5) \\
+\bottomrule
+\end{tabular}

@@ -17,28 +17,33 @@ evaluate a single dataset with its own protocol. On the RL side, studies of ErrP
 gains from simulated or near-ideal feedback, but rarely ask how good a \emph{real} cross-subject decoder must
 be before its feedback helps.
 
-We address both gaps with \textbf{ErrP-Bench}, a benchmark and measurement study:
+We address both questions with a method, a benchmark and a measurement:
 \begin{itemize}
-\item \textbf{Five ErrP datasets across four error paradigms}: observed robot errors and observed cursor
-  errors~\citep{ehrlich2019feasibility}, cursor-monitoring errors~\citep{chavarriaga2010learning},
+\item \textbf{ErrP-Ens}, a calibration-free decoder (\S\ref{sec:method}). Each participant's EEG is aligned
+  without labels; decoders of three families are trained on other participants with and without alignment; and
+  their outputs are combined by averaging within-participant ranks, which is invariant to the scale and offset
+  differences that make score averaging fail across models and people. ErrP-Ens needs neither training nor
+  labels from the new user.
+\item \textbf{ErrP-Bench}, five public ErrP datasets across four error paradigms: observed robot errors and
+  observed cursor errors~\citep{ehrlich2019feasibility}, cursor-monitoring errors~\citep{chavarriaga2010learning},
   self-generated response errors (ERN, flanker task)~\citep{kappenman2021erpcore}, and errors introduced by an
-  arm orthosis~\citep{kueper2024eegemg}; \NSubjectsTotal{} participants and \NEpochsTotal{} epochs in total, all
-  used in full under one preprocessing and evaluation protocol.
-\item \textbf{Nine decoders} from three families: a Riemannian pipeline~\citep{rivet2009xdawn,barachant2012multiclass},
-  five compact networks trained from scratch~\citep{lawhern2018eegnet,santamariavazquez2020eeginception,chen2024eegnex,song2023eegconformer,zhao2024ctnet},
-  and three pretrained foundation models (LaBraM, EEGPT, CBraMod), each with and without unsupervised
-  per-subject Euclidean alignment~\citep{he2020transfer}; \NFitsTotal{} cross-subject fits.
+  arm orthosis~\citep{kueper2024eegemg}; \NSubjectsTotal{} participants and \NEpochsTotal{} epochs, all used in
+  full under one preprocessing and cross-subject protocol, with a Riemannian pipeline~\citep{rivet2009xdawn,barachant2012multiclass},
+  five compact networks~\citep{lawhern2018eegnet,santamariavazquez2020eeginception,chen2024eegnex,song2023eegconformer,zhao2024ctnet}
+  and three foundation models~\citep{jiang2024labram,wang2024eegpt,wang2025cbramod}, each with and without
+  Euclidean alignment~\citep{he2020transfer}; \NFitsTotal{} cross-subject fits.
 \item \textbf{A decoder-quality frontier for learning from ErrP feedback}: soft actor-critic~\citep{haarnoja2018sac}
-  on FetchReach and FetchPush~\citep{plappert2018multigoal} with feedback of controlled AUROC, which locates
-  the decoder quality at which ErrP reward starts to help, and places every decoder of the benchmark on it.
+  on FetchReach and FetchPush~\citep{plappert2018multigoal} with feedback of exactly controlled AUROC, which
+  locates the break-even decoder quality at which ErrP reward starts to help, and places every benchmark decoder
+  relative to it.
 \end{itemize}
 
-\textbf{Findings.} (1) Pretrained EEG foundation models do not beat compact decoders on cross-subject ErrP
-detection; a Riemannian pipeline that trains in seconds is competitive on every dataset. (2) The observed
-agent matters more than the decoder: the same participants give \BestErrpHriCursor{} AUROC for cursor errors
-and \BestErrpHriRobot{} for robot errors. (3) Unsupervised per-participant alignment helps on some paradigms
-and hurts on others, and a label-free rank ensemble of aligned decoders is a robust default. (4) On simulated
-reaching, ErrP feedback helps only above about AUROC \RLBreakEvenReach{} and slows learning below it, so
-current cross-subject decoders of observed robot errors sit on the wrong side of the frontier.
+\textbf{Findings.} (1) ErrP-Ens is the best cross-subject ErrP decoder on all five datasets and is never worse
+than the best single decoder chosen with hindsight. (2) Pretrained EEG foundation models do not beat compact
+networks on cross-subject ErrP detection. (3) The observed agent matters more than the decoder: the same
+participants give \BestErrpHriCursor{} AUROC for cursor errors and \BestErrpHriRobot{} for robot errors.
+(4) Unsupervised alignment helps on some paradigms and hurts on others, which is why ErrP-Ens uses both.
+(5) On simulated reaching, ErrP feedback helps only above about AUROC \RLBreakEvenReach{} and slows learning
+below it, so cross-subject decoders of observed robot errors are not yet on the useful side of the frontier.
 
-All code, prepared-data recipes, per-trial predictions and checkpoints are released.
+All code, data-preparation recipes, per-trial predictions and checkpoints are released.

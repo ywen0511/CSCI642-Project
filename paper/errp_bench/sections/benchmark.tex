@@ -29,8 +29,8 @@ control restricted to the first 0.5\,s.
 
 \textbf{Preprocessing} is identical in kind across datasets: scalp channels only, zero-phase FIR band-pass
 1--20\,Hz~\citep{gramfort2013mne} on the continuous recording, epochs of whole seconds after the event (2\,s for
-ErrP-HRI, the window used in its original analysis; 1\,s otherwise), resampling to 256\,Hz (compact models) and
-200\,Hz (foundation models), no amplitude-based rejection. Channel names follow the 10--20 system so that
+ErrP-HRI, the window used in its original analysis; 1\,s otherwise), resampling to 256\,Hz (Riemannian and compact models), 200\,Hz (LaBraM, CBraMod) or 250\,Hz (EEGPT), the rates
+the foundation models were pretrained at, no amplitude-based rejection. Channel names follow the 10--20 system so that
 channel-aware foundation models receive their own position embeddings.
 
 \subsection{Protocol}
@@ -43,22 +43,14 @@ AUROC, averaged over training seeds (\NSeedsMain{} seeds per configuration). AUR
 the class imbalance of ErrP data. Differences between decoders are tested with two-sided Wilcoxon signed-rank
 tests over participants, Holm-corrected within each dataset~\citep{demsar2006statistical}.
 
-\subsection{Decoders}
-\textbf{Riemannian:} xDAWN spatial filtering (4 filters) of the class-conditional covariances, tangent-space
-projection and logistic regression~\citep{rivet2009xdawn,barachant2012multiclass}.
-\textbf{Compact networks trained from scratch:} EEGNet~\citep{lawhern2018eegnet},
-EEG-Inception~\citep{santamariavazquez2020eeginception}, EEGNeX~\citep{chen2024eegnex},
-EEG-Conformer~\citep{song2023eegconformer} and CTNet~\citep{zhao2024ctnet}, in their braindecode
-implementations~\citep{schirrmeister2017deep}. \textbf{Foundation models:} LaBraM~\citep{jiang2024labram},
-EEGPT~\citep{wang2024eegpt} and CBraMod~\citep{wang2025cbramod}, initialised from their released pretrained
-weights and fully fine-tuned with a new classification head (backbone learning rate $10^{-4}$, head
-$5\times10^{-4}$, AdamW, cosine schedule). All networks use class-weighted cross-entropy and early stopping on
-validation AUROC (patience 20 epochs and at most 150 epochs for networks trained from scratch; 10 and 30 for
-foundation models, whose fine-tuning converges in few epochs). Hyperparameters are the published defaults; no
-model receives dataset-specific tuning, so every decoder gets the same tuning budget (none).
-
-\textbf{Euclidean alignment (EA).} For each participant, EA whitens the trials with the inverse square root of
-the participant's mean spatial covariance~\citep{he2020transfer}. It uses only that participant's unlabeled
-trials, so it applies to a new user without labels or calibration (transductively). We rescale the aligned data
-to preserve the participant's mean channel power, so that the amplitude conventions expected by pretrained
-models are unchanged. Every decoder is evaluated with and without EA.
+\subsection{Training protocol}
+The decoders of Table~\ref{tab:decoders} are trained on the training participants of each fold.
+Networks trained from scratch use their braindecode implementations~\citep{schirrmeister2017deep}, Adam,
+at most 150 epochs and early stopping with patience 20. Foundation models are initialised from their released
+pretrained weights and fully fine-tuned with a new classification head (backbone learning rate $10^{-4}$, head
+$5\times10^{-4}$, AdamW, cosine schedule, at most 30 epochs, patience 10). All networks use class-weighted
+cross-entropy (Eq.~\ref{eq:loss}) and select the checkpoint with the best validation AUROC. Hyperparameters are
+the published defaults; no decoder receives dataset-specific tuning, so every decoder has the same tuning budget.
+Every decoder is trained with and without Euclidean alignment (Eq.~\ref{eq:ea}), with two training seeds
+(xDAWN is deterministic and run once; EEGPT, the most expensive model, with one seed). ErrP-Ens requires no
+training: it combines the saved test predictions of the members (Eq.~\ref{eq:ens}).

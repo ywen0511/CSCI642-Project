@@ -41,7 +41,7 @@ def main():
     root = Path(a.runs)
     n = 0
     for ds_dir in sorted(p for p in root.iterdir() if p.is_dir() and not p.name.startswith("_")):
-        nfold = len({p.name for m in BASE for p in (ds_dir / m / "ea").glob("s*/fold*")})
+        nfold = len({p.name for m in BASE for p in (ds_dir / m / "ea").glob("s*/fold*") if p.is_dir()})
         seeds = sorted({p.name for m in BASE if m not in DETERMINISTIC for p in (ds_dir / m / "ea").glob("s*")})
 
         def run_dir(m, seed, fold):
@@ -78,6 +78,32 @@ def main():
                     (out / "metrics.json").write_text(json.dumps(res, indent=1) + "\n")
                     np.savez_compressed(out / "predictions.npz", test_subject=subj, test_trial=tid, test_label=y, test_margin=z)
                     n += 1
+        # post-hoc variant: members from BOTH alignment settings (each (model, align) is one member)
+        for seed in seeds:
+            folds = [f"fold{i}" for i in range(nfold)]
+
+            def rd(m, al, f):
+                d = ds_dir / m / al / seed / f
+                if not (d / "metrics.json").exists() and m in DETERMINISTIC:
+                    d = next((q / f for q in sorted((ds_dir / m / al).glob("s*")) if (q / f / "metrics.json").exists()), d)
+                return d
+            mem_keys = [(m, al) for m in BASE for al in ("none", "ea") if all((rd(m, al, f) / "metrics.json").exists() for f in folds)]
+            if len(mem_keys) < 2:
+                continue
+            for fold in folds:
+                preds = {k: np.load(rd(*k, fold) / "predictions.npz", allow_pickle=True) for k in mem_keys}
+                ref = next(iter(preds.values()))
+                tid, subj, y = ref["test_trial"], ref["test_subject"], ref["test_label"]
+                for k, p in preds.items():
+                    assert (p["test_trial"] == tid).all(), (ds_dir.name, k, seed, fold)
+                z = np.mean([subj_rank(p["test_margin"], subj) for p in preds.values()], axis=0)
+                out = ds_dir / "ens_mix" / "both" / seed / fold
+                out.mkdir(parents=True, exist_ok=True)
+                res = {"model": "ens_mix", "align": "both", "members": [f"{m}/{al}" for m, al in mem_keys],
+                       "test": metrics_for(y, z, subj), "wall_s": 0.0}
+                (out / "metrics.json").write_text(json.dumps(res, indent=1) + "\n")
+                np.savez_compressed(out / "predictions.npz", test_subject=subj, test_trial=tid, test_label=y, test_margin=z)
+                n += 1
     print("wrote", n, "ensemble fold results")
 
 

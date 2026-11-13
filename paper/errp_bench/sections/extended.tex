@@ -1,0 +1,148 @@
+\ifnum\showtbdflag=1
+\section{Extended evaluation (planned; projected numbers marked tbd)}
+\label{sec:extended}
+
+The experiments in this section are specified and implemented in part, but have \emph{not} been run. Every
+number followed by ``(tbd)'' is a projection that we will replace by a measurement; it is not a result.
+Numbers without the marker are measured (they repeat Sections~\ref{sec:results}--\ref{sec:rl}).
+
+\paragraph{Additional baselines.} Table~\ref{tab:ext-baselines} adds recent decoders under the identical
+protocol: ShallowConvNet and Deep4Net~\citep{schirrmeister2017deep}, ATCNet~\citep{altaheri2023physics},
+BENDR~\citep{kostas2021bendr}, BIOT~\citep{yang2023biot}, NeuroLM~\citep{jiang2025neurolm},
+FEMBA~\citep{tegon2025femba}, CSBrain~\citep{zhou2025csbrain}, REVE~\citep{elouahidi2025reve},
+LUNA~\citep{doner2025luna}, CodeBrain~\citep{ma2026codebrain} and ST-EEGFormer~\citep{yang2026are}, each
+fine-tuned with its released weights (where available) and evaluated with and without EA; the better of the two
+is reported. ErrP-Ens is re-formed with the new members added.
+
+\begin{table}[h]
+\centering
+\caption{Extended baselines (cross-subject macro-participant AUROC). Rows marked (tbd) are projections.}
+\label{tab:ext-baselines}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{llccccc}
+\toprule
+Family & Model & ErrP-HRI robot & ErrP-HRI cursor & BNCI 2015-013 & ERP CORE ERN & IntEr-HRI \\
+\midrule
+compact & ShallowConvNet & \tbdv{0.601} & \tbdv{0.871} & \tbdv{0.826} & \tbdv{0.955} & \tbdv{0.968} \\
+compact & Deep4Net & \tbdv{0.589} & \tbdv{0.862} & \tbdv{0.817} & \tbdv{0.951} & \tbdv{0.962} \\
+compact & ATCNet & \tbdv{0.611} & \tbdv{0.884} & \tbdv{0.832} & \tbdv{0.960} & \tbdv{0.970} \\
+\midrule
+foundation & BENDR & \tbdv{0.552} & \tbdv{0.819} & \tbdv{0.791} & \tbdv{0.932} & \tbdv{0.947} \\
+foundation & BIOT & \tbdv{0.571} & \tbdv{0.842} & \tbdv{0.806} & \tbdv{0.941} & \tbdv{0.955} \\
+foundation & NeuroLM-B & \tbdv{0.566} & \tbdv{0.846} & \tbdv{0.812} & \tbdv{0.944} & \tbdv{0.958} \\
+foundation & ST-EEGFormer & \tbdv{0.585} & \tbdv{0.861} & \tbdv{0.818} & \tbdv{0.949} & \tbdv{0.960} \\
+foundation & CSBrain & \tbdv{0.593} & \tbdv{0.871} & \tbdv{0.828} & \tbdv{0.953} & \tbdv{0.966} \\
+foundation & REVE-Base & \tbdv{0.603} & \tbdv{0.879} & \tbdv{0.834} & \tbdv{0.957} & \tbdv{0.969} \\
+foundation & LUNA-Base & \tbdv{0.588} & \tbdv{0.866} & \tbdv{0.823} & \tbdv{0.951} & \tbdv{0.963} \\
+foundation & CodeBrain & \tbdv{0.596} & \tbdv{0.874} & \tbdv{0.829} & \tbdv{0.955} & \tbdv{0.967} \\
+state space & FEMBA-Base & \tbdv{0.579} & \tbdv{0.858} & \tbdv{0.819} & \tbdv{0.948} & \tbdv{0.961} \\
+\midrule
+ours & ErrP-Ens (measured, Table~\ref{tab:main}) & \EnsMixErrpHriRobot{} & \EnsMixErrpHriCursor{} & \EnsMixBnci{} & \EnsMixErpCoreErn{} & \EnsMixInterHri{} \\
+ours & ErrP-Ens + new members & \tbdv{0.652} & \tbdv{0.914} & \tbdv{0.878} & \tbdv{0.973} & \tbdv{0.983} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Real decoders in the loop.} The frontier of Section~\ref{sec:rl} uses simulated feedback with
+independent noise. To test whether it predicts learning with real EEG, each labelled segment draws a held-out
+trial of the matching class from one test participant and receives that trial's decoded probability, so the
+feedback carries the real decoder's errors, including their correlation within participants.
+Table~\ref{tab:real-loop} compares the gain predicted by interpolating the measured frontier at the
+decoder's measured AUROC with the projected realised gain.
+
+\begin{table}[h]
+\centering
+\caption{FetchReach with real decoded feedback (10 seeds). AUROC and frontier prediction are measured
+(prediction: linear interpolation of the measured $G(A)$); realised gains are projections.}
+\label{tab:real-loop}
+\scriptsize
+\begin{tabular}{llccc}
+\toprule
+Paradigm & Decoder & Decoder AUROC & Predicted $\Delta$AUC & Realised $\Delta$AUC \\
+\midrule
+ErrP-HRI robot & CBraMod + EA & 0.597 & $-0.140$ & \tbdv{$-0.152$} \\
+ErrP-HRI robot & xDAWN+RG + EA & 0.603 & $-0.134$ & \tbdv{$-0.141$} \\
+ErrP-HRI robot & EEG-Inception + EA & 0.632 & $-0.100$ & \tbdv{$-0.109$} \\
+ErrP-HRI robot & ErrP-Ens & 0.640 & $-0.090$ & \tbdv{$-0.084$} \\
+\midrule
+ErrP-HRI cursor & xDAWN+RG + EA & 0.851 & $+0.054$ & \tbdv{$+0.047$} \\
+ErrP-HRI cursor & EEGPT + EA & 0.891 & $+0.081$ & \tbdv{$+0.072$} \\
+ErrP-HRI cursor & EEG-Inception + EA & 0.902 & $+0.088$ & \tbdv{$+0.080$} \\
+ErrP-HRI cursor & ErrP-Ens & 0.906 & $+0.090$ & \tbdv{$+0.091$} \\
+\midrule
+BNCI 2015-013 & ErrP-Ens & 0.871 & $+0.067$ & \tbdv{$+0.061$} \\
+ERP CORE ERN & ErrP-Ens & 0.970 & $+0.117$ & \tbdv{$+0.112$} \\
+IntEr-HRI & ErrP-Ens & 0.981 & $+0.122$ & \tbdv{$+0.118$} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{A learnable Push task.} SAC does not learn FetchPush in 500k steps (Section~\ref{sec:rl}), so Push
+does not yet locate a frontier. With hindsight experience replay~\citep{andrychowicz2017her} the sparse
+baseline learns, and the frontier can be measured on a contact-rich task (Table~\ref{tab:her-push}).
+
+\paragraph{Reliability-weighted feedback.} The harm below the break-even point comes from a fixed weight $w$.
+A learner can instead scale the ErrP term by its estimated reliability, $w=w_0\,(2\hat A-1)$, where $\hat A$ is
+the AUROC of the decoder on the training participants' validation data, which is available without labels from
+the new user. Table~\ref{tab:her-push} (right) shows the projected effect on the Reach break-even point.
+
+\begin{table}[h]
+\centering
+\caption{Left: FetchPush with HER (5 seeds), normalized success AUC. Right: FetchReach break-even AUROC and
+gain at AUROC 0.65 with fixed versus reliability-weighted ErrP reward (10 seeds). Measured values unmarked.}
+\label{tab:her-push}
+\scriptsize
+\begin{tabular}{lc}
+\toprule
+\multicolumn{2}{c}{FetchPush + HER} \\
+Feedback & norm.\ AUC \\
+\midrule
+sparse & \tbdv{0.412} \\
+dense & \tbdv{0.538} \\
+AUROC 0.55 & \tbdv{0.334} \\
+AUROC 0.65 & \tbdv{0.398} \\
+AUROC 0.70 & \tbdv{0.427} \\
+AUROC 0.80 & \tbdv{0.468} \\
+AUROC 0.90 & \tbdv{0.517} \\
+AUROC 1.00 & \tbdv{0.549} \\
+break-even $A^\star$ & \tbdv{0.68} \\
+\bottomrule
+\end{tabular}\qquad
+\begin{tabular}{lcc}
+\toprule
+\multicolumn{3}{c}{FetchReach} \\
+Reward weight & $A^\star$ & $G(0.65)$ \\
+\midrule
+fixed $w=1$ (measured) & \RLBreakEvenReach{} & $-0.078$ \\
+reliability-weighted & \tbdv{0.62} & \tbdv{$+0.006$} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Few-shot calibration.} Cross-subject decoding of robot errors is below the break-even point. A short
+calibration session (labelled trials from the new participant, used to fine-tune the head of each member and
+re-select ensemble members) is the natural remedy. Table~\ref{tab:calib} projects how many labelled trials are
+needed to cross $A^\star$.
+
+\begin{table}[h]
+\centering
+\caption{ErrP-HRI robot: AUROC after few-shot calibration with $k$ labelled trials of the new participant.
+$k=0$ is measured.}
+\label{tab:calib}
+\scriptsize
+\begin{tabular}{lcccc}
+\toprule
+Decoder & $k=0$ & $k=20$ & $k=50$ & $k=100$ \\
+\midrule
+xDAWN+RG + EA & 0.603 & \tbdv{0.629} & \tbdv{0.661} & \tbdv{0.694} \\
+EEG-Inception + EA & 0.632 & \tbdv{0.655} & \tbdv{0.684} & \tbdv{0.709} \\
+ErrP-Ens & \EnsMixErrpHriRobot{} & \tbdv{0.672} & \tbdv{0.701} & \tbdv{0.728} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Coverage.} Remaining gaps are a second EEGPT seed on all datasets, EEGPT on ERP CORE ERN, and a third
+training seed for all networks; we expect these to change table entries by less than the seed SD reported in
+Table~\ref{tab:main}.
+\fi

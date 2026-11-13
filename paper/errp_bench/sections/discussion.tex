@@ -1,6 +1,14 @@
 \section{Discussion and limitations}
 \label{sec:discussion}
 
+\paragraph{Why a simple ensemble wins.} Decoders of different families reach similar AUROC but disagree on
+individual trials, and alignment helps some of them on some datasets and hurts on others. Averaging
+within-participant ranks exploits both facts without labels: it removes the scale and offset differences that
+prevent averaging raw scores, and it lets aligned and unaligned members hedge against each other. The gain over
+the best single decoder is modest in absolute terms, but it is obtained without choosing that decoder, which in
+practice cannot be done for a new paradigm or user. ErrP-Ens was defined after the alignment results were
+known (Section~\ref{sec:results}); its aligned-only predecessor, fixed before any result, is reported alongside.
+
 \paragraph{What the benchmark says about implicit feedback.} Two numbers have to meet for ErrP feedback to help
 a learner: the AUROC a decoder reaches for a new person, and the AUROC the learner needs. ErrP-Bench measures
 the first across paradigms; the frontier measures the second. For observed robot errors, the paradigm that
@@ -18,10 +26,11 @@ move the break-even point. (ii) Two simulated tasks and one RL algorithm with a 
 break-even AUROC. (iii) We did not tune hyperparameters for any decoder; tuning could favour the larger
 models, although it would also break the equal-budget comparison. (iv) The foundation-model results depend on
 our fine-tuning recipe (full fine-tuning, a new linear head, a short schedule). (v) EEGPT, the slowest model,
-was run with fewer seeds and conditions than the others (Table~\ref{tab:main}). (vi) In IntEr-HRI, a motor
+was run with one seed and is missing on ERP CORE ERN (Table~\ref{tab:main}). (vi) In IntEr-HRI, a motor
 response falls inside most error windows; the early-window control shows that much, but not necessarily all,
 of the signal precedes it. (vii) Cross-subject evaluation is our primary protocol; within-subject
-calibration would reach higher AUROC and is not covered by the frontier placement.
+calibration would reach higher AUROC and is not covered by the frontier placement. (viii) The gains of ErrP-Ens over the best single decoder are small and not individually significant
+after multiple-comparison correction; the case for it rests on consistency across datasets.
 
 \paragraph{Ethics and data.} All datasets are public recordings collected by their authors under their own
 ethics approvals; we redistribute no EEG data, only preparation code. The ErrP-HRI dataset declares no

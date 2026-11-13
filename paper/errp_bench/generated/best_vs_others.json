@@ -1,0 +1,1022 @@
+[
+ {
+  "dataset": "bnci2015_013",
+  "best": "ens_mix/both",
+  "other": "cbramod/ea",
+  "delta": 0.04835319284495051,
+  "n_pos": 6,
+  "n": 6,
+  "p": 0.03125,
+  "p_holm": 0.59375
+ },
+ {
+  "dataset": "bnci2015_013",
+  "best": "ens_mix/both",
+  "other": "cbramod/none",
+  "delta": 0.05200193225606967,
+  "n_pos": 6,
+  "n": 6,
+  "p": 0.03125,
+  "p_holm": 0.59375
+ },
+ {
+  "dataset": "bnci2015_013",
+  "best": "ens_mix/both",
+  "other": "ctnet/ea",
+  "delta": 0.05067907837460831,
+  "n_pos": 6,
+  "n": 6,
+  "p": 0.03125,
+  "p_holm": 0.59375
+ },
+ {
+  "dataset": "bnci2015_013",
+  "best": "ens_mix/both",
+  "other": "ctnet/none",
+  "delta": 0.025087367616764722,
+  "n_pos": 6,
+  "n": 6,
+  "p": 0.03125,
+  "p_holm": 0.59375
+ },
+ {
+  "dataset": "bnci2015_013",
+  "best": "ens_mix/both",
+  "other": "eegconformer/ea",
+  "delta": 0.08275920293094352,
+  "n_pos": 6,
+  "n": 6,
+  "p": 0.03125,
+  "p_holm": 0.59375
+ },
+ {
+  "dataset": "bnci2015_013",
+  "best": "ens_mix/both",
+  "other": "eegconformer/none",
+  "delta": 0.05098668280780583,
+  "n_pos": 6,
+  "n": 6,
+  "p": 0.03125,
+  "p_holm": 0.59375
+ },
+ {
+  "dataset": "bnci2015_013",
+  "best": "ens_mix/both",
+  "other": "eeginception_erp/ea",
+  "delta": 0.06250697724573702,
+  "n_pos": 6,
+  "n": 6,
+  "p": 0.03125,
+  "p_holm": 0.59375
+ },
+ {
+  "dataset": "bnci2015_013",
+  "best": "ens_mix/both",
+  "other": "eeginception_erp/none",
+  "delta": 0.021755932104297843,
+  "n_pos": 5,
+  "n": 6,
+  "p": 0.0625,
+  "p_holm": 0.59375
+ },
+ {
+  "dataset": "bnci2015_013",
+  "best": "ens_mix/both",
+  "other": "eegnet/ea",
+  "delta": 0.06753640617392674,
+  "n_pos": 6,
+  "n": 6,
+  "p": 0.03125,
+  "p_holm": 0.59375
+ },
+ {
+  "dataset": "bnci2015_013",
+  "best": "ens_mix/both",
+  "other": "eegnet/none",
+  "delta": 0.0476987776232057,
+  "n_pos": 6,
+  "n": 6,
+  "p": 0.03125,
+  "p_holm": 0.59375
+ },
+ {
+  "dataset": "bnci2015_013",
+  "best": "ens_mix/both",
+  "other": "eegnex/ea",
+  "delta": 0.06221713117444355,
+  "n_pos": 6,
+  "n": 6,
+  "p": 0.03125,
+  "p_holm": 0.59375
+ },
+ {
+  "dataset": "bnci2015_013",
+  "best": "ens_mix/both",
+  "other": "eegnex/none",
+  "delta": 0.029512989801142215,
+  "n_pos": 4,
+  "n": 6,
+  "p": 0.15625,
+  "p_holm": 0.59375
+ },
+ {
+  "dataset": "bnci2015_013",
+  "best": "ens_mix/both",
+  "other": "eegpt/none",
+  "delta": 0.05883232776420142,
+  "n_pos": 4,
+  "n": 6,
+  "p": 0.15625,
+  "p_holm": 0.59375
+ },
+ {
+  "dataset": "bnci2015_013",
+  "best": "ens_mix/both",
+  "other": "ens_all/ea",
+  "delta": 0.023369010920243776,
+  "n_pos": 6,
+  "n": 6,
+  "p": 0.03125,
+  "p_holm": 0.59375
+ },
+ {
+  "dataset": "bnci2015_013",
+  "best": "ens_mix/both",
+  "other": "ens_top3/ea",
+  "delta": 0.03834260002883468,
+  "n_pos": 6,
+  "n": 6,
+  "p": 0.03125,
+  "p_holm": 0.59375
+ },
+ {
+  "dataset": "bnci2015_013",
+  "best": "ens_mix/both",
+  "other": "labram/ea",
+  "delta": 0.09165040827565583,
+  "n_pos": 6,
+  "n": 6,
+  "p": 0.03125,
+  "p_holm": 0.59375
+ },
+ {
+  "dataset": "bnci2015_013",
+  "best": "ens_mix/both",
+  "other": "labram/none",
+  "delta": 0.07035388873656097,
+  "n_pos": 6,
+  "n": 6,
+  "p": 0.03125,
+  "p_holm": 0.59375
+ },
+ {
+  "dataset": "bnci2015_013",
+  "best": "ens_mix/both",
+  "other": "xdawn_rg/ea",
+  "delta": 0.06826338639061787,
+  "n_pos": 6,
+  "n": 6,
+  "p": 0.03125,
+  "p_holm": 0.59375
+ },
+ {
+  "dataset": "bnci2015_013",
+  "best": "ens_mix/both",
+  "other": "xdawn_rg/none",
+  "delta": 0.05096013325999269,
+  "n_pos": 6,
+  "n": 6,
+  "p": 0.03125,
+  "p_holm": 0.59375
+ },
+ {
+  "dataset": "erpcore_ern",
+  "best": "ens_all/ea",
+  "other": "cbramod/ea",
+  "delta": 0.019321347468771323,
+  "n_pos": 37,
+  "n": 40,
+  "p": 6.002665031701326e-11,
+  "p_holm": 9.604264050722122e-10
+ },
+ {
+  "dataset": "erpcore_ern",
+  "best": "ens_all/ea",
+  "other": "cbramod/none",
+  "delta": 0.026393813918244913,
+  "n_pos": 36,
+  "n": 40,
+  "p": 1.937729369048818e-07,
+  "p_holm": 2.1315023059537e-06
+ },
+ {
+  "dataset": "erpcore_ern",
+  "best": "ens_all/ea",
+  "other": "ctnet/ea",
+  "delta": 0.00975033495086737,
+  "n_pos": 37,
+  "n": 40,
+  "p": 1.1397785844582907e-07,
+  "p_holm": 1.367734301349949e-06
+ },
+ {
+  "dataset": "erpcore_ern",
+  "best": "ens_all/ea",
+  "other": "ctnet/none",
+  "delta": 0.012289633945280954,
+  "n_pos": 34,
+  "n": 40,
+  "p": 1.5180742262039378e-05,
+  "p_holm": 0.00010626519583427565
+ },
+ {
+  "dataset": "erpcore_ern",
+  "best": "ens_all/ea",
+  "other": "eegconformer/ea",
+  "delta": 0.018055910463058364,
+  "n_pos": 37,
+  "n": 40,
+  "p": 4.547473508864641e-11,
+  "p_holm": 7.73070496506989e-10
+ },
+ {
+  "dataset": "erpcore_ern",
+  "best": "ens_all/ea",
+  "other": "eegconformer/none",
+  "delta": 0.02046887573330353,
+  "n_pos": 35,
+  "n": 40,
+  "p": 4.378738931660163e-07,
+  "p_holm": 3.940865038494147e-06
+ },
+ {
+  "dataset": "erpcore_ern",
+  "best": "ens_all/ea",
+  "other": "eeginception_erp/ea",
+  "delta": 0.0043648579217185155,
+  "n_pos": 29,
+  "n": 40,
+  "p": 5.843589930785604e-05,
+  "p_holm": 0.00029217949653928023
+ },
+ {
+  "dataset": "erpcore_ern",
+  "best": "ens_all/ea",
+  "other": "eeginception_erp/none",
+  "delta": 0.012919503927904325,
+  "n_pos": 30,
+  "n": 40,
+  "p": 2.6637984793678506e-05,
+  "p_holm": 0.00015982790876207105
+ },
+ {
+  "dataset": "erpcore_ern",
+  "best": "ens_all/ea",
+  "other": "eegnet/ea",
+  "delta": 0.007513003656364916,
+  "n_pos": 36,
+  "n": 40,
+  "p": 2.613290881361878e-07,
+  "p_holm": 2.613290881361878e-06
+ },
+ {
+  "dataset": "erpcore_ern",
+  "best": "ens_all/ea",
+  "other": "eegnet/none",
+  "delta": 0.012215141531091624,
+  "n_pos": 35,
+  "n": 40,
+  "p": 6.765419678287829e-07,
+  "p_holm": 5.412335742630263e-06
+ },
+ {
+  "dataset": "erpcore_ern",
+  "best": "ens_all/ea",
+  "other": "eegnex/ea",
+  "delta": 0.0027018623520150636,
+  "n_pos": 28,
+  "n": 40,
+  "p": 0.004818709017045311,
+  "p_holm": 0.009637418034090623
+ },
+ {
+  "dataset": "erpcore_ern",
+  "best": "ens_all/ea",
+  "other": "eegnex/none",
+  "delta": 0.00820898728854226,
+  "n_pos": 28,
+  "n": 40,
+  "p": 0.0010744747340788944,
+  "p_holm": 0.004297898936315578
+ },
+ {
+  "dataset": "erpcore_ern",
+  "best": "ens_all/ea",
+  "other": "ens_mix/both",
+  "delta": 0.0006014600527057407,
+  "n_pos": 17,
+  "n": 40,
+  "p": 0.7801681150836699,
+  "p_holm": 0.7801681150836699
+ },
+ {
+  "dataset": "erpcore_ern",
+  "best": "ens_all/ea",
+  "other": "ens_top3/ea",
+  "delta": 0.002324927083002165,
+  "n_pos": 28,
+  "n": 40,
+  "p": 0.0015360532041168728,
+  "p_holm": 0.004608159612350619
+ },
+ {
+  "dataset": "erpcore_ern",
+  "best": "ens_all/ea",
+  "other": "labram/ea",
+  "delta": 0.01883104420146779,
+  "n_pos": 39,
+  "n": 40,
+  "p": 9.094947017729282e-12,
+  "p_holm": 1.6370904631912708e-10
+ },
+ {
+  "dataset": "erpcore_ern",
+  "best": "ens_all/ea",
+  "other": "labram/none",
+  "delta": 0.026522350513175065,
+  "n_pos": 37,
+  "n": 40,
+  "p": 4.320099833421409e-09,
+  "p_holm": 6.480149750132114e-08
+ },
+ {
+  "dataset": "erpcore_ern",
+  "best": "ens_all/ea",
+  "other": "xdawn_rg/ea",
+  "delta": 0.020606712245452862,
+  "n_pos": 36,
+  "n": 40,
+  "p": 9.05348325869946e-08,
+  "p_holm": 1.2674876562179243e-06
+ },
+ {
+  "dataset": "erpcore_ern",
+  "best": "ens_all/ea",
+  "other": "xdawn_rg/none",
+  "delta": 0.026197264773218553,
+  "n_pos": 37,
+  "n": 40,
+  "p": 9.05348325869946e-08,
+  "p_holm": 1.2674876562179243e-06
+ },
+ {
+  "dataset": "errphri_cursor",
+  "best": "ens_all/ea",
+  "other": "cbramod/ea",
+  "delta": 0.06274897469805336,
+  "n_pos": 12,
+  "n": 12,
+  "p": 0.00048828125,
+  "p_holm": 0.009765625
+ },
+ {
+  "dataset": "errphri_cursor",
+  "best": "ens_all/ea",
+  "other": "cbramod/none",
+  "delta": 0.07008229395627104,
+  "n_pos": 12,
+  "n": 12,
+  "p": 0.00048828125,
+  "p_holm": 0.009765625
+ },
+ {
+  "dataset": "errphri_cursor",
+  "best": "ens_all/ea",
+  "other": "ctnet/ea",
+  "delta": 0.022977267310387156,
+  "n_pos": 12,
+  "n": 12,
+  "p": 0.00048828125,
+  "p_holm": 0.009765625
+ },
+ {
+  "dataset": "errphri_cursor",
+  "best": "ens_all/ea",
+  "other": "ctnet/none",
+  "delta": 0.034735610494549096,
+  "n_pos": 11,
+  "n": 12,
+  "p": 0.0009765625,
+  "p_holm": 0.009765625
+ },
+ {
+  "dataset": "errphri_cursor",
+  "best": "ens_all/ea",
+  "other": "eegconformer/ea",
+  "delta": 0.06718352730105571,
+  "n_pos": 12,
+  "n": 12,
+  "p": 0.00048828125,
+  "p_holm": 0.009765625
+ },
+ {
+  "dataset": "errphri_cursor",
+  "best": "ens_all/ea",
+  "other": "eegconformer/none",
+  "delta": 0.11545467971675193,
+  "n_pos": 12,
+  "n": 12,
+  "p": 0.00048828125,
+  "p_holm": 0.009765625
+ },
+ {
+  "dataset": "errphri_cursor",
+  "best": "ens_all/ea",
+  "other": "eeginception_erp/ea",
+  "delta": 0.0061114786218576704,
+  "n_pos": 9,
+  "n": 12,
+  "p": 0.1513671875,
+  "p_holm": 0.4541015625
+ },
+ {
+  "dataset": "errphri_cursor",
+  "best": "ens_all/ea",
+  "other": "eeginception_erp/none",
+  "delta": 0.03420252931022408,
+  "n_pos": 10,
+  "n": 12,
+  "p": 0.00244140625,
+  "p_holm": 0.01953125
+ },
+ {
+  "dataset": "errphri_cursor",
+  "best": "ens_all/ea",
+  "other": "eegnet/ea",
+  "delta": 0.022348688419767254,
+  "n_pos": 12,
+  "n": 12,
+  "p": 0.00048828125,
+  "p_holm": 0.009765625
+ },
+ {
+  "dataset": "errphri_cursor",
+  "best": "ens_all/ea",
+  "other": "eegnet/none",
+  "delta": 0.03579971977681088,
+  "n_pos": 11,
+  "n": 12,
+  "p": 0.0048828125,
+  "p_holm": 0.029296875
+ },
+ {
+  "dataset": "errphri_cursor",
+  "best": "ens_all/ea",
+  "other": "eegnex/ea",
+  "delta": 0.010851117184072381,
+  "n_pos": 10,
+  "n": 12,
+  "p": 0.00341796875,
+  "p_holm": 0.02392578125
+ },
+ {
+  "dataset": "errphri_cursor",
+  "best": "ens_all/ea",
+  "other": "eegnex/none",
+  "delta": 0.029251240643274435,
+  "n_pos": 9,
+  "n": 12,
+  "p": 0.0068359375,
+  "p_holm": 0.0341796875
+ },
+ {
+  "dataset": "errphri_cursor",
+  "best": "ens_all/ea",
+  "other": "eegpt/ea",
+  "delta": 0.016695705087051194,
+  "n_pos": 9,
+  "n": 12,
+  "p": 0.00927734375,
+  "p_holm": 0.037109375
+ },
+ {
+  "dataset": "errphri_cursor",
+  "best": "ens_all/ea",
+  "other": "eegpt/none",
+  "delta": 0.05346721379449872,
+  "n_pos": 12,
+  "n": 12,
+  "p": 0.00048828125,
+  "p_holm": 0.009765625
+ },
+ {
+  "dataset": "errphri_cursor",
+  "best": "ens_all/ea",
+  "other": "ens_mix/both",
+  "delta": 0.001862264596043393,
+  "n_pos": 8,
+  "n": 12,
+  "p": 0.33935546875,
+  "p_holm": 0.6787109375
+ },
+ {
+  "dataset": "errphri_cursor",
+  "best": "ens_all/ea",
+  "other": "ens_top3/ea",
+  "delta": 0.0030047282873867376,
+  "n_pos": 7,
+  "n": 12,
+  "p": 0.423828125,
+  "p_holm": 0.6787109375
+ },
+ {
+  "dataset": "errphri_cursor",
+  "best": "ens_all/ea",
+  "other": "labram/ea",
+  "delta": 0.05681674969293635,
+  "n_pos": 12,
+  "n": 12,
+  "p": 0.00048828125,
+  "p_holm": 0.009765625
+ },
+ {
+  "dataset": "errphri_cursor",
+  "best": "ens_all/ea",
+  "other": "labram/none",
+  "delta": 0.08321961833875727,
+  "n_pos": 12,
+  "n": 12,
+  "p": 0.00048828125,
+  "p_holm": 0.009765625
+ },
+ {
+  "dataset": "errphri_cursor",
+  "best": "ens_all/ea",
+  "other": "xdawn_rg/ea",
+  "delta": 0.05663338055846262,
+  "n_pos": 12,
+  "n": 12,
+  "p": 0.00048828125,
+  "p_holm": 0.009765625
+ },
+ {
+  "dataset": "errphri_cursor",
+  "best": "ens_all/ea",
+  "other": "xdawn_rg/none",
+  "delta": 0.08436138007181386,
+  "n_pos": 12,
+  "n": 12,
+  "p": 0.00048828125,
+  "p_holm": 0.009765625
+ },
+ {
+  "dataset": "errphri_robot",
+  "best": "ens_all/ea",
+  "other": "cbramod/ea",
+  "delta": 0.048079268420343435,
+  "n_pos": 10,
+  "n": 12,
+  "p": 0.0048828125,
+  "p_holm": 0.0537109375
+ },
+ {
+  "dataset": "errphri_robot",
+  "best": "ens_all/ea",
+  "other": "cbramod/none",
+  "delta": 0.09089141652421108,
+  "n_pos": 11,
+  "n": 12,
+  "p": 0.0009765625,
+  "p_holm": 0.0185546875
+ },
+ {
+  "dataset": "errphri_robot",
+  "best": "ens_all/ea",
+  "other": "ctnet/ea",
+  "delta": 0.028197823962628363,
+  "n_pos": 10,
+  "n": 12,
+  "p": 0.0068359375,
+  "p_holm": 0.0615234375
+ },
+ {
+  "dataset": "errphri_robot",
+  "best": "ens_all/ea",
+  "other": "ctnet/none",
+  "delta": 0.04913140823878401,
+  "n_pos": 11,
+  "n": 12,
+  "p": 0.00146484375,
+  "p_holm": 0.02490234375
+ },
+ {
+  "dataset": "errphri_robot",
+  "best": "ens_all/ea",
+  "other": "eegconformer/ea",
+  "delta": 0.048418655898059,
+  "n_pos": 10,
+  "n": 12,
+  "p": 0.0048828125,
+  "p_holm": 0.0537109375
+ },
+ {
+  "dataset": "errphri_robot",
+  "best": "ens_all/ea",
+  "other": "eegconformer/none",
+  "delta": 0.05081179039297415,
+  "n_pos": 10,
+  "n": 12,
+  "p": 0.01220703125,
+  "p_holm": 0.0615234375
+ },
+ {
+  "dataset": "errphri_robot",
+  "best": "ens_all/ea",
+  "other": "eeginception_erp/ea",
+  "delta": 0.012983604505227559,
+  "n_pos": 9,
+  "n": 12,
+  "p": 0.02099609375,
+  "p_holm": 0.06298828125
+ },
+ {
+  "dataset": "errphri_robot",
+  "best": "ens_all/ea",
+  "other": "eeginception_erp/none",
+  "delta": 0.053763898308478,
+  "n_pos": 10,
+  "n": 12,
+  "p": 0.00927734375,
+  "p_holm": 0.0615234375
+ },
+ {
+  "dataset": "errphri_robot",
+  "best": "ens_all/ea",
+  "other": "eegnet/ea",
+  "delta": 0.039587281677599694,
+  "n_pos": 9,
+  "n": 12,
+  "p": 0.0068359375,
+  "p_holm": 0.0615234375
+ },
+ {
+  "dataset": "errphri_robot",
+  "best": "ens_all/ea",
+  "other": "eegnet/none",
+  "delta": 0.07567880421396647,
+  "n_pos": 11,
+  "n": 12,
+  "p": 0.0009765625,
+  "p_holm": 0.0185546875
+ },
+ {
+  "dataset": "errphri_robot",
+  "best": "ens_all/ea",
+  "other": "eegnex/ea",
+  "delta": 0.023230619270008676,
+  "n_pos": 9,
+  "n": 12,
+  "p": 0.0068359375,
+  "p_holm": 0.0615234375
+ },
+ {
+  "dataset": "errphri_robot",
+  "best": "ens_all/ea",
+  "other": "eegnex/none",
+  "delta": 0.022428316305657104,
+  "n_pos": 10,
+  "n": 12,
+  "p": 0.0068359375,
+  "p_holm": 0.0615234375
+ },
+ {
+  "dataset": "errphri_robot",
+  "best": "ens_all/ea",
+  "other": "eegpt/none",
+  "delta": 0.06285036591285324,
+  "n_pos": 11,
+  "n": 12,
+  "p": 0.00341796875,
+  "p_holm": 0.041015625
+ },
+ {
+  "dataset": "errphri_robot",
+  "best": "ens_all/ea",
+  "other": "ens_mix/both",
+  "delta": 0.005458004919242411,
+  "n_pos": 9,
+  "n": 12,
+  "p": 0.12939453125,
+  "p_holm": 0.2587890625
+ },
+ {
+  "dataset": "errphri_robot",
+  "best": "ens_all/ea",
+  "other": "ens_top3/ea",
+  "delta": 0.0051351925057855725,
+  "n_pos": 8,
+  "n": 12,
+  "p": 0.12939453125,
+  "p_holm": 0.2587890625
+ },
+ {
+  "dataset": "errphri_robot",
+  "best": "ens_all/ea",
+  "other": "labram/ea",
+  "delta": 0.08161081433192044,
+  "n_pos": 11,
+  "n": 12,
+  "p": 0.00146484375,
+  "p_holm": 0.02490234375
+ },
+ {
+  "dataset": "errphri_robot",
+  "best": "ens_all/ea",
+  "other": "labram/none",
+  "delta": 0.0907263511836059,
+  "n_pos": 11,
+  "n": 12,
+  "p": 0.00244140625,
+  "p_holm": 0.0341796875
+ },
+ {
+  "dataset": "errphri_robot",
+  "best": "ens_all/ea",
+  "other": "xdawn_rg/ea",
+  "delta": 0.04208694198449803,
+  "n_pos": 11,
+  "n": 12,
+  "p": 0.00146484375,
+  "p_holm": 0.02490234375
+ },
+ {
+  "dataset": "errphri_robot",
+  "best": "ens_all/ea",
+  "other": "xdawn_rg/none",
+  "delta": 0.05498241442648671,
+  "n_pos": 11,
+  "n": 12,
+  "p": 0.00244140625,
+  "p_holm": 0.0341796875
+ },
+ {
+  "dataset": "interhri",
+  "best": "ens_mix/both",
+  "other": "cbramod/ea",
+  "delta": 0.05086350005739215,
+  "n_pos": 8,
+  "n": 8,
+  "p": 0.0078125,
+  "p_holm": 0.15625
+ },
+ {
+  "dataset": "interhri",
+  "best": "ens_mix/both",
+  "other": "cbramod/none",
+  "delta": 0.02183988320707074,
+  "n_pos": 8,
+  "n": 8,
+  "p": 0.0078125,
+  "p_holm": 0.15625
+ },
+ {
+  "dataset": "interhri",
+  "best": "ens_mix/both",
+  "other": "ctnet/ea",
+  "delta": 0.037021887913223195,
+  "n_pos": 8,
+  "n": 8,
+  "p": 0.0078125,
+  "p_holm": 0.15625
+ },
+ {
+  "dataset": "interhri",
+  "best": "ens_mix/both",
+  "other": "ctnet/none",
+  "delta": 0.027430053374655677,
+  "n_pos": 7,
+  "n": 8,
+  "p": 0.0234375,
+  "p_holm": 0.15625
+ },
+ {
+  "dataset": "interhri",
+  "best": "ens_mix/both",
+  "other": "eegconformer/ea",
+  "delta": 0.02053765639348029,
+  "n_pos": 8,
+  "n": 8,
+  "p": 0.0078125,
+  "p_holm": 0.15625
+ },
+ {
+  "dataset": "interhri",
+  "best": "ens_mix/both",
+  "other": "eegconformer/none",
+  "delta": 0.016877905475206664,
+  "n_pos": 7,
+  "n": 8,
+  "p": 0.015625,
+  "p_holm": 0.15625
+ },
+ {
+  "dataset": "interhri",
+  "best": "ens_mix/both",
+  "other": "eeginception_erp/ea",
+  "delta": 0.013601677284205735,
+  "n_pos": 7,
+  "n": 8,
+  "p": 0.015625,
+  "p_holm": 0.15625
+ },
+ {
+  "dataset": "interhri",
+  "best": "ens_mix/both",
+  "other": "eeginception_erp/none",
+  "delta": 0.010865795741506049,
+  "n_pos": 6,
+  "n": 8,
+  "p": 0.0390625,
+  "p_holm": 0.15625
+ },
+ {
+  "dataset": "interhri",
+  "best": "ens_mix/both",
+  "other": "eegnet/ea",
+  "delta": 0.03411458333333335,
+  "n_pos": 8,
+  "n": 8,
+  "p": 0.0078125,
+  "p_holm": 0.15625
+ },
+ {
+  "dataset": "interhri",
+  "best": "ens_mix/both",
+  "other": "eegnet/none",
+  "delta": 0.007387619088613448,
+  "n_pos": 5,
+  "n": 8,
+  "p": 0.1953125,
+  "p_holm": 0.296875
+ },
+ {
+  "dataset": "interhri",
+  "best": "ens_mix/both",
+  "other": "eegnex/ea",
+  "delta": 0.009572644054178181,
+  "n_pos": 7,
+  "n": 8,
+  "p": 0.0234375,
+  "p_holm": 0.15625
+ },
+ {
+  "dataset": "interhri",
+  "best": "ens_mix/both",
+  "other": "eegnex/none",
+  "delta": 0.004888300619834765,
+  "n_pos": 5,
+  "n": 8,
+  "p": 0.1484375,
+  "p_holm": 0.296875
+ },
+ {
+  "dataset": "interhri",
+  "best": "ens_mix/both",
+  "other": "eegpt/ea",
+  "delta": 0.061120903638659366,
+  "n_pos": 8,
+  "n": 8,
+  "p": 0.0078125,
+  "p_holm": 0.15625
+ },
+ {
+  "dataset": "interhri",
+  "best": "ens_mix/both",
+  "other": "eegpt/none",
+  "delta": 0.02397967602157948,
+  "n_pos": 7,
+  "n": 8,
+  "p": 0.015625,
+  "p_holm": 0.15625
+ },
+ {
+  "dataset": "interhri",
+  "best": "ens_mix/both",
+  "other": "ens_all/ea",
+  "delta": 0.007182926566804429,
+  "n_pos": 8,
+  "n": 8,
+  "p": 0.0078125,
+  "p_holm": 0.15625
+ },
+ {
+  "dataset": "interhri",
+  "best": "ens_mix/both",
+  "other": "ens_top3/ea",
+  "delta": 0.008432047750229613,
+  "n_pos": 6,
+  "n": 8,
+  "p": 0.0390625,
+  "p_holm": 0.15625
+ },
+ {
+  "dataset": "interhri",
+  "best": "ens_mix/both",
+  "other": "labram/ea",
+  "delta": 0.028225472050045955,
+  "n_pos": 8,
+  "n": 8,
+  "p": 0.0078125,
+  "p_holm": 0.15625
+ },
+ {
+  "dataset": "interhri",
+  "best": "ens_mix/both",
+  "other": "labram/none",
+  "delta": 0.025747783230027577,
+  "n_pos": 8,
+  "n": 8,
+  "p": 0.0078125,
+  "p_holm": 0.15625
+ },
+ {
+  "dataset": "interhri",
+  "best": "ens_mix/both",
+  "other": "xdawn_rg/ea",
+  "delta": 0.01765248364325067,
+  "n_pos": 7,
+  "n": 8,
+  "p": 0.015625,
+  "p_holm": 0.15625
+ },
+ {
+  "dataset": "interhri",
+  "best": "ens_mix/both",
+  "other": "xdawn_rg/none",
+  "delta": 0.025868378386134108,
+  "n_pos": 8,
+  "n": 8,
+  "p": 0.0078125,
+  "p_holm": 0.15625
+ },
+ {
+  "dataset": "interhri_early",
+  "best": "ens_mix/both",
+  "other": "eegnet/ea",
+  "delta": 0.02427795354109269,
+  "n_pos": 8,
+  "n": 8,
+  "p": 0.0078125,
+  "p_holm": 0.046875
+ },
+ {
+  "dataset": "interhri_early",
+  "best": "ens_mix/both",
+  "other": "eegnet/none",
+  "delta": 0.021660407340449966,
+  "n_pos": 7,
+  "n": 8,
+  "p": 0.015625,
+  "p_holm": 0.046875
+ },
+ {
+  "dataset": "interhri_early",
+  "best": "ens_mix/both",
+  "other": "ens_all/ea",
+  "delta": 0.0075208046372819,
+  "n_pos": 6,
+  "n": 8,
+  "p": 0.0390625,
+  "p_holm": 0.078125
+ },
+ {
+  "dataset": "interhri_early",
+  "best": "ens_mix/both",
+  "other": "ens_top3/ea",
+  "delta": 0.0075208046372819,
+  "n_pos": 6,
+  "n": 8,
+  "p": 0.0390625,
+  "p_holm": 0.078125
+ },
+ {
+  "dataset": "interhri_early",
+  "best": "ens_mix/both",
+  "other": "xdawn_rg/ea",
+  "delta": 0.02263313174357208,
+  "n_pos": 8,
+  "n": 8,
+  "p": 0.0078125,
+  "p_holm": 0.046875
+ },
+ {
+  "dataset": "interhri_early",
+  "best": "ens_mix/both",
+  "other": "xdawn_rg/none",
+  "delta": 0.021925343635215783,
+  "n_pos": 8,
+  "n": 8,
+  "p": 0.0078125,
+  "p_holm": 0.046875
+ }
+]
