@@ -3,191 +3,201 @@
   "dataset": "bnci2015_013",
   "best": "ens_mix/both",
   "other": "cbramod/ea",
-  "delta": 0.04835319284495051,
+  "delta": 0.04932573862008344,
   "n_pos": 6,
   "n": 6,
   "p": 0.03125,
-  "p_holm": 0.59375
+  "p_holm": 0.625
  },
  {
   "dataset": "bnci2015_013",
   "best": "ens_mix/both",
   "other": "cbramod/none",
-  "delta": 0.05200193225606967,
+  "delta": 0.05297447803120261,
   "n_pos": 6,
   "n": 6,
   "p": 0.03125,
-  "p_holm": 0.59375
+  "p_holm": 0.625
  },
  {
   "dataset": "bnci2015_013",
   "best": "ens_mix/both",
   "other": "ctnet/ea",
-  "delta": 0.05067907837460831,
+  "delta": 0.05165162414974125,
   "n_pos": 6,
   "n": 6,
   "p": 0.03125,
-  "p_holm": 0.59375
+  "p_holm": 0.625
  },
  {
   "dataset": "bnci2015_013",
   "best": "ens_mix/both",
   "other": "ctnet/none",
-  "delta": 0.025087367616764722,
+  "delta": 0.026059913391897654,
   "n_pos": 6,
   "n": 6,
   "p": 0.03125,
-  "p_holm": 0.59375
+  "p_holm": 0.625
  },
  {
   "dataset": "bnci2015_013",
   "best": "ens_mix/both",
   "other": "eegconformer/ea",
-  "delta": 0.08275920293094352,
+  "delta": 0.08373174870607646,
   "n_pos": 6,
   "n": 6,
   "p": 0.03125,
-  "p_holm": 0.59375
+  "p_holm": 0.625
  },
  {
   "dataset": "bnci2015_013",
   "best": "ens_mix/both",
   "other": "eegconformer/none",
-  "delta": 0.05098668280780583,
+  "delta": 0.051959228582938756,
   "n_pos": 6,
   "n": 6,
   "p": 0.03125,
-  "p_holm": 0.59375
+  "p_holm": 0.625
  },
  {
   "dataset": "bnci2015_013",
   "best": "ens_mix/both",
   "other": "eeginception_erp/ea",
-  "delta": 0.06250697724573702,
+  "delta": 0.06347952302086995,
   "n_pos": 6,
   "n": 6,
   "p": 0.03125,
-  "p_holm": 0.59375
+  "p_holm": 0.625
  },
  {
   "dataset": "bnci2015_013",
   "best": "ens_mix/both",
   "other": "eeginception_erp/none",
-  "delta": 0.021755932104297843,
-  "n_pos": 5,
+  "delta": 0.022728477879430775,
+  "n_pos": 6,
   "n": 6,
-  "p": 0.0625,
-  "p_holm": 0.59375
+  "p": 0.03125,
+  "p_holm": 0.625
  },
  {
   "dataset": "bnci2015_013",
   "best": "ens_mix/both",
   "other": "eegnet/ea",
-  "delta": 0.06753640617392674,
+  "delta": 0.06850895194905966,
   "n_pos": 6,
   "n": 6,
   "p": 0.03125,
-  "p_holm": 0.59375
+  "p_holm": 0.625
  },
  {
   "dataset": "bnci2015_013",
   "best": "ens_mix/both",
   "other": "eegnet/none",
-  "delta": 0.0476987776232057,
+  "delta": 0.04867132339833863,
   "n_pos": 6,
   "n": 6,
   "p": 0.03125,
-  "p_holm": 0.59375
+  "p_holm": 0.625
  },
  {
   "dataset": "bnci2015_013",
   "best": "ens_mix/both",
   "other": "eegnex/ea",
-  "delta": 0.06221713117444355,
+  "delta": 0.06318967694957649,
   "n_pos": 6,
   "n": 6,
   "p": 0.03125,
-  "p_holm": 0.59375
+  "p_holm": 0.625
  },
  {
   "dataset": "bnci2015_013",
   "best": "ens_mix/both",
   "other": "eegnex/none",
-  "delta": 0.029512989801142215,
-  "n_pos": 4,
+  "delta": 0.030485535576275147,
+  "n_pos": 5,
   "n": 6,
-  "p": 0.15625,
-  "p_holm": 0.59375
+  "p": 0.09375,
+  "p_holm": 0.625
+ },
+ {
+  "dataset": "bnci2015_013",
+  "best": "ens_mix/both",
+  "other": "eegpt/ea",
+  "delta": 0.09361323269329037,
+  "n_pos": 6,
+  "n": 6,
+  "p": 0.03125,
+  "p_holm": 0.625
  },
  {
   "dataset": "bnci2015_013",
   "best": "ens_mix/both",
   "other": "eegpt/none",
-  "delta": 0.05883232776420142,
+  "delta": 0.059804873539334356,
   "n_pos": 4,
   "n": 6,
   "p": 0.15625,
-  "p_holm": 0.59375
+  "p_holm": 0.625
  },
  {
   "dataset": "bnci2015_013",
   "best": "ens_mix/both",
   "other": "ens_all/ea",
-  "delta": 0.023369010920243776,
+  "delta": 0.021303789210882385,
   "n_pos": 6,
   "n": 6,
   "p": 0.03125,
-  "p_holm": 0.59375
+  "p_holm": 0.625
  },
  {
   "dataset": "bnci2015_013",
   "best": "ens_mix/both",
   "other": "ens_top3/ea",
-  "delta": 0.03834260002883468,
+  "delta": 0.03899014258921927,
   "n_pos": 6,
   "n": 6,
   "p": 0.03125,
-  "p_holm": 0.59375
+  "p_holm": 0.625
  },
  {
   "dataset": "bnci2015_013",
   "best": "ens_mix/both",
   "other": "labram/ea",
-  "delta": 0.09165040827565583,
+  "delta": 0.09262295405078876,
   "n_pos": 6,
   "n": 6,
   "p": 0.03125,
-  "p_holm": 0.59375
+  "p_holm": 0.625
  },
  {
   "dataset": "bnci2015_013",
   "best": "ens_mix/both",
   "other": "labram/none",
-  "delta": 0.07035388873656097,
+  "delta": 0.0713264345116939,
   "n_pos": 6,
   "n": 6,
   "p": 0.03125,
-  "p_holm": 0.59375
+  "p_holm": 0.625
  },
  {
   "dataset": "bnci2015_013",
   "best": "ens_mix/both",
   "other": "xdawn_rg/ea",
-  "delta": 0.06826338639061787,
+  "delta": 0.0692359321657508,
   "n_pos": 6,
   "n": 6,
   "p": 0.03125,
-  "p_holm": 0.59375
+  "p_holm": 0.625
  },
  {
   "dataset": "bnci2015_013",
   "best": "ens_mix/both",
   "other": "xdawn_rg/none",
-  "delta": 0.05096013325999269,
+  "delta": 0.05193267903512563,
   "n_pos": 6,
   "n": 6,
   "p": 0.03125,
-  "p_holm": 0.59375
+  "p_holm": 0.625
  },
  {
   "dataset": "erpcore_ern",
@@ -573,17 +583,17 @@
   "dataset": "errphri_robot",
   "best": "ens_all/ea",
   "other": "cbramod/ea",
-  "delta": 0.048079268420343435,
-  "n_pos": 10,
+  "delta": 0.051801419336280956,
+  "n_pos": 11,
   "n": 12,
-  "p": 0.0048828125,
-  "p_holm": 0.0537109375
+  "p": 0.00244140625,
+  "p_holm": 0.0341796875
  },
  {
   "dataset": "errphri_robot",
   "best": "ens_all/ea",
   "other": "cbramod/none",
-  "delta": 0.09089141652421108,
+  "delta": 0.0946135674401486,
   "n_pos": 11,
   "n": 12,
   "p": 0.0009765625,
@@ -593,17 +603,17 @@
   "dataset": "errphri_robot",
   "best": "ens_all/ea",
   "other": "ctnet/ea",
-  "delta": 0.028197823962628363,
+  "delta": 0.031919974878565884,
   "n_pos": 10,
   "n": 12,
   "p": 0.0068359375,
-  "p_holm": 0.0615234375
+  "p_holm": 0.041015625
  },
  {
   "dataset": "errphri_robot",
   "best": "ens_all/ea",
   "other": "ctnet/none",
-  "delta": 0.04913140823878401,
+  "delta": 0.05285355915472153,
   "n_pos": 11,
   "n": 12,
   "p": 0.00146484375,
@@ -613,127 +623,27 @@
   "dataset": "errphri_robot",
   "best": "ens_all/ea",
   "other": "eegconformer/ea",
-  "delta": 0.048418655898059,
+  "delta": 0.05214080681399652,
   "n_pos": 10,
   "n": 12,
-  "p": 0.0048828125,
-  "p_holm": 0.0537109375
+  "p": 0.00341796875,
+  "p_holm": 0.0341796875
  },
  {
   "dataset": "errphri_robot",
   "best": "ens_all/ea",
   "other": "eegconformer/none",
-  "delta": 0.05081179039297415,
-  "n_pos": 10,
-  "n": 12,
-  "p": 0.01220703125,
-  "p_holm": 0.0615234375
- },
- {
-  "dataset": "errphri_robot",
-  "best": "ens_all/ea",
-  "other": "eeginception_erp/ea",
-  "delta": 0.012983604505227559,
-  "n_pos": 9,
-  "n": 12,
-  "p": 0.02099609375,
-  "p_holm": 0.06298828125
- },
- {
-  "dataset": "errphri_robot",
-  "best": "ens_all/ea",
-  "other": "eeginception_erp/none",
-  "delta": 0.053763898308478,
-  "n_pos": 10,
-  "n": 12,
-  "p": 0.00927734375,
-  "p_holm": 0.0615234375
- },
- {
-  "dataset": "errphri_robot",
-  "best": "ens_all/ea",
-  "other": "eegnet/ea",
-  "delta": 0.039587281677599694,
-  "n_pos": 9,
-  "n": 12,
-  "p": 0.0068359375,
-  "p_holm": 0.0615234375
- },
- {
-  "dataset": "errphri_robot",
-  "best": "ens_all/ea",
-  "other": "eegnet/none",
-  "delta": 0.07567880421396647,
-  "n_pos": 11,
-  "n": 12,
-  "p": 0.0009765625,
-  "p_holm": 0.0185546875
- },
- {
-  "dataset": "errphri_robot",
-  "best": "ens_all/ea",
-  "other": "eegnex/ea",
-  "delta": 0.023230619270008676,
-  "n_pos": 9,
-  "n": 12,
-  "p": 0.0068359375,
-  "p_holm": 0.0615234375
- },
- {
-  "dataset": "errphri_robot",
-  "best": "ens_all/ea",
-  "other": "eegnex/none",
-  "delta": 0.022428316305657104,
+  "delta": 0.05453394130891167,
   "n_pos": 10,
   "n": 12,
   "p": 0.0068359375,
-  "p_holm": 0.0615234375
- },
- {
-  "dataset": "errphri_robot",
-  "best": "ens_all/ea",
-  "other": "eegpt/none",
-  "delta": 0.06285036591285324,
-  "n_pos": 11,
-  "n": 12,
-  "p": 0.00341796875,
   "p_holm": 0.041015625
  },
  {
   "dataset": "errphri_robot",
   "best": "ens_all/ea",
-  "other": "ens_mix/both",
-  "delta": 0.005458004919242411,
-  "n_pos": 9,
-  "n": 12,
-  "p": 0.12939453125,
-  "p_holm": 0.2587890625
- },
- {
-  "dataset": "errphri_robot",
-  "best": "ens_all/ea",
-  "other": "ens_top3/ea",
-  "delta": 0.0051351925057855725,
-  "n_pos": 8,
-  "n": 12,
-  "p": 0.12939453125,
-  "p_holm": 0.2587890625
- },
- {
-  "dataset": "errphri_robot",
-  "best": "ens_all/ea",
-  "other": "labram/ea",
-  "delta": 0.08161081433192044,
-  "n_pos": 11,
-  "n": 12,
-  "p": 0.00146484375,
-  "p_holm": 0.02490234375
- },
- {
-  "dataset": "errphri_robot",
-  "best": "ens_all/ea",
-  "other": "labram/none",
-  "delta": 0.0907263511836059,
+  "other": "eeginception_erp/ea",
+  "delta": 0.016705755421165078,
   "n_pos": 11,
   "n": 12,
   "p": 0.00244140625,
@@ -742,8 +652,118 @@
  {
   "dataset": "errphri_robot",
   "best": "ens_all/ea",
+  "other": "eeginception_erp/none",
+  "delta": 0.05748604922441552,
+  "n_pos": 10,
+  "n": 12,
+  "p": 0.00927734375,
+  "p_holm": 0.041015625
+ },
+ {
+  "dataset": "errphri_robot",
+  "best": "ens_all/ea",
+  "other": "eegnet/ea",
+  "delta": 0.04330943259353721,
+  "n_pos": 10,
+  "n": 12,
+  "p": 0.0048828125,
+  "p_holm": 0.0390625
+ },
+ {
+  "dataset": "errphri_robot",
+  "best": "ens_all/ea",
+  "other": "eegnet/none",
+  "delta": 0.07940095512990399,
+  "n_pos": 12,
+  "n": 12,
+  "p": 0.00048828125,
+  "p_holm": 0.009765625
+ },
+ {
+  "dataset": "errphri_robot",
+  "best": "ens_all/ea",
+  "other": "eegnex/ea",
+  "delta": 0.026952770185946193,
+  "n_pos": 10,
+  "n": 12,
+  "p": 0.0048828125,
+  "p_holm": 0.0390625
+ },
+ {
+  "dataset": "errphri_robot",
+  "best": "ens_all/ea",
+  "other": "eegnex/none",
+  "delta": 0.026150467221594625,
+  "n_pos": 10,
+  "n": 12,
+  "p": 0.00341796875,
+  "p_holm": 0.0341796875
+ },
+ {
+  "dataset": "errphri_robot",
+  "best": "ens_all/ea",
+  "other": "eegpt/ea",
+  "delta": 0.025477437433824208,
+  "n_pos": 8,
+  "n": 12,
+  "p": 0.10986328125,
+  "p_holm": 0.10986328125
+ },
+ {
+  "dataset": "errphri_robot",
+  "best": "ens_all/ea",
+  "other": "eegpt/none",
+  "delta": 0.06657251682879077,
+  "n_pos": 11,
+  "n": 12,
+  "p": 0.00244140625,
+  "p_holm": 0.0341796875
+ },
+ {
+  "dataset": "errphri_robot",
+  "best": "ens_all/ea",
+  "other": "ens_mix/both",
+  "delta": 0.007112716336753778,
+  "n_pos": 9,
+  "n": 12,
+  "p": 0.04248046875,
+  "p_holm": 0.0849609375
+ },
+ {
+  "dataset": "errphri_robot",
+  "best": "ens_all/ea",
+  "other": "ens_top3/ea",
+  "delta": 0.00885734342172309,
+  "n_pos": 10,
+  "n": 12,
+  "p": 0.01220703125,
+  "p_holm": 0.041015625
+ },
+ {
+  "dataset": "errphri_robot",
+  "best": "ens_all/ea",
+  "other": "labram/ea",
+  "delta": 0.08533296524785795,
+  "n_pos": 11,
+  "n": 12,
+  "p": 0.0009765625,
+  "p_holm": 0.0185546875
+ },
+ {
+  "dataset": "errphri_robot",
+  "best": "ens_all/ea",
+  "other": "labram/none",
+  "delta": 0.09444850209954346,
+  "n_pos": 11,
+  "n": 12,
+  "p": 0.00146484375,
+  "p_holm": 0.02490234375
+ },
+ {
+  "dataset": "errphri_robot",
+  "best": "ens_all/ea",
   "other": "xdawn_rg/ea",
-  "delta": 0.04208694198449803,
+  "delta": 0.04580909290043555,
   "n_pos": 11,
   "n": 12,
   "p": 0.00146484375,
@@ -753,7 +773,7 @@
   "dataset": "errphri_robot",
   "best": "ens_all/ea",
   "other": "xdawn_rg/none",
-  "delta": 0.05498241442648671,
+  "delta": 0.05870456534242422,
   "n_pos": 11,
   "n": 12,
   "p": 0.00244140625,

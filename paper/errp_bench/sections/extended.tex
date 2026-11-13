@@ -64,16 +64,16 @@ Paradigm & Decoder & Decoder AUROC & Predicted $\Delta$AUC & Realised $\Delta$AU
 ErrP-HRI robot & CBraMod + EA & 0.597 & $-0.140$ & \tbdv{$-0.152$} \\
 ErrP-HRI robot & xDAWN+RG + EA & 0.603 & $-0.134$ & \tbdv{$-0.141$} \\
 ErrP-HRI robot & EEG-Inception + EA & 0.632 & $-0.100$ & \tbdv{$-0.109$} \\
-ErrP-HRI robot & ErrP-Ens & 0.640 & $-0.090$ & \tbdv{$-0.084$} \\
+ErrP-HRI robot & ErrP-Ens & \EnsMixErrpHriRobot{} & $-0.088$ & \tbdv{$-0.082$} \\
 \midrule
 ErrP-HRI cursor & xDAWN+RG + EA & 0.851 & $+0.054$ & \tbdv{$+0.047$} \\
 ErrP-HRI cursor & EEGPT + EA & 0.891 & $+0.081$ & \tbdv{$+0.072$} \\
 ErrP-HRI cursor & EEG-Inception + EA & 0.902 & $+0.088$ & \tbdv{$+0.080$} \\
-ErrP-HRI cursor & ErrP-Ens & 0.906 & $+0.090$ & \tbdv{$+0.091$} \\
+ErrP-HRI cursor & ErrP-Ens & \EnsMixErrpHriCursor{} & $+0.090$ & \tbdv{$+0.091$} \\
 \midrule
-BNCI 2015-013 & ErrP-Ens & 0.871 & $+0.067$ & \tbdv{$+0.061$} \\
-ERP CORE ERN & ErrP-Ens & 0.970 & $+0.117$ & \tbdv{$+0.112$} \\
-IntEr-HRI & ErrP-Ens & 0.981 & $+0.122$ & \tbdv{$+0.118$} \\
+BNCI 2015-013 & ErrP-Ens & \EnsMixBnci{} & $+0.068$ & \tbdv{$+0.061$} \\
+ERP CORE ERN & ErrP-Ens & \EnsMixErpCoreErn{} & $+0.117$ & \tbdv{$+0.112$} \\
+IntEr-HRI & ErrP-Ens & \EnsMixInterHri{} & $+0.122$ & \tbdv{$+0.118$} \\
 \bottomrule
 \end{tabular}
 \end{table}

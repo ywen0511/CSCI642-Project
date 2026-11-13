@@ -90,8 +90,9 @@ averages; band: $\pm$ s.e.m. of the error-minus-correct difference).}
 
 \paragraph{Pretraining does not help cross-subject ErrP decoding.} The best foundation model minus the best
 compact network averages \FMMinusCompactMean{} AUROC over datasets, and a foundation model is best on
-\FMWinsDatasets{} datasets; the per-participant difference is significant on three datasets (Appendix
-Table~\ref{tab:fm}). On ErrP-HRI robot, LaBraM and CBraMod are among the weakest decoders. One interpretation
+\FMWinsDatasets{} datasets; the per-participant difference favours the compact network significantly on ERP CORE ERN and IntEr-HRI
+(Appendix Table~\ref{tab:fm}). On ErrP-HRI robot, LaBraM and CBraMod are among the weakest decoders, and
+EEGPT reaches the compact networks only with alignment. One interpretation
 is that ErrPs are low-dimensional, time-locked waveforms: a model that already encodes spatial filtering and
 a short temporal template has little left to gain from generic pretraining, whereas a large backbone
 fine-tuned on a few thousand trials from about ten participants can fit the training participants too closely.
