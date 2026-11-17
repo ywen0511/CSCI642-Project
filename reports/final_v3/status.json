@@ -1,11 +1,13 @@
 {
   "assignment": "FINAL_V3_HANDOFF.md (planning branch final-v3, 81813de)",
   "execution_branch": "final-v3-experiments",
-  "phase": "stage1_running",
+  "phase": "stage1_and_v3_validation_and_pref_pilots_running",
   "started_utc": "2026-11-17T21:10:00Z",
   "complete": false,
   "commits": {
-    "stage0_merge": "236ab493abd521f504205a9c2383dfba8a45c5e1"
+    "stage0_merge": "236ab493abd521f504205a9c2383dfba8a45c5e1",
+    "stage1_runs": "f63dc24",
+    "v3_and_pref_code": "a09817f"
   },
   "preflight": {
     "compute": "GM Warren LSF cpu_ubuntu_wrn (Intel Xeon Gold 6242, 32 cores/node, 187 GB), one core per RL run",
@@ -39,10 +41,10 @@
     },
     "v3_smoke": {
       "planned": 1,
-      "completed": 0,
+      "completed": 1,
       "failed": 0,
-      "pending": 1,
-      "commit": null,
+      "pending": 0,
+      "commit": "a09817f",
       "release": null
     },
     "v3_validation_w050": {
@@ -79,10 +81,10 @@
     },
     "pref_smoke": {
       "planned": 1,
-      "completed": 0,
+      "completed": 1,
       "failed": 0,
-      "pending": 1,
-      "commit": null,
+      "pending": 0,
+      "commit": "a09817f",
       "release": null
     },
     "pref_pilots": {
@@ -128,5 +130,5 @@
   },
   "releases": {},
   "blockers": [],
-  "updated_utc": "2026-11-17T21:43:21Z"
+  "updated_utc": "2026-11-17T21:49:45Z"
 }

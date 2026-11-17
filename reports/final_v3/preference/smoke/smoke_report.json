@@ -1,0 +1,337 @@
+{
+  "ok": true,
+  "scope": "CPU integration only; not a trained-policy performance result",
+  "conditions": {
+    "sparse": {
+      "steps": 250,
+      "updates": 230,
+      "verification": {
+        "ok": true,
+        "max_action_difference": 0.0,
+        "tolerance": 1e-06,
+        "replay_size": 250,
+        "steps": 250,
+        "updates": 230,
+        "scope": "hashes, inference, model/replay loading; continuation is a separate run"
+      },
+      "transitions": {
+        "rows": 250,
+        "segment_end": 50,
+        "eligible": 50,
+        "events": 0,
+        "neutral": 0,
+        "label0": 18,
+        "label1": 32,
+        "violation_steps": 34,
+        "violation_segments": 11
+      },
+      "observation": {
+        "policy_observation_keys": [
+          "achieved_goal",
+          "desired_goal",
+          "observation"
+        ],
+        "shapes": {
+          "achieved_goal": [
+            3
+          ],
+          "desired_goal": [
+            3
+          ],
+          "observation": [
+            10
+          ]
+        }
+      }
+    },
+    "dense": {
+      "steps": 250,
+      "updates": 230,
+      "verification": {
+        "ok": true,
+        "max_action_difference": 0.0,
+        "tolerance": 1e-06,
+        "replay_size": 250,
+        "steps": 250,
+        "updates": 230,
+        "scope": "hashes, inference, model/replay loading; continuation is a separate run"
+      },
+      "transitions": {
+        "rows": 250,
+        "segment_end": 50,
+        "eligible": 50,
+        "events": 0,
+        "neutral": 0,
+        "label0": 18,
+        "label1": 32,
+        "violation_steps": 34,
+        "violation_segments": 11
+      },
+      "observation": {
+        "policy_observation_keys": [
+          "achieved_goal",
+          "desired_goal",
+          "observation"
+        ],
+        "shapes": {
+          "achieved_goal": [
+            3
+          ],
+          "desired_goal": [
+            3
+          ],
+          "observation": [
+            10
+          ]
+        }
+      }
+    },
+    "ideal": {
+      "steps": 250,
+      "updates": 230,
+      "verification": {
+        "ok": true,
+        "max_action_difference": 0.0,
+        "tolerance": 1e-06,
+        "replay_size": 250,
+        "steps": 250,
+        "updates": 230,
+        "scope": "hashes, inference, model/replay loading; continuation is a separate run"
+      },
+      "transitions": {
+        "rows": 250,
+        "segment_end": 50,
+        "eligible": 50,
+        "events": 50,
+        "neutral": 0,
+        "label0": 18,
+        "label1": 32,
+        "violation_steps": 34,
+        "violation_segments": 11
+      },
+      "observation": {
+        "policy_observation_keys": [
+          "achieved_goal",
+          "desired_goal",
+          "observation"
+        ],
+        "shapes": {
+          "achieved_goal": [
+            3
+          ],
+          "desired_goal": [
+            3
+          ],
+          "observation": [
+            10
+          ]
+        }
+      }
+    },
+    "eegnet": {
+      "steps": 250,
+      "updates": 230,
+      "verification": {
+        "ok": true,
+        "max_action_difference": 0.0,
+        "tolerance": 1e-06,
+        "replay_size": 250,
+        "steps": 250,
+        "updates": 230,
+        "scope": "hashes, inference, model/replay loading; continuation is a separate run"
+      },
+      "transitions": {
+        "rows": 250,
+        "segment_end": 50,
+        "eligible": 50,
+        "events": 50,
+        "neutral": 0,
+        "label0": 18,
+        "label1": 32,
+        "violation_steps": 34,
+        "violation_segments": 11
+      },
+      "observation": {
+        "policy_observation_keys": [
+          "achieved_goal",
+          "desired_goal",
+          "observation"
+        ],
+        "shapes": {
+          "achieved_goal": [
+            3
+          ],
+          "desired_goal": [
+            3
+          ],
+          "observation": [
+            10
+          ]
+        }
+      }
+    },
+    "cbramod": {
+      "steps": 250,
+      "updates": 230,
+      "verification": {
+        "ok": true,
+        "max_action_difference": 0.0,
+        "tolerance": 1e-06,
+        "replay_size": 250,
+        "steps": 250,
+        "updates": 230,
+        "scope": "hashes, inference, model/replay loading; continuation is a separate run"
+      },
+      "transitions": {
+        "rows": 250,
+        "segment_end": 50,
+        "eligible": 50,
+        "events": 50,
+        "neutral": 0,
+        "label0": 18,
+        "label1": 32,
+        "violation_steps": 34,
+        "violation_segments": 11
+      },
+      "observation": {
+        "policy_observation_keys": [
+          "achieved_goal",
+          "desired_goal",
+          "observation"
+        ],
+        "shapes": {
+          "achieved_goal": [
+            3
+          ],
+          "desired_goal": [
+            3
+          ],
+          "observation": [
+            10
+          ]
+        }
+      }
+    },
+    "independent_eegnet": {
+      "steps": 250,
+      "updates": 230,
+      "verification": {
+        "ok": true,
+        "max_action_difference": 0.0,
+        "tolerance": 1e-06,
+        "replay_size": 250,
+        "steps": 250,
+        "updates": 230,
+        "scope": "hashes, inference, model/replay loading; continuation is a separate run"
+      },
+      "transitions": {
+        "rows": 250,
+        "segment_end": 50,
+        "eligible": 50,
+        "events": 50,
+        "neutral": 0,
+        "label0": 18,
+        "label1": 32,
+        "violation_steps": 35,
+        "violation_segments": 11
+      },
+      "observation": {
+        "policy_observation_keys": [
+          "achieved_goal",
+          "desired_goal",
+          "observation"
+        ],
+        "shapes": {
+          "achieved_goal": [
+            3
+          ],
+          "desired_goal": [
+            3
+          ],
+          "observation": [
+            10
+          ]
+        }
+      }
+    },
+    "independent_cbramod": {
+      "steps": 250,
+      "updates": 230,
+      "verification": {
+        "ok": true,
+        "max_action_difference": 0.0,
+        "tolerance": 1e-06,
+        "replay_size": 250,
+        "steps": 250,
+        "updates": 230,
+        "scope": "hashes, inference, model/replay loading; continuation is a separate run"
+      },
+      "transitions": {
+        "rows": 250,
+        "segment_end": 50,
+        "eligible": 50,
+        "events": 50,
+        "neutral": 0,
+        "label0": 18,
+        "label1": 32,
+        "violation_steps": 34,
+        "violation_segments": 11
+      },
+      "observation": {
+        "policy_observation_keys": [
+          "achieved_goal",
+          "desired_goal",
+          "observation"
+        ],
+        "shapes": {
+          "achieved_goal": [
+            3
+          ],
+          "desired_goal": [
+            3
+          ],
+          "observation": [
+            10
+          ]
+        }
+      }
+    }
+  },
+  "config": {
+    "path": "configs/final_v3/pref_candidates/pref_w100.json",
+    "schema": "csci642-rl-pref/v1",
+    "reward_center": {
+      "cbramod": 0.4664944170397481,
+      "eegnet": 0.4793096907507094,
+      "ideal": 0.5
+    }
+  },
+  "environment_checks": {
+    "steps": 50,
+    "ok": true
+  },
+  "scripted_feedback_check": "skipped for the preference task (see geometry check)",
+  "periodic_checkpoint": {
+    "ok": true,
+    "max_action_difference": 0.0,
+    "tolerance": 1e-06,
+    "replay_size": 80,
+    "steps": 80,
+    "updates": 59,
+    "scope": "hashes, inference, model/replay loading; continuation is a separate run"
+  },
+  "continuation": {
+    "initial_steps": 80,
+    "final_steps": 120,
+    "verification": {
+      "ok": true,
+      "max_action_difference": 0.0,
+      "tolerance": 1e-06,
+      "replay_size": 120,
+      "steps": 120,
+      "updates": 99,
+      "scope": "hashes, inference, model/replay loading; continuation is a separate run"
+    },
+    "ok": true
+  }
+}
