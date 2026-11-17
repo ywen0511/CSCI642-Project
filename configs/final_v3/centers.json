@@ -1,0 +1,62 @@
+{
+  "schema": "csci642-rl-centers/v1",
+  "definition": "c_m = 0.5 * (mean p_error | label 0 + mean p_error | label 1), calibrated p_error, pooled over the validation participants, decoder seed 42; ideal keeps p = label with center 0.5",
+  "split": "validation",
+  "participants": [
+    "s11",
+    "s13"
+  ],
+  "decoder_seed": 42,
+  "feedback_table": "validation_predictions.csv",
+  "feedback_table_sha256": "db0f3a9aa35a06af16550ee8a65904e9708f8d38981450ea1fe4a3d269eda3eb",
+  "feedback_profile_sha256": "9c74f9ac9f44ffcfc45bd1bcade08cb89c6615603bf71959da35405441be4031",
+  "centers": {
+    "cbramod": 0.4664944170397481,
+    "eegnet": 0.4793096907507094,
+    "ideal": 0.5
+  },
+  "per_model": {
+    "cbramod": {
+      "n_label0": 613,
+      "n_label1": 346,
+      "mean_p_error_label0": 0.4303528938826754,
+      "mean_p_error_label1": 0.5026359401968208,
+      "center": 0.4664944170397481,
+      "per_participant": {
+        "s11": {
+          "n": 472,
+          "mean_p_error": 0.4406292750660593,
+          "error_label_fraction": 0.3495762711864407,
+          "independent_expected_reward_per_unit_weight": 0.025865141973688777
+        },
+        "s13": {
+          "n": 487,
+          "mean_p_error": 0.4717481343470226,
+          "error_label_fraction": 0.37166324435318276,
+          "independent_expected_reward_per_unit_weight": -0.00525371730727453
+        }
+      }
+    },
+    "eegnet": {
+      "n_label0": 613,
+      "n_label1": 346,
+      "mean_p_error_label0": 0.44297882055546495,
+      "mean_p_error_label1": 0.5156405609459538,
+      "center": 0.4793096907507094,
+      "per_participant": {
+        "s11": {
+          "n": 472,
+          "mean_p_error": 0.4490888516788135,
+          "error_label_fraction": 0.3495762711864407,
+          "independent_expected_reward_per_unit_weight": 0.030220839071895877
+        },
+        "s13": {
+          "n": 487,
+          "mean_p_error": 0.4886811357195072,
+          "error_label_fraction": 0.37166324435318276,
+          "independent_expected_reward_per_unit_weight": -0.009371444968797826
+        }
+      }
+    }
+  }
+}
