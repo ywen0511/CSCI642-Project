@@ -167,8 +167,19 @@ def main():
         # --- preprocessing on the continuous recording
         raw.pick(ch_order)
         raw.reorder_channels(ch_order)
-        raw.filter(cfg["filter"]["l_freq"], cfg["filter"]["h_freq"], method="fir", phase="zero",
-                   fir_window="hamming", fir_design="firwin", verbose="ERROR")
+        fc = cfg["filter"]
+        # explicit transition bands / length / padding when configured (decoder-improvement bands); MNE defaults
+        # ('auto', 'reflect_limited') otherwise, exactly as in the historical prep_v1 call
+        fkw = {k: fc[k] for k in ("l_trans_bandwidth", "h_trans_bandwidth", "filter_length", "pad") if k in fc}
+        raw.filter(fc["l_freq"], fc["h_freq"], method="fir", phase="zero",
+                   fir_window="hamming", fir_design="firwin", verbose="ERROR", **fkw)
+        if "resolved_filter" not in audit:
+            h = mne.filter.create_filter(raw.get_data()[:1, :10000], sf, fc["l_freq"], fc["h_freq"], method="fir",
+                                         phase="zero", fir_window="hamming", fir_design="firwin", verbose="ERROR",
+                                         **{k: v for k, v in fkw.items() if k != "pad"})
+            audit["resolved_filter"] = {"l_freq": fc["l_freq"], "h_freq": fc["h_freq"], "n_taps": int(len(h)),
+                                        "duration_s": len(h) / sf, "sfreq": sf, "explicit_kwargs": fkw,
+                                        "notch": fc.get("notch", "none"), "mne": mne.__version__}
         X = raw.get_data(units="uV")  # (27, n_times)
         n0, n1 = int(round(t0 * sf)), int(round(t1 * sf))
         for k, t in enumerate(trials):
@@ -220,6 +231,7 @@ def main():
                 "versions": {"mne": mne.__version__, "numpy": np.__version__, "scipy": scipy.__version__},
                 "n_epochs": len(ids), "shapes": {"eeg256": list(np.stack(ep256[:1]).shape[1:]),
                                                  "patch200": list(np.stack(ep200[:1]).shape[1:])}}
+    resolved["resolved_filter"] = audit.get("resolved_filter")
     write_json(resolved, out / "preprocessing_config.json")
     # summary counts
     summ = (man.groupby(["subject_id", "outcome", "exclusion_reason"], dropna=False).size()

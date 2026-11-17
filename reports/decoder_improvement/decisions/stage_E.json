@@ -1,0 +1,375 @@
+{
+ "stage": "E",
+ "plan_sha": "13946027869f06e4",
+ "rule": "participant-macro of seed-mean AUROC; ties<=1e-6 -> fewer trainable params -> lexicographic candidate id",
+ "candidates": [
+  {
+   "candidate_id": "cbramod:cbramod:cb_flat_frozen@1-20#weighted_ce",
+   "recipe_id": "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "frozen",
+    "backbone_lr": null,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "score": 0.5787078412832252,
+   "per_participant_seed_mean": {
+    "s03": 0.5826126619230068,
+    "s04": 0.6843856498111817,
+    "s05": 0.5465810374782825,
+    "s06": 0.5890610724576569,
+    "s07": 0.5751054852320676,
+    "s10": 0.5173458566883805,
+    "s12": 0.5558631253920008
+   },
+   "n_fits": 9,
+   "params_trainable": 4401002,
+   "best_epochs_one_based": [
+    2,
+    17,
+    3,
+    9,
+    8,
+    9,
+    1,
+    1,
+    1
+   ],
+   "median_best_epoch": 3,
+   "fit_ids": [
+    "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv0__s42",
+    "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv0__s43",
+    "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv0__s44",
+    "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv1__s42",
+    "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv1__s43",
+    "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv1__s44",
+    "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv2__s42",
+    "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv2__s43",
+    "cb-flat-frozen-bbnone-hl5e-4-b1_20-wce-4704a7e7__cv2__s44"
+   ],
+   "cv_pooled_auroc": 0.5626399524781381,
+   "cv_brier": 0.278077035247333,
+   "cv_nll": 0.9781517692204268,
+   "cv_mean_p_label0": 0.4077561649122758,
+   "cv_mean_p_label1": 0.4522787894097417
+  },
+  {
+   "candidate_id": "cbramod:cbramod:cb_flat_frozen@1-20#ce",
+   "recipe_id": "cb-flat-frozen-bbnone-hl5e-4-b1_20-ce-3aba4899",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "frozen",
+    "backbone_lr": null,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "score": 0.5794353746772484,
+   "per_participant_seed_mean": {
+    "s03": 0.5853250623365566,
+    "s04": 0.6902804642166345,
+    "s05": 0.543999751799454,
+    "s06": 0.5847447700705133,
+    "s07": 0.576550313259174,
+    "s10": 0.5134764934605868,
+    "s12": 0.5616707675978193
+   },
+   "n_fits": 9,
+   "params_trainable": 4401002,
+   "best_epochs_one_based": [
+    2,
+    9,
+    3,
+    9,
+    9,
+    6,
+    1,
+    1,
+    2
+   ],
+   "median_best_epoch": 3,
+   "fit_ids": [
+    "cb-flat-frozen-bbnone-hl5e-4-b1_20-ce-3aba4899__cv0__s42",
+    "cb-flat-frozen-bbnone-hl5e-4-b1_20-ce-3aba4899__cv0__s43",
+    "cb-flat-frozen-bbnone-hl5e-4-b1_20-ce-3aba4899__cv0__s44",
+    "cb-flat-frozen-bbnone-hl5e-4-b1_20-ce-3aba4899__cv1__s42",
+    "cb-flat-frozen-bbnone-hl5e-4-b1_20-ce-3aba4899__cv1__s43",
+    "cb-flat-frozen-bbnone-hl5e-4-b1_20-ce-3aba4899__cv1__s44",
+    "cb-flat-frozen-bbnone-hl5e-4-b1_20-ce-3aba4899__cv2__s42",
+    "cb-flat-frozen-bbnone-hl5e-4-b1_20-ce-3aba4899__cv2__s43",
+    "cb-flat-frozen-bbnone-hl5e-4-b1_20-ce-3aba4899__cv2__s44"
+   ],
+   "cv_pooled_auroc": 0.5695325810360797,
+   "cv_brier": 0.25390009462027824,
+   "cv_nll": 0.8085416205395538,
+   "cv_mean_p_label0": 0.3272133390719477,
+   "cv_mean_p_label1": 0.3758166652095559
+  },
+  {
+   "candidate_id": "eegnet:eegnet:eeg_lr0.001_do0.5@1-20#weighted_ce",
+   "recipe_id": "eeg-lr1e-3-do0.5-b1_20-wce-ad833d47",
+   "recipe": {
+    "arch": "eegnet",
+    "lr": 0.001,
+    "dropout": 0.5,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "optimizer": "adam",
+    "weight_decay": 0.0,
+    "batch_size": 64,
+    "max_epochs": 300,
+    "patience": 40,
+    "scheduler": "none",
+    "grad_clip": null,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 25,
+    "model": {
+     "F1": 8,
+     "D": 2,
+     "F2": 16,
+     "kern_length": 128,
+     "sep_kern_length": 16,
+     "pool1": 4,
+     "pool2": 8,
+     "norm_rate": 0.25
+    },
+    "input_view": "eeg256",
+    "scaling": {
+     "kind": "train_global_std"
+    },
+    "initialization": "seeded_random"
+   },
+   "score": 0.6117677354035893,
+   "per_participant_seed_mean": {
+    "s03": 0.6254333150884875,
+    "s04": 0.7914248871695682,
+    "s05": 0.5445209729461405,
+    "s06": 0.678414974113899,
+    "s07": 0.5816136043984145,
+    "s10": 0.5086855526940363,
+    "s12": 0.55228084141458
+   },
+   "n_fits": 9,
+   "params_trainable": 2562,
+   "best_epochs_one_based": [
+    141,
+    47,
+    62,
+    23,
+    151,
+    17,
+    38,
+    28,
+    72
+   ],
+   "median_best_epoch": 47,
+   "fit_ids": [
+    "eeg-lr1e-3-do0.5-b1_20-wce-ad833d47__cv0__s42",
+    "eeg-lr1e-3-do0.5-b1_20-wce-ad833d47__cv0__s43",
+    "eeg-lr1e-3-do0.5-b1_20-wce-ad833d47__cv0__s44",
+    "eeg-lr1e-3-do0.5-b1_20-wce-ad833d47__cv1__s42",
+    "eeg-lr1e-3-do0.5-b1_20-wce-ad833d47__cv1__s43",
+    "eeg-lr1e-3-do0.5-b1_20-wce-ad833d47__cv1__s44",
+    "eeg-lr1e-3-do0.5-b1_20-wce-ad833d47__cv2__s42",
+    "eeg-lr1e-3-do0.5-b1_20-wce-ad833d47__cv2__s43",
+    "eeg-lr1e-3-do0.5-b1_20-wce-ad833d47__cv2__s44"
+   ],
+   "cv_pooled_auroc": 0.5984545230062536,
+   "cv_brier": 0.24900163554592208,
+   "cv_nll": 0.7068491539195564,
+   "cv_mean_p_label0": 0.4524999435327913,
+   "cv_mean_p_label1": 0.5169566055229547
+  },
+  {
+   "candidate_id": "eegnet:eegnet:eeg_lr0.001_do0.5@1-20#ce",
+   "recipe_id": "eeg-lr1e-3-do0.5-b1_20-ce-564de4a5",
+   "recipe": {
+    "arch": "eegnet",
+    "lr": 0.001,
+    "dropout": 0.5,
+    "band": "1-20",
+    "loss": "ce",
+    "optimizer": "adam",
+    "weight_decay": 0.0,
+    "batch_size": 64,
+    "max_epochs": 300,
+    "patience": 40,
+    "scheduler": "none",
+    "grad_clip": null,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 25,
+    "model": {
+     "F1": 8,
+     "D": 2,
+     "F2": 16,
+     "kern_length": 128,
+     "sep_kern_length": 16,
+     "pool1": 4,
+     "pool2": 8,
+     "norm_rate": 0.25
+    },
+    "input_view": "eeg256",
+    "scaling": {
+     "kind": "train_global_std"
+    },
+    "initialization": "seeded_random"
+   },
+   "score": 0.6106066587067736,
+   "per_participant_seed_mean": {
+    "s03": 0.629398528249103,
+    "s04": 0.7984710325135858,
+    "s05": 0.5574770414494912,
+    "s06": 0.6793637407173144,
+    "s07": 0.5696522183863956,
+    "s10": 0.49383300510023737,
+    "s12": 0.5460510445312877
+   },
+   "n_fits": 9,
+   "params_trainable": 2562,
+   "best_epochs_one_based": [
+    165,
+    58,
+    59,
+    19,
+    63,
+    68,
+    22,
+    32,
+    72
+   ],
+   "median_best_epoch": 59,
+   "fit_ids": [
+    "eeg-lr1e-3-do0.5-b1_20-ce-564de4a5__cv0__s42",
+    "eeg-lr1e-3-do0.5-b1_20-ce-564de4a5__cv0__s43",
+    "eeg-lr1e-3-do0.5-b1_20-ce-564de4a5__cv0__s44",
+    "eeg-lr1e-3-do0.5-b1_20-ce-564de4a5__cv1__s42",
+    "eeg-lr1e-3-do0.5-b1_20-ce-564de4a5__cv1__s43",
+    "eeg-lr1e-3-do0.5-b1_20-ce-564de4a5__cv1__s44",
+    "eeg-lr1e-3-do0.5-b1_20-ce-564de4a5__cv2__s42",
+    "eeg-lr1e-3-do0.5-b1_20-ce-564de4a5__cv2__s43",
+    "eeg-lr1e-3-do0.5-b1_20-ce-564de4a5__cv2__s44"
+   ],
+   "cv_pooled_auroc": 0.5989552033066965,
+   "cv_brier": 0.2337125719198338,
+   "cv_nll": 0.6690944798642298,
+   "cv_mean_p_label0": 0.3364534124101046,
+   "cv_mean_p_label1": 0.39968575436025755
+  }
+ ],
+ "winners": {
+  "cbramod": {
+   "candidate_id": "cbramod:cbramod:cb_flat_frozen@1-20#ce",
+   "recipe": {
+    "arch": "cbramod",
+    "head": "historical_flatten_mlp",
+    "adaptation": "frozen",
+    "backbone_lr": null,
+    "head_lr": 0.0005,
+    "band": "1-20",
+    "loss": "ce",
+    "dropout": 0.1,
+    "optimizer": "adamw",
+    "weight_decay": 0.05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 15,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 50,
+    "eta_min": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 5,
+    "input_view": "patch200",
+    "scaling": {
+     "kind": "fixed_divide",
+     "divisor": 100.0
+    },
+    "initialization": "pinned_official_cbramod"
+   },
+   "recipe_id": "cb-flat-frozen-bbnone-hl5e-4-b1_20-ce-3aba4899",
+   "score": 0.5794353746772484,
+   "tied_within_tolerance": [
+    "cbramod:cbramod:cb_flat_frozen@1-20#ce"
+   ]
+  },
+  "eegnet": {
+   "candidate_id": "eegnet:eegnet:eeg_lr0.001_do0.5@1-20#weighted_ce",
+   "recipe": {
+    "arch": "eegnet",
+    "lr": 0.001,
+    "dropout": 0.5,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "optimizer": "adam",
+    "weight_decay": 0.0,
+    "batch_size": 64,
+    "max_epochs": 300,
+    "patience": 40,
+    "scheduler": "none",
+    "grad_clip": null,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 25,
+    "model": {
+     "F1": 8,
+     "D": 2,
+     "F2": 16,
+     "kern_length": 128,
+     "sep_kern_length": 16,
+     "pool1": 4,
+     "pool2": 8,
+     "norm_rate": 0.25
+    },
+    "input_view": "eeg256",
+    "scaling": {
+     "kind": "train_global_std"
+    },
+    "initialization": "seeded_random"
+   },
+   "recipe_id": "eeg-lr1e-3-do0.5-b1_20-wce-ad833d47",
+   "score": 0.6117677354035893,
+   "tied_within_tolerance": [
+    "eegnet:eegnet:eeg_lr0.001_do0.5@1-20#weighted_ce"
+   ]
+  }
+ }
+}

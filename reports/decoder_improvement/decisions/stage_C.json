@@ -1,0 +1,346 @@
+{
+ "stage": "C",
+ "plan_sha": "43c0700cfefe08a1",
+ "rule": "participant-macro of seed-mean AUROC; ties<=1e-6 -> fewer trainable params -> lexicographic candidate id",
+ "candidates": [
+  {
+   "candidate_id": "eeg_lr0.001_do0.5",
+   "recipe_id": "eeg-lr1e-3-do0.5-b1_20-wce-ad833d47",
+   "recipe": {
+    "arch": "eegnet",
+    "lr": 0.001,
+    "dropout": 0.5,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "optimizer": "adam",
+    "weight_decay": 0.0,
+    "batch_size": 64,
+    "max_epochs": 300,
+    "patience": 40,
+    "scheduler": "none",
+    "grad_clip": null,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 25,
+    "model": {
+     "F1": 8,
+     "D": 2,
+     "F2": 16,
+     "kern_length": 128,
+     "sep_kern_length": 16,
+     "pool1": 4,
+     "pool2": 8,
+     "norm_rate": 0.25
+    },
+    "input_view": "eeg256",
+    "scaling": {
+     "kind": "train_global_std"
+    },
+    "initialization": "seeded_random"
+   },
+   "score": 0.6117677354035893,
+   "per_participant_seed_mean": {
+    "s03": 0.6254333150884875,
+    "s04": 0.7914248871695682,
+    "s05": 0.5445209729461405,
+    "s06": 0.678414974113899,
+    "s07": 0.5816136043984145,
+    "s10": 0.5086855526940363,
+    "s12": 0.55228084141458
+   },
+   "n_fits": 9,
+   "params_trainable": 2562,
+   "best_epochs_one_based": [
+    141,
+    47,
+    62,
+    23,
+    151,
+    17,
+    38,
+    28,
+    72
+   ],
+   "median_best_epoch": 47,
+   "fit_ids": [
+    "eeg-lr1e-3-do0.5-b1_20-wce-ad833d47__cv0__s42",
+    "eeg-lr1e-3-do0.5-b1_20-wce-ad833d47__cv0__s43",
+    "eeg-lr1e-3-do0.5-b1_20-wce-ad833d47__cv0__s44",
+    "eeg-lr1e-3-do0.5-b1_20-wce-ad833d47__cv1__s42",
+    "eeg-lr1e-3-do0.5-b1_20-wce-ad833d47__cv1__s43",
+    "eeg-lr1e-3-do0.5-b1_20-wce-ad833d47__cv1__s44",
+    "eeg-lr1e-3-do0.5-b1_20-wce-ad833d47__cv2__s42",
+    "eeg-lr1e-3-do0.5-b1_20-wce-ad833d47__cv2__s43",
+    "eeg-lr1e-3-do0.5-b1_20-wce-ad833d47__cv2__s44"
+   ],
+   "cv_pooled_auroc": 0.5984545230062536,
+   "cv_brier": 0.24900163554592208,
+   "cv_nll": 0.7068491539195564,
+   "cv_mean_p_label0": 0.4524999435327913,
+   "cv_mean_p_label1": 0.5169566055229547
+  },
+  {
+   "candidate_id": "eeg_lr0.001_do0.25",
+   "recipe_id": "eeg-lr1e-3-do0.25-b1_20-wce-6d566e4a",
+   "recipe": {
+    "arch": "eegnet",
+    "lr": 0.001,
+    "dropout": 0.25,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "optimizer": "adam",
+    "weight_decay": 0.0,
+    "batch_size": 64,
+    "max_epochs": 300,
+    "patience": 40,
+    "scheduler": "none",
+    "grad_clip": null,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 25,
+    "model": {
+     "F1": 8,
+     "D": 2,
+     "F2": 16,
+     "kern_length": 128,
+     "sep_kern_length": 16,
+     "pool1": 4,
+     "pool2": 8,
+     "norm_rate": 0.25
+    },
+    "input_view": "eeg256",
+    "scaling": {
+     "kind": "train_global_std"
+    },
+    "initialization": "seeded_random"
+   },
+   "score": 0.6084645532778546,
+   "per_participant_seed_mean": {
+    "s03": 0.6035273368606703,
+    "s04": 0.8171859169199597,
+    "s05": 0.5496525192355423,
+    "s06": 0.688224752266498,
+    "s07": 0.5724331926863572,
+    "s10": 0.48237009544008486,
+    "s12": 0.5458580595358712
+   },
+   "n_fits": 9,
+   "params_trainable": 2562,
+   "best_epochs_one_based": [
+    181,
+    45,
+    79,
+    85,
+    116,
+    118,
+    116,
+    14,
+    21
+   ],
+   "median_best_epoch": 85,
+   "fit_ids": [
+    "eeg-lr1e-3-do0.25-b1_20-wce-6d566e4a__cv0__s42",
+    "eeg-lr1e-3-do0.25-b1_20-wce-6d566e4a__cv0__s43",
+    "eeg-lr1e-3-do0.25-b1_20-wce-6d566e4a__cv0__s44",
+    "eeg-lr1e-3-do0.25-b1_20-wce-6d566e4a__cv1__s42",
+    "eeg-lr1e-3-do0.25-b1_20-wce-6d566e4a__cv1__s43",
+    "eeg-lr1e-3-do0.25-b1_20-wce-6d566e4a__cv1__s44",
+    "eeg-lr1e-3-do0.25-b1_20-wce-6d566e4a__cv2__s42",
+    "eeg-lr1e-3-do0.25-b1_20-wce-6d566e4a__cv2__s43",
+    "eeg-lr1e-3-do0.25-b1_20-wce-6d566e4a__cv2__s44"
+   ],
+   "cv_pooled_auroc": 0.6016227297699871,
+   "cv_brier": 0.25596977242698216,
+   "cv_nll": 0.7388137199534841,
+   "cv_mean_p_label0": 0.44384718508593235,
+   "cv_mean_p_label1": 0.5279598718711366
+  },
+  {
+   "candidate_id": "eeg_lr0.0003_do0.5",
+   "recipe_id": "eeg-lr3e-4-do0.5-b1_20-wce-b6fc85ff",
+   "recipe": {
+    "arch": "eegnet",
+    "lr": 0.0003,
+    "dropout": 0.5,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "optimizer": "adam",
+    "weight_decay": 0.0,
+    "batch_size": 64,
+    "max_epochs": 300,
+    "patience": 40,
+    "scheduler": "none",
+    "grad_clip": null,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 25,
+    "model": {
+     "F1": 8,
+     "D": 2,
+     "F2": 16,
+     "kern_length": 128,
+     "sep_kern_length": 16,
+     "pool1": 4,
+     "pool2": 8,
+     "norm_rate": 0.25
+    },
+    "input_view": "eeg256",
+    "scaling": {
+     "kind": "train_global_std"
+    },
+    "initialization": "seeded_random"
+   },
+   "score": 0.5961782501156668,
+   "per_participant_seed_mean": {
+    "s03": 0.594119078027124,
+    "s04": 0.7462581744496638,
+    "s05": 0.5498448746587242,
+    "s06": 0.6740986717267551,
+    "s07": 0.566705024932873,
+    "s10": 0.5020388325001263,
+    "s12": 0.5401830945144015
+   },
+   "n_fits": 9,
+   "params_trainable": 2562,
+   "best_epochs_one_based": [
+    78,
+    125,
+    283,
+    31,
+    158,
+    45,
+    138,
+    144,
+    185
+   ],
+   "median_best_epoch": 138,
+   "fit_ids": [
+    "eeg-lr3e-4-do0.5-b1_20-wce-b6fc85ff__cv0__s42",
+    "eeg-lr3e-4-do0.5-b1_20-wce-b6fc85ff__cv0__s43",
+    "eeg-lr3e-4-do0.5-b1_20-wce-b6fc85ff__cv0__s44",
+    "eeg-lr3e-4-do0.5-b1_20-wce-b6fc85ff__cv1__s42",
+    "eeg-lr3e-4-do0.5-b1_20-wce-b6fc85ff__cv1__s43",
+    "eeg-lr3e-4-do0.5-b1_20-wce-b6fc85ff__cv1__s44",
+    "eeg-lr3e-4-do0.5-b1_20-wce-b6fc85ff__cv2__s42",
+    "eeg-lr3e-4-do0.5-b1_20-wce-b6fc85ff__cv2__s43",
+    "eeg-lr3e-4-do0.5-b1_20-wce-b6fc85ff__cv2__s44"
+   ],
+   "cv_pooled_auroc": 0.5815341568340444,
+   "cv_brier": 0.256733424851224,
+   "cv_nll": 0.7310199938695806,
+   "cv_mean_p_label0": 0.4521744859010532,
+   "cv_mean_p_label1": 0.5042925657634089
+  },
+  {
+   "candidate_id": "eeg_lr0.0003_do0.25",
+   "recipe_id": "eeg-lr3e-4-do0.25-b1_20-wce-7bfb20eb",
+   "recipe": {
+    "arch": "eegnet",
+    "lr": 0.0003,
+    "dropout": 0.25,
+    "band": "1-20",
+    "loss": "weighted_ce",
+    "optimizer": "adam",
+    "weight_decay": 0.0,
+    "batch_size": 64,
+    "max_epochs": 300,
+    "patience": 40,
+    "scheduler": "none",
+    "grad_clip": null,
+    "label_smoothing": 0.0,
+    "periodic_every_epochs": 25,
+    "model": {
+     "F1": 8,
+     "D": 2,
+     "F2": 16,
+     "kern_length": 128,
+     "sep_kern_length": 16,
+     "pool1": 4,
+     "pool2": 8,
+     "norm_rate": 0.25
+    },
+    "input_view": "eeg256",
+    "scaling": {
+     "kind": "train_global_std"
+    },
+    "initialization": "seeded_random"
+   },
+   "score": 0.5935495422592044,
+   "per_participant_seed_mean": {
+    "s03": 0.5830687830687831,
+    "s04": 0.794844340057106,
+    "s05": 0.5273392901464383,
+    "s06": 0.6519666408976971,
+    "s07": 0.5875335634829306,
+    "s10": 0.47954224107458465,
+    "s12": 0.5305519370868915
+   },
+   "n_fits": 9,
+   "params_trainable": 2562,
+   "best_epochs_one_based": [
+    78,
+    148,
+    70,
+    135,
+    163,
+    296,
+    120,
+    66,
+    40
+   ],
+   "median_best_epoch": 120,
+   "fit_ids": [
+    "eeg-lr3e-4-do0.25-b1_20-wce-7bfb20eb__cv0__s42",
+    "eeg-lr3e-4-do0.25-b1_20-wce-7bfb20eb__cv0__s43",
+    "eeg-lr3e-4-do0.25-b1_20-wce-7bfb20eb__cv0__s44",
+    "eeg-lr3e-4-do0.25-b1_20-wce-7bfb20eb__cv1__s42",
+    "eeg-lr3e-4-do0.25-b1_20-wce-7bfb20eb__cv1__s43",
+    "eeg-lr3e-4-do0.25-b1_20-wce-7bfb20eb__cv1__s44",
+    "eeg-lr3e-4-do0.25-b1_20-wce-7bfb20eb__cv2__s42",
+    "eeg-lr3e-4-do0.25-b1_20-wce-7bfb20eb__cv2__s43",
+    "eeg-lr3e-4-do0.25-b1_20-wce-7bfb20eb__cv2__s44"
+   ],
+   "cv_pooled_auroc": 0.5841078444789553,
+   "cv_brier": 0.25919617043811827,
+   "cv_nll": 0.7369253329626738,
+   "cv_mean_p_label0": 0.4457903141788607,
+   "cv_mean_p_label1": 0.5119591464826058
+  }
+ ],
+ "winner": {
+  "candidate_id": "eeg_lr0.001_do0.5",
+  "recipe": {
+   "arch": "eegnet",
+   "lr": 0.001,
+   "dropout": 0.5,
+   "band": "1-20",
+   "loss": "weighted_ce",
+   "optimizer": "adam",
+   "weight_decay": 0.0,
+   "batch_size": 64,
+   "max_epochs": 300,
+   "patience": 40,
+   "scheduler": "none",
+   "grad_clip": null,
+   "label_smoothing": 0.0,
+   "periodic_every_epochs": 25,
+   "model": {
+    "F1": 8,
+    "D": 2,
+    "F2": 16,
+    "kern_length": 128,
+    "sep_kern_length": 16,
+    "pool1": 4,
+    "pool2": 8,
+    "norm_rate": 0.25
+   },
+   "input_view": "eeg256",
+   "scaling": {
+    "kind": "train_global_std"
+   },
+   "initialization": "seeded_random"
+  },
+  "recipe_id": "eeg-lr1e-3-do0.5-b1_20-wce-ad833d47",
+  "score": 0.6117677354035893,
+  "tied_within_tolerance": [
+   "eeg_lr0.001_do0.5"
+  ]
+ }
+}

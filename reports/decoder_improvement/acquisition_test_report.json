@@ -1,0 +1,19 @@
+{
+ "spec_sha256": "24be39d72ef4fe5839a6ac63162413477709965279ddc625e2cd334e344e75cf",
+ "items": {
+  "dataset": {
+   "url": "https://codeload.github.com/stefan-ehrlich/dataset-ErrP-HRI/tar.gz/4bc3e52469934aa0551a2261a6e4e899d156c28f",
+   "revision": "4bc3e52469934aa0551a2261a6e4e899d156c28f",
+   "n_files_checked": 49,
+   "mismatched": []
+  },
+  "weights": {
+   "url": "https://huggingface.co/weighting666/CBraMod/resolve/500543c7e30bda1b22bfd51a49301b238dee21fd/pretrained_weights.pth",
+   "revision": "500543c7e30bda1b22bfd51a49301b238dee21fd",
+   "bytes": 19775842,
+   "sha256": "0792cb808c14e6b7a2bb2ce1dff379bc47bc54c49a779825bdfeb33bf8157178",
+   "ok": true
+  }
+ },
+ "status": "verified"
+}

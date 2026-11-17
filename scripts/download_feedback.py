@@ -50,7 +50,8 @@ def main():
     out=Path(a.out_dir);out.mkdir(parents=True,exist_ok=True)
     base=profile['release_url'].replace('/tag/','/download/')+'/'
     assets={v['asset']:v for v in profile['tables'].values()}
-    assets['manifest.json']=profile['manifest']
+    # the manifest asset name defaults to the historical 'manifest.json'; a profile may name another asset
+    assets[profile['manifest'].get('asset','manifest.json')]=profile['manifest']
     report={'release_url':profile['release_url'],'scope':'feedback CSV and manifest checks; no checkpoint inference',
             'assets':{},'tables':{},'ok':False}
     try:

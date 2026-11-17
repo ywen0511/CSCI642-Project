@@ -1,0 +1,96 @@
+{
+  "schema": "csci642-rl-feedback/v1",
+  "profile_version": "vnext-decoder-improvement-v1",
+  "status": "experimental follow-up; NOT the historical feedback (configs/rl_feedback.json is unchanged); no RL experiment has used these probabilities",
+  "release_url": "https://github.com/ywen0511/CSCI642-Project/releases/tag/decoder-v1-final-20261111-f8031ec",
+  "release_tag": "decoder-v1-final-20261111-f8031ec",
+  "decoder_seed": 42,
+  "decoder_seed_rule": "seed 42 designated in advance for each selected candidate",
+  "label_mapping": {
+    "0": "non-error",
+    "1": "machine error"
+  },
+  "probability_column": "p_error",
+  "splits": {
+    "train": [
+      "s03",
+      "s04",
+      "s05",
+      "s06",
+      "s07",
+      "s10",
+      "s12"
+    ],
+    "validation": [
+      "s11",
+      "s13"
+    ],
+    "test": [
+      "s02",
+      "s08",
+      "s09"
+    ]
+  },
+  "tables": {
+    "validation": {
+      "asset": "vnext_validation_predictions.csv",
+      "sha256": "9daca82e4264e491ee7b8e7575d310dcc36cc76e9fd9dcf147524c2b50821eab",
+      "bytes": 598480,
+      "trials_per_model": 959
+    },
+    "test": {
+      "asset": "vnext_test_predictions.csv",
+      "sha256": "32e9da11c6e3064c0840cd56b66130e2e6f2f579ea9dfff8237d671ef1d87003",
+      "bytes": 874442,
+      "trials_per_model": 1429
+    }
+  },
+  "models": {
+    "cbramod": {
+      "checkpoint_id": "cb-flat-frozen-bbnone-hl5e-4-b1_20-ce-3aba4899__outer__s42__e5:final",
+      "preprocessing_id": "dimp_band_1_20-9bb0159f0ffd",
+      "calibration_id": "cb-flat-frozen-bbnone-hl5e-4-b1_20-ce-3aba4899__outer__s42__e5:deploy_affine",
+      "recipe_id": "cb-flat-frozen-bbnone-hl5e-4-b1_20-ce-3aba4899",
+      "calibration": {
+        "method": "affine",
+        "params": {
+          "a": 0.33223131817414486,
+          "b": -0.5547680828274986
+        },
+        "success": true,
+        "objective": 0.6416587738444847,
+        "at_bound": false,
+        "fitted": true,
+        "optimizer": "scipy L-BFGS-B on (log a, b)",
+        "calibration_id": "cb-flat-frozen-bbnone-hl5e-4-b1_20-ce-3aba4899__outer__s42__e5:deploy_affine"
+      }
+    },
+    "eegnet": {
+      "checkpoint_id": "eeg-lr1e-3-do0.5-b1_20-wce-ad833d47__outer__s42__e47:final",
+      "preprocessing_id": "dimp_band_1_20-9bb0159f0ffd",
+      "calibration_id": "eeg-lr1e-3-do0.5-b1_20-wce-ad833d47__outer__s42__e47:deploy_affine",
+      "recipe_id": "eeg-lr1e-3-do0.5-b1_20-wce-ad833d47",
+      "calibration": {
+        "method": "affine",
+        "params": {
+          "a": 0.5529806768194776,
+          "b": -0.5534696491547175
+        },
+        "success": true,
+        "objective": 0.6407541003939601,
+        "at_bound": false,
+        "fitted": true,
+        "optimizer": "scipy L-BFGS-B on (log a, b)",
+        "calibration_id": "eeg-lr1e-3-do0.5-b1_20-wce-ad833d47__outer__s42__e47:deploy_affine"
+      }
+    }
+  },
+  "calibration_reuse": "validation (s11, s13) probabilities come from calibrators fitted on those same participants: calibration-development outputs, not unbiased held-out feedback quality; a future RL tuning study on validation feedback must account for this reuse",
+  "freeze_sha256": "15eb0fd50e1b159ac3d13f8889faa39f3b5852f3f84c3ffaf89a3da9e6949b89",
+  "calibration_sha256": "e4ccce2fde4c8626d0e437bd1d7af37b93241e5651023856e09aed00444b49f3",
+  "manifest": {
+    "asset": "predictions_manifest.json",
+    "sha256": "b60a18be02628c67c67c07ef506215ca52d6d8368a68c03d559d44c79cf8528e",
+    "bytes": 997
+  }
+}

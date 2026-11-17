@@ -1,31 +1,31 @@
-# EEG-Assisted Robot Learning: proposal-aligned RL follow-up
+# CSCI642: EEG error-potential feedback for robot reinforcement learning
 
-> **Next round (branch `final-v3`, planning only; nothing below has been executed by this commit).**
-> The assignment for the executing agent is [**FINAL_V3_HANDOFF.md**](FINAL_V3_HANDOFF.md): merge the
-> decoder-improvement study, run the w = 0.1 / 0.5 weight-sensitivity final suites, a centered-reward (v3)
-> follow-up, and the route-preference extension promised in the milestone report, then publish verified Releases.
-> Execution branch: `final-v3-experiments`.
+Repository: **ywen0511/CSCI642-Project**. This is branch **final-v3-experiments**, the execution of
+[FINAL_V3_HANDOFF.md](FINAL_V3_HANDOFF.md) (planning branch `final-v3`). It merges the RL v2 execution branch
+(`rl-v2-experiments`) and the decoder-improvement execution branch (`decoder-improvement-v1-experiments`).
 
-Repository: **ywen0511/CSCI642-Project**. This is branch **rl-v2-experiments**, the executed version of the
-`rl-proposal-v2` handoff.
+## Status
 
-## Status on this branch (executed 2026-11-09/10)
+| study | branch | status | main result | reports |
+|---|---|---|---|---|
+| EEG stage 1 (EEGNet / CBraMod decoders, calibration, frozen feedback probabilities) | `eeg-stage1` | done (2026-11-01) | test AUROC EEGNet 0.637, CBraMod 0.573 (decoder seed 42) | [eeg_results.md](reports/eeg_results.md) |
+| RL protocol v2 (FetchReach, SAC, replayed EEG feedback, w = 1.0) | `rl-v2-experiments` | done (2026-11-10), declared primary result | normalized success AUC: dense 0.915 > ideal 0.764 > sparse 0.659 ≈ EEGNet 0.641 > CBraMod 0.571 | [rl_v2_results.md](reports/rl_v2_results.md), [final_project_report.md](reports/final_project_report.md) |
+| Decoder improvement (CBraMod freezing / last-layer fine-tuning, bands, loss) | `decoder-improvement-v1-experiments` | done (2026-11-11), negative | no change improved held-out decoding: CBraMod ~0.564, EEGNet 0.599 test AUROC (five controlled refits) | [decoder_improvement/final_report.md](reports/decoder_improvement/final_report.md), [artifact index](reports/decoder_improvement/artifact_index.md) |
+| Final round v3: weight sensitivity, centered reward, route preference | `final-v3-experiments` (this branch) | **in progress** | see [reports/final_v3/status.json](reports/final_v3/status.json) | [reports/final_v3/](reports/final_v3/) |
 
-The handoff in [GPU_AGENT_HANDOFF.md](GPU_AGENT_HANDOFF.md) was carried out end to end: v2 smoke, pilots, three
-complete validation candidates, a validation-only freeze, the 75-run final comparison, analysis, trajectories,
-reports and Release delivery with fresh-download verification.
+The historical feedback profile [`configs/rl_feedback.json`](configs/rl_feedback.json) is unchanged and is the only
+profile used for RL. `configs/decoder_improvement/rl_feedback_vnext.json` (from the decoder study) is a separate,
+explicitly unused experimental profile.
 
-- **Result:** on FetchReach with SAC (150k steps), every condition reaches high final success (0.94-1.00).
-  Learning speed (normalized AUC): dense 0.915 > ideal 0.764 > sparse 0.659 ≈ EEGNet 0.641 > CBraMod 0.571.
-  Replayed EEG error probabilities did not speed up learning over sparse reward; EEGNet feedback was slightly
-  better than CBraMod and than its label-independent control. See [reports/rl_v2_results.md](reports/rl_v2_results.md).
-- **Reports:** [final project report](reports/final_project_report.md), [results](reports/rl_v2_results.md),
-  [experiment plan (declared before validation)](reports/rl_v2_experiment_plan.md),
-  [execution record](reports/rl_v2_execution.md), [generated tables](reports/rl_v2_final/results_tables.md).
-- **Frozen protocol and evidence:** [configs/rl_v2/frozen/](configs/rl_v2/frozen/).
-- **Releases:** final comparison [rl-v2-final-20261110-25bb0f4](https://github.com/ywen0511/CSCI642-Project/releases/tag/rl-v2-final-20261110-25bb0f4); validation, pilot and smoke Releases and their fresh-download verification are listed in the [final project report, Section 8](reports/final_project_report.md#8-artifacts).
+Decoder-improvement study (merged): executed from [`DECODER_IMPROVEMENT_HANDOFF.md`](DECODER_IMPROVEMENT_HANDOFF.md);
+status [`reports/decoder_improvement/status.json`](reports/decoder_improvement/status.json), results
+[`results.md`](reports/decoder_improvement/results.md). Its Releases are listed in its artifact index.
 
-The sections below are the original handoff text from `rl-proposal-v2`, kept for reference.
+RL v2 (merged): frozen protocol and evidence [configs/rl_v2/frozen/](configs/rl_v2/frozen/), execution record
+[rl_v2_execution.md](reports/rl_v2_execution.md); Releases in the [final project report, Section 8](reports/final_project_report.md#8-artifacts).
+
+The sections below are the historical README text of `rl-v2-experiments` (original `rl-proposal-v2` handoff text),
+kept for reference; they are not instructions for this round.
 
 ## Start here
 

@@ -1,0 +1,46 @@
+# Decoder-improvement band preprocessing (copy of prep_v1 except the band; see study.json Stage D).
+# Frozen preprocessing configuration (see reports/protocol_decisions.md for the source of each setting).
+version: dimp_band_0p3_75
+dataset:
+  source: https://github.com/stefan-ehrlich/dataset-ErrP-HRI
+  commit: 4bc3e52469934aa0551a2261a6e4e899d156c28f
+  condition: robot
+  # Condition is verified from the EEGLAB 'comments' field (original BrainVision file name):
+  # '*_robot.vhdr' = robot scenario, '*_shooter.vhdr' = cursor scenario.
+  condition_evidence_pattern: {robot: "_robot.vhdr", cursor: "_shooter.vhdr"}
+events:
+  # Marker semantics from documentation_dataset-ErrP-HRI.pdf (p. 3); consistency is re-checked per trial.
+  stimulus: {"S  1": left, "S  2": up, "S  3": right}
+  response: {"R  1": left, "R  2": up, "R  3": right}
+  feedback_direction: {FB1: left, FB2: up, FB3: right}
+  outcome: {"S  4": no_error, "S  5": human_error, "S  6": machine_error}
+  label_map: {no_error: 0, machine_error: 1}   # human_error (S5) trials are excluded, see protocol
+  epoch_origin: feedback_direction             # FB1/FB2/FB3 marker = onset of robot feedback movement
+epoch:
+  tmin_s: 0.0
+  tmax_s: 2.0          # window [0, 2) s after the FB marker; 512 samples at 256 Hz
+channels:
+  drop: [EOG1, EOG2, EOG3]
+  # 27 scalp EEG channels kept in this fixed order:
+  order: [Fp1, Fp2, F7, F3, Fz, F4, F8, FC5, FC1, FC2, FC6, T7, C3, Cz, C4, T8, CP5, CP1, CP2, CP6, P7, P3, Pz, P4, P8, O1, O2]
+reference:
+  action: none   # files are already referenced to averaged mastoids (TP9/TP10) by the dataset authors
+filter:
+  l_freq: 0.3
+  h_freq: 75.0
+  method: fir          # MNE zero-phase FIR (firwin, hamming), as historical prep_v1
+  l_trans_bandwidth: 0.3   # = MNE 'auto' value, written explicitly
+  h_trans_bandwidth: 18.75   # = MNE 'auto' value, written explicitly
+  filter_length: auto
+  pad: reflect_limited
+  notch: none   # no notch filter (band comparison only)
+  applied_to: continuous_recording_before_epoching
+resample:
+  eeg256: {sfreq: 256}                      # native sampling rate of the released files
+  patch200: {sfreq: 200, method: "scipy.signal.resample_poly(up=25, down=32)", patch_len: 200}
+units: microvolt
+quality:
+  exclude_incomplete_window: true
+  exclude_nonfinite: true
+  amplitude_rejection: none   # no amplitude-based rejection (kept realistic for the RL feedback library)
+trial_id_format: "{subject_id}_{condition}_{source_file}_ev{fb_event_index:04d}"

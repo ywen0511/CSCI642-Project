@@ -10,8 +10,10 @@ inference probes). Not part of any performance summary.
 Usage: python scripts/rl_continuation_check.py --snapshot DIR --feedback-dir DIR --steps 2000 --work NEW --out report.json
 """
 import argparse
+import hashlib
 import json
 import pickle
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -28,7 +30,8 @@ def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("--snapshot", required=True)
     p.add_argument("--feedback-dir", required=True)
-    p.add_argument("--steps", type=int, default=2000)
+    p.add_argument("--steps", type=int, default=2000,
+                   help="additional steps; 0 = the frozen protocol budget (required for final-phase snapshots)")
     p.add_argument("--work", required=True)
     p.add_argument("--out", required=True)
     p.add_argument("--checkout", default=str(Path(__file__).resolve().parents[1]),
@@ -41,13 +44,26 @@ def main():
     spec = meta["run_spec"]
     config = work / "snapshot_config.json"
     config.write_text(json.dumps(spec["config"], indent=2) + "\n")
+    ev_name = spec["config"].get("validation_evidence_file")
+    if spec["phase"] == "final" and ev_name:
+        # a final-phase config is only accepted next to its validation evidence: copy the committed file whose
+        # SHA-256 equals the one recorded in the snapshot's config (rl.train re-checks it)
+        want = spec["config"]["validation_evidence_sha256"]
+        hits = [p for p in sorted(checkout.glob(f"configs/**/{ev_name}"))
+                if hashlib.sha256(p.read_bytes()).hexdigest() == want]
+        if not hits:
+            raise ValueError(f"no committed {ev_name} with sha256 {want} in {checkout}")
+        shutil.copyfile(hits[0], work / ev_name)
     git = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=checkout, text=True).strip()
     dirty = subprocess.check_output(["git", "status", "--porcelain", "--untracked-files=no"], cwd=checkout, text=True).strip()
     if dirty:
         raise ValueError("Checkout is not clean")
     cmd = [sys.executable, "-m", "rl.train", "--config", str(config), "--phase", spec["phase"],
            "--condition", spec["condition"], "--seed", str(spec["seed"]), "--feedback-dir", a.feedback_dir,
-           "--resume", str(snap), "--steps", str(a.steps), "--out", str(work / "continued")]
+           "--resume", str(snap), "--out", str(work / "continued")]
+    if a.steps:
+        cmd += ["--steps", str(a.steps)]
+    added = a.steps or spec["config"]["total_timesteps"]
     if spec["subject"]:
         cmd += ["--subject", spec["subject"]]
     with (work / "continue.log").open("w") as log:
@@ -67,7 +83,7 @@ def main():
         kept = all(np.array_equal(old_buf.observations[k][:n_old], new_buf.observations[k][:n_old])
                    for k in old_buf.observations) and np.array_equal(old_buf.actions[:n_old], new_buf.actions[:n_old])
         report.update(status=status, verification=v, restored_transitions_unchanged=bool(kept),
-                      steps_increased=status["final_steps"] == meta["num_timesteps"] + a.steps,
+                      steps_increased=status["final_steps"] == meta["num_timesteps"] + added,
                       updates_increased=status["updates"] > meta["n_updates"],
                       replay_grew=status["replay_size"] > meta["replay_size"])
         report["ok"] = bool(v["ok"] and kept and report["steps_increased"] and report["updates_increased"]

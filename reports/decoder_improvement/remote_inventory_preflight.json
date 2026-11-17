@@ -1,0 +1,3686 @@
+{
+ "repository": "ywen0511/CSCI642-Project",
+ "generated_utc": "2026-11-11T04:33:31.445580+00:00",
+ "releases": [
+  {
+   "tag": "rl-v2-validation-w100-20261110-cfe0305",
+   "id": 440043034,
+   "name": "RL protocol v2: validation candidate w100 (complete 33-run suite)",
+   "draft": false,
+   "prerelease": false,
+   "target_commitish": "cfe03056a3fc847e749e72edbb0f839c0244f3cb",
+   "created_at": "2026-11-10T02:52:41Z",
+   "published_at": "2026-11-10T07:08:09Z",
+   "html_url": "https://github.com/ywen0511/CSCI642-Project/releases/tag/rl-v2-validation-w100-20261110-cfe0305",
+   "n_assets": 103,
+   "n_uploaded": 103,
+   "assets": [
+    {
+     "name": "SHA256SUMS",
+     "state": "uploaded",
+     "size": 12114,
+     "digest": "sha256:c3436e962a46bbb9ff612dfcafac53bbe040a4d7db45e2c42975a6f3dd61da20",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/SHA256SUMS",
+     "id": 730470052
+    },
+    {
+     "name": "validation_w100__cbramod_s11_s100.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:f07951de3bbf699031ca5ab22404aa0581bd6fa7f6591f8b3b3bafea0daac78a",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__cbramod_s11_s100.tar.gz.part-00",
+     "id": 733233409
+    },
+    {
+     "name": "validation_w100__cbramod_s11_s100.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:891c4a631255c688b4b307abbc7b4cec8678198c53e5eaddb6ed5556fa8dde13",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__cbramod_s11_s100.tar.gz.part-01",
+     "id": 731491345
+    },
+    {
+     "name": "validation_w100__cbramod_s11_s100.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 49607115,
+     "digest": "sha256:3ba9af052b79ac5087b2239b9d8a1a199c3e7467ef0c6ef08be4dcb5c7b8ac5d",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__cbramod_s11_s100.tar.gz.part-02",
+     "id": 730680993
+    },
+    {
+     "name": "validation_w100__cbramod_s11_s101.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:47c7a8e753c67419d343bca8e5e19d78135fea3350a2eac4b81c07b9660db29c",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__cbramod_s11_s101.tar.gz.part-00",
+     "id": 731486396
+    },
+    {
+     "name": "validation_w100__cbramod_s11_s101.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:4bf876630bed8c8036105ae101c2052b7c11345137280ebaa0ac1bf0fc9c1cb3",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__cbramod_s11_s101.tar.gz.part-01",
+     "id": 731479991
+    },
+    {
+     "name": "validation_w100__cbramod_s11_s101.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 48275586,
+     "digest": "sha256:b3bbba5984d61f9e3fd67983886acad658c636ef2b85dca169f15dd387fe4ad2",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__cbramod_s11_s101.tar.gz.part-02",
+     "id": 730509350
+    },
+    {
+     "name": "validation_w100__cbramod_s11_s102.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:a309cee74b8d697ad65579a828275c74106a1368de9a1bf044181e21bd3512bb",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__cbramod_s11_s102.tar.gz.part-00",
+     "id": 731473405
+    },
+    {
+     "name": "validation_w100__cbramod_s11_s102.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:c13a9178f798ded30d0532b1f27b840267dd42dfd1494104a802c08fd93bc1d9",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__cbramod_s11_s102.tar.gz.part-01",
+     "id": 731469340
+    },
+    {
+     "name": "validation_w100__cbramod_s11_s102.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 49057190,
+     "digest": "sha256:06e2e22e1a1d616111c7527b37635aa5e11ec6a8ac8facd13238325ac98eabbb",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__cbramod_s11_s102.tar.gz.part-02",
+     "id": 730592875
+    },
+    {
+     "name": "validation_w100__cbramod_s13_s100.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:0e3f1e4dc01c75b5545d3f9a4f7fd4360efd41878fd6701d7dccad56c48b50ce",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__cbramod_s13_s100.tar.gz.part-00",
+     "id": 731463815
+    },
+    {
+     "name": "validation_w100__cbramod_s13_s100.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:d7be7c7d1ae916d8e159ed9dbf4ae40db78d116eb9cedf402f080d73043e6c3c",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__cbramod_s13_s100.tar.gz.part-01",
+     "id": 733233046
+    },
+    {
+     "name": "validation_w100__cbramod_s13_s100.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 49462018,
+     "digest": "sha256:4dd50aa94caa306715893898714f1796a9e1c60b13a3d5e3bb68234b816592aa",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__cbramod_s13_s100.tar.gz.part-02",
+     "id": 730641345
+    },
+    {
+     "name": "validation_w100__cbramod_s13_s101.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:671841a0152d7e87b81e4afed015d7a8a0971797b2aff0b4fee66e76a2fbf77a",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__cbramod_s13_s101.tar.gz.part-00",
+     "id": 731454719
+    },
+    {
+     "name": "validation_w100__cbramod_s13_s101.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:dad8712197116bdc28f23d90c33c4e1feadd7c417a6c9858fd90403dfca592b5",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__cbramod_s13_s101.tar.gz.part-01",
+     "id": 731445333
+    },
+    {
+     "name": "validation_w100__cbramod_s13_s101.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 48118302,
+     "digest": "sha256:d27a0f0b38c369c72820a0b4cb4965f3ac10e9b03cf05fca589fe2ce0da6e2a2",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__cbramod_s13_s101.tar.gz.part-02",
+     "id": 730499028
+    },
+    {
+     "name": "validation_w100__cbramod_s13_s102.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:4b8a1ecfc170ca98e50aec6d13fb6fae7dd15a1b0242750edec0af08ada5f453",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__cbramod_s13_s102.tar.gz.part-00",
+     "id": 731441204
+    },
+    {
+     "name": "validation_w100__cbramod_s13_s102.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:c1b40846a9af599ac3264545ea5c85699d589a86191f043fb111f33c63a796a2",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__cbramod_s13_s102.tar.gz.part-01",
+     "id": 731431360
+    },
+    {
+     "name": "validation_w100__cbramod_s13_s102.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 49312398,
+     "digest": "sha256:237c4cc097c359beaf4930eb1cf62ee38ed62f55e43997bf9835b463ea301d97",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__cbramod_s13_s102.tar.gz.part-02",
+     "id": 730622424
+    },
+    {
+     "name": "validation_w100__dense_shared_s100.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:dabdb4b2c010977e7f5544fc8d2f8f7f77a8b09d5d90ff665b1865c454772c4b",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__dense_shared_s100.tar.gz.part-00",
+     "id": 731426974
+    },
+    {
+     "name": "validation_w100__dense_shared_s100.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:f94625fa3ebe61d166704ae00db50cbf84e614019e37d2f88018168e97927358",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__dense_shared_s100.tar.gz.part-01",
+     "id": 733232665
+    },
+    {
+     "name": "validation_w100__dense_shared_s100.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 56128509,
+     "digest": "sha256:a0b3d4ea2274659a16da723351cfbc4af91027e36ca320afc65a4b38083ae2c0",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__dense_shared_s100.tar.gz.part-02",
+     "id": 730758799
+    },
+    {
+     "name": "validation_w100__dense_shared_s101.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:b96f45800a95453e808dc561aa225aa9a50d687f35de5f11b58642450102eb1b",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__dense_shared_s101.tar.gz.part-00",
+     "id": 731413572
+    },
+    {
+     "name": "validation_w100__dense_shared_s101.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:cadbfe544af79fc92d2aac9dab8a5604aa8a30424b2fa28586e1c71503995a2a",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__dense_shared_s101.tar.gz.part-01",
+     "id": 733232258
+    },
+    {
+     "name": "validation_w100__dense_shared_s101.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 56297505,
+     "digest": "sha256:30729562fc2b40afa30e9a3865caf1b8b7d730daf31d445eba06298afb0dccab",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__dense_shared_s101.tar.gz.part-02",
+     "id": 730769736
+    },
+    {
+     "name": "validation_w100__dense_shared_s102.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:06e3c5e776fde25c0358953cd78df509ec46e7dab2620f3615e4e0cf569149c4",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__dense_shared_s102.tar.gz.part-00",
+     "id": 731403269
+    },
+    {
+     "name": "validation_w100__dense_shared_s102.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:38a6aae8ab6761f0fbde4c39efca84bbe55d77242ea6e9e9582fbf54c707748b",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__dense_shared_s102.tar.gz.part-01",
+     "id": 731397750
+    },
+    {
+     "name": "validation_w100__dense_shared_s102.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 55613716,
+     "digest": "sha256:13428071ddd1d299571cf714db189b22fdd157f8ac36b0319beda1614ba38a14",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__dense_shared_s102.tar.gz.part-02",
+     "id": 730747196
+    },
+    {
+     "name": "validation_w100__eegnet_s11_s100.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:68980fac4ee3589777a227a496f17de5556d1ed547f12649ebe8e82c62dafecd",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__eegnet_s11_s100.tar.gz.part-00",
+     "id": 731393434
+    },
+    {
+     "name": "validation_w100__eegnet_s11_s100.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:9a861055987217ba9c4360723febc06372204dad856317ecd1d5567aec4054ea",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__eegnet_s11_s100.tar.gz.part-01",
+     "id": 731390018
+    },
+    {
+     "name": "validation_w100__eegnet_s11_s100.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 49643756,
+     "digest": "sha256:8420a1e7cd512ea364c0300a1b55eba37f3d1df3414342527e7fbc42a02f7e87",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__eegnet_s11_s100.tar.gz.part-02",
+     "id": 730702151
+    },
+    {
+     "name": "validation_w100__eegnet_s11_s101.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:e472b2ae3a16c01da70b2379c1a8b10bacbddd1803d7a0f86741a5d9a5597449",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__eegnet_s11_s101.tar.gz.part-00",
+     "id": 731387190
+    },
+    {
+     "name": "validation_w100__eegnet_s11_s101.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:5095dd22bc378381b7f1e2b0785a3b90d01ace708004636e7b86aee645178546",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__eegnet_s11_s101.tar.gz.part-01",
+     "id": 731383889
+    },
+    {
+     "name": "validation_w100__eegnet_s11_s101.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 48036198,
+     "digest": "sha256:59a269bfc87fef54535ff0b2d42c07d61dcdc935ad5ea912252005b59f4076f2",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__eegnet_s11_s101.tar.gz.part-02",
+     "id": 730486899
+    },
+    {
+     "name": "validation_w100__eegnet_s11_s102.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:e4ebf6c2b719844eb4959153c7eca2197e28826b917d809423a71f93f2ad296e",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__eegnet_s11_s102.tar.gz.part-00",
+     "id": 731377748
+    },
+    {
+     "name": "validation_w100__eegnet_s11_s102.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:70a151d40500376dc5e1850f6cc8a0b1456b5d4256099310a5331c0806bee8b8",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__eegnet_s11_s102.tar.gz.part-01",
+     "id": 731365572
+    },
+    {
+     "name": "validation_w100__eegnet_s11_s102.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 49033678,
+     "digest": "sha256:720bbb4238873ad45e2c9d8b7b77486c5816307a19461ddc49c7fed54047c593",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__eegnet_s11_s102.tar.gz.part-02",
+     "id": 730583556
+    },
+    {
+     "name": "validation_w100__eegnet_s13_s100.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:c84c24085f97674c841ae739288d5a9838ef9b4cabc8999efb3a247ae7eea701",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__eegnet_s13_s100.tar.gz.part-00",
+     "id": 733231768
+    },
+    {
+     "name": "validation_w100__eegnet_s13_s100.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:b4034bb0fbb32dfb7fac90afed407d5d997479c9cb152b09dcfd72c38ca357e8",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__eegnet_s13_s100.tar.gz.part-01",
+     "id": 733231549
+    },
+    {
+     "name": "validation_w100__eegnet_s13_s100.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 49588028,
+     "digest": "sha256:0a038ccd72a35ad5f9a5c7b3d467502ac40450fbc1a1345b54d1bcd85b7e6d0f",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__eegnet_s13_s100.tar.gz.part-02",
+     "id": 730668770
+    },
+    {
+     "name": "validation_w100__eegnet_s13_s101.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:325533e5124689ca4b264f003353304e21fe8e1fd29df635ec572a8cd21add2d",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__eegnet_s13_s101.tar.gz.part-00",
+     "id": 731684650
+    },
+    {
+     "name": "validation_w100__eegnet_s13_s101.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:a13846923646b38de3c98c19949b361dfb207ab6f1459071ffc1fc99a553bd0d",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__eegnet_s13_s101.tar.gz.part-01",
+     "id": 733236226
+    },
+    {
+     "name": "validation_w100__eegnet_s13_s101.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 48638034,
+     "digest": "sha256:12234c22bad17cfa0f8caf235c7fcdff45c58ffc1dc4007a1d9ce4ca70d37fdc",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__eegnet_s13_s101.tar.gz.part-02",
+     "id": 730538056
+    },
+    {
+     "name": "validation_w100__eegnet_s13_s102.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:9628711b7603b9df656eafb42c62d237b930faab31bc76f1eaf2d41ff0f6a46f",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__eegnet_s13_s102.tar.gz.part-00",
+     "id": 733235814
+    },
+    {
+     "name": "validation_w100__eegnet_s13_s102.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:07efa644fe95890cd460970256aa9f07464217f57134bfd01b7799e7d9a75938",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__eegnet_s13_s102.tar.gz.part-01",
+     "id": 733235301
+    },
+    {
+     "name": "validation_w100__eegnet_s13_s102.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 49619404,
+     "digest": "sha256:5a4b4cbaa4e005b352dc5969b441ac981e0d41e9200d0bb6f57e471a5fed4824",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__eegnet_s13_s102.tar.gz.part-02",
+     "id": 730690895
+    },
+    {
+     "name": "validation_w100__ideal_shared_s100.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:9a2ada82ed16b2b98f85e90ed0c980bf529e3895d386e67dda7ae0da4f0bb620",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__ideal_shared_s100.tar.gz.part-00",
+     "id": 731277655
+    },
+    {
+     "name": "validation_w100__ideal_shared_s100.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:b4d65effb032ed69733a1ce90adc1c8d2ec33a19361ec8bbee940bfb7c172b56",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__ideal_shared_s100.tar.gz.part-01",
+     "id": 733234889
+    },
+    {
+     "name": "validation_w100__ideal_shared_s100.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 48505610,
+     "digest": "sha256:a34e5c34cc1aa1b77b8553d21a9bb0c2bd9f7964be2ca3e362ee792186a10bc4",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__ideal_shared_s100.tar.gz.part-02",
+     "id": 730525845
+    },
+    {
+     "name": "validation_w100__ideal_shared_s101.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:a1605037c8f28980203e64bf69735b4c0d9291a22ef2d76cfc041b6028a79fe5",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__ideal_shared_s101.tar.gz.part-00",
+     "id": 731255728
+    },
+    {
+     "name": "validation_w100__ideal_shared_s101.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:2b3159cc59f0281d46d604f95d8dd1f0e1f9ef9d2bc6bb64a497a1265c49a7de",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__ideal_shared_s101.tar.gz.part-01",
+     "id": 731247140
+    },
+    {
+     "name": "validation_w100__ideal_shared_s101.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 48721141,
+     "digest": "sha256:b32d0ae50ebdd384bd126e7ff4b54ae461c1c7ce4973aecd7e9d4dc39cf76fc5",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__ideal_shared_s101.tar.gz.part-02",
+     "id": 730562205
+    },
+    {
+     "name": "validation_w100__ideal_shared_s102.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:ec6584501c58459479f6d001668cf223fc2648b3553dba831fc9eb5858747683",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__ideal_shared_s102.tar.gz.part-00",
+     "id": 731243615
+    },
+    {
+     "name": "validation_w100__ideal_shared_s102.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:8a0621d4e243559b0bdfa18a87123b18db93b67725433e313ccb160e7aa08aff",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__ideal_shared_s102.tar.gz.part-01",
+     "id": 731229796
+    },
+    {
+     "name": "validation_w100__ideal_shared_s102.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 48703315,
+     "digest": "sha256:3eeb05cd3f64f34c6cd5ad4e81881cb55f421e9d161ddc5bc8ef6a9fd42a55a1",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__ideal_shared_s102.tar.gz.part-02",
+     "id": 730553007
+    },
+    {
+     "name": "validation_w100__independent_cbramod_s11_s100.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:395455960bbbe3f72d752989cece13499a489605ba7d71200c8b9b2b848881eb",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__independent_cbramod_s11_s100.tar.gz.part-00",
+     "id": 731225438
+    },
+    {
+     "name": "validation_w100__independent_cbramod_s11_s100.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:af75b040e79833960cf847f0e16548aa06cad7f305122d9da6ad9df629bfa4ba",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__independent_cbramod_s11_s100.tar.gz.part-01",
+     "id": 731212992
+    },
+    {
+     "name": "validation_w100__independent_cbramod_s11_s100.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 49824095,
+     "digest": "sha256:10bfb8eb9a6c65c597d384731bef585800c97895550c20e531a1a8cbd6512527",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__independent_cbramod_s11_s100.tar.gz.part-02",
+     "id": 730726522
+    },
+    {
+     "name": "validation_w100__independent_cbramod_s11_s101.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:2d33bb4995aac9bc01e5fe291d6fa3c347c6eda77c1b1a365754e94de0bbcf21",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__independent_cbramod_s11_s101.tar.gz.part-00",
+     "id": 731207442
+    },
+    {
+     "name": "validation_w100__independent_cbramod_s11_s101.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:0ac07976b1763d0d96d7b29f101d2f678df15cdca64c7570628c84ce64a45b89",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__independent_cbramod_s11_s101.tar.gz.part-01",
+     "id": 733234484
+    },
+    {
+     "name": "validation_w100__independent_cbramod_s11_s101.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 48088334,
+     "digest": "sha256:3e5cceb875e0455115795904ba3181a310c024f995ad66ba171d47b85ec86a6a",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__independent_cbramod_s11_s101.tar.gz.part-02",
+     "id": 730489258
+    },
+    {
+     "name": "validation_w100__independent_cbramod_s11_s102.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:18f591346ca13cf1b9d9dc18f4067019c49733d31b38697add31950946159d2a",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__independent_cbramod_s11_s102.tar.gz.part-00",
+     "id": 731535386
+    },
+    {
+     "name": "validation_w100__independent_cbramod_s11_s102.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:12003064ca84f08552b695f2e0296bad1d1f53c79f8b62b65e9246757e220477",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__independent_cbramod_s11_s102.tar.gz.part-01",
+     "id": 731167103
+    },
+    {
+     "name": "validation_w100__independent_cbramod_s11_s102.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 49227242,
+     "digest": "sha256:c3d40808319efd2ac36f94fa8b3cf31a77f6b251e892c0b3973a25d09c30c1ff",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__independent_cbramod_s11_s102.tar.gz.part-02",
+     "id": 730611508
+    },
+    {
+     "name": "validation_w100__independent_cbramod_s13_s100.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:ac8aa948f500edb51768a8a72971569b282c74f3c4e79cc2b3d4b31249ec1238",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__independent_cbramod_s13_s100.tar.gz.part-00",
+     "id": 731161720
+    },
+    {
+     "name": "validation_w100__independent_cbramod_s13_s100.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:f328462f7be5ec9f87636ab35d00ebc451e21abf703b1d031ed0c95c8c0579ad",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__independent_cbramod_s13_s100.tar.gz.part-01",
+     "id": 731154456
+    },
+    {
+     "name": "validation_w100__independent_cbramod_s13_s100.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 49994705,
+     "digest": "sha256:c0f62080a522bcfe85a50317c035d45f37d1a69ece3b51946f306fdc62a8aadf",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__independent_cbramod_s13_s100.tar.gz.part-02",
+     "id": 730737084
+    },
+    {
+     "name": "validation_w100__independent_cbramod_s13_s101.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:32b8830711410cccdd72b2013ab67e7592f8940a86c82c812ba1bdaea4145bbd",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__independent_cbramod_s13_s101.tar.gz.part-00",
+     "id": 731150071
+    },
+    {
+     "name": "validation_w100__independent_cbramod_s13_s101.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:17ddc05ac7f1e68734db07d4ebfd84e3f4aa9b873ede893b48a546d1d33625f1",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__independent_cbramod_s13_s101.tar.gz.part-01",
+     "id": 731529619
+    },
+    {
+     "name": "validation_w100__independent_cbramod_s13_s101.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 48688550,
+     "digest": "sha256:90c1dc711b13cb030a806469c98d04404e94d7071323e47c4cd63ac4f8a35128",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__independent_cbramod_s13_s101.tar.gz.part-02",
+     "id": 730542442
+    },
+    {
+     "name": "validation_w100__independent_cbramod_s13_s102.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:55f8e963067fbedefa82e347ccd544b353e886190c3213b8abb9aec110928fa8",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__independent_cbramod_s13_s102.tar.gz.part-00",
+     "id": 731525162
+    },
+    {
+     "name": "validation_w100__independent_cbramod_s13_s102.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:e5fde0bed8aa123f88cc52d9bd87f85aed34db5bf6a3ed35c191983295f03369",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__independent_cbramod_s13_s102.tar.gz.part-01",
+     "id": 733234176
+    },
+    {
+     "name": "validation_w100__independent_cbramod_s13_s102.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 49494386,
+     "digest": "sha256:f6d86658838117a58edaec5d8da426d12cc9a2764082dbf3c0ef24a43a3e53bf",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__independent_cbramod_s13_s102.tar.gz.part-02",
+     "id": 730650899
+    },
+    {
+     "name": "validation_w100__independent_eegnet_s11_s100.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:13e025be6c6c046b6cdd8dfb1c957b1de9018a087f016da858b6caa3a8eeaeaa",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__independent_eegnet_s11_s100.tar.gz.part-00",
+     "id": 733233857
+    },
+    {
+     "name": "validation_w100__independent_eegnet_s11_s100.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:7f84e50a51309df42796fda9f6dbfaf609cb605d8d49a5eeca39015ef8090ace",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__independent_eegnet_s11_s100.tar.gz.part-01",
+     "id": 731501351
+    },
+    {
+     "name": "validation_w100__independent_eegnet_s11_s100.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 49093524,
+     "digest": "sha256:4cb04bfe0223e17c3d8038397316b881fdaa48189501cbce80a9529e4d8f65de",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__independent_eegnet_s11_s100.tar.gz.part-02",
+     "id": 730601638
+    },
+    {
+     "name": "validation_w100__independent_eegnet_s11_s101.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:ce36a194f3c5608fca484993745ea631c039d935f55be37399a4de1530aab531",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__independent_eegnet_s11_s101.tar.gz.part-00",
+     "id": 731071369
+    },
+    {
+     "name": "validation_w100__independent_eegnet_s11_s101.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:a6746208aa42834740b1d80be308be2cd3971c0729916ffa1038b4904c253038",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__independent_eegnet_s11_s101.tar.gz.part-01",
+     "id": 731049519
+    },
+    {
+     "name": "validation_w100__independent_eegnet_s11_s101.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 47991670,
+     "digest": "sha256:81322e35a15474dfbfb5f3b70db2cab0ee626d480c625e964fbb9b41edd9d15e",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__independent_eegnet_s11_s101.tar.gz.part-02",
+     "id": 730477675
+    },
+    {
+     "name": "validation_w100__independent_eegnet_s11_s102.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:8409c9f2dfdde8819cdb461b4d98f40a830b03e2d0f01d121edf2276c402ce96",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__independent_eegnet_s11_s102.tar.gz.part-00",
+     "id": 731040561
+    },
+    {
+     "name": "validation_w100__independent_eegnet_s11_s102.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:987afdac86b7023c82b77c341fc4139ab201f2cadcb17b11f8b15c9a83101d26",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__independent_eegnet_s11_s102.tar.gz.part-01",
+     "id": 731019202
+    },
+    {
+     "name": "validation_w100__independent_eegnet_s11_s102.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 49410081,
+     "digest": "sha256:2e160c77d176a9f0e1309ca658354db02bdfe2c60eaf86391cf3f9c457e969f6",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__independent_eegnet_s11_s102.tar.gz.part-02",
+     "id": 730632459
+    },
+    {
+     "name": "validation_w100__independent_eegnet_s13_s100.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:f3f477c780142e283810c6b2d4f4b68cfb1f59f0492d560c2ef1b776db8a100a",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__independent_eegnet_s13_s100.tar.gz.part-00",
+     "id": 730995179
+    },
+    {
+     "name": "validation_w100__independent_eegnet_s13_s100.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:ccd1a56b393f66d6f85a90193bd0531222caa9198cde96c3ee9d13c1582bffa8",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__independent_eegnet_s13_s100.tar.gz.part-01",
+     "id": 730974870
+    },
+    {
+     "name": "validation_w100__independent_eegnet_s13_s100.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 49708853,
+     "digest": "sha256:1ad33dede52a061aca0bf01cf8acbf2cc86df2fd22543e9ce1a7e4801ad0b55a",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__independent_eegnet_s13_s100.tar.gz.part-02",
+     "id": 730716621
+    },
+    {
+     "name": "validation_w100__independent_eegnet_s13_s101.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:3cb85a564d6e1bf876e8a519ca774bfbed00416e4c1ef70d6f08b0a3b228283b",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__independent_eegnet_s13_s101.tar.gz.part-00",
+     "id": 730953820
+    },
+    {
+     "name": "validation_w100__independent_eegnet_s13_s101.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:2a7a173f2b5c3e7a460196047cb9f8d50c1ab3eabade6dfae51bd735ec84eb05",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__independent_eegnet_s13_s101.tar.gz.part-01",
+     "id": 730932649
+    },
+    {
+     "name": "validation_w100__independent_eegnet_s13_s101.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 49513433,
+     "digest": "sha256:abb32fb9a5ce8a56997b63463c8e1ccb0329968c7792bc422c00a0174dc3c270",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__independent_eegnet_s13_s101.tar.gz.part-02",
+     "id": 730659376
+    },
+    {
+     "name": "validation_w100__independent_eegnet_s13_s102.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:7884694db4e7d844b475ffb0745f52cc7855d06e34a9aedc90623f0425b69bf6",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__independent_eegnet_s13_s102.tar.gz.part-00",
+     "id": 730912200
+    },
+    {
+     "name": "validation_w100__independent_eegnet_s13_s102.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:214f666cc27f4ded1e7930877a206e935f9e925c4a3678b46a3b79816dc2ca8a",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__independent_eegnet_s13_s102.tar.gz.part-01",
+     "id": 730892322
+    },
+    {
+     "name": "validation_w100__independent_eegnet_s13_s102.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 49665760,
+     "digest": "sha256:a28821596aae983446a860d1155e9dc293b99620af95c11d7f435425c691ee4d",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__independent_eegnet_s13_s102.tar.gz.part-02",
+     "id": 730711301
+    },
+    {
+     "name": "validation_w100__manifest.json",
+     "state": "uploaded",
+     "size": 653432,
+     "digest": "sha256:86b392fdca0e49760925f6bda15a8c529a326627921304f7ee3f3397e8adaf2c",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__manifest.json",
+     "id": 730470874
+    },
+    {
+     "name": "validation_w100__SHA256SUMS",
+     "state": "uploaded",
+     "size": 10303,
+     "digest": "sha256:999547b3b33bf83f91b18b33a7da45bb0a87960ff2901c53927f52ad024d4086",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__SHA256SUMS",
+     "id": 730469661
+    },
+    {
+     "name": "validation_w100__shared_evidence.tar.gz",
+     "state": "uploaded",
+     "size": 14768,
+     "digest": "sha256:ab1c34c0a29840a1fced108326c4617855728ba52bbc9dc163c9b072f9286662",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__shared_evidence.tar.gz",
+     "id": 730470445
+    },
+    {
+     "name": "validation_w100__sparse_shared_s100.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:ed9be28a29fd3b11042ff7abc25016efaaf2728e0814d02e125d6064a00237e7",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__sparse_shared_s100.tar.gz.part-00",
+     "id": 730871361
+    },
+    {
+     "name": "validation_w100__sparse_shared_s100.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:cc4bc49cf982085ca24310f621dac86a2f0bf9a5a0adf5e0a69c53e68b9a1259",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__sparse_shared_s100.tar.gz.part-01",
+     "id": 730851362
+    },
+    {
+     "name": "validation_w100__sparse_shared_s100.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 49007654,
+     "digest": "sha256:fe6541dee0a47d07b2a5c97588fdb6f8543e9b9c78fbfe985fee26bf1d8dffe9",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__sparse_shared_s100.tar.gz.part-02",
+     "id": 730573147
+    },
+    {
+     "name": "validation_w100__sparse_shared_s101.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:d51781064d10acfa37cb2a0d221d3f5394408f4651e3b75ca5273acec93cf922",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__sparse_shared_s101.tar.gz.part-00",
+     "id": 730832443
+    },
+    {
+     "name": "validation_w100__sparse_shared_s101.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:619fae53f1e1702e3c4ffeb2826d8a5581d0e679c8663e20945f192a62a66252",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__sparse_shared_s101.tar.gz.part-01",
+     "id": 730810732
+    },
+    {
+     "name": "validation_w100__sparse_shared_s101.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 47304019,
+     "digest": "sha256:0ac51a260222a2b71f13b0ef6e06bee9b4951e25427a10f374cc9f9fc16cafbf",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__sparse_shared_s101.tar.gz.part-02",
+     "id": 730471760
+    },
+    {
+     "name": "validation_w100__sparse_shared_s102.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:497f3cd6c7fd41bff99466e501497160ebf9a38d4bc292f4c77c4bc948d8df6e",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__sparse_shared_s102.tar.gz.part-00",
+     "id": 730803028
+    },
+    {
+     "name": "validation_w100__sparse_shared_s102.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:ea9f88522afc90e2f0c566e1194b730da26e5943aa2df8226a4a7143f8034040",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__sparse_shared_s102.tar.gz.part-01",
+     "id": 730781812
+    },
+    {
+     "name": "validation_w100__sparse_shared_s102.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 48365044,
+     "digest": "sha256:a9dcfd9f9122039a8ce91722530603f355f2e04188961e2c4728314acb1826b3",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w100-20261110-cfe0305/validation_w100__sparse_shared_s102.tar.gz.part-02",
+     "id": 730517827
+    }
+   ]
+  },
+  {
+   "tag": "rl-v2-validation-w050-20261110-cfe0305",
+   "id": 440227159,
+   "name": "RL protocol v2: validation candidate w050 (complete 33-run suite)",
+   "draft": false,
+   "prerelease": false,
+   "target_commitish": "cfe03056a3fc847e749e72edbb0f839c0244f3cb",
+   "created_at": "2026-11-10T02:52:41Z",
+   "published_at": "2026-11-10T10:37:44Z",
+   "html_url": "https://github.com/ywen0511/CSCI642-Project/releases/tag/rl-v2-validation-w050-20261110-cfe0305",
+   "n_assets": 103,
+   "n_uploaded": 103,
+   "assets": [
+    {
+     "name": "SHA256SUMS",
+     "state": "uploaded",
+     "size": 12114,
+     "digest": "sha256:f3d064aa86be7b1f34e4e94083c6d90d289018825171ad61bbb2874e1d0db54d",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/SHA256SUMS",
+     "id": 731041585
+    },
+    {
+     "name": "validation_w050__cbramod_s11_s100.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:4b59ecde6d9598d87a9d664b0d8578525ee73d28509441f5ffbf3a5ff1861458",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__cbramod_s11_s100.tar.gz.part-00",
+     "id": 733230542
+    },
+    {
+     "name": "validation_w050__cbramod_s11_s100.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:451229f0dd9321008e58459d0d18df8b97565ca5ddf6bca5b2d5ca3c8caaafab",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__cbramod_s11_s100.tar.gz.part-01",
+     "id": 733230178
+    },
+    {
+     "name": "validation_w050__cbramod_s11_s100.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 49335832,
+     "digest": "sha256:08c59273e806aba0365dc556c65893f587f40b790b5f97c9e9b32d5f705eabbb",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__cbramod_s11_s100.tar.gz.part-02",
+     "id": 731182112
+    },
+    {
+     "name": "validation_w050__cbramod_s11_s101.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:ca1074806678df280b517fa2603769195cf17bcbfb812cbae5351f239533f5c5",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__cbramod_s11_s101.tar.gz.part-00",
+     "id": 733229764
+    },
+    {
+     "name": "validation_w050__cbramod_s11_s101.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:142f9c18f06c84e658ea0ad200386fb7c073ad3b107698d1f9730dc53b84ba10",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__cbramod_s11_s101.tar.gz.part-01",
+     "id": 733229283
+    },
+    {
+     "name": "validation_w050__cbramod_s11_s101.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 48136979,
+     "digest": "sha256:edf25b8e2c95c24c59250839937d04779d55534a7f17dcf0dadc8c3b53242d91",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__cbramod_s11_s101.tar.gz.part-02",
+     "id": 731058943
+    },
+    {
+     "name": "validation_w050__cbramod_s11_s102.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:0fb9b93b6fce8675dda0d85169621672e802ec895cac7efed1584adf6bf70d4e",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__cbramod_s11_s102.tar.gz.part-00",
+     "id": 733229010
+    },
+    {
+     "name": "validation_w050__cbramod_s11_s102.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:ff0879956315ea1aa723d1e8bf3f8aeb7a102ad7f1edd9f10906ae64636e79be",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__cbramod_s11_s102.tar.gz.part-01",
+     "id": 733228724
+    },
+    {
+     "name": "validation_w050__cbramod_s11_s102.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 49360064,
+     "digest": "sha256:d1b54976ca1768c18c7cacb2e4c5be61de53149a9f30c97d82c13a12ee66f95b",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__cbramod_s11_s102.tar.gz.part-02",
+     "id": 731185436
+    },
+    {
+     "name": "validation_w050__cbramod_s13_s100.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:48b64e73e27f861d3ada621aa1f5671fdb559b0a9ee8c3c0f64c54787889640c",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__cbramod_s13_s100.tar.gz.part-00",
+     "id": 733228381
+    },
+    {
+     "name": "validation_w050__cbramod_s13_s100.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:bdce9a0b79db62c24186fd510a3702870b188921fe5b8a59ea5f9e6025e2e579",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__cbramod_s13_s100.tar.gz.part-01",
+     "id": 733228086
+    },
+    {
+     "name": "validation_w050__cbramod_s13_s100.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 49831453,
+     "digest": "sha256:48f4d00760f27c1e8278f2e12f9cbcd2c13b78b371fb50770481cc65fe92a8d9",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__cbramod_s13_s100.tar.gz.part-02",
+     "id": 731231541
+    },
+    {
+     "name": "validation_w050__cbramod_s13_s101.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:c76218c883efe3607f9a8d059a2822df102905fc5b9d34b84d3a851da85fa211",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__cbramod_s13_s101.tar.gz.part-00",
+     "id": 733227764
+    },
+    {
+     "name": "validation_w050__cbramod_s13_s101.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:7ab6f555e5347e923e04df9791c888e1297e2eeabd6d5341d33b68337672d546",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__cbramod_s13_s101.tar.gz.part-01",
+     "id": 733227435
+    },
+    {
+     "name": "validation_w050__cbramod_s13_s101.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 48154992,
+     "digest": "sha256:02145506ed0b2fb0869d13bbf006b4964b8fda044afc8e95b0a4d512c8f2835b",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__cbramod_s13_s101.tar.gz.part-02",
+     "id": 731065979
+    },
+    {
+     "name": "validation_w050__cbramod_s13_s102.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:1c977caf007447fc1fda0f81d69c07abe5cae515442dfb18f00e181d3f196d21",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__cbramod_s13_s102.tar.gz.part-00",
+     "id": 733227133
+    },
+    {
+     "name": "validation_w050__cbramod_s13_s102.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:92b5929d6e897230f7460b06e72eb0be4c47904ddbc14e2a5f8af8384e096efd",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__cbramod_s13_s102.tar.gz.part-01",
+     "id": 733226850
+    },
+    {
+     "name": "validation_w050__cbramod_s13_s102.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 49560418,
+     "digest": "sha256:97f849896be16e3f737a245b190a54cb34bd0ecc55ddb8bd7326617d6482fe2e",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__cbramod_s13_s102.tar.gz.part-02",
+     "id": 731190600
+    },
+    {
+     "name": "validation_w050__dense_shared_s100.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:ae54388fc706ef2c9d122c0320ea3798abbac50c874980b57dc3a18376c551bf",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__dense_shared_s100.tar.gz.part-00",
+     "id": 733226435
+    },
+    {
+     "name": "validation_w050__dense_shared_s100.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:186e5a69069dc7713a33b8ac7dc4c05f5e4e5e5d5786b5648e9b158598639503",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__dense_shared_s100.tar.gz.part-01",
+     "id": 733225942
+    },
+    {
+     "name": "validation_w050__dense_shared_s100.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 56128285,
+     "digest": "sha256:338c1289a54fd6244762c41158f18e92d43a8a38906cfe26cb6116fe09e8d511",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__dense_shared_s100.tar.gz.part-02",
+     "id": 733231192
+    },
+    {
+     "name": "validation_w050__dense_shared_s101.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:8e25d1b280b0c2da2cdfecfb82a70c84c6316972163dd6ba807d67d7cc548fac",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__dense_shared_s101.tar.gz.part-00",
+     "id": 733225369
+    },
+    {
+     "name": "validation_w050__dense_shared_s101.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:5f984c9c8aa854b595e1738eaadc99a8ba06c299e9311d5231540171632c3941",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__dense_shared_s101.tar.gz.part-01",
+     "id": 733224860
+    },
+    {
+     "name": "validation_w050__dense_shared_s101.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 56297010,
+     "digest": "sha256:a717228648b1be538e63c2fa450746e41655c4d8c50ce11b645c7b1fefe17b82",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__dense_shared_s101.tar.gz.part-02",
+     "id": 731253927
+    },
+    {
+     "name": "validation_w050__dense_shared_s102.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:0e7a97b1146f2fd0f0d672a18ffd255f2fa0d0a8d38dd24c84aec746033d3efc",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__dense_shared_s102.tar.gz.part-00",
+     "id": 733224515
+    },
+    {
+     "name": "validation_w050__dense_shared_s102.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:4da5c1d04ec498818087b4c7b6638f2eb6e6d3bc8eb4f68d6f2563648b6b35a4",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__dense_shared_s102.tar.gz.part-01",
+     "id": 733223949
+    },
+    {
+     "name": "validation_w050__dense_shared_s102.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 55613450,
+     "digest": "sha256:eb549c0c41509dd68789c6918fd4380826c63aa9d2b7b40c5c935b6471a4553a",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__dense_shared_s102.tar.gz.part-02",
+     "id": 731237389
+    },
+    {
+     "name": "validation_w050__eegnet_s11_s100.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:b609ad3e1ba0e70f0905d5a1d7f404d93e6ff53174a645ae0a928b8c43647eaf",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__eegnet_s11_s100.tar.gz.part-00",
+     "id": 733223264
+    },
+    {
+     "name": "validation_w050__eegnet_s11_s100.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:05f2b68d6060a53920750a0d58aded3c0ed9cb27b7e659423a993ebe3cf1aa08",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__eegnet_s11_s100.tar.gz.part-01",
+     "id": 733222855
+    },
+    {
+     "name": "validation_w050__eegnet_s11_s100.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 49825092,
+     "digest": "sha256:442cf5710d508eb547ffd6aa265a04b3ed10f53392b8ae5767221557d536f9de",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__eegnet_s11_s100.tar.gz.part-02",
+     "id": 731228310
+    },
+    {
+     "name": "validation_w050__eegnet_s11_s101.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:f067825a9736d7fbddc06ed258ec8ec3275f48956a4b59e49f2294f43983372a",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__eegnet_s11_s101.tar.gz.part-00",
+     "id": 733237254
+    },
+    {
+     "name": "validation_w050__eegnet_s11_s101.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:f15330ecb0975ff189b210cf9c3e6d4b721b90c24296975a18406b5532e0c65b",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__eegnet_s11_s101.tar.gz.part-01",
+     "id": 733237001
+    },
+    {
+     "name": "validation_w050__eegnet_s11_s101.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 48780535,
+     "digest": "sha256:c41ab91f840eeaa7be5937d51af7316bd024fe9d75a3c84032b5a14e5234e2d4",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__eegnet_s11_s101.tar.gz.part-02",
+     "id": 731146598
+    },
+    {
+     "name": "validation_w050__eegnet_s11_s102.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:3862bc130fc81aa85bc4841ace938489eecfab56657021ec177ac107b58228e0",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__eegnet_s11_s102.tar.gz.part-00",
+     "id": 733236732
+    },
+    {
+     "name": "validation_w050__eegnet_s11_s102.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:d71591028cf4a66d999939691491a4867f76e47b60bbc02ff1606045771a5bfb",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__eegnet_s11_s102.tar.gz.part-01",
+     "id": 733236374
+    },
+    {
+     "name": "validation_w050__eegnet_s11_s102.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 48847639,
+     "digest": "sha256:6084fcf0a15317867b5f931e93aff2df339cbf183fcbe18a5a615b0e0ec092c2",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__eegnet_s11_s102.tar.gz.part-02",
+     "id": 731150021
+    },
+    {
+     "name": "validation_w050__eegnet_s13_s100.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:4f6b275c1b7e8d81e845fb996578055913a712e471250f64cf7bdd09f2c98d8a",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__eegnet_s13_s100.tar.gz.part-00",
+     "id": 733235941
+    },
+    {
+     "name": "validation_w050__eegnet_s13_s100.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:b1435df74523b983aa48d9177cfd8e1f7b5d7c39b5ea3c66367de0b873600d58",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__eegnet_s13_s100.tar.gz.part-01",
+     "id": 733235608
+    },
+    {
+     "name": "validation_w050__eegnet_s13_s100.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 49700472,
+     "digest": "sha256:2f505d5208ba35a2dff08a2257d09a7f0687c4a86f8306b8620b68ef399c3d93",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__eegnet_s13_s100.tar.gz.part-02",
+     "id": 731212120
+    },
+    {
+     "name": "validation_w050__eegnet_s13_s101.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:db1e1e2ebda53a30cc26a12fdd722ab2c87a013e825882b92993497cba6a0e88",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__eegnet_s13_s101.tar.gz.part-00",
+     "id": 733235180
+    },
+    {
+     "name": "validation_w050__eegnet_s13_s101.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:5dc7a42d4d6212b5e8b922753dde3f9d351c231525909ac4f997c98193d07b6a",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__eegnet_s13_s101.tar.gz.part-01",
+     "id": 731535021
+    },
+    {
+     "name": "validation_w050__eegnet_s13_s101.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 48173653,
+     "digest": "sha256:b0cab96d732fc10cee7865427b7f4be09b5971d2a568c9ec3c19b8d290930c78",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__eegnet_s13_s101.tar.gz.part-02",
+     "id": 733230801
+    },
+    {
+     "name": "validation_w050__eegnet_s13_s102.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:96bc8cd1bd114f97906d7d3b31da89610d4156e40dc927e4216a42f07bec7ba2",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__eegnet_s13_s102.tar.gz.part-00",
+     "id": 731525165
+    },
+    {
+     "name": "validation_w050__eegnet_s13_s102.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:87ea243294c3fe441966692bb701cc7ae76545cc356d320f4fb6e06ced4fc32d",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__eegnet_s13_s102.tar.gz.part-01",
+     "id": 731520365
+    },
+    {
+     "name": "validation_w050__eegnet_s13_s102.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 49116778,
+     "digest": "sha256:dda95a915766a13095b0a8aedbf95a4e476a49cb510c04447d91a54c6bc5729e",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__eegnet_s13_s102.tar.gz.part-02",
+     "id": 731167961
+    },
+    {
+     "name": "validation_w050__ideal_shared_s100.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:85807c3c84a33e85742e970d267c2db8c44946e52e092c058dcef17d98cec6d6",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__ideal_shared_s100.tar.gz.part-00",
+     "id": 731514272
+    },
+    {
+     "name": "validation_w050__ideal_shared_s100.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:e399c467eb16075ab46bacd1938a12101e42a3f47f63c11ce92040ca410f7b13",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__ideal_shared_s100.tar.gz.part-01",
+     "id": 731506245
+    },
+    {
+     "name": "validation_w050__ideal_shared_s100.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 48619824,
+     "digest": "sha256:03e5a538c44b8b354e883499b8e3e7b9385882feb8beea2a2e7e6944961624d9",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__ideal_shared_s100.tar.gz.part-02",
+     "id": 731110504
+    },
+    {
+     "name": "validation_w050__ideal_shared_s101.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:c1f63720338221f152da981991e3165ff8e7fc67fa4a5bd5ae7634e982a70e96",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__ideal_shared_s101.tar.gz.part-00",
+     "id": 733234672
+    },
+    {
+     "name": "validation_w050__ideal_shared_s101.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:0a0cadbd7224738054f7ab9e02581a3b0656557ae10b7e67d986ba1fe3c739da",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__ideal_shared_s101.tar.gz.part-01",
+     "id": 731494638
+    },
+    {
+     "name": "validation_w050__ideal_shared_s101.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 48206388,
+     "digest": "sha256:0526af08319788bd062fc399badb778231f1b949fea68b8e8fa2b4f78512ed8f",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__ideal_shared_s101.tar.gz.part-02",
+     "id": 731085558
+    },
+    {
+     "name": "validation_w050__ideal_shared_s102.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:5d6cf72934fd221c561c51d72d5a79fd9cc85e9e210ef0678422c9487f6dab66",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__ideal_shared_s102.tar.gz.part-00",
+     "id": 731490166
+    },
+    {
+     "name": "validation_w050__ideal_shared_s102.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:7f5e3ebc0aee74f0cc327aad1d1f87e564de977364f4b6287a5c3b5202b8534e",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__ideal_shared_s102.tar.gz.part-01",
+     "id": 731482698
+    },
+    {
+     "name": "validation_w050__ideal_shared_s102.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 48901988,
+     "digest": "sha256:8152681101f22599ebeffca91dca00fa5e5e36588d734cf3126cf6e5488d375b",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__ideal_shared_s102.tar.gz.part-02",
+     "id": 731157476
+    },
+    {
+     "name": "validation_w050__independent_cbramod_s11_s100.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:7a303b1168cb3f35c82d5b7626c8310f7881a0e406b77fc4fd22dac0ba3d1e0b",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__independent_cbramod_s11_s100.tar.gz.part-00",
+     "id": 731478935
+    },
+    {
+     "name": "validation_w050__independent_cbramod_s11_s100.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:5c5b706411b368b6f6dccbb0d4d605dede7655a0db28d3b3e57b2963a174b759",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__independent_cbramod_s11_s100.tar.gz.part-01",
+     "id": 731473021
+    },
+    {
+     "name": "validation_w050__independent_cbramod_s11_s100.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 49244700,
+     "digest": "sha256:6a92fe7ff7834e0e03ba8a9f88559bc2477c829d50091d3d0d4f6bf6b4ae92ac",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__independent_cbramod_s11_s100.tar.gz.part-02",
+     "id": 731170971
+    },
+    {
+     "name": "validation_w050__independent_cbramod_s11_s101.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:a6bf1e354a1735ede3aab404546f6120ea32bd8bc35ac3f95773192e3dc36820",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__independent_cbramod_s11_s101.tar.gz.part-00",
+     "id": 731469682
+    },
+    {
+     "name": "validation_w050__independent_cbramod_s11_s101.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:8c0fec925031916886b0c0bfd955392a840a37c10ffd0fcd344eefc5c7b6bf18",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__independent_cbramod_s11_s101.tar.gz.part-01",
+     "id": 731466372
+    },
+    {
+     "name": "validation_w050__independent_cbramod_s11_s101.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 48728582,
+     "digest": "sha256:13bf2dfd9a91a0cd5167fe8b139035b71fcdbfcd476101195c1f1522469c531d",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__independent_cbramod_s11_s101.tar.gz.part-02",
+     "id": 731131233
+    },
+    {
+     "name": "validation_w050__independent_cbramod_s11_s102.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:885c3e9a02ad983b55d2d117eda209fb791d30dcba42a4fc5592e48416cd5583",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__independent_cbramod_s11_s102.tar.gz.part-00",
+     "id": 733234382
+    },
+    {
+     "name": "validation_w050__independent_cbramod_s11_s102.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:e719258852ecfd26edae18cde1620f18c787d8621dd20840eb08644eb25c01c2",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__independent_cbramod_s11_s102.tar.gz.part-01",
+     "id": 731452358
+    },
+    {
+     "name": "validation_w050__independent_cbramod_s11_s102.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 49257456,
+     "digest": "sha256:ec7f635b150c24f84308967c2d38f4563796234efb1f82f66b9feabfb655d692",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__independent_cbramod_s11_s102.tar.gz.part-02",
+     "id": 731176321
+    },
+    {
+     "name": "validation_w050__independent_cbramod_s13_s100.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:dc071759d38f7bd148d97794b242b3cdb91934567e79b574911447bee6121e9b",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__independent_cbramod_s13_s100.tar.gz.part-00",
+     "id": 731445246
+    },
+    {
+     "name": "validation_w050__independent_cbramod_s13_s100.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:19febf44611079d4a2a449b4979f3cc99bba9a50d94c773963fa629b838d95c5",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__independent_cbramod_s13_s100.tar.gz.part-01",
+     "id": 731441169
+    },
+    {
+     "name": "validation_w050__independent_cbramod_s13_s100.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 50012202,
+     "digest": "sha256:09af7b619656c1ac6052bd823a0177b4dc09eee98427cc36752aee44df09f8c0",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__independent_cbramod_s13_s100.tar.gz.part-02",
+     "id": 731234457
+    },
+    {
+     "name": "validation_w050__independent_cbramod_s13_s101.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:07e5a07e1f54e3a55e7897c7bcf1fd04f2ec2eb52b49baa905ace0ac3cd71d01",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__independent_cbramod_s13_s101.tar.gz.part-00",
+     "id": 731436811
+    },
+    {
+     "name": "validation_w050__independent_cbramod_s13_s101.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:27f8f5f707e5ec5d55bfa288041cab00322f9e9e1176f6c263afafef20347ec2",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__independent_cbramod_s13_s101.tar.gz.part-01",
+     "id": 731432328
+    },
+    {
+     "name": "validation_w050__independent_cbramod_s13_s101.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 48449155,
+     "digest": "sha256:575c89a95c5c07185fdf01e1c8b6cb0e7bc766f8f87039c8fdfdcfa4024d510e",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__independent_cbramod_s13_s101.tar.gz.part-02",
+     "id": 731107534
+    },
+    {
+     "name": "validation_w050__independent_cbramod_s13_s102.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:4411f8cb3dedfb8634deb9d697d4fb82d92f225d58095377abae514f340566dd",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__independent_cbramod_s13_s102.tar.gz.part-00",
+     "id": 731427710
+    },
+    {
+     "name": "validation_w050__independent_cbramod_s13_s102.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:d7c1d86da639b25fca84ada44355f0e628c0f4c5bcfa60ec765e2e67e1d772f8",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__independent_cbramod_s13_s102.tar.gz.part-01",
+     "id": 733234025
+    },
+    {
+     "name": "validation_w050__independent_cbramod_s13_s102.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 49305979,
+     "digest": "sha256:149f0c68d573c5b59666b570cf86ed0b1f92f2f8b5a3a40c7fd0f807fdd3b2ed",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__independent_cbramod_s13_s102.tar.gz.part-02",
+     "id": 731178802
+    },
+    {
+     "name": "validation_w050__independent_eegnet_s11_s100.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:9691c335674f1695462e8d66e5b0fc7ccd8382dbd1c73e83d6e355b6f5c45cfe",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__independent_eegnet_s11_s100.tar.gz.part-00",
+     "id": 731413302
+    },
+    {
+     "name": "validation_w050__independent_eegnet_s11_s100.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:abcc9170cef5a4e6b153dbc35fe8427200001d437bc3d9c360c202ffa044e74c",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__independent_eegnet_s11_s100.tar.gz.part-01",
+     "id": 731408928
+    },
+    {
+     "name": "validation_w050__independent_eegnet_s11_s100.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 49663148,
+     "digest": "sha256:c1db140af090f3c25e6ab48f4943b7c9e2290df490268a701cf6e4f0769e25fe",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__independent_eegnet_s11_s100.tar.gz.part-02",
+     "id": 731196487
+    },
+    {
+     "name": "validation_w050__independent_eegnet_s11_s101.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:c1334ca8c0d26544b27b7e293eca907c101c3dcf24c5e71a704d08d3bd52a41c",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__independent_eegnet_s11_s101.tar.gz.part-00",
+     "id": 731404683
+    },
+    {
+     "name": "validation_w050__independent_eegnet_s11_s101.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:521ec7c02769fca6b40b3f9df6be169a97a088f3acae8dc5e08adae2b4febbec",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__independent_eegnet_s11_s101.tar.gz.part-01",
+     "id": 733233694
+    },
+    {
+     "name": "validation_w050__independent_eegnet_s11_s101.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 48726529,
+     "digest": "sha256:51832316c7468d0f26a4bf36b64f1f9952f89c2f4b8cb50fba3571cbc7a50644",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__independent_eegnet_s11_s101.tar.gz.part-02",
+     "id": 731117484
+    },
+    {
+     "name": "validation_w050__independent_eegnet_s11_s102.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:f6d9334e334ce463bd03585efad63c13bde755febad9c070aec40af6900639f8",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__independent_eegnet_s11_s102.tar.gz.part-00",
+     "id": 731397200
+    },
+    {
+     "name": "validation_w050__independent_eegnet_s11_s102.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:201bc0338590aa3b1b2ac915f25a78da55304ebe62c067fe9d2ec3e9d14ae7b2",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__independent_eegnet_s11_s102.tar.gz.part-01",
+     "id": 731393092
+    },
+    {
+     "name": "validation_w050__independent_eegnet_s11_s102.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 49672393,
+     "digest": "sha256:158b6a5094135234315724b7bcfedab5e8a97f5b50fdaf1b759895053d624016",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__independent_eegnet_s11_s102.tar.gz.part-02",
+     "id": 731204401
+    },
+    {
+     "name": "validation_w050__independent_eegnet_s13_s100.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:cfc44acb9b5027b4f84aaccb00ade1ec9bf5752549f2fdf3320db60fcd6f5b5c",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__independent_eegnet_s13_s100.tar.gz.part-00",
+     "id": 731384867
+    },
+    {
+     "name": "validation_w050__independent_eegnet_s13_s100.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:d3b008999b46a5cb228cba9ce1d862ba474ceeef273579c2cadc7e449edaf020",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__independent_eegnet_s13_s100.tar.gz.part-01",
+     "id": 731380144
+    },
+    {
+     "name": "validation_w050__independent_eegnet_s13_s100.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 49802716,
+     "digest": "sha256:87791e3696bc4d72fb344fb5697aff4bd5c11a3ba62c10c3ff3dd50beb84007f",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__independent_eegnet_s13_s100.tar.gz.part-02",
+     "id": 731225440
+    },
+    {
+     "name": "validation_w050__independent_eegnet_s13_s101.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:4b511bfc2de2e21ba9e284c421d55f05741e50e690864d43f6fc28c0e0c21982",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__independent_eegnet_s13_s101.tar.gz.part-00",
+     "id": 733233224
+    },
+    {
+     "name": "validation_w050__independent_eegnet_s13_s101.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:6aaf42f64f02f5b74fe8c22665b15a96e79d9982d654083288dbb675afe30848",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__independent_eegnet_s13_s101.tar.gz.part-01",
+     "id": 733232822
+    },
+    {
+     "name": "validation_w050__independent_eegnet_s13_s101.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 48749636,
+     "digest": "sha256:e203027e1de8a5d73b9a46a7cea0c33ce7b7477c2136a7e9bc38242fd9e8067e",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__independent_eegnet_s13_s101.tar.gz.part-02",
+     "id": 731139374
+    },
+    {
+     "name": "validation_w050__independent_eegnet_s13_s102.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:9f06fbde117852c5268e90b8f721af35d95638fa0605c372a69642f52787a2aa",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__independent_eegnet_s13_s102.tar.gz.part-00",
+     "id": 733232354
+    },
+    {
+     "name": "validation_w050__independent_eegnet_s13_s102.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:2dc8cd50e76dae541770ea11fd2faa39ed0a57655ff1b7fd40e6451e7efc3215",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__independent_eegnet_s13_s102.tar.gz.part-01",
+     "id": 731329910
+    },
+    {
+     "name": "validation_w050__independent_eegnet_s13_s102.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 49764422,
+     "digest": "sha256:392748655f1f01d98e9b736cd22c63856d063b3f6350c1d13edcbab447ff8dd4",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__independent_eegnet_s13_s102.tar.gz.part-02",
+     "id": 731218310
+    },
+    {
+     "name": "validation_w050__manifest.json",
+     "state": "uploaded",
+     "size": 653432,
+     "digest": "sha256:76185d31ad6a5a572bb217c024ee182cf7c4a7415a4f6c32f0443015243e84ec",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__manifest.json",
+     "id": 731042656
+    },
+    {
+     "name": "validation_w050__SHA256SUMS",
+     "state": "uploaded",
+     "size": 10303,
+     "digest": "sha256:6759a6bb39f1cf414ab78cfd3ea4a0134b75944ccea53c36b9529583d2a4531e",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__SHA256SUMS",
+     "id": 731041227
+    },
+    {
+     "name": "validation_w050__shared_evidence.tar.gz",
+     "state": "uploaded",
+     "size": 14861,
+     "digest": "sha256:aff4a3d354b0a6d115b0d1eb4f6d0dc0f4991933d29d30fdf91b48e9a934eda4",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__shared_evidence.tar.gz",
+     "id": 731042133
+    },
+    {
+     "name": "validation_w050__sparse_shared_s100.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:2a8399827ddbeaa9eff8c88cdb9b822960a6357e1436134a8635dbca79e8d5de",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__sparse_shared_s100.tar.gz.part-00",
+     "id": 733231902
+    },
+    {
+     "name": "validation_w050__sparse_shared_s100.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:a0bb6a8814c58b2c37a1d1850fbe7cea2c2967b051024d7cb30f7f46788503de",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__sparse_shared_s100.tar.gz.part-01",
+     "id": 731300126
+    },
+    {
+     "name": "validation_w050__sparse_shared_s100.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 49007456,
+     "digest": "sha256:da21592682fd131cd38db58a88287befcb9063f7f2ac749df21bfd96402ca0c3",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__sparse_shared_s100.tar.gz.part-02",
+     "id": 731161855
+    },
+    {
+     "name": "validation_w050__sparse_shared_s101.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:4c70bceea2a5d2acb2807a439eb4c6f7c366cbd6cfbe62374c38537526ee6fc3",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__sparse_shared_s101.tar.gz.part-00",
+     "id": 733231585
+    },
+    {
+     "name": "validation_w050__sparse_shared_s101.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:e0fd0219be337d6bf6d8186e6e62e75ce2366b4f495a050b3e0ac003eb38941d",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__sparse_shared_s101.tar.gz.part-01",
+     "id": 733231339
+    },
+    {
+     "name": "validation_w050__sparse_shared_s101.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 47303584,
+     "digest": "sha256:2a3f8715f215cbbf3038d8248c9336c3f4884160b7e23cfa58b4ed2cf771ae01",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__sparse_shared_s101.tar.gz.part-02",
+     "id": 731045892
+    },
+    {
+     "name": "validation_w050__sparse_shared_s102.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:13b0234a1b227134ce7e4179d6e1f1e43d5e751981feff1c0ba370181bd04b91",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__sparse_shared_s102.tar.gz.part-00",
+     "id": 731263334
+    },
+    {
+     "name": "validation_w050__sparse_shared_s102.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 100000000,
+     "digest": "sha256:3181cf8d4ec5af7da78e3cb5f31ac5fd74a94803236dfab447ce115c41ac0b94",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__sparse_shared_s102.tar.gz.part-01",
+     "id": 731256557
+    },
+    {
+     "name": "validation_w050__sparse_shared_s102.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 48365077,
+     "digest": "sha256:f7b4ccee097bae92bddc3e766b3115d6d36bfffa0067a99bbec0a5dec94606f6",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w050-20261110-cfe0305/validation_w050__sparse_shared_s102.tar.gz.part-02",
+     "id": 733230987
+    }
+   ]
+  },
+  {
+   "tag": "rl-v2-validation-w010-20261110-cfe0305",
+   "id": 440227157,
+   "name": "RL protocol v2: validation candidate w010 (complete 33-run suite; final snapshots)",
+   "draft": false,
+   "prerelease": false,
+   "target_commitish": "cfe03056a3fc847e749e72edbb0f839c0244f3cb",
+   "created_at": "2026-11-10T02:52:41Z",
+   "published_at": "2026-11-10T10:37:44Z",
+   "html_url": "https://github.com/ywen0511/CSCI642-Project/releases/tag/rl-v2-validation-w010-20261110-cfe0305",
+   "n_assets": 37,
+   "n_uploaded": 37,
+   "assets": [
+    {
+     "name": "SHA256SUMS",
+     "state": "uploaded",
+     "size": 3972,
+     "digest": "sha256:4892791b36e622c7cd2f0e597efb30e7f7f43ce5cf6397f0bdf2d0c96343c911",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w010-20261110-cfe0305/SHA256SUMS",
+     "id": 733322099
+    },
+    {
+     "name": "validation_w010__cbramod_s11_s100.tar.gz",
+     "state": "uploaded",
+     "size": 24879087,
+     "digest": "sha256:af9ed9aa6d9cf0c0cea66839163266eba136f789a0e1b7b9ef600247b78d8c82",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w010-20261110-cfe0305/validation_w010__cbramod_s11_s100.tar.gz",
+     "id": 733327296
+    },
+    {
+     "name": "validation_w010__cbramod_s11_s101.tar.gz",
+     "state": "uploaded",
+     "size": 24776871,
+     "digest": "sha256:d568d685047223d7c002d37e65e3156e26c23f5826e2c7c3d16d4d00755c77b9",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w010-20261110-cfe0305/validation_w010__cbramod_s11_s101.tar.gz",
+     "id": 733324608
+    },
+    {
+     "name": "validation_w010__cbramod_s11_s102.tar.gz",
+     "state": "uploaded",
+     "size": 24850676,
+     "digest": "sha256:ac4fb2f80ac94949b2291a91beb7f2dc6f1e5894783e9b45ab42b3d799d1bddd",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w010-20261110-cfe0305/validation_w010__cbramod_s11_s102.tar.gz",
+     "id": 733326209
+    },
+    {
+     "name": "validation_w010__cbramod_s13_s100.tar.gz",
+     "state": "uploaded",
+     "size": 24866222,
+     "digest": "sha256:da2b16a7fffc8af118add6cc0b378b28f04c989b2495da35cf6bbb4f6dfe8455",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w010-20261110-cfe0305/validation_w010__cbramod_s13_s100.tar.gz",
+     "id": 733327181
+    },
+    {
+     "name": "validation_w010__cbramod_s13_s101.tar.gz",
+     "state": "uploaded",
+     "size": 24753337,
+     "digest": "sha256:f9aedf94dd9e691a176af7116f09e2834f213a3c18140a32bf9da17230bf5bbf",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w010-20261110-cfe0305/validation_w010__cbramod_s13_s101.tar.gz",
+     "id": 733324485
+    },
+    {
+     "name": "validation_w010__cbramod_s13_s102.tar.gz",
+     "state": "uploaded",
+     "size": 24818630,
+     "digest": "sha256:fee4400cb67bb65830b63a9da0bfce9e2c324525422b000aca9e0e4d368719e0",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w010-20261110-cfe0305/validation_w010__cbramod_s13_s102.tar.gz",
+     "id": 733325302
+    },
+    {
+     "name": "validation_w010__dense_shared_s100.tar.gz",
+     "state": "uploaded",
+     "size": 26791306,
+     "digest": "sha256:23ff6bbab8de6734158da098e0d46c875c12a1dc6df832b556f101a9bc3551b8",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w010-20261110-cfe0305/validation_w010__dense_shared_s100.tar.gz",
+     "id": 733327698
+    },
+    {
+     "name": "validation_w010__dense_shared_s101.tar.gz",
+     "state": "uploaded",
+     "size": 26796054,
+     "digest": "sha256:2631e14616705d26ed32f22c61cce0f39feca6303bb61f76d953e387e0fa5d1f",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w010-20261110-cfe0305/validation_w010__dense_shared_s101.tar.gz",
+     "id": 733327820
+    },
+    {
+     "name": "validation_w010__dense_shared_s102.tar.gz",
+     "state": "uploaded",
+     "size": 26753578,
+     "digest": "sha256:2b0a231f51d7fbd1c36584e232e4a88de2730477ccbb526576dfdb7d0343659f",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w010-20261110-cfe0305/validation_w010__dense_shared_s102.tar.gz",
+     "id": 733327578
+    },
+    {
+     "name": "validation_w010__eegnet_s11_s100.tar.gz",
+     "state": "uploaded",
+     "size": 24893465,
+     "digest": "sha256:13bd7cd700fb55c5dbd1a5158c456992b7f899f7ba17fab6adf37e1dd877a6ef",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w010-20261110-cfe0305/validation_w010__eegnet_s11_s100.tar.gz",
+     "id": 733327499
+    },
+    {
+     "name": "validation_w010__eegnet_s11_s101.tar.gz",
+     "state": "uploaded",
+     "size": 24794542,
+     "digest": "sha256:24b701065f097d54997d5c493de17c26f7b7ca95f576b0818aad7cc82094432c",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w010-20261110-cfe0305/validation_w010__eegnet_s11_s101.tar.gz",
+     "id": 733324920
+    },
+    {
+     "name": "validation_w010__eegnet_s11_s102.tar.gz",
+     "state": "uploaded",
+     "size": 24847679,
+     "digest": "sha256:82a29c0c8e35a741872ba7de5f4329f76c1e4fbaf63a290f601cee585aaecf0a",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w010-20261110-cfe0305/validation_w010__eegnet_s11_s102.tar.gz",
+     "id": 733325712
+    },
+    {
+     "name": "validation_w010__eegnet_s13_s100.tar.gz",
+     "state": "uploaded",
+     "size": 24851498,
+     "digest": "sha256:6ca8c968798de8b51180789cc505782c89f26a704584451394a6321c52cf09f4",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w010-20261110-cfe0305/validation_w010__eegnet_s13_s100.tar.gz",
+     "id": 733326574
+    },
+    {
+     "name": "validation_w010__eegnet_s13_s101.tar.gz",
+     "state": "uploaded",
+     "size": 24843008,
+     "digest": "sha256:34a77db33a71bd311237d0f767a0622e6e8d08aa1a034385b70160946676e0c3",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w010-20261110-cfe0305/validation_w010__eegnet_s13_s101.tar.gz",
+     "id": 733325611
+    },
+    {
+     "name": "validation_w010__eegnet_s13_s102.tar.gz",
+     "state": "uploaded",
+     "size": 24812697,
+     "digest": "sha256:d662f0a1c5d6ba67da06008399737502d1165e49d420bb2d445fb7705a8aca61",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w010-20261110-cfe0305/validation_w010__eegnet_s13_s102.tar.gz",
+     "id": 733325183
+    },
+    {
+     "name": "validation_w010__ideal_shared_s100.tar.gz",
+     "state": "uploaded",
+     "size": 24236467,
+     "digest": "sha256:f44ecb8bfe7af84351068e3c9559d64bc47c7a6cfcebd53d69d083ec07b1c25a",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w010-20261110-cfe0305/validation_w010__ideal_shared_s100.tar.gz",
+     "id": 733324112
+    },
+    {
+     "name": "validation_w010__ideal_shared_s101.tar.gz",
+     "state": "uploaded",
+     "size": 24196495,
+     "digest": "sha256:0092fe25b742f7be0a43731489f22c759c2c8d561f5378c6bb2878a539a6d1d6",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w010-20261110-cfe0305/validation_w010__ideal_shared_s101.tar.gz",
+     "id": 733322772
+    },
+    {
+     "name": "validation_w010__ideal_shared_s102.tar.gz",
+     "state": "uploaded",
+     "size": 24272740,
+     "digest": "sha256:fe89386df1f904ec2787d9c8d8b0df9036baa705ef8ebef46681ed74841a090e",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w010-20261110-cfe0305/validation_w010__ideal_shared_s102.tar.gz",
+     "id": 733324362
+    },
+    {
+     "name": "validation_w010__independent_cbramod_s11_s100.tar.gz",
+     "state": "uploaded",
+     "size": 24853859,
+     "digest": "sha256:504b526e1a83a79595477face502d5278f9a20a97fc5ffabbd01e37ea0ac35a0",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w010-20261110-cfe0305/validation_w010__independent_cbramod_s11_s100.tar.gz",
+     "id": 733326739
+    },
+    {
+     "name": "validation_w010__independent_cbramod_s11_s101.tar.gz",
+     "state": "uploaded",
+     "size": 24788518,
+     "digest": "sha256:a4b174bf59dd107fb3637326cb8e95fa512e0e91b12a62b1ffa93d862e6d78bc",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w010-20261110-cfe0305/validation_w010__independent_cbramod_s11_s101.tar.gz",
+     "id": 733324811
+    },
+    {
+     "name": "validation_w010__independent_cbramod_s11_s102.tar.gz",
+     "state": "uploaded",
+     "size": 24829870,
+     "digest": "sha256:bbe2cdc53e61a70181a8dd309cbc648462aa948f4bbb1d6041c4a73cc55b3e67",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w010-20261110-cfe0305/validation_w010__independent_cbramod_s11_s102.tar.gz",
+     "id": 733325515
+    },
+    {
+     "name": "validation_w010__independent_cbramod_s13_s100.tar.gz",
+     "state": "uploaded",
+     "size": 24851379,
+     "digest": "sha256:61fae1410e93a8fcd9d7cd0e1507b602a231556c07176d86ebf46741c851c38f",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w010-20261110-cfe0305/validation_w010__independent_cbramod_s13_s100.tar.gz",
+     "id": 733326336
+    },
+    {
+     "name": "validation_w010__independent_cbramod_s13_s101.tar.gz",
+     "state": "uploaded",
+     "size": 24825508,
+     "digest": "sha256:b093bdba54534ffacb8d3d5166212191a357d55f719e63906e229c46649f6c0d",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w010-20261110-cfe0305/validation_w010__independent_cbramod_s13_s101.tar.gz",
+     "id": 733325425
+    },
+    {
+     "name": "validation_w010__independent_cbramod_s13_s102.tar.gz",
+     "state": "uploaded",
+     "size": 24848505,
+     "digest": "sha256:a31cfb1982f8de5826e1d25bb44677953081e86bdef2eca4b6096bdbae29e2c7",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w010-20261110-cfe0305/validation_w010__independent_cbramod_s13_s102.tar.gz",
+     "id": 733325963
+    },
+    {
+     "name": "validation_w010__independent_eegnet_s11_s100.tar.gz",
+     "state": "uploaded",
+     "size": 24854360,
+     "digest": "sha256:638645fa72b1514996dd57cb1b64b233cf95b997cc8d2eff9850596a06b9927c",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w010-20261110-cfe0305/validation_w010__independent_eegnet_s11_s100.tar.gz",
+     "id": 733326990
+    },
+    {
+     "name": "validation_w010__independent_eegnet_s11_s101.tar.gz",
+     "state": "uploaded",
+     "size": 24880156,
+     "digest": "sha256:6f59922c7b8acc44903ef060275473bac0b54ed546f9f410ab108b8037c9f2a5",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w010-20261110-cfe0305/validation_w010__independent_eegnet_s11_s101.tar.gz",
+     "id": 733327405
+    },
+    {
+     "name": "validation_w010__independent_eegnet_s11_s102.tar.gz",
+     "state": "uploaded",
+     "size": 24811719,
+     "digest": "sha256:d2967c3e7f5519a0240d6474f767a9fe3b5816b3125041afceb21cc4598abeeb",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w010-20261110-cfe0305/validation_w010__independent_eegnet_s11_s102.tar.gz",
+     "id": 733325072
+    },
+    {
+     "name": "validation_w010__independent_eegnet_s13_s100.tar.gz",
+     "state": "uploaded",
+     "size": 24848497,
+     "digest": "sha256:2ce994d543abbf5467b48128678ff270d992a32b1926fb75c26221248a93b379",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w010-20261110-cfe0305/validation_w010__independent_eegnet_s13_s100.tar.gz",
+     "id": 733325893
+    },
+    {
+     "name": "validation_w010__independent_eegnet_s13_s101.tar.gz",
+     "state": "uploaded",
+     "size": 24780695,
+     "digest": "sha256:3936de43c0fb216fed07a3e06b006572b14353daf645f11495132cce08f98da2",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w010-20261110-cfe0305/validation_w010__independent_eegnet_s13_s101.tar.gz",
+     "id": 733324709
+    },
+    {
+     "name": "validation_w010__independent_eegnet_s13_s102.tar.gz",
+     "state": "uploaded",
+     "size": 24850331,
+     "digest": "sha256:6fdae37568befd98d1eb462038c7986018e0a28609f4898dbbfc4e073dea4393",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w010-20261110-cfe0305/validation_w010__independent_eegnet_s13_s102.tar.gz",
+     "id": 733326053
+    },
+    {
+     "name": "validation_w010__manifest.json",
+     "state": "uploaded",
+     "size": 737211,
+     "digest": "sha256:1b58bce076d9a2d1f3bb1910d877222b3fb907e23da10eafebfac9e96d34ace3",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w010-20261110-cfe0305/validation_w010__manifest.json",
+     "id": 733322225
+    },
+    {
+     "name": "validation_w010__SHA256SUMS",
+     "state": "uploaded",
+     "size": 3283,
+     "digest": "sha256:9a7be07c0c48204321d3ace0409654ff457b9957fd946bb078140a87ebe3b91c",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w010-20261110-cfe0305/validation_w010__SHA256SUMS",
+     "id": 733322038
+    },
+    {
+     "name": "validation_w010__shared_evidence.tar.gz",
+     "state": "uploaded",
+     "size": 14996,
+     "digest": "sha256:fcab8d037a45f909a48d5bc13f9eba115e025cd190b41765b44a7654662b46b7",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w010-20261110-cfe0305/validation_w010__shared_evidence.tar.gz",
+     "id": 733322172
+    },
+    {
+     "name": "validation_w010__sparse_shared_s100.tar.gz",
+     "state": "uploaded",
+     "size": 24259451,
+     "digest": "sha256:659483c54a4eee06c0c51f79ff60355c0818689321657c24f6b94c88a23276e7",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w010-20261110-cfe0305/validation_w010__sparse_shared_s100.tar.gz",
+     "id": 733324238
+    },
+    {
+     "name": "validation_w010__sparse_shared_s101.tar.gz",
+     "state": "uploaded",
+     "size": 24138317,
+     "digest": "sha256:65dbec6355c0e2f1d86f835bb86d03865e53a963645b6e8d08e9ff1354afd01a",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w010-20261110-cfe0305/validation_w010__sparse_shared_s101.tar.gz",
+     "id": 733322296
+    },
+    {
+     "name": "validation_w010__sparse_shared_s102.tar.gz",
+     "state": "uploaded",
+     "size": 24207845,
+     "digest": "sha256:abdb8320ea4e176774202f895c507bd8d70f33961155820cb3453ee9c78d4942",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-validation-w010-20261110-cfe0305/validation_w010__sparse_shared_s102.tar.gz",
+     "id": 733323539
+    }
+   ]
+  },
+  {
+   "tag": "rl-v2-smoke-20261110-cfe0305",
+   "id": 439901719,
+   "name": "RL protocol v2: integration smoke evidence (not a performance result)",
+   "draft": false,
+   "prerelease": false,
+   "target_commitish": "cfe03056a3fc847e749e72edbb0f839c0244f3cb",
+   "created_at": "2026-11-10T02:52:41Z",
+   "published_at": "2026-11-10T03:10:44Z",
+   "html_url": "https://github.com/ywen0511/CSCI642-Project/releases/tag/rl-v2-smoke-20261110-cfe0305",
+   "n_assets": 45,
+   "n_uploaded": 45,
+   "assets": [
+    {
+     "name": "SHA256SUMS",
+     "state": "uploaded",
+     "size": 4640,
+     "digest": "sha256:ec91044bb34ddf270caf3cf189ef2f46ee21afc7e709f4e64d92283a8d1710df",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/SHA256SUMS",
+     "id": 729911175
+    },
+    {
+     "name": "smoke_r4__cbramod.tar.gz",
+     "state": "uploaded",
+     "size": 451426,
+     "digest": "sha256:4f01a0909755d37b2d8f0d03632b9b27bed51b739a7ef600e6e1f379e2340947",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/smoke_r4__cbramod.tar.gz",
+     "id": 729912945
+    },
+    {
+     "name": "smoke_r4__dense.tar.gz",
+     "state": "uploaded",
+     "size": 456040,
+     "digest": "sha256:0a42e3a9d870ab5693619a95480b5fa991ed300a5c461490f9db6d86af72dd7f",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/smoke_r4__dense.tar.gz",
+     "id": 729913330
+    },
+    {
+     "name": "smoke_r4__eegnet.tar.gz",
+     "state": "uploaded",
+     "size": 451418,
+     "digest": "sha256:9b6094c18b80beb5b6cfbd2383ed2ea0b0b3f533d9e397a6ff4db61ae18d13c8",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/smoke_r4__eegnet.tar.gz",
+     "id": 729912878
+    },
+    {
+     "name": "smoke_r4__eegnet_resumed.tar.gz",
+     "state": "uploaded",
+     "size": 103794,
+     "digest": "sha256:b7e71c1b04b00e97b5d2655c0855a33e6b10202898ae72797577841afd5aa8ab",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/smoke_r4__eegnet_resumed.tar.gz",
+     "id": 729911508
+    },
+    {
+     "name": "smoke_r4__ideal.tar.gz",
+     "state": "uploaded",
+     "size": 449550,
+     "digest": "sha256:317b8c13cf77731f2fb74acd2df0eadf789f9fc8ea00cd7080ca4670af773762",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/smoke_r4__ideal.tar.gz",
+     "id": 729912693
+    },
+    {
+     "name": "smoke_r4__independent_cbramod.tar.gz",
+     "state": "uploaded",
+     "size": 451572,
+     "digest": "sha256:1b861aa29afa47b51df06b7f1afc741b0b955e9286f17dd29eab29610eec126c",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/smoke_r4__independent_cbramod.tar.gz",
+     "id": 729913087
+    },
+    {
+     "name": "smoke_r4__independent_eegnet.tar.gz",
+     "state": "uploaded",
+     "size": 451570,
+     "digest": "sha256:e5bfce6388bdcb6a599c29b3fa9009ad4b1433cc72c660c1f7dc015f28df9f60",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/smoke_r4__independent_eegnet.tar.gz",
+     "id": 729913010
+    },
+    {
+     "name": "smoke_r4__manifest.json",
+     "state": "uploaded",
+     "size": 45378,
+     "digest": "sha256:f42b28ba4f8dbcf65bc09d7ead012815d4d246f605f8c1ab42ddfb3b2566088e",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/smoke_r4__manifest.json",
+     "id": 729911355
+    },
+    {
+     "name": "smoke_r4__SHA256SUMS",
+     "state": "uploaded",
+     "size": 841,
+     "digest": "sha256:1229e6254434a3b2069dee15807bb35378842d4aa04462fbbcf260d232478671",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/smoke_r4__SHA256SUMS",
+     "id": 729910702
+    },
+    {
+     "name": "smoke_r4__shared_evidence.tar.gz",
+     "state": "uploaded",
+     "size": 2325,
+     "digest": "sha256:3f6fdbf74a91bd24faa397a14cb9e7c21006f34dacf59c4450dc78cb47ec26dc",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/smoke_r4__shared_evidence.tar.gz",
+     "id": 729911114
+    },
+    {
+     "name": "smoke_r4__sparse.tar.gz",
+     "state": "uploaded",
+     "size": 449338,
+     "digest": "sha256:7920c85cdf254f4bc6da919917e7879875d7c6b3d59ba4990bf920c20eebb79d",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/smoke_r4__sparse.tar.gz",
+     "id": 729912557
+    },
+    {
+     "name": "superseded_rl_v2_smoke_r2__cbramod.tar.gz",
+     "state": "uploaded",
+     "size": 311596,
+     "digest": "sha256:86c1415a10e129e10ea9cf4abaac8e0f7079a9701ac5e5b237b9744d88556585",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/superseded_rl_v2_smoke_r2__cbramod.tar.gz",
+     "id": 729912058
+    },
+    {
+     "name": "superseded_rl_v2_smoke_r2__dense.tar.gz",
+     "state": "uploaded",
+     "size": 314513,
+     "digest": "sha256:bdf1ffa4589a52fdf285598ec4ee0e2fe6621a41efaed53c514152636065fe4f",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/superseded_rl_v2_smoke_r2__dense.tar.gz",
+     "id": 729912366
+    },
+    {
+     "name": "superseded_rl_v2_smoke_r2__eegnet.tar.gz",
+     "state": "uploaded",
+     "size": 311542,
+     "digest": "sha256:2e7916a9248d0336ae068a094ab452101fe180124e749711226bbb19601a6d39",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/superseded_rl_v2_smoke_r2__eegnet.tar.gz",
+     "id": 729911899
+    },
+    {
+     "name": "superseded_rl_v2_smoke_r2__eegnet_resumed.tar.gz",
+     "state": "uploaded",
+     "size": 103792,
+     "digest": "sha256:be7d36ad897de8b503af1ea02213b347e73e21045129ed0d58651da3ed688516",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/superseded_rl_v2_smoke_r2__eegnet_resumed.tar.gz",
+     "id": 729911471
+    },
+    {
+     "name": "superseded_rl_v2_smoke_r2__ideal.tar.gz",
+     "state": "uploaded",
+     "size": 310381,
+     "digest": "sha256:53edf28031564ec1af8ad31579a7f1f60789fd37914b38a17763a803cdd99809",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/superseded_rl_v2_smoke_r2__ideal.tar.gz",
+     "id": 729911661
+    },
+    {
+     "name": "superseded_rl_v2_smoke_r2__independent_cbramod.tar.gz",
+     "state": "uploaded",
+     "size": 311688,
+     "digest": "sha256:78d5d87af296947e6c4321c2f459ed2b0807c7506d088b8577171305d79c292a",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/superseded_rl_v2_smoke_r2__independent_cbramod.tar.gz",
+     "id": 729912113
+    },
+    {
+     "name": "superseded_rl_v2_smoke_r2__independent_eegnet.tar.gz",
+     "state": "uploaded",
+     "size": 311708,
+     "digest": "sha256:c0ac20f049af557d77a7a19a610471a4824fa22e639fce8b588ce6d2c033099e",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/superseded_rl_v2_smoke_r2__independent_eegnet.tar.gz",
+     "id": 729912293
+    },
+    {
+     "name": "superseded_rl_v2_smoke_r2__manifest.json",
+     "state": "uploaded",
+     "size": 38028,
+     "digest": "sha256:de22e226e36c5285db2a39fd263a6ae7ac69856549ead14c4c05858846001043",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/superseded_rl_v2_smoke_r2__manifest.json",
+     "id": 729911263
+    },
+    {
+     "name": "superseded_rl_v2_smoke_r2__SHA256SUMS",
+     "state": "uploaded",
+     "size": 841,
+     "digest": "sha256:fedd2346e8d4385eba13c9bc7d16278db853ce5d00472e7067bf5ea6c8f3b12a",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/superseded_rl_v2_smoke_r2__SHA256SUMS",
+     "id": 729910651
+    },
+    {
+     "name": "superseded_rl_v2_smoke_r2__shared_evidence.tar.gz",
+     "state": "uploaded",
+     "size": 2316,
+     "digest": "sha256:3b01b095435e5e43c07c7e10049772b61c8e56491e88b28da53531bb368a87fe",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/superseded_rl_v2_smoke_r2__shared_evidence.tar.gz",
+     "id": 729911082
+    },
+    {
+     "name": "superseded_rl_v2_smoke_r2__sparse.tar.gz",
+     "state": "uploaded",
+     "size": 310176,
+     "digest": "sha256:ec20ac629160e99f082829fb2dfb3fd307a19daa67ecbe9f93a6b7984bf56d14",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/superseded_rl_v2_smoke_r2__sparse.tar.gz",
+     "id": 729911606
+    },
+    {
+     "name": "superseded_rl_v2_smoke_r3__cbramod.tar.gz",
+     "state": "uploaded",
+     "size": 451376,
+     "digest": "sha256:d0667bf6f45231fc7ba0fbafb2eca4dc8cd299ed6dfe19b7c5386df8567259d2",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/superseded_rl_v2_smoke_r3__cbramod.tar.gz",
+     "id": 729912751
+    },
+    {
+     "name": "superseded_rl_v2_smoke_r3__dense.tar.gz",
+     "state": "uploaded",
+     "size": 456038,
+     "digest": "sha256:ef40e60a44e6b7a7bca3f81ddea28115f8b19fbd9db54ed06d34f0a0d9d85146",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/superseded_rl_v2_smoke_r3__dense.tar.gz",
+     "id": 729913282
+    },
+    {
+     "name": "superseded_rl_v2_smoke_r3__eegnet.tar.gz",
+     "state": "uploaded",
+     "size": 451377,
+     "digest": "sha256:3379969f0a76edc12097d96285b26657a5d6ef1abfe4f353b50a8fa564c3e3dc",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/superseded_rl_v2_smoke_r3__eegnet.tar.gz",
+     "id": 729912814
+    },
+    {
+     "name": "superseded_rl_v2_smoke_r3__eegnet_resumed.tar.gz",
+     "state": "uploaded",
+     "size": 103763,
+     "digest": "sha256:3c57f663893b5a67b802c727e5ffafc0e9de4effff640ee28170c59c536f9c3c",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/superseded_rl_v2_smoke_r3__eegnet_resumed.tar.gz",
+     "id": 729911389
+    },
+    {
+     "name": "superseded_rl_v2_smoke_r3__ideal.tar.gz",
+     "state": "uploaded",
+     "size": 449528,
+     "digest": "sha256:6f0139e3df82358c3677fa71f27ebb7d5fef2d1f9c4d48d6324b6020ce91a92a",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/superseded_rl_v2_smoke_r3__ideal.tar.gz",
+     "id": 729912620
+    },
+    {
+     "name": "superseded_rl_v2_smoke_r3__independent_cbramod.tar.gz",
+     "state": "uploaded",
+     "size": 451580,
+     "digest": "sha256:0e580d821cafcd48e25c9da4257842dbccdaeabfe9396783d991919013892322",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/superseded_rl_v2_smoke_r3__independent_cbramod.tar.gz",
+     "id": 729913138
+    },
+    {
+     "name": "superseded_rl_v2_smoke_r3__independent_eegnet.tar.gz",
+     "state": "uploaded",
+     "size": 451585,
+     "digest": "sha256:40e7cde115d0c25a6c15428fd8fa286b7933b3f72dcf7c877de536651ecaf0cd",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/superseded_rl_v2_smoke_r3__independent_eegnet.tar.gz",
+     "id": 729913196
+    },
+    {
+     "name": "superseded_rl_v2_smoke_r3__manifest.json",
+     "state": "uploaded",
+     "size": 45372,
+     "digest": "sha256:0aeb9ed9f04fddbc06a32c174f432fd5dc955a73bb728a5b2f5010eecf2029b2",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/superseded_rl_v2_smoke_r3__manifest.json",
+     "id": 729911316
+    },
+    {
+     "name": "superseded_rl_v2_smoke_r3__SHA256SUMS",
+     "state": "uploaded",
+     "size": 841,
+     "digest": "sha256:aa4be1273bbf061e7958c7920c67c5c1146056dd62fc9a1895830c6d97ca4e38",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/superseded_rl_v2_smoke_r3__SHA256SUMS",
+     "id": 729910604
+    },
+    {
+     "name": "superseded_rl_v2_smoke_r3__shared_evidence.tar.gz",
+     "state": "uploaded",
+     "size": 2326,
+     "digest": "sha256:2ff02729e66498f35a7563a676f49b9bacd620ead7bda2667375a49d8ee7439a",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/superseded_rl_v2_smoke_r3__shared_evidence.tar.gz",
+     "id": 729911150
+    },
+    {
+     "name": "superseded_rl_v2_smoke_r3__sparse.tar.gz",
+     "state": "uploaded",
+     "size": 449333,
+     "digest": "sha256:ce0f6f19790d59b1cae79ee2de7b7067ee39f2053388c0a115acaea44c99db66",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/superseded_rl_v2_smoke_r3__sparse.tar.gz",
+     "id": 729912489
+    },
+    {
+     "name": "superseded_rl_v2_smoke__cbramod.tar.gz",
+     "state": "uploaded",
+     "size": 311593,
+     "digest": "sha256:f6118eb9cec05484e141b3cdd7d3010f97a7609ca6c8b2645939e9222515a0ab",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/superseded_rl_v2_smoke__cbramod.tar.gz",
+     "id": 729911970
+    },
+    {
+     "name": "superseded_rl_v2_smoke__dense.tar.gz",
+     "state": "uploaded",
+     "size": 314529,
+     "digest": "sha256:3f127c001f5f0e459b1c39e50b125de745fe14d268c49b79bb094d6586b091cd",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/superseded_rl_v2_smoke__dense.tar.gz",
+     "id": 729912418
+    },
+    {
+     "name": "superseded_rl_v2_smoke__eegnet.tar.gz",
+     "state": "uploaded",
+     "size": 311535,
+     "digest": "sha256:bbbedfca6a7daf4502881d5b4bb55e6af1812f1dcb1abec66c1388d0284b0ae6",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/superseded_rl_v2_smoke__eegnet.tar.gz",
+     "id": 729911814
+    },
+    {
+     "name": "superseded_rl_v2_smoke__eegnet_resumed.tar.gz",
+     "state": "uploaded",
+     "size": 103790,
+     "digest": "sha256:acda3c139812d301f8519ce2e7f0686c7bc6b5eba9e361442f357d63975abe7d",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/superseded_rl_v2_smoke__eegnet_resumed.tar.gz",
+     "id": 729911423
+    },
+    {
+     "name": "superseded_rl_v2_smoke__ideal.tar.gz",
+     "state": "uploaded",
+     "size": 310388,
+     "digest": "sha256:9e132e1d8b572122380879c0868ae1dae65d29a2d270b4e2b988443a17a83022",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/superseded_rl_v2_smoke__ideal.tar.gz",
+     "id": 729911722
+    },
+    {
+     "name": "superseded_rl_v2_smoke__independent_cbramod.tar.gz",
+     "state": "uploaded",
+     "size": 311698,
+     "digest": "sha256:58146cc1b048858805e652dbc1045328042b9694f4b06192d323e5ef82f9a322",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/superseded_rl_v2_smoke__independent_cbramod.tar.gz",
+     "id": 729912165
+    },
+    {
+     "name": "superseded_rl_v2_smoke__independent_eegnet.tar.gz",
+     "state": "uploaded",
+     "size": 311700,
+     "digest": "sha256:cad2693f7b4301d0d7c18796e7227637825276d96d531e6f763be61b40a46401",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/superseded_rl_v2_smoke__independent_eegnet.tar.gz",
+     "id": 729912235
+    },
+    {
+     "name": "superseded_rl_v2_smoke__manifest.json",
+     "state": "uploaded",
+     "size": 38025,
+     "digest": "sha256:07ab05f6f42623d164f09f2f10ae18bd7f032738eaedca13c638b6d76a06a7de",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/superseded_rl_v2_smoke__manifest.json",
+     "id": 729911216
+    },
+    {
+     "name": "superseded_rl_v2_smoke__SHA256SUMS",
+     "state": "uploaded",
+     "size": 841,
+     "digest": "sha256:daf88002cb6274b813414bf43a70fd995e59fa9f020317a3a4c1105ca96c36c5",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/superseded_rl_v2_smoke__SHA256SUMS",
+     "id": 729910580
+    },
+    {
+     "name": "superseded_rl_v2_smoke__shared_evidence.tar.gz",
+     "state": "uploaded",
+     "size": 2207,
+     "digest": "sha256:1b53c24e7614a1e54aed540148a9d9637af6277d20730a21cd24865a66f8369c",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/superseded_rl_v2_smoke__shared_evidence.tar.gz",
+     "id": 729910738
+    },
+    {
+     "name": "superseded_rl_v2_smoke__sparse.tar.gz",
+     "state": "uploaded",
+     "size": 310165,
+     "digest": "sha256:a02ede942ce7dff5bc98d98ed5816ce63b1c813c0896c9df732d6650281f2f31",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-smoke-20261110-cfe0305/superseded_rl_v2_smoke__sparse.tar.gz",
+     "id": 729911553
+    }
+   ]
+  },
+  {
+   "tag": "rl-v2-pilots-20261110-50888a9",
+   "id": 439902359,
+   "name": "RL protocol v2: pilot runs (validation participants; not a suite)",
+   "draft": false,
+   "prerelease": false,
+   "target_commitish": "50888a9fe7b6ea515aa7ce55e537ef656609466a",
+   "created_at": "2026-11-10T01:58:28Z",
+   "published_at": "2026-11-10T03:11:49Z",
+   "html_url": "https://github.com/ywen0511/CSCI642-Project/releases/tag/rl-v2-pilots-20261110-50888a9",
+   "n_assets": 40,
+   "n_uploaded": 40,
+   "assets": [
+    {
+     "name": "pilots_attempt1_failed__bench_dense_s902_20k_cpu.tar.gz",
+     "state": "uploaded",
+     "size": 13016,
+     "digest": "sha256:6869ee0c13a4a390f318acefe3ecdb3f23dca684ee984469104cbcf52193375d",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-pilots-20261110-50888a9/pilots_attempt1_failed__bench_dense_s902_20k_cpu.tar.gz",
+     "id": 729915241
+    },
+    {
+     "name": "pilots_attempt1_failed__cbramod_s11_s900_50k.tar.gz",
+     "state": "uploaded",
+     "size": 10733,
+     "digest": "sha256:0bcc19695f3a052468a9ea37a5829206978f84894888475cc12c9bffa6d4abb0",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-pilots-20261110-50888a9/pilots_attempt1_failed__cbramod_s11_s900_50k.tar.gz",
+     "id": 729915104
+    },
+    {
+     "name": "pilots_attempt1_failed__cbramod_s13_s900_50k.tar.gz",
+     "state": "uploaded",
+     "size": 10632,
+     "digest": "sha256:56d421fa23e66cb0f8f8cd6d5911cb9974d7fc5bbda8e80d902474e7dd15cea3",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-pilots-20261110-50888a9/pilots_attempt1_failed__cbramod_s13_s900_50k.tar.gz",
+     "id": 729914794
+    },
+    {
+     "name": "pilots_attempt1_failed__cbramod_s13_s901_150k.tar.gz",
+     "state": "uploaded",
+     "size": 10680,
+     "digest": "sha256:470c866b0ed410c186224bd1c804f55b595afd1f524418dbbff94c50c5b7e39f",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-pilots-20261110-50888a9/pilots_attempt1_failed__cbramod_s13_s901_150k.tar.gz",
+     "id": 729914871
+    },
+    {
+     "name": "pilots_attempt1_failed__dense_shared_s900_50k.tar.gz",
+     "state": "uploaded",
+     "size": 12910,
+     "digest": "sha256:22cfb967678f7996922099d347f85ebf04e7e5728e6d7e6ef9065a6f529a807b",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-pilots-20261110-50888a9/pilots_attempt1_failed__dense_shared_s900_50k.tar.gz",
+     "id": 729915138
+    },
+    {
+     "name": "pilots_attempt1_failed__dense_shared_s901_150k.tar.gz",
+     "state": "uploaded",
+     "size": 12941,
+     "digest": "sha256:c5e649e98282424514ac5df7323d6ec834cb79985da37cf110bc6087dee2af68",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-pilots-20261110-50888a9/pilots_attempt1_failed__dense_shared_s901_150k.tar.gz",
+     "id": 729915182
+    },
+    {
+     "name": "pilots_attempt1_failed__eegnet_s11_s900_50k.tar.gz",
+     "state": "uploaded",
+     "size": 10727,
+     "digest": "sha256:92c93896870e871531a7521ef51ab640c7a56b4f5e8e7169ffa9a06234bae540",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-pilots-20261110-50888a9/pilots_attempt1_failed__eegnet_s11_s900_50k.tar.gz",
+     "id": 729915050
+    },
+    {
+     "name": "pilots_attempt1_failed__eegnet_s11_s901_150k.tar.gz",
+     "state": "uploaded",
+     "size": 10684,
+     "digest": "sha256:858bf6a23a75103e742a326298d5d7ad71707a88553e738fe670b0ed63bf9213",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-pilots-20261110-50888a9/pilots_attempt1_failed__eegnet_s11_s901_150k.tar.gz",
+     "id": 729914922
+    },
+    {
+     "name": "pilots_attempt1_failed__eegnet_s13_s900_50k.tar.gz",
+     "state": "uploaded",
+     "size": 10638,
+     "digest": "sha256:96868403f9f20a963f73a866f9fbd6fb88341e546ab81f470d9e03280d66e32d",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-pilots-20261110-50888a9/pilots_attempt1_failed__eegnet_s13_s900_50k.tar.gz",
+     "id": 729914829
+    },
+    {
+     "name": "pilots_attempt1_failed__ideal_shared_s900_50k.tar.gz",
+     "state": "uploaded",
+     "size": 9610,
+     "digest": "sha256:33104af91d6a76181fa2ef09f5d3124cb92d6c9c525e5c50762a9847748381f1",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-pilots-20261110-50888a9/pilots_attempt1_failed__ideal_shared_s900_50k.tar.gz",
+     "id": 729914745
+    },
+    {
+     "name": "pilots_attempt1_failed__ideal_shared_s901_150k.tar.gz",
+     "state": "uploaded",
+     "size": 9601,
+     "digest": "sha256:cce61289548fa477d17231ff811a949e8bfc3effa62e1e12ad1300ff124e70d5",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-pilots-20261110-50888a9/pilots_attempt1_failed__ideal_shared_s901_150k.tar.gz",
+     "id": 729914707
+    },
+    {
+     "name": "pilots_attempt1_failed__independent_cbramod_s13_s900_50k.tar.gz",
+     "state": "uploaded",
+     "size": 10688,
+     "digest": "sha256:936771c54b56e638b5491f314fc7e07740c8111e40a5cf0bfcaeb5394bddfa7a",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-pilots-20261110-50888a9/pilots_attempt1_failed__independent_cbramod_s13_s900_50k.tar.gz",
+     "id": 729914961
+    },
+    {
+     "name": "pilots_attempt1_failed__independent_eegnet_s11_s900_50k.tar.gz",
+     "state": "uploaded",
+     "size": 10711,
+     "digest": "sha256:7286f480862d592e699728e1023fb2d2e7e171aa25558e015b5658951bbe004d",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-pilots-20261110-50888a9/pilots_attempt1_failed__independent_eegnet_s11_s900_50k.tar.gz",
+     "id": 729915016
+    },
+    {
+     "name": "pilots_attempt1_failed__manifest.json",
+     "state": "uploaded",
+     "size": 27191,
+     "digest": "sha256:0740af209c749af1b8c3d5d57ac4dacf60b3fd9e0564e0bf218f0414a5852569",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-pilots-20261110-50888a9/pilots_attempt1_failed__manifest.json",
+     "id": 729915285
+    },
+    {
+     "name": "pilots_attempt1_failed__SHA256SUMS",
+     "state": "uploaded",
+     "size": 1616,
+     "digest": "sha256:4f56c9bf7be59bed52024592e66a5c278892eba456682090371152b2e31f2c38",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-pilots-20261110-50888a9/pilots_attempt1_failed__SHA256SUMS",
+     "id": 729914429
+    },
+    {
+     "name": "pilots_attempt1_failed__shared_evidence.tar.gz",
+     "state": "uploaded",
+     "size": 2448,
+     "digest": "sha256:a9e23c6fe6f086bacef107a1c2b81dc66df32f8aaf0add75e700383b15198f74",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-pilots-20261110-50888a9/pilots_attempt1_failed__shared_evidence.tar.gz",
+     "id": 729914474
+    },
+    {
+     "name": "pilots_attempt1_failed__sparse_shared_s900_50k.tar.gz",
+     "state": "uploaded",
+     "size": 9564,
+     "digest": "sha256:29f657f497859dfe467ac87c92c74b0f3ae64594339bc4aa47ebc745674de080",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-pilots-20261110-50888a9/pilots_attempt1_failed__sparse_shared_s900_50k.tar.gz",
+     "id": 729914669
+    },
+    {
+     "name": "pilots_attempt1_failed__sparse_shared_s901_150k.tar.gz",
+     "state": "uploaded",
+     "size": 9562,
+     "digest": "sha256:632b8f9790ac86a818f70b5b341d59ed175f35a7570c72b2dc697be8a8efea23",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-pilots-20261110-50888a9/pilots_attempt1_failed__sparse_shared_s901_150k.tar.gz",
+     "id": 729914604
+    },
+    {
+     "name": "pilots__bench_dense_s902_20k_cpu.tar.gz",
+     "state": "uploaded",
+     "size": 17183545,
+     "digest": "sha256:134393797df680c32683eff0b70d699de1342cbb148ebca5f2e5b095409408bc",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-pilots-20261110-50888a9/pilots__bench_dense_s902_20k_cpu.tar.gz",
+     "id": 729998482
+    },
+    {
+     "name": "pilots__cbramod_s11_s900_50k.tar.gz",
+     "state": "uploaded",
+     "size": 51898770,
+     "digest": "sha256:2f0020122a1419e93cde0ae0a9918fb04adae626a7a3ef3b0a04f5efd02ddfa2",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-pilots-20261110-50888a9/pilots__cbramod_s11_s900_50k.tar.gz",
+     "id": 730000077
+    },
+    {
+     "name": "pilots__cbramod_s13_s900_50k.tar.gz",
+     "state": "uploaded",
+     "size": 51968925,
+     "digest": "sha256:61c49b73758bdf07d5bae03f2481215f0bf7fde0a06a3f428b149230ba28a015",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-pilots-20261110-50888a9/pilots__cbramod_s13_s900_50k.tar.gz",
+     "id": 730002434
+    },
+    {
+     "name": "pilots__cbramod_s13_s901_150k.tar.gz",
+     "state": "uploaded",
+     "size": 250556692,
+     "digest": "sha256:35c4eeed72b772a7e8b1180c05bf3548a70b17f00923ccfe29c0f3523be9f730",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-pilots-20261110-50888a9/pilots__cbramod_s13_s901_150k.tar.gz",
+     "id": 730070421
+    },
+    {
+     "name": "pilots__dense_shared_s900_50k.tar.gz",
+     "state": "uploaded",
+     "size": 53219515,
+     "digest": "sha256:1c667b1752c68d901eea3db6106486d36e4f75b7182f259249c06d717445a700",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-pilots-20261110-50888a9/pilots__dense_shared_s900_50k.tar.gz",
+     "id": 729997667
+    },
+    {
+     "name": "pilots__dense_shared_s901_150k.tar.gz.part-00",
+     "state": "uploaded",
+     "size": 95000000,
+     "digest": "sha256:0802d72f231f0e3836568c2fe5fb11af6e1082643d21aeb354ee956ba2fa7034",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-pilots-20261110-50888a9/pilots__dense_shared_s901_150k.tar.gz.part-00",
+     "id": 730086235
+    },
+    {
+     "name": "pilots__dense_shared_s901_150k.tar.gz.part-01",
+     "state": "uploaded",
+     "size": 95000000,
+     "digest": "sha256:0e4285221bd3e9a6daa2621181cfb63e6363f5aadfde0ddc086c94fe41576e7f",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-pilots-20261110-50888a9/pilots__dense_shared_s901_150k.tar.gz.part-01",
+     "id": 730084751
+    },
+    {
+     "name": "pilots__dense_shared_s901_150k.tar.gz.part-02",
+     "state": "uploaded",
+     "size": 66928065,
+     "digest": "sha256:5af40ac55d1a30501f7a017f9d4208f59f9407befb34258ee39f4f7303c0c61f",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-pilots-20261110-50888a9/pilots__dense_shared_s901_150k.tar.gz.part-02",
+     "id": 730083267
+    },
+    {
+     "name": "pilots__eegnet_s11_s900_50k.tar.gz",
+     "state": "uploaded",
+     "size": 52017744,
+     "digest": "sha256:ca41030fd761c91b3ca8a8687c837fcef40baef3eee4256901dccf7e29872605",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-pilots-20261110-50888a9/pilots__eegnet_s11_s900_50k.tar.gz",
+     "id": 730003429
+    },
+    {
+     "name": "pilots__eegnet_s11_s901_150k.tar.gz",
+     "state": "uploaded",
+     "size": 250252121,
+     "digest": "sha256:b6eb57b143838c8c3bb8fe2e3059b57b7e229e0a60714dc6c4883678a699fb2b",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-pilots-20261110-50888a9/pilots__eegnet_s11_s901_150k.tar.gz",
+     "id": 729972010
+    },
+    {
+     "name": "pilots__eegnet_s13_s900_50k.tar.gz",
+     "state": "uploaded",
+     "size": 51952797,
+     "digest": "sha256:191b661a8ec3808b6f36356780534df3d72cc81581a98892e7ca1356eafdce25",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-pilots-20261110-50888a9/pilots__eegnet_s13_s900_50k.tar.gz",
+     "id": 730001401
+    },
+    {
+     "name": "pilots__ideal_shared_s900_50k.tar.gz",
+     "state": "uploaded",
+     "size": 51654949,
+     "digest": "sha256:41a322652bad487f69e8736c55d7bdc76cb204ddc33662c6e23c93c07a82cdf5",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-pilots-20261110-50888a9/pilots__ideal_shared_s900_50k.tar.gz",
+     "id": 729998884
+    },
+    {
+     "name": "pilots__ideal_shared_s901_150k.tar.gz",
+     "state": "uploaded",
+     "size": 249651867,
+     "digest": "sha256:be4ee25efcb866c8d4923b11d774b63d59e9731627d89186561378e4f2ac183e",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-pilots-20261110-50888a9/pilots__ideal_shared_s901_150k.tar.gz",
+     "id": 729964195
+    },
+    {
+     "name": "pilots__independent_cbramod_s13_s900_50k.tar.gz",
+     "state": "uploaded",
+     "size": 52068198,
+     "digest": "sha256:04159881fa8a0c8809ba7199f207224ed9953b47ea8e72b5a3031ed5a7cca8df",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-pilots-20261110-50888a9/pilots__independent_cbramod_s13_s900_50k.tar.gz",
+     "id": 730004050
+    },
+    {
+     "name": "pilots__independent_eegnet_s11_s900_50k.tar.gz",
+     "state": "uploaded",
+     "size": 51934468,
+     "digest": "sha256:cdcdaf4a91482591bb6a2468be7513248c8d07a068eb11f65f6a4a44a684b75d",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-pilots-20261110-50888a9/pilots__independent_eegnet_s11_s900_50k.tar.gz",
+     "id": 730000743
+    },
+    {
+     "name": "pilots__manifest.json",
+     "state": "uploaded",
+     "size": 182353,
+     "digest": "sha256:e027127227c03cbad357dce84b845010353b310693b2c207deadb71aacca67f9",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-pilots-20261110-50888a9/pilots__manifest.json",
+     "id": 729915330
+    },
+    {
+     "name": "pilots__SHA256SUMS",
+     "state": "uploaded",
+     "size": 1616,
+     "digest": "sha256:706643f491cdcb401afeee7924e54b614a4e4f54eb5c3bd703ac5b51fbee9fb8",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-pilots-20261110-50888a9/pilots__SHA256SUMS",
+     "id": 729914388
+    },
+    {
+     "name": "pilots__shared_evidence.tar.gz",
+     "state": "uploaded",
+     "size": 3663,
+     "digest": "sha256:6f916f67cf5d65cc7a027f9cde369e63c78544110a84fb1c16e8724d396724d8",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-pilots-20261110-50888a9/pilots__shared_evidence.tar.gz",
+     "id": 729914506
+    },
+    {
+     "name": "pilots__sparse_shared_s900_50k.tar.gz",
+     "state": "uploaded",
+     "size": 51661200,
+     "digest": "sha256:46fe9f41772e5d7931a7c853f90897f688bbecdaf67f2cee7aa76bd655ed7b52",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-pilots-20261110-50888a9/pilots__sparse_shared_s900_50k.tar.gz",
+     "id": 729999579
+    },
+    {
+     "name": "pilots__sparse_shared_s901_150k.tar.gz",
+     "state": "uploaded",
+     "size": 248268606,
+     "digest": "sha256:14a3669b47a9db3fbc46ff2f148272329a2f08c538aed8fc1ffdc2af1eb87306",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-pilots-20261110-50888a9/pilots__sparse_shared_s901_150k.tar.gz",
+     "id": 730014082
+    },
+    {
+     "name": "SHA256SUMS",
+     "state": "uploaded",
+     "size": 4282,
+     "digest": "sha256:f1419f93eb91af5af675e7635717fd9dd393bde99100fcb8b1116d5db07b5f64",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-pilots-20261110-50888a9/SHA256SUMS",
+     "id": 730083229
+    },
+    {
+     "name": "SHA256SUMS.full-files",
+     "state": "uploaded",
+     "size": 104,
+     "digest": "sha256:63c79ed6d1057fcb7ae9dd11e59c891c6e49247bf7b4599bc6930c6f22044e4e",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-pilots-20261110-50888a9/SHA256SUMS.full-files",
+     "id": 730083178
+    }
+   ]
+  },
+  {
+   "tag": "rl-v2-final-20261110-25bb0f4",
+   "id": 440346622,
+   "name": "RL protocol v2: final comparison (frozen protocol, test participants; final snapshots)",
+   "draft": false,
+   "prerelease": false,
+   "target_commitish": "25bb0f489bd79c4224d2d4853a5fa5eebb14a7c5",
+   "created_at": "2026-11-10T04:00:43Z",
+   "published_at": "2026-11-10T12:40:01Z",
+   "html_url": "https://github.com/ywen0511/CSCI642-Project/releases/tag/rl-v2-final-20261110-25bb0f4",
+   "n_assets": 89,
+   "n_uploaded": 89,
+   "assets": [
+    {
+     "name": "final__cbramod_s02_s0.tar.gz",
+     "state": "uploaded",
+     "size": 24934166,
+     "digest": "sha256:629d110a387139ac2b9c5e48f7c31801d8a0e32f68c7d811dd2bc1ffb728c511",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__cbramod_s02_s0.tar.gz",
+     "id": 733332152
+    },
+    {
+     "name": "final__cbramod_s02_s1.tar.gz",
+     "state": "uploaded",
+     "size": 24738261,
+     "digest": "sha256:dab40ff945305c956c34404cf31a988470172e376b0ce678b27b9faab04c26f8",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__cbramod_s02_s1.tar.gz",
+     "id": 733326613
+    },
+    {
+     "name": "final__cbramod_s02_s2.tar.gz",
+     "state": "uploaded",
+     "size": 24877244,
+     "digest": "sha256:8c71901dc87c350e7bb5600e915c606a72d41ff4d0c542d128b092c74d3a6738",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__cbramod_s02_s2.tar.gz",
+     "id": 733329519
+    },
+    {
+     "name": "final__cbramod_s02_s3.tar.gz",
+     "state": "uploaded",
+     "size": 24825555,
+     "digest": "sha256:0c66ab4d92be284f1e8edc1e13434b080c4d74655a4d94a65659b55bb8b21f4a",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__cbramod_s02_s3.tar.gz",
+     "id": 733328027
+    },
+    {
+     "name": "final__cbramod_s02_s4.tar.gz",
+     "state": "uploaded",
+     "size": 24836046,
+     "digest": "sha256:2c9d78f72e34ac8b0ee3e6c976395d4ee7df47f83624e59d9cd04844dbc4eaa6",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__cbramod_s02_s4.tar.gz",
+     "id": 733328401
+    },
+    {
+     "name": "final__cbramod_s08_s0.tar.gz",
+     "state": "uploaded",
+     "size": 24878452,
+     "digest": "sha256:488caed0e30435013e5a77ebccc2cf5f9aa76f223015a87c2433ac6cf78056ca",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__cbramod_s08_s0.tar.gz",
+     "id": 733329624
+    },
+    {
+     "name": "final__cbramod_s08_s1.tar.gz",
+     "state": "uploaded",
+     "size": 24760270,
+     "digest": "sha256:58a20cad8fdc3981613773505d176a0bd4e2c26b71365458a6d60d994d5dcb7f",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__cbramod_s08_s1.tar.gz",
+     "id": 733326774
+    },
+    {
+     "name": "final__cbramod_s08_s2.tar.gz",
+     "state": "uploaded",
+     "size": 24901689,
+     "digest": "sha256:b15be7a60829c8e9d16986e4e4b35911566ed4eabe291996d9cf7882c3c7b30c",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__cbramod_s08_s2.tar.gz",
+     "id": 733330990
+    },
+    {
+     "name": "final__cbramod_s08_s3.tar.gz",
+     "state": "uploaded",
+     "size": 24815434,
+     "digest": "sha256:038fe5f072240c3a76cf81204238fc5d7f732aff1f9346d6466220dd10a01d2d",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__cbramod_s08_s3.tar.gz",
+     "id": 733327757
+    },
+    {
+     "name": "final__cbramod_s08_s4.tar.gz",
+     "state": "uploaded",
+     "size": 24908165,
+     "digest": "sha256:51cd4967bfb472c2210d1e292bfdb983baed9211a1f76a5e58b063e283b7f552",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__cbramod_s08_s4.tar.gz",
+     "id": 733331156
+    },
+    {
+     "name": "final__cbramod_s09_s0.tar.gz",
+     "state": "uploaded",
+     "size": 24877193,
+     "digest": "sha256:e6f7cbe4d54e9475269931b408f1aa2e620a9ac4f47f159a811ccb547a69891e",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__cbramod_s09_s0.tar.gz",
+     "id": 733329389
+    },
+    {
+     "name": "final__cbramod_s09_s1.tar.gz",
+     "state": "uploaded",
+     "size": 24769910,
+     "digest": "sha256:ac67544d35f48f1d6299655e19bbf278e8a83565183745a5946ba9a045d31f0a",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__cbramod_s09_s1.tar.gz",
+     "id": 733326960
+    },
+    {
+     "name": "final__cbramod_s09_s2.tar.gz",
+     "state": "uploaded",
+     "size": 25067812,
+     "digest": "sha256:5d936697f4576dcb2f6e65495ef9eddae79715fbcfa31e106fa923d42729665b",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__cbramod_s09_s2.tar.gz",
+     "id": 733333075
+    },
+    {
+     "name": "final__cbramod_s09_s3.tar.gz",
+     "state": "uploaded",
+     "size": 24818072,
+     "digest": "sha256:b8c3ca346f804f3f8dfce1a80a6c1db93cd284303579457f207f2762051ad979",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__cbramod_s09_s3.tar.gz",
+     "id": 733327840
+    },
+    {
+     "name": "final__cbramod_s09_s4.tar.gz",
+     "state": "uploaded",
+     "size": 24914374,
+     "digest": "sha256:d5a978021bd433e1c3e72a0297fa1021866619f5b561f8000c9dfa6acba2c90d",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__cbramod_s09_s4.tar.gz",
+     "id": 733331341
+    },
+    {
+     "name": "final__dense_shared_s0.tar.gz",
+     "state": "uploaded",
+     "size": 26795099,
+     "digest": "sha256:773642e1e893d7c663752a8580d5ede3911499b5d05c636036cb09be5676e81a",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__dense_shared_s0.tar.gz",
+     "id": 733333579
+    },
+    {
+     "name": "final__dense_shared_s1.tar.gz",
+     "state": "uploaded",
+     "size": 26864693,
+     "digest": "sha256:0af57ba042b781d1eea6d9da6d3ae95eb6cba1e2f6809ec60a201e40f7fa7984",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__dense_shared_s1.tar.gz",
+     "id": 733333677
+    },
+    {
+     "name": "final__dense_shared_s2.tar.gz",
+     "state": "uploaded",
+     "size": 26742797,
+     "digest": "sha256:67cd0757aef75f031ebc509414f5061d33704da27189ea98bf16b79d4240a91b",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__dense_shared_s2.tar.gz",
+     "id": 733333347
+    },
+    {
+     "name": "final__dense_shared_s3.tar.gz",
+     "state": "uploaded",
+     "size": 26707351,
+     "digest": "sha256:22c99c7c208a55450e9c2d3d6ac46923df908a9710baf6107a5515e81f697814",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__dense_shared_s3.tar.gz",
+     "id": 733333228
+    },
+    {
+     "name": "final__dense_shared_s4.tar.gz",
+     "state": "uploaded",
+     "size": 26787785,
+     "digest": "sha256:4014bf72d8f9d7c34cf9dde105388a6fb229d5dd04b647a60f2cb0580a362c6e",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__dense_shared_s4.tar.gz",
+     "id": 733333458
+    },
+    {
+     "name": "final__eegnet_s02_s0.tar.gz",
+     "state": "uploaded",
+     "size": 24897626,
+     "digest": "sha256:4910a1b404456fea24f268fe901858e1882a5fd21d83849377ca81df1e50f3be",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__eegnet_s02_s0.tar.gz",
+     "id": 733330524
+    },
+    {
+     "name": "final__eegnet_s02_s1.tar.gz",
+     "state": "uploaded",
+     "size": 24799019,
+     "digest": "sha256:8925f33d2e407d92a37ecbf7c9afd3fb320cef667b434e0f074f918751902934",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__eegnet_s02_s1.tar.gz",
+     "id": 733327057
+    },
+    {
+     "name": "final__eegnet_s02_s2.tar.gz",
+     "state": "uploaded",
+     "size": 24900510,
+     "digest": "sha256:16492946978556cd0b0e3113ef10f19030accecb5e34980817f8ee83933fcadb",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__eegnet_s02_s2.tar.gz",
+     "id": 733330841
+    },
+    {
+     "name": "final__eegnet_s02_s3.tar.gz",
+     "state": "uploaded",
+     "size": 24813152,
+     "digest": "sha256:fa9fe27cc12700a1821a184f63e6a1f3767bee21916ac75e4856149bc58c9ed8",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__eegnet_s02_s3.tar.gz",
+     "id": 733327446
+    },
+    {
+     "name": "final__eegnet_s02_s4.tar.gz",
+     "state": "uploaded",
+     "size": 24991046,
+     "digest": "sha256:c31d2ef55c9432825125efc73c028ffd0d408e3e83e6f010013f8a1e362cdfcc",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__eegnet_s02_s4.tar.gz",
+     "id": 733332617
+    },
+    {
+     "name": "final__eegnet_s08_s0.tar.gz",
+     "state": "uploaded",
+     "size": 24899419,
+     "digest": "sha256:3a8c19320be07aee5caf65fa12a5ba1d111385f063119bab3264e8f1bb3c6c33",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__eegnet_s08_s0.tar.gz",
+     "id": 733330718
+    },
+    {
+     "name": "final__eegnet_s08_s1.tar.gz",
+     "state": "uploaded",
+     "size": 24835063,
+     "digest": "sha256:b86a5807ed52e92d78d30dc8d0e9f5cd11bf199afca1e207fc6f0f15a3df81b7",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__eegnet_s08_s1.tar.gz",
+     "id": 733328314
+    },
+    {
+     "name": "final__eegnet_s08_s2.tar.gz",
+     "state": "uploaded",
+     "size": 24894682,
+     "digest": "sha256:ff96cc95ffd2bd09b8b3e196eb0c17e3787fe7eb509178a747df645287df499e",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__eegnet_s08_s2.tar.gz",
+     "id": 733330420
+    },
+    {
+     "name": "final__eegnet_s08_s3.tar.gz",
+     "state": "uploaded",
+     "size": 24875546,
+     "digest": "sha256:29450bf352b769da603a1803e444179deb4427ca7b246c6c09cb9fa676516c36",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__eegnet_s08_s3.tar.gz",
+     "id": 733329248
+    },
+    {
+     "name": "final__eegnet_s08_s4.tar.gz",
+     "state": "uploaded",
+     "size": 24886095,
+     "digest": "sha256:769edeb24e2c854592366a2eedc638ea6efa605840b7273f7717a3c4eb137fc6",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__eegnet_s08_s4.tar.gz",
+     "id": 733330124
+    },
+    {
+     "name": "final__eegnet_s09_s0.tar.gz",
+     "state": "uploaded",
+     "size": 24842815,
+     "digest": "sha256:83a4a1d8f3cd0bba04e3068e19f40bdb0bef069b7de37240fd32fb7c31e3be78",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__eegnet_s09_s0.tar.gz",
+     "id": 733328603
+    },
+    {
+     "name": "final__eegnet_s09_s1.tar.gz",
+     "state": "uploaded",
+     "size": 24833246,
+     "digest": "sha256:3a799803bd6672ab82b42f405b589c821dca82a5a5b259653265966d633cceb0",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__eegnet_s09_s1.tar.gz",
+     "id": 733328222
+    },
+    {
+     "name": "final__eegnet_s09_s2.tar.gz",
+     "state": "uploaded",
+     "size": 24806595,
+     "digest": "sha256:dd71010c9e36cc38276ab69dbbe86654d8010c91db3b2421d7c1cdccab8e654c",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__eegnet_s09_s2.tar.gz",
+     "id": 733327356
+    },
+    {
+     "name": "final__eegnet_s09_s3.tar.gz",
+     "state": "uploaded",
+     "size": 24871577,
+     "digest": "sha256:dde38f900591bbd78dfe6e4521c31af5fba8880b5822fb9aaf7bcc219e426221",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__eegnet_s09_s3.tar.gz",
+     "id": 733329113
+    },
+    {
+     "name": "final__eegnet_s09_s4.tar.gz",
+     "state": "uploaded",
+     "size": 24924383,
+     "digest": "sha256:5cf4a64f79765f3dac026fdd946be4432c541671e69075b2451a6d87914ea11c",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__eegnet_s09_s4.tar.gz",
+     "id": 733331598
+    },
+    {
+     "name": "final__ideal_shared_s0.tar.gz",
+     "state": "uploaded",
+     "size": 24325901,
+     "digest": "sha256:5aa51d94979807ab891776678055fdbaac64e30f7fdf30735a08fda2bcc0f4c8",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__ideal_shared_s0.tar.gz",
+     "id": 733326089
+    },
+    {
+     "name": "final__ideal_shared_s1.tar.gz",
+     "state": "uploaded",
+     "size": 24299183,
+     "digest": "sha256:f30b8a82cf1fb75042e556f1399f25e6ac70027bf59b05e6750b1716d21c7c48",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__ideal_shared_s1.tar.gz",
+     "id": 733325841
+    },
+    {
+     "name": "final__ideal_shared_s2.tar.gz",
+     "state": "uploaded",
+     "size": 24303733,
+     "digest": "sha256:165c3c16f106dd38f929d1060b3aa95171ffffbec5ea9e19279e878e5a305db9",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__ideal_shared_s2.tar.gz",
+     "id": 733325932
+    },
+    {
+     "name": "final__ideal_shared_s3.tar.gz",
+     "state": "uploaded",
+     "size": 24248274,
+     "digest": "sha256:987271822f75aec3b23221fd5e15d85e6ddeb1a3cfeb80e1d3336bde524c7a06",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__ideal_shared_s3.tar.gz",
+     "id": 733325462
+    },
+    {
+     "name": "final__ideal_shared_s4.tar.gz",
+     "state": "uploaded",
+     "size": 24397191,
+     "digest": "sha256:b6929a1f9e6a52d316171363bee71a17b1b93987d5c88c2ae86ead98c58abef1",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__ideal_shared_s4.tar.gz",
+     "id": 733326391
+    },
+    {
+     "name": "final__independent_cbramod_s02_s0.tar.gz",
+     "state": "uploaded",
+     "size": 24930747,
+     "digest": "sha256:3df869cbd70105957eb505d6bfd21390a3965f34e01d3ef416029cdf88cf4325",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__independent_cbramod_s02_s0.tar.gz",
+     "id": 733331943
+    },
+    {
+     "name": "final__independent_cbramod_s02_s1.tar.gz",
+     "state": "uploaded",
+     "size": 24866509,
+     "digest": "sha256:39f98aaf12bcaa1d8e0674d77a2334b1866aa9368939a9fb3cdffaa49ed39950",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__independent_cbramod_s02_s1.tar.gz",
+     "id": 733328897
+    },
+    {
+     "name": "final__independent_cbramod_s02_s2.tar.gz",
+     "state": "uploaded",
+     "size": 24924852,
+     "digest": "sha256:182ad1315787c0569f3a274bf0f81f59a19dba4d6fd7470fff07440516ab9f5a",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__independent_cbramod_s02_s2.tar.gz",
+     "id": 733331700
+    },
+    {
+     "name": "final__independent_cbramod_s02_s3.tar.gz",
+     "state": "uploaded",
+     "size": 24828830,
+     "digest": "sha256:c2cf95aed3d5ec02f33d8b21586e54c0e6281fa01b238e75021819679dd49000",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__independent_cbramod_s02_s3.tar.gz",
+     "id": 733328136
+    },
+    {
+     "name": "final__independent_cbramod_s02_s4.tar.gz",
+     "state": "uploaded",
+     "size": 24935964,
+     "digest": "sha256:067517dcf89681fbe24e75eefb622ae175f26b9bea5be62503aed9f20245e256",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__independent_cbramod_s02_s4.tar.gz",
+     "id": 733332277
+    },
+    {
+     "name": "final__independent_cbramod_s08_s0.tar.gz",
+     "state": "uploaded",
+     "size": 24988905,
+     "digest": "sha256:e29da243328822c7b448abcc82aaea6b053bae6f7a199296c25f3ddeb8c792fc",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__independent_cbramod_s08_s0.tar.gz",
+     "id": 733332516
+    },
+    {
+     "name": "final__independent_cbramod_s08_s1.tar.gz",
+     "state": "uploaded",
+     "size": 24824123,
+     "digest": "sha256:bd9f75f5f53c20ffbb513534f76c88be948e6986e2db715620658fcd536d339e",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__independent_cbramod_s08_s1.tar.gz",
+     "id": 733327937
+    },
+    {
+     "name": "final__independent_cbramod_s08_s2.tar.gz",
+     "state": "uploaded",
+     "size": 24923795,
+     "digest": "sha256:3342fcb7d9a505324a47173d1478e904d776068086da174bb6f117cd4eab113f",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__independent_cbramod_s08_s2.tar.gz",
+     "id": 733331520
+    },
+    {
+     "name": "final__independent_cbramod_s08_s3.tar.gz",
+     "state": "uploaded",
+     "size": 24908002,
+     "digest": "sha256:ecb2bad9095ab138796a18e791913280b9d7485921504a712232c691d2a7f72f",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__independent_cbramod_s08_s3.tar.gz",
+     "id": 733331074
+    },
+    {
+     "name": "final__independent_cbramod_s08_s4.tar.gz",
+     "state": "uploaded",
+     "size": 24921812,
+     "digest": "sha256:a9b2180d871ad37f0b79cc1a7bc299ae01d4f297e3e5a303767f72dd842b8d09",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__independent_cbramod_s08_s4.tar.gz",
+     "id": 733331440
+    },
+    {
+     "name": "final__independent_cbramod_s09_s0.tar.gz",
+     "state": "uploaded",
+     "size": 24879788,
+     "digest": "sha256:cbbc62b9b231c579600432ceac3668e818bc57447ecf0a6585b5f68ffb626da6",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__independent_cbramod_s09_s0.tar.gz",
+     "id": 733330028
+    },
+    {
+     "name": "final__independent_cbramod_s09_s1.tar.gz",
+     "state": "uploaded",
+     "size": 24927368,
+     "digest": "sha256:960b43428581d7a832cb77aa3c17f4cd3cd347c01853ce65567cf442136b44a7",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__independent_cbramod_s09_s1.tar.gz",
+     "id": 733331811
+    },
+    {
+     "name": "final__independent_cbramod_s09_s2.tar.gz",
+     "state": "uploaded",
+     "size": 25006240,
+     "digest": "sha256:8ead52f5c80e79202baea13bf55977543a866aa8dc9165feacfaf977f36977e2",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__independent_cbramod_s09_s2.tar.gz",
+     "id": 733332724
+    },
+    {
+     "name": "final__independent_cbramod_s09_s3.tar.gz",
+     "state": "uploaded",
+     "size": 24813160,
+     "digest": "sha256:eca390f5ccf8140a81ab9dcf099c6b5dc02b8b6723027f472cc23b24d7e3f9fc",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__independent_cbramod_s09_s3.tar.gz",
+     "id": 733327531
+    },
+    {
+     "name": "final__independent_cbramod_s09_s4.tar.gz",
+     "state": "uploaded",
+     "size": 24879430,
+     "digest": "sha256:c2348d5153da2041831c11b66a97e9a8b18d26012d9726e18505a7d95a55290b",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__independent_cbramod_s09_s4.tar.gz",
+     "id": 733329721
+    },
+    {
+     "name": "final__independent_eegnet_s02_s0.tar.gz",
+     "state": "uploaded",
+     "size": 25023180,
+     "digest": "sha256:c023cbdf10015e7055ec0d6916b6e9791e25a584682872fa87a3619e2fac65bd",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__independent_eegnet_s02_s0.tar.gz",
+     "id": 733332958
+    },
+    {
+     "name": "final__independent_eegnet_s02_s1.tar.gz",
+     "state": "uploaded",
+     "size": 24836993,
+     "digest": "sha256:b8321b4b4ac12e8f4296ed14774b742d3ebdc17ad8e2536d8c21c21c3eabf22f",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__independent_eegnet_s02_s1.tar.gz",
+     "id": 733328507
+    },
+    {
+     "name": "final__independent_eegnet_s02_s2.tar.gz",
+     "state": "uploaded",
+     "size": 24938709,
+     "digest": "sha256:5a0b0cda8dce700d544b65fb29e0c5e48f4945a025dc58c049797e163c493283",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__independent_eegnet_s02_s2.tar.gz",
+     "id": 733332415
+    },
+    {
+     "name": "final__independent_eegnet_s02_s3.tar.gz",
+     "state": "uploaded",
+     "size": 24814566,
+     "digest": "sha256:7bebf44065743852113fb8bd56b49b47a6edf065aba4522fc723eee85f4387ad",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__independent_eegnet_s02_s3.tar.gz",
+     "id": 733327607
+    },
+    {
+     "name": "final__independent_eegnet_s02_s4.tar.gz",
+     "state": "uploaded",
+     "size": 24890968,
+     "digest": "sha256:3324342cdb0615787919c27027a22f364705523a3234af0e906c358c89a60f0b",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__independent_eegnet_s02_s4.tar.gz",
+     "id": 733330220
+    },
+    {
+     "name": "final__independent_eegnet_s08_s0.tar.gz",
+     "state": "uploaded",
+     "size": 25019350,
+     "digest": "sha256:32de51169a2c7084bef759d7ff843c97a3aa396e1d08f160062955cd6a529f46",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__independent_eegnet_s08_s0.tar.gz",
+     "id": 733332861
+    },
+    {
+     "name": "final__independent_eegnet_s08_s1.tar.gz",
+     "state": "uploaded",
+     "size": 24893570,
+     "digest": "sha256:a10123ed108df95843731ab7d1a750ea8406b91a3cb54da55dae6bf5e2073370",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__independent_eegnet_s08_s1.tar.gz",
+     "id": 733330319
+    },
+    {
+     "name": "final__independent_eegnet_s08_s2.tar.gz",
+     "state": "uploaded",
+     "size": 24933730,
+     "digest": "sha256:22880cf9c9edf5ba37273994b4b15932ae1451608c8f6b5a399baf23b8bfe8c6",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__independent_eegnet_s08_s2.tar.gz",
+     "id": 733332029
+    },
+    {
+     "name": "final__independent_eegnet_s08_s3.tar.gz",
+     "state": "uploaded",
+     "size": 24854784,
+     "digest": "sha256:0525f7affa7d766f9b1bc87f05eb5ac083e16b0ed24387fa4cac8e3f97fcb2a0",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__independent_eegnet_s08_s3.tar.gz",
+     "id": 733328711
+    },
+    {
+     "name": "final__independent_eegnet_s08_s4.tar.gz",
+     "state": "uploaded",
+     "size": 24910001,
+     "digest": "sha256:0c6572627718e9df7115400e21a4ecd2ec130d373cfe8445205fd23cdb2af08f",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__independent_eegnet_s08_s4.tar.gz",
+     "id": 733331266
+    },
+    {
+     "name": "final__independent_eegnet_s09_s0.tar.gz",
+     "state": "uploaded",
+     "size": 24863084,
+     "digest": "sha256:f41f1a63b9eae04b2c1cad2ec10921244aeb4254cd4aa49671aa62649b4ae329",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__independent_eegnet_s09_s0.tar.gz",
+     "id": 733328816
+    },
+    {
+     "name": "final__independent_eegnet_s09_s1.tar.gz",
+     "state": "uploaded",
+     "size": 24804600,
+     "digest": "sha256:818d69b0da5f87e34d4dc4bd802be96e28dcce6ac3d0c469604974b5ea21fc17",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__independent_eegnet_s09_s1.tar.gz",
+     "id": 733327223
+    },
+    {
+     "name": "final__independent_eegnet_s09_s2.tar.gz",
+     "state": "uploaded",
+     "size": 24879452,
+     "digest": "sha256:da568df41d482b8576f8882f7092851c4e4c3a019f3e8e0e3516fc4b19e8eec0",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__independent_eegnet_s09_s2.tar.gz",
+     "id": 733329882
+    },
+    {
+     "name": "final__independent_eegnet_s09_s3.tar.gz",
+     "state": "uploaded",
+     "size": 24898778,
+     "digest": "sha256:d119b74faa6ace9a5400c6459bf164aca57a485c5f7c279915f6cc7a2137317c",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__independent_eegnet_s09_s3.tar.gz",
+     "id": 733330617
+    },
+    {
+     "name": "final__independent_eegnet_s09_s4.tar.gz",
+     "state": "uploaded",
+     "size": 24870751,
+     "digest": "sha256:71996b30d6cf413e1959167d3a255ccdf6484d95d8285600ed9e1779c7925f18",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__independent_eegnet_s09_s4.tar.gz",
+     "id": 733329000
+    },
+    {
+     "name": "final__manifest.json",
+     "state": "uploaded",
+     "size": 1662916,
+     "digest": "sha256:065247f321affbd551056ca8848d5b22bbdfd44c8a34957826496b024e040648",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__manifest.json",
+     "id": 733324881
+    },
+    {
+     "name": "final__SHA256SUMS",
+     "state": "uploaded",
+     "size": 7119,
+     "digest": "sha256:c348c0d57312242b68426d1be78fa4ff20c4778760e83c2e20fa7a8205541257",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__SHA256SUMS",
+     "id": 733324776
+    },
+    {
+     "name": "final__shared_evidence.tar.gz",
+     "state": "uploaded",
+     "size": 29854,
+     "digest": "sha256:4da084361f6b214fe087f5ba1e95d5211c9ba51c009beb7080be4522c0b06398",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__shared_evidence.tar.gz",
+     "id": 733324837
+    },
+    {
+     "name": "final__sparse_shared_s0.tar.gz",
+     "state": "uploaded",
+     "size": 24363096,
+     "digest": "sha256:fdb2067c2603d3f3237738921daa3b90d13983b5cd6d47330dc7ee0785cd8477",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__sparse_shared_s0.tar.gz",
+     "id": 733326251
+    },
+    {
+     "name": "final__sparse_shared_s1.tar.gz",
+     "state": "uploaded",
+     "size": 24157233,
+     "digest": "sha256:edeb2646fe7305c40f7309988f2f2dc758429a82cf4bd419106b4f67c019ab75",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__sparse_shared_s1.tar.gz",
+     "id": 733325388
+    },
+    {
+     "name": "final__sparse_shared_s2.tar.gz",
+     "state": "uploaded",
+     "size": 24273920,
+     "digest": "sha256:d74a41e65234939380d900d2f3393178742edb5150b9d2f9bd6f59c1a85cd095",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__sparse_shared_s2.tar.gz",
+     "id": 733325563
+    },
+    {
+     "name": "final__sparse_shared_s3.tar.gz",
+     "state": "uploaded",
+     "size": 24293528,
+     "digest": "sha256:2fb6231ec9e0a381855ed983c6d5c03845f3fbb28e7024edc410453af4e87a35",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__sparse_shared_s3.tar.gz",
+     "id": 733325706
+    },
+    {
+     "name": "final__sparse_shared_s4.tar.gz",
+     "state": "uploaded",
+     "size": 24312892,
+     "digest": "sha256:4996cdc14b7a2cad6ea34dede38841acedce9df8626ee1938bd050152ab8452f",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/final__sparse_shared_s4.tar.gz",
+     "id": 733326005
+    },
+    {
+     "name": "gif__cbramod_s02_s0.gif",
+     "state": "uploaded",
+     "size": 1881000,
+     "digest": "sha256:7331e832513aa2f4885bb803dcd3d572c8fe767a1e94aa26bd2e7fa5024ae324",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/gif__cbramod_s02_s0.gif",
+     "id": 733324985
+    },
+    {
+     "name": "gif__dense_shared_s0.gif",
+     "state": "uploaded",
+     "size": 2442293,
+     "digest": "sha256:6dce69547a5df7f1cfe014ee96b067a024b5d1f50c498700ce85bdbe590379ed",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/gif__dense_shared_s0.gif",
+     "id": 733325223
+    },
+    {
+     "name": "gif__eegnet_s02_s0.gif",
+     "state": "uploaded",
+     "size": 2439459,
+     "digest": "sha256:1edbd9164adc6ddfe9cf858baba25e5a07954658f45804ae9a0321e6acf9d182",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/gif__eegnet_s02_s0.gif",
+     "id": 733325182
+    },
+    {
+     "name": "gif__ideal_shared_s0.gif",
+     "state": "uploaded",
+     "size": 1932570,
+     "digest": "sha256:3c567f2e99141119a13c0cec254041440eeae28ac936170fe29cb979d78b3730",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/gif__ideal_shared_s0.gif",
+     "id": 733325081
+    },
+    {
+     "name": "gif__independent_cbramod_s02_s0.gif",
+     "state": "uploaded",
+     "size": 2061522,
+     "digest": "sha256:e74423bb8248e6d43aad92cecb37436a5d4b7334c69fe027c72f5038b54fcf49",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/gif__independent_cbramod_s02_s0.gif",
+     "id": 733325138
+    },
+    {
+     "name": "gif__independent_eegnet_s02_s0.gif",
+     "state": "uploaded",
+     "size": 1863933,
+     "digest": "sha256:fabe30255c7395c56cfa5583dfaf502ea6cf8bc329f74db1cb049c337fa3e345",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/gif__independent_eegnet_s02_s0.gif",
+     "id": 733324923
+    },
+    {
+     "name": "gif__SHA256SUMS",
+     "state": "uploaded",
+     "size": 621,
+     "digest": "sha256:53b757d38a2cc79a44a857d2741197593c2c9ddc4b9742f2af9cc8acf5931212",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/gif__SHA256SUMS",
+     "id": 733324740
+    },
+    {
+     "name": "gif__sparse_shared_s0.gif",
+     "state": "uploaded",
+     "size": 1918632,
+     "digest": "sha256:6a13a0fd9a871ff64837fa7fbcd16812505e5cd6a11cdceacd62a24da8ff069b",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/gif__sparse_shared_s0.gif",
+     "id": 733325050
+    },
+    {
+     "name": "media__analysis_and_media.tar.gz",
+     "state": "uploaded",
+     "size": 18295957,
+     "digest": "sha256:3bc0272390c485dc4e251865f0ace8702219bd5e0cfd563ddb8f56c6e2d488b7",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/media__analysis_and_media.tar.gz",
+     "id": 733325298
+    },
+    {
+     "name": "media__SHA256SUMS",
+     "state": "uploaded",
+     "size": 92,
+     "digest": "sha256:c75b688bbf18c5a6e81375b1e63b8fc863d4f80ab40e49c019146b8e8e45843e",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/media__SHA256SUMS",
+     "id": 733324697
+    },
+    {
+     "name": "SHA256SUMS",
+     "state": "uploaded",
+     "size": 8663,
+     "digest": "sha256:4bd3c20efbfa50177cf954d3b9fda379ad9d84db455a9d407811e0ece63f9f42",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/rl-v2-final-20261110-25bb0f4/SHA256SUMS",
+     "id": 733324806
+    }
+   ]
+  },
+  {
+   "tag": "eeg-stage1-closeout-20261102",
+   "id": 431219605,
+   "name": "EEG stage 1: CPU closeout and frozen feedback handoff",
+   "draft": false,
+   "prerelease": false,
+   "target_commitish": "eeg-stage1",
+   "created_at": "2026-11-02T08:26:37Z",
+   "published_at": "2026-11-02T08:29:19Z",
+   "html_url": "https://github.com/ywen0511/CSCI642-Project/releases/tag/eeg-stage1-closeout-20261102",
+   "n_assets": 3,
+   "n_uploaded": 3,
+   "assets": [
+    {
+     "name": "CLOSEOUT_FILE_SHA256SUMS",
+     "state": "uploaded",
+     "size": 2269,
+     "digest": "sha256:5ce20e09e9307b993fe908580a46f67b66dbeba8b45249c9f6c70e6615f23c12",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/eeg-stage1-closeout-20261102/CLOSEOUT_FILE_SHA256SUMS",
+     "id": 701047836
+    },
+    {
+     "name": "eeg-stage1-cpu-closeout.zip",
+     "state": "uploaded",
+     "size": 425406,
+     "digest": "sha256:6e0d27338d6f712f33a85b150ddd321c4a6c2d41b283fd9837e0e9cb584f36f3",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/eeg-stage1-closeout-20261102/eeg-stage1-cpu-closeout.zip",
+     "id": 701047888
+    },
+    {
+     "name": "SHA256SUMS",
+     "state": "uploaded",
+     "size": 185,
+     "digest": "sha256:dafc7f26e97396ffc491618dc4cd7a77f4ec0248a3610a83c39d67e1856d528a",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/eeg-stage1-closeout-20261102/SHA256SUMS",
+     "id": 701047964
+    }
+   ]
+  },
+  {
+   "tag": "eeg-stage1-20261101-bccbb8a",
+   "id": 430845696,
+   "name": "EEG stage 1: EEGNet vs CBraMod on ErrP-HRI (robot)",
+   "draft": false,
+   "prerelease": false,
+   "target_commitish": "bccbb8a2918c0a08381852feb1c6b1eb81e19548",
+   "created_at": "2026-11-01T05:36:31Z",
+   "published_at": "2026-11-01T20:43:56Z",
+   "html_url": "https://github.com/ywen0511/CSCI642-Project/releases/tag/eeg-stage1-20261101-bccbb8a",
+   "n_assets": 25,
+   "n_uploaded": 25,
+   "assets": [
+    {
+     "name": "manifest.json",
+     "state": "uploaded",
+     "size": 103574,
+     "digest": "sha256:b9803034673b5bec41c2ea7da2bf20c2bc4b07f348d2d8b0241d944f17d783b9",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/eeg-stage1-20261101-bccbb8a/manifest.json",
+     "id": 699474824
+    },
+    {
+     "name": "metrics_summary.json",
+     "state": "uploaded",
+     "size": 102872,
+     "digest": "sha256:f158e571469feef4055023cd45100b2d32d20d11085fe6c4715c988ac47cacca",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/eeg-stage1-20261101-bccbb8a/metrics_summary.json",
+     "id": 699474772
+    },
+    {
+     "name": "run_bd_ctnet_s42.tar.gz",
+     "state": "uploaded",
+     "size": 6859952,
+     "digest": "sha256:ea0b4f63fcf6ea0c23b1cf23440fdb0b22324fed7a1c90f9bad31af17e6d33d1",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/eeg-stage1-20261101-bccbb8a/run_bd_ctnet_s42.tar.gz",
+     "id": 699475237
+    },
+    {
+     "name": "run_bd_eegconformer_s42.tar.gz",
+     "state": "uploaded",
+     "size": 20465866,
+     "digest": "sha256:06a16d944e53894d2f3edf1df8d3fef16af92ddda2c64c3c187f66b1bd7be05c",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/eeg-stage1-20261101-bccbb8a/run_bd_eegconformer_s42.tar.gz",
+     "id": 699475334
+    },
+    {
+     "name": "run_bd_eeginception_erp_s42.tar.gz",
+     "state": "uploaded",
+     "size": 1420069,
+     "digest": "sha256:a380e6bdd9d02fdfaec6d6648d57ee361be08008cc7f7759f25d32202f31fb85",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/eeg-stage1-20261101-bccbb8a/run_bd_eeginception_erp_s42.tar.gz",
+     "id": 699475137
+    },
+    {
+     "name": "run_bd_eegnex_s42.tar.gz",
+     "state": "uploaded",
+     "size": 2633989,
+     "digest": "sha256:9e8b90ea63bdf27cb2e84e6b992d7108e2c84fddb9e9c4e3b124920502af2280",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/eeg-stage1-20261101-bccbb8a/run_bd_eegnex_s42.tar.gz",
+     "id": 699475171
+    },
+    {
+     "name": "run_bd_eegpt_s42.tar.gz",
+     "state": "uploaded",
+     "size": 1401092393,
+     "digest": "sha256:4b5101d34c214e804210771e43738d32f7d2775d1645d1e65987b10d2fad550f",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/eeg-stage1-20261101-bccbb8a/run_bd_eegpt_s42.tar.gz",
+     "id": 699518145
+    },
+    {
+     "name": "run_bd_labram_s42.tar.gz",
+     "state": "uploaded",
+     "size": 387081478,
+     "digest": "sha256:5af903ff8c1628f4f391ab585f392f5bfe55f3bfb419361ee6489f956d3403b4",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/eeg-stage1-20261101-bccbb8a/run_bd_labram_s42.tar.gz",
+     "id": 699476142
+    },
+    {
+     "name": "run_bd_xdawn_riemann_s42.tar.gz",
+     "state": "uploaded",
+     "size": 84081,
+     "digest": "sha256:914d30b25e04eb9a12b0890a40f5ec9c5629ffab9f0a3076ed81a9f61c0d48d5",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/eeg-stage1-20261101-bccbb8a/run_bd_xdawn_riemann_s42.tar.gz",
+     "id": 699474743
+    },
+    {
+     "name": "run_cbramod_bblr1e-4_s42.tar.gz",
+     "state": "uploaded",
+     "size": 616307015,
+     "digest": "sha256:36fc2d196c89bea7c1ea0665275317aa955725288cae50c6f4df79df624cb6f4",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/eeg-stage1-20261101-bccbb8a/run_cbramod_bblr1e-4_s42.tar.gz",
+     "id": 699494574
+    },
+    {
+     "name": "run_cbramod_bblr1e-4_s43.tar.gz",
+     "state": "uploaded",
+     "size": 616246691,
+     "digest": "sha256:5c77521c8736d2bde1ef82016aa89798bed9498c6595a63a0fd79b5be4e9d21c",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/eeg-stage1-20261101-bccbb8a/run_cbramod_bblr1e-4_s43.tar.gz",
+     "id": 699489361
+    },
+    {
+     "name": "run_cbramod_bblr1e-4_s44.tar.gz",
+     "state": "uploaded",
+     "size": 616188538,
+     "digest": "sha256:83de1e97d296b551623008ea180a48500495dec77dd6f842210a84ea388931b8",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/eeg-stage1-20261101-bccbb8a/run_cbramod_bblr1e-4_s44.tar.gz",
+     "id": 699479855
+    },
+    {
+     "name": "run_cbramod_bblr1e-4_s45.tar.gz",
+     "state": "uploaded",
+     "size": 616490817,
+     "digest": "sha256:87a10eb7cf71773cf8001d76c30bee99d7d946a893720d75bc0d07de8e0bd746",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/eeg-stage1-20261101-bccbb8a/run_cbramod_bblr1e-4_s45.tar.gz",
+     "id": 699504547
+    },
+    {
+     "name": "run_cbramod_bblr1e-4_s46.tar.gz",
+     "state": "uploaded",
+     "size": 616826863,
+     "digest": "sha256:05f936d03a8203659450d17cbee7bbcbf5efa12f3dad3c5f2a0ab710d7ff9038",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/eeg-stage1-20261101-bccbb8a/run_cbramod_bblr1e-4_s46.tar.gz",
+     "id": 699510337
+    },
+    {
+     "name": "run_cbramod_bblr3e-5_s42.tar.gz",
+     "state": "uploaded",
+     "size": 616458871,
+     "digest": "sha256:2397cc3dbfbfde0121b26a9ad33e0ad918fae43c7e9588a7e5bebad5d13849da",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/eeg-stage1-20261101-bccbb8a/run_cbramod_bblr3e-5_s42.tar.gz",
+     "id": 699500114
+    },
+    {
+     "name": "run_eegnet_lr1e-3_s42.tar.gz",
+     "state": "uploaded",
+     "size": 417092,
+     "digest": "sha256:8e795e2a43d9a8f2767775bd4e3717273e913f64f95844b50ac625b9f73a8dd5",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/eeg-stage1-20261101-bccbb8a/run_eegnet_lr1e-3_s42.tar.gz",
+     "id": 699475059
+    },
+    {
+     "name": "run_eegnet_lr1e-3_s43.tar.gz",
+     "state": "uploaded",
+     "size": 334911,
+     "digest": "sha256:10aaab07143eb3fbdf6bba571f9f3dfe6e7d364de3f0e0cac8a8b0c9f6958035",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/eeg-stage1-20261101-bccbb8a/run_eegnet_lr1e-3_s43.tar.gz",
+     "id": 699474926
+    },
+    {
+     "name": "run_eegnet_lr1e-3_s44.tar.gz",
+     "state": "uploaded",
+     "size": 407548,
+     "digest": "sha256:e10e3d8acf775671710dcfaf5c74654a1b37c7839e9480804b14dc8c3d8deff5",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/eeg-stage1-20261101-bccbb8a/run_eegnet_lr1e-3_s44.tar.gz",
+     "id": 699475034
+    },
+    {
+     "name": "run_eegnet_lr1e-3_s45.tar.gz",
+     "state": "uploaded",
+     "size": 397846,
+     "digest": "sha256:80bbf8073c63e5c42f72933fe4fb9f93536d1da1953757c03e19c7201f84e3d8",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/eeg-stage1-20261101-bccbb8a/run_eegnet_lr1e-3_s45.tar.gz",
+     "id": 699474998
+    },
+    {
+     "name": "run_eegnet_lr1e-3_s46.tar.gz",
+     "state": "uploaded",
+     "size": 336065,
+     "digest": "sha256:155cd28a81fb12dcea182c39af8eb1beade13c361f4e802b70b708f43553b1ba",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/eeg-stage1-20261101-bccbb8a/run_eegnet_lr1e-3_s46.tar.gz",
+     "id": 699474963
+    },
+    {
+     "name": "run_eegnet_lr3e-4_s42.tar.gz",
+     "state": "uploaded",
+     "size": 161514,
+     "digest": "sha256:564e31e7c284d6a31a08a774acdd90cc838a3298434dde6b8da2d4ffc3795360",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/eeg-stage1-20261101-bccbb8a/run_eegnet_lr3e-4_s42.tar.gz",
+     "id": 699474873
+    },
+    {
+     "name": "SHA256SUMS",
+     "state": "uploaded",
+     "size": 2252,
+     "digest": "sha256:3ae0033ed238b87dc965284f61c417a42f4192d67db44df6e95023a32d98e717",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/eeg-stage1-20261101-bccbb8a/SHA256SUMS",
+     "id": 699474698
+    },
+    {
+     "name": "shared_metadata.tar.gz",
+     "state": "uploaded",
+     "size": 956584,
+     "digest": "sha256:79ce4bcdbed74013223fc2fdd77df6fda32c191b5737660983aa4a3a427d9bc9",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/eeg-stage1-20261101-bccbb8a/shared_metadata.tar.gz",
+     "id": 699475102
+    },
+    {
+     "name": "test_predictions.csv",
+     "state": "uploaded",
+     "size": 434000,
+     "digest": "sha256:b199805ace8dd1e977f033e64f7bb9528a858bbd12c8e465a8d10dd9ba756169",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/eeg-stage1-20261101-bccbb8a/test_predictions.csv",
+     "id": 699475088
+    },
+    {
+     "name": "validation_predictions.csv",
+     "state": "uploaded",
+     "size": 302783,
+     "digest": "sha256:db0f3a9aa35a06af16550ee8a65904e9708f8d38981450ea1fe4a3d269eda3eb",
+     "url": "https://github.com/ywen0511/CSCI642-Project/releases/download/eeg-stage1-20261101-bccbb8a/validation_predictions.csv",
+     "id": 699474899
+    }
+   ]
+  }
+ ]
+}
