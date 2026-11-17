@@ -1,0 +1,797 @@
+{
+  "complete": true,
+  "split": "validation",
+  "config": {
+    "schema": "csci642-rl-stage2/v2",
+    "feedback_rule": "distance_change_deadband",
+    "reward_center": 0.5,
+    "status": "pilot",
+    "env_id": "FetchReach-v4",
+    "max_episode_steps": 50,
+    "goal_tolerance_m": 0.05,
+    "feedback_interval_steps": 5,
+    "error_epsilon_m": 0.001,
+    "eeg_weight": 0.5,
+    "dense_weight": 10.0,
+    "feedback_seed_offset": 1000000,
+    "training_episode_seed_stride": 1000000,
+    "eval_seed_base": 20000,
+    "eval_episodes": 100,
+    "eval_every_steps": 10000,
+    "checkpoint_every_steps": 10000,
+    "total_timesteps": 150000,
+    "validation_seeds": [
+      100,
+      101,
+      102
+    ],
+    "final_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "torch_threads": 1,
+    "sac": {
+      "learning_rate": 0.0003,
+      "batch_size": 256,
+      "learning_starts": 5000,
+      "buffer_size": 100000,
+      "gamma": 0.99,
+      "tau": 0.005,
+      "train_freq": 1,
+      "gradient_steps": 1,
+      "ent_coef": "auto",
+      "policy_kwargs": {
+        "net_arch": [
+          256,
+          256
+        ]
+      }
+    }
+  },
+  "training_git_shas": [
+    "cfe03056a3fc847e749e72edbb0f839c0244f3cb"
+  ],
+  "training_source_sha256": {
+    "checkpoint.py": "070ac1a0c48322b20650d06bb9024b2d85fa477f6d16aff23bd8c69e4262e304",
+    "environment.py": "a84a63088a98658fdd68ef785079c1bb657fcb27614849450e76f72005f44ff4",
+    "feedback.py": "43db672b7fe411efffbe613b313bee770a90d3d6bf5b16324f130d9cde724b3a",
+    "train.py": "699e22eea7a3cae7cfd2becb2899e67f999cdc1ea5d291ddb0dff9d5272ea6f0"
+  },
+  "runs": [
+    {
+      "condition": "sparse",
+      "subject": null,
+      "seed": 100,
+      "name": "sparse_shared_s100",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.024079427854586766,
+      "mean_task_return": -1.77,
+      "normalized_auc_success": 0.7253333333333334
+    },
+    {
+      "condition": "sparse",
+      "subject": null,
+      "seed": 101,
+      "name": "sparse_shared_s101",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.025753673010917064,
+      "mean_task_return": -1.74,
+      "normalized_auc_success": 0.7926666666666666
+    },
+    {
+      "condition": "sparse",
+      "subject": null,
+      "seed": 102,
+      "name": "sparse_shared_s102",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.02789264893212015,
+      "mean_task_return": -1.79,
+      "normalized_auc_success": 0.726
+    },
+    {
+      "condition": "dense",
+      "subject": null,
+      "seed": 100,
+      "name": "dense_shared_s100",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.023022749475383904,
+      "mean_task_return": -1.82,
+      "normalized_auc_success": 0.8946666666666667
+    },
+    {
+      "condition": "dense",
+      "subject": null,
+      "seed": 101,
+      "name": "dense_shared_s101",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.022453927437466315,
+      "mean_task_return": -1.76,
+      "normalized_auc_success": 0.888
+    },
+    {
+      "condition": "dense",
+      "subject": null,
+      "seed": 102,
+      "name": "dense_shared_s102",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.019670791257297107,
+      "mean_task_return": -1.78,
+      "normalized_auc_success": 0.93
+    },
+    {
+      "condition": "ideal",
+      "subject": null,
+      "seed": 100,
+      "name": "ideal_shared_s100",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.014612708092799822,
+      "mean_task_return": -1.75,
+      "normalized_auc_success": 0.8773333333333333
+    },
+    {
+      "condition": "ideal",
+      "subject": null,
+      "seed": 101,
+      "name": "ideal_shared_s101",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.023099969136564775,
+      "mean_task_return": -1.82,
+      "normalized_auc_success": 0.8806666666666667
+    },
+    {
+      "condition": "ideal",
+      "subject": null,
+      "seed": 102,
+      "name": "ideal_shared_s102",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.020118246914681982,
+      "mean_task_return": -1.78,
+      "normalized_auc_success": 0.7853333333333333
+    },
+    {
+      "condition": "eegnet",
+      "subject": "s11",
+      "seed": 100,
+      "name": "eegnet_s11_s100",
+      "success_rate": 0.83,
+      "ever_success_rate": 0.94,
+      "mean_final_distance": 0.03993979028727608,
+      "mean_task_return": -9.16,
+      "normalized_auc_success": 0.7736666666666666
+    },
+    {
+      "condition": "eegnet",
+      "subject": "s11",
+      "seed": 101,
+      "name": "eegnet_s11_s101",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.021590731273030236,
+      "mean_task_return": -2.45,
+      "normalized_auc_success": 0.632
+    },
+    {
+      "condition": "eegnet",
+      "subject": "s11",
+      "seed": 102,
+      "name": "eegnet_s11_s102",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.01919436551360725,
+      "mean_task_return": -1.79,
+      "normalized_auc_success": 0.732
+    },
+    {
+      "condition": "eegnet",
+      "subject": "s13",
+      "seed": 100,
+      "name": "eegnet_s13_s100",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.03028361282955026,
+      "mean_task_return": -1.77,
+      "normalized_auc_success": 0.7533333333333333
+    },
+    {
+      "condition": "eegnet",
+      "subject": "s13",
+      "seed": 101,
+      "name": "eegnet_s13_s101",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.02529739067745473,
+      "mean_task_return": -1.8,
+      "normalized_auc_success": 0.7966666666666666
+    },
+    {
+      "condition": "eegnet",
+      "subject": "s13",
+      "seed": 102,
+      "name": "eegnet_s13_s102",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.022071558444659547,
+      "mean_task_return": -1.77,
+      "normalized_auc_success": 0.7266666666666667
+    },
+    {
+      "condition": "cbramod",
+      "subject": "s11",
+      "seed": 100,
+      "name": "cbramod_s11_s100",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.028601905257438553,
+      "mean_task_return": -2.13,
+      "normalized_auc_success": 0.74
+    },
+    {
+      "condition": "cbramod",
+      "subject": "s11",
+      "seed": 101,
+      "name": "cbramod_s11_s101",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.03251098908436753,
+      "mean_task_return": -1.82,
+      "normalized_auc_success": 0.8153333333333334
+    },
+    {
+      "condition": "cbramod",
+      "subject": "s11",
+      "seed": 102,
+      "name": "cbramod_s11_s102",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.021326856908224587,
+      "mean_task_return": -1.82,
+      "normalized_auc_success": 0.7066666666666667
+    },
+    {
+      "condition": "cbramod",
+      "subject": "s13",
+      "seed": 100,
+      "name": "cbramod_s13_s100",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.023746453379278214,
+      "mean_task_return": -1.75,
+      "normalized_auc_success": 0.7393333333333333
+    },
+    {
+      "condition": "cbramod",
+      "subject": "s13",
+      "seed": 101,
+      "name": "cbramod_s13_s101",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.022828613228533013,
+      "mean_task_return": -1.8,
+      "normalized_auc_success": 0.84
+    },
+    {
+      "condition": "cbramod",
+      "subject": "s13",
+      "seed": 102,
+      "name": "cbramod_s13_s102",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.01687002360814497,
+      "mean_task_return": -1.82,
+      "normalized_auc_success": 0.7153333333333334
+    },
+    {
+      "condition": "independent_eegnet",
+      "subject": "s11",
+      "seed": 100,
+      "name": "independent_eegnet_s11_s100",
+      "success_rate": 0.51,
+      "ever_success_rate": 0.91,
+      "mean_final_distance": 0.0446382705056278,
+      "mean_task_return": -22.27,
+      "normalized_auc_success": 0.6756666666666666
+    },
+    {
+      "condition": "independent_eegnet",
+      "subject": "s11",
+      "seed": 101,
+      "name": "independent_eegnet_s11_s101",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.022828505073370763,
+      "mean_task_return": -1.8,
+      "normalized_auc_success": 0.7693333333333333
+    },
+    {
+      "condition": "independent_eegnet",
+      "subject": "s11",
+      "seed": 102,
+      "name": "independent_eegnet_s11_s102",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.02248474296978239,
+      "mean_task_return": -1.79,
+      "normalized_auc_success": 0.6566666666666666
+    },
+    {
+      "condition": "independent_eegnet",
+      "subject": "s13",
+      "seed": 100,
+      "name": "independent_eegnet_s13_s100",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.024001054012977332,
+      "mean_task_return": -1.76,
+      "normalized_auc_success": 0.7266666666666667
+    },
+    {
+      "condition": "independent_eegnet",
+      "subject": "s13",
+      "seed": 101,
+      "name": "independent_eegnet_s13_s101",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.023446835283159113,
+      "mean_task_return": -1.79,
+      "normalized_auc_success": 0.84
+    },
+    {
+      "condition": "independent_eegnet",
+      "subject": "s13",
+      "seed": 102,
+      "name": "independent_eegnet_s13_s102",
+      "success_rate": 0.97,
+      "ever_success_rate": 0.99,
+      "mean_final_distance": 0.03444338985129086,
+      "mean_task_return": -3.15,
+      "normalized_auc_success": 0.6703333333333333
+    },
+    {
+      "condition": "independent_cbramod",
+      "subject": "s11",
+      "seed": 100,
+      "name": "independent_cbramod_s11_s100",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.01804243349539252,
+      "mean_task_return": -1.88,
+      "normalized_auc_success": 0.7073333333333334
+    },
+    {
+      "condition": "independent_cbramod",
+      "subject": "s11",
+      "seed": 101,
+      "name": "independent_cbramod_s11_s101",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.023004403067209585,
+      "mean_task_return": -2.1,
+      "normalized_auc_success": 0.734
+    },
+    {
+      "condition": "independent_cbramod",
+      "subject": "s11",
+      "seed": 102,
+      "name": "independent_cbramod_s11_s102",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.03328156634199613,
+      "mean_task_return": -1.78,
+      "normalized_auc_success": 0.732
+    },
+    {
+      "condition": "independent_cbramod",
+      "subject": "s13",
+      "seed": 100,
+      "name": "independent_cbramod_s13_s100",
+      "success_rate": 0.97,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.02911390030795873,
+      "mean_task_return": -3.31,
+      "normalized_auc_success": 0.703
+    },
+    {
+      "condition": "independent_cbramod",
+      "subject": "s13",
+      "seed": 101,
+      "name": "independent_cbramod_s13_s101",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.021197311393090824,
+      "mean_task_return": -1.87,
+      "normalized_auc_success": 0.8126666666666666
+    },
+    {
+      "condition": "independent_cbramod",
+      "subject": "s13",
+      "seed": 102,
+      "name": "independent_cbramod_s13_s102",
+      "success_rate": 1.0,
+      "ever_success_rate": 1.0,
+      "mean_final_distance": 0.020357507492342664,
+      "mean_task_return": -1.71,
+      "normalized_auc_success": 0.6993333333333334
+    }
+  ],
+  "summary": [
+    {
+      "condition": "sparse",
+      "subject": "shared",
+      "n_seeds": 3,
+      "success_rate_mean": 1.0,
+      "success_rate_sd": 0.0,
+      "ever_success_rate_mean": 1.0,
+      "ever_success_rate_sd": 0.0,
+      "mean_final_distance_mean": 0.02590858326587466,
+      "mean_final_distance_sd": 0.0019113245765318059,
+      "mean_task_return_mean": -1.7666666666666666,
+      "mean_task_return_sd": 0.025166114784235853,
+      "normalized_auc_success_mean": 0.748,
+      "normalized_auc_success_sd": 0.03868390420374399
+    },
+    {
+      "condition": "dense",
+      "subject": "shared",
+      "n_seeds": 3,
+      "success_rate_mean": 1.0,
+      "success_rate_sd": 0.0,
+      "ever_success_rate_mean": 1.0,
+      "ever_success_rate_sd": 0.0,
+      "mean_final_distance_mean": 0.021715822723382443,
+      "mean_final_distance_sd": 0.0017937404775118756,
+      "mean_task_return_mean": -1.7866666666666666,
+      "mean_task_return_sd": 0.03055050463303896,
+      "normalized_auc_success_mean": 0.9042222222222223,
+      "normalized_auc_success_sd": 0.02257169646884084
+    },
+    {
+      "condition": "ideal",
+      "subject": "shared",
+      "n_seeds": 3,
+      "success_rate_mean": 1.0,
+      "success_rate_sd": 0.0,
+      "ever_success_rate_mean": 1.0,
+      "ever_success_rate_sd": 0.0,
+      "mean_final_distance_mean": 0.019276974714682194,
+      "mean_final_distance_sd": 0.004305717616393567,
+      "mean_task_return_mean": -1.7833333333333334,
+      "mean_task_return_sd": 0.03511884584284249,
+      "normalized_auc_success_mean": 0.8477777777777777,
+      "normalized_auc_success_sd": 0.054104151959523956
+    },
+    {
+      "condition": "eegnet",
+      "subject": "s11",
+      "n_seeds": 3,
+      "success_rate_mean": 0.9433333333333334,
+      "success_rate_sd": 0.0981495457622364,
+      "ever_success_rate_mean": 0.98,
+      "ever_success_rate_sd": 0.034641016151377574,
+      "mean_final_distance_mean": 0.026908295691304523,
+      "mean_final_distance_sd": 0.011349032151107014,
+      "mean_task_return_mean": -4.466666666666667,
+      "mean_task_return_sd": 4.07792022155085,
+      "normalized_auc_success_mean": 0.7125555555555555,
+      "normalized_auc_success_sd": 0.07280745790045084
+    },
+    {
+      "condition": "eegnet",
+      "subject": "s13",
+      "n_seeds": 3,
+      "success_rate_mean": 1.0,
+      "success_rate_sd": 0.0,
+      "ever_success_rate_mean": 1.0,
+      "ever_success_rate_sd": 0.0,
+      "mean_final_distance_mean": 0.025884187317221512,
+      "mean_final_distance_sd": 0.00413735507630562,
+      "mean_task_return_mean": -1.78,
+      "mean_task_return_sd": 0.017320508075688787,
+      "normalized_auc_success_mean": 0.7588888888888888,
+      "normalized_auc_success_sd": 0.0353291402124103
+    },
+    {
+      "condition": "cbramod",
+      "subject": "s11",
+      "n_seeds": 3,
+      "success_rate_mean": 1.0,
+      "success_rate_sd": 0.0,
+      "ever_success_rate_mean": 1.0,
+      "ever_success_rate_sd": 0.0,
+      "mean_final_distance_mean": 0.027479917083343557,
+      "mean_final_distance_sd": 0.005675856431452944,
+      "mean_task_return_mean": -1.9233333333333333,
+      "mean_task_return_sd": 0.1789785834487839,
+      "normalized_auc_success_mean": 0.754,
+      "normalized_auc_success_sd": 0.055669660598131124
+    },
+    {
+      "condition": "cbramod",
+      "subject": "s13",
+      "n_seeds": 3,
+      "success_rate_mean": 1.0,
+      "success_rate_sd": 0.0,
+      "ever_success_rate_mean": 1.0,
+      "ever_success_rate_sd": 0.0,
+      "mean_final_distance_mean": 0.021148363405318733,
+      "mean_final_distance_sd": 0.0037334637001905637,
+      "mean_task_return_mean": -1.79,
+      "mean_task_return_sd": 0.036055512754639925,
+      "normalized_auc_success_mean": 0.7648888888888888,
+      "normalized_auc_success_sd": 0.06614574256336726
+    },
+    {
+      "condition": "independent_eegnet",
+      "subject": "s11",
+      "n_seeds": 3,
+      "success_rate_mean": 0.8366666666666667,
+      "success_rate_sd": 0.2829016319029166,
+      "ever_success_rate_mean": 0.97,
+      "ever_success_rate_sd": 0.0519615242270663,
+      "mean_final_distance_mean": 0.029983839516260317,
+      "mean_final_distance_sd": 0.012692273390238895,
+      "mean_task_return_mean": -8.62,
+      "mean_task_return_sd": 11.821247819075616,
+      "normalized_auc_success_mean": 0.7005555555555555,
+      "normalized_auc_success_sd": 0.060316142425034434
+    },
+    {
+      "condition": "independent_eegnet",
+      "subject": "s13",
+      "n_seeds": 3,
+      "success_rate_mean": 0.99,
+      "success_rate_sd": 0.017320508075688787,
+      "ever_success_rate_mean": 0.9966666666666667,
+      "ever_success_rate_sd": 0.005773502691896263,
+      "mean_final_distance_mean": 0.027297093049142435,
+      "mean_final_distance_sd": 0.006195075309341925,
+      "mean_task_return_mean": -2.2333333333333334,
+      "mean_task_return_sd": 0.7939983207370991,
+      "normalized_auc_success_mean": 0.7456666666666667,
+      "normalized_auc_success_sd": 0.08641437637595055
+    },
+    {
+      "condition": "independent_cbramod",
+      "subject": "s11",
+      "n_seeds": 3,
+      "success_rate_mean": 1.0,
+      "success_rate_sd": 0.0,
+      "ever_success_rate_mean": 1.0,
+      "ever_success_rate_sd": 0.0,
+      "mean_final_distance_mean": 0.024776134301532745,
+      "mean_final_distance_sd": 0.007772519935909813,
+      "mean_task_return_mean": -1.92,
+      "mean_task_return_sd": 0.16370705543744904,
+      "normalized_auc_success_mean": 0.7244444444444444,
+      "normalized_auc_success_sd": 0.01485235983245059
+    },
+    {
+      "condition": "independent_cbramod",
+      "subject": "s13",
+      "n_seeds": 3,
+      "success_rate_mean": 0.99,
+      "success_rate_sd": 0.017320508075688787,
+      "ever_success_rate_mean": 1.0,
+      "ever_success_rate_sd": 0.0,
+      "mean_final_distance_mean": 0.02355623973113074,
+      "mean_final_distance_sd": 0.004831357051941926,
+      "mean_task_return_mean": -2.296666666666667,
+      "mean_task_return_sd": 0.8812112875657764,
+      "normalized_auc_success_mean": 0.7383333333333333,
+      "normalized_auc_success_sd": 0.0644006556212314
+    }
+  ],
+  "evidence_sha256": {
+    "sparse_shared_s100": {
+      "run.json": "569aab187e7096cf888b4a8d063a49c17e49f3ae2622874e9bea2cb62e4b823f",
+      "status.json": "f254399ad070fe33ec4c789b644fe95eda66916b3fed95dca5b198a0a6e04358",
+      "evaluation.json": "7790754f6c446358857557dde6ca437ae694de967d22c733dd04af4cffdb9fd8",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "sparse_shared_s101": {
+      "run.json": "8936b7f656ec103e78f2a275b51399f8a625c80f4f68d893c5eccc12d7c0c4d9",
+      "status.json": "2ffe8a4e5f95b06b3956ce8e2760f6acd1a8d9933033ba3767afa4e1b02a2984",
+      "evaluation.json": "bcdcd8cde33337539fa97ae5445ba34e883edbd1222278fd17ed66ec9608381b",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "sparse_shared_s102": {
+      "run.json": "fdee75d0a0c0fb8e97a580a7dea04b52ebce27544938f33d075444426fa80258",
+      "status.json": "d8f8b10e86e2cb5fb2d6fc3594c1a811dc73cd8b54ebedd2723a3cf77cdfeb90",
+      "evaluation.json": "dd5a7a1f6d758688ec6aaabe6d95b6c455124a6e93bccfe816e7463d5461e33e",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "dense_shared_s100": {
+      "run.json": "bbd49124b8f0a3b16114f4e8fbc77cbce6b5f37c1ebbc1407bae5f4c828a8646",
+      "status.json": "58a1d9fa87bc4f1e51a955ebaf670c7499435ec509e1b436a07a4be6bbf546c3",
+      "evaluation.json": "b6307ba706f8de61140df70172e7bad53eebae26994d29675e153ecec5f9e14a",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "dense_shared_s101": {
+      "run.json": "8748637cdb1de9efa44bf44b03cc10a24ea9d511cc943817a1b3910e124d5943",
+      "status.json": "68e747cbf614959f6aa9b9138e66a2e3d8b90b7311cbd08111e74578c6ed8197",
+      "evaluation.json": "1a1ef31ec8b2457d3ffb77c91e0b9e9baf5dcb850553cc9e3ff657111a3bd1e7",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "dense_shared_s102": {
+      "run.json": "5ced933b833624d8ffc5ab3d2ca50829b7f20ff5c8ba63b0e4600498557cbe4a",
+      "status.json": "75375395e5ed0feff2db6d2af1776d9d0ea05c05e41ffb3748b2577ff4449d82",
+      "evaluation.json": "b46a9e01dc4f7c6880c31890d36f9c2e8f2eabf8ccf7e442d7b65889aa1661af",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "ideal_shared_s100": {
+      "run.json": "b0a7c96213836b77516c2eb744ffbdb3be710da1b6529369da4d6f97740d2baf",
+      "status.json": "bdbc257eda97f509672b8269bcd635d84d644fa338d3a1afdb222f899e51d3c8",
+      "evaluation.json": "6ee42b59e978cc6a6b7ffeeb05978ac0d7de1dc604fd6ef8eb72d66fafa26adf",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "ideal_shared_s101": {
+      "run.json": "72fb5a401b95f726b2bedda25ed7484ead7185c28d8214b833ba2e6d73243994",
+      "status.json": "4955d3e2a67ead18195eea1d70d7f358d18156447246f3d5d624c6a85dc51ad6",
+      "evaluation.json": "7c1cc5d386cdc814574587a3cf501f50f9055f1fe8bcd94477bafefec2c5a7bd",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "ideal_shared_s102": {
+      "run.json": "df413a7b3a5d4ce1e064c9d9a998abf185851ff932744259a9c76dfa969e5d74",
+      "status.json": "87c7aa9a8abc1794bdc32b523ab3fa37ce1bd0e23dd35cdd1118103acf05d8b8",
+      "evaluation.json": "b88b05b810a4e551366a0289e149a5f841e2b1b6cbf9102b237b3d1ce76a9738",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "eegnet_s11_s100": {
+      "run.json": "c722838634dd9fa328a4f43df5aecfc377a8b764130917ed373e859d8e30b706",
+      "status.json": "a571731dd13a2ace7f9e497857949b2c5286fa4b323a0606d99d79cc962f8277",
+      "evaluation.json": "8b10003c60639f3198f68817dfbfb289d958e1aed3272f4eeb7aa9e7e8c7ea59",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "eegnet_s11_s101": {
+      "run.json": "1615d9ea2bd1f1c34d71c2ea26f2f385714de1a8cf8f921e28956bda6ba2c4c9",
+      "status.json": "d6f34ef1f0de829a04b51825cc2c92fd8d25aa33e0f1f9feb772d3f5da4fe4bf",
+      "evaluation.json": "a02d4e0173e12e96c27c1bf66e674acee7a453de85bfbfd61bc1136f407f7b69",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "eegnet_s11_s102": {
+      "run.json": "c1398c342d3595b1058a3f64fd9bb0fabe61a49ede1f30309161cf52394a3af9",
+      "status.json": "abdcb7dab06ebb38954e71ca6c612a7765a228ebe840161617f6a94bdf8147c7",
+      "evaluation.json": "baa402c6815a756efa5556b7ce3f36b3af513c2d13f15e64ed070d20e44106dd",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "eegnet_s13_s100": {
+      "run.json": "919562dcf32480c668c22b53978cfcf6f05c8309135bc32275b13f3d43858192",
+      "status.json": "c8618d9e64ea5bc1df6f461fc04bc3406b92085283f2869c4b3eb99c911f9e5e",
+      "evaluation.json": "1d651d08a50af928c580160f6374564be1ee008f41466109cf77119341bb29ea",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "eegnet_s13_s101": {
+      "run.json": "8009970294fc31f151eede855c70af510468ab39dfa0ae17b99288c66c0cbd86",
+      "status.json": "d8752dd894ea50eca55205d0efc0e69827c2ad3eb409a526d8088c67cae5fb22",
+      "evaluation.json": "d53a3de65ec1a7224f60db53d0ea901d3f189bf915e3e40094d4e9fa38e3ec0d",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "eegnet_s13_s102": {
+      "run.json": "1511a2adcb1d890c3b61c11c37ef7e04995daf230f69c307824aafa35d46dc22",
+      "status.json": "221b5d397757c247bab2313952e96a94aec2beea78b1df760e1533232c24368b",
+      "evaluation.json": "e1afc6a40e33ed3a3cc1027533d49110dc094bc966445824049c71147a3e00c8",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "cbramod_s11_s100": {
+      "run.json": "70acb48527efeb79355dcf785527ce5277ced0fac1cd57606e3dcd04a00cbdd3",
+      "status.json": "117c49afb2e3e18f725069d35004dce33645665606758be5ca8cfa9717c74073",
+      "evaluation.json": "7caf950162f597e2fa3e6b6a4a77b326d473e4d6d68bbbf59cbab88b44183eaa",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "cbramod_s11_s101": {
+      "run.json": "a3f739725fe7fadaaa0d9912c669b3e6e8c1f64ca162a3d531d1e6c07f1e1d2c",
+      "status.json": "06fef8e65a29d88df50e61c74dc554615d3f048a54c52a744519d2e187ac480e",
+      "evaluation.json": "711988236fed750f92350fd041904cecd0433e4c711222a070be045464a84265",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "cbramod_s11_s102": {
+      "run.json": "9ae0a391bfb85536507b5e67c9d3eaa9f0916e21f36f636090123bbc8bd4df64",
+      "status.json": "1fc23596ec89351497856d3ea8118c548f776299a52368c0bdd66007da6814c0",
+      "evaluation.json": "b434e9c277db37947cd0d671a91057ee88a66d5eea3c5f639c42965b710c1ff1",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "cbramod_s13_s100": {
+      "run.json": "372c880d52fcf3837f4d45573811db6fb096092de32f99282a1807b27c618039",
+      "status.json": "211b76a19ed1ce2cbad85f2817d97bc538a4bde5ff643588371afb7e8d90f831",
+      "evaluation.json": "fb7f37fca9c52ab1f931612bda8c6dcd42235c4e98e2a13cee4a69f2f5d65844",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "cbramod_s13_s101": {
+      "run.json": "8ed27e35758053ece7ce02712fc357e0d499c2663b02b05a94506698ddcd404a",
+      "status.json": "ecadf6302215f45142db1f2677e9667f6f6d5ff2ac5a6fc662079481f07ae4ae",
+      "evaluation.json": "ff8f6ce5a93002593b27fa10089ee7a114bde4df3c00baca5a86293f093606e1",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "cbramod_s13_s102": {
+      "run.json": "f45c32934c87e8ecdcfbf599f1c36034961abfe689440bd13d95ce2ec1d7e2ae",
+      "status.json": "071592f1c614da8346b2e1d5b860572e1ed5990bc2b4c821e65c284dc0bbd175",
+      "evaluation.json": "45c5b379a84f02abd0252348af2612eadd753b9ec50f2d969fbdc2d075b6cc05",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "independent_eegnet_s11_s100": {
+      "run.json": "99bc58f99d3994adf50dcd2bac32438a1a2ebc055903b716f1f864ddbb268ba7",
+      "status.json": "0ff12d9671f9c00107ffa70ddfa74e5b9fee30711b6d4f1f45d04b9a40dc0e23",
+      "evaluation.json": "e9e135541c6da58ed8fda36890e1f10161dd061f6bb0490356b699236714d8fc",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "independent_eegnet_s11_s101": {
+      "run.json": "855de80665c7bbc4dbaff6540533e09df5d80499dba110c3cffc701a71e67726",
+      "status.json": "f3fba5d88cd1c95cbeffdf4121869d77e1d8596ad6e4f9aa934636fdf2cba39d",
+      "evaluation.json": "f816e6b6f12aa26b63b6ab0b5c15be388ca0f0411bf48125c5f935f14f7b5742",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "independent_eegnet_s11_s102": {
+      "run.json": "03d1be0f7ba831b9aff3260742bb7eb5ada963b7902c983f7534442fbd99334f",
+      "status.json": "bcdc55272915a44a136d99b51fba80e6a03ae82a7f2d95c6b7aa17add27a6f46",
+      "evaluation.json": "c553256760e396ea1089e3f264d3e3f6df32916b128b9b1ad148643e500a7470",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "independent_eegnet_s13_s100": {
+      "run.json": "e95503841208cced44cd6582ab4557c3efd1bb7787466bbc9f6f71461709fa57",
+      "status.json": "b45e30b42423cbafc0797b34b8760224355c2639e2a7d8dd9470bb8b2321da0a",
+      "evaluation.json": "35371eed017021db6a861c8f43efc69c33659c2a84f261f83e170b819c81e1fc",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "independent_eegnet_s13_s101": {
+      "run.json": "32cf5421bda9d407fc919e04a7ef5b68c00ef3487a6a8a8a7022060c418c9150",
+      "status.json": "691a1c0a4aa520a2b840c2a0e49c2b673a4f2a5732a534e4ad4a3c83245f5dda",
+      "evaluation.json": "83a9372c5662489a65c3e7d98f3b11b392a48f6b95e28301ec02f1efeb088056",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "independent_eegnet_s13_s102": {
+      "run.json": "19b3ad6bce1d1af50339682acd7519ab2b357f9a7671a885480ce7ef9b02a849",
+      "status.json": "705d1710781515f13ea3bbfddf0ddfac1a132e7f98564374d2349b218007827b",
+      "evaluation.json": "207d574a1d577bd7bac98c40636652adb1c620298ef9f373295f57a1fba95304",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "independent_cbramod_s11_s100": {
+      "run.json": "1f89497e8f43308351e16c4f27de2f3e89ae149f03bbe578a7c14c36cf476fdb",
+      "status.json": "0faa1be592dc53beeaaf4e867002e31f8b9d693548ddc7bcfe25fd0123fb4524",
+      "evaluation.json": "a5fb9c58bd89872a383d5cbbaf3a9f76381021c7b8528c78201d8d74f3d6f78a",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "independent_cbramod_s11_s101": {
+      "run.json": "e218ff1b89075bc56fb3cfcdfe60bbf1fbe024be2a67d740e564005aaaa907d7",
+      "status.json": "e79fa0bc55596cdad79791e17b88ca6724149aeefb9e7ec1a9445054e2960162",
+      "evaluation.json": "f204ca100f1fa462c78f18928bd6006933f3db50db3163a187ce539ae9045349",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "independent_cbramod_s11_s102": {
+      "run.json": "701b9071466ee40bb9e0c604caa8ba6a62000776d839995b1897d2268af5cb54",
+      "status.json": "985498cf7cd77e03cd822cf99e23ba38228731c4f9b6c591098db803926002a1",
+      "evaluation.json": "58ac26aca48256cb6fa652d627d595aabddb159761685022310d0b376473b830",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "independent_cbramod_s13_s100": {
+      "run.json": "cff9e7becc7dff071d4509e33a1e04d520cfee14cdf441c1bd232be17aa731f2",
+      "status.json": "3b209dfefe2e6b575ddc4f0c09b5347253eb11da345a091487a1cc8a0cac77be",
+      "evaluation.json": "ee2934bd91b887ded00800fbda44052e8f0e6b04595c6b3e4786c38d5ea453be",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "independent_cbramod_s13_s101": {
+      "run.json": "f7b2cc4e59ad5dd26222270d0ea509a705d2c5c23cbf3328ac32dbd8147e65f2",
+      "status.json": "5870ede189540ea44de77ff6f85276b34fcf71659a349d381e7fee8d72afc61e",
+      "evaluation.json": "d3b7d68eb6f0dfa4ee44b0b6621eb180d96c818fc52cbf7a33b54b6621f71e85",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    },
+    "independent_cbramod_s13_s102": {
+      "run.json": "2a2b2f117881fb530fdead8348b7072a9a2fd0922631aa128f07308825a0fe89",
+      "status.json": "942e22007e1ed339b8ca9edbeddfdc33488d642281fc9034a4ddc9e5a2da3bab",
+      "evaluation.json": "c957bef6a6e920394e898d2ff61824d22061856987de1ddc97a70db6703a10c9",
+      "environment.json": "438d53d5bba9f784f4e256b5fc4a51eb4eb23445b68df9a656632165c5e73889"
+    }
+  },
+  "interpretation": "SD over RL seeds within participant; shared controls counted once, not as independent participant runs",
+  "selection_rationale": "Post-hoc weight-sensitivity suite (not selected by the declared v2 rule; selected protocol remains w=1.0). Requested after v2 final results."
+}

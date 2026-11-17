@@ -1,0 +1,14 @@
+{
+  "download": "/data/rtxw01/nbak/robot_intel/kztrgg/projs/code/csci642-v3/restore/rl-v2-validation-w050-20261110-cfe0305/download",
+  "scope": "validation_w050",
+  "suite": "/data/rtxw01/nbak/robot_intel/kztrgg/projs/code/csci642-v3/restore/suites/rl_v2_validation/candidate_w050",
+  "manifest_scope": "validation suite (validation candidate w050 (EEG weight from config); frozen selection: candidate_w100)",
+  "source_dir": "artifacts/rl_v2_validation/candidate_w050",
+  "assets_checked": 102,
+  "archives_checked": 34,
+  "runs": 33,
+  "files_checked": 2904,
+  "files_absent_by_package_scope": 0,
+  "mismatches": [],
+  "ok": true
+}

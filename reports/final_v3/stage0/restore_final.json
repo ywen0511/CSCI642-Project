@@ -1,0 +1,14 @@
+{
+  "download": "/data/rtxw01/nbak/robot_intel/kztrgg/projs/code/csci642-v3/restore/rl-v2-final-20261110-25bb0f4/download",
+  "scope": "final",
+  "suite": "/data/rtxw01/nbak/robot_intel/kztrgg/projs/code/csci642-v3/restore/suites/rl_v2_final",
+  "manifest_scope": "test suite; FINAL SNAPSHOTS ONLY: periodic snapshots (checkpoints/step_*) are not in the archives but are listed with SHA-256 in this manifest and retained on the project filer (final comparison, frozen protocol (EEG weight 1.0), test participants s02/s08/s09, RL seeds 0-4)",
+  "source_dir": "artifacts/rl_v2_final",
+  "assets_checked": 88,
+  "archives_checked": 76,
+  "runs": 75,
+  "files_checked": 975,
+  "files_absent_by_package_scope": 5625,
+  "mismatches": [],
+  "ok": true
+}

@@ -1,7 +1,7 @@
 {
   "assignment": "FINAL_V3_HANDOFF.md (planning branch final-v3, 81813de)",
   "execution_branch": "final-v3-experiments",
-  "phase": "stage0_merged_preflight",
+  "phase": "stage1_running",
   "started_utc": "2026-11-17T21:10:00Z",
   "complete": false,
   "commits": {
@@ -12,9 +12,14 @@
     "workspace": "/data/rtxw01/nbak/robot_intel/kztrgg/projs/code/csci642-v3",
     "storage_free": "706 TB free on /data/rtxw01 (2026-11-17)",
     "github_write": "zhengtaoyao: push true (gh api repos/ywen0511/CSCI642-Project .permissions)",
-    "release_upload": "gh CLI on the laptop (cluster has no gh); assets copied from the filer"
+    "release_upload": "gh CLI on the laptop (cluster has no gh); assets copied from the filer",
+    "rl_env": "venv/rl: python 3.12.3, pip freeze identical to rl/requirements-lock.cluster.txt"
   },
-  "tests": {},
+  "tests": {
+    "rl.test_stage2 (merge 33e86d8)": "30 OK",
+    "decoder tests.test_dimp+test_closeout (py3.11 env)": "31 OK",
+    "tests.test_feedback_vnext+rl.test_stage2 (RL env)": "35 OK, 1 skipped"
+  },
   "suites": {
     "sensitivity_w010_final": {
       "planned": 75,
@@ -123,5 +128,5 @@
   },
   "releases": {},
   "blockers": [],
-  "updated_utc": "2026-11-17T21:27:04Z"
+  "updated_utc": "2026-11-17T21:43:21Z"
 }

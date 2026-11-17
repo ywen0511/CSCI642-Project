@@ -1,0 +1,14 @@
+{
+  "download": "/data/rtxw01/nbak/robot_intel/kztrgg/projs/code/csci642-v3/restore/rl-v2-validation-w010-20261110-cfe0305/download",
+  "scope": "validation_w010",
+  "suite": "/data/rtxw01/nbak/robot_intel/kztrgg/projs/code/csci642-v3/restore/suites/rl_v2_validation/candidate_w010",
+  "manifest_scope": "validation suite; FINAL SNAPSHOTS ONLY: periodic snapshots (checkpoints/step_*) are not in the archives but are listed with SHA-256 in this manifest and retained on the project filer (validation candidate w010 (EEG weight 0.1); not selected)",
+  "source_dir": "artifacts/rl_v2_validation/candidate_w010",
+  "assets_checked": 36,
+  "archives_checked": 34,
+  "runs": 33,
+  "files_checked": 429,
+  "files_absent_by_package_scope": 2475,
+  "mismatches": [],
+  "ok": true
+}
