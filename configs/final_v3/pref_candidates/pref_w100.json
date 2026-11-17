@@ -1,0 +1,66 @@
+{
+  "schema": "csci642-rl-pref/v1",
+  "feedback_rule": "distance_change_deadband_with_route_preference",
+  "reward_center": {
+    "cbramod": 0.4664944170397481,
+    "eegnet": 0.4793096907507094,
+    "ideal": 0.5
+  },
+  "centers_file": "configs/final_v3/centers.json",
+  "centers_sha256": "ec35d9caf0760aeaf47a5b35e3c71e93f714f445dfef06accd34835556c077e3",
+  "status": "pilot",
+  "env_id": "FetchReach-v4",
+  "max_episode_steps": 50,
+  "goal_tolerance_m": 0.05,
+  "feedback_interval_steps": 5,
+  "error_epsilon_m": 0.001,
+  "eeg_weight": 1.0,
+  "dense_weight": 10.0,
+  "feedback_seed_offset": 1000000,
+  "training_episode_seed_stride": 1000000,
+  "eval_seed_base": 20000,
+  "eval_episodes": 100,
+  "eval_every_steps": 10000,
+  "checkpoint_every_steps": 10000,
+  "total_timesteps": 150000,
+  "validation_seeds": [
+    100,
+    101,
+    102
+  ],
+  "final_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "torch_threads": 1,
+  "sac": {
+    "learning_rate": 0.0003,
+    "batch_size": 256,
+    "learning_starts": 5000,
+    "buffer_size": 100000,
+    "gamma": 0.99,
+    "tau": 0.005,
+    "train_freq": 1,
+    "gradient_steps": 1,
+    "ent_coef": "auto",
+    "policy_kwargs": {
+      "net_arch": [
+        256,
+        256
+      ]
+    }
+  },
+  "preference": {
+    "min_goal_distance_xy_m": 0.15,
+    "pillar_radius_m": 0.025,
+    "corridor_a": [
+      0.25,
+      0.75
+    ],
+    "preferred_side": "left",
+    "max_goal_redraws": 10000
+  }
+}

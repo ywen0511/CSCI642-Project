@@ -5,6 +5,9 @@ import json
 from pathlib import Path
 
 CURVE_METRICS = ("success_rate", "ever_success_rate", "mean_final_distance", "mean_task_return")
+# route-preference extension (rl.preference); present only in preference-suite evaluations
+PREF_CURVE_METRICS = ("preferred_pass_rate", "violation_free_rate", "pillar_entry_rate", "right_corridor_entry_rate",
+                      "mean_path_length")
 
 
 def load_curve(path):
@@ -57,4 +60,7 @@ def run_metrics(run_dir, budget):
         raise ValueError(f"Final evaluation differs from the last curve record: {run_dir}")
     out = {k: final[k] for k in CURVE_METRICS}
     out["normalized_auc_success"] = normalized_auc(curve, budget)
+    if "preferred_pass_rate" in final:
+        out.update({k: final[k] for k in PREF_CURVE_METRICS})
+        out["normalized_auc_preferred_pass"] = normalized_auc(curve, budget, "preferred_pass_rate")
     return out, curve

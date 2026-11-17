@@ -51,8 +51,11 @@ def summarize(directory):
     summary = []
     for (condition, subject), values in groups.items():
         item = {"condition": condition, "subject": subject, "n_seeds": len(values)}
-        for metric in ("success_rate", "ever_success_rate", "mean_final_distance", "mean_task_return",
-                       "normalized_auc_success"):
+        metrics = ["success_rate", "ever_success_rate", "mean_final_distance", "mean_task_return",
+                   "normalized_auc_success"]
+        if "preferred_pass_rate" in values[0]:
+            metrics += ["preferred_pass_rate", "violation_free_rate", "normalized_auc_preferred_pass"]
+        for metric in metrics:
             v = [r[metric] for r in values]
             item[metric + "_mean"] = statistics.mean(v)
             item[metric + "_sd"] = statistics.stdev(v) if len(v) > 1 else None

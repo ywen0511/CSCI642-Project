@@ -22,12 +22,12 @@ def record(checkpoint, seeds, out):
     from stable_baselines3 import SAC
 
     from .checkpoint import validate_snapshot
-    from .environment import make_task
+    from .train import make_env
 
     meta = validate_snapshot(checkpoint)
     cfg = meta["run_spec"]["config"]
     model = SAC.load(Path(checkpoint) / "model.zip", device="cpu")
-    env = make_task(cfg)
+    env = make_env(cfg)
     episodes = []
     try:
         for seed in seeds:
@@ -59,14 +59,30 @@ def render(actions_file, out):
     cfg = data["config"]
     gym.register_envs(gymnasium_robotics)
     env = gym.make(cfg["env_id"], reward_type="sparse", render_mode="rgb_array", max_episode_steps=cfg["max_episode_steps"])
+    pref = cfg.get("schema") == "csci642-rl-pref/v1"
+    pillar_drawn = False
+    if pref:
+        # same goal filter as training/evaluation (environment sampler and RNG; no torch)
+        from .preference import Geometry, GoalFilter
+        env = GoalFilter(env, cfg["preference"])
+
+    def frame(geo):
+        nonlocal pillar_drawn
+        if geo is not None:
+            pillar_drawn = draw_pillar(env, geo, cfg) or pillar_drawn
+        return env.render()
+
     frames, max_dev = [], 0.0
     try:
         for ep in data["episodes"]:
             obs, _ = env.reset(seed=ep["seed"])
-            frames.append(env.render())
+            if not np.allclose(obs["desired_goal"], ep["goal"], atol=0, rtol=0):
+                raise SystemExit("Replay goal differs from the recorded goal")
+            geo = Geometry(obs["achieved_goal"], obs["desired_goal"], cfg["preference"]) if pref else None
+            frames.append(frame(geo))
             for t, action in enumerate(ep["actions"]):
                 obs, *_ = env.step(np.asarray(action, dtype=np.float32))
-                frames.append(env.render())
+                frames.append(frame(geo))
                 max_dev = max(max_dev, float(np.max(np.abs(obs["achieved_goal"] - np.asarray(ep["positions"][t + 1])))))
     finally:
         env.close()
@@ -77,10 +93,29 @@ def render(actions_file, out):
     imageio.mimsave(out, frames, duration=40, loop=0)
     report = {"gif": str(out), "frames": len(frames), "max_replay_position_deviation_m": max_dev,
               "replay_matches_recording": max_dev <= 1e-6}
+    if pref:
+        report["pillar_drawn_in_gif"] = pillar_drawn
+        if not pillar_drawn:
+            report["note"] = "pillar could not be drawn in the GIF; only the x-y trajectory plots show it"
     Path(str(out) + ".json").write_text(json.dumps(report, indent=2) + "\n")
     print(json.dumps(report))
     if max_dev > 1e-6:
         raise SystemExit("Replayed trajectory deviates from the recorded policy rollout")
+
+
+def draw_pillar(env, geo, cfg):
+    """Add a translucent cylinder marker (visual only, not in the physics model) at the pillar position for the
+    next rendered frame. Returns False if the renderer does not support markers."""
+    try:
+        import mujoco
+        renderer = env.unwrapped.mujoco_renderer
+        viewer = renderer._get_viewer(render_mode="rgb_array")
+        z = float(env.unwrapped.initial_gripper_xpos[2])
+        viewer.add_marker(pos=np.array([geo.m[0], geo.m[1], z]), size=np.array([geo.R, geo.R, 0.12]),
+                          type=mujoco.mjtGeom.mjGEOM_CYLINDER, rgba=np.array([0.85, 0.1, 0.1, 0.45]), label="")
+        return True
+    except Exception:  # renderer without marker support
+        return False
 
 
 if __name__ == "__main__":

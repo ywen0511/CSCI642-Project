@@ -6,35 +6,65 @@ import subprocess
 import sys
 from pathlib import Path
 
-from .environment import CONDITIONS, distance, make_task
-from .train import read_config
+from .environment import CONDITIONS, distance, make_task, reward_center
+from .train import PREF_SCHEMA, read_config
 from .verify_checkpoint import verify
 
 FEEDBACK_FIELDS = {"simulated_label", "p_error", "trial_id", "source_label", "event_index"}
 
 
 def check_transitions(path, condition, cfg):
-    """Neutral segments skip feedback; ideal signs follow the label; baselines get no EEG reward."""
+    """Neutral segments skip feedback; ideal signs follow the label; baselines get no EEG reward.
+    EEG rewards equal w (c - p) with the condition's center (0.5 in v2, c_m in v3/preference). For preference
+    runs the geometry columns are recomputed from the logged positions and a segment with any violation must
+    carry label 1."""
     import csv
     w = cfg["eeg_weight"]
+    center = reward_center(cfg, condition)
+    pref = cfg["schema"] == PREF_SCHEMA
+    if pref:
+        from .preference import Geometry
+        counts_pref = {"violation_steps": 0, "violation_segments": 0}
+    seg_violation = False
     counts = {"rows": 0, "segment_end": 0, "eligible": 0, "events": 0, "neutral": 0, "label0": 0, "label1": 0}
     with open(path, newline="") as f:
         for r in csv.DictReader(f):
             counts["rows"] += 1
             seg, elig, ev = int(r["segment_end"]), int(r["feedback_eligible"]), int(r["feedback_event"])
+            if pref:
+                geo = Geometry([float(r["start_x"]), float(r["start_y"])], [float(r["goal_x"]), float(r["goal_y"])],
+                               cfg["preference"])
+                c = geo.classify([float(r["px"]), float(r["py"])])
+                assert abs(c["a"] - float(r["a"])) < 1e-9 and abs(c["l"] - float(r["l"])) < 1e-9
+                assert (int(c["pillar"]), int(c["right_corridor"]), int(c["violation"])) == \
+                    (int(r["pillar"]), int(r["right_corridor"]), int(r["violation"]))
+                if int(r["episode_step"]) == 1:
+                    seg_violation = False
+                seg_violation |= c["violation"]
+                assert int(r["segment_violation"]) == int(seg_violation)
+                counts_pref["violation_steps"] += int(c["violation"])
             counts["segment_end"] += seg
             counts["eligible"] += elig
             counts["events"] += ev
             assert not (elig and not seg) and not (ev and not elig)
+            violated_segment = pref and seg_violation
+            if seg:
+                if violated_segment:
+                    counts_pref["violation_segments"] += 1
+                seg_violation = False
             if seg and not elig:
                 counts["neutral"] += 1
+                assert not violated_segment
                 assert abs(float(r["segment_progress"])) <= cfg["error_epsilon_m"] + 1e-12
             if not elig:
                 assert all(r[k] == "" for k in FEEDBACK_FIELDS) and float(r["eeg_reward"]) == 0.0
                 continue
             label = int(r["simulated_label"])
             counts[f"label{label}"] += 1
-            assert (float(r["segment_progress"]) < 0) == (label == 1)
+            if violated_segment:
+                assert label == 1
+            else:
+                assert (float(r["segment_progress"]) < 0) == (label == 1)
             if condition == "ideal":
                 assert float(r["p_error"]) == label
                 assert abs(float(r["eeg_reward"]) - (w / 2 if label == 0 else -w / 2)) < 1e-12
@@ -42,13 +72,15 @@ def check_transitions(path, condition, cfg):
                 assert r["p_error"] == "" and float(r["eeg_reward"]) == 0.0 and not ev
             else:
                 p = float(r["p_error"])
-                assert abs(float(r["eeg_reward"]) - w * (0.5 - p)) < 1e-12
+                assert abs(float(r["eeg_reward"]) - w * (center - p)) < 1e-12
                 if not condition.startswith("independent_"):
                     assert int(r["source_label"]) == label
     if condition in ("sparse", "dense"):
         assert counts["events"] == 0
     else:
         assert counts["events"] == counts["eligible"] > 0
+    if pref:
+        counts.update(counts_pref)
     return counts
 
 
@@ -96,12 +128,15 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--out", required=True)
     p.add_argument("--feedback-dir", default="artifacts/rl_feedback")
+    p.add_argument("--config", default="rl/protocol.json",
+                   help="protocol to smoke-test (v2 default; a v3 or preference candidate config)")
     a = p.parse_args()
     out = Path(a.out)
     out.mkdir(parents=True, exist_ok=False)
     report = {"ok": False, "scope": "CPU integration only; not a trained-policy performance result", "conditions": {}}
     try:
-        cfg = copy.deepcopy(read_config("rl/protocol.json", "pilot"))
+        cfg = copy.deepcopy(read_config(a.config, "pilot"))
+        report["config"] = {"path": a.config, "schema": cfg["schema"], "reward_center": cfg["reward_center"]}
         env = make_task(cfg)
         try:
             obs, _ = env.reset(seed=0)
@@ -116,7 +151,12 @@ def main():
             report["environment_checks"] = {"steps": 50, "ok": True}
         finally:
             env.close()
-        report["scripted_feedback_check"] = scripted_feedback_check(cfg)
+        if cfg["schema"] == PREF_SCHEMA:
+            # straight toward-goal moves cross the pillar here; the preference geometry has its own scripted
+            # pre-run check (scripts/final_v3_pref_geometry_check.py)
+            report["scripted_feedback_check"] = "skipped for the preference task (see geometry check)"
+        else:
+            report["scripted_feedback_check"] = scripted_feedback_check(cfg)
         # 250 steps = 5 episodes, so SB3 episode logging (every 4 episodes) is exercised
         cfg.update(total_timesteps=250, checkpoint_every_steps=80, eval_every_steps=80, eval_episodes=2)
         cfg["sac"].update(learning_starts=20, batch_size=16, buffer_size=500, policy_kwargs={"net_arch": [32, 32]})

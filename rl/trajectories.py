@@ -16,14 +16,16 @@ import numpy as np
 from stable_baselines3 import SAC
 
 from .checkpoint import validate_snapshot
-from .environment import distance, make_task
+from .environment import distance
+from .train import PREF_SCHEMA, make_env
 
 
 def rollout(checkpoint, seeds):
     meta = validate_snapshot(checkpoint)
     cfg = meta["run_spec"]["config"]
     model = SAC.load(Path(checkpoint) / "model.zip", device="cpu")
-    env = make_task(cfg)
+    env = make_env(cfg)
+    pref = cfg["schema"] == PREF_SCHEMA
     episodes = []
     try:
         for seed in seeds:
@@ -39,6 +41,13 @@ def rollout(checkpoint, seeds):
                              "final_distance": distance(obs),
                              "first_success_step": next((i for i, p in enumerate(path)
                                                          if np.linalg.norm(np.array(p) - goal) < cfg["goal_tolerance_m"]), None)})
+            if pref:
+                from .preference import Geometry, episode_metrics
+                geo = Geometry(path[0], goal, cfg["preference"])
+                episodes[-1]["preference"] = {
+                    "pillar_center_xy": geo.m.tolist(), "pillar_radius_m": geo.R, "corridor_a": [geo.a0, geo.a1],
+                    "start_xy": geo.s0.tolist(), "goal_xy": geo.g.tolist(),
+                    **episode_metrics(geo, path, bool(info["is_success"]))}
     finally:
         env.close()
     return {"checkpoint": str(checkpoint), "run_spec": {k: meta["run_spec"][k] for k in ("condition", "subject", "seed", "phase")},
@@ -63,6 +72,18 @@ def plot(result, out):
                 ax.plot(g[:, a], g[:, b], color=colors[k % 10], lw=1.4, label=f"{label} ({status})")
                 ax.scatter(g[0, a], g[0, b], color=colors[k % 10], marker="o", s=12)
             goal = ep["goal"]
+            pref = ep.get("preference")
+            if pref and name == "x-y":
+                # virtual pillar (no collision) and the dispreferred right-hand corridor
+                s0, g = np.array(pref["start_xy"]), np.array(pref["goal_xy"])
+                u = (g - s0) / np.linalg.norm(g - s0)
+                right = np.array([u[1], -u[0]])
+                a0, a1 = pref["corridor_a"]
+                D = np.linalg.norm(g - s0)
+                corners = [s0 + a0 * D * u, s0 + a1 * D * u, s0 + a1 * D * u + 0.12 * right, s0 + a0 * D * u + 0.12 * right]
+                ax.add_patch(plt.Polygon(corners, color="tab:red", alpha=0.12, label="right corridor (dispreferred)"))
+                ax.add_patch(plt.Circle(tuple(pref["pillar_center_xy"]), pref["pillar_radius_m"], color="tab:red",
+                                        alpha=0.5, label="virtual pillar"))
             ax.add_patch(plt.Circle((goal[a], goal[b]), 0.05, color="k", fill=False, ls=":"))
             ax.scatter(goal[a], goal[b], marker="*", color="k", s=80)
             ax.set_title(f"goal seed {seed}, {name} projection")

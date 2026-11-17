@@ -24,12 +24,57 @@ from .environment import CONDITIONS, FeedbackReward, distance, make_task
 from .feedback import FeedbackLibrary, PROFILE, ROOT, sha256
 
 
+V2_SCHEMA = "csci642-rl-stage2/v2"
+V3_SCHEMA = "csci642-rl-stage2/v3"
+PREF_SCHEMA = "csci642-rl-pref/v1"
+CENTER_KEYS = ("eegnet", "cbramod", "ideal")
+
+
+def validate_centers(cfg):
+    """Protocol v3 / preference: per-decoder centers c_m must equal the committed centers file (validation
+    participants only), identified by its SHA-256; ideal keeps 0.5."""
+    center = cfg.get("reward_center")
+    if not isinstance(center, dict) or sorted(center) != sorted(CENTER_KEYS):
+        raise ValueError(f"reward_center must be an object with keys {CENTER_KEYS}")
+    if center["ideal"] != 0.5:
+        raise ValueError("ideal keeps reward center 0.5")
+    for key, value in center.items():
+        if isinstance(value, bool) or not isinstance(value, (int, float)) or not math.isfinite(value) or not 0 < value < 1:
+            raise ValueError(f"Invalid reward center {key}")
+    rel = cfg.get("centers_file")
+    if not isinstance(rel, str) or Path(rel).is_absolute() or ".." in Path(rel).parts:
+        raise ValueError("centers_file must be a repository-relative path")
+    path = ROOT / rel
+    if not path.is_file():
+        raise ValueError(f"Missing centers file: {rel}")
+    if sha256(path) != cfg.get("centers_sha256"):
+        raise ValueError("Centers file checksum mismatch")
+    data = json.loads(path.read_text())
+    if data.get("schema") != "csci642-rl-centers/v1" or data.get("split") != "validation":
+        raise ValueError("Centers must come from the validation participants")
+    if data.get("centers") != center:
+        raise ValueError("reward_center differs from the centers file")
+
+
 def read_config(path, phase):
     cfg = json.loads(Path(path).read_text())
-    if cfg.get("schema") != "csci642-rl-stage2/v2":
-        raise ValueError("Expected protocol v2; legacy v1 runs use different reward/feedback semantics")
-    if cfg.get("feedback_rule") != "distance_change_deadband" or cfg.get("reward_center") != 0.5:
-        raise ValueError("Protocol v2 requires the distance-change deadband and reward_center=0.5")
+    schema = cfg.get("schema")
+    if schema == V2_SCHEMA:
+        if cfg.get("feedback_rule") != "distance_change_deadband" or cfg.get("reward_center") != 0.5:
+            raise ValueError("Protocol v2 requires the distance-change deadband and reward_center=0.5")
+    elif schema == V3_SCHEMA:
+        if cfg.get("feedback_rule") != "distance_change_deadband":
+            raise ValueError("Protocol v3 keeps the distance-change deadband")
+        validate_centers(cfg)
+    elif schema == PREF_SCHEMA:
+        from .preference import validate_preference_config
+        if cfg.get("feedback_rule") != "distance_change_deadband_with_route_preference":
+            raise ValueError("Preference protocol requires the route-preference feedback rule")
+        validate_centers(cfg)
+        validate_preference_config(cfg)
+    else:
+        raise ValueError("Expected protocol v2, v3 or the preference extension; legacy v1 runs use different "
+                         "reward/feedback semantics")
     for name in ("feedback_interval_steps", "max_episode_steps", "eval_episodes", "eval_every_steps",
                  "checkpoint_every_steps", "total_timesteps", "torch_threads"):
         if not isinstance(cfg[name], int) or cfg[name] < 1:
@@ -95,8 +140,32 @@ def check_episode_seed_range(cfg, seed, total_steps):
             raise ValueError("Training episode seed range overlaps held-out evaluation/render goal seeds")
 
 
+def training_sources(cfg):
+    names = ["train.py", "environment.py", "feedback.py", "checkpoint.py"]
+    if cfg["schema"] == PREF_SCHEMA:
+        names.append("preference.py")
+    return names
+
+
+def make_env(cfg):
+    if cfg["schema"] == PREF_SCHEMA:
+        from .preference import make_preference_task
+        return make_preference_task(cfg)
+    return make_task(cfg)
+
+
+def make_wrapper(cfg, *args, **kwargs):
+    if cfg["schema"] == PREF_SCHEMA:
+        from .preference import PreferenceFeedbackReward
+        return PreferenceFeedbackReward(*args, **kwargs)
+    return FeedbackReward(*args, **kwargs)
+
+
 def evaluate(model, cfg):
     """Identical held-out goal seeds and sparse-only evaluation for every condition."""
+    if cfg["schema"] == PREF_SCHEMA:
+        from .preference import evaluate_preference
+        return evaluate_preference(model, cfg)
     env = make_task(cfg)
     episodes = []
     try:
@@ -180,14 +249,13 @@ def run(args):
             "phase": args.phase, "seed": args.seed, "feedback_split": split if library else None,
             "feedback_table_sha256": library.table_sha256 if library else None,
             "feedback_profile_sha256": sha256(PROFILE),
-            "training_source_sha256": {name: sha256(ROOT / "rl" / name) for name in
-                                       ("train.py", "environment.py", "feedback.py", "checkpoint.py")}}
+            "training_source_sha256": {name: sha256(ROOT / "rl" / name) for name in training_sources(cfg)}}
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=False)
     (out / "run.json").write_text(json.dumps(spec, indent=2) + "\n")
     torch.set_num_threads(cfg["torch_threads"])
-    env = make_task(cfg)
-    wrapper = FeedbackReward(env, cfg, args.condition, args.seed, library, args.subject, out / "transitions.csv")
+    env = make_env(cfg)
+    wrapper = make_wrapper(cfg, env, cfg, args.condition, args.seed, library, args.subject, out / "transitions.csv")
     monitored = Monitor(wrapper, str(out / "monitor.csv"))
     status = {"completed": False, "requested_additional_steps": budget, "resume_from": args.resume}
     try:

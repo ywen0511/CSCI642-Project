@@ -34,7 +34,25 @@ def error_label(start_distance, end_distance, epsilon_m):
     return int(change > 0)
 
 
+def reward_center(cfg, condition):
+    """EEG reward center: the scalar 0.5 of protocol v2, or the per-decoder c_m of protocol v3 / the preference
+    extension (independent_<m> uses c_m of decoder m; ideal keeps 0.5). None for conditions without EEG reward."""
+    if condition in ("sparse", "dense"):
+        return None
+    center = cfg["reward_center"]
+    if not isinstance(center, dict):
+        return center
+    return center["ideal"] if condition == "ideal" else center[condition.removeprefix("independent_")]
+
+
 class FeedbackReward(gym.Wrapper):
+    """Task reward plus replayed EEG feedback at labeled 5-step segment ends.
+
+    Subclasses (rl.preference) extend the per-step annotation and the segment label through
+    annotate / segment_label / close_segment and add log columns through log_fields.
+    """
+    log_fields = LOG_FIELDS
+
     def __init__(self, env, config, condition, seed, library=None, subject=None, log_path=None):
         super().__init__(env)
         if condition not in CONDITIONS:
@@ -46,6 +64,7 @@ class FeedbackReward(gym.Wrapper):
         # disjoint goal sequences (seed + k would make seeds 0/1/2 shifted copies).
         self.episode_seed_base = int(seed) * int(config.get("training_episode_seed_stride", 1))
         self.feedback_seed = int(seed) + int(config["feedback_seed_offset"])
+        self.center = reward_center(config, condition)
         self.step_count = self.episode_count = self.event_count = 0
         self.episode_step = 0
         self.previous = self.segment_start = None
@@ -56,7 +75,7 @@ class FeedbackReward(gym.Wrapper):
                 raise ValueError("This condition requires a participant-specific feedback library")
         if log_path:
             self.handle = Path(log_path).open("x", newline="")
-            self.writer = csv.DictWriter(self.handle, fieldnames=LOG_FIELDS)
+            self.writer = csv.DictWriter(self.handle, fieldnames=self.log_fields)
             self.writer.writeheader()
 
     def reset(self, *, seed=None, options=None):
@@ -75,6 +94,7 @@ class FeedbackReward(gym.Wrapper):
             raise RuntimeError("Call reset first")
         obs, task, terminated, truncated, info = self.env.step(action)
         d = distance(obs)
+        annotations = self.annotate(obs)
         self.step_count += 1
         self.episode_step += 1
         self.segment_steps += 1
@@ -87,7 +107,7 @@ class FeedbackReward(gym.Wrapper):
         segment_progress = self.segment_start - d
         eeg = 0.0
         if segment_end:
-            candidate = error_label(self.segment_start, d, self.cfg["error_epsilon_m"])
+            candidate = self.segment_label(self.segment_start, d)
             eligible = candidate is not None
             if eligible:
                 label = candidate
@@ -99,12 +119,13 @@ class FeedbackReward(gym.Wrapper):
                                               event, self.condition.startswith("independent_"))
                     p, trial, source_label = row["p_error"], row["trial_id"], row["label"]
                 if p != "":
-                    eeg = self.cfg["eeg_weight"] * (0.5 - p)
+                    eeg = self.cfg["eeg_weight"] * (self.center - p)
                 # Count labeled opportunities, not skipped segments. Neutral
                 # segments never sample a trial or advance this sampling key.
                 self.event_count += 1
             # Always close the segment, even when no feedback is eligible.
             self.segment_start, self.segment_steps = d, 0
+            self.close_segment()
         reward = float(task) + dense + eeg
         if not math.isfinite(reward):
             raise ValueError("Nonfinite reward")
@@ -115,6 +136,7 @@ class FeedbackReward(gym.Wrapper):
                       source_label=source_label, p_error=p, task_reward=float(task),
                       dense_reward=dense, eeg_reward=eeg, reward=reward,
                       terminated=int(terminated), truncated=int(truncated))
+        record.update(annotations)
         if self.writer:
             self.writer.writerow(record)
         self.previous = d
@@ -122,6 +144,16 @@ class FeedbackReward(gym.Wrapper):
         # counter as "episode_index" in info. The CSV log keeps the "episode" column.
         info_record = {("episode_index" if k == "episode" else k): v for k, v in record.items()}
         return obs, reward, terminated, truncated, {**info, **info_record}
+
+    def annotate(self, obs):
+        """Extra per-step log fields (none for the main task)."""
+        return {}
+
+    def segment_label(self, start_distance, end_distance):
+        return error_label(start_distance, end_distance, self.cfg["error_epsilon_m"])
+
+    def close_segment(self):
+        """Called whenever a segment closes (labeled or neutral)."""
 
     def next_episode_seed(self):
         return self.episode_seed_base + self.episode_count

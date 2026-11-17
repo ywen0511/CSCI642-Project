@@ -24,6 +24,13 @@ from .suite import SHARED
 from .summarize import summarize
 
 METRICS = ("success_rate", "ever_success_rate", "mean_final_distance", "mean_task_return", "normalized_auc_success")
+# route-preference suites (rl.preference) additionally report these per-run metrics
+PREF_METRICS = ("preferred_pass_rate", "violation_free_rate", "pillar_entry_rate", "right_corridor_entry_rate",
+                "mean_path_length", "normalized_auc_preferred_pass")
+
+
+def suite_metrics(rows):
+    return METRICS + PREF_METRICS if rows and "preferred_pass_rate" in rows[0] else METRICS
 MAIN = ("sparse", "dense", "eegnet", "cbramod")
 DIAGNOSTIC = ("ideal", "independent_eegnet", "independent_cbramod")
 ORDER = MAIN + DIAGNOSTIC
@@ -125,7 +132,7 @@ def feedback_diagnostics(run_dir, bin_steps):
     return out, timeline
 
 
-def aggregate(rows):
+def aggregate(rows, metrics=METRICS):
     """Seed mean/SD per (condition, subject), then participant macro-average for EEG conditions."""
     by_cs = defaultdict(list)
     for r in rows:
@@ -134,7 +141,7 @@ def aggregate(rows):
     for (condition, subject), values in sorted(by_cs.items(), key=lambda kv: (ORDER.index(kv[0][0]), kv[0][1])):
         item = {"condition": condition, "subject": subject, "n_seeds": len(values),
                 "seeds": sorted(v["seed"] for v in values)}
-        for m in METRICS:
+        for m in metrics:
             v = [x[m] for x in values]
             item[m + "_mean"], item[m + "_sd"] = statistics.mean(v), _sd(v)
         within.append(item)
@@ -148,7 +155,7 @@ def aggregate(rows):
                  "n_runs": len(runs),
                  "aggregation": "mean/SD over RL seeds" if condition in SHARED else
                  "unweighted macro-average over participants of seed means; SD over participant means"}
-        for m in METRICS:
+        for m in metrics:
             if condition in SHARED:
                 v = [r[m] for r in runs]
             else:
@@ -184,7 +191,7 @@ def write_csv(path, rows):
         w.writerows(rows)
 
 
-def plot_all(out, curves, rows, within, overall, timelines, budget):
+def plot_all(out, curves, rows, within, overall, timelines, budget, metrics=METRICS):
     import matplotlib
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
@@ -208,8 +215,13 @@ def plot_all(out, curves, rows, within, overall, timelines, budget):
         steps = [st for st, _ in sorted(next(iter(series.values())))]
         return np.array(steps), mat.mean(0), mat.std(0, ddof=1) if len(mat) > 1 else 0 * mat[0]
 
-    for metric, label, fname in (("success_rate", "final-step success rate", "curves_success"),
-                                 ("mean_final_distance", "final distance to goal (m)", "curves_distance")):
+    panels = [("success_rate", "final-step success rate", "curves_success"),
+              ("mean_final_distance", "final distance to goal (m)", "curves_distance")]
+    if "preferred_pass_rate" in metrics:
+        panels += [("preferred_pass_rate", "preferred-pass rate (left of pillar, no violation, success)",
+                    "curves_preferred_pass"),
+                   ("violation_free_rate", "violation-free episode rate", "curves_violation_free")]
+    for metric, label, fname in panels:
         fig, axes = plt.subplots(1, 2, figsize=(12, 4.2), sharey=True)
         for ax, group, title in ((axes[0], MAIN, "Main comparison"),
                                  (axes[1], ("sparse", "ideal") + DIAGNOSTIC[1:] + ("eegnet", "cbramod"),
@@ -221,7 +233,7 @@ def plot_all(out, curves, rows, within, overall, timelines, budget):
                 steps, m, s = res
                 ax.plot(steps, m, color=COLORS[condition], label=condition,
                         ls="--" if condition.startswith("independent") else "-")
-                lo, hi = (np.clip(m - s, 0, 1), np.clip(m + s, 0, 1)) if metric == "success_rate" else (m - s, m + s)
+                lo, hi = (np.clip(m - s, 0, 1), np.clip(m + s, 0, 1)) if metric.endswith("_rate") else (m - s, m + s)
                 ax.fill_between(steps, lo, hi, color=COLORS[condition], alpha=0.15)
             ax.set_title(title)
             ax.set_xlabel("environment steps")
@@ -306,16 +318,17 @@ def analyze(suite, feedback_dir, out, bin_steps=10000, plots=True):
     summary = summarize(suite)
     budget = summary["config"]["total_timesteps"]
     rows = summary["runs"]
+    metrics = suite_metrics(rows)
     curves, diagnostics, timelines = [], [], []
     for r in rows:
         run = suite / r["name"]
         for rec in load_curve(run / "evaluations.jsonl"):
             curves.append({"condition": r["condition"], "subject": r["subject"], "seed": r["seed"],
-                           "step": rec["steps"], **{m: rec[m] for m in METRICS if m in rec}})
+                           "step": rec["steps"], **{m: rec[m] for m in metrics if m in rec}})
         d, tl = feedback_diagnostics(run, bin_steps)
         diagnostics.append({"condition": r["condition"], "subject": r["subject"], "seed": r["seed"], **d})
         timelines += [{"condition": r["condition"], "subject": r["subject"], "seed": r["seed"], **t} for t in tl]
-    within, overall = aggregate(rows)
+    within, overall = aggregate(rows, metrics)
     decoders = decoder_metrics(feedback_dir, summary["split"])
     # relate fixed decoder quality to RL outcomes per participant (descriptive only)
     relation = []
@@ -329,11 +342,18 @@ def analyze(suite, feedback_dir, out, bin_steps=10000, plots=True):
                                  "decoder_auroc": d["auroc"], "decoder_balanced_accuracy": d["balanced_accuracy"],
                                  "decoder_brier": d["brier"], "rl_success_mean": w["success_rate_mean"],
                                  "rl_success_sd": w["success_rate_sd"], "rl_auc_mean": w["normalized_auc_success_mean"],
-                                 "rl_final_distance_mean": w["mean_final_distance_mean"]})
+                                 "rl_final_distance_mean": w["mean_final_distance_mean"],
+                                 **({"rl_preferred_pass_mean": w["preferred_pass_rate_mean"],
+                                     "rl_preferred_pass_auc_mean": w["normalized_auc_preferred_pass_mean"]}
+                                    if "preferred_pass_rate" in metrics else {})})
     paired = []
+    paired_metrics = ["success_rate", "normalized_auc_success"]
+    if "preferred_pass_rate" in metrics:
+        paired_metrics += ["preferred_pass_rate", "normalized_auc_preferred_pass", "violation_free_rate"]
     for a, b in (("eegnet", "sparse"), ("cbramod", "sparse"), ("eegnet", "cbramod"), ("dense", "sparse"),
-                 ("ideal", "sparse"), ("eegnet", "independent_eegnet"), ("cbramod", "independent_cbramod")):
-        for metric in ("success_rate", "normalized_auc_success"):
+                 ("ideal", "sparse"), ("eegnet", "independent_eegnet"), ("cbramod", "independent_cbramod"),
+                 ("independent_eegnet", "sparse"), ("independent_cbramod", "sparse")):
+        for metric in paired_metrics:
             paired += paired_differences(rows, a, b, metric)
     write_csv(out / "runs.csv", rows)
     write_csv(out / "by_condition_participant.csv", within)
@@ -349,7 +369,7 @@ def analyze(suite, feedback_dir, out, bin_steps=10000, plots=True):
               "by_condition_participant": within, "decoder_metrics": decoders, "decoder_vs_rl": relation}
     (out / "analysis.json").write_text(json.dumps(result, indent=2) + "\n")
     if plots:
-        plot_all(out, curves, rows, within, overall, timelines, budget)
+        plot_all(out, curves, rows, within, overall, timelines, budget, metrics)
     return result
 
 
