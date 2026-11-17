@@ -1,0 +1,127 @@
+{
+  "assignment": "FINAL_V3_HANDOFF.md (planning branch final-v3, 81813de)",
+  "execution_branch": "final-v3-experiments",
+  "phase": "stage0_merged_preflight",
+  "started_utc": "2026-11-17T21:10:00Z",
+  "complete": false,
+  "commits": {
+    "stage0_merge": "236ab493abd521f504205a9c2383dfba8a45c5e1"
+  },
+  "preflight": {
+    "compute": "GM Warren LSF cpu_ubuntu_wrn (Intel Xeon Gold 6242, 32 cores/node, 187 GB), one core per RL run",
+    "workspace": "/data/rtxw01/nbak/robot_intel/kztrgg/projs/code/csci642-v3",
+    "storage_free": "706 TB free on /data/rtxw01 (2026-11-17)",
+    "github_write": "zhengtaoyao: push true (gh api repos/ywen0511/CSCI642-Project .permissions)",
+    "release_upload": "gh CLI on the laptop (cluster has no gh); assets copied from the filer"
+  },
+  "tests": {},
+  "suites": {
+    "sensitivity_w010_final": {
+      "planned": 75,
+      "completed": 0,
+      "failed": 0,
+      "pending": 75,
+      "commit": null,
+      "release": null
+    },
+    "sensitivity_w050_final": {
+      "planned": 75,
+      "completed": 0,
+      "failed": 0,
+      "pending": 75,
+      "commit": null,
+      "release": null
+    },
+    "v3_smoke": {
+      "planned": 1,
+      "completed": 0,
+      "failed": 0,
+      "pending": 1,
+      "commit": null,
+      "release": null
+    },
+    "v3_validation_w050": {
+      "planned": 33,
+      "completed": 0,
+      "failed": 0,
+      "pending": 33,
+      "commit": null,
+      "release": null
+    },
+    "v3_validation_w100": {
+      "planned": 33,
+      "completed": 0,
+      "failed": 0,
+      "pending": 33,
+      "commit": null,
+      "release": null
+    },
+    "v3_validation_w200": {
+      "planned": 33,
+      "completed": 0,
+      "failed": 0,
+      "pending": 33,
+      "commit": null,
+      "release": null
+    },
+    "v3_final": {
+      "planned": 75,
+      "completed": 0,
+      "failed": 0,
+      "pending": 75,
+      "commit": null,
+      "release": null
+    },
+    "pref_smoke": {
+      "planned": 1,
+      "completed": 0,
+      "failed": 0,
+      "pending": 1,
+      "commit": null,
+      "release": null
+    },
+    "pref_pilots": {
+      "planned": 10,
+      "completed": 0,
+      "failed": 0,
+      "pending": 10,
+      "commit": null,
+      "release": null
+    },
+    "pref_validation_w100": {
+      "planned": 33,
+      "completed": 0,
+      "failed": 0,
+      "pending": 33,
+      "commit": null,
+      "release": null
+    },
+    "pref_validation_w200": {
+      "planned": 33,
+      "completed": 0,
+      "failed": 0,
+      "pending": 33,
+      "commit": null,
+      "release": null
+    },
+    "pref_validation_w400": {
+      "planned": 33,
+      "completed": 0,
+      "failed": 0,
+      "pending": 33,
+      "commit": null,
+      "release": null
+    },
+    "pref_final": {
+      "planned": 75,
+      "completed": 0,
+      "failed": 0,
+      "pending": 75,
+      "commit": null,
+      "release": null
+    }
+  },
+  "releases": {},
+  "blockers": [],
+  "updated_utc": "2026-11-17T21:27:04Z"
+}
