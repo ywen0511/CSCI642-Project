@@ -1,5 +1,11 @@
 # EEG-Assisted Robot Learning: proposal-aligned RL follow-up
 
+> **Next round (branch `final-v3`, planning only; nothing below has been executed by this commit).**
+> The assignment for the executing agent is [**FINAL_V3_HANDOFF.md**](FINAL_V3_HANDOFF.md): merge the
+> decoder-improvement study, run the w = 0.1 / 0.5 weight-sensitivity final suites, a centered-reward (v3)
+> follow-up, and the route-preference extension promised in the milestone report, then publish verified Releases.
+> Execution branch: `final-v3-experiments`.
+
 Repository: **ywen0511/CSCI642-Project**. This is branch **rl-v2-experiments**, the executed version of the
 `rl-proposal-v2` handoff.
 
