@@ -22,7 +22,7 @@
   "eval_episodes": 100,
   "eval_every_steps": 10000,
   "checkpoint_every_steps": 10000,
-  "total_timesteps": 150000,
+  "total_timesteps": 300000,
   "validation_seeds": [
     100,
     101,
@@ -57,8 +57,8 @@
     "min_goal_distance_xy_m": 0.15,
     "pillar_radius_m": 0.025,
     "corridor_a": [
-      0.25,
-      0.75
+      0.1,
+      0.9
     ],
     "preferred_side": "left",
     "max_goal_redraws": 10000

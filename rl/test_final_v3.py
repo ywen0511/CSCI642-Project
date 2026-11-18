@@ -177,7 +177,8 @@ class PreferenceTests(unittest.TestCase):
         env.close()
 
     def test_geometry_coordinates(self):
-        g = Geometry([0, 0, 0], [0.2, 0, 0], self.pref)
+        # explicit geometry (independent of the candidate config's corridor bounds)
+        g = Geometry([0, 0, 0], [0.2, 0, 0], {**self.pref, "pillar_radius_m": 0.025, "corridor_a": [0.25, 0.75]})
         self.assertEqual(g.coords([0.1, 0.03]), (0.5, 0.03))  # left of +x is +y
         self.assertTrue(g.classify([0.1, 0.0])["pillar"])
         self.assertTrue(g.classify([0.1, -0.03])["right_corridor"])

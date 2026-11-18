@@ -9,13 +9,13 @@ Section 7. Code: [`rl/preference.py`](../../rl/preference.py) (schema `csci642-r
 - `FetchReach-v4`, sparse task reward (success only, no preference term), 50-step episodes, 5 cm success tolerance.
   Physics and the policy observation (`observation`, `achieved_goal`, `desired_goal`) are unchanged.
 - Goal filter: after the seeded reset the goal is redrawn with the environment's own sampler and RNG until the
-  horizontal start-goal distance `D >= {min_goal_distance_xy_m} m`; the observation is recomputed by the
+  horizontal start-goal distance `D >= 0.15 m`; the observation is recomputed by the
   environment's observation function. Used for training, evaluation (goal seeds 20000-20099) and trajectory
   goals (30000-30002).
-- Virtual pillar (no collision): radius `R = {pillar_radius_m} m`, infinite in z, centred at the x-y midpoint of
+- Virtual pillar (no collision): radius `R = 0.025 m`, infinite in z, centred at the x-y midpoint of
   start and goal.
 - Simulated user preference "pass the pillar on the left": a step is a violation if at its end the gripper is
-  inside the pillar or in the right-hand corridor (`{a0} <= a <= {a1}` and `l < 0`).
+  inside the pillar or in the right-hand corridor (`0.10 <= a <= 0.90` and `l < 0`).
 - Feedback labels (5-step segments, 1 mm deadband): any violation in the segment -> label 1; otherwise the v2
   distance-change rule. Sampling of replayed EEG trials, independent controls and probabilities exactly as in
   the main study (frozen profile `configs/rl_feedback.json`, decoder seed 42).
@@ -23,17 +23,26 @@ Section 7. Code: [`rl/preference.py`](../../rl/preference.py) (schema `csci642-r
   (validation participants only); ideal `p = label` with center 0.5 (rewards +-w/2). Sparse and dense
   (`10 x` distance decrease) are task-only baselines without preference information.
 
-Pre-run geometry check (no learning): [`preference/geometry_check.json`](preference/geometry_check.json).
+Pre-run geometry check (no learning): [`preference/geometry_corridor10_90/geometry_check.json`](preference/geometry_corridor10_90/geometry_check.json) (protocol geometry; the round-1 geometry check is in `preference/geometry_corridor25_75/`).
 
 ## 2. Budget and pilots
 
-- Budget: {budget} environment steps per run, SAC hyperparameters, evaluation every 10,000 steps on 100
+- Budget: 300,000 environment steps per run (raised from 150,000 by the declared pilot-gate fallback), SAC hyperparameters, evaluation every 10,000 steps on 100
   evaluation goals, checkpoints every 10,000 steps (all as in v2).
 - Pilots (validation participants only, pilot seeds 900/901, w = 1.0): sparse, dense, ideal, EEGNet s11,
   CBraMod s13. Gate: ideal must reach a clearly higher final preferred-pass rate than sparse. Outcome and any
   gate change: [`preference/pilot_report.json`](preference/pilot_report.json) and `decisions.jsonl`.
 
-{pilot_outcome}
+**Pilot gate outcome (declared rule: ideal - sparse mean final preferred-pass >= 0.20 and ideal > sparse on both
+seeds).** Round 1 (corridor a in [0.25, 0.75], 150k steps) failed: ideal 0.03 vs sparse 0.03. Before any round-2
+result, three variants were declared in order of preference (G1 original geometry at 300k; G2 corridor
+[0.10, 0.90] at 150k; G3 corridor [0.10, 0.90] at 300k), with the rule that if none passes, G3 is used and the gate
+failure is reported. **None passed** (ideal ≈ 0.06-0.09 vs sparse ≈ 0.03-0.05, see the pilot report), so the
+declared fallback G3 is the preference protocol: corridor a in [0.10, 0.90], 300,000 steps, pillar R = 0.025 m.
+The radius was not changed: 0.025 m is the largest value that keeps the pillar edge at least 5 cm from start and
+goal at the minimum distance 0.15 m. EEG pilots were never consulted. **Consequence declared here:** because even
+noise-free (ideal) preference feedback did not teach the preference in pilots, a positive EEG result is not
+expected; validation and final suites are run as declared to measure this, and the outcome is reported as is.
 
 ## 3. Candidates and selection rule (declared before any validation run)
 

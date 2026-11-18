@@ -1,0 +1,37 @@
+{
+  "config": "configs/final_v3/pref_pilot_gate/g2_corridor10_90_150k/pref_w100.json",
+  "preference": {
+    "min_goal_distance_xy_m": 0.15,
+    "pillar_radius_m": 0.025,
+    "corridor_a": [
+      0.1,
+      0.9
+    ],
+    "preferred_side": "left",
+    "max_goal_redraws": 10000
+  },
+  "n_goals": 103,
+  "step_limit_action_units": 0.3,
+  "waypoint_offset_m": 0.06,
+  "checks": {
+    "all_goals_satisfy_distance_rule": true,
+    "straight_violates_on_every_goal": true,
+    "left_detour_reaches_goal_without_violation_on_every_goal": true,
+    "labels_match_definitions": true
+  },
+  "ok": true,
+  "D_range": [
+    0.15000227193300236,
+    0.2035033261591053
+  ],
+  "straight": {
+    "success": 103,
+    "pillar_entry": 103,
+    "right_corridor_entry": 52
+  },
+  "left_detour": {
+    "success": 103,
+    "preferred_pass": 103
+  },
+  "labeled_segments_checked": 2060
+}
