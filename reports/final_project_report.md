@@ -1,9 +1,31 @@
 # CSCI642 final project report: recorded EEG error feedback for robot reaching
 
-Repository `ywen0511/CSCI642-Project`, execution branch `rl-v2-experiments` (from `rl-proposal-v2` at
-`450205e`). Date 2026-11-10. Detailed documents: EEG stage [`eeg_results.md`](eeg_results.md); RL plan
-[`rl_v2_experiment_plan.md`](rl_v2_experiment_plan.md), execution record [`rl_v2_execution.md`](rl_v2_execution.md),
-results [`rl_v2_results.md`](rl_v2_results.md); artifact links in Section 8.
+Repository `ywen0511/CSCI642-Project`. This is the single final document for the course. It was first written for
+the v2 delivery (branch `rl-v2-experiments`, 2026-11-10) and updated in place for the final round
+(branch [`final-v3-experiments`](https://github.com/ywen0511/CSCI642-Project/tree/final-v3-experiments),
+2026-11-18, assignment [`FINAL_V3_HANDOFF.md`](../FINAL_V3_HANDOFF.md)). The v2 text of Sections 1-6 is kept; the
+final round adds Sections 3.2-3.4, 7 (milestone follow-up), 9 (numbers across documents) and the new Releases in
+Section 8.
+
+Detailed documents:
+- EEG stage: [`eeg_results.md`](eeg_results.md).
+- RL v2: plan [`rl_v2_experiment_plan.md`](rl_v2_experiment_plan.md), execution record
+  [`rl_v2_execution.md`](rl_v2_execution.md), results [`rl_v2_results.md`](rl_v2_results.md).
+- Decoder study (merged into this branch): [`decoder_improvement/final_report.md`](decoder_improvement/final_report.md).
+- Final round: [`final_v3/sensitivity_results.md`](final_v3/sensitivity_results.md),
+  [`final_v3/v3_results.md`](final_v3/v3_results.md), [`final_v3/preference_results.md`](final_v3/preference_results.md),
+  [`final_v3/execution.md`](final_v3/execution.md); status [`final_v3/status.json`](final_v3/status.json), decision log
+  [`final_v3/decisions.jsonl`](final_v3/decisions.jsonl).
+
+**Status labels used below.**
+
+| study | status |
+|---|---|
+| RL v2, w = 1.0 (Section 3.1) | **declared primary result** (plan, validation selection and freeze before the final suite) |
+| weight sensitivity w = 0.1, 0.5 (Section 3.2) | **post-hoc sensitivity analysis** (run after the v2 results were seen; not a re-selection) |
+| protocol v3, centered reward (Section 3.3) | **post-hoc follow-up with its own declared validation selection and freeze** |
+| route preference (Section 3.4) | **extension** (declared plan, pilot gate, validation selection and freeze; reused test participants) |
+| decoder improvement (Section 7) | completed separate study, negative; merged, not repeated |
 
 ## 1. Question
 
@@ -38,6 +60,8 @@ curve (learning speed). EEG conditions are macro-averaged over participants; sha
 
 ## 3. Results
 
+### 3.1 RL v2 (declared primary result, w = 1.0, unchanged)
+
 | condition | runs | final success | final distance (m) | normalized AUC |
 |---|---|---|---|---|
 | sparse | 5 | 0.942 ± 0.083 | 0.0301 | 0.659 ± 0.131 |
@@ -65,6 +89,64 @@ own label-independent control, so decoder quality matters in the expected direct
 of single-trial ErrP probabilities at AUROC 0.57-0.65 was too small to help on this task. Noise-free error
 feedback (ideal) did help, which locates the bottleneck in decoder quality rather than in the feedback mechanism.
 
+The final round (Sections 3.2-3.4) qualifies the second half of this answer: at w = 1.0 the EEG reward was mostly
+a label-free positive bonus, and removing that bonus (smaller weight or a centered reward) puts both decoders
+slightly ahead of sparse in learning speed. The v2 primary result itself is unchanged.
+
+### 3.2 Weight sensitivity, w = 0.1 and 0.5 (post-hoc sensitivity analysis)
+
+Details and generated tables: [`final_v3/sensitivity_results.md`](final_v3/sensitivity_results.md). The two weights
+the v2 rule did not select were frozen from their existing v2 validation suites (not rerun) and each run as a full
+75-run final suite from training sources identical to v2. All 10 sparse/dense runs of each suite reproduce the v2
+runs exactly ([`final_v3/sensitivity_determinism.json`](final_v3/sensitivity_determinism.json)).
+
+| condition | AUC, w = 0.1 | AUC, w = 0.5 | AUC, w = 1.0 (v2) |
+|---|---|---|---|
+| sparse | 0.659 ± 0.131 | 0.659 ± 0.131 | 0.659 ± 0.131 |
+| dense | 0.915 ± 0.033 | 0.915 ± 0.033 | 0.915 ± 0.033 |
+| EEGNet | 0.664 ± 0.015 | 0.719 ± 0.010 | 0.641 ± 0.041 |
+| CBraMod | 0.672 ± 0.064 | 0.698 ± 0.036 | 0.571 ± 0.115 |
+| ideal | 0.606 ± 0.173 | 0.762 ± 0.089 | 0.764 ± 0.097 |
+| independent EEGNet | 0.665 ± 0.031 | 0.627 ± 0.079 | 0.595 ± 0.036 |
+| independent CBraMod | 0.609 ± 0.009 | 0.614 ± 0.020 | 0.602 ± 0.038 |
+
+- w = 0.5 is the only weight at which both decoders lead sparse: paired AUC differences +0.060 (EEGNet, 10/15
+  pairs better) and +0.039 (CBraMod, 7/15 better, 1 equal); both also lead their label-independent controls
+  (+0.092, +0.084).
+- The label-independent controls fall further behind sparse as w (and with it their label-free bonus) grows.
+- The v2 rule (final success, saturated) chose w = 1.0; an AUC rule on the same validation evidence would have chosen
+  w = 0.1. Neither alternative is promoted post hoc.
+
+### 3.3 Protocol v3, centered EEG reward (post-hoc follow-up with its own validation selection)
+
+Details and generated tables: [`final_v3/v3_results.md`](final_v3/v3_results.md). The reward becomes
+`w (c_m - p_error)`, with the center `c_m` computed from the validation participants only (c_EEGNet = 0.4793,
+c_CBraMod = 0.4665, [`configs/final_v3/centers.json`](../configs/final_v3/centers.json), committed before any v3
+run). Three weights were run as complete validation suites; the declared AUC rule selected w = 0.5 (validation AUC
+0.755 vs 0.713 and 0.642), which was frozen before the 75-run final suite.
+
+| condition | runs | final success | normalized AUC |
+|---|---|---|---|
+| sparse | 5 | 0.942 ± 0.083 | 0.659 ± 0.131 |
+| dense | 5 | 1.000 ± 0.000 | 0.915 ± 0.033 |
+| EEGNet | 15 | 0.988 ± 0.009 | 0.688 ± 0.026 |
+| CBraMod | 15 | 0.967 ± 0.029 | 0.690 ± 0.010 |
+| ideal | 5 | 0.908 ± 0.169 | 0.762 ± 0.089 |
+| independent EEGNet | 15 | 0.969 ± 0.030 | 0.624 ± 0.064 |
+| independent CBraMod | 15 | 0.978 ± 0.019 | 0.642 ± 0.048 |
+
+- The bias is removed: mean EEG reward per run falls from +871 / +979 (v2) to +153 / +39.
+- Both decoders lead sparse in AUC (+0.029, 9/15 pairs; +0.031, 9/15) and their independent controls (+0.064,
+  10/15; +0.048, 11/15). EEGNet and CBraMod are now equal (-0.002).
+- Against v2 on the same participants and seeds, CBraMod's AUC rises by +0.119 (12/15 pairs) and EEGNet's by
+  +0.047.
+- Because v3 also lowers the weight, centering and weight effects are not separable: v2 at w = 0.5 (Section 3.2)
+  gives larger decoder-vs-sparse gaps than v3.
+
+### 3.4 Route-preference extension (extension)
+
+<!--PREF_RESULTS-->
+
 ## 4. Proposal deviations
 
 - **Task and simulator.** Gymnasium-Robotics FetchReach-v4 instead of Kim's Kinova pick-and-place; no claim of
@@ -80,12 +162,30 @@ feedback (ideal) did help, which locates the bottleneck in decoder quality rathe
 - **Feedback timing** (every 0.2 s of simulated time vs 2 s EEG epochs) is an abstract schedule, not a model of
   acquisition latency.
 
+- **Final round (2026-11-18).** Post-hoc sensitivity suites, a centered-reward protocol (v3) and the route-preference
+  extension were added by the final-round assignment after the v2 results; every rule, freeze and deviation is in
+  [`final_v3/decisions.jsonl`](final_v3/decisions.jsonl). The preference pilot gate failed in every declared variant;
+  the declared fallback (corridor a in [0.10, 0.90], 300k steps) was used ([`final_v3/preference_plan.md`](final_v3/preference_plan.md)).
+
 ## 5. Limitations
 
-Ceiling effect on final success (differences mainly in learning speed); three test participants and five RL
-seeds (descriptive results only, no population-level significance); privileged distance-based labels; feedback
-trials replayed with replacement (not independent human measurements); the near-ceiling selection metric chose
-the weight with the lowest validation AUC, and lower weights were evaluated on validation participants only.
+- **Ceiling effect.** Final success is near 1 for every condition; differences are mainly in learning speed (AUC).
+- **Small samples.** Three test participants and five RL seeds: means, SDs, paired differences and sign counts
+  only, no population-level significance. Decoder-score vs RL relations are descriptive, not causal.
+- **Repeated use of the test participants.** s02/s08/s09 were used for the v2 primary result and again for the
+  sensitivity, v3 and preference suites. Only v2 is a confirmatory test; the later suites are follow-up
+  evaluations on reused participants, and v3/preference results should be read as such.
+- **Replayed, not live, feedback.** Recorded EEG trials are drawn with replacement and attached to simulated
+  labels; they are not independent human responses to the robot's behaviour.
+- **Privileged geometric labels.** Labels come from the true gripper-goal distance and, for the preference task,
+  from the true pillar/corridor geometry; a real user's error perception is noisier and delayed.
+- **Abstract feedback timing.** One feedback event per 5 simulator steps (0.2 s) versus 2 s EEG epochs; not a model
+  of acquisition latency.
+- **Selection metric.** The v2 rule ranked by saturated final success and chose the weight with the lowest
+  validation AUC (Section 3.2); v3 and the preference study declared non-saturated metrics before validation.
+- **Weight and centering confounded.** v3 changes both the center and the selected weight (Section 3.3).
+- **Preference task.** Even noise-free (ideal) preference feedback failed the declared pilot gate; the preference
+  result therefore measures a task in which the feedback mechanism itself is weak (Section 3.4).
 
 ## 6. Reproducibility and compute
 
@@ -113,12 +213,18 @@ python -m rl.render_rollout record <checkpoint> --out a.json && python -m rl.ren
 python -m rl.verify_checkpoint <snapshot dir> --out verify.json
 ```
 
-## 7. Optional route-preference extension
+## 7. Milestone follow-up
 
-**Not performed.** The proposal makes it conditional on time after the main study. It would require a new
-environment with an obstacle, left/right routes, collision detection and a new label definition, which do not
-exist in FetchReach. The main study, its validation selection and the full Release delivery were completed
-instead; no claim about route preference is made.
+Every commitment of the milestone report, with its final status and evidence.
+
+| milestone commitment | status | evidence |
+|---|---|---|
+| sparse and dense task-reward baselines | done (v2 final, 5 seeds, 100 evaluation goals) | Section 3.1; [`rl_v2_results.md`](rl_v2_results.md) |
+| train and calibrate EEGNet and CBraMod on ErrP-HRI | done (participant split, validation temperature calibration) | Section 2; [`eeg_results.md`](eeg_results.md); Release `eeg-stage1-20261101-bccbb8a` |
+| integrate decoded EEG feedback into RL and compare with the baselines | done: v2 primary (EEG ≈ sparse), plus post-hoc sensitivity and centered-reward follow-up (both decoders slightly ahead of sparse in AUC) | Sections 3.1-3.3 |
+| relate decoder quality to learning | done, descriptive (EEGNet > CBraMod in v2; equal under v3; per-participant decoder-vs-RL tables) | [`rl_v2_final/decoder_vs_rl.csv`](rl_v2_final/decoder_vs_rl.csv), [`final_v3/v3_final/decoder_vs_rl.csv`](final_v3/v3_final/decoder_vs_rl.csv) |
+| freeze the CBraMod backbone / fine-tune only its last layers | done in the decoder study, negative (no change improved held-out decoding: CBraMod 0.564 ± 0.005, EEGNet 0.599 ± 0.014 over five refits); not repeated here | [`decoder_improvement/final_report.md`](decoder_improvement/final_report.md) |
+| "investigate whether using EEG signals would allow us to learn the user's preference, in addition to learning the task" | done as the route-preference extension (previously "not performed") | Section 3.4; [`final_v3/preference_results.md`](final_v3/preference_results.md) |
 
 ## 8. Artifacts
 
@@ -164,3 +270,23 @@ of any performance summary): the smoke EEGNet snapshot at step 80 continued to s
 34,999 -> 36,999, replay 40,000 -> 42,000) in a clean checkout of its training commit `50888a9`, as the
 source-hash gate requires. In both cases the restored replay transitions were unchanged, steps, updates and
 replay size increased, and the new final snapshot verified.
+
+## 9. Numbers across documents
+
+The milestone report, this report and the decoder study quote different numbers for the same decoders and
+baselines. All are correct for what they measure:
+
+| quantity | milestone report | final report (this document) | decoder study | why they differ |
+|---|---|---|---|---|
+| EEGNet test AUROC (s02/s08/s09) | 0.613 ± 0.016 (five training seeds, mean ± SD) | 0.637 (seed 42) | 0.599 ± 0.014 (five controlled refits) | the milestone averages the five historical seeds; this report uses the seed-42 model, whose calibrated probabilities were frozen for RL; the decoder study retrains the recipe on all 7 training participants with fixed epochs (no validation-based selection), which is a different pipeline, not a reproduction |
+| CBraMod test AUROC | 0.568 ± 0.007 (five seeds) | 0.573 (seed 42) | 0.564 ± 0.005 (selected frozen-backbone candidate; historical recipe refit 0.563 ± 0.006) | same as above |
+| RL sparse, normalized success AUC | 0.58 ± 0.11 (3 seeds, 30 evaluation episodes) | 0.659 ± 0.131 (5 seeds, 100 evaluation goals) | - | the milestone figures come from the milestone's preliminary baseline runs (3 seeds, 30 evaluation episodes, earlier code); the final figures come from the frozen v2 final suite (5 seeds, 100 fixed evaluation goals, corrected runner of Section 4), so seed and evaluation noise and code differ |
+| RL dense, normalized success AUC | 0.89 ± 0.08 (3 seeds, 30 episodes) | 0.915 ± 0.033 (5 seeds, 100 goals) | - | same as above |
+
+**What the RL used.** Every RL run (v2, sensitivity, v3, preference) replays the **seed-42 calibrated
+probabilities** from Release `eeg-stage1-20261101-bccbb8a` (profile `configs/rl_feedback.json`, byte-identical to
+the historical profile). The five-seed means and the decoder-study refits were never used as RL feedback, and
+`configs/rl_feedback_vnext.json` is an explicitly unused experimental profile. Source of the milestone values:
+the milestone report as quoted in [`FINAL_V3_HANDOFF.md`](../FINAL_V3_HANDOFF.md), Section 2.6; seed-42 and five-seed
+decoder values: [`eeg_results.md`](eeg_results.md); refits: [`decoder_improvement/final_report.md`](decoder_improvement/final_report.md),
+Section 6.

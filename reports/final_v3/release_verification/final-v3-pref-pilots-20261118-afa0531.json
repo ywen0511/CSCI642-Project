@@ -1,0 +1,181 @@
+{
+  "not_uploaded_assets": [],
+  "tag": "final-v3-pref-pilots-20261118-afa0531",
+  "release_url": "https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-pref-pilots-20261118-afa0531",
+  "target_commitish": "afa053148d5b329499088dd3c474845736dd0bbb",
+  "n_assets_api": 35,
+  "bytes_api": 762130547,
+  "ok": true,
+  "download_retries": 0,
+  "inventory_ok": true,
+  "sha256sums_cover_all_assets": true,
+  "sha256_mismatches": [],
+  "n_split_archives": 0,
+  "n_archives": 26,
+  "full_archive_hash_checked": 26,
+  "full_archive_mismatches": [],
+  "n_snapshots_hash_validated": 22,
+  "snapshot_hash_failures": [],
+  "n_checkpoints_inference_verified": 22,
+  "n_final_snapshots_verified": 22,
+  "n_periodic_snapshots_verified": 0,
+  "inference_failures": [],
+  "max_action_difference": 4.76837158203125e-07,
+  "tolerance": 1e-06,
+  "verification": {
+    "g1__ideal_shared_s900/ideal_shared_s900/checkpoints/final_000300000": {
+      "ok": true,
+      "max_action_difference": 2.980232238769531e-07,
+      "steps": 300000,
+      "updates": 295000,
+      "replay_size": 100000
+    },
+    "g1__ideal_shared_s901/ideal_shared_s901/checkpoints/final_000300000": {
+      "ok": true,
+      "max_action_difference": 4.76837158203125e-07,
+      "steps": 300000,
+      "updates": 295000,
+      "replay_size": 100000
+    },
+    "g1__sparse_shared_s900/sparse_shared_s900/checkpoints/final_000300000": {
+      "ok": true,
+      "max_action_difference": 2.384185791015625e-07,
+      "steps": 300000,
+      "updates": 295000,
+      "replay_size": 100000
+    },
+    "g1__sparse_shared_s901/sparse_shared_s901/checkpoints/final_000300000": {
+      "ok": true,
+      "max_action_difference": 1.1920928955078125e-07,
+      "steps": 300000,
+      "updates": 295000,
+      "replay_size": 100000
+    },
+    "g2__ideal_shared_s900/ideal_shared_s900/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 1.1920928955078125e-07,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "g2__ideal_shared_s901/ideal_shared_s901/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 2.980232238769531e-07,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "g2__sparse_shared_s900/sparse_shared_s900/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 2.384185791015625e-07,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "g2__sparse_shared_s901/sparse_shared_s901/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 1.1920928955078125e-07,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "g3__ideal_shared_s900/ideal_shared_s900/checkpoints/final_000300000": {
+      "ok": true,
+      "max_action_difference": 1.1920928955078125e-07,
+      "steps": 300000,
+      "updates": 295000,
+      "replay_size": 100000
+    },
+    "g3__ideal_shared_s901/ideal_shared_s901/checkpoints/final_000300000": {
+      "ok": true,
+      "max_action_difference": 4.76837158203125e-07,
+      "steps": 300000,
+      "updates": 295000,
+      "replay_size": 100000
+    },
+    "g3__sparse_shared_s900/sparse_shared_s900/checkpoints/final_000300000": {
+      "ok": true,
+      "max_action_difference": 2.384185791015625e-07,
+      "steps": 300000,
+      "updates": 295000,
+      "replay_size": 100000
+    },
+    "g3__sparse_shared_s901/sparse_shared_s901/checkpoints/final_000300000": {
+      "ok": true,
+      "max_action_difference": 1.1920928955078125e-07,
+      "steps": 300000,
+      "updates": 295000,
+      "replay_size": 100000
+    },
+    "round1__cbramod_s13_s900/cbramod_s13_s900/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 4.76837158203125e-07,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "round1__cbramod_s13_s901/cbramod_s13_s901/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 2.384185791015625e-07,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "round1__dense_shared_s900/dense_shared_s900/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 1.1920928955078125e-07,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "round1__dense_shared_s901/dense_shared_s901/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 4.76837158203125e-07,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "round1__eegnet_s11_s900/eegnet_s11_s900/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 3.5762786865234375e-07,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "round1__eegnet_s11_s901/eegnet_s11_s901/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 2.384185791015625e-07,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "round1__ideal_shared_s900/ideal_shared_s900/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 1.7881393432617188e-07,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "round1__ideal_shared_s901/ideal_shared_s901/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 2.384185791015625e-07,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "round1__sparse_shared_s900/sparse_shared_s900/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 2.384185791015625e-07,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    },
+    "round1__sparse_shared_s901/sparse_shared_s901/checkpoints/final_000150000": {
+      "ok": true,
+      "max_action_difference": 1.1920928955078125e-07,
+      "steps": 150000,
+      "updates": 145000,
+      "replay_size": 100000
+    }
+  }
+}

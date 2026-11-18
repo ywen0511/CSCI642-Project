@@ -1,13 +1,14 @@
 {
   "assignment": "FINAL_V3_HANDOFF.md (planning branch final-v3, 81813de)",
   "execution_branch": "final-v3-experiments",
-  "phase": "pref_pilot_gate_round2_running; uploads running",
+  "phase": "stage3_pref_validation_rerun (external kill 08:05Z); report drafting",
   "started_utc": "2026-11-17T21:10:00Z",
   "complete": false,
   "commits": {
     "stage0_merge": "236ab493abd521f504205a9c2383dfba8a45c5e1",
     "stage1_runs": "f63dc24",
-    "v3_and_pref_code": "a09817f"
+    "v3_and_pref_code": "a09817f",
+    "pref_validation": "ae633ea"
   },
   "preflight": {
     "compute": "GM Warren LSF cpu_ubuntu_wrn (Intel Xeon Gold 6242, 32 cores/node, 187 GB), one core per RL run",
@@ -94,24 +95,22 @@
       "completed": 0,
       "failed": 0,
       "pending": 33,
-      "commit": null,
-      "release": null
+      "commit": "ae633ea",
+      "note": "first attempt killed externally 08:05Z, rerun"
     },
     "pref_validation_w200": {
       "planned": 33,
       "completed": 0,
       "failed": 0,
       "pending": 33,
-      "commit": null,
-      "release": null
+      "commit": "ae633ea"
     },
     "pref_validation_w400": {
       "planned": 33,
       "completed": 0,
       "failed": 0,
       "pending": 33,
-      "commit": null,
-      "release": null
+      "commit": "ae633ea"
     },
     "pref_final": {
       "planned": 75,
@@ -122,7 +121,56 @@
       "release": null
     }
   },
-  "releases": {},
+  "releases": {
+    "final-v3-smoke-20261118-a09817f": {
+      "url": "https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-smoke-20261118-a09817f",
+      "uploaded": true,
+      "fresh_download_verified": true,
+      "report": "reports/final_v3/release_verification/final-v3-smoke-20261118-a09817f.json"
+    },
+    "final-v3-sensitivity-w010-20261118-f63dc24": {
+      "url": "https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-sensitivity-w010-20261118-f63dc24",
+      "uploaded": true,
+      "fresh_download_verified": true,
+      "report": "reports/final_v3/release_verification/final-v3-sensitivity-w010-20261118-f63dc24.json"
+    },
+    "final-v3-sensitivity-w050-20261118-f63dc24": {
+      "url": "https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-sensitivity-w050-20261118-f63dc24",
+      "uploaded": true,
+      "fresh_download_verified": true,
+      "report": "reports/final_v3/release_verification/final-v3-sensitivity-w050-20261118-f63dc24.json"
+    },
+    "final-v3-v3-validation-w050-20261118-a09817f": {
+      "url": "https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-v3-validation-w050-20261118-a09817f",
+      "uploaded": true,
+      "fresh_download_verified": true,
+      "report": "reports/final_v3/release_verification/final-v3-v3-validation-w050-20261118-a09817f.json"
+    },
+    "final-v3-v3-validation-w100-20261118-a09817f": {
+      "url": "https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-v3-validation-w100-20261118-a09817f",
+      "uploaded": true,
+      "fresh_download_verified": true,
+      "report": "reports/final_v3/release_verification/final-v3-v3-validation-w100-20261118-a09817f.json"
+    },
+    "final-v3-v3-validation-w200-20261118-a09817f": {
+      "url": "https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-v3-validation-w200-20261118-a09817f",
+      "uploaded": true,
+      "fresh_download_verified": true,
+      "report": "reports/final_v3/release_verification/final-v3-v3-validation-w200-20261118-a09817f.json"
+    },
+    "final-v3-v3-final-20261118-41109cb": {
+      "url": "https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-v3-final-20261118-41109cb",
+      "uploaded": true,
+      "fresh_download_verified": true,
+      "report": "reports/final_v3/release_verification/final-v3-v3-final-20261118-41109cb.json"
+    },
+    "final-v3-pref-pilots-20261118-afa0531": {
+      "url": "https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-pref-pilots-20261118-afa0531",
+      "uploaded": true,
+      "fresh_download_verified": true,
+      "report": "reports/final_v3/release_verification/final-v3-pref-pilots-20261118-afa0531.json"
+    }
+  },
   "blockers": [],
-  "updated_utc": "2026-11-18T05:37:30Z"
+  "updated_utc": "2026-11-18T08:13:43Z"
 }
