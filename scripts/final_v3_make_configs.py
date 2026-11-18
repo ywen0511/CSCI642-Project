@@ -57,6 +57,9 @@ def main():
     p.add_argument("--corridor", type=float, nargs=2, default=[0.25, 0.75])
     p.add_argument("--pref-steps", type=int, default=150000)
     p.add_argument("--only", choices=["v3", "pref"], help="write only one family")
+    p.add_argument("--pref-dir", default="configs/final_v3/pref_candidates",
+                   help="output directory for the preference configs (pilot-gate variants use their own directory)")
+    p.add_argument("--pref-names", nargs="*", help="subset of preference candidates to write")
     a = p.parse_args()
     v3 = base_v3()
     if a.only in (None, "v3"):
@@ -66,6 +69,8 @@ def main():
             write(ROOT / f"configs/final_v3/v3_candidates/{name}.json", cfg)
     if a.only in (None, "pref"):
         for name, w in PREF_WEIGHTS.items():
+            if a.pref_names and name not in a.pref_names:
+                continue
             cfg = copy.deepcopy(v3)
             cfg.update(schema="csci642-rl-pref/v1",
                        feedback_rule="distance_change_deadband_with_route_preference",
@@ -73,7 +78,7 @@ def main():
                        preference={"min_goal_distance_xy_m": 0.15, "pillar_radius_m": a.pillar_radius,
                                    "corridor_a": list(a.corridor), "preferred_side": "left",
                                    "max_goal_redraws": 10000})
-            write(ROOT / f"configs/final_v3/pref_candidates/{name}.json", cfg)
+            write(ROOT / a.pref_dir / f"{name}.json", cfg)
 
 
 if __name__ == "__main__":
