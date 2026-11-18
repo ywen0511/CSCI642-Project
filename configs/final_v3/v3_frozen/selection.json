@@ -1,0 +1,202 @@
+{
+  "rule": "Apply the declared validation-only selection rule to complete candidate suites.\n\nRules (all over the 12 main-decoder runs: EEGNet + CBraMod, participants s11/s13, validation seeds; ties 1e-9):\n  --metric success (default; protocol v2, reports/rl_v2_experiment_plan.md Section 4): highest mean final-step\n      success; ties: lower mean final distance, then the smaller EEG weight.\n  --metric auc (protocol v3, FINAL_V3_HANDOFF.md Section 6.3): highest mean normalized success AUC; ties: higher\n      mean final success, then the smaller EEG weight.\n  --metric preferred_pass (route preference, FINAL_V3_HANDOFF.md Section 7.3 and\n      reports/final_v3/preference_plan.md): highest mean final preferred-pass rate; ties: higher mean task\n      (final) success, then the smaller EEG weight.\nEvery candidate must be a complete suite (rl.summarize).",
+  "metric": "auc",
+  "candidates": [
+    {
+      "suite": "/data/rtxw01/nbak/robot_intel/kztrgg/projs/code/csci642-v3/runs/v3_validation_w050",
+      "eeg_weight": 0.5,
+      "selection_preferred_pass": null,
+      "dense_weight": 10.0,
+      "n_runs": 33,
+      "selection_success": 0.9858333333333333,
+      "selection_final_distance": 0.027638495840530075,
+      "selection_auc": 0.7551388888888889,
+      "n_selection_runs": 12,
+      "per_condition": {
+        "sparse": {
+          "success_rate": 1.0,
+          "mean_final_distance": 0.02590858326587466,
+          "normalized_auc_success": 0.748,
+          "n_runs": 3
+        },
+        "dense": {
+          "success_rate": 1.0,
+          "mean_final_distance": 0.021715822723382443,
+          "normalized_auc_success": 0.9042222222222223,
+          "n_runs": 3
+        },
+        "ideal": {
+          "success_rate": 1.0,
+          "mean_final_distance": 0.019276974714682194,
+          "normalized_auc_success": 0.8477777777777777,
+          "n_runs": 3
+        },
+        "eegnet": {
+          "success_rate": 0.9766666666666667,
+          "mean_final_distance": 0.030101177148689047,
+          "normalized_auc_success": 0.7586666666666666,
+          "n_runs": 6
+        },
+        "cbramod": {
+          "success_rate": 0.995,
+          "mean_final_distance": 0.025175814532371103,
+          "normalized_auc_success": 0.7516111111111111,
+          "n_runs": 6
+        },
+        "independent_eegnet": {
+          "success_rate": 0.99,
+          "mean_final_distance": 0.02046208218699789,
+          "normalized_auc_success": 0.6987777777777778,
+          "n_runs": 6
+        },
+        "independent_cbramod": {
+          "success_rate": 0.9983333333333333,
+          "mean_final_distance": 0.022581376707035167,
+          "normalized_auc_success": 0.7001666666666666,
+          "n_runs": 6
+        }
+      },
+      "training_source_sha256": {
+        "checkpoint.py": "070ac1a0c48322b20650d06bb9024b2d85fa477f6d16aff23bd8c69e4262e304",
+        "environment.py": "f1b81a0f9b35201bd27cac62dc26116821beca6f87b3506ba12eb1ab740f6c78",
+        "feedback.py": "43db672b7fe411efffbe613b313bee770a90d3d6bf5b16324f130d9cde724b3a",
+        "train.py": "db30a7904b6137c550fb8fd3b0fbf37895238be550fed73f2a0c74c1d2b3eb0a"
+      },
+      "training_git_shas": [
+        "a09817f41e7e58de7aef5d3b972fcb506985de3f"
+      ]
+    },
+    {
+      "suite": "/data/rtxw01/nbak/robot_intel/kztrgg/projs/code/csci642-v3/runs/v3_validation_w100",
+      "eeg_weight": 1.0,
+      "selection_preferred_pass": null,
+      "dense_weight": 10.0,
+      "n_runs": 33,
+      "selection_success": 0.9241666666666667,
+      "selection_final_distance": 0.02878381610193878,
+      "selection_auc": 0.7129722222222222,
+      "n_selection_runs": 12,
+      "per_condition": {
+        "sparse": {
+          "success_rate": 1.0,
+          "mean_final_distance": 0.02590858326587466,
+          "normalized_auc_success": 0.748,
+          "n_runs": 3
+        },
+        "dense": {
+          "success_rate": 1.0,
+          "mean_final_distance": 0.021715822723382443,
+          "normalized_auc_success": 0.9042222222222223,
+          "n_runs": 3
+        },
+        "ideal": {
+          "success_rate": 1.0,
+          "mean_final_distance": 0.018545763365020364,
+          "normalized_auc_success": 0.8624444444444445,
+          "n_runs": 3
+        },
+        "eegnet": {
+          "success_rate": 0.9199999999999999,
+          "mean_final_distance": 0.03075915777704531,
+          "normalized_auc_success": 0.7358888888888888,
+          "n_runs": 6
+        },
+        "cbramod": {
+          "success_rate": 0.9283333333333333,
+          "mean_final_distance": 0.026808474426832252,
+          "normalized_auc_success": 0.6900555555555555,
+          "n_runs": 6
+        },
+        "independent_eegnet": {
+          "success_rate": 0.9816666666666667,
+          "mean_final_distance": 0.023371581097539378,
+          "normalized_auc_success": 0.6219444444444444,
+          "n_runs": 6
+        },
+        "independent_cbramod": {
+          "success_rate": 0.99,
+          "mean_final_distance": 0.02380237586718515,
+          "normalized_auc_success": 0.6505555555555556,
+          "n_runs": 6
+        }
+      },
+      "training_source_sha256": {
+        "checkpoint.py": "070ac1a0c48322b20650d06bb9024b2d85fa477f6d16aff23bd8c69e4262e304",
+        "environment.py": "f1b81a0f9b35201bd27cac62dc26116821beca6f87b3506ba12eb1ab740f6c78",
+        "feedback.py": "43db672b7fe411efffbe613b313bee770a90d3d6bf5b16324f130d9cde724b3a",
+        "train.py": "db30a7904b6137c550fb8fd3b0fbf37895238be550fed73f2a0c74c1d2b3eb0a"
+      },
+      "training_git_shas": [
+        "a09817f41e7e58de7aef5d3b972fcb506985de3f"
+      ]
+    },
+    {
+      "suite": "/data/rtxw01/nbak/robot_intel/kztrgg/projs/code/csci642-v3/runs/v3_validation_w200",
+      "eeg_weight": 2.0,
+      "selection_preferred_pass": null,
+      "dense_weight": 10.0,
+      "n_runs": 33,
+      "selection_success": 0.9683333333333334,
+      "selection_final_distance": 0.022870249604184986,
+      "selection_auc": 0.6422222222222222,
+      "n_selection_runs": 12,
+      "per_condition": {
+        "sparse": {
+          "success_rate": 1.0,
+          "mean_final_distance": 0.02590858326587466,
+          "normalized_auc_success": 0.748,
+          "n_runs": 3
+        },
+        "dense": {
+          "success_rate": 1.0,
+          "mean_final_distance": 0.021715822723382443,
+          "normalized_auc_success": 0.9042222222222223,
+          "n_runs": 3
+        },
+        "ideal": {
+          "success_rate": 1.0,
+          "mean_final_distance": 0.016186583800021918,
+          "normalized_auc_success": 0.848,
+          "n_runs": 3
+        },
+        "eegnet": {
+          "success_rate": 1.0,
+          "mean_final_distance": 0.019582203764711318,
+          "normalized_auc_success": 0.6473333333333333,
+          "n_runs": 6
+        },
+        "cbramod": {
+          "success_rate": 0.9366666666666666,
+          "mean_final_distance": 0.026158295443658656,
+          "normalized_auc_success": 0.6371111111111111,
+          "n_runs": 6
+        },
+        "independent_eegnet": {
+          "success_rate": 0.985,
+          "mean_final_distance": 0.019164546426502147,
+          "normalized_auc_success": 0.5687222222222222,
+          "n_runs": 6
+        },
+        "independent_cbramod": {
+          "success_rate": 1.0,
+          "mean_final_distance": 0.02003543610014412,
+          "normalized_auc_success": 0.5185555555555555,
+          "n_runs": 6
+        }
+      },
+      "training_source_sha256": {
+        "checkpoint.py": "070ac1a0c48322b20650d06bb9024b2d85fa477f6d16aff23bd8c69e4262e304",
+        "environment.py": "f1b81a0f9b35201bd27cac62dc26116821beca6f87b3506ba12eb1ab740f6c78",
+        "feedback.py": "43db672b7fe411efffbe613b313bee770a90d3d6bf5b16324f130d9cde724b3a",
+        "train.py": "db30a7904b6137c550fb8fd3b0fbf37895238be550fed73f2a0c74c1d2b3eb0a"
+      },
+      "training_git_shas": [
+        "a09817f41e7e58de7aef5d3b972fcb506985de3f"
+      ]
+    }
+  ],
+  "selected": "/data/rtxw01/nbak/robot_intel/kztrgg/projs/code/csci642-v3/runs/v3_validation_w050",
+  "selected_eeg_weight": 0.5,
+  "reason": "highest mean normalized success AUC",
+  "rationale": "Validation-only selection by the rule declared in FINAL_V3_HANDOFF.md Section 6.3 (protocol v3) before any validation run of this suite family: highest mean normalized success AUC. Candidates (EEG weight: selection_auc / final success over the 12 EEGNet+CBraMod validation runs): v3_validation_w050 (w=0.5): 0.7551 / 0.9858; v3_validation_w100 (w=1.0): 0.7130 / 0.9242; v3_validation_w200 (w=2.0): 0.6422 / 0.9683. Selected v3_validation_w050 (EEG weight 0.5). All candidate suites are complete and preserved; no test-participant feedback was used."
+}
