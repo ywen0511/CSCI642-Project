@@ -1,0 +1,1934 @@
+[
+ {
+  "text": "0.942",
+  "value": 0.9420000000000001,
+  "source": "reports/final_v3/sensitivity_w010_final/by_condition.csv",
+  "key": "w = 0.1:sparse",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.083",
+  "value": 0.08288546314040837,
+  "source": "reports/final_v3/sensitivity_w010_final/by_condition.csv",
+  "key": "w = 0.1:sparse",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0301",
+  "value": 0.030063417079435856,
+  "source": "reports/final_v3/sensitivity_w010_final/by_condition.csv",
+  "key": "w = 0.1:sparse",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.659",
+  "value": 0.6587999999999999,
+  "source": "reports/final_v3/sensitivity_w010_final/by_condition.csv",
+  "key": "w = 0.1:sparse",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.131",
+  "value": 0.13063575314591333,
+  "source": "reports/final_v3/sensitivity_w010_final/by_condition.csv",
+  "key": "w = 0.1:sparse",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "1.000",
+  "value": 1.0,
+  "source": "reports/final_v3/sensitivity_w010_final/by_condition.csv",
+  "key": "w = 0.1:dense",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.000",
+  "value": 0.0,
+  "source": "reports/final_v3/sensitivity_w010_final/by_condition.csv",
+  "key": "w = 0.1:dense",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0214",
+  "value": 0.021445247713456128,
+  "source": "reports/final_v3/sensitivity_w010_final/by_condition.csv",
+  "key": "w = 0.1:dense",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.915",
+  "value": 0.9148666666666667,
+  "source": "reports/final_v3/sensitivity_w010_final/by_condition.csv",
+  "key": "w = 0.1:dense",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.033",
+  "value": 0.033137424294728886,
+  "source": "reports/final_v3/sensitivity_w010_final/by_condition.csv",
+  "key": "w = 0.1:dense",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.919",
+  "value": 0.9193333333333333,
+  "source": "reports/final_v3/sensitivity_w010_final/by_condition.csv",
+  "key": "w = 0.1:eegnet",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.091",
+  "value": 0.09122134253196089,
+  "source": "reports/final_v3/sensitivity_w010_final/by_condition.csv",
+  "key": "w = 0.1:eegnet",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0266",
+  "value": 0.026606687128098622,
+  "source": "reports/final_v3/sensitivity_w010_final/by_condition.csv",
+  "key": "w = 0.1:eegnet",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.664",
+  "value": 0.6636888888888889,
+  "source": "reports/final_v3/sensitivity_w010_final/by_condition.csv",
+  "key": "w = 0.1:eegnet",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.015",
+  "value": 0.014922962668813971,
+  "source": "reports/final_v3/sensitivity_w010_final/by_condition.csv",
+  "key": "w = 0.1:eegnet",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.907",
+  "value": 0.9073333333333333,
+  "source": "reports/final_v3/sensitivity_w010_final/by_condition.csv",
+  "key": "w = 0.1:cbramod",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.073",
+  "value": 0.07294746968424151,
+  "source": "reports/final_v3/sensitivity_w010_final/by_condition.csv",
+  "key": "w = 0.1:cbramod",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0426",
+  "value": 0.04261224522700579,
+  "source": "reports/final_v3/sensitivity_w010_final/by_condition.csv",
+  "key": "w = 0.1:cbramod",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.672",
+  "value": 0.6715555555555556,
+  "source": "reports/final_v3/sensitivity_w010_final/by_condition.csv",
+  "key": "w = 0.1:cbramod",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.064",
+  "value": 0.06358582418304444,
+  "source": "reports/final_v3/sensitivity_w010_final/by_condition.csv",
+  "key": "w = 0.1:cbramod",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.976",
+  "value": 0.976,
+  "source": "reports/final_v3/sensitivity_w010_final/by_condition.csv",
+  "key": "w = 0.1:ideal",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.038",
+  "value": 0.037815340802378056,
+  "source": "reports/final_v3/sensitivity_w010_final/by_condition.csv",
+  "key": "w = 0.1:ideal",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0242",
+  "value": 0.024221985434961252,
+  "source": "reports/final_v3/sensitivity_w010_final/by_condition.csv",
+  "key": "w = 0.1:ideal",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.606",
+  "value": 0.6055333333333334,
+  "source": "reports/final_v3/sensitivity_w010_final/by_condition.csv",
+  "key": "w = 0.1:ideal",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.173",
+  "value": 0.17283463516063874,
+  "source": "reports/final_v3/sensitivity_w010_final/by_condition.csv",
+  "key": "w = 0.1:ideal",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.990",
+  "value": 0.99,
+  "source": "reports/final_v3/sensitivity_w010_final/by_condition.csv",
+  "key": "w = 0.1:independent_eegnet",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.003",
+  "value": 0.003464101615137758,
+  "source": "reports/final_v3/sensitivity_w010_final/by_condition.csv",
+  "key": "w = 0.1:independent_eegnet",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0227",
+  "value": 0.02271826631860778,
+  "source": "reports/final_v3/sensitivity_w010_final/by_condition.csv",
+  "key": "w = 0.1:independent_eegnet",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.665",
+  "value": 0.6654666666666667,
+  "source": "reports/final_v3/sensitivity_w010_final/by_condition.csv",
+  "key": "w = 0.1:independent_eegnet",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.031",
+  "value": 0.030534133905079603,
+  "source": "reports/final_v3/sensitivity_w010_final/by_condition.csv",
+  "key": "w = 0.1:independent_eegnet",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.928",
+  "value": 0.9279999999999999,
+  "source": "reports/final_v3/sensitivity_w010_final/by_condition.csv",
+  "key": "w = 0.1:independent_cbramod",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.049",
+  "value": 0.04911211663123468,
+  "source": "reports/final_v3/sensitivity_w010_final/by_condition.csv",
+  "key": "w = 0.1:independent_cbramod",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0278",
+  "value": 0.027804992335983138,
+  "source": "reports/final_v3/sensitivity_w010_final/by_condition.csv",
+  "key": "w = 0.1:independent_cbramod",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.609",
+  "value": 0.6088222222222223,
+  "source": "reports/final_v3/sensitivity_w010_final/by_condition.csv",
+  "key": "w = 0.1:independent_cbramod",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.009",
+  "value": 0.008914490907962652,
+  "source": "reports/final_v3/sensitivity_w010_final/by_condition.csv",
+  "key": "w = 0.1:independent_cbramod",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.942",
+  "value": 0.9420000000000001,
+  "source": "reports/final_v3/sensitivity_w050_final/by_condition.csv",
+  "key": "w = 0.5:sparse",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.083",
+  "value": 0.08288546314040837,
+  "source": "reports/final_v3/sensitivity_w050_final/by_condition.csv",
+  "key": "w = 0.5:sparse",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0301",
+  "value": 0.030063417079435856,
+  "source": "reports/final_v3/sensitivity_w050_final/by_condition.csv",
+  "key": "w = 0.5:sparse",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.659",
+  "value": 0.6587999999999999,
+  "source": "reports/final_v3/sensitivity_w050_final/by_condition.csv",
+  "key": "w = 0.5:sparse",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.131",
+  "value": 0.13063575314591333,
+  "source": "reports/final_v3/sensitivity_w050_final/by_condition.csv",
+  "key": "w = 0.5:sparse",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "1.000",
+  "value": 1.0,
+  "source": "reports/final_v3/sensitivity_w050_final/by_condition.csv",
+  "key": "w = 0.5:dense",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.000",
+  "value": 0.0,
+  "source": "reports/final_v3/sensitivity_w050_final/by_condition.csv",
+  "key": "w = 0.5:dense",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0214",
+  "value": 0.021445247713456128,
+  "source": "reports/final_v3/sensitivity_w050_final/by_condition.csv",
+  "key": "w = 0.5:dense",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.915",
+  "value": 0.9148666666666667,
+  "source": "reports/final_v3/sensitivity_w050_final/by_condition.csv",
+  "key": "w = 0.5:dense",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.033",
+  "value": 0.033137424294728886,
+  "source": "reports/final_v3/sensitivity_w050_final/by_condition.csv",
+  "key": "w = 0.5:dense",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.971",
+  "value": 0.9706666666666667,
+  "source": "reports/final_v3/sensitivity_w050_final/by_condition.csv",
+  "key": "w = 0.5:eegnet",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.030",
+  "value": 0.029687258770949784,
+  "source": "reports/final_v3/sensitivity_w050_final/by_condition.csv",
+  "key": "w = 0.5:eegnet",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0264",
+  "value": 0.026354120164316264,
+  "source": "reports/final_v3/sensitivity_w050_final/by_condition.csv",
+  "key": "w = 0.5:eegnet",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.719",
+  "value": 0.7190888888888889,
+  "source": "reports/final_v3/sensitivity_w050_final/by_condition.csv",
+  "key": "w = 0.5:eegnet",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.010",
+  "value": 0.009659614285681803,
+  "source": "reports/final_v3/sensitivity_w050_final/by_condition.csv",
+  "key": "w = 0.5:eegnet",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.941",
+  "value": 0.9406666666666667,
+  "source": "reports/final_v3/sensitivity_w050_final/by_condition.csv",
+  "key": "w = 0.5:cbramod",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.083",
+  "value": 0.08259136355172576,
+  "source": "reports/final_v3/sensitivity_w050_final/by_condition.csv",
+  "key": "w = 0.5:cbramod",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0274",
+  "value": 0.02736605811000945,
+  "source": "reports/final_v3/sensitivity_w050_final/by_condition.csv",
+  "key": "w = 0.5:cbramod",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.698",
+  "value": 0.6979555555555556,
+  "source": "reports/final_v3/sensitivity_w050_final/by_condition.csv",
+  "key": "w = 0.5:cbramod",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.036",
+  "value": 0.03612185139424816,
+  "source": "reports/final_v3/sensitivity_w050_final/by_condition.csv",
+  "key": "w = 0.5:cbramod",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.908",
+  "value": 0.908,
+  "source": "reports/final_v3/sensitivity_w050_final/by_condition.csv",
+  "key": "w = 0.5:ideal",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.169",
+  "value": 0.1693221781102523,
+  "source": "reports/final_v3/sensitivity_w050_final/by_condition.csv",
+  "key": "w = 0.5:ideal",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0272",
+  "value": 0.027209930095218753,
+  "source": "reports/final_v3/sensitivity_w050_final/by_condition.csv",
+  "key": "w = 0.5:ideal",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.762",
+  "value": 0.7615333333333333,
+  "source": "reports/final_v3/sensitivity_w050_final/by_condition.csv",
+  "key": "w = 0.5:ideal",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.089",
+  "value": 0.08879989989984348,
+  "source": "reports/final_v3/sensitivity_w050_final/by_condition.csv",
+  "key": "w = 0.5:ideal",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.939",
+  "value": 0.9386666666666666,
+  "source": "reports/final_v3/sensitivity_w050_final/by_condition.csv",
+  "key": "w = 0.5:independent_eegnet",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.051",
+  "value": 0.05147167505855363,
+  "source": "reports/final_v3/sensitivity_w050_final/by_condition.csv",
+  "key": "w = 0.5:independent_eegnet",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0286",
+  "value": 0.028628640723808448,
+  "source": "reports/final_v3/sensitivity_w050_final/by_condition.csv",
+  "key": "w = 0.5:independent_eegnet",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.627",
+  "value": 0.6271777777777777,
+  "source": "reports/final_v3/sensitivity_w050_final/by_condition.csv",
+  "key": "w = 0.5:independent_eegnet",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.079",
+  "value": 0.07909887857986732,
+  "source": "reports/final_v3/sensitivity_w050_final/by_condition.csv",
+  "key": "w = 0.5:independent_eegnet",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.953",
+  "value": 0.9533333333333334,
+  "source": "reports/final_v3/sensitivity_w050_final/by_condition.csv",
+  "key": "w = 0.5:independent_cbramod",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.042",
+  "value": 0.042063444144926264,
+  "source": "reports/final_v3/sensitivity_w050_final/by_condition.csv",
+  "key": "w = 0.5:independent_cbramod",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0273",
+  "value": 0.027315772432036232,
+  "source": "reports/final_v3/sensitivity_w050_final/by_condition.csv",
+  "key": "w = 0.5:independent_cbramod",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.614",
+  "value": 0.6138444444444445,
+  "source": "reports/final_v3/sensitivity_w050_final/by_condition.csv",
+  "key": "w = 0.5:independent_cbramod",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.020",
+  "value": 0.020472890837867973,
+  "source": "reports/final_v3/sensitivity_w050_final/by_condition.csv",
+  "key": "w = 0.5:independent_cbramod",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.942",
+  "value": 0.9420000000000001,
+  "source": "reports/rl_v2_final/by_condition.csv",
+  "key": "w = 1.0:sparse",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.083",
+  "value": 0.08288546314040837,
+  "source": "reports/rl_v2_final/by_condition.csv",
+  "key": "w = 1.0:sparse",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0301",
+  "value": 0.030063417079435856,
+  "source": "reports/rl_v2_final/by_condition.csv",
+  "key": "w = 1.0:sparse",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.659",
+  "value": 0.6587999999999999,
+  "source": "reports/rl_v2_final/by_condition.csv",
+  "key": "w = 1.0:sparse",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.131",
+  "value": 0.13063575314591333,
+  "source": "reports/rl_v2_final/by_condition.csv",
+  "key": "w = 1.0:sparse",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "1.000",
+  "value": 1.0,
+  "source": "reports/rl_v2_final/by_condition.csv",
+  "key": "w = 1.0:dense",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.000",
+  "value": 0.0,
+  "source": "reports/rl_v2_final/by_condition.csv",
+  "key": "w = 1.0:dense",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0214",
+  "value": 0.021445247713456128,
+  "source": "reports/rl_v2_final/by_condition.csv",
+  "key": "w = 1.0:dense",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.915",
+  "value": 0.9148666666666667,
+  "source": "reports/rl_v2_final/by_condition.csv",
+  "key": "w = 1.0:dense",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.033",
+  "value": 0.033137424294728886,
+  "source": "reports/rl_v2_final/by_condition.csv",
+  "key": "w = 1.0:dense",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.968",
+  "value": 0.968,
+  "source": "reports/rl_v2_final/by_condition.csv",
+  "key": "w = 1.0:eegnet",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.034",
+  "value": 0.034117444218463994,
+  "source": "reports/rl_v2_final/by_condition.csv",
+  "key": "w = 1.0:eegnet",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0233",
+  "value": 0.023266951532218104,
+  "source": "reports/rl_v2_final/by_condition.csv",
+  "key": "w = 1.0:eegnet",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.641",
+  "value": 0.6414444444444445,
+  "source": "reports/rl_v2_final/by_condition.csv",
+  "key": "w = 1.0:eegnet",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.041",
+  "value": 0.041424648236062137,
+  "source": "reports/rl_v2_final/by_condition.csv",
+  "key": "w = 1.0:eegnet",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.952",
+  "value": 0.952,
+  "source": "reports/rl_v2_final/by_condition.csv",
+  "key": "w = 1.0:cbramod",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.063",
+  "value": 0.06286493458200684,
+  "source": "reports/rl_v2_final/by_condition.csv",
+  "key": "w = 1.0:cbramod",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0229",
+  "value": 0.022930312385035505,
+  "source": "reports/rl_v2_final/by_condition.csv",
+  "key": "w = 1.0:cbramod",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.571",
+  "value": 0.5714444444444444,
+  "source": "reports/rl_v2_final/by_condition.csv",
+  "key": "w = 1.0:cbramod",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.115",
+  "value": 0.11502342434542688,
+  "source": "reports/rl_v2_final/by_condition.csv",
+  "key": "w = 1.0:cbramod",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.986",
+  "value": 0.986,
+  "source": "reports/rl_v2_final/by_condition.csv",
+  "key": "w = 1.0:ideal",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.031",
+  "value": 0.031304951684997036,
+  "source": "reports/rl_v2_final/by_condition.csv",
+  "key": "w = 1.0:ideal",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0213",
+  "value": 0.021306196562081863,
+  "source": "reports/rl_v2_final/by_condition.csv",
+  "key": "w = 1.0:ideal",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.764",
+  "value": 0.764,
+  "source": "reports/rl_v2_final/by_condition.csv",
+  "key": "w = 1.0:ideal",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.097",
+  "value": 0.09747050836022145,
+  "source": "reports/rl_v2_final/by_condition.csv",
+  "key": "w = 1.0:ideal",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.960",
+  "value": 0.96,
+  "source": "reports/rl_v2_final/by_condition.csv",
+  "key": "w = 1.0:independent_eegnet",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.049",
+  "value": 0.04853864439804637,
+  "source": "reports/rl_v2_final/by_condition.csv",
+  "key": "w = 1.0:independent_eegnet",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0241",
+  "value": 0.024122413328069203,
+  "source": "reports/rl_v2_final/by_condition.csv",
+  "key": "w = 1.0:independent_eegnet",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.595",
+  "value": 0.5954888888888888,
+  "source": "reports/rl_v2_final/by_condition.csv",
+  "key": "w = 1.0:independent_eegnet",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.036",
+  "value": 0.0360055756999035,
+  "source": "reports/rl_v2_final/by_condition.csv",
+  "key": "w = 1.0:independent_eegnet",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.940",
+  "value": 0.94,
+  "source": "reports/rl_v2_final/by_condition.csv",
+  "key": "w = 1.0:independent_cbramod",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.078",
+  "value": 0.07787168933572715,
+  "source": "reports/rl_v2_final/by_condition.csv",
+  "key": "w = 1.0:independent_cbramod",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0385",
+  "value": 0.038457275476550035,
+  "source": "reports/rl_v2_final/by_condition.csv",
+  "key": "w = 1.0:independent_cbramod",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.602",
+  "value": 0.6023777777777778,
+  "source": "reports/rl_v2_final/by_condition.csv",
+  "key": "w = 1.0:independent_cbramod",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.038",
+  "value": 0.03779625691833834,
+  "source": "reports/rl_v2_final/by_condition.csv",
+  "key": "w = 1.0:independent_cbramod",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "-0.023",
+  "value": -0.022666666666666686,
+  "source": "reports/final_v3/sensitivity_w010_final/paired_differences.csv",
+  "key": "w = 0.1:eegnet-sparse:success_rate",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.235",
+  "value": 0.23514332002500296,
+  "source": "reports/final_v3/sensitivity_w010_final/paired_differences.csv",
+  "key": "w = 0.1:eegnet-sparse:success_rate",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.005",
+  "value": 0.004888888888888905,
+  "source": "reports/final_v3/sensitivity_w010_final/paired_differences.csv",
+  "key": "w = 0.1:eegnet-sparse:normalized_auc_success",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.121",
+  "value": 0.12050908328188029,
+  "source": "reports/final_v3/sensitivity_w010_final/paired_differences.csv",
+  "key": "w = 0.1:eegnet-sparse:normalized_auc_success",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "-0.035",
+  "value": -0.03466666666666669,
+  "source": "reports/final_v3/sensitivity_w010_final/paired_differences.csv",
+  "key": "w = 0.1:cbramod-sparse:success_rate",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.181",
+  "value": 0.18149642525667656,
+  "source": "reports/final_v3/sensitivity_w010_final/paired_differences.csv",
+  "key": "w = 0.1:cbramod-sparse:success_rate",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.013",
+  "value": 0.012755555555555565,
+  "source": "reports/final_v3/sensitivity_w010_final/paired_differences.csv",
+  "key": "w = 0.1:cbramod-sparse:normalized_auc_success",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.142",
+  "value": 0.14196330101818158,
+  "source": "reports/final_v3/sensitivity_w010_final/paired_differences.csv",
+  "key": "w = 0.1:cbramod-sparse:normalized_auc_success",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.012",
+  "value": 0.012000000000000004,
+  "source": "reports/final_v3/sensitivity_w010_final/paired_differences.csv",
+  "key": "w = 0.1:eegnet-cbramod:success_rate",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.275",
+  "value": 0.2748038261326484,
+  "source": "reports/final_v3/sensitivity_w010_final/paired_differences.csv",
+  "key": "w = 0.1:eegnet-cbramod:success_rate",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "-0.008",
+  "value": -0.007866666666666659,
+  "source": "reports/final_v3/sensitivity_w010_final/paired_differences.csv",
+  "key": "w = 0.1:eegnet-cbramod:normalized_auc_success",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.188",
+  "value": 0.18831027250301224,
+  "source": "reports/final_v3/sensitivity_w010_final/paired_differences.csv",
+  "key": "w = 0.1:eegnet-cbramod:normalized_auc_success",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "-0.071",
+  "value": -0.07066666666666667,
+  "source": "reports/final_v3/sensitivity_w010_final/paired_differences.csv",
+  "key": "w = 0.1:eegnet-independent_eegnet:success_rate",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.236",
+  "value": 0.23635526125688325,
+  "source": "reports/final_v3/sensitivity_w010_final/paired_differences.csv",
+  "key": "w = 0.1:eegnet-independent_eegnet:success_rate",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "-0.002",
+  "value": -0.0017777777777777818,
+  "source": "reports/final_v3/sensitivity_w010_final/paired_differences.csv",
+  "key": "w = 0.1:eegnet-independent_eegnet:normalized_auc_success",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.172",
+  "value": 0.17249843186159403,
+  "source": "reports/final_v3/sensitivity_w010_final/paired_differences.csv",
+  "key": "w = 0.1:eegnet-independent_eegnet:normalized_auc_success",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "-0.021",
+  "value": -0.02066666666666667,
+  "source": "reports/final_v3/sensitivity_w010_final/paired_differences.csv",
+  "key": "w = 0.1:cbramod-independent_cbramod:success_rate",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.266",
+  "value": 0.26588038843130374,
+  "source": "reports/final_v3/sensitivity_w010_final/paired_differences.csv",
+  "key": "w = 0.1:cbramod-independent_cbramod:success_rate",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.063",
+  "value": 0.06273333333333332,
+  "source": "reports/final_v3/sensitivity_w010_final/paired_differences.csv",
+  "key": "w = 0.1:cbramod-independent_cbramod:normalized_auc_success",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.174",
+  "value": 0.17407990320083677,
+  "source": "reports/final_v3/sensitivity_w010_final/paired_differences.csv",
+  "key": "w = 0.1:cbramod-independent_cbramod:normalized_auc_success",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.029",
+  "value": 0.02866666666666664,
+  "source": "reports/final_v3/sensitivity_w050_final/paired_differences.csv",
+  "key": "w = 0.5:eegnet-sparse:success_rate",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.112",
+  "value": 0.11224123679867054,
+  "source": "reports/final_v3/sensitivity_w050_final/paired_differences.csv",
+  "key": "w = 0.5:eegnet-sparse:success_rate",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.060",
+  "value": 0.060288888888888906,
+  "source": "reports/final_v3/sensitivity_w050_final/paired_differences.csv",
+  "key": "w = 0.5:eegnet-sparse:normalized_auc_success",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.095",
+  "value": 0.09453275796274183,
+  "source": "reports/final_v3/sensitivity_w050_final/paired_differences.csv",
+  "key": "w = 0.5:eegnet-sparse:normalized_auc_success",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "-0.001",
+  "value": -0.0013333333333333493,
+  "source": "reports/final_v3/sensitivity_w050_final/paired_differences.csv",
+  "key": "w = 0.5:cbramod-sparse:success_rate",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.194",
+  "value": 0.1936073591674901,
+  "source": "reports/final_v3/sensitivity_w050_final/paired_differences.csv",
+  "key": "w = 0.5:cbramod-sparse:success_rate",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.039",
+  "value": 0.03915555555555555,
+  "source": "reports/final_v3/sensitivity_w050_final/paired_differences.csv",
+  "key": "w = 0.5:cbramod-sparse:normalized_auc_success",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.088",
+  "value": 0.0884187248238228,
+  "source": "reports/final_v3/sensitivity_w050_final/paired_differences.csv",
+  "key": "w = 0.5:cbramod-sparse:normalized_auc_success",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.030",
+  "value": 0.02999999999999999,
+  "source": "reports/final_v3/sensitivity_w050_final/paired_differences.csv",
+  "key": "w = 0.5:eegnet-cbramod:success_rate",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.204",
+  "value": 0.2041008154249827,
+  "source": "reports/final_v3/sensitivity_w050_final/paired_differences.csv",
+  "key": "w = 0.5:eegnet-cbramod:success_rate",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.021",
+  "value": 0.02113333333333335,
+  "source": "reports/final_v3/sensitivity_w050_final/paired_differences.csv",
+  "key": "w = 0.5:eegnet-cbramod:normalized_auc_success",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.081",
+  "value": 0.08066654860282584,
+  "source": "reports/final_v3/sensitivity_w050_final/paired_differences.csv",
+  "key": "w = 0.5:eegnet-cbramod:normalized_auc_success",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.032",
+  "value": 0.031999999999999994,
+  "source": "reports/final_v3/sensitivity_w050_final/paired_differences.csv",
+  "key": "w = 0.5:eegnet-independent_eegnet:success_rate",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.090",
+  "value": 0.09001587161638298,
+  "source": "reports/final_v3/sensitivity_w050_final/paired_differences.csv",
+  "key": "w = 0.5:eegnet-independent_eegnet:success_rate",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.092",
+  "value": 0.09191111111111111,
+  "source": "reports/final_v3/sensitivity_w050_final/paired_differences.csv",
+  "key": "w = 0.5:eegnet-independent_eegnet:normalized_auc_success",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.165",
+  "value": 0.16489840386699806,
+  "source": "reports/final_v3/sensitivity_w050_final/paired_differences.csv",
+  "key": "w = 0.5:eegnet-independent_eegnet:normalized_auc_success",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "-0.013",
+  "value": -0.01266666666666667,
+  "source": "reports/final_v3/sensitivity_w050_final/paired_differences.csv",
+  "key": "w = 0.5:cbramod-independent_cbramod:success_rate",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.233",
+  "value": 0.233068557255054,
+  "source": "reports/final_v3/sensitivity_w050_final/paired_differences.csv",
+  "key": "w = 0.5:cbramod-independent_cbramod:success_rate",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.084",
+  "value": 0.08411111111111108,
+  "source": "reports/final_v3/sensitivity_w050_final/paired_differences.csv",
+  "key": "w = 0.5:cbramod-independent_cbramod:normalized_auc_success",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.143",
+  "value": 0.14332899587383238,
+  "source": "reports/final_v3/sensitivity_w050_final/paired_differences.csv",
+  "key": "w = 0.5:cbramod-independent_cbramod:normalized_auc_success",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.026",
+  "value": 0.025999999999999978,
+  "source": "reports/rl_v2_final/paired_differences.csv",
+  "key": "w = 1.0:eegnet-sparse:success_rate",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.120",
+  "value": 0.12046339100087033,
+  "source": "reports/rl_v2_final/paired_differences.csv",
+  "key": "w = 1.0:eegnet-sparse:success_rate",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "-0.017",
+  "value": -0.017355555555555544,
+  "source": "reports/rl_v2_final/paired_differences.csv",
+  "key": "w = 1.0:eegnet-sparse:normalized_auc_success",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.125",
+  "value": 0.12526191396409,
+  "source": "reports/rl_v2_final/paired_differences.csv",
+  "key": "w = 1.0:eegnet-sparse:normalized_auc_success",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.010",
+  "value": 0.00999999999999998,
+  "source": "reports/rl_v2_final/paired_differences.csv",
+  "key": "w = 1.0:cbramod-sparse:success_rate",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.126",
+  "value": 0.1264346245524314,
+  "source": "reports/rl_v2_final/paired_differences.csv",
+  "key": "w = 1.0:cbramod-sparse:success_rate",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "-0.087",
+  "value": -0.08735555555555555,
+  "source": "reports/rl_v2_final/paired_differences.csv",
+  "key": "w = 1.0:cbramod-sparse:normalized_auc_success",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.182",
+  "value": 0.18202164822701838,
+  "source": "reports/rl_v2_final/paired_differences.csv",
+  "key": "w = 1.0:cbramod-sparse:normalized_auc_success",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.016",
+  "value": 0.016,
+  "source": "reports/rl_v2_final/paired_differences.csv",
+  "key": "w = 1.0:eegnet-cbramod:success_rate",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.143",
+  "value": 0.14251816926774136,
+  "source": "reports/rl_v2_final/paired_differences.csv",
+  "key": "w = 1.0:eegnet-cbramod:success_rate",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.070",
+  "value": 0.07,
+  "source": "reports/rl_v2_final/paired_differences.csv",
+  "key": "w = 1.0:eegnet-cbramod:normalized_auc_success",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.204",
+  "value": 0.2039648662556046,
+  "source": "reports/rl_v2_final/paired_differences.csv",
+  "key": "w = 1.0:eegnet-cbramod:normalized_auc_success",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.008",
+  "value": 0.007999999999999991,
+  "source": "reports/rl_v2_final/paired_differences.csv",
+  "key": "w = 1.0:eegnet-independent_eegnet:success_rate",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.115",
+  "value": 0.11539992572416526,
+  "source": "reports/rl_v2_final/paired_differences.csv",
+  "key": "w = 1.0:eegnet-independent_eegnet:success_rate",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.046",
+  "value": 0.045955555555555555,
+  "source": "reports/rl_v2_final/paired_differences.csv",
+  "key": "w = 1.0:eegnet-independent_eegnet:normalized_auc_success",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.100",
+  "value": 0.10037618659811119,
+  "source": "reports/rl_v2_final/paired_differences.csv",
+  "key": "w = 1.0:eegnet-independent_eegnet:normalized_auc_success",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.012",
+  "value": 0.011999999999999995,
+  "source": "reports/rl_v2_final/paired_differences.csv",
+  "key": "w = 1.0:cbramod-independent_cbramod:success_rate",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.114",
+  "value": 0.1136536090810268,
+  "source": "reports/rl_v2_final/paired_differences.csv",
+  "key": "w = 1.0:cbramod-independent_cbramod:success_rate",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "-0.031",
+  "value": -0.030933333333333334,
+  "source": "reports/rl_v2_final/paired_differences.csv",
+  "key": "w = 1.0:cbramod-independent_cbramod:normalized_auc_success",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.192",
+  "value": 0.19203819891175253,
+  "source": "reports/rl_v2_final/paired_differences.csv",
+  "key": "w = 1.0:cbramod-independent_cbramod:normalized_auc_success",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "0.503",
+  "value": 0.50279639122352,
+  "source": "reports/final_v3/sensitivity_w010_final/feedback_diagnostics.csv",
+  "key": "w = 0.1:eegnet",
+  "column": "mean error_label_fraction"
+ },
+ {
+  "text": "9.25",
+  "value": 9.252133333333333,
+  "source": "reports/final_v3/sensitivity_w010_final/feedback_diagnostics.csv",
+  "key": "w = 0.1:eegnet",
+  "column": "mean events_per_episode"
+ },
+ {
+  "text": "+0.0032",
+  "value": 0.003156305941435856,
+  "source": "reports/final_v3/sensitivity_w010_final/feedback_diagnostics.csv",
+  "key": "w = 0.1:eegnet",
+  "column": "mean eeg_reward_mean_per_event"
+ },
+ {
+  "text": "+87.5",
+  "value": 87.51153446307087,
+  "source": "reports/final_v3/sensitivity_w010_final/feedback_diagnostics.csv",
+  "key": "w = 0.1:eegnet",
+  "column": "mean eeg_reward_sum"
+ },
+ {
+  "text": "0.434",
+  "value": 0.4338726472489521,
+  "source": "reports/final_v3/sensitivity_w010_final/feedback_diagnostics.csv",
+  "key": "w = 0.1:eegnet",
+  "column": "mean mean_p_error_label0"
+ },
+ {
+  "text": "0.503",
+  "value": 0.502569527637676,
+  "source": "reports/final_v3/sensitivity_w010_final/feedback_diagnostics.csv",
+  "key": "w = 0.1:eegnet",
+  "column": "mean mean_p_error_label1"
+ },
+ {
+  "text": "0.649",
+  "value": 0.6494008681286212,
+  "source": "reports/final_v3/sensitivity_w010_final/feedback_diagnostics.csv",
+  "key": "w = 0.1:eegnet",
+  "column": "mean event_auroc"
+ },
+ {
+  "text": "0.509",
+  "value": 0.5090208666348852,
+  "source": "reports/final_v3/sensitivity_w010_final/feedback_diagnostics.csv",
+  "key": "w = 0.1:cbramod",
+  "column": "mean error_label_fraction"
+ },
+ {
+  "text": "9.22",
+  "value": 9.217133333333333,
+  "source": "reports/final_v3/sensitivity_w010_final/feedback_diagnostics.csv",
+  "key": "w = 0.1:cbramod",
+  "column": "mean events_per_episode"
+ },
+ {
+  "text": "+0.0037",
+  "value": 0.0036608576904323944,
+  "source": "reports/final_v3/sensitivity_w010_final/feedback_diagnostics.csv",
+  "key": "w = 0.1:cbramod",
+  "column": "mean eeg_reward_mean_per_event"
+ },
+ {
+  "text": "+101.6",
+  "value": 101.56093143276001,
+  "source": "reports/final_v3/sensitivity_w010_final/feedback_diagnostics.csv",
+  "key": "w = 0.1:cbramod",
+  "column": "mean eeg_reward_sum"
+ },
+ {
+  "text": "0.443",
+  "value": 0.443082422310917,
+  "source": "reports/final_v3/sensitivity_w010_final/feedback_diagnostics.csv",
+  "key": "w = 0.1:cbramod",
+  "column": "mean mean_p_error_label0"
+ },
+ {
+  "text": "0.483",
+  "value": 0.4834143779756994,
+  "source": "reports/final_v3/sensitivity_w010_final/feedback_diagnostics.csv",
+  "key": "w = 0.1:cbramod",
+  "column": "mean mean_p_error_label1"
+ },
+ {
+  "text": "0.574",
+  "value": 0.5737617723846105,
+  "source": "reports/final_v3/sensitivity_w010_final/feedback_diagnostics.csv",
+  "key": "w = 0.1:cbramod",
+  "column": "mean event_auroc"
+ },
+ {
+  "text": "0.506",
+  "value": 0.5055726940048197,
+  "source": "reports/final_v3/sensitivity_w010_final/feedback_diagnostics.csv",
+  "key": "w = 0.1:ideal",
+  "column": "mean error_label_fraction"
+ },
+ {
+  "text": "9.26",
+  "value": 9.264266666666666,
+  "source": "reports/final_v3/sensitivity_w010_final/feedback_diagnostics.csv",
+  "key": "w = 0.1:ideal",
+  "column": "mean events_per_episode"
+ },
+ {
+  "text": "-0.0006",
+  "value": -0.0005572694004819787,
+  "source": "reports/final_v3/sensitivity_w010_final/feedback_diagnostics.csv",
+  "key": "w = 0.1:ideal",
+  "column": "mean eeg_reward_mean_per_event"
+ },
+ {
+  "text": "-16.5",
+  "value": -16.459999999999994,
+  "source": "reports/final_v3/sensitivity_w010_final/feedback_diagnostics.csv",
+  "key": "w = 0.1:ideal",
+  "column": "mean eeg_reward_sum"
+ },
+ {
+  "text": "0.000",
+  "value": 0.0,
+  "source": "reports/final_v3/sensitivity_w010_final/feedback_diagnostics.csv",
+  "key": "w = 0.1:ideal",
+  "column": "mean mean_p_error_label0"
+ },
+ {
+  "text": "1.000",
+  "value": 1.0,
+  "source": "reports/final_v3/sensitivity_w010_final/feedback_diagnostics.csv",
+  "key": "w = 0.1:ideal",
+  "column": "mean mean_p_error_label1"
+ },
+ {
+  "text": "1.000",
+  "value": 1.0,
+  "source": "reports/final_v3/sensitivity_w010_final/feedback_diagnostics.csv",
+  "key": "w = 0.1:ideal",
+  "column": "mean event_auroc"
+ },
+ {
+  "text": "0.514",
+  "value": 0.514118373524548,
+  "source": "reports/final_v3/sensitivity_w010_final/feedback_diagnostics.csv",
+  "key": "w = 0.1:independent_eegnet",
+  "column": "mean error_label_fraction"
+ },
+ {
+  "text": "9.27",
+  "value": 9.26848888888889,
+  "source": "reports/final_v3/sensitivity_w010_final/feedback_diagnostics.csv",
+  "key": "w = 0.1:independent_eegnet",
+  "column": "mean events_per_episode"
+ },
+ {
+  "text": "+0.0042",
+  "value": 0.004164198741176159,
+  "source": "reports/final_v3/sensitivity_w010_final/feedback_diagnostics.csv",
+  "key": "w = 0.1:independent_eegnet",
+  "column": "mean eeg_reward_mean_per_event"
+ },
+ {
+  "text": "+115.9",
+  "value": 115.91808786210913,
+  "source": "reports/final_v3/sensitivity_w010_final/feedback_diagnostics.csv",
+  "key": "w = 0.1:independent_eegnet",
+  "column": "mean eeg_reward_sum"
+ },
+ {
+  "text": "0.458",
+  "value": 0.45842798549863484,
+  "source": "reports/final_v3/sensitivity_w010_final/feedback_diagnostics.csv",
+  "key": "w = 0.1:independent_eegnet",
+  "column": "mean mean_p_error_label0"
+ },
+ {
+  "text": "0.458",
+  "value": 0.45821427453872154,
+  "source": "reports/final_v3/sensitivity_w010_final/feedback_diagnostics.csv",
+  "key": "w = 0.1:independent_eegnet",
+  "column": "mean mean_p_error_label1"
+ },
+ {
+  "text": "0.499",
+  "value": 0.4994966272034905,
+  "source": "reports/final_v3/sensitivity_w010_final/feedback_diagnostics.csv",
+  "key": "w = 0.1:independent_eegnet",
+  "column": "mean event_auroc"
+ },
+ {
+  "text": "0.508",
+  "value": 0.5080821276197264,
+  "source": "reports/final_v3/sensitivity_w010_final/feedback_diagnostics.csv",
+  "key": "w = 0.1:independent_cbramod",
+  "column": "mean error_label_fraction"
+ },
+ {
+  "text": "9.29",
+  "value": 9.291666666666666,
+  "source": "reports/final_v3/sensitivity_w010_final/feedback_diagnostics.csv",
+  "key": "w = 0.1:independent_cbramod",
+  "column": "mean events_per_episode"
+ },
+ {
+  "text": "+0.0043",
+  "value": 0.004284585638160989,
+  "source": "reports/final_v3/sensitivity_w010_final/feedback_diagnostics.csv",
+  "key": "w = 0.1:independent_cbramod",
+  "column": "mean eeg_reward_mean_per_event"
+ },
+ {
+  "text": "+119.2",
+  "value": 119.18138608973601,
+  "source": "reports/final_v3/sensitivity_w010_final/feedback_diagnostics.csv",
+  "key": "w = 0.1:independent_cbramod",
+  "column": "mean eeg_reward_sum"
+ },
+ {
+  "text": "0.457",
+  "value": 0.4572229480757398,
+  "source": "reports/final_v3/sensitivity_w010_final/feedback_diagnostics.csv",
+  "key": "w = 0.1:independent_cbramod",
+  "column": "mean mean_p_error_label0"
+ },
+ {
+  "text": "0.457",
+  "value": 0.4570995285147603,
+  "source": "reports/final_v3/sensitivity_w010_final/feedback_diagnostics.csv",
+  "key": "w = 0.1:independent_cbramod",
+  "column": "mean mean_p_error_label1"
+ },
+ {
+  "text": "0.500",
+  "value": 0.4997927248265911,
+  "source": "reports/final_v3/sensitivity_w010_final/feedback_diagnostics.csv",
+  "key": "w = 0.1:independent_cbramod",
+  "column": "mean event_auroc"
+ },
+ {
+  "text": "0.498",
+  "value": 0.4976617359943527,
+  "source": "reports/final_v3/sensitivity_w050_final/feedback_diagnostics.csv",
+  "key": "w = 0.5:eegnet",
+  "column": "mean error_label_fraction"
+ },
+ {
+  "text": "9.21",
+  "value": 9.213799999999999,
+  "source": "reports/final_v3/sensitivity_w050_final/feedback_diagnostics.csv",
+  "key": "w = 0.5:eegnet",
+  "column": "mean events_per_episode"
+ },
+ {
+  "text": "+0.0161",
+  "value": 0.01605144397428904,
+  "source": "reports/final_v3/sensitivity_w050_final/feedback_diagnostics.csv",
+  "key": "w = 0.5:eegnet",
+  "column": "mean eeg_reward_mean_per_event"
+ },
+ {
+  "text": "+443.5",
+  "value": 443.47594992091,
+  "source": "reports/final_v3/sensitivity_w050_final/feedback_diagnostics.csv",
+  "key": "w = 0.5:eegnet",
+  "column": "mean eeg_reward_sum"
+ },
+ {
+  "text": "0.434",
+  "value": 0.4335580939853618,
+  "source": "reports/final_v3/sensitivity_w050_final/feedback_diagnostics.csv",
+  "key": "w = 0.5:eegnet",
+  "column": "mean mean_p_error_label0"
+ },
+ {
+  "text": "0.503",
+  "value": 0.5027153706157659,
+  "source": "reports/final_v3/sensitivity_w050_final/feedback_diagnostics.csv",
+  "key": "w = 0.5:eegnet",
+  "column": "mean mean_p_error_label1"
+ },
+ {
+  "text": "0.650",
+  "value": 0.6503416354560506,
+  "source": "reports/final_v3/sensitivity_w050_final/feedback_diagnostics.csv",
+  "key": "w = 0.5:eegnet",
+  "column": "mean event_auroc"
+ },
+ {
+  "text": "0.512",
+  "value": 0.5120514772806187,
+  "source": "reports/final_v3/sensitivity_w050_final/feedback_diagnostics.csv",
+  "key": "w = 0.5:cbramod",
+  "column": "mean error_label_fraction"
+ },
+ {
+  "text": "9.21",
+  "value": 9.205777777777778,
+  "source": "reports/final_v3/sensitivity_w050_final/feedback_diagnostics.csv",
+  "key": "w = 0.5:cbramod",
+  "column": "mean events_per_episode"
+ },
+ {
+  "text": "+0.0183",
+  "value": 0.018346543202515282,
+  "source": "reports/final_v3/sensitivity_w050_final/feedback_diagnostics.csv",
+  "key": "w = 0.5:cbramod",
+  "column": "mean eeg_reward_mean_per_event"
+ },
+ {
+  "text": "+507.7",
+  "value": 507.6909338023167,
+  "source": "reports/final_v3/sensitivity_w050_final/feedback_diagnostics.csv",
+  "key": "w = 0.5:cbramod",
+  "column": "mean eeg_reward_sum"
+ },
+ {
+  "text": "0.443",
+  "value": 0.44274113183159913,
+  "source": "reports/final_v3/sensitivity_w050_final/feedback_diagnostics.csv",
+  "key": "w = 0.5:cbramod",
+  "column": "mean mean_p_error_label0"
+ },
+ {
+  "text": "0.483",
+  "value": 0.4834641095248068,
+  "source": "reports/final_v3/sensitivity_w050_final/feedback_diagnostics.csv",
+  "key": "w = 0.5:cbramod",
+  "column": "mean mean_p_error_label1"
+ },
+ {
+  "text": "0.575",
+  "value": 0.574805236604806,
+  "source": "reports/final_v3/sensitivity_w050_final/feedback_diagnostics.csv",
+  "key": "w = 0.5:cbramod",
+  "column": "mean event_auroc"
+ },
+ {
+  "text": "0.455",
+  "value": 0.45461183957338264,
+  "source": "reports/final_v3/sensitivity_w050_final/feedback_diagnostics.csv",
+  "key": "w = 0.5:ideal",
+  "column": "mean error_label_fraction"
+ },
+ {
+  "text": "9.13",
+  "value": 9.128666666666666,
+  "source": "reports/final_v3/sensitivity_w050_final/feedback_diagnostics.csv",
+  "key": "w = 0.5:ideal",
+  "column": "mean events_per_episode"
+ },
+ {
+  "text": "+0.0227",
+  "value": 0.022694080213308685,
+  "source": "reports/final_v3/sensitivity_w050_final/feedback_diagnostics.csv",
+  "key": "w = 0.5:ideal",
+  "column": "mean eeg_reward_mean_per_event"
+ },
+ {
+  "text": "+620.8",
+  "value": 620.8,
+  "source": "reports/final_v3/sensitivity_w050_final/feedback_diagnostics.csv",
+  "key": "w = 0.5:ideal",
+  "column": "mean eeg_reward_sum"
+ },
+ {
+  "text": "0.000",
+  "value": 0.0,
+  "source": "reports/final_v3/sensitivity_w050_final/feedback_diagnostics.csv",
+  "key": "w = 0.5:ideal",
+  "column": "mean mean_p_error_label0"
+ },
+ {
+  "text": "1.000",
+  "value": 1.0,
+  "source": "reports/final_v3/sensitivity_w050_final/feedback_diagnostics.csv",
+  "key": "w = 0.5:ideal",
+  "column": "mean mean_p_error_label1"
+ },
+ {
+  "text": "1.000",
+  "value": 1.0,
+  "source": "reports/final_v3/sensitivity_w050_final/feedback_diagnostics.csv",
+  "key": "w = 0.5:ideal",
+  "column": "mean event_auroc"
+ },
+ {
+  "text": "0.523",
+  "value": 0.5229265680340042,
+  "source": "reports/final_v3/sensitivity_w050_final/feedback_diagnostics.csv",
+  "key": "w = 0.5:independent_eegnet",
+  "column": "mean error_label_fraction"
+ },
+ {
+  "text": "9.28",
+  "value": 9.279311111111111,
+  "source": "reports/final_v3/sensitivity_w050_final/feedback_diagnostics.csv",
+  "key": "w = 0.5:independent_eegnet",
+  "column": "mean events_per_episode"
+ },
+ {
+  "text": "+0.0208",
+  "value": 0.020825445507763846,
+  "source": "reports/final_v3/sensitivity_w050_final/feedback_diagnostics.csv",
+  "key": "w = 0.5:independent_eegnet",
+  "column": "mean eeg_reward_mean_per_event"
+ },
+ {
+  "text": "+577.2",
+  "value": 577.1766091403698,
+  "source": "reports/final_v3/sensitivity_w050_final/feedback_diagnostics.csv",
+  "key": "w = 0.5:independent_eegnet",
+  "column": "mean eeg_reward_sum"
+ },
+ {
+  "text": "0.458",
+  "value": 0.4582274914836069,
+  "source": "reports/final_v3/sensitivity_w050_final/feedback_diagnostics.csv",
+  "key": "w = 0.5:independent_eegnet",
+  "column": "mean mean_p_error_label0"
+ },
+ {
+  "text": "0.458",
+  "value": 0.458453216958737,
+  "source": "reports/final_v3/sensitivity_w050_final/feedback_diagnostics.csv",
+  "key": "w = 0.5:independent_eegnet",
+  "column": "mean mean_p_error_label1"
+ },
+ {
+  "text": "0.501",
+  "value": 0.500984644774171,
+  "source": "reports/final_v3/sensitivity_w050_final/feedback_diagnostics.csv",
+  "key": "w = 0.5:independent_eegnet",
+  "column": "mean event_auroc"
+ },
+ {
+  "text": "0.525",
+  "value": 0.5247005842755634,
+  "source": "reports/final_v3/sensitivity_w050_final/feedback_diagnostics.csv",
+  "key": "w = 0.5:independent_cbramod",
+  "column": "mean error_label_fraction"
+ },
+ {
+  "text": "9.31",
+  "value": 9.309044444444444,
+  "source": "reports/final_v3/sensitivity_w050_final/feedback_diagnostics.csv",
+  "key": "w = 0.5:independent_cbramod",
+  "column": "mean events_per_episode"
+ },
+ {
+  "text": "+0.0214",
+  "value": 0.02143564354593891,
+  "source": "reports/final_v3/sensitivity_w050_final/feedback_diagnostics.csv",
+  "key": "w = 0.5:independent_cbramod",
+  "column": "mean eeg_reward_mean_per_event"
+ },
+ {
+  "text": "+600.3",
+  "value": 600.3254828007367,
+  "source": "reports/final_v3/sensitivity_w050_final/feedback_diagnostics.csv",
+  "key": "w = 0.5:independent_cbramod",
+  "column": "mean eeg_reward_sum"
+ },
+ {
+  "text": "0.457",
+  "value": 0.4570465573314116,
+  "source": "reports/final_v3/sensitivity_w050_final/feedback_diagnostics.csv",
+  "key": "w = 0.5:independent_cbramod",
+  "column": "mean mean_p_error_label0"
+ },
+ {
+  "text": "0.457",
+  "value": 0.4572056271129685,
+  "source": "reports/final_v3/sensitivity_w050_final/feedback_diagnostics.csv",
+  "key": "w = 0.5:independent_cbramod",
+  "column": "mean mean_p_error_label1"
+ },
+ {
+  "text": "0.500",
+  "value": 0.5004392984106829,
+  "source": "reports/final_v3/sensitivity_w050_final/feedback_diagnostics.csv",
+  "key": "w = 0.5:independent_cbramod",
+  "column": "mean event_auroc"
+ },
+ {
+  "text": "0.512",
+  "value": 0.5124754407228123,
+  "source": "reports/rl_v2_final/feedback_diagnostics.csv",
+  "key": "w = 1.0:eegnet",
+  "column": "mean error_label_fraction"
+ },
+ {
+  "text": "9.28",
+  "value": 9.279822222222222,
+  "source": "reports/rl_v2_final/feedback_diagnostics.csv",
+  "key": "w = 1.0:eegnet",
+  "column": "mean events_per_episode"
+ },
+ {
+  "text": "+0.0311",
+  "value": 0.031125343688942136,
+  "source": "reports/rl_v2_final/feedback_diagnostics.csv",
+  "key": "w = 1.0:eegnet",
+  "column": "mean eeg_reward_mean_per_event"
+ },
+ {
+  "text": "+870.6",
+  "value": 870.565516410211,
+  "source": "reports/rl_v2_final/feedback_diagnostics.csv",
+  "key": "w = 1.0:eegnet",
+  "column": "mean eeg_reward_sum"
+ },
+ {
+  "text": "0.434",
+  "value": 0.43357083116234646,
+  "source": "reports/rl_v2_final/feedback_diagnostics.csv",
+  "key": "w = 1.0:eegnet",
+  "column": "mean mean_p_error_label0"
+ },
+ {
+  "text": "0.503",
+  "value": 0.5028691461180711,
+  "source": "reports/rl_v2_final/feedback_diagnostics.csv",
+  "key": "w = 1.0:eegnet",
+  "column": "mean mean_p_error_label1"
+ },
+ {
+  "text": "0.650",
+  "value": 0.6504401950203369,
+  "source": "reports/rl_v2_final/feedback_diagnostics.csv",
+  "key": "w = 1.0:eegnet",
+  "column": "mean event_auroc"
+ },
+ {
+  "text": "0.548",
+  "value": 0.5478613273749525,
+  "source": "reports/rl_v2_final/feedback_diagnostics.csv",
+  "key": "w = 1.0:cbramod",
+  "column": "mean error_label_fraction"
+ },
+ {
+  "text": "9.32",
+  "value": 9.324777777777777,
+  "source": "reports/rl_v2_final/feedback_diagnostics.csv",
+  "key": "w = 1.0:cbramod",
+  "column": "mean events_per_episode"
+ },
+ {
+  "text": "+0.0350",
+  "value": 0.03495707314266225,
+  "source": "reports/rl_v2_final/feedback_diagnostics.csv",
+  "key": "w = 1.0:cbramod",
+  "column": "mean eeg_reward_mean_per_event"
+ },
+ {
+  "text": "+978.9",
+  "value": 978.8516906334601,
+  "source": "reports/rl_v2_final/feedback_diagnostics.csv",
+  "key": "w = 1.0:cbramod",
+  "column": "mean eeg_reward_sum"
+ },
+ {
+  "text": "0.443",
+  "value": 0.44308948643452645,
+  "source": "reports/rl_v2_final/feedback_diagnostics.csv",
+  "key": "w = 1.0:cbramod",
+  "column": "mean mean_p_error_label0"
+ },
+ {
+  "text": "0.484",
+  "value": 0.4835520686220507,
+  "source": "reports/rl_v2_final/feedback_diagnostics.csv",
+  "key": "w = 1.0:cbramod",
+  "column": "mean mean_p_error_label1"
+ },
+ {
+  "text": "0.574",
+  "value": 0.5740495891194187,
+  "source": "reports/rl_v2_final/feedback_diagnostics.csv",
+  "key": "w = 1.0:cbramod",
+  "column": "mean event_auroc"
+ },
+ {
+  "text": "0.448",
+  "value": 0.4475316076791668,
+  "source": "reports/rl_v2_final/feedback_diagnostics.csv",
+  "key": "w = 1.0:ideal",
+  "column": "mean error_label_fraction"
+ },
+ {
+  "text": "9.16",
+  "value": 9.1554,
+  "source": "reports/rl_v2_final/feedback_diagnostics.csv",
+  "key": "w = 1.0:ideal",
+  "column": "mean events_per_episode"
+ },
+ {
+  "text": "+0.0525",
+  "value": 0.0524683923208332,
+  "source": "reports/rl_v2_final/feedback_diagnostics.csv",
+  "key": "w = 1.0:ideal",
+  "column": "mean eeg_reward_mean_per_event"
+ },
+ {
+  "text": "+1441.1",
+  "value": 1441.1,
+  "source": "reports/rl_v2_final/feedback_diagnostics.csv",
+  "key": "w = 1.0:ideal",
+  "column": "mean eeg_reward_sum"
+ },
+ {
+  "text": "0.000",
+  "value": 0.0,
+  "source": "reports/rl_v2_final/feedback_diagnostics.csv",
+  "key": "w = 1.0:ideal",
+  "column": "mean mean_p_error_label0"
+ },
+ {
+  "text": "1.000",
+  "value": 1.0,
+  "source": "reports/rl_v2_final/feedback_diagnostics.csv",
+  "key": "w = 1.0:ideal",
+  "column": "mean mean_p_error_label1"
+ },
+ {
+  "text": "1.000",
+  "value": 1.0,
+  "source": "reports/rl_v2_final/feedback_diagnostics.csv",
+  "key": "w = 1.0:ideal",
+  "column": "mean event_auroc"
+ },
+ {
+  "text": "0.527",
+  "value": 0.5269407257672608,
+  "source": "reports/rl_v2_final/feedback_diagnostics.csv",
+  "key": "w = 1.0:independent_eegnet",
+  "column": "mean error_label_fraction"
+ },
+ {
+  "text": "9.31",
+  "value": 9.310622222222221,
+  "source": "reports/rl_v2_final/feedback_diagnostics.csv",
+  "key": "w = 1.0:independent_eegnet",
+  "column": "mean events_per_episode"
+ },
+ {
+  "text": "+0.0416",
+  "value": 0.0416415357282749,
+  "source": "reports/rl_v2_final/feedback_diagnostics.csv",
+  "key": "w = 1.0:independent_eegnet",
+  "column": "mean eeg_reward_mean_per_event"
+ },
+ {
+  "text": "+1172.5",
+  "value": 1172.4855726765247,
+  "source": "reports/rl_v2_final/feedback_diagnostics.csv",
+  "key": "w = 1.0:independent_eegnet",
+  "column": "mean eeg_reward_sum"
+ },
+ {
+  "text": "0.459",
+  "value": 0.4586628954984951,
+  "source": "reports/rl_v2_final/feedback_diagnostics.csv",
+  "key": "w = 1.0:independent_eegnet",
+  "column": "mean mean_p_error_label0"
+ },
+ {
+  "text": "0.458",
+  "value": 0.45809409427932657,
+  "source": "reports/rl_v2_final/feedback_diagnostics.csv",
+  "key": "w = 1.0:independent_eegnet",
+  "column": "mean mean_p_error_label1"
+ },
+ {
+  "text": "0.499",
+  "value": 0.49908749606923086,
+  "source": "reports/rl_v2_final/feedback_diagnostics.csv",
+  "key": "w = 1.0:independent_eegnet",
+  "column": "mean event_auroc"
+ },
+ {
+  "text": "0.532",
+  "value": 0.5319261680904042,
+  "source": "reports/rl_v2_final/feedback_diagnostics.csv",
+  "key": "w = 1.0:independent_cbramod",
+  "column": "mean error_label_fraction"
+ },
+ {
+  "text": "9.31",
+  "value": 9.307266666666667,
+  "source": "reports/rl_v2_final/feedback_diagnostics.csv",
+  "key": "w = 1.0:independent_cbramod",
+  "column": "mean events_per_episode"
+ },
+ {
+  "text": "+0.0429",
+  "value": 0.042865436504044466,
+  "source": "reports/rl_v2_final/feedback_diagnostics.csv",
+  "key": "w = 1.0:independent_cbramod",
+  "column": "mean eeg_reward_mean_per_event"
+ },
+ {
+  "text": "+1196.8",
+  "value": 1196.8039644930268,
+  "source": "reports/rl_v2_final/feedback_diagnostics.csv",
+  "key": "w = 1.0:independent_cbramod",
+  "column": "mean eeg_reward_sum"
+ },
+ {
+  "text": "0.457",
+  "value": 0.4570521727170283,
+  "source": "reports/rl_v2_final/feedback_diagnostics.csv",
+  "key": "w = 1.0:independent_cbramod",
+  "column": "mean mean_p_error_label0"
+ },
+ {
+  "text": "0.457",
+  "value": 0.45721183205791455,
+  "source": "reports/rl_v2_final/feedback_diagnostics.csv",
+  "key": "w = 1.0:independent_cbramod",
+  "column": "mean mean_p_error_label1"
+ },
+ {
+  "text": "0.500",
+  "value": 0.5002354940678286,
+  "source": "reports/rl_v2_final/feedback_diagnostics.csv",
+  "key": "w = 1.0:independent_cbramod",
+  "column": "mean event_auroc"
+ },
+ {
+  "text": "0.9800",
+  "value": 0.98,
+  "source": "configs/rl_v2/frozen/selection.json",
+  "key": "v2 validation candidates:w=0.1",
+  "column": "selection_success"
+ },
+ {
+  "text": "0.7622",
+  "value": 0.7622222222222222,
+  "source": "configs/rl_v2/frozen/selection.json",
+  "key": "v2 validation candidates:w=0.1",
+  "column": "selection_auc"
+ },
+ {
+  "text": "0.9858",
+  "value": 0.9858333333333333,
+  "source": "configs/rl_v2/frozen/selection.json",
+  "key": "v2 validation candidates:w=0.5",
+  "column": "selection_success"
+ },
+ {
+  "text": "0.7476",
+  "value": 0.7475833333333333,
+  "source": "configs/rl_v2/frozen/selection.json",
+  "key": "v2 validation candidates:w=0.5",
+  "column": "selection_auc"
+ },
+ {
+  "text": "0.9967",
+  "value": 0.9966666666666667,
+  "source": "configs/rl_v2/frozen/selection.json",
+  "key": "v2 validation candidates:w=1.0",
+  "column": "selection_success"
+ },
+ {
+  "text": "0.7313",
+  "value": 0.7313333333333333,
+  "source": "configs/rl_v2/frozen/selection.json",
+  "key": "v2 validation candidates:w=1.0",
+  "column": "selection_auc"
+ }
+]
