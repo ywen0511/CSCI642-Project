@@ -1,7 +1,7 @@
 {
   "assignment": "FINAL_V3_HANDOFF.md (planning branch final-v3, 81813de)",
   "execution_branch": "final-v3-experiments",
-  "phase": "stage1_and_v3_validation_and_pref_pilots_running",
+  "phase": "pref_pilot_gate_round2_running; uploads running",
   "started_utc": "2026-11-17T21:10:00Z",
   "complete": false,
   "commits": {
@@ -25,19 +25,17 @@
   "suites": {
     "sensitivity_w010_final": {
       "planned": 75,
-      "completed": 0,
+      "completed": 75,
       "failed": 0,
-      "pending": 75,
-      "commit": null,
-      "release": null
+      "pending": 0,
+      "commit": "f63dc24"
     },
     "sensitivity_w050_final": {
       "planned": 75,
-      "completed": 0,
+      "completed": 75,
       "failed": 0,
-      "pending": 75,
-      "commit": null,
-      "release": null
+      "pending": 0,
+      "commit": "f63dc24"
     },
     "v3_smoke": {
       "planned": 1,
@@ -49,35 +47,31 @@
     },
     "v3_validation_w050": {
       "planned": 33,
-      "completed": 0,
+      "completed": 33,
       "failed": 0,
-      "pending": 33,
-      "commit": null,
-      "release": null
+      "pending": 0,
+      "commit": "a09817f"
     },
     "v3_validation_w100": {
       "planned": 33,
-      "completed": 0,
+      "completed": 33,
       "failed": 0,
-      "pending": 33,
-      "commit": null,
-      "release": null
+      "pending": 0,
+      "commit": "a09817f"
     },
     "v3_validation_w200": {
       "planned": 33,
-      "completed": 0,
+      "completed": 33,
       "failed": 0,
-      "pending": 33,
-      "commit": null,
-      "release": null
+      "pending": 0,
+      "commit": "a09817f"
     },
     "v3_final": {
       "planned": 75,
-      "completed": 0,
+      "completed": 75,
       "failed": 0,
-      "pending": 75,
-      "commit": null,
-      "release": null
+      "pending": 0,
+      "commit": "41109cb"
     },
     "pref_smoke": {
       "planned": 1,
@@ -89,11 +83,11 @@
     },
     "pref_pilots": {
       "planned": 10,
-      "completed": 0,
+      "completed": 10,
       "failed": 0,
-      "pending": 10,
-      "commit": null,
-      "release": null
+      "pending": 0,
+      "commit": "a09817f",
+      "note": "round 1; gate failed; round 2 (12 ideal/sparse runs, afa0531) running"
     },
     "pref_validation_w100": {
       "planned": 33,
@@ -130,5 +124,5 @@
   },
   "releases": {},
   "blockers": [],
-  "updated_utc": "2026-11-17T21:49:45Z"
+  "updated_utc": "2026-11-18T05:37:30Z"
 }

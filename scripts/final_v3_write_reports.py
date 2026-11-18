@@ -83,11 +83,30 @@ def by_condition(d, analysis_dir, label, pref=False):
     d.add("")
 
 
+def paired_from_runs(path, pairs, metrics):
+    """Same pairing as rl.analysis.paired_differences, from runs.csv (used when an older analysis lacks a pair)."""
+    index = {(r["condition"], r["subject"], r["seed"]): r for r in rows(path)}
+    g = defaultdict(list)
+    for (cond, subject, seed), r in sorted(index.items()):
+        for a, b in pairs:
+            if cond != a:
+                continue
+            other = index.get((b, subject, seed), index.get((b, "", seed)))
+            if other is not None:
+                for m in metrics:
+                    g[(a, b, m)].append(float(r[m]) - float(other[m]))
+    return g
+
+
 def paired(d, analysis_dir, label, metrics, pairs=PAIRS):
     path = Path(analysis_dir) / "paired_differences.csv"
     g = defaultdict(list)
     for r in rows(path):
         g[(r["a"], r["b"], r["metric"])].append(float(r["difference"]))
+    missing = [(a, b) for a, b in pairs if not any((a, b, m) in g for m in metrics)]
+    if missing:
+        path = Path(analysis_dir) / "runs.csv"
+        g.update(paired_from_runs(path, missing, metrics))
     d.add(f"**{label}**", "", "| comparison | metric | pairs | mean difference | SD | first better / worse / equal |",
           "|---|---|---|---|---|---|")
     for a, b in pairs:
