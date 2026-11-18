@@ -1,0 +1,268 @@
+{
+  "rule": "Apply the declared validation-only selection rule to complete candidate suites.\n\nRules (all over the 12 main-decoder runs: EEGNet + CBraMod, participants s11/s13, validation seeds; ties 1e-9):\n  --metric success (default; protocol v2, reports/rl_v2_experiment_plan.md Section 4): highest mean final-step\n      success; ties: lower mean final distance, then the smaller EEG weight.\n  --metric auc (protocol v3, FINAL_V3_HANDOFF.md Section 6.3): highest mean normalized success AUC; ties: higher\n      mean final success, then the smaller EEG weight.\n  --metric preferred_pass (route preference, FINAL_V3_HANDOFF.md Section 7.3 and\n      reports/final_v3/preference_plan.md): highest mean final preferred-pass rate; ties: higher mean task\n      (final) success, then the smaller EEG weight.\nEvery candidate must be a complete suite (rl.summarize).",
+  "metric": "preferred_pass",
+  "candidates": [
+    {
+      "suite": "/data/rtxw01/nbak/robot_intel/kztrgg/projs/code/csci642-v3/runs/pref_validation_w100",
+      "eeg_weight": 1.0,
+      "selection_preferred_pass": 0.051666666666666666,
+      "dense_weight": 10.0,
+      "n_runs": 33,
+      "selection_success": 0.9791666666666666,
+      "selection_final_distance": 0.023494753320064517,
+      "selection_auc": 0.5052361111111111,
+      "n_selection_runs": 12,
+      "per_condition": {
+        "sparse": {
+          "success_rate": 0.9866666666666667,
+          "mean_final_distance": 0.024629231247909607,
+          "normalized_auc_success": 0.5775555555555555,
+          "n_runs": 3,
+          "preferred_pass_rate": 0.05666666666666667,
+          "violation_free_rate": 0.05666666666666667,
+          "normalized_auc_preferred_pass": 0.034277777777777775
+        },
+        "dense": {
+          "success_rate": 1.0,
+          "mean_final_distance": 0.009385270415565018,
+          "normalized_auc_success": 0.9501111111111111,
+          "n_runs": 3,
+          "preferred_pass_rate": 0.056666666666666664,
+          "violation_free_rate": 0.056666666666666664,
+          "normalized_auc_preferred_pass": 0.04716666666666667
+        },
+        "ideal": {
+          "success_rate": 1.0,
+          "mean_final_distance": 0.010895202174163189,
+          "normalized_auc_success": 0.728,
+          "n_runs": 3,
+          "preferred_pass_rate": 0.06,
+          "violation_free_rate": 0.06,
+          "normalized_auc_preferred_pass": 0.05522222222222222
+        },
+        "eegnet": {
+          "success_rate": 0.9633333333333334,
+          "mean_final_distance": 0.024922009207439443,
+          "normalized_auc_success": 0.4922222222222222,
+          "n_runs": 6,
+          "preferred_pass_rate": 0.055,
+          "violation_free_rate": 0.055,
+          "normalized_auc_preferred_pass": 0.034194444444444444
+        },
+        "cbramod": {
+          "success_rate": 0.995,
+          "mean_final_distance": 0.022067497432689594,
+          "normalized_auc_success": 0.51825,
+          "n_runs": 6,
+          "preferred_pass_rate": 0.04833333333333333,
+          "violation_free_rate": 0.04833333333333333,
+          "normalized_auc_preferred_pass": 0.029194444444444443
+        },
+        "independent_eegnet": {
+          "success_rate": 0.8133333333333334,
+          "mean_final_distance": 0.07210011281267,
+          "normalized_auc_success": 0.3610555555555556,
+          "n_runs": 6,
+          "preferred_pass_rate": 0.035,
+          "violation_free_rate": 0.10666666666666666,
+          "normalized_auc_preferred_pass": 0.022083333333333333
+        },
+        "independent_cbramod": {
+          "success_rate": 0.8983333333333333,
+          "mean_final_distance": 0.06799280914335804,
+          "normalized_auc_success": 0.49469444444444444,
+          "n_runs": 6,
+          "preferred_pass_rate": 0.043333333333333335,
+          "violation_free_rate": 0.07833333333333334,
+          "normalized_auc_preferred_pass": 0.025111111111111112
+        }
+      },
+      "training_source_sha256": {
+        "checkpoint.py": "070ac1a0c48322b20650d06bb9024b2d85fa477f6d16aff23bd8c69e4262e304",
+        "environment.py": "f1b81a0f9b35201bd27cac62dc26116821beca6f87b3506ba12eb1ab740f6c78",
+        "feedback.py": "43db672b7fe411efffbe613b313bee770a90d3d6bf5b16324f130d9cde724b3a",
+        "preference.py": "dcbf1c54158cbf7fab97b04bb820a06e52c1053c4c27e7256f931c1e887602a5",
+        "train.py": "db30a7904b6137c550fb8fd3b0fbf37895238be550fed73f2a0c74c1d2b3eb0a"
+      },
+      "training_git_shas": [
+        "ae633ea07f0f50e275d20c9b3d47f0f76061ceed"
+      ]
+    },
+    {
+      "suite": "/data/rtxw01/nbak/robot_intel/kztrgg/projs/code/csci642-v3/runs/pref_validation_w200",
+      "eeg_weight": 2.0,
+      "selection_preferred_pass": 0.05333333333333334,
+      "dense_weight": 10.0,
+      "n_runs": 33,
+      "selection_success": 0.9866666666666667,
+      "selection_final_distance": 0.02283224080660156,
+      "selection_auc": 0.4371111111111111,
+      "n_selection_runs": 12,
+      "per_condition": {
+        "sparse": {
+          "success_rate": 0.9866666666666667,
+          "mean_final_distance": 0.024629231247909607,
+          "normalized_auc_success": 0.5775555555555555,
+          "n_runs": 3,
+          "preferred_pass_rate": 0.05666666666666667,
+          "violation_free_rate": 0.05666666666666667,
+          "normalized_auc_preferred_pass": 0.034277777777777775
+        },
+        "dense": {
+          "success_rate": 1.0,
+          "mean_final_distance": 0.009385270415565018,
+          "normalized_auc_success": 0.9501111111111111,
+          "n_runs": 3,
+          "preferred_pass_rate": 0.056666666666666664,
+          "violation_free_rate": 0.056666666666666664,
+          "normalized_auc_preferred_pass": 0.04716666666666667
+        },
+        "ideal": {
+          "success_rate": 1.0,
+          "mean_final_distance": 0.01613774003882339,
+          "normalized_auc_success": 0.5393333333333333,
+          "n_runs": 3,
+          "preferred_pass_rate": 0.06666666666666667,
+          "violation_free_rate": 0.06666666666666667,
+          "normalized_auc_preferred_pass": 0.06633333333333333
+        },
+        "eegnet": {
+          "success_rate": 0.985,
+          "mean_final_distance": 0.023723875946011292,
+          "normalized_auc_success": 0.5376388888888889,
+          "n_runs": 6,
+          "preferred_pass_rate": 0.05666666666666667,
+          "violation_free_rate": 0.058333333333333334,
+          "normalized_auc_preferred_pass": 0.03127777777777778
+        },
+        "cbramod": {
+          "success_rate": 0.9883333333333333,
+          "mean_final_distance": 0.02194060566719183,
+          "normalized_auc_success": 0.33658333333333335,
+          "n_runs": 6,
+          "preferred_pass_rate": 0.05,
+          "violation_free_rate": 0.05,
+          "normalized_auc_preferred_pass": 0.024666666666666667
+        },
+        "independent_eegnet": {
+          "success_rate": 0.8716666666666667,
+          "mean_final_distance": 0.032884926228217044,
+          "normalized_auc_success": 0.3533611111111111,
+          "n_runs": 6,
+          "preferred_pass_rate": 0.051666666666666666,
+          "violation_free_rate": 0.05333333333333333,
+          "normalized_auc_preferred_pass": 0.020583333333333335
+        },
+        "independent_cbramod": {
+          "success_rate": 0.78,
+          "mean_final_distance": 0.1662620189332655,
+          "normalized_auc_success": 0.39272222222222225,
+          "n_runs": 6,
+          "preferred_pass_rate": 0.04,
+          "violation_free_rate": 0.13666666666666666,
+          "normalized_auc_preferred_pass": 0.02011111111111111
+        }
+      },
+      "training_source_sha256": {
+        "checkpoint.py": "070ac1a0c48322b20650d06bb9024b2d85fa477f6d16aff23bd8c69e4262e304",
+        "environment.py": "f1b81a0f9b35201bd27cac62dc26116821beca6f87b3506ba12eb1ab740f6c78",
+        "feedback.py": "43db672b7fe411efffbe613b313bee770a90d3d6bf5b16324f130d9cde724b3a",
+        "preference.py": "dcbf1c54158cbf7fab97b04bb820a06e52c1053c4c27e7256f931c1e887602a5",
+        "train.py": "db30a7904b6137c550fb8fd3b0fbf37895238be550fed73f2a0c74c1d2b3eb0a"
+      },
+      "training_git_shas": [
+        "ae633ea07f0f50e275d20c9b3d47f0f76061ceed"
+      ]
+    },
+    {
+      "suite": "/data/rtxw01/nbak/robot_intel/kztrgg/projs/code/csci642-v3/runs/pref_validation_w400",
+      "eeg_weight": 4.0,
+      "selection_preferred_pass": 0.04833333333333333,
+      "dense_weight": 10.0,
+      "n_runs": 33,
+      "selection_success": 0.8325,
+      "selection_final_distance": 0.05360727625408943,
+      "selection_auc": 0.256875,
+      "n_selection_runs": 12,
+      "per_condition": {
+        "sparse": {
+          "success_rate": 0.9866666666666667,
+          "mean_final_distance": 0.024629231247909607,
+          "normalized_auc_success": 0.5775555555555555,
+          "n_runs": 3,
+          "preferred_pass_rate": 0.05666666666666667,
+          "violation_free_rate": 0.05666666666666667,
+          "normalized_auc_preferred_pass": 0.034277777777777775
+        },
+        "dense": {
+          "success_rate": 1.0,
+          "mean_final_distance": 0.009385270415565018,
+          "normalized_auc_success": 0.9501111111111111,
+          "n_runs": 3,
+          "preferred_pass_rate": 0.056666666666666664,
+          "violation_free_rate": 0.056666666666666664,
+          "normalized_auc_preferred_pass": 0.04716666666666667
+        },
+        "ideal": {
+          "success_rate": 1.0,
+          "mean_final_distance": 0.013457085207060364,
+          "normalized_auc_success": 0.6038888888888889,
+          "n_runs": 3,
+          "preferred_pass_rate": 0.5033333333333334,
+          "violation_free_rate": 0.5033333333333334,
+          "normalized_auc_preferred_pass": 0.33294444444444443
+        },
+        "eegnet": {
+          "success_rate": 0.7966666666666666,
+          "mean_final_distance": 0.04576000658562446,
+          "normalized_auc_success": 0.2585,
+          "n_runs": 6,
+          "preferred_pass_rate": 0.04833333333333333,
+          "violation_free_rate": 0.10333333333333333,
+          "normalized_auc_preferred_pass": 0.014694444444444444
+        },
+        "cbramod": {
+          "success_rate": 0.8683333333333333,
+          "mean_final_distance": 0.061454545922554414,
+          "normalized_auc_success": 0.25525000000000003,
+          "n_runs": 6,
+          "preferred_pass_rate": 0.04833333333333333,
+          "violation_free_rate": 0.06666666666666667,
+          "normalized_auc_preferred_pass": 0.015527777777777777
+        },
+        "independent_eegnet": {
+          "success_rate": 0.605,
+          "mean_final_distance": 0.1912827590889544,
+          "normalized_auc_success": 0.11430555555555555,
+          "n_runs": 6,
+          "preferred_pass_rate": 0.065,
+          "violation_free_rate": 0.14166666666666666,
+          "normalized_auc_preferred_pass": 0.00925
+        },
+        "independent_cbramod": {
+          "success_rate": 0.6366666666666667,
+          "mean_final_distance": 0.2025689740822085,
+          "normalized_auc_success": 0.21927777777777777,
+          "n_runs": 6,
+          "preferred_pass_rate": 0.04166666666666667,
+          "violation_free_rate": 0.2016666666666667,
+          "normalized_auc_preferred_pass": 0.011083333333333334
+        }
+      },
+      "training_source_sha256": {
+        "checkpoint.py": "070ac1a0c48322b20650d06bb9024b2d85fa477f6d16aff23bd8c69e4262e304",
+        "environment.py": "f1b81a0f9b35201bd27cac62dc26116821beca6f87b3506ba12eb1ab740f6c78",
+        "feedback.py": "43db672b7fe411efffbe613b313bee770a90d3d6bf5b16324f130d9cde724b3a",
+        "preference.py": "dcbf1c54158cbf7fab97b04bb820a06e52c1053c4c27e7256f931c1e887602a5",
+        "train.py": "db30a7904b6137c550fb8fd3b0fbf37895238be550fed73f2a0c74c1d2b3eb0a"
+      },
+      "training_git_shas": [
+        "ae633ea07f0f50e275d20c9b3d47f0f76061ceed"
+      ]
+    }
+  ],
+  "selected": "/data/rtxw01/nbak/robot_intel/kztrgg/projs/code/csci642-v3/runs/pref_validation_w200",
+  "selected_eeg_weight": 2.0,
+  "reason": "highest mean final preferred-pass rate",
+  "rationale": "Validation-only selection by the rule declared in reports/final_v3/preference_plan.md (route preference) before any validation run of this suite family: highest mean final preferred-pass rate. Candidates (EEG weight: selection_preferred_pass / final success over the 12 EEGNet+CBraMod validation runs): pref_validation_w100 (w=1.0): 0.0517 / 0.9792; pref_validation_w200 (w=2.0): 0.0533 / 0.9867; pref_validation_w400 (w=4.0): 0.0483 / 0.8325. Selected pref_validation_w200 (EEG weight 2.0). All candidate suites are complete and preserved; no test-participant feedback was used."
+}

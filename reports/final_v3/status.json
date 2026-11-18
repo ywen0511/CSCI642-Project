@@ -1,7 +1,7 @@
 {
   "assignment": "FINAL_V3_HANDOFF.md (planning branch final-v3, 81813de)",
   "execution_branch": "final-v3-experiments",
-  "phase": "stage3_pref_validation_rerun (external kill 08:05Z); report drafting",
+  "phase": "stage3_pref_final_running",
   "started_utc": "2026-11-17T21:10:00Z",
   "complete": false,
   "commits": {
@@ -92,24 +92,25 @@
     },
     "pref_validation_w100": {
       "planned": 33,
-      "completed": 0,
+      "completed": 33,
       "failed": 0,
-      "pending": 33,
+      "pending": 0,
       "commit": "ae633ea",
-      "note": "first attempt killed externally 08:05Z, rerun"
+      "note": "first attempt killed externally 08:05Z; rerun complete"
     },
     "pref_validation_w200": {
       "planned": 33,
-      "completed": 0,
+      "completed": 33,
       "failed": 0,
-      "pending": 33,
-      "commit": "ae633ea"
+      "pending": 0,
+      "commit": "ae633ea",
+      "selected": true
     },
     "pref_validation_w400": {
       "planned": 33,
-      "completed": 0,
+      "completed": 33,
       "failed": 0,
-      "pending": 33,
+      "pending": 0,
       "commit": "ae633ea"
     },
     "pref_final": {
@@ -172,5 +173,5 @@
     }
   },
   "blockers": [],
-  "updated_utc": "2026-11-18T08:13:43Z"
+  "updated_utc": "2026-11-18T10:20:07Z"
 }
