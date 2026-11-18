@@ -1,0 +1,2536 @@
+[
+ {
+  "text": "0.02",
+  "value": 0.02,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/sparse_shared_s900",
+  "column": "preferred_pass_rate"
+ },
+ {
+  "text": "0.04",
+  "value": 0.04,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/sparse_shared_s901",
+  "column": "preferred_pass_rate"
+ },
+ {
+  "text": "0.34",
+  "value": 0.34,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/sparse_shared_s900",
+  "column": "success_rate"
+ },
+ {
+  "text": "1.00",
+  "value": 1.0,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/sparse_shared_s901",
+  "column": "success_rate"
+ },
+ {
+  "text": "0.48",
+  "value": 0.48,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/sparse_shared_s900",
+  "column": "violation_free_rate"
+ },
+ {
+  "text": "0.04",
+  "value": 0.04,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/sparse_shared_s901",
+  "column": "violation_free_rate"
+ },
+ {
+  "text": "0.50",
+  "value": 0.5,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/sparse_shared_s900",
+  "column": "pillar_entry_rate"
+ },
+ {
+  "text": "0.91",
+  "value": 0.91,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/sparse_shared_s901",
+  "column": "pillar_entry_rate"
+ },
+ {
+  "text": "0.33",
+  "value": 0.33,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/sparse_shared_s900",
+  "column": "right_corridor_entry_rate"
+ },
+ {
+  "text": "0.61",
+  "value": 0.61,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/sparse_shared_s901",
+  "column": "right_corridor_entry_rate"
+ },
+ {
+  "text": "0.06",
+  "value": 0.06,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/dense_shared_s900",
+  "column": "preferred_pass_rate"
+ },
+ {
+  "text": "0.06",
+  "value": 0.06,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/dense_shared_s901",
+  "column": "preferred_pass_rate"
+ },
+ {
+  "text": "1.00",
+  "value": 1.0,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/dense_shared_s900",
+  "column": "success_rate"
+ },
+ {
+  "text": "1.00",
+  "value": 1.0,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/dense_shared_s901",
+  "column": "success_rate"
+ },
+ {
+  "text": "0.06",
+  "value": 0.06,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/dense_shared_s900",
+  "column": "violation_free_rate"
+ },
+ {
+  "text": "0.06",
+  "value": 0.06,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/dense_shared_s901",
+  "column": "violation_free_rate"
+ },
+ {
+  "text": "0.81",
+  "value": 0.81,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/dense_shared_s900",
+  "column": "pillar_entry_rate"
+ },
+ {
+  "text": "0.83",
+  "value": 0.83,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/dense_shared_s901",
+  "column": "pillar_entry_rate"
+ },
+ {
+  "text": "0.62",
+  "value": 0.62,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/dense_shared_s900",
+  "column": "right_corridor_entry_rate"
+ },
+ {
+  "text": "0.56",
+  "value": 0.56,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/dense_shared_s901",
+  "column": "right_corridor_entry_rate"
+ },
+ {
+  "text": "0.00",
+  "value": 0.0,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/eegnet_s11_s900",
+  "column": "preferred_pass_rate"
+ },
+ {
+  "text": "0.00",
+  "value": 0.0,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/eegnet_s11_s901",
+  "column": "preferred_pass_rate"
+ },
+ {
+  "text": "0.61",
+  "value": 0.61,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/eegnet_s11_s900",
+  "column": "success_rate"
+ },
+ {
+  "text": "0.49",
+  "value": 0.49,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/eegnet_s11_s901",
+  "column": "success_rate"
+ },
+ {
+  "text": "0.00",
+  "value": 0.0,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/eegnet_s11_s900",
+  "column": "violation_free_rate"
+ },
+ {
+  "text": "0.22",
+  "value": 0.22,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/eegnet_s11_s901",
+  "column": "violation_free_rate"
+ },
+ {
+  "text": "0.92",
+  "value": 0.92,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/eegnet_s11_s900",
+  "column": "pillar_entry_rate"
+ },
+ {
+  "text": "0.73",
+  "value": 0.73,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/eegnet_s11_s901",
+  "column": "pillar_entry_rate"
+ },
+ {
+  "text": "0.67",
+  "value": 0.67,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/eegnet_s11_s900",
+  "column": "right_corridor_entry_rate"
+ },
+ {
+  "text": "0.49",
+  "value": 0.49,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/eegnet_s11_s901",
+  "column": "right_corridor_entry_rate"
+ },
+ {
+  "text": "0.01",
+  "value": 0.01,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/cbramod_s13_s900",
+  "column": "preferred_pass_rate"
+ },
+ {
+  "text": "0.00",
+  "value": 0.0,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/cbramod_s13_s901",
+  "column": "preferred_pass_rate"
+ },
+ {
+  "text": "0.31",
+  "value": 0.31,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/cbramod_s13_s900",
+  "column": "success_rate"
+ },
+ {
+  "text": "0.54",
+  "value": 0.54,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/cbramod_s13_s901",
+  "column": "success_rate"
+ },
+ {
+  "text": "0.13",
+  "value": 0.13,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/cbramod_s13_s900",
+  "column": "violation_free_rate"
+ },
+ {
+  "text": "0.40",
+  "value": 0.4,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/cbramod_s13_s901",
+  "column": "violation_free_rate"
+ },
+ {
+  "text": "0.61",
+  "value": 0.61,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/cbramod_s13_s900",
+  "column": "pillar_entry_rate"
+ },
+ {
+  "text": "0.46",
+  "value": 0.46,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/cbramod_s13_s901",
+  "column": "pillar_entry_rate"
+ },
+ {
+  "text": "0.70",
+  "value": 0.7,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/cbramod_s13_s900",
+  "column": "right_corridor_entry_rate"
+ },
+ {
+  "text": "0.57",
+  "value": 0.57,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/cbramod_s13_s901",
+  "column": "right_corridor_entry_rate"
+ },
+ {
+  "text": "0.00",
+  "value": 0.0,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/ideal_shared_s900",
+  "column": "preferred_pass_rate"
+ },
+ {
+  "text": "0.06",
+  "value": 0.06,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/ideal_shared_s901",
+  "column": "preferred_pass_rate"
+ },
+ {
+  "text": "0.42",
+  "value": 0.42,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/ideal_shared_s900",
+  "column": "success_rate"
+ },
+ {
+  "text": "0.85",
+  "value": 0.85,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/ideal_shared_s901",
+  "column": "success_rate"
+ },
+ {
+  "text": "0.24",
+  "value": 0.24,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/ideal_shared_s900",
+  "column": "violation_free_rate"
+ },
+ {
+  "text": "0.06",
+  "value": 0.06,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/ideal_shared_s901",
+  "column": "violation_free_rate"
+ },
+ {
+  "text": "0.70",
+  "value": 0.7,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/ideal_shared_s900",
+  "column": "pillar_entry_rate"
+ },
+ {
+  "text": "0.86",
+  "value": 0.86,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/ideal_shared_s901",
+  "column": "pillar_entry_rate"
+ },
+ {
+  "text": "0.52",
+  "value": 0.52,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/ideal_shared_s900",
+  "column": "right_corridor_entry_rate"
+ },
+ {
+  "text": "0.58",
+  "value": 0.58,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k/ideal_shared_s901",
+  "column": "right_corridor_entry_rate"
+ },
+ {
+  "text": "0.06",
+  "value": 0.06,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g1_original_300k/sparse_shared_s900",
+  "column": "preferred_pass_rate"
+ },
+ {
+  "text": "0.06",
+  "value": 0.06,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g1_original_300k/sparse_shared_s901",
+  "column": "preferred_pass_rate"
+ },
+ {
+  "text": "0.95",
+  "value": 0.95,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g1_original_300k/sparse_shared_s900",
+  "column": "success_rate"
+ },
+ {
+  "text": "1.00",
+  "value": 1.0,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g1_original_300k/sparse_shared_s901",
+  "column": "success_rate"
+ },
+ {
+  "text": "0.06",
+  "value": 0.06,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g1_original_300k/sparse_shared_s900",
+  "column": "violation_free_rate"
+ },
+ {
+  "text": "0.06",
+  "value": 0.06,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g1_original_300k/sparse_shared_s901",
+  "column": "violation_free_rate"
+ },
+ {
+  "text": "0.83",
+  "value": 0.83,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g1_original_300k/sparse_shared_s900",
+  "column": "pillar_entry_rate"
+ },
+ {
+  "text": "0.86",
+  "value": 0.86,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g1_original_300k/sparse_shared_s901",
+  "column": "pillar_entry_rate"
+ },
+ {
+  "text": "0.64",
+  "value": 0.64,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g1_original_300k/sparse_shared_s900",
+  "column": "right_corridor_entry_rate"
+ },
+ {
+  "text": "0.58",
+  "value": 0.58,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g1_original_300k/sparse_shared_s901",
+  "column": "right_corridor_entry_rate"
+ },
+ {
+  "text": "0.10",
+  "value": 0.1,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g1_original_300k/ideal_shared_s900",
+  "column": "preferred_pass_rate"
+ },
+ {
+  "text": "0.08",
+  "value": 0.08,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g1_original_300k/ideal_shared_s901",
+  "column": "preferred_pass_rate"
+ },
+ {
+  "text": "1.00",
+  "value": 1.0,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g1_original_300k/ideal_shared_s900",
+  "column": "success_rate"
+ },
+ {
+  "text": "1.00",
+  "value": 1.0,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g1_original_300k/ideal_shared_s901",
+  "column": "success_rate"
+ },
+ {
+  "text": "0.10",
+  "value": 0.1,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g1_original_300k/ideal_shared_s900",
+  "column": "violation_free_rate"
+ },
+ {
+  "text": "0.08",
+  "value": 0.08,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g1_original_300k/ideal_shared_s901",
+  "column": "violation_free_rate"
+ },
+ {
+  "text": "0.84",
+  "value": 0.84,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g1_original_300k/ideal_shared_s900",
+  "column": "pillar_entry_rate"
+ },
+ {
+  "text": "0.86",
+  "value": 0.86,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g1_original_300k/ideal_shared_s901",
+  "column": "pillar_entry_rate"
+ },
+ {
+  "text": "0.46",
+  "value": 0.46,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g1_original_300k/ideal_shared_s900",
+  "column": "right_corridor_entry_rate"
+ },
+ {
+  "text": "0.54",
+  "value": 0.54,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g1_original_300k/ideal_shared_s901",
+  "column": "right_corridor_entry_rate"
+ },
+ {
+  "text": "0.02",
+  "value": 0.02,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g2_corridor10_90_150k/sparse_shared_s900",
+  "column": "preferred_pass_rate"
+ },
+ {
+  "text": "0.04",
+  "value": 0.04,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g2_corridor10_90_150k/sparse_shared_s901",
+  "column": "preferred_pass_rate"
+ },
+ {
+  "text": "0.34",
+  "value": 0.34,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g2_corridor10_90_150k/sparse_shared_s900",
+  "column": "success_rate"
+ },
+ {
+  "text": "1.00",
+  "value": 1.0,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g2_corridor10_90_150k/sparse_shared_s901",
+  "column": "success_rate"
+ },
+ {
+  "text": "0.48",
+  "value": 0.48,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g2_corridor10_90_150k/sparse_shared_s900",
+  "column": "violation_free_rate"
+ },
+ {
+  "text": "0.04",
+  "value": 0.04,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g2_corridor10_90_150k/sparse_shared_s901",
+  "column": "violation_free_rate"
+ },
+ {
+  "text": "0.50",
+  "value": 0.5,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g2_corridor10_90_150k/sparse_shared_s900",
+  "column": "pillar_entry_rate"
+ },
+ {
+  "text": "0.91",
+  "value": 0.91,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g2_corridor10_90_150k/sparse_shared_s901",
+  "column": "pillar_entry_rate"
+ },
+ {
+  "text": "0.39",
+  "value": 0.39,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g2_corridor10_90_150k/sparse_shared_s900",
+  "column": "right_corridor_entry_rate"
+ },
+ {
+  "text": "0.68",
+  "value": 0.68,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g2_corridor10_90_150k/sparse_shared_s901",
+  "column": "right_corridor_entry_rate"
+ },
+ {
+  "text": "0.08",
+  "value": 0.08,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g2_corridor10_90_150k/ideal_shared_s900",
+  "column": "preferred_pass_rate"
+ },
+ {
+  "text": "0.04",
+  "value": 0.04,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g2_corridor10_90_150k/ideal_shared_s901",
+  "column": "preferred_pass_rate"
+ },
+ {
+  "text": "1.00",
+  "value": 1.0,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g2_corridor10_90_150k/ideal_shared_s900",
+  "column": "success_rate"
+ },
+ {
+  "text": "1.00",
+  "value": 1.0,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g2_corridor10_90_150k/ideal_shared_s901",
+  "column": "success_rate"
+ },
+ {
+  "text": "0.08",
+  "value": 0.08,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g2_corridor10_90_150k/ideal_shared_s900",
+  "column": "violation_free_rate"
+ },
+ {
+  "text": "0.04",
+  "value": 0.04,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g2_corridor10_90_150k/ideal_shared_s901",
+  "column": "violation_free_rate"
+ },
+ {
+  "text": "0.89",
+  "value": 0.89,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g2_corridor10_90_150k/ideal_shared_s900",
+  "column": "pillar_entry_rate"
+ },
+ {
+  "text": "0.90",
+  "value": 0.9,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g2_corridor10_90_150k/ideal_shared_s901",
+  "column": "pillar_entry_rate"
+ },
+ {
+  "text": "0.54",
+  "value": 0.54,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g2_corridor10_90_150k/ideal_shared_s900",
+  "column": "right_corridor_entry_rate"
+ },
+ {
+  "text": "0.59",
+  "value": 0.59,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g2_corridor10_90_150k/ideal_shared_s901",
+  "column": "right_corridor_entry_rate"
+ },
+ {
+  "text": "0.02",
+  "value": 0.02,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g3_corridor10_90_300k/sparse_shared_s900",
+  "column": "preferred_pass_rate"
+ },
+ {
+  "text": "0.05",
+  "value": 0.05,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g3_corridor10_90_300k/sparse_shared_s901",
+  "column": "preferred_pass_rate"
+ },
+ {
+  "text": "0.95",
+  "value": 0.95,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g3_corridor10_90_300k/sparse_shared_s900",
+  "column": "success_rate"
+ },
+ {
+  "text": "1.00",
+  "value": 1.0,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g3_corridor10_90_300k/sparse_shared_s901",
+  "column": "success_rate"
+ },
+ {
+  "text": "0.02",
+  "value": 0.02,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g3_corridor10_90_300k/sparse_shared_s900",
+  "column": "violation_free_rate"
+ },
+ {
+  "text": "0.05",
+  "value": 0.05,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g3_corridor10_90_300k/sparse_shared_s901",
+  "column": "violation_free_rate"
+ },
+ {
+  "text": "0.83",
+  "value": 0.83,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g3_corridor10_90_300k/sparse_shared_s900",
+  "column": "pillar_entry_rate"
+ },
+ {
+  "text": "0.86",
+  "value": 0.86,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g3_corridor10_90_300k/sparse_shared_s901",
+  "column": "pillar_entry_rate"
+ },
+ {
+  "text": "0.73",
+  "value": 0.73,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g3_corridor10_90_300k/sparse_shared_s900",
+  "column": "right_corridor_entry_rate"
+ },
+ {
+  "text": "0.65",
+  "value": 0.65,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g3_corridor10_90_300k/sparse_shared_s901",
+  "column": "right_corridor_entry_rate"
+ },
+ {
+  "text": "0.07",
+  "value": 0.07,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g3_corridor10_90_300k/ideal_shared_s900",
+  "column": "preferred_pass_rate"
+ },
+ {
+  "text": "0.06",
+  "value": 0.06,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g3_corridor10_90_300k/ideal_shared_s901",
+  "column": "preferred_pass_rate"
+ },
+ {
+  "text": "1.00",
+  "value": 1.0,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g3_corridor10_90_300k/ideal_shared_s900",
+  "column": "success_rate"
+ },
+ {
+  "text": "1.00",
+  "value": 1.0,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g3_corridor10_90_300k/ideal_shared_s901",
+  "column": "success_rate"
+ },
+ {
+  "text": "0.07",
+  "value": 0.07,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g3_corridor10_90_300k/ideal_shared_s900",
+  "column": "violation_free_rate"
+ },
+ {
+  "text": "0.06",
+  "value": 0.06,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g3_corridor10_90_300k/ideal_shared_s901",
+  "column": "violation_free_rate"
+ },
+ {
+  "text": "0.86",
+  "value": 0.86,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g3_corridor10_90_300k/ideal_shared_s900",
+  "column": "pillar_entry_rate"
+ },
+ {
+  "text": "0.92",
+  "value": 0.92,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g3_corridor10_90_300k/ideal_shared_s901",
+  "column": "pillar_entry_rate"
+ },
+ {
+  "text": "0.64",
+  "value": 0.64,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g3_corridor10_90_300k/ideal_shared_s900",
+  "column": "right_corridor_entry_rate"
+ },
+ {
+  "text": "0.62",
+  "value": 0.62,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g3_corridor10_90_300k/ideal_shared_s901",
+  "column": "right_corridor_entry_rate"
+ },
+ {
+  "text": "0.030",
+  "value": 0.03,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k",
+  "column": "gate.ideal_mean"
+ },
+ {
+  "text": "0.030",
+  "value": 0.03,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k",
+  "column": "gate.sparse_mean"
+ },
+ {
+  "text": "+0.000",
+  "value": 0.0,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "round1_corridor25_75_150k",
+  "column": "gate.difference"
+ },
+ {
+  "text": "0.090",
+  "value": 0.09,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g1_original_300k",
+  "column": "gate.ideal_mean"
+ },
+ {
+  "text": "0.060",
+  "value": 0.06,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g1_original_300k",
+  "column": "gate.sparse_mean"
+ },
+ {
+  "text": "+0.030",
+  "value": 0.03,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g1_original_300k",
+  "column": "gate.difference"
+ },
+ {
+  "text": "0.060",
+  "value": 0.06,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g2_corridor10_90_150k",
+  "column": "gate.ideal_mean"
+ },
+ {
+  "text": "0.030",
+  "value": 0.03,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g2_corridor10_90_150k",
+  "column": "gate.sparse_mean"
+ },
+ {
+  "text": "+0.030",
+  "value": 0.03,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g2_corridor10_90_150k",
+  "column": "gate.difference"
+ },
+ {
+  "text": "0.065",
+  "value": 0.065,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g3_corridor10_90_300k",
+  "column": "gate.ideal_mean"
+ },
+ {
+  "text": "0.035",
+  "value": 0.035,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g3_corridor10_90_300k",
+  "column": "gate.sparse_mean"
+ },
+ {
+  "text": "+0.030",
+  "value": 0.03,
+  "source": "reports/final_v3/preference/pilot_report.json",
+  "key": "g3_corridor10_90_300k",
+  "column": "gate.difference"
+ },
+ {
+  "text": "0.9792",
+  "value": 0.9791666666666666,
+  "source": "reports/final_v3/preference/validation/selection.json",
+  "key": "preference validation candidates:w=1.0",
+  "column": "selection_success"
+ },
+ {
+  "text": "0.5052",
+  "value": 0.5052361111111111,
+  "source": "reports/final_v3/preference/validation/selection.json",
+  "key": "preference validation candidates:w=1.0",
+  "column": "selection_auc"
+ },
+ {
+  "text": "0.0517",
+  "value": 0.051666666666666666,
+  "source": "reports/final_v3/preference/validation/selection.json",
+  "key": "preference validation candidates:w=1.0",
+  "column": "selection_preferred_pass"
+ },
+ {
+  "text": "0.9867",
+  "value": 0.9866666666666667,
+  "source": "reports/final_v3/preference/validation/selection.json",
+  "key": "preference validation candidates:w=2.0",
+  "column": "selection_success"
+ },
+ {
+  "text": "0.4371",
+  "value": 0.4371111111111111,
+  "source": "reports/final_v3/preference/validation/selection.json",
+  "key": "preference validation candidates:w=2.0",
+  "column": "selection_auc"
+ },
+ {
+  "text": "0.0533",
+  "value": 0.05333333333333334,
+  "source": "reports/final_v3/preference/validation/selection.json",
+  "key": "preference validation candidates:w=2.0",
+  "column": "selection_preferred_pass"
+ },
+ {
+  "text": "0.8325",
+  "value": 0.8325,
+  "source": "reports/final_v3/preference/validation/selection.json",
+  "key": "preference validation candidates:w=4.0",
+  "column": "selection_success"
+ },
+ {
+  "text": "0.2569",
+  "value": 0.256875,
+  "source": "reports/final_v3/preference/validation/selection.json",
+  "key": "preference validation candidates:w=4.0",
+  "column": "selection_auc"
+ },
+ {
+  "text": "0.0483",
+  "value": 0.04833333333333333,
+  "source": "reports/final_v3/preference/validation/selection.json",
+  "key": "preference validation candidates:w=4.0",
+  "column": "selection_preferred_pass"
+ },
+ {
+  "text": "0.987",
+  "value": 0.9866666666666667,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:sparse",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.023",
+  "value": 0.023094010767585053,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:sparse",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0246",
+  "value": 0.024629231247909607,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:sparse",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.578",
+  "value": 0.5775555555555555,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:sparse",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.134",
+  "value": 0.13448516371428954,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:sparse",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.057",
+  "value": 0.05666666666666667,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:sparse",
+  "column": "preferred_pass_rate_mean"
+ },
+ {
+  "text": "0.015",
+  "value": 0.015275252316519468,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:sparse",
+  "column": "preferred_pass_rate_sd"
+ },
+ {
+  "text": "0.034",
+  "value": 0.034277777777777775,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:sparse",
+  "column": "normalized_auc_preferred_pass_mean"
+ },
+ {
+  "text": "0.057",
+  "value": 0.05666666666666667,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:sparse",
+  "column": "violation_free_rate_mean"
+ },
+ {
+  "text": "0.820",
+  "value": 0.8200000000000001,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:sparse",
+  "column": "pillar_entry_rate_mean"
+ },
+ {
+  "text": "0.647",
+  "value": 0.6466666666666667,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:sparse",
+  "column": "right_corridor_entry_rate_mean"
+ },
+ {
+  "text": "1.000",
+  "value": 1.0,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:dense",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.000",
+  "value": 0.0,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:dense",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0094",
+  "value": 0.009385270415565018,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:dense",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.950",
+  "value": 0.9501111111111111,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:dense",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.009",
+  "value": 0.008552669065744836,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:dense",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.057",
+  "value": 0.056666666666666664,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:dense",
+  "column": "preferred_pass_rate_mean"
+ },
+ {
+  "text": "0.006",
+  "value": 0.0057735026918962545,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:dense",
+  "column": "preferred_pass_rate_sd"
+ },
+ {
+  "text": "0.047",
+  "value": 0.04716666666666667,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:dense",
+  "column": "normalized_auc_preferred_pass_mean"
+ },
+ {
+  "text": "0.057",
+  "value": 0.056666666666666664,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:dense",
+  "column": "violation_free_rate_mean"
+ },
+ {
+  "text": "0.847",
+  "value": 0.8466666666666667,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:dense",
+  "column": "pillar_entry_rate_mean"
+ },
+ {
+  "text": "0.610",
+  "value": 0.61,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:dense",
+  "column": "right_corridor_entry_rate_mean"
+ },
+ {
+  "text": "0.963",
+  "value": 0.9633333333333334,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:eegnet",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.047",
+  "value": 0.04714045207910316,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:eegnet",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0249",
+  "value": 0.024922009207439443,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:eegnet",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.492",
+  "value": 0.4922222222222222,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:eegnet",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.029",
+  "value": 0.02883424318838479,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:eegnet",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.055",
+  "value": 0.055,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:eegnet",
+  "column": "preferred_pass_rate_mean"
+ },
+ {
+  "text": "0.007",
+  "value": 0.007071067811865472,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:eegnet",
+  "column": "preferred_pass_rate_sd"
+ },
+ {
+  "text": "0.034",
+  "value": 0.034194444444444444,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:eegnet",
+  "column": "normalized_auc_preferred_pass_mean"
+ },
+ {
+  "text": "0.055",
+  "value": 0.055,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:eegnet",
+  "column": "violation_free_rate_mean"
+ },
+ {
+  "text": "0.857",
+  "value": 0.8566666666666667,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:eegnet",
+  "column": "pillar_entry_rate_mean"
+ },
+ {
+  "text": "0.662",
+  "value": 0.6616666666666666,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:eegnet",
+  "column": "right_corridor_entry_rate_mean"
+ },
+ {
+  "text": "0.995",
+  "value": 0.995,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:cbramod",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.007",
+  "value": 0.007071067811865481,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:cbramod",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0221",
+  "value": 0.022067497432689594,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:cbramod",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.518",
+  "value": 0.5182500000000001,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:cbramod",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.008",
+  "value": 0.007896025723249775,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:cbramod",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.048",
+  "value": 0.04833333333333334,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:cbramod",
+  "column": "preferred_pass_rate_mean"
+ },
+ {
+  "text": "0.002",
+  "value": 0.0023570226039551587,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:cbramod",
+  "column": "preferred_pass_rate_sd"
+ },
+ {
+  "text": "0.029",
+  "value": 0.029194444444444443,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:cbramod",
+  "column": "normalized_auc_preferred_pass_mean"
+ },
+ {
+  "text": "0.048",
+  "value": 0.04833333333333334,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:cbramod",
+  "column": "violation_free_rate_mean"
+ },
+ {
+  "text": "0.877",
+  "value": 0.8766666666666667,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:cbramod",
+  "column": "pillar_entry_rate_mean"
+ },
+ {
+  "text": "0.628",
+  "value": 0.6283333333333334,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:cbramod",
+  "column": "right_corridor_entry_rate_mean"
+ },
+ {
+  "text": "1.000",
+  "value": 1.0,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:ideal",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.000",
+  "value": 0.0,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:ideal",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0109",
+  "value": 0.010895202174163189,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:ideal",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.728",
+  "value": 0.728,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:ideal",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.058",
+  "value": 0.05829903753731943,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:ideal",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.060",
+  "value": 0.06,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:ideal",
+  "column": "preferred_pass_rate_mean"
+ },
+ {
+  "text": "0.020",
+  "value": 0.02,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:ideal",
+  "column": "preferred_pass_rate_sd"
+ },
+ {
+  "text": "0.055",
+  "value": 0.05522222222222222,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:ideal",
+  "column": "normalized_auc_preferred_pass_mean"
+ },
+ {
+  "text": "0.060",
+  "value": 0.06,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:ideal",
+  "column": "violation_free_rate_mean"
+ },
+ {
+  "text": "0.900",
+  "value": 0.9,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:ideal",
+  "column": "pillar_entry_rate_mean"
+ },
+ {
+  "text": "0.590",
+  "value": 0.59,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:ideal",
+  "column": "right_corridor_entry_rate_mean"
+ },
+ {
+  "text": "0.813",
+  "value": 0.8133333333333332,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:independent_eegnet",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.066",
+  "value": 0.06599663291074447,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:independent_eegnet",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0721",
+  "value": 0.07210011281267,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:independent_eegnet",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.361",
+  "value": 0.3610555555555556,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:independent_eegnet",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.032",
+  "value": 0.032291209674185646,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:independent_eegnet",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.035",
+  "value": 0.035,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:independent_eegnet",
+  "column": "preferred_pass_rate_mean"
+ },
+ {
+  "text": "0.012",
+  "value": 0.011785113019775792,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:independent_eegnet",
+  "column": "preferred_pass_rate_sd"
+ },
+ {
+  "text": "0.022",
+  "value": 0.022083333333333333,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:independent_eegnet",
+  "column": "normalized_auc_preferred_pass_mean"
+ },
+ {
+  "text": "0.107",
+  "value": 0.10666666666666666,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:independent_eegnet",
+  "column": "violation_free_rate_mean"
+ },
+ {
+  "text": "0.808",
+  "value": 0.8083333333333333,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:independent_eegnet",
+  "column": "pillar_entry_rate_mean"
+ },
+ {
+  "text": "0.622",
+  "value": 0.6216666666666666,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:independent_eegnet",
+  "column": "right_corridor_entry_rate_mean"
+ },
+ {
+  "text": "0.898",
+  "value": 0.8983333333333333,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:independent_cbramod",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.068",
+  "value": 0.0683536555146996,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:independent_cbramod",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0680",
+  "value": 0.06799280914335804,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:independent_cbramod",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.495",
+  "value": 0.49469444444444444,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:independent_cbramod",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.044",
+  "value": 0.04411560640402734,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:independent_cbramod",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.043",
+  "value": 0.043333333333333335,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:independent_cbramod",
+  "column": "preferred_pass_rate_mean"
+ },
+ {
+  "text": "0.009",
+  "value": 0.009428090415820635,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:independent_cbramod",
+  "column": "preferred_pass_rate_sd"
+ },
+ {
+  "text": "0.025",
+  "value": 0.025111111111111112,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:independent_cbramod",
+  "column": "normalized_auc_preferred_pass_mean"
+ },
+ {
+  "text": "0.078",
+  "value": 0.07833333333333334,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:independent_cbramod",
+  "column": "violation_free_rate_mean"
+ },
+ {
+  "text": "0.812",
+  "value": 0.8116666666666668,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:independent_cbramod",
+  "column": "pillar_entry_rate_mean"
+ },
+ {
+  "text": "0.657",
+  "value": 0.6566666666666666,
+  "source": "reports/final_v3/preference/validation/candidate_w100/by_condition.csv",
+  "key": "candidate_w100:independent_cbramod",
+  "column": "right_corridor_entry_rate_mean"
+ },
+ {
+  "text": "0.987",
+  "value": 0.9866666666666667,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:sparse",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.023",
+  "value": 0.023094010767585053,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:sparse",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0246",
+  "value": 0.024629231247909607,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:sparse",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.578",
+  "value": 0.5775555555555555,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:sparse",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.134",
+  "value": 0.13448516371428954,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:sparse",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.057",
+  "value": 0.05666666666666667,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:sparse",
+  "column": "preferred_pass_rate_mean"
+ },
+ {
+  "text": "0.015",
+  "value": 0.015275252316519468,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:sparse",
+  "column": "preferred_pass_rate_sd"
+ },
+ {
+  "text": "0.034",
+  "value": 0.034277777777777775,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:sparse",
+  "column": "normalized_auc_preferred_pass_mean"
+ },
+ {
+  "text": "0.057",
+  "value": 0.05666666666666667,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:sparse",
+  "column": "violation_free_rate_mean"
+ },
+ {
+  "text": "0.820",
+  "value": 0.8200000000000001,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:sparse",
+  "column": "pillar_entry_rate_mean"
+ },
+ {
+  "text": "0.647",
+  "value": 0.6466666666666667,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:sparse",
+  "column": "right_corridor_entry_rate_mean"
+ },
+ {
+  "text": "1.000",
+  "value": 1.0,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:dense",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.000",
+  "value": 0.0,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:dense",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0094",
+  "value": 0.009385270415565018,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:dense",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.950",
+  "value": 0.9501111111111111,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:dense",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.009",
+  "value": 0.008552669065744836,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:dense",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.057",
+  "value": 0.056666666666666664,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:dense",
+  "column": "preferred_pass_rate_mean"
+ },
+ {
+  "text": "0.006",
+  "value": 0.0057735026918962545,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:dense",
+  "column": "preferred_pass_rate_sd"
+ },
+ {
+  "text": "0.047",
+  "value": 0.04716666666666667,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:dense",
+  "column": "normalized_auc_preferred_pass_mean"
+ },
+ {
+  "text": "0.057",
+  "value": 0.056666666666666664,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:dense",
+  "column": "violation_free_rate_mean"
+ },
+ {
+  "text": "0.847",
+  "value": 0.8466666666666667,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:dense",
+  "column": "pillar_entry_rate_mean"
+ },
+ {
+  "text": "0.610",
+  "value": 0.61,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:dense",
+  "column": "right_corridor_entry_rate_mean"
+ },
+ {
+  "text": "0.985",
+  "value": 0.985,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:eegnet",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.012",
+  "value": 0.01178511301977575,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:eegnet",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0237",
+  "value": 0.023723875946011292,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:eegnet",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.538",
+  "value": 0.5376388888888889,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:eegnet",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.049",
+  "value": 0.04945819097299235,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:eegnet",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.057",
+  "value": 0.05666666666666667,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:eegnet",
+  "column": "preferred_pass_rate_mean"
+ },
+ {
+  "text": "0.019",
+  "value": 0.01885618083164127,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:eegnet",
+  "column": "preferred_pass_rate_sd"
+ },
+ {
+  "text": "0.031",
+  "value": 0.03127777777777778,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:eegnet",
+  "column": "normalized_auc_preferred_pass_mean"
+ },
+ {
+  "text": "0.058",
+  "value": 0.058333333333333334,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:eegnet",
+  "column": "violation_free_rate_mean"
+ },
+ {
+  "text": "0.850",
+  "value": 0.85,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:eegnet",
+  "column": "pillar_entry_rate_mean"
+ },
+ {
+  "text": "0.647",
+  "value": 0.6466666666666667,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:eegnet",
+  "column": "right_corridor_entry_rate_mean"
+ },
+ {
+  "text": "0.988",
+  "value": 0.9883333333333333,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:cbramod",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.012",
+  "value": 0.011785113019775828,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:cbramod",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0219",
+  "value": 0.02194060566719183,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:cbramod",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.337",
+  "value": 0.33658333333333335,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:cbramod",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.043",
+  "value": 0.04348706704297267,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:cbramod",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.050",
+  "value": 0.05,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:cbramod",
+  "column": "preferred_pass_rate_mean"
+ },
+ {
+  "text": "0.000",
+  "value": 0.0,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:cbramod",
+  "column": "preferred_pass_rate_sd"
+ },
+ {
+  "text": "0.025",
+  "value": 0.024666666666666667,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:cbramod",
+  "column": "normalized_auc_preferred_pass_mean"
+ },
+ {
+  "text": "0.050",
+  "value": 0.05,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:cbramod",
+  "column": "violation_free_rate_mean"
+ },
+ {
+  "text": "0.870",
+  "value": 0.87,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:cbramod",
+  "column": "pillar_entry_rate_mean"
+ },
+ {
+  "text": "0.678",
+  "value": 0.6783333333333333,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:cbramod",
+  "column": "right_corridor_entry_rate_mean"
+ },
+ {
+  "text": "1.000",
+  "value": 1.0,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:ideal",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.000",
+  "value": 0.0,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:ideal",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0161",
+  "value": 0.01613774003882339,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:ideal",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.539",
+  "value": 0.5393333333333333,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:ideal",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.145",
+  "value": 0.14467703495871223,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:ideal",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.067",
+  "value": 0.06666666666666667,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:ideal",
+  "column": "preferred_pass_rate_mean"
+ },
+ {
+  "text": "0.021",
+  "value": 0.020816659994661323,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:ideal",
+  "column": "preferred_pass_rate_sd"
+ },
+ {
+  "text": "0.066",
+  "value": 0.06633333333333333,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:ideal",
+  "column": "normalized_auc_preferred_pass_mean"
+ },
+ {
+  "text": "0.067",
+  "value": 0.06666666666666667,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:ideal",
+  "column": "violation_free_rate_mean"
+ },
+ {
+  "text": "0.867",
+  "value": 0.8666666666666667,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:ideal",
+  "column": "pillar_entry_rate_mean"
+ },
+ {
+  "text": "0.600",
+  "value": 0.6,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:ideal",
+  "column": "right_corridor_entry_rate_mean"
+ },
+ {
+  "text": "0.872",
+  "value": 0.8716666666666667,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:independent_eegnet",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.040",
+  "value": 0.040069384267237676,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:independent_eegnet",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0329",
+  "value": 0.03288492622821704,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:independent_eegnet",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.353",
+  "value": 0.3533611111111111,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:independent_eegnet",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.029",
+  "value": 0.029109229158846218,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:independent_eegnet",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.052",
+  "value": 0.051666666666666666,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:independent_eegnet",
+  "column": "preferred_pass_rate_mean"
+ },
+ {
+  "text": "0.016",
+  "value": 0.016499158227686113,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:independent_eegnet",
+  "column": "preferred_pass_rate_sd"
+ },
+ {
+  "text": "0.021",
+  "value": 0.020583333333333335,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:independent_eegnet",
+  "column": "normalized_auc_preferred_pass_mean"
+ },
+ {
+  "text": "0.053",
+  "value": 0.05333333333333333,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:independent_eegnet",
+  "column": "violation_free_rate_mean"
+ },
+ {
+  "text": "0.848",
+  "value": 0.8483333333333334,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:independent_eegnet",
+  "column": "pillar_entry_rate_mean"
+ },
+ {
+  "text": "0.688",
+  "value": 0.6883333333333332,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:independent_eegnet",
+  "column": "right_corridor_entry_rate_mean"
+ },
+ {
+  "text": "0.780",
+  "value": 0.78,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:independent_cbramod",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.052",
+  "value": 0.0518544972870135,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:independent_cbramod",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.1663",
+  "value": 0.1662620189332655,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:independent_cbramod",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.393",
+  "value": 0.3927222222222222,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:independent_cbramod",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.029",
+  "value": 0.028755675768252945,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:independent_cbramod",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.040",
+  "value": 0.04,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:independent_cbramod",
+  "column": "preferred_pass_rate_mean"
+ },
+ {
+  "text": "0.000",
+  "value": 0.0,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:independent_cbramod",
+  "column": "preferred_pass_rate_sd"
+ },
+ {
+  "text": "0.020",
+  "value": 0.02011111111111111,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:independent_cbramod",
+  "column": "normalized_auc_preferred_pass_mean"
+ },
+ {
+  "text": "0.137",
+  "value": 0.13666666666666666,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:independent_cbramod",
+  "column": "violation_free_rate_mean"
+ },
+ {
+  "text": "0.775",
+  "value": 0.775,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:independent_cbramod",
+  "column": "pillar_entry_rate_mean"
+ },
+ {
+  "text": "0.638",
+  "value": 0.6383333333333334,
+  "source": "reports/final_v3/preference/validation/candidate_w200/by_condition.csv",
+  "key": "candidate_w200:independent_cbramod",
+  "column": "right_corridor_entry_rate_mean"
+ },
+ {
+  "text": "0.987",
+  "value": 0.9866666666666667,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:sparse",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.023",
+  "value": 0.023094010767585053,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:sparse",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0246",
+  "value": 0.024629231247909607,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:sparse",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.578",
+  "value": 0.5775555555555555,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:sparse",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.134",
+  "value": 0.13448516371428954,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:sparse",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.057",
+  "value": 0.05666666666666667,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:sparse",
+  "column": "preferred_pass_rate_mean"
+ },
+ {
+  "text": "0.015",
+  "value": 0.015275252316519468,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:sparse",
+  "column": "preferred_pass_rate_sd"
+ },
+ {
+  "text": "0.034",
+  "value": 0.034277777777777775,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:sparse",
+  "column": "normalized_auc_preferred_pass_mean"
+ },
+ {
+  "text": "0.057",
+  "value": 0.05666666666666667,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:sparse",
+  "column": "violation_free_rate_mean"
+ },
+ {
+  "text": "0.820",
+  "value": 0.8200000000000001,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:sparse",
+  "column": "pillar_entry_rate_mean"
+ },
+ {
+  "text": "0.647",
+  "value": 0.6466666666666667,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:sparse",
+  "column": "right_corridor_entry_rate_mean"
+ },
+ {
+  "text": "1.000",
+  "value": 1.0,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:dense",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.000",
+  "value": 0.0,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:dense",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0094",
+  "value": 0.009385270415565018,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:dense",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.950",
+  "value": 0.9501111111111111,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:dense",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.009",
+  "value": 0.008552669065744836,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:dense",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.057",
+  "value": 0.056666666666666664,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:dense",
+  "column": "preferred_pass_rate_mean"
+ },
+ {
+  "text": "0.006",
+  "value": 0.0057735026918962545,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:dense",
+  "column": "preferred_pass_rate_sd"
+ },
+ {
+  "text": "0.047",
+  "value": 0.04716666666666667,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:dense",
+  "column": "normalized_auc_preferred_pass_mean"
+ },
+ {
+  "text": "0.057",
+  "value": 0.056666666666666664,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:dense",
+  "column": "violation_free_rate_mean"
+ },
+ {
+  "text": "0.847",
+  "value": 0.8466666666666667,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:dense",
+  "column": "pillar_entry_rate_mean"
+ },
+ {
+  "text": "0.610",
+  "value": 0.61,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:dense",
+  "column": "right_corridor_entry_rate_mean"
+ },
+ {
+  "text": "0.797",
+  "value": 0.7966666666666666,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:eegnet",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.179",
+  "value": 0.17913371790059202,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:eegnet",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0458",
+  "value": 0.04576000658562446,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:eegnet",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.259",
+  "value": 0.2585,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:eegnet",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.080",
+  "value": 0.08045303821500273,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:eegnet",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.048",
+  "value": 0.04833333333333334,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:eegnet",
+  "column": "preferred_pass_rate_mean"
+ },
+ {
+  "text": "0.002",
+  "value": 0.0023570226039551587,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:eegnet",
+  "column": "preferred_pass_rate_sd"
+ },
+ {
+  "text": "0.015",
+  "value": 0.014694444444444444,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:eegnet",
+  "column": "normalized_auc_preferred_pass_mean"
+ },
+ {
+  "text": "0.103",
+  "value": 0.10333333333333333,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:eegnet",
+  "column": "violation_free_rate_mean"
+ },
+ {
+  "text": "0.792",
+  "value": 0.7916666666666667,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:eegnet",
+  "column": "pillar_entry_rate_mean"
+ },
+ {
+  "text": "0.648",
+  "value": 0.6483333333333333,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:eegnet",
+  "column": "right_corridor_entry_rate_mean"
+ },
+ {
+  "text": "0.868",
+  "value": 0.8683333333333334,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:cbramod",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.186",
+  "value": 0.1862047857124575,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:cbramod",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0615",
+  "value": 0.061454545922554414,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:cbramod",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.255",
+  "value": 0.25525,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:cbramod",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.094",
+  "value": 0.09392735076761304,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:cbramod",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.048",
+  "value": 0.04833333333333333,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:cbramod",
+  "column": "preferred_pass_rate_mean"
+ },
+ {
+  "text": "0.002",
+  "value": 0.002357022603955164,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:cbramod",
+  "column": "preferred_pass_rate_sd"
+ },
+ {
+  "text": "0.016",
+  "value": 0.015527777777777777,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:cbramod",
+  "column": "normalized_auc_preferred_pass_mean"
+ },
+ {
+  "text": "0.067",
+  "value": 0.06666666666666667,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:cbramod",
+  "column": "violation_free_rate_mean"
+ },
+ {
+  "text": "0.812",
+  "value": 0.8116666666666666,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:cbramod",
+  "column": "pillar_entry_rate_mean"
+ },
+ {
+  "text": "0.687",
+  "value": 0.6866666666666666,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:cbramod",
+  "column": "right_corridor_entry_rate_mean"
+ },
+ {
+  "text": "1.000",
+  "value": 1.0,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:ideal",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.000",
+  "value": 0.0,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:ideal",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0135",
+  "value": 0.013457085207060364,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:ideal",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.604",
+  "value": 0.6038888888888889,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:ideal",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.199",
+  "value": 0.19909303613395682,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:ideal",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.503",
+  "value": 0.5033333333333334,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:ideal",
+  "column": "preferred_pass_rate_mean"
+ },
+ {
+  "text": "0.172",
+  "value": 0.1715614564327703,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:ideal",
+  "column": "preferred_pass_rate_sd"
+ },
+ {
+  "text": "0.333",
+  "value": 0.33294444444444443,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:ideal",
+  "column": "normalized_auc_preferred_pass_mean"
+ },
+ {
+  "text": "0.503",
+  "value": 0.5033333333333334,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:ideal",
+  "column": "violation_free_rate_mean"
+ },
+ {
+  "text": "0.477",
+  "value": 0.4766666666666667,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:ideal",
+  "column": "pillar_entry_rate_mean"
+ },
+ {
+  "text": "0.203",
+  "value": 0.2033333333333333,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:ideal",
+  "column": "right_corridor_entry_rate_mean"
+ },
+ {
+  "text": "0.605",
+  "value": 0.605,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:independent_eegnet",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.167",
+  "value": 0.16734860488081624,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:independent_eegnet",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.1913",
+  "value": 0.1912827590889544,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:independent_eegnet",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.114",
+  "value": 0.11430555555555555,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:independent_eegnet",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.064",
+  "value": 0.06360032659672335,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:independent_eegnet",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.065",
+  "value": 0.065,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:independent_eegnet",
+  "column": "preferred_pass_rate_mean"
+ },
+ {
+  "text": "0.012",
+  "value": 0.011785113019775794,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:independent_eegnet",
+  "column": "preferred_pass_rate_sd"
+ },
+ {
+  "text": "0.009",
+  "value": 0.00925,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:independent_eegnet",
+  "column": "normalized_auc_preferred_pass_mean"
+ },
+ {
+  "text": "0.142",
+  "value": 0.14166666666666666,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:independent_eegnet",
+  "column": "violation_free_rate_mean"
+ },
+ {
+  "text": "0.682",
+  "value": 0.6816666666666666,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:independent_eegnet",
+  "column": "pillar_entry_rate_mean"
+ },
+ {
+  "text": "0.645",
+  "value": 0.645,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:independent_eegnet",
+  "column": "right_corridor_entry_rate_mean"
+ },
+ {
+  "text": "0.637",
+  "value": 0.6366666666666667,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:independent_cbramod",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.127",
+  "value": 0.12727922061357858,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:independent_cbramod",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.2026",
+  "value": 0.2025689740822085,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:independent_cbramod",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.219",
+  "value": 0.2192777777777778,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:independent_cbramod",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.005",
+  "value": 0.00526401714883319,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:independent_cbramod",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.042",
+  "value": 0.04166666666666667,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:independent_cbramod",
+  "column": "preferred_pass_rate_mean"
+ },
+ {
+  "text": "0.016",
+  "value": 0.01649915822768611,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:independent_cbramod",
+  "column": "preferred_pass_rate_sd"
+ },
+ {
+  "text": "0.011",
+  "value": 0.011083333333333334,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:independent_cbramod",
+  "column": "normalized_auc_preferred_pass_mean"
+ },
+ {
+  "text": "0.202",
+  "value": 0.20166666666666666,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:independent_cbramod",
+  "column": "violation_free_rate_mean"
+ },
+ {
+  "text": "0.692",
+  "value": 0.6916666666666667,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:independent_cbramod",
+  "column": "pillar_entry_rate_mean"
+ },
+ {
+  "text": "0.552",
+  "value": 0.5516666666666667,
+  "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
+  "key": "candidate_w400:independent_cbramod",
+  "column": "right_corridor_entry_rate_mean"
+ }
+]
