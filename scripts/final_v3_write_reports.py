@@ -253,10 +253,35 @@ def preference(out):
           "item), with its own pilots, declared validation selection and freeze; evaluated on test participants "
           "already used in v2/v3.** Preferred pass = task success, no violation at any step, and the gripper passes "
           "a = 0.5 on the left of the pillar.", "")
-    pilots = R / "final_v3/preference/pilots"
-    if (pilots / "by_condition.csv").exists():
-        d.add("## Pilots (validation participants, seeds 900/901, w = 1.0)", "")
-        by_condition(d, pilots, "pilots", pref=True)
+    pr = R / "final_v3/preference/pilot_report.json"
+    if pr.exists():
+        rep = json.loads(pr.read_text())
+        d.add("## Pilots (validation participants, seeds 900/901, w = 1.0) and the declared gate", "",
+              f"Gate: {rep['gate_rule']}. Final-policy rates per pilot run (seed 900 / 901).", "",
+              "| variant | condition | preferred pass | task success | violation-free | pillar entry | right corridor |",
+              "|---|---|---|---|---|---|---|")
+        for vname, v in rep["variants"].items():
+            by = defaultdict(dict)
+            for rname, x in v["runs"].items():
+                by[x["condition"]][x["seed"]] = (rname, x)
+            for cond in ORDER:
+                if cond not in by:
+                    continue
+                cells = []
+                for k in ("preferred_pass_rate", "success_rate", "violation_free_rate", "pillar_entry_rate",
+                          "right_corridor_entry_rate"):
+                    cells.append(" / ".join(d.num(x.get(k), pr, f"{vname}/{rn}", k, 2) for s, (rn, x) in sorted(by[cond].items())))
+                d.add(f"| {vname} | {cond} | " + " | ".join(cells) + " |")
+        d.add("", "| variant | ideal mean | sparse mean | difference | ideal > sparse on every seed | gate passed |",
+              "|---|---|---|---|---|---|")
+        for vname, v in rep["variants"].items():
+            g = v["gate"]
+            if g:
+                d.add(f"| {vname} | {d.num(g['ideal_mean'], pr, vname, 'gate.ideal_mean')} | "
+                      f"{d.num(g['sparse_mean'], pr, vname, 'gate.sparse_mean')} | "
+                      f"{d.num(g['difference'], pr, vname, 'gate.difference', signed=True)} | "
+                      f"{g['ideal_better_every_seed']} | **{g['passed']}** |")
+        d.add("")
     if (V / "selection.json").exists():
         d.add("## Validation candidates (s11/s13, seeds 100-102)", "")
         selection_table(d, V / "selection.json", "selection_preferred_pass", "preference validation candidates")
