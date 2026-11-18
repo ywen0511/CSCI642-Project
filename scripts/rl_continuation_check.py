@@ -80,12 +80,27 @@ def main():
         with open(new / "replay_buffer.pkl", "rb") as f:
             new_buf = pickle.load(f)
         n_old = old_buf.size()
-        kept = all(np.array_equal(old_buf.observations[k][:n_old], new_buf.observations[k][:n_old])
-                   for k in old_buf.observations) and np.array_equal(old_buf.actions[:n_old], new_buf.actions[:n_old])
+        capacity = old_buf.buffer_size
+        if not old_buf.full:
+            # restored transitions occupy [0, n_old) and must be unchanged; the buffer must grow
+            keep = np.arange(n_old)
+            replay_ok = status["replay_size"] > meta["replay_size"]
+            replay_check = "replay grew"
+        else:
+            # full circular buffer: the continuation overwrites exactly `added` slots starting at the saved write
+            # position; every other restored slot must be unchanged and the write position must advance by `added`
+            overwritten = (old_buf.pos + np.arange(min(added, capacity))) % capacity
+            keep = np.setdiff1d(np.arange(capacity), overwritten)
+            replay_ok = bool(new_buf.full and new_buf.pos == (old_buf.pos + added) % capacity
+                             and status["replay_size"] == capacity)
+            replay_check = "full buffer: write position advanced by the added steps"
+        kept = all(np.array_equal(old_buf.observations[k][keep], new_buf.observations[k][keep])
+                   for k in old_buf.observations) and np.array_equal(old_buf.actions[keep], new_buf.actions[keep])
         report.update(status=status, verification=v, restored_transitions_unchanged=bool(kept),
+                      restored_slots_checked=int(len(keep)), replay_check=replay_check,
                       steps_increased=status["final_steps"] == meta["num_timesteps"] + added,
                       updates_increased=status["updates"] > meta["n_updates"],
-                      replay_grew=status["replay_size"] > meta["replay_size"])
+                      replay_grew=bool(replay_ok))
         report["ok"] = bool(v["ok"] and kept and report["steps_increased"] and report["updates_increased"]
                             and report["replay_grew"] and status["resume_from"] == str(snap))
     Path(a.out).write_text(json.dumps(report, indent=2, default=str) + "\n")
