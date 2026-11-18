@@ -1,0 +1,647 @@
+{
+  "gate_rule": "ideal - sparse mean final preferred-pass >= 0.20 and ideal > sparse on every pilot seed",
+  "variants": {
+    "round1_corridor25_75_150k": {
+      "runs_dir": "/data/rtxw01/nbak/robot_intel/kztrgg/projs/code/csci642-v3/runs/pref_pilots",
+      "runs": {
+        "cbramod_s13_s900": {
+          "condition": "cbramod",
+          "subject": "s13",
+          "seed": 900,
+          "completed": true,
+          "final_steps": 150000,
+          "config": {
+            "eeg_weight": 1.0,
+            "total_timesteps": 150000,
+            "preference": {
+              "min_goal_distance_xy_m": 0.15,
+              "pillar_radius_m": 0.025,
+              "corridor_a": [
+                0.25,
+                0.75
+              ],
+              "preferred_side": "left",
+              "max_goal_redraws": 10000
+            }
+          },
+          "success_rate": 0.31,
+          "preferred_pass_rate": 0.01,
+          "violation_free_rate": 0.13,
+          "pillar_entry_rate": 0.61,
+          "right_corridor_entry_rate": 0.7,
+          "mean_path_length": 0.7283098016157755
+        },
+        "cbramod_s13_s901": {
+          "condition": "cbramod",
+          "subject": "s13",
+          "seed": 901,
+          "completed": true,
+          "final_steps": 150000,
+          "config": {
+            "eeg_weight": 1.0,
+            "total_timesteps": 150000,
+            "preference": {
+              "min_goal_distance_xy_m": 0.15,
+              "pillar_radius_m": 0.025,
+              "corridor_a": [
+                0.25,
+                0.75
+              ],
+              "preferred_side": "left",
+              "max_goal_redraws": 10000
+            }
+          },
+          "success_rate": 0.54,
+          "preferred_pass_rate": 0.0,
+          "violation_free_rate": 0.4,
+          "pillar_entry_rate": 0.46,
+          "right_corridor_entry_rate": 0.57,
+          "mean_path_length": 0.6955081414895453
+        },
+        "dense_shared_s900": {
+          "condition": "dense",
+          "subject": null,
+          "seed": 900,
+          "completed": true,
+          "final_steps": 150000,
+          "config": {
+            "eeg_weight": 1.0,
+            "total_timesteps": 150000,
+            "preference": {
+              "min_goal_distance_xy_m": 0.15,
+              "pillar_radius_m": 0.025,
+              "corridor_a": [
+                0.25,
+                0.75
+              ],
+              "preferred_side": "left",
+              "max_goal_redraws": 10000
+            }
+          },
+          "success_rate": 1.0,
+          "preferred_pass_rate": 0.06,
+          "violation_free_rate": 0.06,
+          "pillar_entry_rate": 0.81,
+          "right_corridor_entry_rate": 0.62,
+          "mean_path_length": 0.23049249930387625
+        },
+        "dense_shared_s901": {
+          "condition": "dense",
+          "subject": null,
+          "seed": 901,
+          "completed": true,
+          "final_steps": 150000,
+          "config": {
+            "eeg_weight": 1.0,
+            "total_timesteps": 150000,
+            "preference": {
+              "min_goal_distance_xy_m": 0.15,
+              "pillar_radius_m": 0.025,
+              "corridor_a": [
+                0.25,
+                0.75
+              ],
+              "preferred_side": "left",
+              "max_goal_redraws": 10000
+            }
+          },
+          "success_rate": 1.0,
+          "preferred_pass_rate": 0.06,
+          "violation_free_rate": 0.06,
+          "pillar_entry_rate": 0.83,
+          "right_corridor_entry_rate": 0.56,
+          "mean_path_length": 0.3773872262232372
+        },
+        "eegnet_s11_s900": {
+          "condition": "eegnet",
+          "subject": "s11",
+          "seed": 900,
+          "completed": true,
+          "final_steps": 150000,
+          "config": {
+            "eeg_weight": 1.0,
+            "total_timesteps": 150000,
+            "preference": {
+              "min_goal_distance_xy_m": 0.15,
+              "pillar_radius_m": 0.025,
+              "corridor_a": [
+                0.25,
+                0.75
+              ],
+              "preferred_side": "left",
+              "max_goal_redraws": 10000
+            }
+          },
+          "success_rate": 0.61,
+          "preferred_pass_rate": 0.0,
+          "violation_free_rate": 0.0,
+          "pillar_entry_rate": 0.92,
+          "right_corridor_entry_rate": 0.67,
+          "mean_path_length": 0.20211130004160982
+        },
+        "eegnet_s11_s901": {
+          "condition": "eegnet",
+          "subject": "s11",
+          "seed": 901,
+          "completed": true,
+          "final_steps": 150000,
+          "config": {
+            "eeg_weight": 1.0,
+            "total_timesteps": 150000,
+            "preference": {
+              "min_goal_distance_xy_m": 0.15,
+              "pillar_radius_m": 0.025,
+              "corridor_a": [
+                0.25,
+                0.75
+              ],
+              "preferred_side": "left",
+              "max_goal_redraws": 10000
+            }
+          },
+          "success_rate": 0.49,
+          "preferred_pass_rate": 0.0,
+          "violation_free_rate": 0.22,
+          "pillar_entry_rate": 0.73,
+          "right_corridor_entry_rate": 0.49,
+          "mean_path_length": 1.7107474503350522
+        },
+        "ideal_shared_s900": {
+          "condition": "ideal",
+          "subject": null,
+          "seed": 900,
+          "completed": true,
+          "final_steps": 150000,
+          "config": {
+            "eeg_weight": 1.0,
+            "total_timesteps": 150000,
+            "preference": {
+              "min_goal_distance_xy_m": 0.15,
+              "pillar_radius_m": 0.025,
+              "corridor_a": [
+                0.25,
+                0.75
+              ],
+              "preferred_side": "left",
+              "max_goal_redraws": 10000
+            }
+          },
+          "success_rate": 0.42,
+          "preferred_pass_rate": 0.0,
+          "violation_free_rate": 0.24,
+          "pillar_entry_rate": 0.7,
+          "right_corridor_entry_rate": 0.52,
+          "mean_path_length": 0.6430820673598804
+        },
+        "ideal_shared_s901": {
+          "condition": "ideal",
+          "subject": null,
+          "seed": 901,
+          "completed": true,
+          "final_steps": 150000,
+          "config": {
+            "eeg_weight": 1.0,
+            "total_timesteps": 150000,
+            "preference": {
+              "min_goal_distance_xy_m": 0.15,
+              "pillar_radius_m": 0.025,
+              "corridor_a": [
+                0.25,
+                0.75
+              ],
+              "preferred_side": "left",
+              "max_goal_redraws": 10000
+            }
+          },
+          "success_rate": 0.85,
+          "preferred_pass_rate": 0.06,
+          "violation_free_rate": 0.06,
+          "pillar_entry_rate": 0.86,
+          "right_corridor_entry_rate": 0.58,
+          "mean_path_length": 0.22300526966637402
+        },
+        "sparse_shared_s900": {
+          "condition": "sparse",
+          "subject": null,
+          "seed": 900,
+          "completed": true,
+          "final_steps": 150000,
+          "config": {
+            "eeg_weight": 1.0,
+            "total_timesteps": 150000,
+            "preference": {
+              "min_goal_distance_xy_m": 0.15,
+              "pillar_radius_m": 0.025,
+              "corridor_a": [
+                0.25,
+                0.75
+              ],
+              "preferred_side": "left",
+              "max_goal_redraws": 10000
+            }
+          },
+          "success_rate": 0.34,
+          "preferred_pass_rate": 0.02,
+          "violation_free_rate": 0.48,
+          "pillar_entry_rate": 0.5,
+          "right_corridor_entry_rate": 0.33,
+          "mean_path_length": 0.5958606301994523
+        },
+        "sparse_shared_s901": {
+          "condition": "sparse",
+          "subject": null,
+          "seed": 901,
+          "completed": true,
+          "final_steps": 150000,
+          "config": {
+            "eeg_weight": 1.0,
+            "total_timesteps": 150000,
+            "preference": {
+              "min_goal_distance_xy_m": 0.15,
+              "pillar_radius_m": 0.025,
+              "corridor_a": [
+                0.25,
+                0.75
+              ],
+              "preferred_side": "left",
+              "max_goal_redraws": 10000
+            }
+          },
+          "success_rate": 1.0,
+          "preferred_pass_rate": 0.04,
+          "violation_free_rate": 0.04,
+          "pillar_entry_rate": 0.91,
+          "right_corridor_entry_rate": 0.61,
+          "mean_path_length": 0.2055078349412236
+        }
+      },
+      "gate": {
+        "ideal_mean": 0.03,
+        "sparse_mean": 0.03,
+        "difference": 0.0,
+        "ideal_better_every_seed": false,
+        "passed": false
+      }
+    },
+    "g1_original_300k": {
+      "runs_dir": "/data/rtxw01/nbak/robot_intel/kztrgg/projs/code/csci642-v3/runs/pref_pilots_g1_original_300k",
+      "runs": {
+        "ideal_shared_s900": {
+          "condition": "ideal",
+          "subject": null,
+          "seed": 900,
+          "completed": true,
+          "final_steps": 300000,
+          "config": {
+            "eeg_weight": 1.0,
+            "total_timesteps": 300000,
+            "preference": {
+              "min_goal_distance_xy_m": 0.15,
+              "pillar_radius_m": 0.025,
+              "corridor_a": [
+                0.25,
+                0.75
+              ],
+              "preferred_side": "left",
+              "max_goal_redraws": 10000
+            }
+          },
+          "success_rate": 1.0,
+          "preferred_pass_rate": 0.1,
+          "violation_free_rate": 0.1,
+          "pillar_entry_rate": 0.84,
+          "right_corridor_entry_rate": 0.46,
+          "mean_path_length": 0.48115388549258253
+        },
+        "ideal_shared_s901": {
+          "condition": "ideal",
+          "subject": null,
+          "seed": 901,
+          "completed": true,
+          "final_steps": 300000,
+          "config": {
+            "eeg_weight": 1.0,
+            "total_timesteps": 300000,
+            "preference": {
+              "min_goal_distance_xy_m": 0.15,
+              "pillar_radius_m": 0.025,
+              "corridor_a": [
+                0.25,
+                0.75
+              ],
+              "preferred_side": "left",
+              "max_goal_redraws": 10000
+            }
+          },
+          "success_rate": 1.0,
+          "preferred_pass_rate": 0.08,
+          "violation_free_rate": 0.08,
+          "pillar_entry_rate": 0.86,
+          "right_corridor_entry_rate": 0.54,
+          "mean_path_length": 0.2194431583641725
+        },
+        "sparse_shared_s900": {
+          "condition": "sparse",
+          "subject": null,
+          "seed": 900,
+          "completed": true,
+          "final_steps": 300000,
+          "config": {
+            "eeg_weight": 1.0,
+            "total_timesteps": 300000,
+            "preference": {
+              "min_goal_distance_xy_m": 0.15,
+              "pillar_radius_m": 0.025,
+              "corridor_a": [
+                0.25,
+                0.75
+              ],
+              "preferred_side": "left",
+              "max_goal_redraws": 10000
+            }
+          },
+          "success_rate": 0.95,
+          "preferred_pass_rate": 0.06,
+          "violation_free_rate": 0.06,
+          "pillar_entry_rate": 0.83,
+          "right_corridor_entry_rate": 0.64,
+          "mean_path_length": 0.2158872864997032
+        },
+        "sparse_shared_s901": {
+          "condition": "sparse",
+          "subject": null,
+          "seed": 901,
+          "completed": true,
+          "final_steps": 300000,
+          "config": {
+            "eeg_weight": 1.0,
+            "total_timesteps": 300000,
+            "preference": {
+              "min_goal_distance_xy_m": 0.15,
+              "pillar_radius_m": 0.025,
+              "corridor_a": [
+                0.25,
+                0.75
+              ],
+              "preferred_side": "left",
+              "max_goal_redraws": 10000
+            }
+          },
+          "success_rate": 1.0,
+          "preferred_pass_rate": 0.06,
+          "violation_free_rate": 0.06,
+          "pillar_entry_rate": 0.86,
+          "right_corridor_entry_rate": 0.58,
+          "mean_path_length": 0.2878807335093696
+        }
+      },
+      "gate": {
+        "ideal_mean": 0.09,
+        "sparse_mean": 0.06,
+        "difference": 0.03,
+        "ideal_better_every_seed": true,
+        "passed": false
+      }
+    },
+    "g2_corridor10_90_150k": {
+      "runs_dir": "/data/rtxw01/nbak/robot_intel/kztrgg/projs/code/csci642-v3/runs/pref_pilots_g2_corridor10_90_150k",
+      "runs": {
+        "ideal_shared_s900": {
+          "condition": "ideal",
+          "subject": null,
+          "seed": 900,
+          "completed": true,
+          "final_steps": 150000,
+          "config": {
+            "eeg_weight": 1.0,
+            "total_timesteps": 150000,
+            "preference": {
+              "min_goal_distance_xy_m": 0.15,
+              "pillar_radius_m": 0.025,
+              "corridor_a": [
+                0.1,
+                0.9
+              ],
+              "preferred_side": "left",
+              "max_goal_redraws": 10000
+            }
+          },
+          "success_rate": 1.0,
+          "preferred_pass_rate": 0.08,
+          "violation_free_rate": 0.08,
+          "pillar_entry_rate": 0.89,
+          "right_corridor_entry_rate": 0.54,
+          "mean_path_length": 0.2834261123162455
+        },
+        "ideal_shared_s901": {
+          "condition": "ideal",
+          "subject": null,
+          "seed": 901,
+          "completed": true,
+          "final_steps": 150000,
+          "config": {
+            "eeg_weight": 1.0,
+            "total_timesteps": 150000,
+            "preference": {
+              "min_goal_distance_xy_m": 0.15,
+              "pillar_radius_m": 0.025,
+              "corridor_a": [
+                0.1,
+                0.9
+              ],
+              "preferred_side": "left",
+              "max_goal_redraws": 10000
+            }
+          },
+          "success_rate": 1.0,
+          "preferred_pass_rate": 0.04,
+          "violation_free_rate": 0.04,
+          "pillar_entry_rate": 0.9,
+          "right_corridor_entry_rate": 0.59,
+          "mean_path_length": 0.21845376721856255
+        },
+        "sparse_shared_s900": {
+          "condition": "sparse",
+          "subject": null,
+          "seed": 900,
+          "completed": true,
+          "final_steps": 150000,
+          "config": {
+            "eeg_weight": 1.0,
+            "total_timesteps": 150000,
+            "preference": {
+              "min_goal_distance_xy_m": 0.15,
+              "pillar_radius_m": 0.025,
+              "corridor_a": [
+                0.1,
+                0.9
+              ],
+              "preferred_side": "left",
+              "max_goal_redraws": 10000
+            }
+          },
+          "success_rate": 0.34,
+          "preferred_pass_rate": 0.02,
+          "violation_free_rate": 0.48,
+          "pillar_entry_rate": 0.5,
+          "right_corridor_entry_rate": 0.39,
+          "mean_path_length": 0.5958606301994523
+        },
+        "sparse_shared_s901": {
+          "condition": "sparse",
+          "subject": null,
+          "seed": 901,
+          "completed": true,
+          "final_steps": 150000,
+          "config": {
+            "eeg_weight": 1.0,
+            "total_timesteps": 150000,
+            "preference": {
+              "min_goal_distance_xy_m": 0.15,
+              "pillar_radius_m": 0.025,
+              "corridor_a": [
+                0.1,
+                0.9
+              ],
+              "preferred_side": "left",
+              "max_goal_redraws": 10000
+            }
+          },
+          "success_rate": 1.0,
+          "preferred_pass_rate": 0.04,
+          "violation_free_rate": 0.04,
+          "pillar_entry_rate": 0.91,
+          "right_corridor_entry_rate": 0.68,
+          "mean_path_length": 0.2055078349412236
+        }
+      },
+      "gate": {
+        "ideal_mean": 0.06,
+        "sparse_mean": 0.03,
+        "difference": 0.03,
+        "ideal_better_every_seed": false,
+        "passed": false
+      }
+    },
+    "g3_corridor10_90_300k": {
+      "runs_dir": "/data/rtxw01/nbak/robot_intel/kztrgg/projs/code/csci642-v3/runs/pref_pilots_g3_corridor10_90_300k",
+      "runs": {
+        "ideal_shared_s900": {
+          "condition": "ideal",
+          "subject": null,
+          "seed": 900,
+          "completed": true,
+          "final_steps": 300000,
+          "config": {
+            "eeg_weight": 1.0,
+            "total_timesteps": 300000,
+            "preference": {
+              "min_goal_distance_xy_m": 0.15,
+              "pillar_radius_m": 0.025,
+              "corridor_a": [
+                0.1,
+                0.9
+              ],
+              "preferred_side": "left",
+              "max_goal_redraws": 10000
+            }
+          },
+          "success_rate": 1.0,
+          "preferred_pass_rate": 0.07,
+          "violation_free_rate": 0.07,
+          "pillar_entry_rate": 0.86,
+          "right_corridor_entry_rate": 0.64,
+          "mean_path_length": 0.2138817128874324
+        },
+        "ideal_shared_s901": {
+          "condition": "ideal",
+          "subject": null,
+          "seed": 901,
+          "completed": true,
+          "final_steps": 300000,
+          "config": {
+            "eeg_weight": 1.0,
+            "total_timesteps": 300000,
+            "preference": {
+              "min_goal_distance_xy_m": 0.15,
+              "pillar_radius_m": 0.025,
+              "corridor_a": [
+                0.1,
+                0.9
+              ],
+              "preferred_side": "left",
+              "max_goal_redraws": 10000
+            }
+          },
+          "success_rate": 1.0,
+          "preferred_pass_rate": 0.06,
+          "violation_free_rate": 0.06,
+          "pillar_entry_rate": 0.92,
+          "right_corridor_entry_rate": 0.62,
+          "mean_path_length": 0.26008251657088044
+        },
+        "sparse_shared_s900": {
+          "condition": "sparse",
+          "subject": null,
+          "seed": 900,
+          "completed": true,
+          "final_steps": 300000,
+          "config": {
+            "eeg_weight": 1.0,
+            "total_timesteps": 300000,
+            "preference": {
+              "min_goal_distance_xy_m": 0.15,
+              "pillar_radius_m": 0.025,
+              "corridor_a": [
+                0.1,
+                0.9
+              ],
+              "preferred_side": "left",
+              "max_goal_redraws": 10000
+            }
+          },
+          "success_rate": 0.95,
+          "preferred_pass_rate": 0.02,
+          "violation_free_rate": 0.02,
+          "pillar_entry_rate": 0.83,
+          "right_corridor_entry_rate": 0.73,
+          "mean_path_length": 0.2158872864997032
+        },
+        "sparse_shared_s901": {
+          "condition": "sparse",
+          "subject": null,
+          "seed": 901,
+          "completed": true,
+          "final_steps": 300000,
+          "config": {
+            "eeg_weight": 1.0,
+            "total_timesteps": 300000,
+            "preference": {
+              "min_goal_distance_xy_m": 0.15,
+              "pillar_radius_m": 0.025,
+              "corridor_a": [
+                0.1,
+                0.9
+              ],
+              "preferred_side": "left",
+              "max_goal_redraws": 10000
+            }
+          },
+          "success_rate": 1.0,
+          "preferred_pass_rate": 0.05,
+          "violation_free_rate": 0.05,
+          "pillar_entry_rate": 0.86,
+          "right_corridor_entry_rate": 0.65,
+          "mean_path_length": 0.2878807335093696
+        }
+      },
+      "gate": {
+        "ideal_mean": 0.065,
+        "sparse_mean": 0.035,
+        "difference": 0.03,
+        "ideal_better_every_seed": true,
+        "passed": false
+      }
+    }
+  }
+}
