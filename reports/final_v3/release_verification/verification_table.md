@@ -12,6 +12,7 @@
 | [`final-v3-v3-validation-w050-20261118-a09817f`](https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-v3-validation-w050-20261118-a09817f) | 37 | 0.82 | True | 0 / 34 | 33 | 33 / 0 | 0.0e+00 | **True** |
 | [`final-v3-v3-validation-w100-20261118-a09817f`](https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-v3-validation-w100-20261118-a09817f) | 37 | 0.82 | True | 0 / 34 | 33 | 33 / 0 | 0.0e+00 | **True** |
 | [`final-v3-v3-validation-w200-20261118-a09817f`](https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-v3-validation-w200-20261118-a09817f) | 37 | 0.82 | True | 0 / 34 | 33 | 33 / 0 | 0.0e+00 | **True** |
+| [`final-v3-verification-20261119`](https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-verification-20261119) | 19 | 0.00 | True | 0 / 0 | 0 | 0 / 0 | 0.0e+00 | **True** |
 
 | continuation report | downloaded snapshot | clean checkout | steps | updates | replay size | restored transitions unchanged | ok |
 |---|---|---|---|---|---|---|---|
