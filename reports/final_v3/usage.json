@@ -1,0 +1,209 @@
+{
+  "sensitivity_w010_final": {
+    "runs": 75,
+    "completed": 75,
+    "core_hours": 70.13949918434695,
+    "per_run_minutes": {
+      "min": 54.68680466219958,
+      "median": 55.9963983664522,
+      "max": 58.52946453661813
+    },
+    "wall_clock_hours": 0.9787682264380985,
+    "disk_bytes": 39133011733
+  },
+  "sensitivity_w050_final": {
+    "runs": 75,
+    "completed": 75,
+    "core_hours": 70.16566849559331,
+    "per_run_minutes": {
+      "min": 54.54734468398286,
+      "median": 56.13544221430396,
+      "max": 57.662811189346634
+    },
+    "wall_clock_hours": 0.9632551561461554,
+    "disk_bytes": 39130534931
+  },
+  "v3_validation_w050": {
+    "runs": 33,
+    "completed": 33,
+    "core_hours": 31.139698521978378,
+    "per_run_minutes": {
+      "min": 55.06819978118874,
+      "median": 56.45644128974527,
+      "max": 57.89723106138408
+    },
+    "wall_clock_hours": 0.9675206420818965,
+    "disk_bytes": 17220256799
+  },
+  "v3_validation_w100": {
+    "runs": 33,
+    "completed": 33,
+    "core_hours": 31.215438759453956,
+    "per_run_minutes": {
+      "min": 54.76685953804602,
+      "median": 56.69589547396948,
+      "max": 57.91326035604191
+    },
+    "wall_clock_hours": 0.9695581076542537,
+    "disk_bytes": 17219892186
+  },
+  "v3_validation_w200": {
+    "runs": 33,
+    "completed": 33,
+    "core_hours": 31.086309208328345,
+    "per_run_minutes": {
+      "min": 54.88889465582712,
+      "median": 56.561479403606306,
+      "max": 58.089751772846405
+    },
+    "wall_clock_hours": 0.969705785314242,
+    "disk_bytes": 17219825698
+  },
+  "v3_final": {
+    "runs": 75,
+    "completed": 75,
+    "core_hours": 69.48024676720676,
+    "per_run_minutes": {
+      "min": 53.87760128043592,
+      "median": 55.552464221945655,
+      "max": 58.35742841194539
+    },
+    "wall_clock_hours": 0.9760867349969016,
+    "disk_bytes": 39138715748
+  },
+  "pref_pilots": {
+    "runs": 10,
+    "completed": 10,
+    "core_hours": 8.931493447690736,
+    "per_run_minutes": {
+      "min": 47.54925240439673,
+      "median": 56.127812703629026,
+      "max": 57.5448603957581
+    },
+    "wall_clock_hours": 0.960531276067098,
+    "disk_bytes": 5462298580
+  },
+  "pref_pilots_g1_original_300k": {
+    "runs": 4,
+    "completed": 4,
+    "core_hours": 7.432850655666294,
+    "per_run_minutes": {
+      "min": 110.22247697125034,
+      "median": 110.94098881435735,
+      "max": 113.86658474001257
+    },
+    "wall_clock_hours": 1.898840035531256,
+    "disk_bytes": 4229510631
+  },
+  "pref_pilots_g2_corridor10_90_150k": {
+    "runs": 4,
+    "completed": 4,
+    "core_hours": 3.7351914541967886,
+    "per_run_minutes": {
+      "min": 54.87911246763542,
+      "median": 55.70803362371711,
+      "max": 57.81630753673768
+    },
+    "wall_clock_hours": 0.9646672590573628,
+    "disk_bytes": 2177781595
+  },
+  "pref_pilots_g3_corridor10_90_300k": {
+    "runs": 4,
+    "completed": 4,
+    "core_hours": 7.4790886940637655,
+    "per_run_minutes": {
+      "min": 111.65280768916321,
+      "median": 112.09525488313132,
+      "max": 112.90200418840007
+    },
+    "wall_clock_hours": 1.8827641499042511,
+    "disk_bytes": 4229654085
+  },
+  "pref_validation_w100": {
+    "runs": 33,
+    "completed": 33,
+    "core_hours": 65.62448198097836,
+    "per_run_minutes": {
+      "min": 117.1163748178864,
+      "median": 119.44993700800309,
+      "max": 122.06103568294397
+    },
+    "wall_clock_hours": 2.0354899883932536,
+    "disk_bytes": 35018285728
+  },
+  "pref_validation_w200": {
+    "runs": 33,
+    "completed": 33,
+    "core_hours": 65.78920887059468,
+    "per_run_minutes": {
+      "min": 117.07929806869167,
+      "median": 119.3355285028927,
+      "max": 122.11155171614762
+    },
+    "wall_clock_hours": 2.0361671350399653,
+    "disk_bytes": 35017680446
+  },
+  "pref_validation_w400": {
+    "runs": 33,
+    "completed": 33,
+    "core_hours": 64.99767971248056,
+    "per_run_minutes": {
+      "min": 102.00575167038478,
+      "median": 119.45160144179438,
+      "max": 123.44947473264764
+    },
+    "wall_clock_hours": 2.066160901983579,
+    "disk_bytes": 35016740191
+  },
+  "pref_final": {
+    "runs": 75,
+    "completed": 75,
+    "core_hours": 147.75303324319654,
+    "per_run_minutes": {
+      "min": 109.68528576063497,
+      "median": 118.88787376761125,
+      "max": 123.74383825999685
+    },
+    "wall_clock_hours": 2.0635495948791505,
+    "disk_bytes": 79588007714
+  },
+  "pref_validation_w100_killed_attempt": {
+    "runs": 33,
+    "completed": 0,
+    "core_hours": 57.705,
+    "aborted": true,
+    "per_run_minutes": {
+      "min": 104.91666666666667,
+      "median": 104.91666666666667,
+      "max": 104.96666666666667
+    },
+    "wall_clock_hours": null,
+    "disk_bytes": null
+  },
+  "pref_validation_w200_killed_attempt": {
+    "runs": 33,
+    "completed": 0,
+    "core_hours": 57.37833333333333,
+    "aborted": true,
+    "per_run_minutes": {
+      "min": 103.61666666666666,
+      "median": 103.73333333333333,
+      "max": 104.96666666666667
+    },
+    "wall_clock_hours": null,
+    "disk_bytes": null
+  },
+  "pref_validation_w400_killed_attempt": {
+    "runs": 33,
+    "completed": 0,
+    "core_hours": 56.937777777777775,
+    "aborted": true,
+    "per_run_minutes": {
+      "min": 103.0,
+      "median": 103.61666666666666,
+      "max": 103.61666666666666
+    },
+    "wall_clock_hours": null,
+    "disk_bytes": null
+  }
+}

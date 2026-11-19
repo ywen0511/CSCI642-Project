@@ -145,7 +145,34 @@ run). Three weights were run as complete validation suites; the declared AUC rul
 
 ### 3.4 Route-preference extension (extension)
 
-<!--PREF_RESULTS-->
+Details and generated tables: [`final_v3/preference_results.md`](final_v3/preference_results.md); declared plan
+[`final_v3/preference_plan.md`](final_v3/preference_plan.md). FetchReach with a virtual pillar between start and goal
+(no collision). The simulated user wants the gripper to pass on the left. Any segment that enters the pillar or the
+right-hand corridor is labeled an error, and the task reward is unchanged. The primary metric is the final-policy
+**preferred-pass** rate: success, no violation, and passing on the left.
+
+- **Pilot gate failed.** Even noise-free (ideal) feedback at w = 1.0 did not reach the declared margin over sparse
+  in any of the four declared variants. The declared fallback was used: corridor [0.10, 0.90], 300k steps.
+- **Validation selected w = 2.0.** The candidates gave mean EEG preferred pass 0.052 / 0.053 / 0.048 for
+  w = 1 / 2 / 4. Only the ideal oracle at w = 4.0 learned the preference (0.50 vs 0.06 for sparse).
+
+| condition (final, w = 2.0) | runs | preferred pass | pillar entry | task success | success AUC |
+|---|---|---|---|---|---|
+| sparse | 5 | 0.044 ± 0.026 | 0.848 | 0.838 ± 0.183 | 0.349 ± 0.196 |
+| dense | 5 | 0.052 ± 0.024 | 0.838 | 0.998 ± 0.004 | 0.936 ± 0.021 |
+| EEGNet | 15 | 0.048 ± 0.010 | 0.833 | 0.931 ± 0.049 | 0.380 ± 0.113 |
+| CBraMod | 15 | 0.045 ± 0.015 | 0.824 | 0.867 ± 0.111 | 0.281 ± 0.133 |
+| ideal | 5 | 0.082 ± 0.049 | 0.888 | 0.996 ± 0.009 | 0.601 ± 0.056 |
+| independent EEGNet | 15 | 0.048 ± 0.012 | 0.735 | 0.749 ± 0.203 | 0.243 ± 0.101 |
+| independent CBraMod | 15 | 0.045 ± 0.013 | 0.859 | 0.903 ± 0.047 | 0.318 ± 0.071 |
+
+**Answer to the milestone question.** With these decoders, replayed ErrP feedback did not teach the route preference.
+- Every EEG condition and both controls match sparse in preferred pass: paired differences within ±0.005 over 15
+  pairs.
+- The policies still take the straight path through the pillar.
+- The feedback mechanism can carry the preference only with error-free labels and a large weight (ideal, w = 4.0, in
+  validation).
+- Single-trial decoding at event AUROC 0.57-0.65 was not enough.
 
 ## 4. Proposal deviations
 

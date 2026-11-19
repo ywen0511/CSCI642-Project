@@ -83,4 +83,64 @@ final suite.
 - **Decoded EEG feedback did not teach the preference at any weight.** EEGNet and CBraMod stay at 0.048-0.057.
 - **Larger weights hurt the task.** At w = 4.0, EEG task success falls to 0.80-0.87 and AUC to about 0.26.
 
-<!--PREF_FINAL-->
+## Final suite (w = 2.0, s02/s08/s09, RL seeds 0-4, 300k steps)
+
+All 75 runs completed from `1aa86a3`, with no failures, and `rl.summarize` passed.
+
+| condition | runs | preferred pass | violation-free | pillar entry | right corridor | task success | success AUC |
+|---|---|---|---|---|---|---|---|
+| sparse | 5 | 0.044 ± 0.026 | 0.056 | 0.848 | 0.650 | 0.838 ± 0.183 | 0.349 ± 0.196 |
+| dense | 5 | 0.052 ± 0.024 | 0.052 | 0.838 | 0.626 | 0.998 ± 0.004 | 0.936 ± 0.021 |
+| EEGNet | 15 | 0.048 ± 0.010 | 0.091 | 0.833 | 0.655 | 0.931 ± 0.049 | 0.380 ± 0.113 |
+| CBraMod | 15 | 0.045 ± 0.015 | 0.071 | 0.824 | 0.687 | 0.867 ± 0.111 | 0.281 ± 0.133 |
+| ideal | 5 | 0.082 ± 0.049 | 0.082 | 0.888 | 0.518 | 0.996 ± 0.009 | 0.601 ± 0.056 |
+| independent EEGNet | 15 | 0.048 ± 0.012 | 0.155 | 0.735 | 0.610 | 0.749 ± 0.203 | 0.243 ± 0.101 |
+| independent CBraMod | 15 | 0.045 ± 0.013 | 0.074 | 0.859 | 0.627 | 0.903 ± 0.047 | 0.318 ± 0.071 |
+
+Paired differences in final preferred pass over 15 (participant, seed) pairs (better / worse / equal):
+
+| comparison | preferred pass | preferred-pass AUC | task success | success AUC |
+|---|---|---|---|---|
+| EEGNet - sparse | +0.004 (7 / 5 / 3) | +0.001 (7 / 8) | +0.093 (8 / 4 / 3) | +0.031 (6 / 9) |
+| CBraMod - sparse | +0.001 (5 / 8 / 2) | -0.005 (3 / 12) | +0.029 (10 / 4 / 1) | -0.068 (5 / 10) |
+| EEGNet - CBraMod | +0.003 (10 / 4 / 1) | +0.007 (12 / 3) | +0.064 (6 / 7 / 2) | +0.099 (10 / 5) |
+| EEGNet - independent control | -0.000 (6 / 6 / 3) | +0.008 (10 / 5) | +0.183 (7 / 4 / 4) | +0.136 (12 / 3) |
+| CBraMod - independent control | +0.001 (7 / 7 / 1) | -0.001 (4 / 11) | -0.036 (5 / 7 / 3) | -0.037 (5 / 10) |
+
+**Answer.** With these decoders, replayed ErrP feedback did **not** teach the route preference.
+- Every EEG condition and both label-independent controls end at the same preferred-pass rate as sparse
+  (0.044-0.048, the rate at which an unconstrained policy happens to pass on the left).
+- The paired differences are within ±0.005.
+- The policies keep entering the pillar (about 0.83).
+- Noise-free feedback at the selected weight (ideal, w = 2.0) also stays low: 0.082, ahead of sparse in 3 of 5 seeds.
+- In validation, only ideal at w = 4.0 learned the preference (0.50).
+- So two things block the EEG conditions:
+  - the noise of single-trial decoding: event AUROC 0.65 for EEGNet and 0.57 for CBraMod, against 1.0 for ideal;
+  - the fact that, at these weights, the per-event preference signal is weaker than the task reward's push toward
+    the short straight path.
+
+Secondary observations (descriptive):
+- **Penalty mode.** Violations make most labels errors (error-label fraction 0.74-0.78 for the EEG conditions), so
+  the centered EEG reward is mostly a penalty here: about -620 per run for EEGNet and -770 for CBraMod. The
+  label-independent controls draw from the whole test pool and so receive a bonus (+2,510 and +1,084), because their
+  mean `p_error` (0.458 / 0.457) is below `c_m`.
+- **Task learning.** It is slower than in the main task for every condition except dense (300k steps; sparse AUC
+  0.349), because the goal filter only keeps distant goals.
+- **EEGNet vs CBraMod.** EEGNet learned the task faster than CBraMod (AUC +0.099, 10 / 5) and faster than its own
+  independent control (+0.136, 12 / 3). The ordering matches the decoders' event AUROC, as in v2.
+
+**Trajectories** (RL seed 0, EEG participant s02, goals 30000-30002, pillar and right corridor drawn on the x-y plots
+and the pillar drawn in the GIFs; all 75 final policies on the same goals:
+[`preference/media/trajectory_table.md`](preference/media/trajectory_table.md)):
+- Of the 21 representative episodes, only one is a preferred pass (CBraMod, goal 30002).
+- Across all 75 policies on these 3 goals, preferred pass is 0.09-0.20 per condition, with no condition standing
+  out.
+
+Interpretation limits:
+- 3 test participants × 5 RL seeds.
+- Means, SDs and sign counts only.
+- Reused participants.
+- Replayed feedback and privileged geometric labels.
+- A virtual pillar with no collision.
+- The declared pilot gate failed, so this task is one in which even noise-free preference feedback is weak at the
+  declared weights.

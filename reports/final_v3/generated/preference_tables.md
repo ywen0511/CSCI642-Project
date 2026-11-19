@@ -73,3 +73,77 @@ Gate: ideal - sparse mean final preferred-pass >= 0.20 and ideal > sparse on eve
 | independent_eegnet | 6 | 0.605 ± 0.167 | 0.1913 | 0.114 ± 0.064 | 0.065 ± 0.012 | 0.009 | 0.142 | 0.682 | 0.645 |
 | independent_cbramod | 6 | 0.637 ± 0.127 | 0.2026 | 0.219 ± 0.005 | 0.042 ± 0.016 | 0.011 | 0.202 | 0.692 | 0.552 |
 
+## Final comparison (s02/s08/s09, seeds 0-4, selected weight)
+
+**preference final**
+
+| condition | runs | final success | final distance (m) | normalized success AUC | preferred pass | preferred-pass AUC | violation-free | pillar entry | right corridor |
+|---|---|---|---|---|---|---|---|---|---|
+| sparse | 5 | 0.838 ± 0.183 | 0.0320 | 0.349 ± 0.196 | 0.044 ± 0.026 | 0.020 | 0.056 | 0.848 | 0.650 |
+| dense | 5 | 0.998 ± 0.004 | 0.0104 | 0.936 ± 0.021 | 0.052 ± 0.024 | 0.049 | 0.052 | 0.838 | 0.626 |
+| eegnet | 15 | 0.931 ± 0.049 | 0.0549 | 0.380 ± 0.113 | 0.048 ± 0.010 | 0.022 | 0.091 | 0.833 | 0.655 |
+| cbramod | 15 | 0.867 ± 0.111 | 0.0373 | 0.281 ± 0.133 | 0.045 ± 0.015 | 0.015 | 0.071 | 0.824 | 0.687 |
+| ideal | 5 | 0.996 ± 0.009 | 0.0173 | 0.601 ± 0.056 | 0.082 ± 0.049 | 0.076 | 0.082 | 0.888 | 0.518 |
+| independent_eegnet | 15 | 0.749 ± 0.203 | 0.0963 | 0.243 ± 0.101 | 0.048 ± 0.012 | 0.014 | 0.155 | 0.735 | 0.610 |
+| independent_cbramod | 15 | 0.903 ± 0.047 | 0.0347 | 0.318 ± 0.071 | 0.045 ± 0.013 | 0.016 | 0.074 | 0.859 | 0.627 |
+
+**preference final**
+
+| comparison | metric | pairs | mean difference | SD | first better / worse / equal |
+|---|---|---|---|---|---|
+| eegnet - sparse | preferred_pass_rate | 15 | +0.004 | 0.035 | 7 / 5 / 3 |
+| eegnet - sparse | normalized_auc_preferred_pass | 15 | +0.001 | 0.015 | 7 / 8 / 0 |
+| eegnet - sparse | violation_free_rate | 15 | +0.035 | 0.108 | 7 / 7 / 1 |
+| eegnet - sparse | success_rate | 15 | +0.093 | 0.257 | 8 / 4 / 3 |
+| eegnet - sparse | normalized_auc_success | 15 | +0.031 | 0.244 | 6 / 9 / 0 |
+| cbramod - sparse | preferred_pass_rate | 15 | +0.001 | 0.053 | 5 / 8 / 2 |
+| cbramod - sparse | normalized_auc_preferred_pass | 15 | -0.005 | 0.009 | 3 / 12 / 0 |
+| cbramod - sparse | violation_free_rate | 15 | +0.015 | 0.080 | 5 / 8 / 2 |
+| cbramod - sparse | success_rate | 15 | +0.029 | 0.204 | 10 / 4 / 1 |
+| cbramod - sparse | normalized_auc_success | 15 | -0.068 | 0.228 | 5 / 10 / 0 |
+| eegnet - cbramod | preferred_pass_rate | 15 | +0.003 | 0.053 | 10 / 4 / 1 |
+| eegnet - cbramod | normalized_auc_preferred_pass | 15 | +0.007 | 0.011 | 12 / 3 / 0 |
+| eegnet - cbramod | violation_free_rate | 15 | +0.020 | 0.134 | 10 / 4 / 1 |
+| eegnet - cbramod | success_rate | 15 | +0.064 | 0.239 | 6 / 7 / 2 |
+| eegnet - cbramod | normalized_auc_success | 15 | +0.099 | 0.216 | 10 / 5 / 0 |
+| dense - sparse | preferred_pass_rate | 5 | +0.008 | 0.013 | 2 / 0 / 3 |
+| dense - sparse | normalized_auc_preferred_pass | 5 | +0.028 | 0.009 | 5 / 0 / 0 |
+| dense - sparse | violation_free_rate | 5 | -0.004 | 0.025 | 1 / 2 / 2 |
+| dense - sparse | success_rate | 5 | +0.160 | 0.181 | 4 / 0 / 1 |
+| dense - sparse | normalized_auc_success | 5 | +0.587 | 0.176 | 5 / 0 / 0 |
+| ideal - sparse | preferred_pass_rate | 5 | +0.038 | 0.072 | 3 / 1 / 1 |
+| ideal - sparse | normalized_auc_preferred_pass | 5 | +0.056 | 0.022 | 5 / 0 / 0 |
+| ideal - sparse | violation_free_rate | 5 | +0.026 | 0.063 | 3 / 1 / 1 |
+| ideal - sparse | success_rate | 5 | +0.158 | 0.188 | 3 / 1 / 1 |
+| ideal - sparse | normalized_auc_success | 5 | +0.252 | 0.233 | 5 / 0 / 0 |
+| eegnet - independent_eegnet | preferred_pass_rate | 15 | -0.000 | 0.037 | 6 / 6 / 3 |
+| eegnet - independent_eegnet | normalized_auc_preferred_pass | 15 | +0.008 | 0.010 | 10 / 5 / 0 |
+| eegnet - independent_eegnet | violation_free_rate | 15 | -0.064 | 0.190 | 5 / 9 / 1 |
+| eegnet - independent_eegnet | success_rate | 15 | +0.183 | 0.350 | 7 / 4 / 4 |
+| eegnet - independent_eegnet | normalized_auc_success | 15 | +0.136 | 0.208 | 12 / 3 / 0 |
+| cbramod - independent_cbramod | preferred_pass_rate | 15 | +0.001 | 0.057 | 7 / 7 / 1 |
+| cbramod - independent_cbramod | normalized_auc_preferred_pass | 15 | -0.001 | 0.009 | 4 / 11 / 0 |
+| cbramod - independent_cbramod | violation_free_rate | 15 | -0.003 | 0.110 | 5 / 9 / 1 |
+| cbramod - independent_cbramod | success_rate | 15 | -0.036 | 0.274 | 5 / 7 / 3 |
+| cbramod - independent_cbramod | normalized_auc_success | 15 | -0.037 | 0.199 | 5 / 10 / 0 |
+| independent_eegnet - sparse | preferred_pass_rate | 15 | +0.004 | 0.041 | 8 / 6 / 1 |
+| independent_eegnet - sparse | normalized_auc_preferred_pass | 15 | -0.006 | 0.013 | 4 / 11 / 0 |
+| independent_eegnet - sparse | violation_free_rate | 15 | +0.099 | 0.145 | 11 / 2 / 2 |
+| independent_eegnet - sparse | success_rate | 15 | -0.089 | 0.428 | 8 / 6 / 1 |
+| independent_eegnet - sparse | normalized_auc_success | 15 | -0.106 | 0.267 | 5 / 10 / 0 |
+| independent_cbramod - sparse | preferred_pass_rate | 15 | +0.001 | 0.036 | 7 / 5 / 3 |
+| independent_cbramod - sparse | normalized_auc_preferred_pass | 15 | -0.004 | 0.013 | 7 / 8 / 0 |
+| independent_cbramod - sparse | violation_free_rate | 15 | +0.018 | 0.060 | 7 / 6 / 2 |
+| independent_cbramod - sparse | success_rate | 15 | +0.065 | 0.238 | 8 / 7 / 0 |
+| independent_cbramod - sparse | normalized_auc_success | 15 | -0.031 | 0.248 | 8 / 7 / 0 |
+
+**preference final**
+
+| condition | error-label fraction | feedback events / episode | EEG reward per event | EEG reward per run | mean p_error (label 0 / 1) | event AUROC |
+|---|---|---|---|---|---|---|
+| eegnet | 0.740 | 9.56 | -0.0108 | -617.6 | 0.433 / 0.503 | 0.651 |
+| cbramod | 0.778 | 9.64 | -0.0139 | -768.9 | 0.444 / 0.483 | 0.573 |
+| ideal | 0.593 | 9.27 | -0.1855 | -10326.4 | 0.000 / 1.000 | 1.000 |
+| independent_eegnet | 0.800 | 9.68 | +0.0427 | +2510.4 | 0.458 / 0.458 | 0.500 |
+| independent_cbramod | 0.775 | 9.64 | +0.0188 | +1084.0 | 0.457 / 0.457 | 0.499 |
+

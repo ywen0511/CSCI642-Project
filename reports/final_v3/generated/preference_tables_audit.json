@@ -2532,5 +2532,1419 @@
   "source": "reports/final_v3/preference/validation/candidate_w400/by_condition.csv",
   "key": "candidate_w400:independent_cbramod",
   "column": "right_corridor_entry_rate_mean"
+ },
+ {
+  "text": "0.838",
+  "value": 0.838,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:sparse",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.183",
+  "value": 0.18335757415498274,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:sparse",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0320",
+  "value": 0.03201619730743438,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:sparse",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.349",
+  "value": 0.34913333333333335,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:sparse",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.196",
+  "value": 0.19560850214423478,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:sparse",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.044",
+  "value": 0.044,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:sparse",
+  "column": "preferred_pass_rate_mean"
+ },
+ {
+  "text": "0.026",
+  "value": 0.026076809620810593,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:sparse",
+  "column": "preferred_pass_rate_sd"
+ },
+ {
+  "text": "0.020",
+  "value": 0.020333333333333335,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:sparse",
+  "column": "normalized_auc_preferred_pass_mean"
+ },
+ {
+  "text": "0.056",
+  "value": 0.056,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:sparse",
+  "column": "violation_free_rate_mean"
+ },
+ {
+  "text": "0.848",
+  "value": 0.848,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:sparse",
+  "column": "pillar_entry_rate_mean"
+ },
+ {
+  "text": "0.650",
+  "value": 0.65,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:sparse",
+  "column": "right_corridor_entry_rate_mean"
+ },
+ {
+  "text": "0.998",
+  "value": 0.998,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:dense",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.004",
+  "value": 0.004472135954999583,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:dense",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0104",
+  "value": 0.010377604664065058,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:dense",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.936",
+  "value": 0.9362666666666667,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:dense",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.021",
+  "value": 0.020554331795404005,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:dense",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.052",
+  "value": 0.052,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:dense",
+  "column": "preferred_pass_rate_mean"
+ },
+ {
+  "text": "0.024",
+  "value": 0.023874672772626643,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:dense",
+  "column": "preferred_pass_rate_sd"
+ },
+ {
+  "text": "0.049",
+  "value": 0.0488,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:dense",
+  "column": "normalized_auc_preferred_pass_mean"
+ },
+ {
+  "text": "0.052",
+  "value": 0.052,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:dense",
+  "column": "violation_free_rate_mean"
+ },
+ {
+  "text": "0.838",
+  "value": 0.838,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:dense",
+  "column": "pillar_entry_rate_mean"
+ },
+ {
+  "text": "0.626",
+  "value": 0.626,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:dense",
+  "column": "right_corridor_entry_rate_mean"
+ },
+ {
+  "text": "0.931",
+  "value": 0.9313333333333333,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:eegnet",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.049",
+  "value": 0.048675798230058145,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:eegnet",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0549",
+  "value": 0.054924158674337656,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:eegnet",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.380",
+  "value": 0.37995555555555555,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:eegnet",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.113",
+  "value": 0.1128957254054148,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:eegnet",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.048",
+  "value": 0.048,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:eegnet",
+  "column": "preferred_pass_rate_mean"
+ },
+ {
+  "text": "0.010",
+  "value": 0.010392304845413262,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:eegnet",
+  "column": "preferred_pass_rate_sd"
+ },
+ {
+  "text": "0.022",
+  "value": 0.021622222222222223,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:eegnet",
+  "column": "normalized_auc_preferred_pass_mean"
+ },
+ {
+  "text": "0.091",
+  "value": 0.09133333333333334,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:eegnet",
+  "column": "violation_free_rate_mean"
+ },
+ {
+  "text": "0.833",
+  "value": 0.8333333333333334,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:eegnet",
+  "column": "pillar_entry_rate_mean"
+ },
+ {
+  "text": "0.655",
+  "value": 0.6546666666666666,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:eegnet",
+  "column": "right_corridor_entry_rate_mean"
+ },
+ {
+  "text": "0.867",
+  "value": 0.8673333333333333,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:cbramod",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.111",
+  "value": 0.11103753119253565,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:cbramod",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0373",
+  "value": 0.037269188460372436,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:cbramod",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.281",
+  "value": 0.2812,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:cbramod",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.133",
+  "value": 0.13267391521236488,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:cbramod",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.045",
+  "value": 0.04533333333333334,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:cbramod",
+  "column": "preferred_pass_rate_mean"
+ },
+ {
+  "text": "0.015",
+  "value": 0.015011106998930268,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:cbramod",
+  "column": "preferred_pass_rate_sd"
+ },
+ {
+  "text": "0.015",
+  "value": 0.014933333333333333,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:cbramod",
+  "column": "normalized_auc_preferred_pass_mean"
+ },
+ {
+  "text": "0.071",
+  "value": 0.07133333333333333,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:cbramod",
+  "column": "violation_free_rate_mean"
+ },
+ {
+  "text": "0.824",
+  "value": 0.8240000000000001,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:cbramod",
+  "column": "pillar_entry_rate_mean"
+ },
+ {
+  "text": "0.687",
+  "value": 0.6866666666666666,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:cbramod",
+  "column": "right_corridor_entry_rate_mean"
+ },
+ {
+  "text": "0.996",
+  "value": 0.996,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:ideal",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.009",
+  "value": 0.008944271909999166,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:ideal",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0173",
+  "value": 0.017259449991834014,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:ideal",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.601",
+  "value": 0.6011,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:ideal",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.056",
+  "value": 0.056335009836986215,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:ideal",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.082",
+  "value": 0.082,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:ideal",
+  "column": "preferred_pass_rate_mean"
+ },
+ {
+  "text": "0.049",
+  "value": 0.049193495504995376,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:ideal",
+  "column": "preferred_pass_rate_sd"
+ },
+ {
+  "text": "0.076",
+  "value": 0.07616666666666666,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:ideal",
+  "column": "normalized_auc_preferred_pass_mean"
+ },
+ {
+  "text": "0.082",
+  "value": 0.082,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:ideal",
+  "column": "violation_free_rate_mean"
+ },
+ {
+  "text": "0.888",
+  "value": 0.888,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:ideal",
+  "column": "pillar_entry_rate_mean"
+ },
+ {
+  "text": "0.518",
+  "value": 0.518,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:ideal",
+  "column": "right_corridor_entry_rate_mean"
+ },
+ {
+  "text": "0.749",
+  "value": 0.7486666666666667,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:independent_eegnet",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.203",
+  "value": 0.20259647907437417,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:independent_eegnet",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0963",
+  "value": 0.0963211849567023,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:independent_eegnet",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.243",
+  "value": 0.2434888888888889,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:independent_eegnet",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.101",
+  "value": 0.10132599388625328,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:independent_eegnet",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.048",
+  "value": 0.048,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:independent_eegnet",
+  "column": "preferred_pass_rate_mean"
+ },
+ {
+  "text": "0.012",
+  "value": 0.012489995996796796,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:independent_eegnet",
+  "column": "preferred_pass_rate_sd"
+ },
+ {
+  "text": "0.014",
+  "value": 0.013866666666666666,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:independent_eegnet",
+  "column": "normalized_auc_preferred_pass_mean"
+ },
+ {
+  "text": "0.155",
+  "value": 0.15533333333333335,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:independent_eegnet",
+  "column": "violation_free_rate_mean"
+ },
+ {
+  "text": "0.735",
+  "value": 0.7346666666666667,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:independent_eegnet",
+  "column": "pillar_entry_rate_mean"
+ },
+ {
+  "text": "0.610",
+  "value": 0.61,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:independent_eegnet",
+  "column": "right_corridor_entry_rate_mean"
+ },
+ {
+  "text": "0.903",
+  "value": 0.9033333333333333,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:independent_cbramod",
+  "column": "success_rate_mean"
+ },
+ {
+  "text": "0.047",
+  "value": 0.04657610259922287,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:independent_cbramod",
+  "column": "success_rate_sd"
+ },
+ {
+  "text": "0.0347",
+  "value": 0.03471513747602487,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:independent_cbramod",
+  "column": "mean_final_distance_mean"
+ },
+ {
+  "text": "0.318",
+  "value": 0.31808888888888887,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:independent_cbramod",
+  "column": "normalized_auc_success_mean"
+ },
+ {
+  "text": "0.071",
+  "value": 0.07074401689136635,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:independent_cbramod",
+  "column": "normalized_auc_success_sd"
+ },
+ {
+  "text": "0.045",
+  "value": 0.04466666666666667,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:independent_cbramod",
+  "column": "preferred_pass_rate_mean"
+ },
+ {
+  "text": "0.013",
+  "value": 0.012858201014657275,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:independent_cbramod",
+  "column": "preferred_pass_rate_sd"
+ },
+ {
+  "text": "0.016",
+  "value": 0.016122222222222222,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:independent_cbramod",
+  "column": "normalized_auc_preferred_pass_mean"
+ },
+ {
+  "text": "0.074",
+  "value": 0.074,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:independent_cbramod",
+  "column": "violation_free_rate_mean"
+ },
+ {
+  "text": "0.859",
+  "value": 0.8593333333333333,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:independent_cbramod",
+  "column": "pillar_entry_rate_mean"
+ },
+ {
+  "text": "0.627",
+  "value": 0.6273333333333333,
+  "source": "reports/final_v3/preference/final/by_condition.csv",
+  "key": "preference final:independent_cbramod",
+  "column": "right_corridor_entry_rate_mean"
+ },
+ {
+  "text": "+0.004",
+  "value": 0.004000000000000002,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:eegnet-sparse:preferred_pass_rate",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.035",
+  "value": 0.03501020259459071,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:eegnet-sparse:preferred_pass_rate",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.001",
+  "value": 0.0012888888888888878,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:eegnet-sparse:normalized_auc_preferred_pass",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.015",
+  "value": 0.015262318296653357,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:eegnet-sparse:normalized_auc_preferred_pass",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.035",
+  "value": 0.035333333333333335,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:eegnet-sparse:violation_free_rate",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.108",
+  "value": 0.10769445314451083,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:eegnet-sparse:violation_free_rate",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.093",
+  "value": 0.09333333333333331,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:eegnet-sparse:success_rate",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.257",
+  "value": 0.25670067801865676,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:eegnet-sparse:success_rate",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.031",
+  "value": 0.030822222222222227,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:eegnet-sparse:normalized_auc_success",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.244",
+  "value": 0.24395141224102707,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:eegnet-sparse:normalized_auc_success",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.001",
+  "value": 0.0013333333333333365,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:cbramod-sparse:preferred_pass_rate",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.053",
+  "value": 0.053434427995797756,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:cbramod-sparse:preferred_pass_rate",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "-0.005",
+  "value": -0.0054,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:cbramod-sparse:normalized_auc_preferred_pass",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.009",
+  "value": 0.009487000295308029,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:cbramod-sparse:normalized_auc_preferred_pass",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.015",
+  "value": 0.015333333333333336,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:cbramod-sparse:violation_free_rate",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.080",
+  "value": 0.07954034615631658,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:cbramod-sparse:violation_free_rate",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.029",
+  "value": 0.029333333333333315,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:cbramod-sparse:success_rate",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.204",
+  "value": 0.20401213782751354,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:cbramod-sparse:success_rate",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "-0.068",
+  "value": -0.06793333333333333,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:cbramod-sparse:normalized_auc_success",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.228",
+  "value": 0.22764096278242177,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:cbramod-sparse:normalized_auc_success",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.003",
+  "value": 0.0026666666666666653,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:eegnet-cbramod:preferred_pass_rate",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.053",
+  "value": 0.053246953858771075,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:eegnet-cbramod:preferred_pass_rate",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.007",
+  "value": 0.006688888888888888,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:eegnet-cbramod:normalized_auc_preferred_pass",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.011",
+  "value": 0.011053417676358852,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:eegnet-cbramod:normalized_auc_preferred_pass",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.020",
+  "value": 0.019999999999999997,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:eegnet-cbramod:violation_free_rate",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.134",
+  "value": 0.1336306209562122,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:eegnet-cbramod:violation_free_rate",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.064",
+  "value": 0.064,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:eegnet-cbramod:success_rate",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.239",
+  "value": 0.2389799752519624,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:eegnet-cbramod:success_rate",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.099",
+  "value": 0.09875555555555555,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:eegnet-cbramod:normalized_auc_success",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.216",
+  "value": 0.21565703285565677,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:eegnet-cbramod:normalized_auc_success",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.008",
+  "value": 0.008,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:dense-sparse:preferred_pass_rate",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.013",
+  "value": 0.013038404810405297,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:dense-sparse:preferred_pass_rate",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.028",
+  "value": 0.028466666666666664,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:dense-sparse:normalized_auc_preferred_pass",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.009",
+  "value": 0.009220598920050933,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:dense-sparse:normalized_auc_preferred_pass",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "-0.004",
+  "value": -0.004000000000000001,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:dense-sparse:violation_free_rate",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.025",
+  "value": 0.025099800796022267,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:dense-sparse:violation_free_rate",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.160",
+  "value": 0.15999999999999998,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:dense-sparse:success_rate",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.181",
+  "value": 0.18069310999592653,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:dense-sparse:success_rate",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.587",
+  "value": 0.5871333333333333,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:dense-sparse:normalized_auc_success",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.176",
+  "value": 0.17592743927224336,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:dense-sparse:normalized_auc_success",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.038",
+  "value": 0.038000000000000006,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:ideal-sparse:preferred_pass_rate",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.072",
+  "value": 0.0719027120489902,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:ideal-sparse:preferred_pass_rate",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.056",
+  "value": 0.05583333333333333,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:ideal-sparse:normalized_auc_preferred_pass",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.022",
+  "value": 0.021667628183793246,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:ideal-sparse:normalized_auc_preferred_pass",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.026",
+  "value": 0.026000000000000002,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:ideal-sparse:violation_free_rate",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.063",
+  "value": 0.06348228099241551,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:ideal-sparse:violation_free_rate",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.158",
+  "value": 0.15799999999999997,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:ideal-sparse:success_rate",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.188",
+  "value": 0.18766992300312801,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:ideal-sparse:success_rate",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.252",
+  "value": 0.25196666666666667,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:ideal-sparse:normalized_auc_success",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.233",
+  "value": 0.23338018577229538,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:ideal-sparse:normalized_auc_success",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "-0.000",
+  "value": -3.4694469519536144e-19,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:eegnet-independent_eegnet:preferred_pass_rate",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.037",
+  "value": 0.03683941988065036,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:eegnet-independent_eegnet:preferred_pass_rate",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.008",
+  "value": 0.0077555555555555555,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:eegnet-independent_eegnet:normalized_auc_preferred_pass",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.010",
+  "value": 0.010377567891558952,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:eegnet-independent_eegnet:normalized_auc_preferred_pass",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "-0.064",
+  "value": -0.064,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:eegnet-independent_eegnet:violation_free_rate",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.190",
+  "value": 0.18969147883565343,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:eegnet-independent_eegnet:violation_free_rate",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.183",
+  "value": 0.18266666666666667,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:eegnet-independent_eegnet:success_rate",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.350",
+  "value": 0.34992788372680994,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:eegnet-independent_eegnet:success_rate",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.136",
+  "value": 0.13646666666666668,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:eegnet-independent_eegnet:normalized_auc_success",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.208",
+  "value": 0.20766304743463934,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:eegnet-independent_eegnet:normalized_auc_success",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.001",
+  "value": 0.0006666666666666678,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:cbramod-independent_cbramod:preferred_pass_rate",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.057",
+  "value": 0.056879153432853546,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:cbramod-independent_cbramod:preferred_pass_rate",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "-0.001",
+  "value": -0.0011888888888888889,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:cbramod-independent_cbramod:normalized_auc_preferred_pass",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.009",
+  "value": 0.009429956207431405,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:cbramod-independent_cbramod:normalized_auc_preferred_pass",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "-0.003",
+  "value": -0.0026666666666666635,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:cbramod-independent_cbramod:violation_free_rate",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.110",
+  "value": 0.11016005671402904,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:cbramod-independent_cbramod:violation_free_rate",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "-0.036",
+  "value": -0.036000000000000004,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:cbramod-independent_cbramod:success_rate",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.274",
+  "value": 0.27359511273830484,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:cbramod-independent_cbramod:success_rate",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "-0.037",
+  "value": -0.03688888888888888,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:cbramod-independent_cbramod:normalized_auc_success",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.199",
+  "value": 0.1988942814290677,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:cbramod-independent_cbramod:normalized_auc_success",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.004",
+  "value": 0.004000000000000002,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:independent_eegnet-sparse:preferred_pass_rate",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.041",
+  "value": 0.04119639373953571,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:independent_eegnet-sparse:preferred_pass_rate",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "-0.006",
+  "value": -0.0064666666666666674,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:independent_eegnet-sparse:normalized_auc_preferred_pass",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.013",
+  "value": 0.013246323239491,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:independent_eegnet-sparse:normalized_auc_preferred_pass",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.099",
+  "value": 0.09933333333333334,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:independent_eegnet-sparse:violation_free_rate",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.145",
+  "value": 0.14547786609587565,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:independent_eegnet-sparse:violation_free_rate",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "-0.089",
+  "value": -0.08933333333333335,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:independent_eegnet-sparse:success_rate",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.428",
+  "value": 0.42755896279538647,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:independent_eegnet-sparse:success_rate",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "-0.106",
+  "value": -0.10564444444444444,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:independent_eegnet-sparse:normalized_auc_success",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.267",
+  "value": 0.2665834458436675,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:independent_eegnet-sparse:normalized_auc_success",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.001",
+  "value": 0.0006666666666666677,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:independent_cbramod-sparse:preferred_pass_rate",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.036",
+  "value": 0.036344908597386524,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:independent_cbramod-sparse:preferred_pass_rate",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "-0.004",
+  "value": -0.004211111111111112,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:independent_cbramod-sparse:normalized_auc_preferred_pass",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.013",
+  "value": 0.01298938312908177,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:independent_cbramod-sparse:normalized_auc_preferred_pass",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.018",
+  "value": 0.018,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:independent_cbramod-sparse:violation_free_rate",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.060",
+  "value": 0.06002380480157138,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:independent_cbramod-sparse:violation_free_rate",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "+0.065",
+  "value": 0.06533333333333333,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:independent_cbramod-sparse:success_rate",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.238",
+  "value": 0.23811361833816905,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:independent_cbramod-sparse:success_rate",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "-0.031",
+  "value": -0.031044444444444444,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:independent_cbramod-sparse:normalized_auc_success",
+  "column": "mean(difference)"
+ },
+ {
+  "text": "0.248",
+  "value": 0.2480286439124687,
+  "source": "reports/final_v3/preference/final/paired_differences.csv",
+  "key": "preference final:independent_cbramod-sparse:normalized_auc_success",
+  "column": "sd(difference)"
+ },
+ {
+  "text": "0.740",
+  "value": 0.7402104240761548,
+  "source": "reports/final_v3/preference/final/feedback_diagnostics.csv",
+  "key": "preference final:eegnet",
+  "column": "mean error_label_fraction"
+ },
+ {
+  "text": "9.56",
+  "value": 9.560844444444445,
+  "source": "reports/final_v3/preference/final/feedback_diagnostics.csv",
+  "key": "preference final:eegnet",
+  "column": "mean events_per_episode"
+ },
+ {
+  "text": "-0.0108",
+  "value": -0.010820675975541167,
+  "source": "reports/final_v3/preference/final/feedback_diagnostics.csv",
+  "key": "preference final:eegnet",
+  "column": "mean eeg_reward_mean_per_event"
+ },
+ {
+  "text": "-617.6",
+  "value": -617.5914335296817,
+  "source": "reports/final_v3/preference/final/feedback_diagnostics.csv",
+  "key": "preference final:eegnet",
+  "column": "mean eeg_reward_sum"
+ },
+ {
+  "text": "0.433",
+  "value": 0.4333069319536494,
+  "source": "reports/final_v3/preference/final/feedback_diagnostics.csv",
+  "key": "preference final:eegnet",
+  "column": "mean mean_p_error_label0"
+ },
+ {
+  "text": "0.503",
+  "value": 0.5026425859474152,
+  "source": "reports/final_v3/preference/final/feedback_diagnostics.csv",
+  "key": "preference final:eegnet",
+  "column": "mean mean_p_error_label1"
+ },
+ {
+  "text": "0.651",
+  "value": 0.6507613727208866,
+  "source": "reports/final_v3/preference/final/feedback_diagnostics.csv",
+  "key": "preference final:eegnet",
+  "column": "mean event_auroc"
+ },
+ {
+  "text": "0.778",
+  "value": 0.7776947103494011,
+  "source": "reports/final_v3/preference/final/feedback_diagnostics.csv",
+  "key": "preference final:cbramod",
+  "column": "mean error_label_fraction"
+ },
+ {
+  "text": "9.64",
+  "value": 9.640177777777778,
+  "source": "reports/final_v3/preference/final/feedback_diagnostics.csv",
+  "key": "preference final:cbramod",
+  "column": "mean events_per_episode"
+ },
+ {
+  "text": "-0.0139",
+  "value": -0.013920614771388179,
+  "source": "reports/final_v3/preference/final/feedback_diagnostics.csv",
+  "key": "preference final:cbramod",
+  "column": "mean eeg_reward_mean_per_event"
+ },
+ {
+  "text": "-768.9",
+  "value": -768.8742152573493,
+  "source": "reports/final_v3/preference/final/feedback_diagnostics.csv",
+  "key": "preference final:cbramod",
+  "column": "mean eeg_reward_sum"
+ },
+ {
+  "text": "0.444",
+  "value": 0.4436334465657837,
+  "source": "reports/final_v3/preference/final/feedback_diagnostics.csv",
+  "key": "preference final:cbramod",
+  "column": "mean mean_p_error_label0"
+ },
+ {
+  "text": "0.483",
+  "value": 0.4832140781876755,
+  "source": "reports/final_v3/preference/final/feedback_diagnostics.csv",
+  "key": "preference final:cbramod",
+  "column": "mean mean_p_error_label1"
+ },
+ {
+  "text": "0.573",
+  "value": 0.57266822129564,
+  "source": "reports/final_v3/preference/final/feedback_diagnostics.csv",
+  "key": "preference final:cbramod",
+  "column": "mean event_auroc"
+ },
+ {
+  "text": "0.593",
+  "value": 0.5927502493560434,
+  "source": "reports/final_v3/preference/final/feedback_diagnostics.csv",
+  "key": "preference final:ideal",
+  "column": "mean error_label_fraction"
+ },
+ {
+  "text": "9.27",
+  "value": 9.271266666666667,
+  "source": "reports/final_v3/preference/final/feedback_diagnostics.csv",
+  "key": "preference final:ideal",
+  "column": "mean events_per_episode"
+ },
+ {
+  "text": "-0.1855",
+  "value": -0.18550049871208657,
+  "source": "reports/final_v3/preference/final/feedback_diagnostics.csv",
+  "key": "preference final:ideal",
+  "column": "mean eeg_reward_mean_per_event"
+ },
+ {
+  "text": "-10326.4",
+  "value": -10326.4,
+  "source": "reports/final_v3/preference/final/feedback_diagnostics.csv",
+  "key": "preference final:ideal",
+  "column": "mean eeg_reward_sum"
+ },
+ {
+  "text": "0.000",
+  "value": 0.0,
+  "source": "reports/final_v3/preference/final/feedback_diagnostics.csv",
+  "key": "preference final:ideal",
+  "column": "mean mean_p_error_label0"
+ },
+ {
+  "text": "1.000",
+  "value": 1.0,
+  "source": "reports/final_v3/preference/final/feedback_diagnostics.csv",
+  "key": "preference final:ideal",
+  "column": "mean mean_p_error_label1"
+ },
+ {
+  "text": "1.000",
+  "value": 1.0,
+  "source": "reports/final_v3/preference/final/feedback_diagnostics.csv",
+  "key": "preference final:ideal",
+  "column": "mean event_auroc"
+ },
+ {
+  "text": "0.800",
+  "value": 0.7998854302427131,
+  "source": "reports/final_v3/preference/final/feedback_diagnostics.csv",
+  "key": "preference final:independent_eegnet",
+  "column": "mean error_label_fraction"
+ },
+ {
+  "text": "9.68",
+  "value": 9.675933333333333,
+  "source": "reports/final_v3/preference/final/feedback_diagnostics.csv",
+  "key": "preference final:independent_eegnet",
+  "column": "mean events_per_episode"
+ },
+ {
+  "text": "+0.0427",
+  "value": 0.04272337881729785,
+  "source": "reports/final_v3/preference/final/feedback_diagnostics.csv",
+  "key": "preference final:independent_eegnet",
+  "column": "mean eeg_reward_mean_per_event"
+ },
+ {
+  "text": "+2510.4",
+  "value": 2510.3953903198053,
+  "source": "reports/final_v3/preference/final/feedback_diagnostics.csv",
+  "key": "preference final:independent_eegnet",
+  "column": "mean eeg_reward_sum"
+ },
+ {
+  "text": "0.458",
+  "value": 0.45774875731629977,
+  "source": "reports/final_v3/preference/final/feedback_diagnostics.csv",
+  "key": "preference final:independent_eegnet",
+  "column": "mean mean_p_error_label0"
+ },
+ {
+  "text": "0.458",
+  "value": 0.45801319410705515,
+  "source": "reports/final_v3/preference/final/feedback_diagnostics.csv",
+  "key": "preference final:independent_eegnet",
+  "column": "mean mean_p_error_label1"
+ },
+ {
+  "text": "0.500",
+  "value": 0.5003855405043967,
+  "source": "reports/final_v3/preference/final/feedback_diagnostics.csv",
+  "key": "preference final:independent_eegnet",
+  "column": "mean event_auroc"
+ },
+ {
+  "text": "0.775",
+  "value": 0.7753991325599033,
+  "source": "reports/final_v3/preference/final/feedback_diagnostics.csv",
+  "key": "preference final:independent_cbramod",
+  "column": "mean error_label_fraction"
+ },
+ {
+  "text": "9.64",
+  "value": 9.6395,
+  "source": "reports/final_v3/preference/final/feedback_diagnostics.csv",
+  "key": "preference final:independent_cbramod",
+  "column": "mean events_per_episode"
+ },
+ {
+  "text": "+0.0188",
+  "value": 0.018795617190455916,
+  "source": "reports/final_v3/preference/final/feedback_diagnostics.csv",
+  "key": "preference final:independent_cbramod",
+  "column": "mean eeg_reward_mean_per_event"
+ },
+ {
+  "text": "+1084.0",
+  "value": 1083.9639084290604,
+  "source": "reports/final_v3/preference/final/feedback_diagnostics.csv",
+  "key": "preference final:independent_cbramod",
+  "column": "mean eeg_reward_sum"
+ },
+ {
+  "text": "0.457",
+  "value": 0.4573665111732436,
+  "source": "reports/final_v3/preference/final/feedback_diagnostics.csv",
+  "key": "preference final:independent_cbramod",
+  "column": "mean mean_p_error_label0"
+ },
+ {
+  "text": "0.457",
+  "value": 0.4570345119762445,
+  "source": "reports/final_v3/preference/final/feedback_diagnostics.csv",
+  "key": "preference final:independent_cbramod",
+  "column": "mean mean_p_error_label1"
+ },
+ {
+  "text": "0.499",
+  "value": 0.4993859078493718,
+  "source": "reports/final_v3/preference/final/feedback_diagnostics.csv",
+  "key": "preference final:independent_cbramod",
+  "column": "mean event_auroc"
  }
 ]
