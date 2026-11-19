@@ -46,7 +46,7 @@
       "failed": 0,
       "pending": 0,
       "commit": "a09817f",
-      "release": null
+      "release": "final-v3-smoke-20261118-a09817f"
     },
     "v3_validation_w050": {
       "planned": 33,
@@ -82,7 +82,7 @@
       "failed": 0,
       "pending": 0,
       "commit": "a09817f",
-      "release": null
+      "release": "final-v3-smoke-20261118-a09817f"
     },
     "pref_pilots": {
       "planned": 10,
@@ -90,7 +90,8 @@
       "failed": 0,
       "pending": 0,
       "commit": "a09817f",
-      "note": "round 1; gate failed; round 2 (12 ideal/sparse runs, afa0531) running"
+      "note": "round 1; gate failed; round 2 (12 ideal/sparse runs, afa0531) running",
+      "release": "final-v3-pref-pilots-20261118-afa0531"
     },
     "pref_validation_w100": {
       "planned": 33,
@@ -121,6 +122,19 @@
       "failed": 0,
       "pending": 0,
       "commit": "1aa86a3"
+    },
+    "pref_pilots_round2": {
+      "planned": 12,
+      "completed": 12,
+      "failed": 0,
+      "pending": 0,
+      "commit": "afa0531",
+      "variants": [
+        "g1_original_300k",
+        "g2_corridor10_90_150k",
+        "g3_corridor10_90_300k"
+      ],
+      "release": "final-v3-pref-pilots-20261118-afa0531"
     }
   },
   "releases": {
@@ -211,7 +225,7 @@
     }
   },
   "blockers": [],
-  "updated_utc": "2026-11-19T03:48:51Z",
+  "updated_utc": "2026-11-19T03:49:01Z",
   "continuation_checks": {
     "v3": {
       "snapshot": "final-v3-v3-validation-w050 eegnet_s11_s100 final_000150000",
