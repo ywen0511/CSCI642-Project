@@ -222,6 +222,14 @@ right-hand corridor is labeled an error, and the task reward is unchanged. The p
   run. 189 SAC runs in total (15 pilots, 99 validation, 75 final) = 167 core-hours; ~56 min per 150k run.
 - Training commits: pilots `50888a9`, validation `cfe0305`, final `25bb0f4` (training sources of validation and
   final identical; the summaries enforce identical training-source hashes within a suite).
+- **Final round** (same lock, same hardware and scheduler): 520 completed formal SAC runs.
+  - 150 sensitivity, 174 v3, 22 preference pilots, 99 preference validation and 75 preference final runs.
+  - 675 core-hours, plus 172 core-hours for 99 preference validation runs that were killed externally and rerun:
+    847 core-hours in total.
+  - About 56 minutes per 150k-step run and 119 minutes per 300k-step run; about 1 hour (150k) or 2 hours (300k) of
+    wall clock per suite.
+  - Training commits, per-suite usage, commands and every deviation:
+    [`final_v3/execution.md`](final_v3/execution.md).
 - Commands (from the repository root, environment `venv/rl`):
 
 ```bash
@@ -254,6 +262,8 @@ Every commitment of the milestone report, with its final status and evidence.
 | "investigate whether using EEG signals would allow us to learn the user's preference, in addition to learning the task" | done as the route-preference extension (previously "not performed") | Section 3.4; [`final_v3/preference_results.md`](final_v3/preference_results.md) |
 
 ## 8. Artifacts
+
+### RL v2 Releases (2026-11-10)
 
 Code and reports: branch [`rl-v2-experiments`](https://github.com/ywen0511/CSCI642-Project/tree/rl-v2-experiments).
 Frozen EEG inputs: Release [`eeg-stage1-20261101-bccbb8a`](https://github.com/ywen0511/CSCI642-Project/releases/tag/eeg-stage1-20261101-bccbb8a) (unchanged).
@@ -297,6 +307,70 @@ of any performance summary): the smoke EEGNet snapshot at step 80 continued to s
 34,999 -> 36,999, replay 40,000 -> 42,000) in a clean checkout of its training commit `50888a9`, as the
 source-hash gate requires. In both cases the restored replay transitions were unchanged, steps, updates and
 replay size increased, and the new final snapshot verified.
+
+### Final-round Releases (2026-11-18/19)
+
+Code and reports: branch [`final-v3-experiments`](https://github.com/ywen0511/CSCI642-Project/tree/final-v3-experiments).
+Decoder-study Releases are listed in [`decoder_improvement/artifact_index.md`](decoder_improvement/artifact_index.md)
+(unchanged). Each Release below holds the final snapshot of every run (model with optimizer and entropy state,
+replay buffer, RNG state, inference probe, metadata) and every log, evaluation record, transition log, config and
+plan, with frozen protocols and evidence where applicable. Periodic 10k-step snapshots are kept on the project filer
+and listed with SHA-256 in each package manifest. Archives above 100 MB are split losslessly, with full-archive
+hashes and reassembly instructions in the notes.
+
+| Release | scope | training commit |
+|---|---|---|
+| [`final-v3-smoke-20261118-a09817f`](https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-smoke-20261118-a09817f) | v3 and preference integration smokes (250 steps, all seven conditions), all snapshots | `a09817f` |
+| [`final-v3-sensitivity-w010-20261118-f63dc24`](https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-sensitivity-w010-20261118-f63dc24) | post-hoc sensitivity final suite w = 0.1 (75 runs) | `f63dc24` |
+| [`final-v3-sensitivity-w050-20261118-f63dc24`](https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-sensitivity-w050-20261118-f63dc24) | post-hoc sensitivity final suite w = 0.5 (75 runs) | `f63dc24` |
+| [`final-v3-v3-validation-w050-20261118-a09817f`](https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-v3-validation-w050-20261118-a09817f) | v3 validation candidate w = 0.5, selected (33 runs) | `a09817f` |
+| [`final-v3-v3-validation-w100-20261118-a09817f`](https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-v3-validation-w100-20261118-a09817f) | v3 validation candidate w = 1.0 (33 runs) | `a09817f` |
+| [`final-v3-v3-validation-w200-20261118-a09817f`](https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-v3-validation-w200-20261118-a09817f) | v3 validation candidate w = 2.0 (33 runs) | `a09817f` |
+| [`final-v3-v3-final-20261118-41109cb`](https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-v3-final-20261118-41109cb) | v3 final suite, w = 0.5 (75 runs); analysis, trajectories, GIFs | `41109cb` |
+| [`final-v3-pref-pilots-20261118-afa0531`](https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-pref-pilots-20261118-afa0531) | preference pilots, round 1 (10 runs) and round 2 G1-G3 (12 runs) | `a09817f / afa0531` |
+| [`final-v3-pref-validation-w100-20261118-ae633ea`](https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-pref-validation-w100-20261118-ae633ea) | preference validation candidate w = 1.0 (33 runs) + logs of the killed first attempt | `ae633ea` |
+| [`final-v3-pref-validation-w200-20261118-ae633ea`](https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-pref-validation-w200-20261118-ae633ea) | preference validation candidate w = 2.0, selected (33 runs) + killed-attempt logs | `ae633ea` |
+| [`final-v3-pref-validation-w400-20261118-ae633ea`](https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-pref-validation-w400-20261118-ae633ea) | preference validation candidate w = 4.0 (33 runs) + killed-attempt logs | `ae633ea` |
+| [`final-v3-pref-final-20261118-1aa86a3`](https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-pref-final-20261118-1aa86a3) | preference final suite, w = 2.0 (75 runs); analysis, trajectories, GIFs with pillar | `1aa86a3` |
+| [`final-v3-verification-20261119`](https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-verification-20261119) | all verification and continuation reports of this round, usage, status | reports only |
+
+**Fresh-download verification of the final-round Releases.** The procedure is the same as for v2 above. Every
+reported verification ran as an LSF job on a `cpu_ubuntu_wrn` Intel Xeon Gold 6242 node, the same CPU type used for
+training. Reports: [`final_v3/release_verification/`](final_v3/release_verification/); generated table:
+[`verification_table.md`](final_v3/release_verification/verification_table.md).
+
+| Release | assets | GB | inventory + every SHA-256 | split archives / full-archive hashes checked | snapshots hash-validated | inference verified (final / periodic) | max action diff | ok |
+|---|---|---|---|---|---|---|---|---|
+| [`final-v3-pref-final-20261118-1aa86a3`](https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-pref-final-20261118-1aa86a3) | 89 | 3.20 | True | 0 / 76 | 75 | 75 / 0 | 0.0e+00 | **True** |
+| [`final-v3-pref-pilots-20261118-afa0531`](https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-pref-pilots-20261118-afa0531) | 35 | 0.76 | True | 0 / 26 | 22 | 22 / 0 | 0.0e+00 | **True** |
+| [`final-v3-pref-validation-w100-20261118-ae633ea`](https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-pref-validation-w100-20261118-ae633ea) | 49 | 2.07 | True | 1 / 35 | 33 | 33 / 0 | 0.0e+00 | **True** |
+| [`final-v3-pref-validation-w200-20261118-ae633ea`](https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-pref-validation-w200-20261118-ae633ea) | 41 | 2.02 | True | 0 / 34 | 33 | 33 / 0 | 0.0e+00 | **True** |
+| [`final-v3-pref-validation-w400-20261118-ae633ea`](https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-pref-validation-w400-20261118-ae633ea) | 41 | 2.04 | True | 0 / 34 | 33 | 33 / 0 | 0.0e+00 | **True** |
+| [`final-v3-sensitivity-w010-20261118-f63dc24`](https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-sensitivity-w010-20261118-f63dc24) | 79 | 1.87 | True | 0 / 76 | 75 | 75 / 0 | 0.0e+00 | **True** |
+| [`final-v3-sensitivity-w050-20261118-f63dc24`](https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-sensitivity-w050-20261118-f63dc24) | 79 | 1.88 | True | 0 / 76 | 75 | 75 / 0 | 0.0e+00 | **True** |
+| [`final-v3-smoke-20261118-a09817f`](https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-smoke-20261118-a09817f) | 23 | 0.01 | True | 0 / 18 | 58 | 16 / 7 | 0.0e+00 | **True** |
+| [`final-v3-v3-final-20261118-41109cb`](https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-v3-final-20261118-41109cb) | 89 | 1.91 | True | 0 / 76 | 75 | 75 / 0 | 0.0e+00 | **True** |
+| [`final-v3-v3-validation-w050-20261118-a09817f`](https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-v3-validation-w050-20261118-a09817f) | 37 | 0.82 | True | 0 / 34 | 33 | 33 / 0 | 0.0e+00 | **True** |
+| [`final-v3-v3-validation-w100-20261118-a09817f`](https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-v3-validation-w100-20261118-a09817f) | 37 | 0.82 | True | 0 / 34 | 33 | 33 / 0 | 0.0e+00 | **True** |
+| [`final-v3-v3-validation-w200-20261118-a09817f`](https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-v3-validation-w200-20261118-a09817f) | 37 | 0.82 | True | 0 / 34 | 33 | 33 / 0 | 0.0e+00 | **True** |
+
+| continuation report | downloaded snapshot | clean checkout | steps | updates | replay size | restored transitions unchanged | ok |
+|---|---|---|---|---|---|---|---|
+| [`continuation_pref_validation_w200_eegnet_s11_s100.json`](continuation_pref_validation_w200_eegnet_s11_s100.json) | `validation_w200__eegnet_s11_s100/eegnet_s11_s100/checkpoints/final_000300000` | `ae633ea` | 300000 -> 302000 | 295000 -> 297000 | 100000 -> 100000 | True | **True** |
+| [`continuation_v3_validation_w050_eegnet_s11_s100.json`](continuation_v3_validation_w050_eegnet_s11_s100.json) | `validation_w050__eegnet_s11_s100/eegnet_s11_s100/checkpoints/final_000150000` | `a09817f` | 150000 -> 152000 | 145000 -> 147000 | 100000 -> 100000 | True | **True** |
+
+**Cross-CPU observation.** Some verifications were first run on the submit host, an AMD EPYC 7543. There the
+reloaded probes differed from the stored ones by 4.8e-7 to 1.4e-6, because float32 kernels differ between CPUs. Two
+of 33 snapshots of `pref-validation-w100` exceeded the 1e-6 tolerance. On the training hardware every probe is
+reproduced exactly. The AMD reports are kept in
+[`final_v3/release_verification/gc211_amd_epyc/`](final_v3/release_verification/gc211_amd_epyc/).
+
+**Continuations from downloaded final-round checkpoints** (table above). Each continuation ran 2,000 more steps in a
+clean checkout of the snapshot's training commit, into a new directory, and is not part of any result:
+- one from a v3 snapshot (validation w = 0.5, EEGNet s11, seed 100; `a09817f`);
+- one from a preference snapshot (validation w = 2.0, EEGNet s11, seed 100; `ae633ea`).
+
+In both, the restored replay transitions were unchanged and steps, updates and the replay write position advanced.
 
 ## 9. Numbers across documents
 

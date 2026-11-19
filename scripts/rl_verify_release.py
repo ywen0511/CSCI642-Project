@@ -85,6 +85,8 @@ def main():
     p.add_argument("--download-dir", required=True)
     p.add_argument("--extract-dir", required=True)
     p.add_argument("--out", required=True)
+    p.add_argument("--reports-only", action="store_true",
+                   help="Release holds reports/metadata only (no checkpoints): do not require snapshots")
     p.add_argument("--periodic-per-condition", type=int, default=1)
     a = p.parse_args()
     dl, ex = Path(a.download_dir), Path(a.extract_dir)
@@ -178,8 +180,9 @@ def main():
                   n_periodic_snapshots_verified=sum(1 for k in results if "/step_" in k),
                   inference_failures=[k for k, v in results.items() if not v["ok"]],
                   max_action_difference=max_diff, tolerance=1e-6, verification=results)
+    report["reports_only"] = a.reports_only
     report["ok"] = bool(not report["not_uploaded_assets"] and report["inventory_ok"] and report["sha256sums_cover_all_assets"] and not bad and not full_bad
-                        and not snap_bad and not report["inference_failures"] and targets)
+                        and not snap_bad and not report["inference_failures"] and (bool(targets) or a.reports_only))
     Path(a.out).write_text(json.dumps(report, indent=2) + "\n")
     print(json.dumps({k: v for k, v in report.items() if k != "verification"}, indent=2))
     raise SystemExit(0 if report["ok"] else 1)

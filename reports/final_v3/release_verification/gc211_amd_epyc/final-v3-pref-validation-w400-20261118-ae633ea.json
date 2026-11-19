@@ -1,0 +1,258 @@
+{
+  "not_uploaded_assets": [],
+  "tag": "final-v3-pref-validation-w400-20261118-ae633ea",
+  "release_url": "https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-pref-validation-w400-20261118-ae633ea",
+  "target_commitish": "ae633ea07f0f50e275d20c9b3d47f0f76061ceed",
+  "n_assets_api": 41,
+  "bytes_api": 2044332359,
+  "ok": true,
+  "download_retries": 0,
+  "inventory_ok": true,
+  "sha256sums_cover_all_assets": true,
+  "sha256_mismatches": [],
+  "n_split_archives": 0,
+  "n_archives": 35,
+  "full_archive_hash_checked": 34,
+  "full_archive_mismatches": [],
+  "n_snapshots_hash_validated": 33,
+  "snapshot_hash_failures": [],
+  "n_checkpoints_inference_verified": 33,
+  "n_final_snapshots_verified": 33,
+  "n_periodic_snapshots_verified": 0,
+  "inference_failures": [],
+  "max_action_difference": 7.748603820800781e-07,
+  "tolerance": 1e-06,
+  "verification": {
+    "validation_w400__cbramod_s11_s100/cbramod_s11_s100/checkpoints/final_000300000": {
+      "ok": true,
+      "max_action_difference": 2.384185791015625e-07,
+      "steps": 300000,
+      "updates": 295000,
+      "replay_size": 100000
+    },
+    "validation_w400__cbramod_s11_s101/cbramod_s11_s101/checkpoints/final_000300000": {
+      "ok": true,
+      "max_action_difference": 2.980232238769531e-07,
+      "steps": 300000,
+      "updates": 295000,
+      "replay_size": 100000
+    },
+    "validation_w400__cbramod_s11_s102/cbramod_s11_s102/checkpoints/final_000300000": {
+      "ok": true,
+      "max_action_difference": 2.384185791015625e-07,
+      "steps": 300000,
+      "updates": 295000,
+      "replay_size": 100000
+    },
+    "validation_w400__cbramod_s13_s100/cbramod_s13_s100/checkpoints/final_000300000": {
+      "ok": true,
+      "max_action_difference": 2.384185791015625e-07,
+      "steps": 300000,
+      "updates": 295000,
+      "replay_size": 100000
+    },
+    "validation_w400__cbramod_s13_s101/cbramod_s13_s101/checkpoints/final_000300000": {
+      "ok": true,
+      "max_action_difference": 3.5762786865234375e-07,
+      "steps": 300000,
+      "updates": 295000,
+      "replay_size": 100000
+    },
+    "validation_w400__cbramod_s13_s102/cbramod_s13_s102/checkpoints/final_000300000": {
+      "ok": true,
+      "max_action_difference": 2.980232238769531e-07,
+      "steps": 300000,
+      "updates": 295000,
+      "replay_size": 100000
+    },
+    "validation_w400__dense_shared_s100/dense_shared_s100/checkpoints/final_000300000": {
+      "ok": true,
+      "max_action_difference": 4.172325134277344e-07,
+      "steps": 300000,
+      "updates": 295000,
+      "replay_size": 100000
+    },
+    "validation_w400__dense_shared_s101/dense_shared_s101/checkpoints/final_000300000": {
+      "ok": true,
+      "max_action_difference": 2.384185791015625e-07,
+      "steps": 300000,
+      "updates": 295000,
+      "replay_size": 100000
+    },
+    "validation_w400__dense_shared_s102/dense_shared_s102/checkpoints/final_000300000": {
+      "ok": true,
+      "max_action_difference": 2.384185791015625e-07,
+      "steps": 300000,
+      "updates": 295000,
+      "replay_size": 100000
+    },
+    "validation_w400__eegnet_s11_s100/eegnet_s11_s100/checkpoints/final_000300000": {
+      "ok": true,
+      "max_action_difference": 5.960464477539062e-07,
+      "steps": 300000,
+      "updates": 295000,
+      "replay_size": 100000
+    },
+    "validation_w400__eegnet_s11_s101/eegnet_s11_s101/checkpoints/final_000300000": {
+      "ok": true,
+      "max_action_difference": 1.1920928955078125e-07,
+      "steps": 300000,
+      "updates": 295000,
+      "replay_size": 100000
+    },
+    "validation_w400__eegnet_s11_s102/eegnet_s11_s102/checkpoints/final_000300000": {
+      "ok": true,
+      "max_action_difference": 3.5762786865234375e-07,
+      "steps": 300000,
+      "updates": 295000,
+      "replay_size": 100000
+    },
+    "validation_w400__eegnet_s13_s100/eegnet_s13_s100/checkpoints/final_000300000": {
+      "ok": true,
+      "max_action_difference": 3.5762786865234375e-07,
+      "steps": 300000,
+      "updates": 295000,
+      "replay_size": 100000
+    },
+    "validation_w400__eegnet_s13_s101/eegnet_s13_s101/checkpoints/final_000300000": {
+      "ok": true,
+      "max_action_difference": 2.384185791015625e-07,
+      "steps": 300000,
+      "updates": 295000,
+      "replay_size": 100000
+    },
+    "validation_w400__eegnet_s13_s102/eegnet_s13_s102/checkpoints/final_000300000": {
+      "ok": true,
+      "max_action_difference": 2.384185791015625e-07,
+      "steps": 300000,
+      "updates": 295000,
+      "replay_size": 100000
+    },
+    "validation_w400__ideal_shared_s100/ideal_shared_s100/checkpoints/final_000300000": {
+      "ok": true,
+      "max_action_difference": 1.1920928955078125e-07,
+      "steps": 300000,
+      "updates": 295000,
+      "replay_size": 100000
+    },
+    "validation_w400__ideal_shared_s101/ideal_shared_s101/checkpoints/final_000300000": {
+      "ok": true,
+      "max_action_difference": 2.384185791015625e-07,
+      "steps": 300000,
+      "updates": 295000,
+      "replay_size": 100000
+    },
+    "validation_w400__ideal_shared_s102/ideal_shared_s102/checkpoints/final_000300000": {
+      "ok": true,
+      "max_action_difference": 2.980232238769531e-07,
+      "steps": 300000,
+      "updates": 295000,
+      "replay_size": 100000
+    },
+    "validation_w400__independent_cbramod_s11_s100/independent_cbramod_s11_s100/checkpoints/final_000300000": {
+      "ok": true,
+      "max_action_difference": 4.172325134277344e-07,
+      "steps": 300000,
+      "updates": 295000,
+      "replay_size": 100000
+    },
+    "validation_w400__independent_cbramod_s11_s101/independent_cbramod_s11_s101/checkpoints/final_000300000": {
+      "ok": true,
+      "max_action_difference": 1.1920928955078125e-07,
+      "steps": 300000,
+      "updates": 295000,
+      "replay_size": 100000
+    },
+    "validation_w400__independent_cbramod_s11_s102/independent_cbramod_s11_s102/checkpoints/final_000300000": {
+      "ok": true,
+      "max_action_difference": 1.7881393432617188e-07,
+      "steps": 300000,
+      "updates": 295000,
+      "replay_size": 100000
+    },
+    "validation_w400__independent_cbramod_s13_s100/independent_cbramod_s13_s100/checkpoints/final_000300000": {
+      "ok": true,
+      "max_action_difference": 3.5762786865234375e-07,
+      "steps": 300000,
+      "updates": 295000,
+      "replay_size": 100000
+    },
+    "validation_w400__independent_cbramod_s13_s101/independent_cbramod_s13_s101/checkpoints/final_000300000": {
+      "ok": true,
+      "max_action_difference": 3.5762786865234375e-07,
+      "steps": 300000,
+      "updates": 295000,
+      "replay_size": 100000
+    },
+    "validation_w400__independent_cbramod_s13_s102/independent_cbramod_s13_s102/checkpoints/final_000300000": {
+      "ok": true,
+      "max_action_difference": 3.5762786865234375e-07,
+      "steps": 300000,
+      "updates": 295000,
+      "replay_size": 100000
+    },
+    "validation_w400__independent_eegnet_s11_s100/independent_eegnet_s11_s100/checkpoints/final_000300000": {
+      "ok": true,
+      "max_action_difference": 7.748603820800781e-07,
+      "steps": 300000,
+      "updates": 295000,
+      "replay_size": 100000
+    },
+    "validation_w400__independent_eegnet_s11_s101/independent_eegnet_s11_s101/checkpoints/final_000300000": {
+      "ok": true,
+      "max_action_difference": 4.76837158203125e-07,
+      "steps": 300000,
+      "updates": 295000,
+      "replay_size": 100000
+    },
+    "validation_w400__independent_eegnet_s11_s102/independent_eegnet_s11_s102/checkpoints/final_000300000": {
+      "ok": true,
+      "max_action_difference": 2.384185791015625e-07,
+      "steps": 300000,
+      "updates": 295000,
+      "replay_size": 100000
+    },
+    "validation_w400__independent_eegnet_s13_s100/independent_eegnet_s13_s100/checkpoints/final_000300000": {
+      "ok": true,
+      "max_action_difference": 1.7881393432617188e-07,
+      "steps": 300000,
+      "updates": 295000,
+      "replay_size": 100000
+    },
+    "validation_w400__independent_eegnet_s13_s101/independent_eegnet_s13_s101/checkpoints/final_000300000": {
+      "ok": true,
+      "max_action_difference": 5.960464477539062e-07,
+      "steps": 300000,
+      "updates": 295000,
+      "replay_size": 100000
+    },
+    "validation_w400__independent_eegnet_s13_s102/independent_eegnet_s13_s102/checkpoints/final_000300000": {
+      "ok": true,
+      "max_action_difference": 2.980232238769531e-07,
+      "steps": 300000,
+      "updates": 295000,
+      "replay_size": 100000
+    },
+    "validation_w400__sparse_shared_s100/sparse_shared_s100/checkpoints/final_000300000": {
+      "ok": true,
+      "max_action_difference": 3.5762786865234375e-07,
+      "steps": 300000,
+      "updates": 295000,
+      "replay_size": 100000
+    },
+    "validation_w400__sparse_shared_s101/sparse_shared_s101/checkpoints/final_000300000": {
+      "ok": true,
+      "max_action_difference": 2.980232238769531e-07,
+      "steps": 300000,
+      "updates": 295000,
+      "replay_size": 100000
+    },
+    "validation_w400__sparse_shared_s102/sparse_shared_s102/checkpoints/final_000300000": {
+      "ok": true,
+      "max_action_difference": 1.7881393432617188e-07,
+      "steps": 300000,
+      "updates": 295000,
+      "replay_size": 100000
+    }
+  }
+}

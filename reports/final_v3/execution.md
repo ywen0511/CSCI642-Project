@@ -158,4 +158,4 @@ Every one is logged in [`decisions.jsonl`](decisions.jsonl) before any dependent
 
 ## 6. Releases and verification
 
-<!--RELEASES-->
+Every Release, its scope and its training commit, plus the full verification and continuation tables: [`../final_project_report.md`, Section 8](../final_project_report.md#8-artifacts); reports in [`release_verification/`](release_verification/). Uploads went through the workstation with `gh`. A 627 MB single archive of the killed-attempt logs repeatedly failed to upload (TLS errors, HTTP 408), so it was split into 95 MB parts with a full-file hash (`SHA256SUMS.full-files`), and the Release notes were updated. Verifications run on the AMD submit host showed cross-CPU float differences up to 1.4e-6; all reported verifications were rerun on Xeon Gold 6242 nodes and reproduce every probe exactly (`decisions.jsonl`).

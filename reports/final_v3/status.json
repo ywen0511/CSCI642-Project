@@ -1,14 +1,16 @@
 {
   "assignment": "FINAL_V3_HANDOFF.md (planning branch final-v3, 81813de)",
   "execution_branch": "final-v3-experiments",
-  "phase": "stage3_pref_final_running",
+  "phase": "verification_release",
   "started_utc": "2026-11-17T21:10:00Z",
   "complete": false,
   "commits": {
     "stage0_merge": "236ab493abd521f504205a9c2383dfba8a45c5e1",
     "stage1_runs": "f63dc24",
     "v3_and_pref_code": "a09817f",
-    "pref_validation": "ae633ea"
+    "pref_validation": "ae633ea",
+    "pref_frozen": "1aa86a3",
+    "pref_final": "1aa86a3"
   },
   "preflight": {
     "compute": "GM Warren LSF cpu_ubuntu_wrn (Intel Xeon Gold 6242, 32 cores/node, 187 GB), one core per RL run",
@@ -115,11 +117,10 @@
     },
     "pref_final": {
       "planned": 75,
-      "completed": 0,
+      "completed": 75,
       "failed": 0,
-      "pending": 75,
-      "commit": null,
-      "release": null
+      "pending": 0,
+      "commit": "1aa86a3"
     }
   },
   "releases": {
@@ -163,15 +164,64 @@
       "url": "https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-v3-final-20261118-41109cb",
       "uploaded": true,
       "fresh_download_verified": true,
+      "verified_on": "Xeon Gold 6242 (cpu_ubuntu_wrn LSF job)",
       "report": "reports/final_v3/release_verification/final-v3-v3-final-20261118-41109cb.json"
     },
     "final-v3-pref-pilots-20261118-afa0531": {
       "url": "https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-pref-pilots-20261118-afa0531",
       "uploaded": true,
       "fresh_download_verified": true,
+      "verified_on": "Xeon Gold 6242 (cpu_ubuntu_wrn LSF job)",
       "report": "reports/final_v3/release_verification/final-v3-pref-pilots-20261118-afa0531.json"
+    },
+    "final-v3-pref-validation-w100-20261118-ae633ea": {
+      "url": "https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-pref-validation-w100-20261118-ae633ea",
+      "uploaded": true,
+      "fresh_download_verified": true,
+      "verified_on": "Xeon Gold 6242 (cpu_ubuntu_wrn LSF job)",
+      "report": "reports/final_v3/release_verification/final-v3-pref-validation-w100-20261118-ae633ea.json"
+    },
+    "final-v3-pref-validation-w200-20261118-ae633ea": {
+      "url": "https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-pref-validation-w200-20261118-ae633ea",
+      "uploaded": true,
+      "fresh_download_verified": true,
+      "verified_on": "Xeon Gold 6242 (cpu_ubuntu_wrn LSF job)",
+      "report": "reports/final_v3/release_verification/final-v3-pref-validation-w200-20261118-ae633ea.json"
+    },
+    "final-v3-pref-validation-w400-20261118-ae633ea": {
+      "url": "https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-pref-validation-w400-20261118-ae633ea",
+      "uploaded": true,
+      "fresh_download_verified": true,
+      "verified_on": "Xeon Gold 6242 (cpu_ubuntu_wrn LSF job)",
+      "report": "reports/final_v3/release_verification/final-v3-pref-validation-w400-20261118-ae633ea.json"
+    },
+    "final-v3-pref-final-20261118-1aa86a3": {
+      "url": "https://github.com/ywen0511/CSCI642-Project/releases/tag/final-v3-pref-final-20261118-1aa86a3",
+      "uploaded": true,
+      "fresh_download_verified": true,
+      "verified_on": "Xeon Gold 6242 (cpu_ubuntu_wrn LSF job)",
+      "report": "reports/final_v3/release_verification/final-v3-pref-final-20261118-1aa86a3.json"
     }
   },
   "blockers": [],
-  "updated_utc": "2026-11-18T10:20:07Z"
+  "updated_utc": "2026-11-19T03:46:06Z",
+  "continuation_checks": {
+    "v3": {
+      "snapshot": "final-v3-v3-validation-w050 eegnet_s11_s100 final_000150000",
+      "training_checkout": "a09817f",
+      "ok": true
+    },
+    "preference": {
+      "snapshot": "final-v3-pref-validation-w200 eegnet_s11_s100 final_000300000",
+      "training_checkout": "ae633ea",
+      "ok": true
+    }
+  },
+  "usage": {
+    "completed_formal_runs": 520,
+    "core_hours_completed": 675.0,
+    "core_hours_killed_attempt": 172.0,
+    "core_hours_total": 847.0,
+    "file": "reports/final_v3/usage.json"
+  }
 }

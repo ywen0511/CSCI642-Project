@@ -20,159 +20,159 @@
   "n_final_snapshots_verified": 22,
   "n_periodic_snapshots_verified": 0,
   "inference_failures": [],
-  "max_action_difference": 4.76837158203125e-07,
+  "max_action_difference": 0.0,
   "tolerance": 1e-06,
   "verification": {
     "g1__ideal_shared_s900/ideal_shared_s900/checkpoints/final_000300000": {
       "ok": true,
-      "max_action_difference": 2.980232238769531e-07,
+      "max_action_difference": 0.0,
       "steps": 300000,
       "updates": 295000,
       "replay_size": 100000
     },
     "g1__ideal_shared_s901/ideal_shared_s901/checkpoints/final_000300000": {
       "ok": true,
-      "max_action_difference": 4.76837158203125e-07,
+      "max_action_difference": 0.0,
       "steps": 300000,
       "updates": 295000,
       "replay_size": 100000
     },
     "g1__sparse_shared_s900/sparse_shared_s900/checkpoints/final_000300000": {
       "ok": true,
-      "max_action_difference": 2.384185791015625e-07,
+      "max_action_difference": 0.0,
       "steps": 300000,
       "updates": 295000,
       "replay_size": 100000
     },
     "g1__sparse_shared_s901/sparse_shared_s901/checkpoints/final_000300000": {
       "ok": true,
-      "max_action_difference": 1.1920928955078125e-07,
+      "max_action_difference": 0.0,
       "steps": 300000,
       "updates": 295000,
       "replay_size": 100000
     },
     "g2__ideal_shared_s900/ideal_shared_s900/checkpoints/final_000150000": {
       "ok": true,
-      "max_action_difference": 1.1920928955078125e-07,
+      "max_action_difference": 0.0,
       "steps": 150000,
       "updates": 145000,
       "replay_size": 100000
     },
     "g2__ideal_shared_s901/ideal_shared_s901/checkpoints/final_000150000": {
       "ok": true,
-      "max_action_difference": 2.980232238769531e-07,
+      "max_action_difference": 0.0,
       "steps": 150000,
       "updates": 145000,
       "replay_size": 100000
     },
     "g2__sparse_shared_s900/sparse_shared_s900/checkpoints/final_000150000": {
       "ok": true,
-      "max_action_difference": 2.384185791015625e-07,
+      "max_action_difference": 0.0,
       "steps": 150000,
       "updates": 145000,
       "replay_size": 100000
     },
     "g2__sparse_shared_s901/sparse_shared_s901/checkpoints/final_000150000": {
       "ok": true,
-      "max_action_difference": 1.1920928955078125e-07,
+      "max_action_difference": 0.0,
       "steps": 150000,
       "updates": 145000,
       "replay_size": 100000
     },
     "g3__ideal_shared_s900/ideal_shared_s900/checkpoints/final_000300000": {
       "ok": true,
-      "max_action_difference": 1.1920928955078125e-07,
+      "max_action_difference": 0.0,
       "steps": 300000,
       "updates": 295000,
       "replay_size": 100000
     },
     "g3__ideal_shared_s901/ideal_shared_s901/checkpoints/final_000300000": {
       "ok": true,
-      "max_action_difference": 4.76837158203125e-07,
+      "max_action_difference": 0.0,
       "steps": 300000,
       "updates": 295000,
       "replay_size": 100000
     },
     "g3__sparse_shared_s900/sparse_shared_s900/checkpoints/final_000300000": {
       "ok": true,
-      "max_action_difference": 2.384185791015625e-07,
+      "max_action_difference": 0.0,
       "steps": 300000,
       "updates": 295000,
       "replay_size": 100000
     },
     "g3__sparse_shared_s901/sparse_shared_s901/checkpoints/final_000300000": {
       "ok": true,
-      "max_action_difference": 1.1920928955078125e-07,
+      "max_action_difference": 0.0,
       "steps": 300000,
       "updates": 295000,
       "replay_size": 100000
     },
     "round1__cbramod_s13_s900/cbramod_s13_s900/checkpoints/final_000150000": {
       "ok": true,
-      "max_action_difference": 4.76837158203125e-07,
+      "max_action_difference": 0.0,
       "steps": 150000,
       "updates": 145000,
       "replay_size": 100000
     },
     "round1__cbramod_s13_s901/cbramod_s13_s901/checkpoints/final_000150000": {
       "ok": true,
-      "max_action_difference": 2.384185791015625e-07,
+      "max_action_difference": 0.0,
       "steps": 150000,
       "updates": 145000,
       "replay_size": 100000
     },
     "round1__dense_shared_s900/dense_shared_s900/checkpoints/final_000150000": {
       "ok": true,
-      "max_action_difference": 1.1920928955078125e-07,
+      "max_action_difference": 0.0,
       "steps": 150000,
       "updates": 145000,
       "replay_size": 100000
     },
     "round1__dense_shared_s901/dense_shared_s901/checkpoints/final_000150000": {
       "ok": true,
-      "max_action_difference": 4.76837158203125e-07,
+      "max_action_difference": 0.0,
       "steps": 150000,
       "updates": 145000,
       "replay_size": 100000
     },
     "round1__eegnet_s11_s900/eegnet_s11_s900/checkpoints/final_000150000": {
       "ok": true,
-      "max_action_difference": 3.5762786865234375e-07,
+      "max_action_difference": 0.0,
       "steps": 150000,
       "updates": 145000,
       "replay_size": 100000
     },
     "round1__eegnet_s11_s901/eegnet_s11_s901/checkpoints/final_000150000": {
       "ok": true,
-      "max_action_difference": 2.384185791015625e-07,
+      "max_action_difference": 0.0,
       "steps": 150000,
       "updates": 145000,
       "replay_size": 100000
     },
     "round1__ideal_shared_s900/ideal_shared_s900/checkpoints/final_000150000": {
       "ok": true,
-      "max_action_difference": 1.7881393432617188e-07,
+      "max_action_difference": 0.0,
       "steps": 150000,
       "updates": 145000,
       "replay_size": 100000
     },
     "round1__ideal_shared_s901/ideal_shared_s901/checkpoints/final_000150000": {
       "ok": true,
-      "max_action_difference": 2.384185791015625e-07,
+      "max_action_difference": 0.0,
       "steps": 150000,
       "updates": 145000,
       "replay_size": 100000
     },
     "round1__sparse_shared_s900/sparse_shared_s900/checkpoints/final_000150000": {
       "ok": true,
-      "max_action_difference": 2.384185791015625e-07,
+      "max_action_difference": 0.0,
       "steps": 150000,
       "updates": 145000,
       "replay_size": 100000
     },
     "round1__sparse_shared_s901/sparse_shared_s901/checkpoints/final_000150000": {
       "ok": true,
-      "max_action_difference": 1.1920928955078125e-07,
+      "max_action_difference": 0.0,
       "steps": 150000,
       "updates": 145000,
       "replay_size": 100000
